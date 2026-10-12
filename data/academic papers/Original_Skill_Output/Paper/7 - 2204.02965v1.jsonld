@@ -1,0 +1,5231 @@
+{
+  "@context": {
+    "mls": "http://www.w3.org/ns/mls#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "schema": "http://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "model": "https://w3id.org/mlskg/model/",
+    "algo": "https://w3id.org/mlskg/algorithm/",
+    "method": "https://w3id.org/mlskg/method/",
+    "dataset": "https://w3id.org/mlskg/dataset/",
+    "datasource": "https://w3id.org/mlskg/datasource/",
+    "task": "https://w3id.org/mlskg/task/",
+    "eval": "https://w3id.org/mlskg/eval/",
+    "hp": "https://w3id.org/mlskg/hp/",
+    "impl": "https://w3id.org/mlskg/implementation/",
+    "env": "https://w3id.org/mlskg/environment/",
+    "prompt": "https://w3id.org/mlskg/prompt/",
+    "person": "https://w3id.org/mlskg/person/",
+    "org": "https://w3id.org/mlskg/organization/",
+    "study": "https://w3id.org/mlskg/study/",
+    "exp": "https://w3id.org/mlskg/experiment/",
+    "repo": "https://w3id.org/mlskg/repository/",
+    "valueSource": "https://w3id.org/mlskg/meta/valueSource",
+    "mention": "https://w3id.org/mlskg/meta/mention"
+  },
+  "@graph": [
+    {
+      "@id": "study:lilnetx_lightweight_networks_extreme_model_compression_structured_sparsification_2022",
+      "@type": "mls:Study",
+      "mention": {
+        "start_char_doc": 13,
+        "end_char_doc": 103,
+        "prefix": "## Page 1  # ",
+        "suffix": "  **Sharath Girish**   University of Maryland, College Park  **Kamal Gupta**   U",
+        "valueSource": "extracted"
+      },
+      "mls:title": {
+        "value": "LilNetX: Lightweight Networks with EXtreme Model Compression and Structured Sparsification",
+        "start_char_doc": 13,
+        "end_char_doc": 103,
+        "prefix": "## Page 1  # ",
+        "suffix": "  **Sharath Girish**   University of Maryland, College Park  **Kamal Gupta**   U",
+        "valueSource": "extracted"
+      },
+      "mls:abstract": {
+        "value": "We introduce LilNetX, an end-to-end trainable technique for neural networks that enables learning models with specified accuracy-rate-computation trade-off. Prior works approach these problems one at a time and often require post-processing or multistage training which become less practical and do not scale very well for large datasets or architectures. Our method constructs a joint training objective that penalizes the self information of network parameters in a reparameterized latent space to encourage small model size while also introducing priors to increase structured sparsity in the parameter space to reduce computation. We achieve up to 50% smaller model size and 98% model sparsity on ResNet-20 while retaining the same accuracy on the CIFAR-10 dataset as well as 35% smaller model size and 42% structured sparsity on ResNet-50 trained on ImageNet, when compared to existing state-of-the-art model compression methods. Code is available at https://github.com/Sharath-girish/LilNetX.",
+        "start_char_doc": 334,
+        "end_char_doc": 1332,
+        "prefix": "h  **Abhinav Shrivastava**   University of Maryland, College Park  ## Abstract  ",
+        "suffix": "  ## 1 Introduction  Recent research in deep neural networks (DNNs) has shown th",
+        "valueSource": "extracted"
+      },
+      "mls:issued": {
+        "value": "2022",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:url": {
+        "value": "https://arxiv.org/abs/2204.02965",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:doi": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:publicationVenue": {
+        "value": "Preprint. Under review.",
+        "start_char_doc": 3173,
+        "end_char_doc": 3196,
+        "prefix": "ed networks on disk is much higher than the dedicated model compression works.  ",
+        "suffix": "  ---   ## Page 2  &lt;img&gt;     <caption>Figure 1: Our method jointly optimiz",
+        "valueSource": "extracted"
+      },
+      "mls:hasAuthor": [
+        {
+          "@id": "person:girish_sharath"
+        },
+        {
+          "@id": "person:gupta_kamal"
+        },
+        {
+          "@id": "person:singh_saurabh"
+        },
+        {
+          "@id": "person:shrivastava_abhinav"
+        }
+      ],
+      "mls:hasContribution": [
+        {
+          "@id": "method:lilnetx"
+        },
+        {
+          "@id": "method:joint_accuracy_rate_computation_objective"
+        },
+        {
+          "@id": "method:slice_sparsity"
+        },
+        {
+          "@id": "method:zero_mean_prior"
+        },
+        {
+          "@id": "method:group_sparsity_prior"
+        }
+      ],
+      "mls:hasExperiment": [
+        {
+          "@id": "exp:cifar10_cifar100_compression"
+        },
+        {
+          "@id": "exp:imagenet_compression"
+        },
+        {
+          "@id": "exp:mobilenetv2_imagenet_generalization"
+        },
+        {
+          "@id": "exp:flops_speedup_tradeoff"
+        },
+        {
+          "@id": "exp:unstructured_sparsity_ablation"
+        },
+        {
+          "@id": "exp:structured_sparsity_ablation"
+        },
+        {
+          "@id": "exp:norm_ablation"
+        },
+        {
+          "@id": "exp:cifar100_convergence"
+        }
+      ],
+      "mls:hasEvaluation": [
+        {
+          "@id": "eval:abstract_resnet20_cifar10_sparsity"
+        },
+        {
+          "@id": "eval:abstract_resnet50_imagenet_sparsity"
+        },
+        {
+          "@id": "eval:vgg16_cifar10_best"
+        },
+        {
+          "@id": "eval:vgg16_cifar10_extreme"
+        },
+        {
+          "@id": "eval:resnet20_cifar10_best"
+        },
+        {
+          "@id": "eval:resnet20_cifar10_extreme"
+        },
+        {
+          "@id": "eval:resnet20_cifar100_best"
+        },
+        {
+          "@id": "eval:resnet20_cifar100_extreme"
+        },
+        {
+          "@id": "eval:resnet18_imagenet_best"
+        },
+        {
+          "@id": "eval:resnet18_imagenet_extreme"
+        },
+        {
+          "@id": "eval:resnet50_imagenet_best"
+        },
+        {
+          "@id": "eval:resnet50_imagenet_extreme"
+        },
+        {
+          "@id": "eval:mobilenetv2_imagenet_best"
+        },
+        {
+          "@id": "eval:mobilenetv2_imagenet_extreme"
+        },
+        {
+          "@id": "eval:sflops_reduction"
+        },
+        {
+          "@id": "eval:cpu_speedup"
+        }
+      ],
+      "mls:implements": {
+        "@id": "repo:sharath_girish_lilnetx"
+      }
+    },
+    {
+      "@id": "org:university_of_maryland_college_park",
+      "@type": "mls:Organization",
+      "mention": {
+        "start_char_doc": 126,
+        "end_char_doc": 162,
+        "prefix": "h EXtreme Model Compression and Structured Sparsification  **Sharath Girish**   ",
+        "suffix": "  **Kamal Gupta**   University of Maryland, College Park  **Saurabh Singh**   Go",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "University of Maryland, College Park",
+        "start_char_doc": 126,
+        "end_char_doc": 162,
+        "prefix": "h EXtreme Model Compression and Structured Sparsification  **Sharath Girish**   ",
+        "suffix": "  **Kamal Gupta**   University of Maryland, College Park  **Saurabh Singh**   Go",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "academic institution",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "org:google_research",
+      "@type": "mls:Organization",
+      "mention": {
+        "start_char_doc": 240,
+        "end_char_doc": 255,
+        "prefix": "rk  **Kamal Gupta**   University of Maryland, College Park  **Saurabh Singh**   ",
+        "suffix": "  **Abhinav Shrivastava**   University of Maryland, College Park  ## Abstract  W",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Google Research",
+        "start_char_doc": 240,
+        "end_char_doc": 255,
+        "prefix": "rk  **Kamal Gupta**   University of Maryland, College Park  **Saurabh Singh**   ",
+        "suffix": "  **Abhinav Shrivastava**   University of Maryland, College Park  ## Abstract  W",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "research organization",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "person:girish_sharath",
+      "@type": "mls:Person",
+      "mention": {
+        "start_char_doc": 107,
+        "end_char_doc": 121,
+        "prefix": "weight Networks with EXtreme Model Compression and Structured Sparsification  **",
+        "suffix": "**   University of Maryland, College Park  **Kamal Gupta**   University of Maryl",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Sharath Girish",
+        "start_char_doc": 107,
+        "end_char_doc": 121,
+        "prefix": "weight Networks with EXtreme Model Compression and Structured Sparsification  **",
+        "suffix": "**   University of Maryland, College Park  **Kamal Gupta**   University of Maryl",
+        "valueSource": "extracted"
+      },
+      "mls:email": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:affiliation": {
+        "@id": "org:university_of_maryland_college_park"
+      }
+    },
+    {
+      "@id": "person:gupta_kamal",
+      "@type": "mls:Person",
+      "mention": {
+        "start_char_doc": 166,
+        "end_char_doc": 177,
+        "prefix": "ed Sparsification  **Sharath Girish**   University of Maryland, College Park  **",
+        "suffix": "**   University of Maryland, College Park  **Saurabh Singh**   Google Research  ",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Kamal Gupta",
+        "start_char_doc": 166,
+        "end_char_doc": 177,
+        "prefix": "ed Sparsification  **Sharath Girish**   University of Maryland, College Park  **",
+        "suffix": "**   University of Maryland, College Park  **Saurabh Singh**   Google Research  ",
+        "valueSource": "extracted"
+      },
+      "mls:email": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:affiliation": {
+        "@id": "org:university_of_maryland_college_park"
+      }
+    },
+    {
+      "@id": "person:singh_saurabh",
+      "@type": "mls:Person",
+      "mention": {
+        "start_char_doc": 222,
+        "end_char_doc": 235,
+        "prefix": "ryland, College Park  **Kamal Gupta**   University of Maryland, College Park  **",
+        "suffix": "**   Google Research  **Abhinav Shrivastava**   University of Maryland, College ",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Saurabh Singh",
+        "start_char_doc": 222,
+        "end_char_doc": 235,
+        "prefix": "ryland, College Park  **Kamal Gupta**   University of Maryland, College Park  **",
+        "suffix": "**   Google Research  **Abhinav Shrivastava**   University of Maryland, College ",
+        "valueSource": "extracted"
+      },
+      "mls:email": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:affiliation": {
+        "@id": "org:google_research"
+      }
+    },
+    {
+      "@id": "person:shrivastava_abhinav",
+      "@type": "mls:Person",
+      "mention": {
+        "start_char_doc": 259,
+        "end_char_doc": 278,
+        "prefix": "   University of Maryland, College Park  **Saurabh Singh**   Google Research  **",
+        "suffix": "**   University of Maryland, College Park  ## Abstract  We introduce LilNetX, an",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Abhinav Shrivastava",
+        "start_char_doc": 259,
+        "end_char_doc": 278,
+        "prefix": "   University of Maryland, College Park  **Saurabh Singh**   Google Research  **",
+        "suffix": "**   University of Maryland, College Park  ## Abstract  We introduce LilNetX, an",
+        "valueSource": "extracted"
+      },
+      "mls:email": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:affiliation": {
+        "@id": "org:university_of_maryland_college_park"
+      }
+    },
+    {
+      "@id": "task:model_compression",
+      "@type": "mls:MLS_Task",
+      "mention": {
+        "start_char_doc": 1242,
+        "end_char_doc": 1259,
+        "prefix": "ty on ResNet-50 trained on ImageNet, when compared to existing state-of-the-art ",
+        "suffix": " methods. Code is available at https://github.com/Sharath-girish/LilNetX.  ## 1 ",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "model compression",
+        "start_char_doc": 1242,
+        "end_char_doc": 1259,
+        "prefix": "ty on ResNet-50 trained on ImageNet, when compared to existing state-of-the-art ",
+        "suffix": " methods. Code is available at https://github.com/Sharath-girish/LilNetX.  ## 1 ",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "reducing model size on disk for neural networks",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:category": {
+        "value": "computer vision model efficiency",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "task:structured_sparsification",
+      "@type": "mls:MLS_Task",
+      "mention": {
+        "start_char_doc": 6075,
+        "end_char_doc": 6100,
+        "prefix": ", an algorithm to jointly perform model compression as well as structured and un",
+        "suffix": " for direct computational gains in network inference. Our algorithm can be train",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "structured sparsification",
+        "start_char_doc": 6075,
+        "end_char_doc": 6100,
+        "prefix": ", an algorithm to jointly perform model compression as well as structured and un",
+        "suffix": " for direct computational gains in network inference. Our algorithm can be train",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "increasing structured sparsity to reduce computation",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:category": {
+        "value": "computer vision model efficiency",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "task:image_classification",
+      "@type": "mls:MLS_Task",
+      "mention": {
+        "start_char_doc": 12017,
+        "end_char_doc": 12031,
+        "prefix": "ining high levels of accuracy in Sec. 4.  # 3 Approach  We consider the task of ",
+        "suffix": " using a convolutional neural network (CNN), although our approach can be trivia",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "classification",
+        "start_char_doc": 12017,
+        "end_char_doc": 12031,
+        "prefix": "ining high levels of accuracy in Sec. 4.  # 3 Approach  We consider the task of ",
+        "suffix": " using a convolutional neural network (CNN), although our approach can be trivia",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "classification using a convolutional neural network (CNN)",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:category": {
+        "value": "computer vision model efficiency",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "task:accuracy_rate_computation_tradeoff",
+      "@type": "mls:MLS_Task",
+      "mention": {
+        "start_char_doc": 454,
+        "end_char_doc": 489,
+        "prefix": "nable technique for neural networks that enables learning models with specified ",
+        "suffix": ". Prior works approach these problems one at a time and often require post-proce",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "accuracy-rate-computation trade-off",
+        "start_char_doc": 454,
+        "end_char_doc": 489,
+        "prefix": "nable technique for neural networks that enables learning models with specified ",
+        "suffix": ". Prior works approach these problems one at a time and often require post-proce",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "jointly optimizing classification accuracy, model size, and computational cost",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:category": {
+        "value": "computer vision model efficiency",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "task:inference_speedup",
+      "@type": "mls:MLS_Task",
+      "mention": {
+        "start_char_doc": 5073,
+        "end_char_doc": 5091,
+        "prefix": "parse matrix multiplications which can be exploited for computational gains and ",
+        "suffix": " through dedicated libraries like NVIDIA’s CuSparse library [51]. Slice structur",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "inference speedups",
+        "start_char_doc": 5073,
+        "end_char_doc": 5091,
+        "prefix": "parse matrix multiplications which can be exploited for computational gains and ",
+        "suffix": " through dedicated libraries like NVIDIA’s CuSparse library [51]. Slice structur",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "computational gains and inference speedups through slice sparsity",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:category": {
+        "value": "computer vision model efficiency",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "datasource:cifar_krizhevsky_hinton",
+      "@type": "mls:DataSource",
+      "mention": {
+        "start_char_doc": 53929,
+        "end_char_doc": 53955,
+        "prefix": "method for stochastic optimization. arXiv preprint arXiv:1412.6980 (2014)  [35] ",
+        "suffix": ", et al.: Learning multiple layers of features from tiny images (2009)  [36] Lec",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Krizhevsky, A., Hinton, G.",
+        "start_char_doc": 53929,
+        "end_char_doc": 53955,
+        "prefix": "method for stochastic optimization. arXiv preprint arXiv:1412.6980 (2014)  [35] ",
+        "suffix": ", et al.: Learning multiple layers of features from tiny images (2009)  [36] Lec",
+        "valueSource": "extracted"
+      },
+      "mls:url": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "dataset citation",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "datasource:ilsvrc2012_imagenet",
+      "@type": "mls:DataSource",
+      "mention": {
+        "start_char_doc": 24616,
+        "end_char_doc": 24637,
+        "prefix": "as 100 classes (with 600 images per class). For large scale experiments, we use ",
+        "suffix": " dataset [11]. It has 1.2 million images for training, 50000 images for the test",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "ILSVRC2012 (ImageNet)",
+        "start_char_doc": 24616,
+        "end_char_doc": 24637,
+        "prefix": "as 100 classes (with 600 images per class). For large scale experiments, we use ",
+        "suffix": " dataset [11]. It has 1.2 million images for training, 50000 images for the test",
+        "valueSource": "extracted"
+      },
+      "mls:url": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "dataset",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "datasource:github_lilnetx",
+      "@type": "mls:DataSource",
+      "mention": {
+        "start_char_doc": 1290,
+        "end_char_doc": 1331,
+        "prefix": "ed to existing state-of-the-art model compression methods. Code is available at ",
+        "suffix": ".  ## 1 Introduction  Recent research in deep neural networks (DNNs) has shown t",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "https://github.com/Sharath-girish/LilNetX",
+        "start_char_doc": 1290,
+        "end_char_doc": 1331,
+        "prefix": "ed to existing state-of-the-art model compression methods. Code is available at ",
+        "suffix": ".  ## 1 Introduction  Recent research in deep neural networks (DNNs) has shown t",
+        "valueSource": "extracted"
+      },
+      "mls:url": {
+        "value": "https://github.com/Sharath-girish/LilNetX",
+        "start_char_doc": 1290,
+        "end_char_doc": 1331,
+        "prefix": "ed to existing state-of-the-art model compression methods. Code is available at ",
+        "suffix": ".  ## 1 Introduction  Recent research in deep neural networks (DNNs) has shown t",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "software repository",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "dataset:cifar_10",
+      "@type": "mls:MLS_Dataset",
+      "mention": {
+        "start_char_doc": 1086,
+        "end_char_doc": 1094,
+        "prefix": "ze and 98% model sparsity on ResNet-20 while retaining the same accuracy on the ",
+        "suffix": " dataset as well as 35% smaller model size and 42% structured sparsity on ResNet",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "CIFAR-10",
+        "start_char_doc": 1086,
+        "end_char_doc": 1094,
+        "prefix": "ze and 98% model sparsity on ResNet-20 while retaining the same accuracy on the ",
+        "suffix": " dataset as well as 35% smaller model size and 42% structured sparsity on ResNet",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "50000 training and 10000 test color images each of size 32 × 32",
+        "start_char_doc": 24403,
+        "end_char_doc": 24466,
+        "prefix": "ee datasets in our experiments. CIFAR-10 and CIFAR-100 datasets [35] consist of ",
+        "suffix": ". CIFAR-10 has 10 classes (with 6000 images per class) and CIFAR-100 has 100 cla",
+        "valueSource": "extracted"
+      },
+      "mls:numInstances": {
+        "value": "60000",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:numClasses": {
+        "value": "10",
+        "start_char_doc": 1092,
+        "end_char_doc": 1094,
+        "prefix": " 98% model sparsity on ResNet-20 while retaining the same accuracy on the CIFAR-",
+        "suffix": " dataset as well as 35% smaller model size and 42% structured sparsity on ResNet",
+        "valueSource": "extracted"
+      },
+      "mls:license": {
+        "value": "MIT",
+        "start_char_doc": 70825,
+        "end_char_doc": 70828,
+        "prefix": "     </tr>   </thead>   <tbody>     <tr>       <td>CIFAR-10 [35]</td>       <td>",
+        "suffix": "</td>     </tr>     <tr>       <td>CIFAR-100 [35]</td>       <td>MIT</td>     </",
+        "valueSource": "extracted"
+      },
+      "mls:modality": {
+        "value": "color images",
+        "start_char_doc": 24433,
+        "end_char_doc": 24445,
+        "prefix": ". CIFAR-10 and CIFAR-100 datasets [35] consist of 50000 training and 10000 test ",
+        "suffix": " each of size 32 × 32. CIFAR-10 has 10 classes (with 6000 images per class) and ",
+        "valueSource": "extracted"
+      },
+      "mls:prov-derivedFrom": {
+        "@id": "datasource:cifar_krizhevsky_hinton"
+      }
+    },
+    {
+      "@id": "dataset:cifar_100",
+      "@type": "mls:MLS_Dataset",
+      "mention": {
+        "start_char_doc": 24368,
+        "end_char_doc": 24377,
+        "prefix": "ents  **Datasets.** We consider three datasets in our experiments. CIFAR-10 and ",
+        "suffix": " datasets [35] consist of 50000 training and 10000 test color images each of siz",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "CIFAR-100",
+        "start_char_doc": 24368,
+        "end_char_doc": 24377,
+        "prefix": "ents  **Datasets.** We consider three datasets in our experiments. CIFAR-10 and ",
+        "suffix": " datasets [35] consist of 50000 training and 10000 test color images each of siz",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "50000 training and 10000 test color images each of size 32 × 32",
+        "start_char_doc": 24403,
+        "end_char_doc": 24466,
+        "prefix": "ee datasets in our experiments. CIFAR-10 and CIFAR-100 datasets [35] consist of ",
+        "suffix": ". CIFAR-10 has 10 classes (with 6000 images per class) and CIFAR-100 has 100 cla",
+        "valueSource": "extracted"
+      },
+      "mls:numInstances": {
+        "value": "60000",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:numClasses": {
+        "value": "100",
+        "start_char_doc": 24374,
+        "end_char_doc": 24377,
+        "prefix": "**Datasets.** We consider three datasets in our experiments. CIFAR-10 and CIFAR-",
+        "suffix": " datasets [35] consist of 50000 training and 10000 test color images each of siz",
+        "valueSource": "extracted"
+      },
+      "mls:license": {
+        "value": "MIT",
+        "start_char_doc": 70825,
+        "end_char_doc": 70828,
+        "prefix": "     </tr>   </thead>   <tbody>     <tr>       <td>CIFAR-10 [35]</td>       <td>",
+        "suffix": "</td>     </tr>     <tr>       <td>CIFAR-100 [35]</td>       <td>MIT</td>     </",
+        "valueSource": "extracted"
+      },
+      "mls:modality": {
+        "value": "color images",
+        "start_char_doc": 24433,
+        "end_char_doc": 24445,
+        "prefix": ". CIFAR-10 and CIFAR-100 datasets [35] consist of 50000 training and 10000 test ",
+        "suffix": " each of size 32 × 32. CIFAR-10 has 10 classes (with 6000 images per class) and ",
+        "valueSource": "extracted"
+      },
+      "mls:prov-derivedFrom": {
+        "@id": "datasource:cifar_krizhevsky_hinton"
+      }
+    },
+    {
+      "@id": "dataset:ilsvrc2012_imagenet",
+      "@type": "mls:MLS_Dataset",
+      "mention": {
+        "start_char_doc": 24616,
+        "end_char_doc": 24637,
+        "prefix": "as 100 classes (with 600 images per class). For large scale experiments, we use ",
+        "suffix": " dataset [11]. It has 1.2 million images for training, 50000 images for the test",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "ILSVRC2012 (ImageNet)",
+        "start_char_doc": 24616,
+        "end_char_doc": 24637,
+        "prefix": "as 100 classes (with 600 images per class). For large scale experiments, we use ",
+        "suffix": " dataset [11]. It has 1.2 million images for training, 50000 images for the test",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "1.2 million images for training, 50000 images for the test and 1000 classes",
+        "start_char_doc": 24659,
+        "end_char_doc": 24734,
+        "prefix": " For large scale experiments, we use ILSVRC2012 (ImageNet) dataset [11]. It has ",
+        "suffix": ".  **Network Architectures.** For CIFAR-10 and CIFAR-100 datasets, we show resul",
+        "valueSource": "extracted"
+      },
+      "mls:numInstances": {
+        "value": "1250000",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:numClasses": {
+        "value": "1000",
+        "start_char_doc": 24422,
+        "end_char_doc": 24426,
+        "prefix": "experiments. CIFAR-10 and CIFAR-100 datasets [35] consist of 50000 training and ",
+        "suffix": "0 test color images each of size 32 × 32. CIFAR-10 has 10 classes (with 6000 ima",
+        "valueSource": "extracted"
+      },
+      "mls:license": {
+        "value": "BSD 3-Clause",
+        "start_char_doc": 70960,
+        "end_char_doc": 70972,
+        "prefix": "d>       <td>MIT</td>     </tr>     <tr>       <td>ImageNet [11]</td>       <td>",
+        "suffix": "</td>     </tr>   </tbody> </table>  ## E Code and License  Table 2 lists all da",
+        "valueSource": "extracted"
+      },
+      "mls:modality": {
+        "value": "color images",
+        "start_char_doc": 24433,
+        "end_char_doc": 24445,
+        "prefix": ". CIFAR-10 and CIFAR-100 datasets [35] consist of 50000 training and 10000 test ",
+        "suffix": " each of size 32 × 32. CIFAR-10 has 10 classes (with 6000 images per class) and ",
+        "valueSource": "extracted"
+      },
+      "mls:prov-derivedFrom": {
+        "@id": "datasource:ilsvrc2012_imagenet"
+      }
+    },
+    {
+      "@id": "model:lilnetx",
+      "@type": "mls:MLS_Model",
+      "mention": {
+        "start_char_doc": 13,
+        "end_char_doc": 20,
+        "prefix": "## Page 1  # ",
+        "suffix": ": Lightweight Networks with EXtreme Model Compression and Structured Sparsificat",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "LilNetX",
+        "start_char_doc": 13,
+        "end_char_doc": 20,
+        "prefix": "## Page 1  # ",
+        "suffix": ": Lightweight Networks with EXtreme Model Compression and Structured Sparsificat",
+        "valueSource": "extracted"
+      },
+      "mls:architecture": {
+        "value": "Lightweight Networks with EXtreme Compression and Structured Sparsification",
+        "start_char_doc": 5855,
+        "end_char_doc": 5930,
+        "prefix": "levels of model compression along with structured sparsity, we dub it LilNetX - ",
+        "suffix": ". We summarize our contributions below.  *   We introduce LilNetX, an algorithm ",
+        "valueSource": "extracted"
+      },
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:cifar_10"
+        },
+        {
+          "@id": "dataset:cifar_100"
+        },
+        {
+          "@id": "dataset:ilsvrc2012_imagenet"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:cifar_10"
+        },
+        {
+          "@id": "dataset:cifar_100"
+        },
+        {
+          "@id": "dataset:ilsvrc2012_imagenet"
+        }
+      ]
+    },
+    {
+      "@id": "model:convolutional_neural_network",
+      "@type": "mls:MLS_Model",
+      "mention": {
+        "start_char_doc": 12040,
+        "end_char_doc": 12074,
+        "prefix": "curacy in Sec. 4.  # 3 Approach  We consider the task of classification using a ",
+        "suffix": ", although our approach can be trivially extended to other tasks such as object ",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "convolutional neural network (CNN)",
+        "start_char_doc": 12040,
+        "end_char_doc": 12074,
+        "prefix": "curacy in Sec. 4.  # 3 Approach  We consider the task of classification using a ",
+        "suffix": ", although our approach can be trivially extended to other tasks such as object ",
+        "valueSource": "extracted"
+      },
+      "mls:architecture": {
+        "value": "CNN",
+        "start_char_doc": 10063,
+        "end_char_doc": 10066,
+        "prefix": "que, where the representers can take any value. VQ can be done by clustering of ",
+        "suffix": " layers at various rate-accuracy trade-offs [15, 59], hashing [7, 8], or residua",
+        "valueSource": "extracted"
+      },
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:cifar_10"
+        },
+        {
+          "@id": "dataset:cifar_100"
+        },
+        {
+          "@id": "dataset:ilsvrc2012_imagenet"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:cifar_10"
+        },
+        {
+          "@id": "dataset:cifar_100"
+        },
+        {
+          "@id": "dataset:ilsvrc2012_imagenet"
+        }
+      ]
+    },
+    {
+      "@id": "model:vgg_16",
+      "@type": "mls:MLS_Model",
+      "mention": {
+        "start_char_doc": 24843,
+        "end_char_doc": 24849,
+        "prefix": " For CIFAR-10 and CIFAR-100 datasets, we show results using two architectures - ",
+        "suffix": " [58] and ResNet-20 with a width multiplier of 4 (ResNet-20-4) [26]. VGG-16 is a",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "VGG-16",
+        "start_char_doc": 24843,
+        "end_char_doc": 24849,
+        "prefix": " For CIFAR-10 and CIFAR-100 datasets, we show results using two architectures - ",
+        "suffix": " [58] and ResNet-20 with a width multiplier of 4 (ResNet-20-4) [26]. VGG-16 is a",
+        "valueSource": "extracted"
+      },
+      "mls:architecture": {
+        "value": "13 convolutional layers of kernel size 3 × 3 and 3 dense or fully-connected layers",
+        "start_char_doc": 24971,
+        "end_char_doc": 25053,
+        "prefix": "r of 4 (ResNet-20-4) [26]. VGG-16 is a commonly used architecture consisting of ",
+        "suffix": ". Dense layers are resized to adapt to CIFAR’s 32 × 32 image size, as done in th",
+        "valueSource": "extracted"
+      },
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:cifar_10"
+        },
+        {
+          "@id": "dataset:cifar_100"
+        },
+        {
+          "@id": "dataset:ilsvrc2012_imagenet"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:cifar_10"
+        },
+        {
+          "@id": "dataset:cifar_100"
+        },
+        {
+          "@id": "dataset:ilsvrc2012_imagenet"
+        }
+      ]
+    },
+    {
+      "@id": "model:resnet_20_4",
+      "@type": "mls:MLS_Model",
+      "mention": {
+        "start_char_doc": 24899,
+        "end_char_doc": 24910,
+        "prefix": "ing two architectures - VGG-16 [58] and ResNet-20 with a width multiplier of 4 (",
+        "suffix": ") [26]. VGG-16 is a commonly used architecture consisting of 13 convolutional la",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "ResNet-20-4",
+        "start_char_doc": 24899,
+        "end_char_doc": 24910,
+        "prefix": "ing two architectures - VGG-16 [58] and ResNet-20 with a width multiplier of 4 (",
+        "suffix": ") [26]. VGG-16 is a commonly used architecture consisting of 13 convolutional la",
+        "valueSource": "extracted"
+      },
+      "mls:architecture": {
+        "value": "ResNet-20 with a width multiplier of 4",
+        "start_char_doc": 24859,
+        "end_char_doc": 24897,
+        "prefix": "d CIFAR-100 datasets, we show results using two architectures - VGG-16 [58] and ",
+        "suffix": " (ResNet-20-4) [26]. VGG-16 is a commonly used architecture consisting of 13 con",
+        "valueSource": "extracted"
+      },
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:cifar_10"
+        },
+        {
+          "@id": "dataset:cifar_100"
+        },
+        {
+          "@id": "dataset:ilsvrc2012_imagenet"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:cifar_10"
+        },
+        {
+          "@id": "dataset:cifar_100"
+        },
+        {
+          "@id": "dataset:ilsvrc2012_imagenet"
+        }
+      ]
+    },
+    {
+      "@id": "model:resnet_18",
+      "@type": "mls:MLS_Model",
+      "mention": {
+        "start_char_doc": 25361,
+        "end_char_doc": 25370,
+        "prefix": " there is a single dense layer at the end. For the ImageNet experiments, we use ",
+        "suffix": "/50 [26], an 18/50-layer network comprising of one 7 × 7 convolutional layer, on",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "ResNet-18",
+        "start_char_doc": 25361,
+        "end_char_doc": 25370,
+        "prefix": " there is a single dense layer at the end. For the ImageNet experiments, we use ",
+        "suffix": "/50 [26], an 18/50-layer network comprising of one 7 × 7 convolutional layer, on",
+        "valueSource": "extracted"
+      },
+      "mls:architecture": {
+        "value": "18-layer network",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:cifar_10"
+        },
+        {
+          "@id": "dataset:cifar_100"
+        },
+        {
+          "@id": "dataset:ilsvrc2012_imagenet"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:cifar_10"
+        },
+        {
+          "@id": "dataset:cifar_100"
+        },
+        {
+          "@id": "dataset:ilsvrc2012_imagenet"
+        }
+      ]
+    },
+    {
+      "@id": "model:resnet_50",
+      "@type": "mls:MLS_Model",
+      "mention": {
+        "start_char_doc": 1168,
+        "end_char_doc": 1177,
+        "prefix": "FAR-10 dataset as well as 35% smaller model size and 42% structured sparsity on ",
+        "suffix": " trained on ImageNet, when compared to existing state-of-the-art model compressi",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "ResNet-50",
+        "start_char_doc": 1168,
+        "end_char_doc": 1177,
+        "prefix": "FAR-10 dataset as well as 35% smaller model size and 42% structured sparsity on ",
+        "suffix": " trained on ImageNet, when compared to existing state-of-the-art model compressi",
+        "valueSource": "extracted"
+      },
+      "mls:architecture": {
+        "value": "50-layer network",
+        "start_char_doc": 25386,
+        "end_char_doc": 25402,
+        "prefix": "layer at the end. For the ImageNet experiments, we use ResNet-18/50 [26], an 18/",
+        "suffix": " comprising of one 7 × 7 convolutional layer, one dense layer and the remaining ",
+        "valueSource": "extracted"
+      },
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:cifar_10"
+        },
+        {
+          "@id": "dataset:cifar_100"
+        },
+        {
+          "@id": "dataset:ilsvrc2012_imagenet"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:cifar_10"
+        },
+        {
+          "@id": "dataset:cifar_100"
+        },
+        {
+          "@id": "dataset:ilsvrc2012_imagenet"
+        }
+      ]
+    },
+    {
+      "@id": "model:mobilenet_v2",
+      "@type": "mls:MLS_Model",
+      "mention": {
+        "start_char_doc": 25541,
+        "end_char_doc": 25553,
+        "prefix": "er and the remaining 3 × 3 convolutional layers. We also run experiments on the ",
+        "suffix": " architecture [57] which consists of depthwise separable convolutions and invert",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "MobileNet-V2",
+        "start_char_doc": 25541,
+        "end_char_doc": 25553,
+        "prefix": "er and the remaining 3 × 3 convolutional layers. We also run experiments on the ",
+        "suffix": " architecture [57] which consists of depthwise separable convolutions and invert",
+        "valueSource": "extracted"
+      },
+      "mls:architecture": {
+        "value": "depthwise separable convolutions and inverted Bottleneck blocks",
+        "start_char_doc": 25590,
+        "end_char_doc": 25653,
+        "prefix": "We also run experiments on the MobileNet-V2 architecture [57] which consists of ",
+        "suffix": ".  ## 4.1 Implementation Details  We train all of our models from scratch. CIFAR",
+        "valueSource": "extracted"
+      },
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:cifar_10"
+        },
+        {
+          "@id": "dataset:cifar_100"
+        },
+        {
+          "@id": "dataset:ilsvrc2012_imagenet"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:cifar_10"
+        },
+        {
+          "@id": "dataset:cifar_100"
+        },
+        {
+          "@id": "dataset:ilsvrc2012_imagenet"
+        }
+      ]
+    },
+    {
+      "@id": "model:entropy_model",
+      "@type": "mls:MLS_Model",
+      "mention": {
+        "start_char_doc": 26420,
+        "end_char_doc": 26452,
+        "prefix": " fewer epochs.  We use two optimizers, one for optimizing the parameters of the ",
+        "suffix": ", and the other for optimizing the decoder matrix $\\Psi$ and the model parameter",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "entropy model $q(\\widetilde{W})$",
+        "start_char_doc": 26420,
+        "end_char_doc": 26452,
+        "prefix": " fewer epochs.  We use two optimizers, one for optimizing the parameters of the ",
+        "suffix": ", and the other for optimizing the decoder matrix $\\Psi$ and the model parameter",
+        "valueSource": "extracted"
+      },
+      "mls:architecture": {
+        "value": "probability model for quantized latent weights",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:cifar_10"
+        },
+        {
+          "@id": "dataset:cifar_100"
+        },
+        {
+          "@id": "dataset:ilsvrc2012_imagenet"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:cifar_10"
+        },
+        {
+          "@id": "dataset:cifar_100"
+        },
+        {
+          "@id": "dataset:ilsvrc2012_imagenet"
+        }
+      ]
+    },
+    {
+      "@id": "model:decoder_matrix_psi",
+      "@type": "mls:MLS_Model",
+      "mention": {
+        "start_char_doc": 26487,
+        "end_char_doc": 26508,
+        "prefix": "eters of the entropy model $q(\\widetilde{W})$, and the other for optimizing the ",
+        "suffix": " and the model parameters $\\Phi$. Entropy model is optimized using Adam [34] wit",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "decoder matrix $\\Psi$",
+        "start_char_doc": 26487,
+        "end_char_doc": 26508,
+        "prefix": "eters of the entropy model $q(\\widetilde{W})$, and the other for optimizing the ",
+        "suffix": " and the model parameters $\\Phi$. Entropy model is optimized using Adam [34] wit",
+        "valueSource": "extracted"
+      },
+      "mls:architecture": {
+        "value": "linear transform from latent space to model parameters",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:cifar_10"
+        },
+        {
+          "@id": "dataset:cifar_100"
+        },
+        {
+          "@id": "dataset:ilsvrc2012_imagenet"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:cifar_10"
+        },
+        {
+          "@id": "dataset:cifar_100"
+        },
+        {
+          "@id": "dataset:ilsvrc2012_imagenet"
+        }
+      ]
+    },
+    {
+      "@id": "method:lilnetx",
+      "@type": "mls:Method",
+      "mention": {
+        "start_char_doc": 356,
+        "end_char_doc": 409,
+        "prefix": "va**   University of Maryland, College Park  ## Abstract  We introduce LilNetX, ",
+        "suffix": " that enables learning models with specified accuracy-rate-computation trade-off",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "LilNetX",
+        "start_char_doc": 13,
+        "end_char_doc": 20,
+        "prefix": "## Page 1  # ",
+        "suffix": ": Lightweight Networks with EXtreme Model Compression and Structured Sparsificat",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "an end-to-end trainable technique for neural networks",
+        "start_char_doc": 356,
+        "end_char_doc": 409,
+        "prefix": "va**   University of Maryland, College Park  ## Abstract  We introduce LilNetX, ",
+        "suffix": " that enables learning models with specified accuracy-rate-computation trade-off",
+        "valueSource": "extracted"
+      },
+      "mls:subMethod": [
+        {
+          "@id": "model:lilnetx"
+        }
+      ],
+      "mls:achieves": [
+        {
+          "@id": "eval:abstract_resnet20_cifar10_sparsity"
+        },
+        {
+          "@id": "eval:abstract_resnet50_imagenet_sparsity"
+        }
+      ]
+    },
+    {
+      "@id": "method:joint_accuracy_rate_computation_objective",
+      "@type": "mls:Method",
+      "mention": {
+        "start_char_doc": 6209,
+        "end_char_doc": 6237,
+        "prefix": "ns in network inference. Our algorithm can be trained end-to-end using a single ",
+        "suffix": " and does not require post-hoc training or post-processing.  *   With extensive ",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "joint optimization objective",
+        "start_char_doc": 6209,
+        "end_char_doc": 6237,
+        "prefix": "ns in network inference. Our algorithm can be trained end-to-end using a single ",
+        "suffix": " and does not require post-hoc training or post-processing.  *   With extensive ",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "joint optimization objective",
+        "start_char_doc": 6209,
+        "end_char_doc": 6237,
+        "prefix": "ns in network inference. Our algorithm can be trained end-to-end using a single ",
+        "suffix": " and does not require post-hoc training or post-processing.  *   With extensive ",
+        "valueSource": "extracted"
+      },
+      "mls:subMethod": [
+        {
+          "@id": "method:rate_term"
+        },
+        {
+          "@id": "method:computation_term"
+        },
+        {
+          "@id": "method:cross_entropy_loss"
+        }
+      ],
+      "mls:achieves": [
+        {
+          "@id": "eval:abstract_resnet20_cifar10_sparsity"
+        },
+        {
+          "@id": "eval:abstract_resnet50_imagenet_sparsity"
+        }
+      ]
+    },
+    {
+      "@id": "method:rate_term",
+      "@type": "mls:Method",
+      "mention": {
+        "start_char_doc": 12984,
+        "end_char_doc": 12993,
+        "prefix": "ross-entropy loss. It encourages the model to maximize prediction accuracy. The ",
+        "suffix": " $\\mathcal{L}_{rate}(\\Theta)$ encourages the model have a small disk size. We mo",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "rate term",
+        "start_char_doc": 12984,
+        "end_char_doc": 12993,
+        "prefix": "ross-entropy loss. It encourages the model to maximize prediction accuracy. The ",
+        "suffix": " $\\mathcal{L}_{rate}(\\Theta)$ encourages the model have a small disk size. We mo",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "rate term",
+        "start_char_doc": 12984,
+        "end_char_doc": 12993,
+        "prefix": "ross-entropy loss. It encourages the model to maximize prediction accuracy. The ",
+        "suffix": " $\\mathcal{L}_{rate}(\\Theta)$ encourages the model have a small disk size. We mo",
+        "valueSource": "extracted"
+      },
+      "mls:subMethod": [
+        {
+          "@id": "method:self_information_penalty"
+        }
+      ],
+      "mls:achieves": [
+        {
+          "@id": "eval:abstract_resnet20_cifar10_sparsity"
+        },
+        {
+          "@id": "eval:abstract_resnet50_imagenet_sparsity"
+        }
+      ]
+    },
+    {
+      "@id": "method:self_information_penalty",
+      "@type": "mls:Method",
+      "mention": {
+        "start_char_doc": 13137,
+        "end_char_doc": 13161,
+        "prefix": "disk size. We modify Oktay et al. [52] in the formulation of this term, where a ",
+        "suffix": " encourages the parameters to have a small bit representation. The rate term, wh",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "self-information penalty",
+        "start_char_doc": 13137,
+        "end_char_doc": 13161,
+        "prefix": "disk size. We modify Oktay et al. [52] in the formulation of this term, where a ",
+        "suffix": " encourages the parameters to have a small bit representation. The rate term, wh",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "self-information penalty",
+        "start_char_doc": 13137,
+        "end_char_doc": 13161,
+        "prefix": "disk size. We modify Oktay et al. [52] in the formulation of this term, where a ",
+        "suffix": " encourages the parameters to have a small bit representation. The rate term, wh",
+        "valueSource": "extracted"
+      },
+      "mls:subMethod": [
+        {
+          "@id": "model:entropy_model"
+        }
+      ],
+      "mls:achieves": [
+        {
+          "@id": "eval:abstract_resnet20_cifar10_sparsity"
+        },
+        {
+          "@id": "eval:abstract_resnet50_imagenet_sparsity"
+        }
+      ]
+    },
+    {
+      "@id": "method:reparameterized_latent_space_quantization",
+      "@type": "mls:Method",
+      "mention": {
+        "start_char_doc": 802,
+        "end_char_doc": 830,
+        "prefix": "aining objective that penalizes the self information of network parameters in a ",
+        "suffix": " to encourage small model size while also introducing priors to increase structu",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "reparameterized latent space",
+        "start_char_doc": 802,
+        "end_char_doc": 830,
+        "prefix": "aining objective that penalizes the self information of network parameters in a ",
+        "suffix": " to encourage small model size while also introducing priors to increase structu",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "reparameterized latent space",
+        "start_char_doc": 802,
+        "end_char_doc": 830,
+        "prefix": "aining objective that penalizes the self information of network parameters in a ",
+        "suffix": " to encourage small model size while also introducing priors to increase structu",
+        "valueSource": "extracted"
+      },
+      "mls:subMethod": [
+        {
+          "@id": "model:decoder_matrix_psi"
+        }
+      ],
+      "mls:achieves": [
+        {
+          "@id": "eval:abstract_resnet20_cifar10_sparsity"
+        },
+        {
+          "@id": "eval:abstract_resnet50_imagenet_sparsity"
+        }
+      ]
+    },
+    {
+      "@id": "method:computation_term",
+      "@type": "mls:Method",
+      "mention": {
+        "start_char_doc": 13360,
+        "end_char_doc": 13376,
+        "prefix": "sn't lead to computational gains as the learned parameters are still dense. Our ",
+        "suffix": " $\\mathcal{L}_{compute}(\\Theta)$ addresses this issue by introducing a structure",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "computation term",
+        "start_char_doc": 13360,
+        "end_char_doc": 13376,
+        "prefix": "sn't lead to computational gains as the learned parameters are still dense. Our ",
+        "suffix": " $\\mathcal{L}_{compute}(\\Theta)$ addresses this issue by introducing a structure",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "computation term",
+        "start_char_doc": 13360,
+        "end_char_doc": 13376,
+        "prefix": "sn't lead to computational gains as the learned parameters are still dense. Our ",
+        "suffix": " $\\mathcal{L}_{compute}(\\Theta)$ addresses this issue by introducing a structure",
+        "valueSource": "extracted"
+      },
+      "mls:subMethod": [
+        {
+          "@id": "method:zero_mean_prior"
+        },
+        {
+          "@id": "method:group_sparsity_prior"
+        }
+      ],
+      "mls:achieves": [
+        {
+          "@id": "eval:abstract_resnet20_cifar10_sparsity"
+        },
+        {
+          "@id": "eval:abstract_resnet50_imagenet_sparsity"
+        }
+      ]
+    },
+    {
+      "@id": "method:zero_mean_prior",
+      "@type": "mls:Method",
+      "mention": {
+        "start_char_doc": 20208,
+        "end_char_doc": 20223,
+        "prefix": "alued latents. They could take on any constant value. Therefore, we introduce a ",
+        "suffix": " on the latent representation of the parameters to encourage the latent paramete",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "zero-mean prior",
+        "start_char_doc": 20208,
+        "end_char_doc": 20223,
+        "prefix": "alued latents. They could take on any constant value. Therefore, we introduce a ",
+        "suffix": " on the latent representation of the parameters to encourage the latent paramete",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "zero-mean prior",
+        "start_char_doc": 20208,
+        "end_char_doc": 20223,
+        "prefix": "alued latents. They could take on any constant value. Therefore, we introduce a ",
+        "suffix": " on the latent representation of the parameters to encourage the latent paramete",
+        "valueSource": "extracted"
+      },
+      "mls:subMethod": [],
+      "mls:achieves": [
+        {
+          "@id": "eval:abstract_resnet20_cifar10_sparsity"
+        },
+        {
+          "@id": "eval:abstract_resnet50_imagenet_sparsity"
+        }
+      ]
+    },
+    {
+      "@id": "method:group_sparsity_prior",
+      "@type": "mls:Method",
+      "mention": {
+        "start_char_doc": 21684,
+        "end_char_doc": 21713,
+        "prefix": "ns. To encourage individual slices to go to zero as a whole we propose to use a ",
+        "suffix": " [76] on the $\\widehat{\\mathbf{W}}$ slices as following  $$ \\mathcal{L}_{\\text{g",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "group sparsity regularization",
+        "start_char_doc": 21684,
+        "end_char_doc": 21713,
+        "prefix": "ns. To encourage individual slices to go to zero as a whole we propose to use a ",
+        "suffix": " [76] on the $\\widehat{\\mathbf{W}}$ slices as following  $$ \\mathcal{L}_{\\text{g",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "group sparsity regularization",
+        "start_char_doc": 21684,
+        "end_char_doc": 21713,
+        "prefix": "ns. To encourage individual slices to go to zero as a whole we propose to use a ",
+        "suffix": " [76] on the $\\widehat{\\mathbf{W}}$ slices as following  $$ \\mathcal{L}_{\\text{g",
+        "valueSource": "extracted"
+      },
+      "mls:subMethod": [],
+      "mls:achieves": [
+        {
+          "@id": "eval:abstract_resnet20_cifar10_sparsity"
+        },
+        {
+          "@id": "eval:abstract_resnet50_imagenet_sparsity"
+        }
+      ]
+    },
+    {
+      "@id": "method:slice_sparsity",
+      "@type": "mls:Method",
+      "mention": {
+        "start_char_doc": 23534,
+        "end_char_doc": 23548,
+        "prefix": "orce a slice-wise sparsity in the decoded weights. This sparsity, which we term ",
+        "suffix": ", hits a middle ground between completely unstructured sparsity where individual",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "slice-sparsity",
+        "start_char_doc": 23534,
+        "end_char_doc": 23548,
+        "prefix": "orce a slice-wise sparsity in the decoded weights. This sparsity, which we term ",
+        "suffix": ", hits a middle ground between completely unstructured sparsity where individual",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "slice-sparsity",
+        "start_char_doc": 23534,
+        "end_char_doc": 23548,
+        "prefix": "orce a slice-wise sparsity in the decoded weights. This sparsity, which we term ",
+        "suffix": ", hits a middle ground between completely unstructured sparsity where individual",
+        "valueSource": "extracted"
+      },
+      "mls:subMethod": [],
+      "mls:achieves": [
+        {
+          "@id": "eval:abstract_resnet20_cifar10_sparsity"
+        },
+        {
+          "@id": "eval:abstract_resnet50_imagenet_sparsity"
+        }
+      ]
+    },
+    {
+      "@id": "method:slice_flops",
+      "@type": "mls:Method",
+      "mention": {
+        "start_char_doc": 24165,
+        "end_char_doc": 24176,
+        "prefix": "dense matrix multiplications or entirely unstructured sparsity. We use the term ",
+        "suffix": " (or SFLOPs) to denote the direct computational gain we can obtain through block",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Slice FLOPs",
+        "start_char_doc": 24165,
+        "end_char_doc": 24176,
+        "prefix": "dense matrix multiplications or entirely unstructured sparsity. We use the term ",
+        "suffix": " (or SFLOPs) to denote the direct computational gain we can obtain through block",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "Slice FLOPs",
+        "start_char_doc": 24165,
+        "end_char_doc": 24176,
+        "prefix": "dense matrix multiplications or entirely unstructured sparsity. We use the term ",
+        "suffix": " (or SFLOPs) to denote the direct computational gain we can obtain through block",
+        "valueSource": "extracted"
+      },
+      "mls:subMethod": [
+        {
+          "@id": "method:slice_sparsity"
+        }
+      ],
+      "mls:achieves": [
+        {
+          "@id": "eval:abstract_resnet20_cifar10_sparsity"
+        },
+        {
+          "@id": "eval:abstract_resnet50_imagenet_sparsity"
+        }
+      ]
+    },
+    {
+      "@id": "method:linear_decoder_transform",
+      "@type": "mls:Method",
+      "mention": {
+        "start_char_doc": 11351,
+        "end_char_doc": 11374,
+        "prefix": "̃^i in a quantized latent space. CNN parameters can be computed using a learned ",
+        "suffix": " Ψ of the latent parameters. Linearity of transform allows sparsity in the quant",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "purely linear transform",
+        "start_char_doc": 11351,
+        "end_char_doc": 11374,
+        "prefix": "̃^i in a quantized latent space. CNN parameters can be computed using a learned ",
+        "suffix": " Ψ of the latent parameters. Linearity of transform allows sparsity in the quant",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "purely linear transform",
+        "start_char_doc": 11351,
+        "end_char_doc": 11374,
+        "prefix": "̃^i in a quantized latent space. CNN parameters can be computed using a learned ",
+        "suffix": " Ψ of the latent parameters. Linearity of transform allows sparsity in the quant",
+        "valueSource": "extracted"
+      },
+      "mls:subMethod": [
+        {
+          "@id": "model:decoder_matrix_psi"
+        }
+      ],
+      "mls:achieves": [
+        {
+          "@id": "eval:abstract_resnet20_cifar10_sparsity"
+        },
+        {
+          "@id": "eval:abstract_resnet50_imagenet_sparsity"
+        }
+      ]
+    },
+    {
+      "@id": "method:initialization_approach",
+      "@type": "mls:Method",
+      "mention": {
+        "start_char_doc": 28189,
+        "end_char_doc": 28212,
+        "prefix": " non-trivial in terms of this decoding scheme. We provide an explanation of our ",
+        "suffix": " in Sec. **C** in our appendix. Recall from the Eq. (9) that in addition to the ",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "initialization approach",
+        "start_char_doc": 28189,
+        "end_char_doc": 28212,
+        "prefix": " non-trivial in terms of this decoding scheme. We provide an explanation of our ",
+        "suffix": " in Sec. **C** in our appendix. Recall from the Eq. (9) that in addition to the ",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "initialization approach",
+        "start_char_doc": 28189,
+        "end_char_doc": 28212,
+        "prefix": " non-trivial in terms of this decoding scheme. We provide an explanation of our ",
+        "suffix": " in Sec. **C** in our appendix. Recall from the Eq. (9) that in addition to the ",
+        "valueSource": "extracted"
+      },
+      "mls:subMethod": [
+        {
+          "@id": "model:decoder_matrix_psi"
+        }
+      ],
+      "mls:achieves": [
+        {
+          "@id": "eval:abstract_resnet20_cifar10_sparsity"
+        },
+        {
+          "@id": "eval:abstract_resnet50_imagenet_sparsity"
+        }
+      ]
+    },
+    {
+      "@id": "method:torchac_arithmetic_coding",
+      "@type": "mls:Method",
+      "mention": {
+        "start_char_doc": 26927,
+        "end_char_doc": 26934,
+        "prefix": "a cosine decay schedule. Our model compression results are reported using the **",
+        "suffix": "** library [48] which does arithmetic coding of the weights given probability ta",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "torchac",
+        "start_char_doc": 26927,
+        "end_char_doc": 26934,
+        "prefix": "a cosine decay schedule. Our model compression results are reported using the **",
+        "suffix": "** library [48] which does arithmetic coding of the weights given probability ta",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "torchac",
+        "start_char_doc": 26927,
+        "end_char_doc": 26934,
+        "prefix": "a cosine decay schedule. Our model compression results are reported using the **",
+        "suffix": "** library [48] which does arithmetic coding of the weights given probability ta",
+        "valueSource": "extracted"
+      },
+      "mls:subMethod": [],
+      "mls:achieves": [
+        {
+          "@id": "eval:abstract_resnet20_cifar10_sparsity"
+        },
+        {
+          "@id": "eval:abstract_resnet50_imagenet_sparsity"
+        }
+      ]
+    },
+    {
+      "@id": "algo:adam",
+      "@type": "mls:MLS_Algorithm",
+      "mention": {
+        "start_char_doc": 26575,
+        "end_char_doc": 26579,
+        "prefix": "matrix $\\Psi$ and the model parameters $\\Phi$. Entropy model is optimized using ",
+        "suffix": " [34] with a learning rate of $10^{-4}$ for all our experiments. The remaining p",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Adam",
+        "start_char_doc": 26575,
+        "end_char_doc": 26579,
+        "prefix": "matrix $\\Psi$ and the model parameters $\\Phi$. Entropy model is optimized using ",
+        "suffix": " [34] with a learning rate of $10^{-4}$ for all our experiments. The remaining p",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "Adam [34]",
+        "start_char_doc": 26575,
+        "end_char_doc": 26584,
+        "prefix": "matrix $\\Psi$ and the model parameters $\\Phi$. Entropy model is optimized using ",
+        "suffix": " with a learning rate of $10^{-4}$ for all our experiments. The remaining parame",
+        "valueSource": "extracted"
+      },
+      "mls:subMethod": [
+        {
+          "@id": "method:lilnetx"
+        }
+      ]
+    },
+    {
+      "@id": "algo:straight_through_estimator",
+      "@type": "mls:MLS_Algorithm",
+      "mention": {
+        "start_char_doc": 18075,
+        "end_char_doc": 18101,
+        "prefix": "er that permits specification of relative weight with respect to other terms. A ",
+        "suffix": " [2] is used to back-propagate the gradients from the classification loss to par",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "straight-through estimator",
+        "start_char_doc": 18075,
+        "end_char_doc": 18101,
+        "prefix": "er that permits specification of relative weight with respect to other terms. A ",
+        "suffix": " [2] is used to back-propagate the gradients from the classification loss to par",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "straight-through estimator",
+        "start_char_doc": 18075,
+        "end_char_doc": 18101,
+        "prefix": "er that permits specification of relative weight with respect to other terms. A ",
+        "suffix": " [2] is used to back-propagate the gradients from the classification loss to par",
+        "valueSource": "extracted"
+      },
+      "mls:subMethod": [
+        {
+          "@id": "method:lilnetx"
+        }
+      ]
+    },
+    {
+      "@id": "algo:cosine_decay_schedule",
+      "@type": "mls:MLS_Algorithm",
+      "mention": {
+        "start_char_doc": 26849,
+        "end_char_doc": 26870,
+        "prefix": "f 0.02/0.006/0.01 for ResNet-18/50/MobileNet-v2 respectively on ImageNet with a ",
+        "suffix": ". Our model compression results are reported using the **torchac** library [48] ",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "cosine decay schedule",
+        "start_char_doc": 26849,
+        "end_char_doc": 26870,
+        "prefix": "f 0.02/0.006/0.01 for ResNet-18/50/MobileNet-v2 respectively on ImageNet with a ",
+        "suffix": ". Our model compression results are reported using the **torchac** library [48] ",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "cosine decay schedule",
+        "start_char_doc": 26849,
+        "end_char_doc": 26870,
+        "prefix": "f 0.02/0.006/0.01 for ResNet-18/50/MobileNet-v2 respectively on ImageNet with a ",
+        "suffix": ". Our model compression results are reported using the **torchac** library [48] ",
+        "valueSource": "extracted"
+      },
+      "mls:subMethod": [
+        {
+          "@id": "method:lilnetx"
+        }
+      ]
+    },
+    {
+      "@id": "algo:im2col",
+      "@type": "mls:MLS_Algorithm",
+      "mention": {
+        "start_char_doc": 23846,
+        "end_char_doc": 23852,
+        "prefix": "ght tensors, when represented as matrix multiplications (as done by the popular ",
+        "suffix": " algorithm) [4], form block sparse matrices. Libraries, such as NVIDIA's Cuspars",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "im2col",
+        "start_char_doc": 23846,
+        "end_char_doc": 23852,
+        "prefix": "ght tensors, when represented as matrix multiplications (as done by the popular ",
+        "suffix": " algorithm) [4], form block sparse matrices. Libraries, such as NVIDIA's Cuspars",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "im2col algorithm",
+        "start_char_doc": 23846,
+        "end_char_doc": 23862,
+        "prefix": "ght tensors, when represented as matrix multiplications (as done by the popular ",
+        "suffix": ") [4], form block sparse matrices. Libraries, such as NVIDIA's Cusparse library ",
+        "valueSource": "extracted"
+      },
+      "mls:subMethod": [
+        {
+          "@id": "method:lilnetx"
+        }
+      ]
+    },
+    {
+      "@id": "algo:block_sparse_matrix_multiplication",
+      "@type": "mls:MLS_Algorithm",
+      "mention": {
+        "start_char_doc": 4986,
+        "end_char_doc": 5021,
+        "prefix": "peedups, slice-structured sparsity allows for convolutions to be represented as ",
+        "suffix": " which can be exploited for computational gains and inference speedups through d",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "block sparse matrix multiplications",
+        "start_char_doc": 4986,
+        "end_char_doc": 5021,
+        "prefix": "peedups, slice-structured sparsity allows for convolutions to be represented as ",
+        "suffix": " which can be exploited for computational gains and inference speedups through d",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "block sparse matrix multiplications",
+        "start_char_doc": 4986,
+        "end_char_doc": 5021,
+        "prefix": "peedups, slice-structured sparsity allows for convolutions to be represented as ",
+        "suffix": " which can be exploited for computational gains and inference speedups through d",
+        "valueSource": "extracted"
+      },
+      "mls:subMethod": [
+        {
+          "@id": "method:lilnetx"
+        }
+      ]
+    },
+    {
+      "@id": "algo:arithmetic_coding",
+      "@type": "mls:MLS_Algorithm",
+      "mention": {
+        "start_char_doc": 26961,
+        "end_char_doc": 26978,
+        "prefix": " compression results are reported using the **torchac** library [48] which does ",
+        "suffix": " of the weights given probability tables for the quantized values which we obtai",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "arithmetic coding",
+        "start_char_doc": 26961,
+        "end_char_doc": 26978,
+        "prefix": " compression results are reported using the **torchac** library [48] which does ",
+        "suffix": " of the weights given probability tables for the quantized values which we obtai",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "arithmetic coding",
+        "start_char_doc": 26961,
+        "end_char_doc": 26978,
+        "prefix": " compression results are reported using the **torchac** library [48] which does ",
+        "suffix": " of the weights given probability tables for the quantized values which we obtai",
+        "valueSource": "extracted"
+      },
+      "mls:subMethod": [
+        {
+          "@id": "method:lilnetx"
+        }
+      ]
+    },
+    {
+      "@id": "hp:cifar_epochs_200",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 25779,
+        "end_char_doc": 25789,
+        "prefix": " of our models from scratch. CIFAR-10 and CIFAR-100 experiments are trained for ",
+        "suffix": ". We use the FFCV library [36] for faster ImageNet training, with a batchsize of",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "CIFAR training epochs",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "200 epochs",
+        "start_char_doc": 25779,
+        "end_char_doc": 25789,
+        "prefix": " of our models from scratch. CIFAR-10 and CIFAR-100 experiments are trained for ",
+        "suffix": ". We use the FFCV library [36] for faster ImageNet training, with a batchsize of",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "integer",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Training",
+      "hpType": "NumEpochs",
+      "uncertain": {
+        "value": false,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:resnet18_imagenet_batch_size_2048",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 25870,
+        "end_char_doc": 25874,
+        "prefix": " We use the FFCV library [36] for faster ImageNet training, with a batchsize of ",
+        "suffix": "/512 for ResNet-18/50 split across 4 GPUs. We train ResNet-18/50 for 35/32 epoch",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "ResNet-18 ImageNet batch size",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "2048",
+        "start_char_doc": 25870,
+        "end_char_doc": 25874,
+        "prefix": " We use the FFCV library [36] for faster ImageNet training, with a batchsize of ",
+        "suffix": "/512 for ResNet-18/50 split across 4 GPUs. We train ResNet-18/50 for 35/32 epoch",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "integer",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Training",
+      "hpType": "BatchSize",
+      "uncertain": {
+        "value": false,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:resnet50_imagenet_batch_size_512",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 25875,
+        "end_char_doc": 25878,
+        "prefix": "se the FFCV library [36] for faster ImageNet training, with a batchsize of 2048/",
+        "suffix": " for ResNet-18/50 split across 4 GPUs. We train ResNet-18/50 for 35/32 epochs in",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "ResNet-50 ImageNet batch size",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "512",
+        "start_char_doc": 25875,
+        "end_char_doc": 25878,
+        "prefix": "se the FFCV library [36] for faster ImageNet training, with a batchsize of 2048/",
+        "suffix": " for ResNet-18/50 split across 4 GPUs. We train ResNet-18/50 for 35/32 epochs in",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "integer",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Training",
+      "hpType": "BatchSize",
+      "uncertain": {
+        "value": false,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:imagenet_gpus_4",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 25909,
+        "end_char_doc": 25915,
+        "prefix": "r ImageNet training, with a batchsize of 2048/512 for ResNet-18/50 split across ",
+        "suffix": ". We train ResNet-18/50 for 35/32 epochs in order to keep the range of the uncom",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "ImageNet GPUs",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "4 GPUs",
+        "start_char_doc": 25909,
+        "end_char_doc": 25915,
+        "prefix": "r ImageNet training, with a batchsize of 2048/512 for ResNet-18/50 split across ",
+        "suffix": ". We train ResNet-18/50 for 35/32 epochs in order to keep the range of the uncom",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "integer",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Training",
+      "hpType": "NumWorkers",
+      "uncertain": {
+        "value": true,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:resnet18_epochs_35",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 25943,
+        "end_char_doc": 25945,
+        "prefix": "ize of 2048/512 for ResNet-18/50 split across 4 GPUs. We train ResNet-18/50 for ",
+        "suffix": "/32 epochs in order to keep the range of the uncompressed network accuracies sim",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "ResNet-18 ImageNet epochs",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "35",
+        "start_char_doc": 25943,
+        "end_char_doc": 25945,
+        "prefix": "ize of 2048/512 for ResNet-18/50 split across 4 GPUs. We train ResNet-18/50 for ",
+        "suffix": "/32 epochs in order to keep the range of the uncompressed network accuracies sim",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "integer",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Training",
+      "hpType": "NumEpochs",
+      "uncertain": {
+        "value": false,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:resnet50_epochs_32",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 25946,
+        "end_char_doc": 25948,
+        "prefix": " of 2048/512 for ResNet-18/50 split across 4 GPUs. We train ResNet-18/50 for 35/",
+        "suffix": " epochs in order to keep the range of the uncompressed network accuracies simila",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "ResNet-50 ImageNet epochs",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "32",
+        "start_char_doc": 25946,
+        "end_char_doc": 25948,
+        "prefix": " of 2048/512 for ResNet-18/50 split across 4 GPUs. We train ResNet-18/50 for 35/",
+        "suffix": " epochs in order to keep the range of the uncompressed network accuracies simila",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "integer",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Training",
+      "hpType": "NumEpochs",
+      "uncertain": {
+        "value": false,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:entropy_model_learning_rate_1e_4",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 26610,
+        "end_char_doc": 26617,
+        "prefix": "ers $\\Phi$. Entropy model is optimized using Adam [34] with a learning rate of $",
+        "suffix": "$ for all our experiments. The remaining parameters are optimized using Adam wit",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "entropy model learning rate",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "10^{-4}",
+        "start_char_doc": 26610,
+        "end_char_doc": 26617,
+        "prefix": "ers $\\Phi$. Entropy model is optimized using Adam [34] with a learning rate of $",
+        "suffix": "$ for all our experiments. The remaining parameters are optimized using Adam wit",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "float",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Optimization",
+      "hpType": "LearningRate",
+      "uncertain": {
+        "value": false,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:cifar_learning_rate_0_01",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 26718,
+        "end_char_doc": 26722,
+        "prefix": "ents. The remaining parameters are optimized using Adam with a learning rate of ",
+        "suffix": " for CIFAR-10 experiments and a learning rate of 0.02/0.006/0.01 for ResNet-18/5",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "CIFAR learning rate",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "0.01",
+        "start_char_doc": 26718,
+        "end_char_doc": 26722,
+        "prefix": "ents. The remaining parameters are optimized using Adam with a learning rate of ",
+        "suffix": " for CIFAR-10 experiments and a learning rate of 0.02/0.006/0.01 for ResNet-18/5",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "float",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Optimization",
+      "hpType": "LearningRate",
+      "uncertain": {
+        "value": false,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:resnet18_learning_rate_0_02",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 26771,
+        "end_char_doc": 26775,
+        "prefix": "am with a learning rate of 0.01 for CIFAR-10 experiments and a learning rate of ",
+        "suffix": "/0.006/0.01 for ResNet-18/50/MobileNet-v2 respectively on ImageNet with a cosine",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "ResNet-18 ImageNet learning rate",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "0.02",
+        "start_char_doc": 26771,
+        "end_char_doc": 26775,
+        "prefix": "am with a learning rate of 0.01 for CIFAR-10 experiments and a learning rate of ",
+        "suffix": "/0.006/0.01 for ResNet-18/50/MobileNet-v2 respectively on ImageNet with a cosine",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "float",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Optimization",
+      "hpType": "LearningRate",
+      "uncertain": {
+        "value": false,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:resnet50_learning_rate_0_006",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 26776,
+        "end_char_doc": 26781,
+        "prefix": "th a learning rate of 0.01 for CIFAR-10 experiments and a learning rate of 0.02/",
+        "suffix": "/0.01 for ResNet-18/50/MobileNet-v2 respectively on ImageNet with a cosine decay",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "ResNet-50 ImageNet learning rate",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "0.006",
+        "start_char_doc": 26776,
+        "end_char_doc": 26781,
+        "prefix": "th a learning rate of 0.01 for CIFAR-10 experiments and a learning rate of 0.02/",
+        "suffix": "/0.01 for ResNet-18/50/MobileNet-v2 respectively on ImageNet with a cosine decay",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "float",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Optimization",
+      "hpType": "LearningRate",
+      "uncertain": {
+        "value": false,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:mobilenetv2_learning_rate_0_01",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 26782,
+        "end_char_doc": 26786,
+        "prefix": "earning rate of 0.01 for CIFAR-10 experiments and a learning rate of 0.02/0.006/",
+        "suffix": " for ResNet-18/50/MobileNet-v2 respectively on ImageNet with a cosine decay sche",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "MobileNet-v2 ImageNet learning rate",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "0.01",
+        "start_char_doc": 26782,
+        "end_char_doc": 26786,
+        "prefix": "earning rate of 0.01 for CIFAR-10 experiments and a learning rate of 0.02/0.006/",
+        "suffix": " for ResNet-18/50/MobileNet-v2 respectively on ImageNet with a cosine decay sche",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "float",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Optimization",
+      "hpType": "LearningRate",
+      "uncertain": {
+        "value": false,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:compression_coefficient_lambda_i",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 28526,
+        "end_char_doc": 28545,
+        "prefix": "o trade-off between model size (bit-rate) and accuracy. We fix the coefficient $",
+        "suffix": "$ in our experiments.  &lt;page_number&gt;7&lt;/page_number&gt;  ---   ## Page 8",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "compression coefficient lambda_I",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "\\lambda_I = 10^{-4}",
+        "start_char_doc": 28526,
+        "end_char_doc": 28545,
+        "prefix": "o trade-off between model size (bit-rate) and accuracy. We fix the coefficient $",
+        "suffix": "$ in our experiments.  &lt;page_number&gt;7&lt;/page_number&gt;  ---   ## Page 8",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "float",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Optimization",
+      "hpType": "WeightDecay",
+      "uncertain": {
+        "value": true,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:unstructured_sparsity_coefficient_lambda_u",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 22181,
+        "end_char_doc": 22190,
+        "prefix": "structured sparsity becomes  $$ \\mathcal{L}_{\\text{compute}}(\\mathbf{\\Theta}) = ",
+        "suffix": " \\|\\widehat{\\mathbf{W}}\\|_2^2 + \\lambda_S \\sum_{j=1}^{C_{\\text{in}} \\times C_{\\t",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "unstructured sparsity coefficient lambda_U",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "\\lambda_U",
+        "start_char_doc": 22181,
+        "end_char_doc": 22190,
+        "prefix": "structured sparsity becomes  $$ \\mathcal{L}_{\\text{compute}}(\\mathbf{\\Theta}) = ",
+        "suffix": " \\|\\widehat{\\mathbf{W}}\\|_2^2 + \\lambda_S \\sum_{j=1}^{C_{\\text{in}} \\times C_{\\t",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "float",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Optimization",
+      "hpType": "WeightDecay",
+      "uncertain": {
+        "value": true,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:structured_sparsity_coefficient_lambda_s",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 22222,
+        "end_char_doc": 22231,
+        "prefix": "L}_{\\text{compute}}(\\mathbf{\\Theta}) = \\lambda_U \\|\\widehat{\\mathbf{W}}\\|_2^2 + ",
+        "suffix": " \\sum_{j=1}^{C_{\\text{in}} \\times C_{\\text{out}}} \\sqrt{\\rho_j} \\|\\widehat{\\math",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "structured sparsity coefficient lambda_S",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "\\lambda_S",
+        "start_char_doc": 22222,
+        "end_char_doc": 22231,
+        "prefix": "L}_{\\text{compute}}(\\mathbf{\\Theta}) = \\lambda_U \\|\\widehat{\\mathbf{W}}\\|_2^2 + ",
+        "suffix": " \\sum_{j=1}^{C_{\\text{in}} \\times C_{\\text{out}}} \\sqrt{\\rho_j} \\|\\widehat{\\math",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "float",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Optimization",
+      "hpType": "WeightDecay",
+      "uncertain": {
+        "value": true,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:vgg16_conv_layers_13",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 24971,
+        "end_char_doc": 24994,
+        "prefix": "r of 4 (ResNet-20-4) [26]. VGG-16 is a commonly used architecture consisting of ",
+        "suffix": " of kernel size 3 × 3 and 3 dense or fully-connected layers. Dense layers are re",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "VGG-16 convolutional layers",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "13 convolutional layers",
+        "start_char_doc": 24971,
+        "end_char_doc": 24994,
+        "prefix": "r of 4 (ResNet-20-4) [26]. VGG-16 is a commonly used architecture consisting of ",
+        "suffix": " of kernel size 3 × 3 and 3 dense or fully-connected layers. Dense layers are re",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "integer",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Architecture",
+      "hpType": "NumLayers",
+      "uncertain": {
+        "value": false,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:vgg16_dense_layers_3",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 25020,
+        "end_char_doc": 25053,
+        "prefix": "sed architecture consisting of 13 convolutional layers of kernel size 3 × 3 and ",
+        "suffix": ". Dense layers are resized to adapt to CIFAR’s 32 × 32 image size, as done in th",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "VGG-16 dense layers",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "3 dense or fully-connected layers",
+        "start_char_doc": 25020,
+        "end_char_doc": 25053,
+        "prefix": "sed architecture consisting of 13 convolutional layers of kernel size 3 × 3 and ",
+        "suffix": ". Dense layers are resized to adapt to CIFAR’s 32 × 32 image size, as done in th",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "integer",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Architecture",
+      "hpType": "NumLayers",
+      "uncertain": {
+        "value": false,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:resnet20_width_multiplier_4",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 24896,
+        "end_char_doc": 24897,
+        "prefix": " using two architectures - VGG-16 [58] and ResNet-20 with a width multiplier of ",
+        "suffix": " (ResNet-20-4) [26]. VGG-16 is a commonly used architecture consisting of 13 con",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "ResNet-20 width multiplier",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "4",
+        "start_char_doc": 24896,
+        "end_char_doc": 24897,
+        "prefix": " using two architectures - VGG-16 [58] and ResNet-20 with a width multiplier of ",
+        "suffix": " (ResNet-20-4) [26]. VGG-16 is a commonly used architecture consisting of 13 con",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "integer",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Architecture",
+      "hpType": "UnknownArchitectureHP",
+      "uncertain": {
+        "value": false,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:resnet20_resnet_groups_3",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 25185,
+        "end_char_doc": 25200,
+        "prefix": "32 image size, as done in the baseline approaches [52]. ResNet-20-4 consists of ",
+        "suffix": ", each with 3 residual blocks. All the convolutional layer are of size 3 × 3, an",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "ResNet-20 groups",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "3 ResNet groups",
+        "start_char_doc": 25185,
+        "end_char_doc": 25200,
+        "prefix": "32 image size, as done in the baseline approaches [52]. ResNet-20-4 consists of ",
+        "suffix": ", each with 3 residual blocks. All the convolutional layer are of size 3 × 3, an",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "integer",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Architecture",
+      "hpType": "NumLayers",
+      "uncertain": {
+        "value": true,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:resnet20_residual_blocks_3",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 25212,
+        "end_char_doc": 25229,
+        "prefix": "he baseline approaches [52]. ResNet-20-4 consists of 3 ResNet groups, each with ",
+        "suffix": ". All the convolutional layer are of size 3 × 3, and there is a single dense lay",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "ResNet-20 residual blocks per group",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "3 residual blocks",
+        "start_char_doc": 25212,
+        "end_char_doc": 25229,
+        "prefix": "he baseline approaches [52]. ResNet-20-4 consists of 3 ResNet groups, each with ",
+        "suffix": ". All the convolutional layer are of size 3 × 3, and there is a single dense lay",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "integer",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Architecture",
+      "hpType": "NumLayers",
+      "uncertain": {
+        "value": true,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:resnet18_layers_18",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 25383,
+        "end_char_doc": 25385,
+        "prefix": "se layer at the end. For the ImageNet experiments, we use ResNet-18/50 [26], an ",
+        "suffix": "/50-layer network comprising of one 7 × 7 convolutional layer, one dense layer a",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "ResNet-18 layers",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "18",
+        "start_char_doc": 25383,
+        "end_char_doc": 25385,
+        "prefix": "se layer at the end. For the ImageNet experiments, we use ResNet-18/50 [26], an ",
+        "suffix": "/50-layer network comprising of one 7 × 7 convolutional layer, one dense layer a",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "integer",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Architecture",
+      "hpType": "NumLayers",
+      "uncertain": {
+        "value": false,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:resnet50_layers_50",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 25386,
+        "end_char_doc": 25388,
+        "prefix": "layer at the end. For the ImageNet experiments, we use ResNet-18/50 [26], an 18/",
+        "suffix": "-layer network comprising of one 7 × 7 convolutional layer, one dense layer and ",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "ResNet-50 layers",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "50",
+        "start_char_doc": 25386,
+        "end_char_doc": 25388,
+        "prefix": "layer at the end. For the ImageNet experiments, we use ResNet-18/50 [26], an 18/",
+        "suffix": "-layer network comprising of one 7 × 7 convolutional layer, one dense layer and ",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "integer",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Architecture",
+      "hpType": "NumLayers",
+      "uncertain": {
+        "value": false,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:conv_kernel_3x3",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 25010,
+        "end_char_doc": 25015,
+        "prefix": "commonly used architecture consisting of 13 convolutional layers of kernel size ",
+        "suffix": " and 3 dense or fully-connected layers. Dense layers are resized to adapt to CIF",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "convolution kernel size",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "3 × 3",
+        "start_char_doc": 25010,
+        "end_char_doc": 25015,
+        "prefix": "commonly used architecture consisting of 13 convolutional layers of kernel size ",
+        "suffix": " and 3 dense or fully-connected layers. Dense layers are resized to adapt to CIF",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Architecture",
+      "hpType": "UnknownArchitectureHP",
+      "uncertain": {
+        "value": false,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:initial_conv_kernel_7x7",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 25421,
+        "end_char_doc": 25426,
+        "prefix": "experiments, we use ResNet-18/50 [26], an 18/50-layer network comprising of one ",
+        "suffix": " convolutional layer, one dense layer and the remaining 3 × 3 convolutional laye",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "initial convolution kernel size",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "7 × 7",
+        "start_char_doc": 25421,
+        "end_char_doc": 25426,
+        "prefix": "experiments, we use ResNet-18/50 [26], an 18/50-layer network comprising of one ",
+        "suffix": " convolutional layer, one dense layer and the remaining 3 × 3 convolutional laye",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Architecture",
+      "hpType": "UnknownArchitectureHP",
+      "uncertain": {
+        "value": false,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:cifar_image_size_32x32",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 24459,
+        "end_char_doc": 24466,
+        "prefix": "atasets [35] consist of 50000 training and 10000 test color images each of size ",
+        "suffix": ". CIFAR-10 has 10 classes (with 6000 images per class) and CIFAR-100 has 100 cla",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "CIFAR image size",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "32 × 32",
+        "start_char_doc": 24459,
+        "end_char_doc": 24466,
+        "prefix": "atasets [35] consist of 50000 training and 10000 test color images each of size ",
+        "suffix": ". CIFAR-10 has 10 classes (with 6000 images per class) and CIFAR-100 has 100 cla",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Data",
+      "hpType": "MaxSequenceLength",
+      "uncertain": {
+        "value": true,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:cpu_speedup_batch_size_128",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 39733,
+        "end_char_doc": 39736,
+        "prefix": "U by timing the forward pass of the full CIFAR-10 test set with a batch size of ",
+        "suffix": ". The ratio of time taken between the uncompressed model to the compressed model",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "CPU speedup batch size",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "128",
+        "start_char_doc": 39733,
+        "end_char_doc": 39736,
+        "prefix": "U by timing the forward pass of the full CIFAR-10 test set with a batch size of ",
+        "suffix": ". The ratio of time taken between the uncompressed model to the compressed model",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "integer",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Training",
+      "hpType": "BatchSize",
+      "uncertain": {
+        "value": false,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:random_seeds_3",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 63185,
+        "end_char_doc": 63186,
+        "prefix": " seeds. In this section, we additionally provide the standard errors across the ",
+        "suffix": " random seeds. Results are summarized in Fig. 7 for the two datasets of CIFAR-10",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "number of random seeds",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "3",
+        "start_char_doc": 63185,
+        "end_char_doc": 63186,
+        "prefix": " seeds. In this section, we additionally provide the standard errors across the ",
+        "suffix": " random seeds. Results are summarized in Fig. 7 for the two datasets of CIFAR-10",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "integer",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Training",
+      "hpType": "RandomSeed",
+      "uncertain": {
+        "value": true,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:cifar100_epochs_200_convergence",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 25779,
+        "end_char_doc": 25789,
+        "prefix": " of our models from scratch. CIFAR-10 and CIFAR-100 experiments are trained for ",
+        "suffix": ". We use the FFCV library [36] for faster ImageNet training, with a batchsize of",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "CIFAR-100 convergence epochs",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "200 epochs",
+        "start_char_doc": 25779,
+        "end_char_doc": 25789,
+        "prefix": " of our models from scratch. CIFAR-10 and CIFAR-100 experiments are trained for ",
+        "suffix": ". We use the FFCV library [36] for faster ImageNet training, with a batchsize of",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "integer",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Training",
+      "hpType": "NumEpochs",
+      "uncertain": {
+        "value": false,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "exp:cifar10_cifar100_compression",
+      "@type": "mls:Experiment",
+      "mention": {
+        "start_char_doc": 25728,
+        "end_char_doc": 25762,
+        "prefix": "locks.  ## 4.1 Implementation Details  We train all of our models from scratch. ",
+        "suffix": " are trained for 200 epochs. We use the FFCV library [36] for faster ImageNet tr",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "CIFAR-10 and CIFAR-100 experiments",
+        "start_char_doc": 25728,
+        "end_char_doc": 25762,
+        "prefix": "locks.  ## 4.1 Implementation Details  We train all of our models from scratch. ",
+        "suffix": " are trained for 200 epochs. We use the FFCV library [36] for faster ImageNet tr",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "Comparison of LilNetX model compression and sparsity on CIFAR datasets",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:objective": {
+        "value": "evaluate LilNetX accuracy-rate-computation trade-off",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hypothesis": {
+        "value": "LilNetX can jointly reduce model size and computation while preserving accuracy",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:methodology": {
+        "value": "train from scratch and compare Top-1 error, model size, sparsity, FLOPs, and speedup",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:usesData": [
+        {
+          "@id": "dataset:cifar_10"
+        },
+        {
+          "@id": "dataset:cifar_100"
+        }
+      ],
+      "mls:produces": [
+        {
+          "@id": "method:lilnetx"
+        },
+        {
+          "@id": "model:vgg_16"
+        },
+        {
+          "@id": "model:resnet_20_4"
+        }
+      ],
+      "mls:realizes": [
+        {
+          "@id": "task:model_compression"
+        },
+        {
+          "@id": "task:structured_sparsification"
+        },
+        {
+          "@id": "task:image_classification"
+        }
+      ],
+      "mls:hasEvaluation": [
+        {
+          "@id": "eval:vgg16_cifar10_best"
+        },
+        {
+          "@id": "eval:vgg16_cifar10_extreme"
+        },
+        {
+          "@id": "eval:resnet20_cifar10_best"
+        },
+        {
+          "@id": "eval:resnet20_cifar10_extreme"
+        },
+        {
+          "@id": "eval:resnet20_cifar100_best"
+        },
+        {
+          "@id": "eval:resnet20_cifar100_extreme"
+        }
+      ],
+      "mls:usesParameters": [
+        {
+          "@id": "hp:compression_coefficient_lambda_i"
+        },
+        {
+          "@id": "hp:unstructured_sparsity_coefficient_lambda_u"
+        },
+        {
+          "@id": "hp:structured_sparsity_coefficient_lambda_s"
+        }
+      ],
+      "mls:executes": {
+        "@id": "impl:lilnetx_experiments"
+      }
+    },
+    {
+      "@id": "exp:imagenet_compression",
+      "@type": "mls:Experiment",
+      "mention": {
+        "start_char_doc": 25332,
+        "end_char_doc": 25352,
+        "prefix": " layer are of size 3 × 3, and there is a single dense layer at the end. For the ",
+        "suffix": ", we use ResNet-18/50 [26], an 18/50-layer network comprising of one 7 × 7 convo",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "ImageNet experiments",
+        "start_char_doc": 25332,
+        "end_char_doc": 25352,
+        "prefix": " layer are of size 3 × 3, and there is a single dense layer at the end. For the ",
+        "suffix": ", we use ResNet-18/50 [26], an 18/50-layer network comprising of one 7 × 7 convo",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "Comparison of LilNetX on ResNet-18 and ResNet-50 trained on ImageNet",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:objective": {
+        "value": "evaluate LilNetX accuracy-rate-computation trade-off",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hypothesis": {
+        "value": "LilNetX can jointly reduce model size and computation while preserving accuracy",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:methodology": {
+        "value": "train from scratch and compare Top-1 error, model size, sparsity, FLOPs, and speedup",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:usesData": [
+        {
+          "@id": "dataset:ilsvrc2012_imagenet"
+        }
+      ],
+      "mls:produces": [
+        {
+          "@id": "method:lilnetx"
+        },
+        {
+          "@id": "model:resnet_18"
+        },
+        {
+          "@id": "model:resnet_50"
+        }
+      ],
+      "mls:realizes": [
+        {
+          "@id": "task:model_compression"
+        },
+        {
+          "@id": "task:structured_sparsification"
+        },
+        {
+          "@id": "task:image_classification"
+        }
+      ],
+      "mls:hasEvaluation": [
+        {
+          "@id": "eval:resnet18_imagenet_best"
+        },
+        {
+          "@id": "eval:resnet18_imagenet_extreme"
+        },
+        {
+          "@id": "eval:resnet50_imagenet_best"
+        },
+        {
+          "@id": "eval:resnet50_imagenet_extreme"
+        }
+      ],
+      "mls:usesParameters": [
+        {
+          "@id": "hp:compression_coefficient_lambda_i"
+        },
+        {
+          "@id": "hp:unstructured_sparsity_coefficient_lambda_u"
+        },
+        {
+          "@id": "hp:structured_sparsity_coefficient_lambda_s"
+        }
+      ],
+      "mls:executes": {
+        "@id": "impl:lilnetx_experiments"
+      }
+    },
+    {
+      "@id": "exp:mobilenetv2_imagenet_generalization",
+      "@type": "mls:Experiment",
+      "mention": {
+        "start_char_doc": 37530,
+        "end_char_doc": 37541,
+        "prefix": "show the generality of our approach, we additionally show experiments using the ",
+        "suffix": " [57] architecture trained on ImageNet. Our approach achieves almost 21× compres",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "MobileNetV2",
+        "start_char_doc": 37530,
+        "end_char_doc": 37541,
+        "prefix": "show the generality of our approach, we additionally show experiments using the ",
+        "suffix": " [57] architecture trained on ImageNet. Our approach achieves almost 21× compres",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "Generality of LilNetX on MobileNetV2 trained on ImageNet",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:objective": {
+        "value": "evaluate LilNetX accuracy-rate-computation trade-off",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hypothesis": {
+        "value": "LilNetX can jointly reduce model size and computation while preserving accuracy",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:methodology": {
+        "value": "train from scratch and compare Top-1 error, model size, sparsity, FLOPs, and speedup",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:usesData": [
+        {
+          "@id": "dataset:ilsvrc2012_imagenet"
+        }
+      ],
+      "mls:produces": [
+        {
+          "@id": "method:lilnetx"
+        },
+        {
+          "@id": "model:mobilenet_v2"
+        }
+      ],
+      "mls:realizes": [
+        {
+          "@id": "task:model_compression"
+        },
+        {
+          "@id": "task:structured_sparsification"
+        },
+        {
+          "@id": "task:image_classification"
+        }
+      ],
+      "mls:hasEvaluation": [
+        {
+          "@id": "eval:mobilenetv2_imagenet_best"
+        },
+        {
+          "@id": "eval:mobilenetv2_imagenet_extreme"
+        }
+      ],
+      "mls:usesParameters": [
+        {
+          "@id": "hp:compression_coefficient_lambda_i"
+        },
+        {
+          "@id": "hp:unstructured_sparsity_coefficient_lambda_u"
+        },
+        {
+          "@id": "hp:structured_sparsity_coefficient_lambda_s"
+        }
+      ],
+      "mls:executes": {
+        "@id": "impl:lilnetx_experiments"
+      }
+    },
+    {
+      "@id": "exp:flops_speedup_tradeoff",
+      "@type": "mls:Experiment",
+      "mention": {
+        "start_char_doc": 38616,
+        "end_char_doc": 38647,
+        "prefix": "chieving sparsification of the network weights for computational gains.  ## 4.3 ",
+        "suffix": "  While we show compression gains with respect to state-of-the-art in Sec.4.2, h",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "FLOPs/Speedup-Accuracy Tradeoff",
+        "start_char_doc": 38616,
+        "end_char_doc": 38647,
+        "prefix": "chieving sparsification of the network weights for computational gains.  ## 4.3 ",
+        "suffix": "  While we show compression gains with respect to state-of-the-art in Sec.4.2, h",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "Computational gains from slice sparsity and structured sparsity",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:objective": {
+        "value": "evaluate LilNetX accuracy-rate-computation trade-off",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hypothesis": {
+        "value": "LilNetX can jointly reduce model size and computation while preserving accuracy",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:methodology": {
+        "value": "train from scratch and compare Top-1 error, model size, sparsity, FLOPs, and speedup",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:usesData": [
+        {
+          "@id": "dataset:cifar_10"
+        }
+      ],
+      "mls:produces": [
+        {
+          "@id": "method:lilnetx"
+        },
+        {
+          "@id": "model:resnet_20_4"
+        }
+      ],
+      "mls:realizes": [
+        {
+          "@id": "task:model_compression"
+        },
+        {
+          "@id": "task:structured_sparsification"
+        },
+        {
+          "@id": "task:image_classification"
+        }
+      ],
+      "mls:hasEvaluation": [
+        {
+          "@id": "eval:sflops_reduction"
+        },
+        {
+          "@id": "eval:cpu_speedup"
+        }
+      ],
+      "mls:usesParameters": [
+        {
+          "@id": "hp:compression_coefficient_lambda_i"
+        },
+        {
+          "@id": "hp:unstructured_sparsity_coefficient_lambda_u"
+        },
+        {
+          "@id": "hp:structured_sparsity_coefficient_lambda_s"
+        }
+      ],
+      "mls:executes": {
+        "@id": "impl:lilnetx_experiments"
+      }
+    },
+    {
+      "@id": "exp:unstructured_sparsity_ablation",
+      "@type": "mls:Experiment",
+      "mention": {
+        "start_char_doc": 42058,
+        "end_char_doc": 42104,
+        "prefix": " we analyze model sizes for the compressed parameters in this section.  ### 5.1 ",
+        "suffix": "  Fig. 4 shows model performance as we vary $\\lambda_U$ at fixed values of $\\lam",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Effect of Unstructured Sparsity Regularization",
+        "start_char_doc": 42058,
+        "end_char_doc": 42104,
+        "prefix": " we analyze model sizes for the compressed parameters in this section.  ### 5.1 ",
+        "suffix": "  Fig. 4 shows model performance as we vary $\\lambda_U$ at fixed values of $\\lam",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "Ablation varying lambda_U at fixed lambda_S",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:objective": {
+        "value": "evaluate LilNetX accuracy-rate-computation trade-off",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hypothesis": {
+        "value": "LilNetX can jointly reduce model size and computation while preserving accuracy",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:methodology": {
+        "value": "train from scratch and compare Top-1 error, model size, sparsity, FLOPs, and speedup",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:usesData": [
+        {
+          "@id": "dataset:cifar_10"
+        },
+        {
+          "@id": "dataset:cifar_100"
+        }
+      ],
+      "mls:produces": [
+        {
+          "@id": "method:lilnetx"
+        },
+        {
+          "@id": "model:resnet_20_4"
+        }
+      ],
+      "mls:realizes": [
+        {
+          "@id": "task:model_compression"
+        },
+        {
+          "@id": "task:structured_sparsification"
+        },
+        {
+          "@id": "task:image_classification"
+        }
+      ],
+      "mls:hasEvaluation": [
+        {
+          "@id": "eval:lambda_u_accuracy_model_size"
+        },
+        {
+          "@id": "eval:lambda_u_slice_sparsity"
+        }
+      ],
+      "mls:usesParameters": [
+        {
+          "@id": "hp:compression_coefficient_lambda_i"
+        },
+        {
+          "@id": "hp:unstructured_sparsity_coefficient_lambda_u"
+        },
+        {
+          "@id": "hp:structured_sparsity_coefficient_lambda_s"
+        }
+      ],
+      "mls:executes": {
+        "@id": "impl:lilnetx_experiments"
+      }
+    },
+    {
+      "@id": "exp:structured_sparsity_ablation",
+      "@type": "mls:Experiment",
+      "mention": {
+        "start_char_doc": 44379,
+        "end_char_doc": 44423,
+        "prefix": "correlated with speed-up in the model inference.</caption> &lt;/img&gt;  ## 5.2 ",
+        "suffix": "  Figure 5 shows how the performance of the model varies as we vary $\\lambda_S$ ",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Effect of Structured Sparsity Regularization",
+        "start_char_doc": 44379,
+        "end_char_doc": 44423,
+        "prefix": "correlated with speed-up in the model inference.</caption> &lt;/img&gt;  ## 5.2 ",
+        "suffix": "  Figure 5 shows how the performance of the model varies as we vary $\\lambda_S$ ",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "Ablation varying lambda_S at fixed lambda_U",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:objective": {
+        "value": "evaluate LilNetX accuracy-rate-computation trade-off",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hypothesis": {
+        "value": "LilNetX can jointly reduce model size and computation while preserving accuracy",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:methodology": {
+        "value": "train from scratch and compare Top-1 error, model size, sparsity, FLOPs, and speedup",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:usesData": [
+        {
+          "@id": "dataset:cifar_10"
+        },
+        {
+          "@id": "dataset:cifar_100"
+        }
+      ],
+      "mls:produces": [
+        {
+          "@id": "method:lilnetx"
+        },
+        {
+          "@id": "model:resnet_20_4"
+        }
+      ],
+      "mls:realizes": [
+        {
+          "@id": "task:model_compression"
+        },
+        {
+          "@id": "task:structured_sparsification"
+        },
+        {
+          "@id": "task:image_classification"
+        }
+      ],
+      "mls:hasEvaluation": [
+        {
+          "@id": "eval:lambda_s_accuracy_model_size"
+        },
+        {
+          "@id": "eval:lambda_s_slice_sparsity"
+        }
+      ],
+      "mls:usesParameters": [
+        {
+          "@id": "hp:compression_coefficient_lambda_i"
+        },
+        {
+          "@id": "hp:unstructured_sparsity_coefficient_lambda_u"
+        },
+        {
+          "@id": "hp:structured_sparsity_coefficient_lambda_s"
+        }
+      ],
+      "mls:executes": {
+        "@id": "impl:lilnetx_experiments"
+      }
+    },
+    {
+      "@id": "exp:norm_ablation",
+      "@type": "mls:Experiment",
+      "mention": {
+        "start_char_doc": 63661,
+        "end_char_doc": 63682,
+        "prefix": "r CIFAR-100 also highlighted in Appendix D.  &lt;img&gt;Figure 8: Comparison of ",
+        "suffix": " for various metrics of sparsity and size for both CIFAR-10 (top row) and CIFAR-",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "l2 vs. l1 vs. l∞ norm",
+        "start_char_doc": 63661,
+        "end_char_doc": 63682,
+        "prefix": "r CIFAR-100 also highlighted in Appendix D.  &lt;img&gt;Figure 8: Comparison of ",
+        "suffix": " for various metrics of sparsity and size for both CIFAR-10 (top row) and CIFAR-",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "Analysis of different norm choices for individual weights and groups",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:objective": {
+        "value": "evaluate LilNetX accuracy-rate-computation trade-off",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hypothesis": {
+        "value": "LilNetX can jointly reduce model size and computation while preserving accuracy",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:methodology": {
+        "value": "train from scratch and compare Top-1 error, model size, sparsity, FLOPs, and speedup",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:usesData": [
+        {
+          "@id": "dataset:cifar_10"
+        },
+        {
+          "@id": "dataset:cifar_100"
+        }
+      ],
+      "mls:produces": [
+        {
+          "@id": "method:lilnetx"
+        },
+        {
+          "@id": "model:resnet_20_4"
+        }
+      ],
+      "mls:realizes": [
+        {
+          "@id": "task:model_compression"
+        },
+        {
+          "@id": "task:structured_sparsification"
+        },
+        {
+          "@id": "task:image_classification"
+        }
+      ],
+      "mls:hasEvaluation": [
+        {
+          "@id": "eval:l2_group_norm"
+        }
+      ],
+      "mls:usesParameters": [
+        {
+          "@id": "hp:compression_coefficient_lambda_i"
+        },
+        {
+          "@id": "hp:unstructured_sparsity_coefficient_lambda_u"
+        },
+        {
+          "@id": "hp:structured_sparsity_coefficient_lambda_s"
+        }
+      ],
+      "mls:executes": {
+        "@id": "impl:lilnetx_experiments"
+      }
+    },
+    {
+      "@id": "exp:cifar100_convergence",
+      "@type": "mls:Experiment",
+      "mention": {
+        "start_char_doc": 69912,
+        "end_char_doc": 69933,
+        "prefix": "ary the variance of the weights manually and fix based on the best value.  ## D ",
+        "suffix": "  We analyze the convergence of 3 different runs for ResNet-20-4 trained on the ",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "CIFAR-100 Convergence",
+        "start_char_doc": 69912,
+        "end_char_doc": 69933,
+        "prefix": "ary the variance of the weights manually and fix based on the best value.  ## D ",
+        "suffix": "  We analyze the convergence of 3 different runs for ResNet-20-4 trained on the ",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "Convergence analysis for three ResNet-20-4 runs on CIFAR-100",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:objective": {
+        "value": "evaluate LilNetX accuracy-rate-computation trade-off",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hypothesis": {
+        "value": "LilNetX can jointly reduce model size and computation while preserving accuracy",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:methodology": {
+        "value": "train from scratch and compare Top-1 error, model size, sparsity, FLOPs, and speedup",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:usesData": [
+        {
+          "@id": "dataset:cifar_100"
+        }
+      ],
+      "mls:produces": [
+        {
+          "@id": "method:lilnetx"
+        },
+        {
+          "@id": "model:resnet_20_4"
+        }
+      ],
+      "mls:realizes": [
+        {
+          "@id": "task:model_compression"
+        },
+        {
+          "@id": "task:structured_sparsification"
+        },
+        {
+          "@id": "task:image_classification"
+        }
+      ],
+      "mls:hasEvaluation": [
+        {
+          "@id": "eval:cifar100_convergence"
+        }
+      ],
+      "mls:usesParameters": [
+        {
+          "@id": "hp:compression_coefficient_lambda_i"
+        },
+        {
+          "@id": "hp:unstructured_sparsity_coefficient_lambda_u"
+        },
+        {
+          "@id": "hp:structured_sparsity_coefficient_lambda_s"
+        }
+      ],
+      "mls:executes": {
+        "@id": "impl:lilnetx_experiments"
+      }
+    },
+    {
+      "@id": "eval:abstract_resnet20_cifar10_sparsity",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 986,
+        "end_char_doc": 1031,
+        "prefix": "uctured sparsity in the parameter space to reduce computation. We achieve up to ",
+        "suffix": " on ResNet-20 while retaining the same accuracy on the CIFAR-10 dataset as well ",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "model sparsity",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "50% smaller model size and 98% model sparsity",
+        "start_char_doc": 986,
+        "end_char_doc": 1031,
+        "prefix": "uctured sparsity in the parameter space to reduce computation. We achieve up to ",
+        "suffix": " on ResNet-20 while retaining the same accuracy on the CIFAR-10 dataset as well ",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "We achieve up to 50% smaller model size and 98% model sparsity",
+        "start_char_doc": 969,
+        "end_char_doc": 1031,
+        "prefix": "s to increase structured sparsity in the parameter space to reduce computation. ",
+        "suffix": " on ResNet-20 while retaining the same accuracy on the CIFAR-10 dataset as well ",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "eval:abstract_resnet50_imagenet_sparsity",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 1114,
+        "end_char_doc": 1164,
+        "prefix": " ResNet-20 while retaining the same accuracy on the CIFAR-10 dataset as well as ",
+        "suffix": " on ResNet-50 trained on ImageNet, when compared to existing state-of-the-art mo",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "structured sparsity",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "35% smaller model size and 42% structured sparsity",
+        "start_char_doc": 1114,
+        "end_char_doc": 1164,
+        "prefix": " ResNet-20 while retaining the same accuracy on the CIFAR-10 dataset as well as ",
+        "suffix": " on ResNet-50 trained on ImageNet, when compared to existing state-of-the-art mo",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "35% smaller model size and 42% structured sparsity",
+        "start_char_doc": 1114,
+        "end_char_doc": 1164,
+        "prefix": " ResNet-20 while retaining the same accuracy on the CIFAR-10 dataset as well as ",
+        "suffix": " on ResNet-50 trained on ImageNet, when compared to existing state-of-the-art mo",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "eval:vgg16_cifar10_best",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 30016,
+        "end_char_doc": 30029,
+        "prefix": "1 (590×)</td>       <td>10.0</td>       <td>0</td>     </tr>     <tr>       <td>",
+        "suffix": "</td>       <td>129 (465x)</td>       <td>7.4</td>       <td>97.4</td>     </tr>",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "Top-1 error / size / sparsity",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "129 (465x); 7.4; 97.4",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:description": {
+        "value": "LilNetX(Best)",
+        "start_char_doc": 30016,
+        "end_char_doc": 30029,
+        "prefix": "1 (590×)</td>       <td>10.0</td>       <td>0</td>     </tr>     <tr>       <td>",
+        "suffix": "</td>       <td>129 (465x)</td>       <td>7.4</td>       <td>97.4</td>     </tr>",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "eval:vgg16_cifar10_extreme",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 30129,
+        "end_char_doc": 30145,
+        "prefix": "(465x)</td>       <td>7.4</td>       <td>97.4</td>     </tr>     <tr>       <td>",
+        "suffix": "</td>       <td><b>76 (800x)</b></td>       <td>10</td>       <td><b>99.2</b></t",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "Top-1 error / size / sparsity",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "76 (800x); 10; 99.2",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:description": {
+        "value": "LilNetX(Extreme)",
+        "start_char_doc": 30129,
+        "end_char_doc": 30145,
+        "prefix": "(465x)</td>       <td>7.4</td>       <td>97.4</td>     </tr>     <tr>       <td>",
+        "suffix": "</td>       <td><b>76 (800x)</b></td>       <td>10</td>       <td><b>99.2</b></t",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "eval:resnet20_cifar10_best",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 30016,
+        "end_char_doc": 30029,
+        "prefix": "1 (590×)</td>       <td>10.0</td>       <td>0</td>     </tr>     <tr>       <td>",
+        "suffix": "</td>       <td>129 (465x)</td>       <td>7.4</td>       <td>97.4</td>     </tr>",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "Top-1 error / size / sparsity",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "139 (123×); 6; 88.5",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:description": {
+        "value": "LilNetX(Best)",
+        "start_char_doc": 30016,
+        "end_char_doc": 30029,
+        "prefix": "1 (590×)</td>       <td>10.0</td>       <td>0</td>     </tr>     <tr>       <td>",
+        "suffix": "</td>       <td>129 (465x)</td>       <td>7.4</td>       <td>97.4</td>     </tr>",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "eval:resnet20_cifar10_extreme",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 30129,
+        "end_char_doc": 30145,
+        "prefix": "(465x)</td>       <td>7.4</td>       <td>97.4</td>     </tr>     <tr>       <td>",
+        "suffix": "</td>       <td><b>76 (800x)</b></td>       <td>10</td>       <td><b>99.2</b></t",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "Top-1 error / size / sparsity",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "66 (282×); 8.5; 97.9",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:description": {
+        "value": "LilNetX(Extreme)",
+        "start_char_doc": 30129,
+        "end_char_doc": 30145,
+        "prefix": "(465x)</td>       <td>7.4</td>       <td>97.4</td>     </tr>     <tr>       <td>",
+        "suffix": "</td>       <td><b>76 (800x)</b></td>       <td>10</td>       <td><b>99.2</b></t",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "eval:resnet20_cifar100_best",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 30016,
+        "end_char_doc": 30029,
+        "prefix": "1 (590×)</td>       <td>10.0</td>       <td>0</td>     </tr>     <tr>       <td>",
+        "suffix": "</td>       <td>129 (465x)</td>       <td>7.4</td>       <td>97.4</td>     </tr>",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "Top-1 error / size / sparsity",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "125 (137×); 27.0; 86.6",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:description": {
+        "value": "LilNetX(Best)",
+        "start_char_doc": 30016,
+        "end_char_doc": 30029,
+        "prefix": "1 (590×)</td>       <td>10.0</td>       <td>0</td>     </tr>     <tr>       <td>",
+        "suffix": "</td>       <td>129 (465x)</td>       <td>7.4</td>       <td>97.4</td>     </tr>",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "eval:resnet20_cifar100_extreme",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 30129,
+        "end_char_doc": 30145,
+        "prefix": "(465x)</td>       <td>7.4</td>       <td>97.4</td>     </tr>     <tr>       <td>",
+        "suffix": "</td>       <td><b>76 (800x)</b></td>       <td>10</td>       <td><b>99.2</b></t",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "Top-1 error / size / sparsity",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "76 (226×); 30.9; 97.1",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:description": {
+        "value": "LilNetX(Extreme)",
+        "start_char_doc": 30129,
+        "end_char_doc": 30145,
+        "prefix": "(465x)</td>       <td>7.4</td>       <td>97.4</td>     </tr>     <tr>       <td>",
+        "suffix": "</td>       <td><b>76 (800x)</b></td>       <td>10</td>       <td><b>99.2</b></t",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "eval:resnet18_imagenet_best",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 30016,
+        "end_char_doc": 30029,
+        "prefix": "1 (590×)</td>       <td>10.0</td>       <td>0</td>     </tr>     <tr>       <td>",
+        "suffix": "</td>       <td>129 (465x)</td>       <td>7.4</td>       <td>97.4</td>     </tr>",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "Top-1 error / size / sparsity",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "1.01 (46×); 31.2; 58.3",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:description": {
+        "value": "LilNetX(Best)",
+        "start_char_doc": 30016,
+        "end_char_doc": 30029,
+        "prefix": "1 (590×)</td>       <td>10.0</td>       <td>0</td>     </tr>     <tr>       <td>",
+        "suffix": "</td>       <td>129 (465x)</td>       <td>7.4</td>       <td>97.4</td>     </tr>",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "eval:resnet18_imagenet_extreme",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 30129,
+        "end_char_doc": 30145,
+        "prefix": "(465x)</td>       <td>7.4</td>       <td>97.4</td>     </tr>     <tr>       <td>",
+        "suffix": "</td>       <td><b>76 (800x)</b></td>       <td>10</td>       <td><b>99.2</b></t",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "Top-1 error / size / sparsity",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "0.86 (54×); 32.3; 65.2",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:description": {
+        "value": "LilNetX(Extreme)",
+        "start_char_doc": 30129,
+        "end_char_doc": 30145,
+        "prefix": "(465x)</td>       <td>7.4</td>       <td>97.4</td>     </tr>     <tr>       <td>",
+        "suffix": "</td>       <td><b>76 (800x)</b></td>       <td>10</td>       <td><b>99.2</b></t",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "eval:resnet50_imagenet_best",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 30016,
+        "end_char_doc": 30029,
+        "prefix": "1 (590×)</td>       <td>10.0</td>       <td>0</td>     </tr>     <tr>       <td>",
+        "suffix": "</td>       <td>129 (465x)</td>       <td>7.4</td>       <td>97.4</td>     </tr>",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "Top-1 error / size / sparsity",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "3.60 (29×); 26.3; 42.1",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:description": {
+        "value": "LilNetX(Best)",
+        "start_char_doc": 30016,
+        "end_char_doc": 30029,
+        "prefix": "1 (590×)</td>       <td>10.0</td>       <td>0</td>     </tr>     <tr>       <td>",
+        "suffix": "</td>       <td>129 (465x)</td>       <td>7.4</td>       <td>97.4</td>     </tr>",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "eval:resnet50_imagenet_extreme",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 30129,
+        "end_char_doc": 30145,
+        "prefix": "(465x)</td>       <td>7.4</td>       <td>97.4</td>     </tr>     <tr>       <td>",
+        "suffix": "</td>       <td><b>76 (800x)</b></td>       <td>10</td>       <td><b>99.2</b></t",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "Top-1 error / size / sparsity",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "3.00 (34×); 26.9; 51.6",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:description": {
+        "value": "LilNetX(Extreme)",
+        "start_char_doc": 30129,
+        "end_char_doc": 30145,
+        "prefix": "(465x)</td>       <td>7.4</td>       <td>97.4</td>     </tr>     <tr>       <td>",
+        "suffix": "</td>       <td><b>76 (800x)</b></td>       <td>10</td>       <td><b>99.2</b></t",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "eval:mobilenetv2_imagenet_best",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 33589,
+        "end_char_doc": 33603,
+        "prefix": "95 (15×)</td>       <td>33.5</td>       <td>0</td>     </tr>     <tr>       <td>",
+        "suffix": "</td>       <td>0.67 (21×)</td>       <td>32.8</td>       <td>56.8</td>     </tr",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "Top-1 error / size / sparsity",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "0.67 (21×); 32.8; 56.8",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:description": {
+        "value": "LilNetX (Best)",
+        "start_char_doc": 33589,
+        "end_char_doc": 33603,
+        "prefix": "95 (15×)</td>       <td>33.5</td>       <td>0</td>     </tr>     <tr>       <td>",
+        "suffix": "</td>       <td>0.67 (21×)</td>       <td>32.8</td>       <td>56.8</td>     </tr",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "eval:mobilenetv2_imagenet_extreme",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 33704,
+        "end_char_doc": 33721,
+        "prefix": "(21×)</td>       <td>32.8</td>       <td>56.8</td>     </tr>     <tr>       <td>",
+        "suffix": "</td>       <td><b>0.56</b> <b>(25×)</b></td>       <td>33.3</td>       <td><b>6",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "Top-1 error / size / sparsity",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "0.56 (25×); 33.3; 64.7",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:description": {
+        "value": "LilNetX (Extreme)",
+        "start_char_doc": 33704,
+        "end_char_doc": 33721,
+        "prefix": "(21×)</td>       <td>32.8</td>       <td>56.8</td>     </tr>     <tr>       <td>",
+        "suffix": "</td>       <td><b>0.56</b> <b>(25×)</b></td>       <td>33.3</td>       <td><b>6",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "eval:sflops_reduction",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 40053,
+        "end_char_doc": 40057,
+        "prefix": "till offering computational gains. We see that we obtain high SFLOPs reduction (",
+        "suffix": ") with modest accuracy drops while also getting high levels of FLOP reduction. W",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "SFLOPs reduction",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "~90%",
+        "start_char_doc": 40053,
+        "end_char_doc": 40057,
+        "prefix": "till offering computational gains. We see that we obtain high SFLOPs reduction (",
+        "suffix": ") with modest accuracy drops while also getting high levels of FLOP reduction. W",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "high SFLOPs reduction (~90%)",
+        "start_char_doc": 40030,
+        "end_char_doc": 40058,
+        "prefix": "rained sparsity while still offering computational gains. We see that we obtain ",
+        "suffix": " with modest accuracy drops while also getting high levels of FLOP reduction. We",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "eval:cpu_speedup",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 40355,
+        "end_char_doc": 40376,
+        "prefix": "al layers based on their structural sparsity. We see from Fig. 3 that we obtain ",
+        "suffix": " compared to uncompressed network with no drop in Top-1 accuracy. Even higher va",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "CPU inference speedup",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "1.5×; 2×",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:description": {
+        "value": "almost a 1.5× speedup",
+        "start_char_doc": 40355,
+        "end_char_doc": 40376,
+        "prefix": "al layers based on their structural sparsity. We see from Fig. 3 that we obtain ",
+        "suffix": " compared to uncompressed network with no drop in Top-1 accuracy. Even higher va",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "eval:lambda_u_accuracy_model_size",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 42328,
+        "end_char_doc": 42379,
+        "prefix": "cy as a function of model size. For CIFAR-10 dataset, when $\\lambda_S = 0$, the ",
+        "suffix": " as we decrease $\\lambda_U$, however, at the cost of increased model size (~20KB",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "accuracy-model size trade-off",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "92.2% to 93.5%; ~20KB and ~150KB",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:description": {
+        "value": "accuracy of the model increases from 92.2% to 93.5%",
+        "start_char_doc": 42328,
+        "end_char_doc": 42379,
+        "prefix": "cy as a function of model size. For CIFAR-10 dataset, when $\\lambda_S = 0$, the ",
+        "suffix": " as we decrease $\\lambda_U$, however, at the cost of increased model size (~20KB",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "eval:lambda_u_slice_sparsity",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 42876,
+        "end_char_doc": 42912,
+        "prefix": " or SFLOPs. At $\\lambda_S = 0$, increasing the value of $\\lambda_U$, causes the ",
+        "suffix": " while slice sparsity increases from 74% to 98%. Again, we observe a similar tre",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "accuracy-slice sparsity trade-off",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "93.5% to 92.4%; 74% to 98%",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:description": {
+        "value": "accuracy to drop from 93.5% to 92.4%",
+        "start_char_doc": 42876,
+        "end_char_doc": 42912,
+        "prefix": " or SFLOPs. At $\\lambda_S = 0$, increasing the value of $\\lambda_U$, causes the ",
+        "suffix": " while slice sparsity increases from 74% to 98%. Again, we observe a similar tre",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "eval:lambda_s_accuracy_model_size",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 44665,
+        "end_char_doc": 44688,
+        "prefix": "ize trade-off. For CIFAR-10, when $\\lambda_U = 0$ (blue circle), we can achieve ",
+        "suffix": ", however, as we increase the penalty, model size decreases sharply to 50KB whil",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "accuracy-model size trade-off",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "93.2% accuracy at 120KB; 50KB; 92.9%",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:description": {
+        "value": "93.2% accuracy at 120KB",
+        "start_char_doc": 44665,
+        "end_char_doc": 44688,
+        "prefix": "ize trade-off. For CIFAR-10, when $\\lambda_U = 0$ (blue circle), we can achieve ",
+        "suffix": ", however, as we increase the penalty, model size decreases sharply to 50KB whil",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "eval:lambda_s_slice_sparsity",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 45267,
+        "end_char_doc": 45324,
+        "prefix": " albeit at the cost of lower accuracy. Increasing the $\\lambda_U$, allows for a ",
+        "suffix": " and also yields higher accuracy for the same levels of sparsity.  &lt;page_numb",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "accuracy-slice sparsity trade-off",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "wider trade-off range between accuracy and slice sparsity",
+        "start_char_doc": 45267,
+        "end_char_doc": 45324,
+        "prefix": " albeit at the cost of lower accuracy. Increasing the $\\lambda_U$, allows for a ",
+        "suffix": " and also yields higher accuracy for the same levels of sparsity.  &lt;page_numb",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "wider trade-off range between accuracy and slice sparsity",
+        "start_char_doc": 45267,
+        "end_char_doc": 45324,
+        "prefix": " albeit at the cost of lower accuracy. Increasing the $\\lambda_U$, allows for a ",
+        "suffix": " and also yields higher accuracy for the same levels of sparsity.  &lt;page_numb",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "eval:l2_group_norm",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 64734,
+        "end_char_doc": 64789,
+        "prefix": "e_number&gt;17&lt;/page_number&gt;  ---   ## Page 18  respectively. We see that ",
+        "suffix": " for both datasets. However, $l_1$ norm has little additional effect in terms of",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "norm ablation",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "$l_2$ group norm outperforms its $l_\\infty$ counterpart",
+        "start_char_doc": 64734,
+        "end_char_doc": 64789,
+        "prefix": "e_number&gt;17&lt;/page_number&gt;  ---   ## Page 18  respectively. We see that ",
+        "suffix": " for both datasets. However, $l_1$ norm has little additional effect in terms of",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "$l_2$ group norm outperforms its $l_\\infty$ counterpart",
+        "start_char_doc": 64734,
+        "end_char_doc": 64789,
+        "prefix": "e_number&gt;17&lt;/page_number&gt;  ---   ## Page 18  respectively. We see that ",
+        "suffix": " for both datasets. However, $l_1$ norm has little additional effect in terms of",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "eval:cifar100_convergence",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 70362,
+        "end_char_doc": 70415,
+        "prefix": "me, validation loss (on the left y-axis) also decreases. This suggests that the ",
+        "suffix": ". We hypothesize that this is an artifact of the dataset as well as the cosine d",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "convergence",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "model hasn't fully converged by the end of 200 epochs",
+        "start_char_doc": 70362,
+        "end_char_doc": 70415,
+        "prefix": "me, validation loss (on the left y-axis) also decreases. This suggests that the ",
+        "suffix": ". We hypothesize that this is an artifact of the dataset as well as the cosine d",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "model hasn't fully converged by the end of 200 epochs",
+        "start_char_doc": 70362,
+        "end_char_doc": 70415,
+        "prefix": "me, validation loss (on the left y-axis) also decreases. This suggests that the ",
+        "suffix": ". We hypothesize that this is an artifact of the dataset as well as the cosine d",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "repo:sharath_girish_lilnetx",
+      "@type": "mls:SoftwareRepository",
+      "mention": {
+        "start_char_doc": 1290,
+        "end_char_doc": 1331,
+        "prefix": "ed to existing state-of-the-art model compression methods. Code is available at ",
+        "suffix": ".  ## 1 Introduction  Recent research in deep neural networks (DNNs) has shown t",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Sharath-girish/LilNetX",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:url": {
+        "value": "https://github.com/Sharath-girish/LilNetX",
+        "start_char_doc": 1290,
+        "end_char_doc": 1331,
+        "prefix": "ed to existing state-of-the-art model compression methods. Code is available at ",
+        "suffix": ".  ## 1 Introduction  Recent research in deep neural networks (DNNs) has shown t",
+        "valueSource": "extracted"
+      },
+      "mls:license": {
+        "value": "MIT License",
+        "start_char_doc": 71164,
+        "end_char_doc": 71175,
+        "prefix": "s.  Our code is available at https://github.com/Sharath-girish/LilNetX with the ",
+        "suffix": ".  &lt;page_number&gt;19&lt;/page_number&gt;",
+        "valueSource": "extracted"
+      },
+      "mls:contains": {
+        "@id": "impl:lilnetx_experiments"
+      },
+      "mls:supports": {
+        "@id": "env:ffcv_four_gpu_imagenet_training"
+      }
+    },
+    {
+      "@id": "impl:lilnetx_experiments",
+      "@type": "mls:MLS_Implementation",
+      "mention": {
+        "start_char_doc": 25802,
+        "end_char_doc": 25814,
+        "prefix": "atch. CIFAR-10 and CIFAR-100 experiments are trained for 200 epochs. We use the ",
+        "suffix": " [36] for faster ImageNet training, with a batchsize of 2048/512 for ResNet-18/5",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "LilNetX experiments",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:codeRepository": {
+        "@id": "repo:sharath_girish_lilnetx"
+      },
+      "mls:framework": {
+        "value": "FFCV library",
+        "start_char_doc": 25802,
+        "end_char_doc": 25814,
+        "prefix": "atch. CIFAR-10 and CIFAR-100 experiments are trained for 200 epochs. We use the ",
+        "suffix": " [36] for faster ImageNet training, with a batchsize of 2048/512 for ResNet-18/5",
+        "valueSource": "extracted"
+      },
+      "mls:requires": [
+        {
+          "@id": "algo:adam"
+        },
+        {
+          "@id": "method:torchac_arithmetic_coding"
+        }
+      ],
+      "mls:runsIn": {
+        "@id": "env:ffcv_four_gpu_imagenet_training"
+      }
+    },
+    {
+      "@id": "env:ffcv_four_gpu_imagenet_training",
+      "@type": "mls:Environment",
+      "mention": {
+        "start_char_doc": 25909,
+        "end_char_doc": 25915,
+        "prefix": "r ImageNet training, with a batchsize of 2048/512 for ResNet-18/50 split across ",
+        "suffix": ". We train ResNet-18/50 for 35/32 epochs in order to keep the range of the uncom",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "4 GPUs",
+        "start_char_doc": 25909,
+        "end_char_doc": 25915,
+        "prefix": "r ImageNet training, with a batchsize of 2048/512 for ResNet-18/50 split across ",
+        "suffix": ". We train ResNet-18/50 for 35/32 epochs in order to keep the range of the uncom",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "FFCV library [36] for faster ImageNet training",
+        "start_char_doc": 25802,
+        "end_char_doc": 25848,
+        "prefix": "atch. CIFAR-10 and CIFAR-100 experiments are trained for 200 epochs. We use the ",
+        "suffix": ", with a batchsize of 2048/512 for ResNet-18/50 split across 4 GPUs. We train Re",
+        "valueSource": "extracted"
+      },
+      "mls:hardwareSpecs": {
+        "value": "4 GPUs",
+        "start_char_doc": 25909,
+        "end_char_doc": 25915,
+        "prefix": "r ImageNet training, with a batchsize of 2048/512 for ResNet-18/50 split across ",
+        "suffix": ". We train ResNet-18/50 for 35/32 epochs in order to keep the range of the uncom",
+        "valueSource": "extracted"
+      },
+      "mls:isDockerized": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "dataproc:latent_reparameterization_quantization",
+      "@type": "mls:DataProcessingStep",
+      "mention": {
+        "start_char_doc": 13873,
+        "end_char_doc": 13922,
+        "prefix": "N weights $\\Theta$ are reparameterized in terms of a latent representation. The ",
+        "suffix": " while the network parameters are implicitly defined as a transform of the laten",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "latent representation is quantized and compressed",
+        "start_char_doc": 13873,
+        "end_char_doc": 13922,
+        "prefix": "N weights $\\Theta$ are reparameterized in terms of a latent representation. The ",
+        "suffix": " while the network parameters are implicitly defined as a transform of the laten",
+        "valueSource": "extracted"
+      },
+      "mls:transformationType": {
+        "value": "quantization and entropy coding",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:prov-uses": {
+        "@id": "datasource:github_lilnetx"
+      }
+    },
+    {
+      "@id": "train:lilnetx_from_scratch",
+      "@type": "mls:TrainingRun",
+      "mention": {
+        "start_char_doc": 25690,
+        "end_char_doc": 25726,
+        "prefix": "convolutions and inverted Bottleneck blocks.  ## 4.1 Implementation Details  We ",
+        "suffix": ". CIFAR-10 and CIFAR-100 experiments are trained for 200 epochs. We use the FFCV",
+        "valueSource": "extracted"
+      },
+      "mls:runId": {
+        "value": "train all of our models from scratch",
+        "start_char_doc": 25690,
+        "end_char_doc": 25726,
+        "prefix": "convolutions and inverted Bottleneck blocks.  ## 4.1 Implementation Details  We ",
+        "suffix": ". CIFAR-10 and CIFAR-100 experiments are trained for 200 epochs. We use the FFCV",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "We train all of our models from scratch.",
+        "start_char_doc": 25687,
+        "end_char_doc": 25727,
+        "prefix": "le convolutions and inverted Bottleneck blocks.  ## 4.1 Implementation Details  ",
+        "suffix": " CIFAR-10 and CIFAR-100 experiments are trained for 200 epochs. We use the FFCV ",
+        "valueSource": "extracted"
+      },
+      "mls:prov-executedBy": {
+        "@id": "impl:lilnetx_experiments"
+      },
+      "mls:prov-uses": [
+        {
+          "@id": "dataset:cifar_10"
+        },
+        {
+          "@id": "dataset:cifar_100"
+        },
+        {
+          "@id": "dataset:ilsvrc2012_imagenet"
+        }
+      ],
+      "prov:wasAssociatedWith": [
+        {
+          "@id": "hp:cifar_epochs_200"
+        },
+        {
+          "@id": "hp:entropy_model_learning_rate_1e_4"
+        },
+        {
+          "@id": "hp:compression_coefficient_lambda_i"
+        }
+      ]
+    },
+    {
+      "@id": "evalrun:lilnetx_table1",
+      "@type": "mls:EvaluationRun",
+      "mention": {
+        "start_char_doc": 28629,
+        "end_char_doc": 28636,
+        "prefix": " our experiments.  &lt;page_number&gt;7&lt;/page_number&gt;  ---   ## Page 8  **",
+        "suffix": ":** Comparison of our approach against other model compression techniques. We sh",
+        "valueSource": "extracted"
+      },
+      "mls:runId": {
+        "value": "Table 1",
+        "start_char_doc": 28629,
+        "end_char_doc": 28636,
+        "prefix": " our experiments.  &lt;page_number&gt;7&lt;/page_number&gt;  ---   ## Page 8  **",
+        "suffix": ":** Comparison of our approach against other model compression techniques. We sh",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "Comparison of our approach against other model compression techniques",
+        "start_char_doc": 28640,
+        "end_char_doc": 28709,
+        "prefix": "ments.  &lt;page_number&gt;7&lt;/page_number&gt;  ---   ## Page 8  **Table 1:** ",
+        "suffix": ". We show two cases of our method with best error rate and also extreme compress",
+        "valueSource": "extracted"
+      },
+      "mls:evaluates": {
+        "@id": "method:lilnetx"
+      },
+      "mls:prov-executedBy": {
+        "@id": "impl:lilnetx_experiments"
+      }
+    }
+  ]
+}

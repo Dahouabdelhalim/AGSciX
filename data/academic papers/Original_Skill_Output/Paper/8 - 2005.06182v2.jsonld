@@ -1,0 +1,3599 @@
+{
+  "@context": {
+    "mls": "http://www.w3.org/ns/mls#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "schema": "http://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "model": "https://w3id.org/mlskg/model/",
+    "algo": "https://w3id.org/mlskg/algorithm/",
+    "method": "https://w3id.org/mlskg/method/",
+    "dataset": "https://w3id.org/mlskg/dataset/",
+    "datasource": "https://w3id.org/mlskg/datasource/",
+    "task": "https://w3id.org/mlskg/task/",
+    "eval": "https://w3id.org/mlskg/eval/",
+    "hp": "https://w3id.org/mlskg/hp/",
+    "impl": "https://w3id.org/mlskg/implementation/",
+    "env": "https://w3id.org/mlskg/environment/",
+    "prompt": "https://w3id.org/mlskg/prompt/",
+    "person": "https://w3id.org/mlskg/person/",
+    "org": "https://w3id.org/mlskg/organization/",
+    "study": "https://w3id.org/mlskg/study/",
+    "exp": "https://w3id.org/mlskg/experiment/",
+    "repo": "https://w3id.org/mlskg/repository/",
+    "valueSource": "https://w3id.org/mlskg/meta/valueSource",
+    "mention": "https://w3id.org/mlskg/meta/mention"
+  },
+  "@graph": [
+    {
+      "@id": "study:mlsolv_a_prediction_solvation_free_energies_pairwise_atomistic_interactions_2020",
+      "@type": "mls:Study",
+      "mention": {
+        "start_char_doc": 11,
+        "end_char_doc": 126,
+        "prefix": "## Page 1  ",
+        "suffix": "  Hyuntae Lim* and YounJoon Jung†  Department of Chemistry, Seoul National Unive",
+        "valueSource": "extracted"
+      },
+      "mls:title": {
+        "value": "MLSolv-A: A Novel Machine Learning-Based Prediction of Solvation Free Energies from Pairwise Atomistic Interactions",
+        "start_char_doc": 11,
+        "end_char_doc": 126,
+        "prefix": "## Page 1  ",
+        "suffix": "  Hyuntae Lim* and YounJoon Jung†  Department of Chemistry, Seoul National Unive",
+        "valueSource": "extracted"
+      },
+      "mls:abstract": {
+        "value": "Recent advances in machine learning and their applications have lead to the development of diverse structure-property relationship models for crucial chemical properties, and the solvation free energy is one of them. Here, we introduce a novel ML-based solvation model, which calculates the solvation energy from pairwise atomistic interactions. The novelty of the proposed model consists of a simple architecture: two encoding functions extract atomic feature vectors from the given chemical structure, while the inner product between two atomistic features calculates their interactions. The results on 6,493 experimental measurements achieve outstanding performance and transferability for enlarging training data due to its solvent-non-specific nature. Analysis of the interaction map shows there is a great potential that our model reproduces group contributions on the solvation energy, which makes us believe that the model not only provides the predicted target property but also gives us more detailed physicochemical insights.",
+        "start_char_doc": 257,
+        "end_char_doc": 1293,
+        "prefix": "emistry, Seoul National University, Seoul 08826, Korea  July 3, 2020  Abstract  ",
+        "suffix": "  *ht0620@snu.ac.kr †yjjung@snu.ac.kr  &lt;page_number&gt;1&lt;/page_number&gt; ",
+        "valueSource": "extracted"
+      },
+      "mls:issued": {
+        "value": "July 3, 2020",
+        "start_char_doc": 233,
+        "end_char_doc": 245,
+        "prefix": " Jung†  Department of Chemistry, Seoul National University, Seoul 08826, Korea  ",
+        "suffix": "  Abstract  Recent advances in machine learning and their applications have lead",
+        "valueSource": "extracted"
+      },
+      "mls:url": {
+        "value": "https://arxiv.org/abs/2005.06182",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:doi": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:publicationVenue": {
+        "value": "arXiv",
+        "start_char_doc": 1390,
+        "end_char_doc": 1395,
+        "prefix": "kr †yjjung@snu.ac.kr  &lt;page_number&gt;1&lt;/page_number&gt; &lt;watermark&gt;",
+        "suffix": ":2005.06182v2 [stat.ML] 2 Jul 2020&lt;/watermark&gt;  ---   ## Page 2  # 1 Intro",
+        "valueSource": "extracted"
+      },
+      "mls:hasAuthor": [
+        {
+          "@id": "person:lim_hyuntae"
+        },
+        {
+          "@id": "person:jung_younjoon"
+        }
+      ],
+      "mls:hasContribution": [
+        {
+          "@id": "method:mlsolv_a"
+        },
+        {
+          "@id": "method:pairwise_atomistic_interactions"
+        },
+        {
+          "@id": "method:interaction_map"
+        },
+        {
+          "@id": "method:group_contribution_based_prediction"
+        },
+        {
+          "@id": "method:solvent_non_specific_model"
+        }
+      ],
+      "mls:hasExperiment": [
+        {
+          "@id": "exp:overall_solvation_free_energy_cv"
+        },
+        {
+          "@id": "exp:freesolv_transfer_augmentation"
+        },
+        {
+          "@id": "exp:scaffold_based_split_extrapolation"
+        },
+        {
+          "@id": "exp:tsne_molecular_feature_visualization"
+        },
+        {
+          "@id": "exp:group_contribution_analysis"
+        }
+      ],
+      "mls:hasEvaluation": [
+        {
+          "@id": "eval:bilm_lstm_mue"
+        },
+        {
+          "@id": "eval:gcn_mue"
+        },
+        {
+          "@id": "eval:transfer_accuracy_gain"
+        },
+        {
+          "@id": "eval:scaffold_split_mue"
+        },
+        {
+          "@id": "eval:chemical_accuracy_threshold"
+        },
+        {
+          "@id": "eval:group_contribution_hydrophilic_tendency"
+        }
+      ]
+    },
+    {
+      "@id": "org:seoul_national_university_department_of_chemistry",
+      "@type": "mls:Organization",
+      "mention": {
+        "start_char_doc": 161,
+        "end_char_doc": 231,
+        "prefix": "Energies from Pairwise Atomistic Interactions  Hyuntae Lim* and YounJoon Jung†  ",
+        "suffix": "  July 3, 2020  Abstract  Recent advances in machine learning and their applicat",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Department of Chemistry, Seoul National University, Seoul 08826, Korea",
+        "start_char_doc": 161,
+        "end_char_doc": 231,
+        "prefix": "Energies from Pairwise Atomistic Interactions  Hyuntae Lim* and YounJoon Jung†  ",
+        "suffix": "  July 3, 2020  Abstract  Recent advances in machine learning and their applicat",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "academic institution",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "person:lim_hyuntae",
+      "@type": "mls:Person",
+      "mention": {
+        "start_char_doc": 128,
+        "end_char_doc": 139,
+        "prefix": "sed Prediction of Solvation Free Energies from Pairwise Atomistic Interactions  ",
+        "suffix": "* and YounJoon Jung†  Department of Chemistry, Seoul National University, Seoul ",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Hyuntae Lim",
+        "start_char_doc": 128,
+        "end_char_doc": 139,
+        "prefix": "sed Prediction of Solvation Free Energies from Pairwise Atomistic Interactions  ",
+        "suffix": "* and YounJoon Jung†  Department of Chemistry, Seoul National University, Seoul ",
+        "valueSource": "extracted"
+      },
+      "mls:email": {
+        "value": "ht0620@snu.ac.kr",
+        "start_char_doc": 1296,
+        "end_char_doc": 1312,
+        "prefix": "ted target property but also gives us more detailed physicochemical insights.  *",
+        "suffix": " †yjjung@snu.ac.kr  &lt;page_number&gt;1&lt;/page_number&gt; &lt;watermark&gt;ar",
+        "valueSource": "extracted"
+      },
+      "mls:affiliation": {
+        "@id": "org:seoul_national_university_department_of_chemistry"
+      }
+    },
+    {
+      "@id": "person:jung_younjoon",
+      "@type": "mls:Person",
+      "mention": {
+        "start_char_doc": 145,
+        "end_char_doc": 158,
+        "prefix": " Solvation Free Energies from Pairwise Atomistic Interactions  Hyuntae Lim* and ",
+        "suffix": "†  Department of Chemistry, Seoul National University, Seoul 08826, Korea  July ",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "YounJoon Jung",
+        "start_char_doc": 145,
+        "end_char_doc": 158,
+        "prefix": " Solvation Free Energies from Pairwise Atomistic Interactions  Hyuntae Lim* and ",
+        "suffix": "†  Department of Chemistry, Seoul National University, Seoul 08826, Korea  July ",
+        "valueSource": "extracted"
+      },
+      "mls:email": {
+        "value": "yjjung@snu.ac.kr",
+        "start_char_doc": 1314,
+        "end_char_doc": 1330,
+        "prefix": "y but also gives us more detailed physicochemical insights.  *ht0620@snu.ac.kr †",
+        "suffix": "  &lt;page_number&gt;1&lt;/page_number&gt; &lt;watermark&gt;arXiv:2005.06182v2 [",
+        "valueSource": "extracted"
+      },
+      "mls:affiliation": {
+        "@id": "org:seoul_national_university_department_of_chemistry"
+      }
+    },
+    {
+      "@id": "task:solvation_free_energy_prediction",
+      "@type": "mls:MLS_Task",
+      "mention": {
+        "start_char_doc": 436,
+        "end_char_doc": 457,
+        "prefix": "structure-property relationship models for crucial chemical properties, and the ",
+        "suffix": " is one of them. Here, we introduce a novel ML-based solvation model, which calc",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "solvation free energy",
+        "start_char_doc": 436,
+        "end_char_doc": 457,
+        "prefix": "structure-property relationship models for crucial chemical properties, and the ",
+        "suffix": " is one of them. Here, we introduce a novel ML-based solvation model, which calc",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "predict solvation free energies from solvent and solute chemical structures",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:category": {
+        "value": "computational chemistry regression",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "task:linear_regression_solvation",
+      "@type": "mls:MLS_Task",
+      "mention": {
+        "start_char_doc": 6274,
+        "end_char_doc": 6296,
+        "prefix": "3&lt;/page_number&gt;  ---   ## Page 4  # 2 Methods  In the proposed model, the ",
+        "suffix": " between the given chemical structures of the solvent and solute molecules and t",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "linear regression task",
+        "start_char_doc": 6274,
+        "end_char_doc": 6296,
+        "prefix": "3&lt;/page_number&gt;  ---   ## Page 4  # 2 Methods  In the proposed model, the ",
+        "suffix": " between the given chemical structures of the solvent and solute molecules and t",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "linear regression between solvent/solute structures and solvation free energy",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:category": {
+        "value": "computational chemistry regression",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "task:structure_property_relationship",
+      "@type": "mls:MLS_Task",
+      "mention": {
+        "start_char_doc": 356,
+        "end_char_doc": 387,
+        "prefix": "machine learning and their applications have lead to the development of diverse ",
+        "suffix": " models for crucial chemical properties, and the solvation free energy is one of",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "structure-property relationship",
+        "start_char_doc": 356,
+        "end_char_doc": 387,
+        "prefix": "machine learning and their applications have lead to the development of diverse ",
+        "suffix": " models for crucial chemical properties, and the solvation free energy is one of",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "SPR regression model for chemical properties",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:category": {
+        "value": "computational chemistry regression",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "task:group_contribution_estimation",
+      "@type": "mls:MLS_Task",
+      "mention": {
+        "start_char_doc": 1105,
+        "end_char_doc": 1124,
+        "prefix": " the interaction map shows there is a great potential that our model reproduces ",
+        "suffix": " on the solvation energy, which makes us believe that the model not only provide",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "group contributions",
+        "start_char_doc": 1105,
+        "end_char_doc": 1124,
+        "prefix": " the interaction map shows there is a great potential that our model reproduces ",
+        "suffix": " on the solvation energy, which makes us believe that the model not only provide",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "decompose solvation free energy into atomistic group contributions",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:category": {
+        "value": "computational chemistry regression",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "task:transferability_solvent_non_specific",
+      "@type": "mls:MLS_Task",
+      "mention": {
+        "start_char_doc": 930,
+        "end_char_doc": 945,
+        "prefix": " results on 6,493 experimental measurements achieve outstanding performance and ",
+        "suffix": " for enlarging training data due to its solvent-non-specific nature. Analysis of",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "transferability",
+        "start_char_doc": 930,
+        "end_char_doc": 945,
+        "prefix": " results on 6,493 experimental measurements achieve outstanding performance and ",
+        "suffix": " for enlarging training data due to its solvent-non-specific nature. Analysis of",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "transferability from solvent-non-specific training data enlargement",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:category": {
+        "value": "computational chemistry regression",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "datasource:freesolv",
+      "@type": "mls:DataSource",
+      "mention": {
+        "start_char_doc": 9717,
+        "end_char_doc": 9734,
+        "prefix": "perimentally measured values of the free energy of hydration are taken from the ",
+        "suffix": "[14, 56], and 5,952 data points for non-aqueous solvents are collected with the ",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "FreeSolv database",
+        "start_char_doc": 9717,
+        "end_char_doc": 9734,
+        "prefix": "perimentally measured values of the free energy of hydration are taken from the ",
+        "suffix": "[14, 56], and 5,952 data points for non-aqueous solvents are collected with the ",
+        "valueSource": "extracted"
+      },
+      "mls:url": {
+        "value": "https://zenodo.org/record/1161245",
+        "start_char_doc": 34106,
+        "end_char_doc": 34139,
+        "prefix": "m, N.; Chodera, J.; Beauchamp, K.; Lee-Ping, Mobley-lab/Freesolv: Version 0.52. ",
+        "suffix": ", 2018.  &lt;page_number&gt;19&lt;/page_number&gt;  ---   ## Page 20  [57] Hille",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "experimental hydration free energy database",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "datasource:solv_tum_v1",
+      "@type": "mls:DataSource",
+      "mention": {
+        "start_char_doc": 9814,
+        "end_char_doc": 9843,
+        "prefix": "[14, 56], and 5,952 data points for non-aqueous solvents are collected with the ",
+        "suffix": "[24, 52, 53, 57], which is available at https://mediatum.ub.tum.de/1452571. Comp",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Solv@TUM database version 1.0",
+        "start_char_doc": 9814,
+        "end_char_doc": 9843,
+        "prefix": "[14, 56], and 5,952 data points for non-aqueous solvents are collected with the ",
+        "suffix": "[24, 52, 53, 57], which is available at https://mediatum.ub.tum.de/1452571. Comp",
+        "valueSource": "extracted"
+      },
+      "mls:url": {
+        "value": "https://mediatum.ub.tum.de/1452571",
+        "start_char_doc": 9883,
+        "end_char_doc": 9917,
+        "prefix": "d with the Solv@TUM database version 1.0[24, 52, 53, 57], which is available at ",
+        "suffix": ". Compounds in the dataset involves 10 kinds of atoms, which are commonly used i",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "non-aqueous solvation free energy database",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "datasource:zinc15",
+      "@type": "mls:DataSource",
+      "mention": {
+        "start_char_doc": 11631,
+        "end_char_doc": 11646,
+        "prefix": "training process for 10,229,472 organic compounds, which are collected from the ",
+        "suffix": "[58], with Gensim 3.8.1 and Mol2Vec skip-gram model to construct the 128-dimensi",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "ZINC15 database",
+        "start_char_doc": 11631,
+        "end_char_doc": 11646,
+        "prefix": "training process for 10,229,472 organic compounds, which are collected from the ",
+        "suffix": "[58], with Gensim 3.8.1 and Mol2Vec skip-gram model to construct the 128-dimensi",
+        "valueSource": "extracted"
+      },
+      "mls:url": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "organic compound database",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "dataset:solvation_energy_6594",
+      "@type": "mls:MLS_Dataset",
+      "mention": {
+        "start_char_doc": 9495,
+        "end_char_doc": 9552,
+        "prefix": "ons  For the training and test tasks of the proposed neural network, we prepare ",
+        "suffix": " for 952 organic solvents and 147 organic solutes, including some inert gases. 6",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "6,594 experimental measures of free energies of solvation",
+        "start_char_doc": 9495,
+        "end_char_doc": 9552,
+        "prefix": "ons  For the training and test tasks of the proposed neural network, we prepare ",
+        "suffix": " for 952 organic solvents and 147 organic solutes, including some inert gases. 6",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "6,594 experimental measures of free energies of solvation for 952 organic solvents and 147 organic solutes",
+        "start_char_doc": 9495,
+        "end_char_doc": 9601,
+        "prefix": "ons  For the training and test tasks of the proposed neural network, we prepare ",
+        "suffix": ", including some inert gases. 642 experimentally measured values of the free ene",
+        "valueSource": "extracted"
+      },
+      "mls:numInstances": {
+        "value": "6594",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:numClasses": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:modality": {
+        "value": "molecular structures and solvation free energies",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:prov-derivedFrom": [
+        {
+          "@id": "datasource:freesolv"
+        },
+        {
+          "@id": "datasource:solv_tum_v1"
+        }
+      ]
+    },
+    {
+      "@id": "dataset:freesolv_642",
+      "@type": "mls:MLS_Dataset",
+      "mention": {
+        "start_char_doc": 9717,
+        "end_char_doc": 9725,
+        "prefix": "perimentally measured values of the free energy of hydration are taken from the ",
+        "suffix": " database[14, 56], and 5,952 data points for non-aqueous solvents are collected ",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "FreeSolv",
+        "start_char_doc": 9717,
+        "end_char_doc": 9725,
+        "prefix": "perimentally measured values of the free energy of hydration are taken from the ",
+        "suffix": " database[14, 56], and 5,952 data points for non-aqueous solvents are collected ",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "642 experimentally measured values of the free energy of hydration",
+        "start_char_doc": 9631,
+        "end_char_doc": 9697,
+        "prefix": "n for 952 organic solvents and 147 organic solutes, including some inert gases. ",
+        "suffix": " are taken from the FreeSolv database[14, 56], and 5,952 data points for non-aqu",
+        "valueSource": "extracted"
+      },
+      "mls:numInstances": {
+        "value": "642",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:numClasses": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:modality": {
+        "value": "molecular structures and solvation free energies",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:prov-derivedFrom": [
+        {
+          "@id": "datasource:freesolv"
+        }
+      ]
+    },
+    {
+      "@id": "dataset:solv_tum_5952",
+      "@type": "mls:MLS_Dataset",
+      "mention": {
+        "start_char_doc": 9814,
+        "end_char_doc": 9843,
+        "prefix": "[14, 56], and 5,952 data points for non-aqueous solvents are collected with the ",
+        "suffix": "[24, 52, 53, 57], which is available at https://mediatum.ub.tum.de/1452571. Comp",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Solv@TUM database version 1.0",
+        "start_char_doc": 9814,
+        "end_char_doc": 9843,
+        "prefix": "[14, 56], and 5,952 data points for non-aqueous solvents are collected with the ",
+        "suffix": "[24, 52, 53, 57], which is available at https://mediatum.ub.tum.de/1452571. Comp",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "5,952 data points for non-aqueous solvents",
+        "start_char_doc": 9748,
+        "end_char_doc": 9790,
+        "prefix": " the free energy of hydration are taken from the FreeSolv database[14, 56], and ",
+        "suffix": " are collected with the Solv@TUM database version 1.0[24, 52, 53, 57], which is ",
+        "valueSource": "extracted"
+      },
+      "mls:numInstances": {
+        "value": "5952",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:numClasses": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:modality": {
+        "value": "molecular structures and solvation free energies",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:prov-derivedFrom": [
+        {
+          "@id": "datasource:solv_tum_v1"
+        }
+      ]
+    },
+    {
+      "@id": "dataset:zinc15_pretraining_10229472",
+      "@type": "mls:MLS_Dataset",
+      "mention": {
+        "start_char_doc": 11572,
+        "end_char_doc": 11600,
+        "prefix": "gt;  At the very first stage, we perform the skip-gram pre-training process for ",
+        "suffix": ", which are collected from the ZINC15 database[58], with Gensim 3.8.1 and Mol2Ve",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "10,229,472 organic compounds",
+        "start_char_doc": 11572,
+        "end_char_doc": 11600,
+        "prefix": "gt;  At the very first stage, we perform the skip-gram pre-training process for ",
+        "suffix": ", which are collected from the ZINC15 database[58], with Gensim 3.8.1 and Mol2Ve",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "10,229,472 organic compounds, which are collected from the ZINC15 database",
+        "start_char_doc": 11572,
+        "end_char_doc": 11646,
+        "prefix": "gt;  At the very first stage, we perform the skip-gram pre-training process for ",
+        "suffix": "[58], with Gensim 3.8.1 and Mol2Vec skip-gram model to construct the 128-dimensi",
+        "valueSource": "extracted"
+      },
+      "mls:numInstances": {
+        "value": "10229472",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:numClasses": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:modality": {
+        "value": "molecular structures and solvation free energies",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:prov-derivedFrom": [
+        {
+          "@id": "datasource:zinc15"
+        }
+      ]
+    },
+    {
+      "@id": "dataset:zinc15_visualization_15432",
+      "@type": "mls:MLS_Dataset",
+      "mention": {
+        "start_char_doc": 15822,
+        "end_char_doc": 15836,
+        "prefix": "$\\sum_{\\gamma} y_{\\gamma}$ and (b) the extracted molecular feature vector v for ",
+        "suffix": ". We reduce the dimension of each vector with the t-SNE algorithm. The color rep",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "15,432 solutes",
+        "start_char_doc": 15822,
+        "end_char_doc": 15836,
+        "prefix": "$\\sum_{\\gamma} y_{\\gamma}$ and (b) the extracted molecular feature vector v for ",
+        "suffix": ". We reduce the dimension of each vector with the t-SNE algorithm. The color rep",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "15,432 points, whose structures are randomly taken from the ZINC15",
+        "start_char_doc": 14089,
+        "end_char_doc": 14155,
+        "prefix": " works as we designed. Color codes denote predicted hydration free energies for ",
+        "suffix": "[58]; red dots correpond to low hydration free energy case, while the blue to hi",
+        "valueSource": "extracted"
+      },
+      "mls:numInstances": {
+        "value": "15432",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:numClasses": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:modality": {
+        "value": "molecular structures and solvation free energies",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:prov-derivedFrom": [
+        {
+          "@id": "datasource:zinc15"
+        }
+      ]
+    },
+    {
+      "@id": "dataset:five_small_organic_solutes",
+      "@type": "mls:MLS_Dataset",
+      "mention": {
+        "start_char_doc": 18500,
+        "end_char_doc": 18526,
+        "prefix": "ha\\gamma}. \\quad (6) $$  Figure 5 shows hydration free energy contributions for ",
+        "suffix": " which have six heavy atoms: n-hexane, 1-chloropentane, pentaldehyde, 1-aminopen",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "five small organic solutes",
+        "start_char_doc": 18500,
+        "end_char_doc": 18526,
+        "prefix": "ha\\gamma}. \\quad (6) $$  Figure 5 shows hydration free energy contributions for ",
+        "suffix": " which have six heavy atoms: n-hexane, 1-chloropentane, pentaldehyde, 1-aminopen",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "five small organic solutes which have six heavy atoms: n-hexane, 1-chloropentane, pentaldehyde, 1-aminopentane, and benzene",
+        "start_char_doc": 18500,
+        "end_char_doc": 18623,
+        "prefix": "ha\\gamma}. \\quad (6) $$  Figure 5 shows hydration free energy contributions for ",
+        "suffix": ". As shown in Fig. 5, both the BiLM and the GCN model exhibit a similar tendency",
+        "valueSource": "extracted"
+      },
+      "mls:numInstances": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:numClasses": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:modality": {
+        "value": "molecular structures and solvation free energies",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:prov-derivedFrom": [
+        {
+          "@id": "datasource:freesolv"
+        }
+      ]
+    },
+    {
+      "@id": "model:mlsolv_a",
+      "@type": "mls:MLS_Model",
+      "mention": {
+        "start_char_doc": 11,
+        "end_char_doc": 19,
+        "prefix": "## Page 1  ",
+        "suffix": ": A Novel Machine Learning-Based Prediction of Solvation Free Energies from Pair",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "MLSolv-A",
+        "start_char_doc": 11,
+        "end_char_doc": 19,
+        "prefix": "## Page 1  ",
+        "suffix": ": A Novel Machine Learning-Based Prediction of Solvation Free Energies from Pair",
+        "valueSource": "extracted"
+      },
+      "mls:architecture": {
+        "value": "two encoding functions extract atomic feature vectors; inner product between atomistic features calculates interactions",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:solvation_energy_6594"
+        },
+        {
+          "@id": "dataset:zinc15_pretraining_10229472"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:solvation_energy_6594"
+        },
+        {
+          "@id": "dataset:freesolv_642"
+        }
+      ]
+    },
+    {
+      "@id": "model:bilm_encoder",
+      "@type": "mls:MLS_Model",
+      "mention": {
+        "start_char_doc": 8987,
+        "end_char_doc": 9022,
+        "prefix": " chemical features which are strongly related to solvation behavior: one is the ",
+        "suffix": "[54], based on the recurrent neural network (RNN), the other is the graph convol",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "bidirectional language model (BiLM)",
+        "start_char_doc": 8987,
+        "end_char_doc": 9022,
+        "prefix": " chemical features which are strongly related to solvation behavior: one is the ",
+        "suffix": "[54], based on the recurrent neural network (RNN), the other is the graph convol",
+        "valueSource": "extracted"
+      },
+      "mls:architecture": {
+        "value": "based on the recurrent neural network (RNN)",
+        "start_char_doc": 9028,
+        "end_char_doc": 9071,
+        "prefix": "ated to solvation behavior: one is the bidirectional language model (BiLM)[54], ",
+        "suffix": ", the other is the graph convolutional neural network (GCN)[55] which explicitly",
+        "valueSource": "extracted"
+      },
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:solvation_energy_6594"
+        },
+        {
+          "@id": "dataset:zinc15_pretraining_10229472"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:solvation_energy_6594"
+        },
+        {
+          "@id": "dataset:freesolv_642"
+        }
+      ]
+    },
+    {
+      "@id": "model:bilm_lstm_encoder",
+      "@type": "mls:MLS_Model",
+      "mention": {
+        "start_char_doc": 13178,
+        "end_char_doc": 13201,
+        "prefix": "ifferences are not pronounced: the mean unsigned prediction error (MUE) for the ",
+        "suffix": " is 0.19 kcal/mol, while the GCN model results in 0.23 kcal/mol. Both MUE values",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "BiLM/LSTM encoder model",
+        "start_char_doc": 13178,
+        "end_char_doc": 13201,
+        "prefix": "ifferences are not pronounced: the mean unsigned prediction error (MUE) for the ",
+        "suffix": " is 0.19 kcal/mol, while the GCN model results in 0.23 kcal/mol. Both MUE values",
+        "valueSource": "extracted"
+      },
+      "mls:architecture": {
+        "value": "BiLM encoder with the LSTM layer",
+        "start_char_doc": 13002,
+        "end_char_doc": 13034,
+        "prefix": ". We found  &lt;page_number&gt;7&lt;/page_number&gt;  ---   ## Page 8  that the ",
+        "suffix": " performs slightly better than the GCN encoder, although their differences are n",
+        "valueSource": "extracted"
+      },
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:solvation_energy_6594"
+        },
+        {
+          "@id": "dataset:zinc15_pretraining_10229472"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:solvation_energy_6594"
+        },
+        {
+          "@id": "dataset:freesolv_642"
+        }
+      ]
+    },
+    {
+      "@id": "model:gcn_encoder",
+      "@type": "mls:MLS_Model",
+      "mention": {
+        "start_char_doc": 9090,
+        "end_char_doc": 9130,
+        "prefix": "model (BiLM)[54], based on the recurrent neural network (RNN), the other is the ",
+        "suffix": "[55] which explicitly handles the connectivity (bonding) between atoms with the ",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "graph convolutional neural network (GCN)",
+        "start_char_doc": 9090,
+        "end_char_doc": 9130,
+        "prefix": "model (BiLM)[54], based on the recurrent neural network (RNN), the other is the ",
+        "suffix": "[55] which explicitly handles the connectivity (bonding) between atoms with the ",
+        "valueSource": "extracted"
+      },
+      "mls:architecture": {
+        "value": "explicitly handles the connectivity (bonding) between atoms with the adjacency matrix",
+        "start_char_doc": 9141,
+        "end_char_doc": 9226,
+        "prefix": "work (RNN), the other is the graph convolutional neural network (GCN)[55] which ",
+        "suffix": " (more detailed description available in the **supporting information**). Figure",
+        "valueSource": "extracted"
+      },
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:solvation_energy_6594"
+        },
+        {
+          "@id": "dataset:zinc15_pretraining_10229472"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:solvation_energy_6594"
+        },
+        {
+          "@id": "dataset:freesolv_642"
+        }
+      ]
+    },
+    {
+      "@id": "model:rnn",
+      "@type": "mls:MLS_Model",
+      "mention": {
+        "start_char_doc": 9041,
+        "end_char_doc": 9071,
+        "prefix": "tion behavior: one is the bidirectional language model (BiLM)[54], based on the ",
+        "suffix": ", the other is the graph convolutional neural network (GCN)[55] which explicitly",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "recurrent neural network (RNN)",
+        "start_char_doc": 9041,
+        "end_char_doc": 9071,
+        "prefix": "tion behavior: one is the bidirectional language model (BiLM)[54], based on the ",
+        "suffix": ", the other is the graph convolutional neural network (GCN)[55] which explicitly",
+        "valueSource": "extracted"
+      },
+      "mls:architecture": {
+        "value": "sequential neural network encoder for molecular vectors",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:solvation_energy_6594"
+        },
+        {
+          "@id": "dataset:zinc15_pretraining_10229472"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:solvation_energy_6594"
+        },
+        {
+          "@id": "dataset:freesolv_642"
+        }
+      ]
+    },
+    {
+      "@id": "model:mol2vec_skip_gram",
+      "@type": "mls:MLS_Model",
+      "mention": {
+        "start_char_doc": 11674,
+        "end_char_doc": 11697,
+        "prefix": "pounds, which are collected from the ZINC15 database[58], with Gensim 3.8.1 and ",
+        "suffix": " to construct the 128-dimensional embedding lookup table[50]. For the implementa",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Mol2Vec skip-gram model",
+        "start_char_doc": 11674,
+        "end_char_doc": 11697,
+        "prefix": "pounds, which are collected from the ZINC15 database[58], with Gensim 3.8.1 and ",
+        "suffix": " to construct the 128-dimensional embedding lookup table[50]. For the implementa",
+        "valueSource": "extracted"
+      },
+      "mls:architecture": {
+        "value": "Mol2Vec skip-gram model",
+        "start_char_doc": 11674,
+        "end_char_doc": 11697,
+        "prefix": "pounds, which are collected from the ZINC15 database[58], with Gensim 3.8.1 and ",
+        "suffix": " to construct the 128-dimensional embedding lookup table[50]. For the implementa",
+        "valueSource": "extracted"
+      },
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:solvation_energy_6594"
+        },
+        {
+          "@id": "dataset:zinc15_pretraining_10229472"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:solvation_energy_6594"
+        },
+        {
+          "@id": "dataset:freesolv_642"
+        }
+      ]
+    },
+    {
+      "@id": "model:embedding_lookup_table",
+      "@type": "mls:MLS_Model",
+      "mention": {
+        "start_char_doc": 11715,
+        "end_char_doc": 11753,
+        "prefix": "15 database[58], with Gensim 3.8.1 and Mol2Vec skip-gram model to construct the ",
+        "suffix": "[50]. For the implementation of the neural network model, we mainly use the Tens",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "128-dimensional embedding lookup table",
+        "start_char_doc": 11715,
+        "end_char_doc": 11753,
+        "prefix": "15 database[58], with Gensim 3.8.1 and Mol2Vec skip-gram model to construct the ",
+        "suffix": "[50]. For the implementation of the neural network model, we mainly use the Tens",
+        "valueSource": "extracted"
+      },
+      "mls:architecture": {
+        "value": "128-dimensional embedding lookup table",
+        "start_char_doc": 11715,
+        "end_char_doc": 11753,
+        "prefix": "15 database[58], with Gensim 3.8.1 and Mol2Vec skip-gram model to construct the ",
+        "suffix": "[50]. For the implementation of the neural network model, we mainly use the Tens",
+        "valueSource": "extracted"
+      },
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:solvation_energy_6594"
+        },
+        {
+          "@id": "dataset:zinc15_pretraining_10229472"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:solvation_energy_6594"
+        },
+        {
+          "@id": "dataset:freesolv_642"
+        }
+      ]
+    },
+    {
+      "@id": "method:mlsolv_a",
+      "@type": "mls:Method",
+      "mention": {
+        "start_char_doc": 501,
+        "end_char_doc": 509,
+        "prefix": "rties, and the solvation free energy is one of them. Here, we introduce a novel ",
+        "suffix": " solvation model, which calculates the solvation energy from pairwise atomistic ",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "MLSolv-A",
+        "start_char_doc": 11,
+        "end_char_doc": 19,
+        "prefix": "## Page 1  ",
+        "suffix": ": A Novel Machine Learning-Based Prediction of Solvation Free Energies from Pair",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "ML-based solvation model",
+        "start_char_doc": 501,
+        "end_char_doc": 525,
+        "prefix": "rties, and the solvation free energy is one of them. Here, we introduce a novel ",
+        "suffix": ", which calculates the solvation energy from pairwise atomistic interactions. Th",
+        "valueSource": "extracted"
+      },
+      "mls:subMethod": [
+        {
+          "@id": "model:mlsolv_a"
+        }
+      ],
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:solvation_energy_6594"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:solvation_energy_6594"
+        },
+        {
+          "@id": "dataset:freesolv_642"
+        }
+      ]
+    },
+    {
+      "@id": "method:pairwise_atomistic_interactions",
+      "@type": "mls:Method",
+      "mention": {
+        "start_char_doc": 570,
+        "end_char_doc": 601,
+        "prefix": "ce a novel ML-based solvation model, which calculates the solvation energy from ",
+        "suffix": ". The novelty of the proposed model consists of a simple architecture: two encod",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "pairwise atomistic interactions",
+        "start_char_doc": 570,
+        "end_char_doc": 601,
+        "prefix": "ce a novel ML-based solvation model, which calculates the solvation energy from ",
+        "suffix": ". The novelty of the proposed model consists of a simple architecture: two encod",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "pairwise atomistic interactions",
+        "start_char_doc": 570,
+        "end_char_doc": 601,
+        "prefix": "ce a novel ML-based solvation model, which calculates the solvation energy from ",
+        "suffix": ". The novelty of the proposed model consists of a simple architecture: two encod",
+        "valueSource": "extracted"
+      },
+      "mls:subMethod": [],
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:solvation_energy_6594"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:solvation_energy_6594"
+        },
+        {
+          "@id": "dataset:freesolv_642"
+        }
+      ]
+    },
+    {
+      "@id": "method:atomistic_vector_representations",
+      "@type": "mls:Method",
+      "mention": {
+        "start_char_doc": 6422,
+        "end_char_doc": 6454,
+        "prefix": "solvent and solute molecules and their free energy of solvation starts with the ",
+        "suffix": "[10, 50] of the given solvent molecule, consisting of **x**$_{\\alpha}$'s and sol",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "atomistic vector representations",
+        "start_char_doc": 6422,
+        "end_char_doc": 6454,
+        "prefix": "solvent and solute molecules and their free energy of solvation starts with the ",
+        "suffix": "[10, 50] of the given solvent molecule, consisting of **x**$_{\\alpha}$'s and sol",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "atomistic vector representations",
+        "start_char_doc": 6422,
+        "end_char_doc": 6454,
+        "prefix": "solvent and solute molecules and their free energy of solvation starts with the ",
+        "suffix": "[10, 50] of the given solvent molecule, consisting of **x**$_{\\alpha}$'s and sol",
+        "valueSource": "extracted"
+      },
+      "mls:subMethod": [],
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:solvation_energy_6594"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:solvation_energy_6594"
+        },
+        {
+          "@id": "dataset:freesolv_642"
+        }
+      ]
+    },
+    {
+      "@id": "method:encoder_functions",
+      "@type": "mls:Method",
+      "mention": {
+        "start_char_doc": 6926,
+        "end_char_doc": 6942,
+        "prefix": "alpha$-th row of **X** and the $\\gamma$-th row of **Y**, respectively. Then the ",
+        "suffix": " learns of their chemical structures and extracts feature matrices for the solve",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "encoder function",
+        "start_char_doc": 6926,
+        "end_char_doc": 6942,
+        "prefix": "alpha$-th row of **X** and the $\\gamma$-th row of **Y**, respectively. Then the ",
+        "suffix": " learns of their chemical structures and extracts feature matrices for the solve",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "encoder function learns of their chemical structures and extracts feature matrices",
+        "start_char_doc": 6926,
+        "end_char_doc": 7008,
+        "prefix": "alpha$-th row of **X** and the $\\gamma$-th row of **Y**, respectively. Then the ",
+        "suffix": " for the solvent **P** and the solute **Q**,  **P** = {**p**$_{\\alpha}$} = Encod",
+        "valueSource": "extracted"
+      },
+      "mls:subMethod": [],
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:solvation_energy_6594"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:solvation_energy_6594"
+        },
+        {
+          "@id": "dataset:freesolv_642"
+        }
+      ]
+    },
+    {
+      "@id": "method:interaction_map",
+      "@type": "mls:Method",
+      "mention": {
+        "start_char_doc": 11019,
+        "end_char_doc": 11034,
+        "prefix": "cts atomistic feature vectors given pre-trained vector representations, and the ",
+        "suffix": " calculates pairwise atomistic interactions from Luong’s dot-product attention [",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "interaction map",
+        "start_char_doc": 11019,
+        "end_char_doc": 11034,
+        "prefix": "cts atomistic feature vectors given pre-trained vector representations, and the ",
+        "suffix": " calculates pairwise atomistic interactions from Luong’s dot-product attention [",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "interaction map calculates pairwise atomistic interactions",
+        "start_char_doc": 11019,
+        "end_char_doc": 11077,
+        "prefix": "cts atomistic feature vectors given pre-trained vector representations, and the ",
+        "suffix": " from Luong’s dot-product attention [51].  &lt;page_number&gt;6&lt;/page_number&",
+        "valueSource": "extracted"
+      },
+      "mls:subMethod": [
+        {
+          "@id": "algo:luong_dot_product_attention"
+        }
+      ],
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:solvation_energy_6594"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:solvation_energy_6594"
+        },
+        {
+          "@id": "dataset:freesolv_642"
+        }
+      ]
+    },
+    {
+      "@id": "method:group_contribution_based_prediction",
+      "@type": "mls:Method",
+      "mention": {
+        "start_char_doc": 20643,
+        "end_char_doc": 20678,
+        "prefix": " heavy atoms.  &lt;page_number&gt;12&lt;/page_number&gt;  ---   ## Page 13  the ",
+        "suffix": ".  We quantified the proposed model’s prediction performances for 6,493 experime",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "group-contribution based prediction",
+        "start_char_doc": 20643,
+        "end_char_doc": 20678,
+        "prefix": " heavy atoms.  &lt;page_number&gt;12&lt;/page_number&gt;  ---   ## Page 13  the ",
+        "suffix": ".  We quantified the proposed model’s prediction performances for 6,493 experime",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "group-contribution based prediction",
+        "start_char_doc": 20643,
+        "end_char_doc": 20678,
+        "prefix": " heavy atoms.  &lt;page_number&gt;12&lt;/page_number&gt;  ---   ## Page 13  the ",
+        "suffix": ".  We quantified the proposed model’s prediction performances for 6,493 experime",
+        "valueSource": "extracted"
+      },
+      "mls:subMethod": [],
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:solvation_energy_6594"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:solvation_energy_6594"
+        },
+        {
+          "@id": "dataset:freesolv_642"
+        }
+      ]
+    },
+    {
+      "@id": "method:solvent_non_specific_model",
+      "@type": "mls:Method",
+      "mention": {
+        "start_char_doc": 985,
+        "end_char_doc": 1005,
+        "prefix": "standing performance and transferability for enlarging training data due to its ",
+        "suffix": " nature. Analysis of the interaction map shows there is a great potential that o",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "solvent-non-specific",
+        "start_char_doc": 985,
+        "end_char_doc": 1005,
+        "prefix": "standing performance and transferability for enlarging training data due to its ",
+        "suffix": " nature. Analysis of the interaction map shows there is a great potential that o",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "solvent-non-specific",
+        "start_char_doc": 985,
+        "end_char_doc": 1005,
+        "prefix": "standing performance and transferability for enlarging training data due to its ",
+        "suffix": " nature. Analysis of the interaction map shows there is a great potential that o",
+        "valueSource": "extracted"
+      },
+      "mls:subMethod": [],
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:solvation_energy_6594"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:solvation_energy_6594"
+        },
+        {
+          "@id": "dataset:freesolv_642"
+        }
+      ]
+    },
+    {
+      "@id": "method:scaffold_based_split",
+      "@type": "mls:Method",
+      "mention": {
+        "start_char_doc": 16639,
+        "end_char_doc": 16659,
+        "prefix": ". We investigate the model’s predictivity for extrapolation situations with the ",
+        "suffix": "[10, 39, 48]. Instead of the ordinary K-fold CV task with the random and uniform",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "scaffold-based split",
+        "start_char_doc": 16639,
+        "end_char_doc": 16659,
+        "prefix": ". We investigate the model’s predictivity for extrapolation situations with the ",
+        "suffix": "[10, 39, 48]. Instead of the ordinary K-fold CV task with the random and uniform",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "scaffold-based split",
+        "start_char_doc": 16639,
+        "end_char_doc": 16659,
+        "prefix": ". We investigate the model’s predictivity for extrapolation situations with the ",
+        "suffix": "[10, 39, 48]. Instead of the ordinary K-fold CV task with the random and uniform",
+        "valueSource": "extracted"
+      },
+      "mls:subMethod": [
+        {
+          "@id": "algo:k_means_clustering"
+        }
+      ],
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:solvation_energy_6594"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:solvation_energy_6594"
+        },
+        {
+          "@id": "dataset:freesolv_642"
+        }
+      ]
+    },
+    {
+      "@id": "method:skip_gram_pretraining",
+      "@type": "mls:Method",
+      "mention": {
+        "start_char_doc": 11537,
+        "end_char_doc": 11567,
+        "prefix": " gray diamonds.</caption> &lt;/img&gt;  At the very first stage, we perform the ",
+        "suffix": " for 10,229,472 organic compounds, which are collected from the ZINC15 database[",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "skip-gram pre-training process",
+        "start_char_doc": 11537,
+        "end_char_doc": 11567,
+        "prefix": " gray diamonds.</caption> &lt;/img&gt;  At the very first stage, we perform the ",
+        "suffix": " for 10,229,472 organic compounds, which are collected from the ZINC15 database[",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "skip-gram pre-training process",
+        "start_char_doc": 11537,
+        "end_char_doc": 11567,
+        "prefix": " gray diamonds.</caption> &lt;/img&gt;  At the very first stage, we perform the ",
+        "suffix": " for 10,229,472 organic compounds, which are collected from the ZINC15 database[",
+        "valueSource": "extracted"
+      },
+      "mls:subMethod": [
+        {
+          "@id": "model:mol2vec_skip_gram"
+        }
+      ],
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:solvation_energy_6594"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:solvation_energy_6594"
+        },
+        {
+          "@id": "dataset:freesolv_642"
+        }
+      ]
+    },
+    {
+      "@id": "method:hyperparameter_grid_search",
+      "@type": "mls:Method",
+      "mention": {
+        "start_char_doc": 12212,
+        "end_char_doc": 12228,
+        "prefix": "tion of the optimized model for the target property is realized by an extensive ",
+        "suffix": " for tuning model hyperparameters.  We employ 5-fold cross-validation to evaluat",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "grid-search task",
+        "start_char_doc": 12212,
+        "end_char_doc": 12228,
+        "prefix": "tion of the optimized model for the target property is realized by an extensive ",
+        "suffix": " for tuning model hyperparameters.  We employ 5-fold cross-validation to evaluat",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "grid-search task",
+        "start_char_doc": 12212,
+        "end_char_doc": 12228,
+        "prefix": "tion of the optimized model for the target property is realized by an extensive ",
+        "suffix": " for tuning model hyperparameters.  We employ 5-fold cross-validation to evaluat",
+        "valueSource": "extracted"
+      },
+      "mls:subMethod": [],
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:solvation_energy_6594"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:solvation_energy_6594"
+        },
+        {
+          "@id": "dataset:freesolv_642"
+        }
+      ]
+    },
+    {
+      "@id": "algo:luong_dot_product_attention",
+      "@type": "mls:MLS_Algorithm",
+      "mention": {
+        "start_char_doc": 7513,
+        "end_char_doc": 7542,
+        "prefix": "ore (or *chemical similarity*) between the atoms $\\alpha$ and $\\gamma$ with the ",
+        "suffix": "[51]:  I$_{\\alpha\\gamma}$ = -**p**$_{\\alpha}$ · **q**$_{\\gamma}$. (3)  Since our",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Luong's dot-product attention",
+        "start_char_doc": 7513,
+        "end_char_doc": 7542,
+        "prefix": "ore (or *chemical similarity*) between the atoms $\\alpha$ and $\\gamma$ with the ",
+        "suffix": "[51]:  I$_{\\alpha\\gamma}$ = -**p**$_{\\alpha}$ · **q**$_{\\gamma}$. (3)  Since our",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "Luong's dot-product attention",
+        "start_char_doc": 7513,
+        "end_char_doc": 7542,
+        "prefix": "ore (or *chemical similarity*) between the atoms $\\alpha$ and $\\gamma$ with the ",
+        "suffix": "[51]:  I$_{\\alpha\\gamma}$ = -**p**$_{\\alpha}$ · **q**$_{\\gamma}$. (3)  Since our",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "algo:rmsprop",
+      "@type": "mls:MLS_Algorithm",
+      "mention": {
+        "start_char_doc": 11992,
+        "end_char_doc": 12009,
+        "prefix": "prevent excessive changes on weights and to minimize the variance, and uses the ",
+        "suffix": " with $10^{-3}$ of learning rate and $\\rho = 0.9$ for optimizing its loss functi",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "RMSprop algorithm",
+        "start_char_doc": 11992,
+        "end_char_doc": 12009,
+        "prefix": "prevent excessive changes on weights and to minimize the variance, and uses the ",
+        "suffix": " with $10^{-3}$ of learning rate and $\\rho = 0.9$ for optimizing its loss functi",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "RMSprop algorithm",
+        "start_char_doc": 11992,
+        "end_char_doc": 12009,
+        "prefix": "prevent excessive changes on weights and to minimize the variance, and uses the ",
+        "suffix": " with $10^{-3}$ of learning rate and $\\rho = 0.9$ for optimizing its loss functi",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "algo:k_means_clustering",
+      "@type": "mls:MLS_Algorithm",
+      "mention": {
+        "start_char_doc": 16758,
+        "end_char_doc": 16786,
+        "prefix": "ad of the ordinary K-fold CV task with the random and uniform split method, the ",
+        "suffix": " builds each fold with the MACCS substructural fingerprint[48]. One can simulate",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "K-means clustering algorithm",
+        "start_char_doc": 16758,
+        "end_char_doc": 16786,
+        "prefix": "ad of the ordinary K-fold CV task with the random and uniform split method, the ",
+        "suffix": " builds each fold with the MACCS substructural fingerprint[48]. One can simulate",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "K-means clustering algorithm",
+        "start_char_doc": 16758,
+        "end_char_doc": 16786,
+        "prefix": "ad of the ordinary K-fold CV task with the random and uniform split method, the ",
+        "suffix": " builds each fold with the MACCS substructural fingerprint[48]. One can simulate",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "algo:macccs_fingerprint",
+      "@type": "mls:MLS_Algorithm",
+      "mention": {
+        "start_char_doc": 16813,
+        "end_char_doc": 16844,
+        "prefix": "niform split method, the K-means clustering algorithm builds each fold with the ",
+        "suffix": "[48]. One can simulate an extreme extrapolation situation through CV tasks over ",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "MACCS substructural fingerprint",
+        "start_char_doc": 16813,
+        "end_char_doc": 16844,
+        "prefix": "niform split method, the K-means clustering algorithm builds each fold with the ",
+        "suffix": "[48]. One can simulate an extreme extrapolation situation through CV tasks over ",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "MACCS substructural fingerprint",
+        "start_char_doc": 16813,
+        "end_char_doc": 16844,
+        "prefix": "niform split method, the K-means clustering algorithm builds each fold with the ",
+        "suffix": "[48]. One can simulate an extreme extrapolation situation through CV tasks over ",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "algo:t_sne",
+      "@type": "mls:MLS_Algorithm",
+      "mention": {
+        "start_char_doc": 15886,
+        "end_char_doc": 15901,
+        "prefix": "re vector v for 15,432 solutes. We reduce the dimension of each vector with the ",
+        "suffix": ". The color representation denotes the hydration energy of each point.  Solv@TUM",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "t-SNE algorithm",
+        "start_char_doc": 15886,
+        "end_char_doc": 15901,
+        "prefix": "re vector v for 15,432 solutes. We reduce the dimension of each vector with the ",
+        "suffix": ". The color representation denotes the hydration energy of each point.  Solv@TUM",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "t-SNE algorithm",
+        "start_char_doc": 15886,
+        "end_char_doc": 15901,
+        "prefix": "re vector v for 15,432 solutes. We reduce the dimension of each vector with the ",
+        "suffix": ". The color representation denotes the hydration energy of each point.  Solv@TUM",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "algo:five_fold_cross_validation",
+      "@type": "mls:MLS_Algorithm",
+      "mention": {
+        "start_char_doc": 12274,
+        "end_char_doc": 12297,
+        "prefix": "d by an extensive grid-search task for tuning model hyperparameters.  We employ ",
+        "suffix": " to evaluate the prediction accuracy of the chosen model[60]; the entire dataset",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "5-fold cross-validation",
+        "start_char_doc": 12274,
+        "end_char_doc": 12297,
+        "prefix": "d by an extensive grid-search task for tuning model hyperparameters.  We employ ",
+        "suffix": " to evaluate the prediction accuracy of the chosen model[60]; the entire dataset",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "5-fold cross-validation",
+        "start_char_doc": 12274,
+        "end_char_doc": 12297,
+        "prefix": "d by an extensive grid-search task for tuning model hyperparameters.  We employ ",
+        "suffix": " to evaluate the prediction accuracy of the chosen model[60]; the entire dataset",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "algo:mean_squared_error",
+      "@type": "mls:MLS_Algorithm",
+      "mention": {
+        "start_char_doc": 12097,
+        "end_char_doc": 12121,
+        "prefix": "0^{-3}$ of learning rate and $\\rho = 0.9$ for optimizing its loss function, the ",
+        "suffix": ". The selection of the optimized model for the target property is realized by an",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "mean squared error (MSE)",
+        "start_char_doc": 12097,
+        "end_char_doc": 12121,
+        "prefix": "0^{-3}$ of learning rate and $\\rho = 0.9$ for optimizing its loss function, the ",
+        "suffix": ". The selection of the optimized model for the target property is realized by an",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "mean squared error (MSE)",
+        "start_char_doc": 12097,
+        "end_char_doc": 12121,
+        "prefix": "0^{-3}$ of learning rate and $\\rho = 0.9$ for optimizing its loss function, the ",
+        "suffix": ". The selection of the optimized model for the target property is realized by an",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "hp:embedding_dim_128",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 11715,
+        "end_char_doc": 11730,
+        "prefix": "15 database[58], with Gensim 3.8.1 and Mol2Vec skip-gram model to construct the ",
+        "suffix": " embedding lookup table[50]. For the implementation of the neural network model,",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "embedding dimension",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "128-dimensional",
+        "start_char_doc": 11715,
+        "end_char_doc": 11730,
+        "prefix": "15 database[58], with Gensim 3.8.1 and Mol2Vec skip-gram model to construct the ",
+        "suffix": " embedding lookup table[50]. For the implementation of the neural network model,",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "integer",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Architecture",
+      "hpType": "EmbeddingDim",
+      "uncertain": {
+        "value": false,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:rmsprop_learning_rate_1e_3",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 12015,
+        "end_char_doc": 12024,
+        "prefix": "es on weights and to minimize the variance, and uses the RMSprop algorithm with ",
+        "suffix": " of learning rate and $\\rho = 0.9$ for optimizing its loss function, the mean sq",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "RMSprop learning rate",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "$10^{-3}$",
+        "start_char_doc": 12015,
+        "end_char_doc": 12024,
+        "prefix": "es on weights and to minimize the variance, and uses the RMSprop algorithm with ",
+        "suffix": " of learning rate and $\\rho = 0.9$ for optimizing its loss function, the mean sq",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "float",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Optimization",
+      "hpType": "LearningRate",
+      "uncertain": {
+        "value": false,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:rmsprop_rho_0_9",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 12046,
+        "end_char_doc": 12058,
+        "prefix": "he variance, and uses the RMSprop algorithm with $10^{-3}$ of learning rate and ",
+        "suffix": " for optimizing its loss function, the mean squared error (MSE). The selection o",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "RMSprop rho",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "$\\rho = 0.9$",
+        "start_char_doc": 12046,
+        "end_char_doc": 12058,
+        "prefix": "he variance, and uses the RMSprop algorithm with $10^{-3}$ of learning rate and ",
+        "suffix": " for optimizing its loss function, the mean squared error (MSE). The selection o",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "float",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Optimization",
+      "hpType": "Momentum",
+      "uncertain": {
+        "value": false,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:l2_regularization",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 11891,
+        "end_char_doc": 11908,
+        "prefix": "we mainly use the Tensorflow 2.0 and Keras 2.3.1 frameworks[59]. Each model has ",
+        "suffix": " to prevent excessive changes on weights and to minimize the variance, and uses ",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "L2 regularization",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "L2 regularization",
+        "start_char_doc": 11891,
+        "end_char_doc": 11908,
+        "prefix": "we mainly use the Tensorflow 2.0 and Keras 2.3.1 frameworks[59]. Each model has ",
+        "suffix": " to prevent excessive changes on weights and to minimize the variance, and uses ",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Optimization",
+      "hpType": "WeightDecay",
+      "uncertain": {
+        "value": false,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:cv_folds_5",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 12274,
+        "end_char_doc": 12280,
+        "prefix": "d by an extensive grid-search task for tuning model hyperparameters.  We employ ",
+        "suffix": " cross-validation to evaluate the prediction accuracy of the chosen model[60]; t",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "cross-validation folds",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "5-fold",
+        "start_char_doc": 12274,
+        "end_char_doc": 12280,
+        "prefix": "d by an extensive grid-search task for tuning model hyperparameters.  We employ ",
+        "suffix": " cross-validation to evaluate the prediction accuracy of the chosen model[60]; t",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "integer",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Data",
+      "hpType": "TrainValTestSplit",
+      "uncertain": {
+        "value": false,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:cv_train_subsets_4",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 12529,
+        "end_char_doc": 12538,
+        "prefix": "hoose one of the subsets as a test set, and the training run uses the remaining ",
+        "suffix": ". Consequently, a 5-fold CV task performs 5 independent training and test runs, ",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "training folds",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "4 subsets",
+        "start_char_doc": 12529,
+        "end_char_doc": 12538,
+        "prefix": "hoose one of the subsets as a test set, and the training run uses the remaining ",
+        "suffix": ". Consequently, a 5-fold CV task performs 5 independent training and test runs, ",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "integer",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Data",
+      "hpType": "TrainValTestSplit",
+      "uncertain": {
+        "value": false,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:train_test_split_8_to_2",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 12671,
+        "end_char_doc": 12677,
+        "prefix": "nt training and test runs, and relative sizes of the training and test sets are ",
+        "suffix": ". To minimize the variation of results from CV tasks, we take averages for all r",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "train/test split",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "8 to 2",
+        "start_char_doc": 12671,
+        "end_char_doc": 12677,
+        "prefix": "nt training and test runs, and relative sizes of the training and test sets are ",
+        "suffix": ". To minimize the variation of results from CV tasks, we take averages for all r",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Data",
+      "hpType": "TrainValTestSplit",
+      "uncertain": {
+        "value": false,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:independent_random_cvs_9",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 12769,
+        "end_char_doc": 12793,
+        "prefix": "e the variation of results from CV tasks, we take averages for all results over ",
+        "suffix": ", split from different random states. The results for test run using 5-fold CV t",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "independent random CVs",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "9 independent random CVs",
+        "start_char_doc": 12769,
+        "end_char_doc": 12793,
+        "prefix": "e the variation of results from CV tasks, we take averages for all results over ",
+        "suffix": ", split from different random states. The results for test run using 5-fold CV t",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "integer",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Training",
+      "hpType": "RandomSeed",
+      "uncertain": {
+        "value": true,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:atom_types_10",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 9953,
+        "end_char_doc": 9970,
+        "prefix": "ilable at https://mediatum.ub.tum.de/1452571. Compounds in the dataset involves ",
+        "suffix": ", which are commonly used in organic chemistry: hydrogen (H), carbon (C), oxygen",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "atom kinds",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "10 kinds of atoms",
+        "start_char_doc": 9953,
+        "end_char_doc": 9970,
+        "prefix": "ilable at https://mediatum.ub.tum.de/1452571. Compounds in the dataset involves ",
+        "suffix": ", which are commonly used in organic chemistry: hydrogen (H), carbon (C), oxygen",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "integer",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Data",
+      "hpType": "HP_Data",
+      "uncertain": {
+        "value": true,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:max_solute_heavy_atoms_28",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 10189,
+        "end_char_doc": 10191,
+        "prefix": "), chlorine (Cl), bromine (Br), and iodine (I). The maximum heavy-atom count is ",
+        "suffix": " for the solute molecules and 18 for the solvent molecules.  &lt;page_number&gt;",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "maximum solute heavy-atom count",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "28",
+        "start_char_doc": 10189,
+        "end_char_doc": 10191,
+        "prefix": "), chlorine (Cl), bromine (Br), and iodine (I). The maximum heavy-atom count is ",
+        "suffix": " for the solute molecules and 18 for the solvent molecules.  &lt;page_number&gt;",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "integer",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Data",
+      "hpType": "MaxSequenceLength",
+      "uncertain": {
+        "value": true,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:max_solvent_heavy_atoms_18",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 10221,
+        "end_char_doc": 10223,
+        "prefix": "and iodine (I). The maximum heavy-atom count is 28 for the solute molecules and ",
+        "suffix": " for the solvent molecules.  &lt;page_number&gt;5&lt;/page_number&gt;  ---   ## ",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "maximum solvent heavy-atom count",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "18",
+        "start_char_doc": 10221,
+        "end_char_doc": 10223,
+        "prefix": "and iodine (I). The maximum heavy-atom count is 28 for the solute molecules and ",
+        "suffix": " for the solvent molecules.  &lt;page_number&gt;5&lt;/page_number&gt;  ---   ## ",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "integer",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Data",
+      "hpType": "MaxSequenceLength",
+      "uncertain": {
+        "value": true,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:hydration_visualization_points_15432",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 14089,
+        "end_char_doc": 14102,
+        "prefix": " works as we designed. Color codes denote predicted hydration free energies for ",
+        "suffix": ", whose structures are randomly taken from the ZINC15[58]; red dots correpond to",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "visualization sample points",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "15,432 points",
+        "start_char_doc": 14089,
+        "end_char_doc": 14102,
+        "prefix": " works as we designed. Color codes denote predicted hydration free energies for ",
+        "suffix": ", whose structures are randomly taken from the ZINC15[58]; red dots correpond to",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "integer",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Data",
+      "hpType": "TrainValTestSplit",
+      "uncertain": {
+        "value": true,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:chemical_accuracy_1_0",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 17121,
+        "end_char_doc": 17133,
+        "prefix": " still within an acceptable error range ~ 0.6 kcal/mol, given chemical accuracy ",
+        "suffix": ". Furthermore, we do not see any evidence that our model tends to overfit more t",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "chemical accuracy threshold",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "1.0 kcal/mol",
+        "start_char_doc": 17121,
+        "end_char_doc": 17133,
+        "prefix": " still within an acceptable error range ~ 0.6 kcal/mol, given chemical accuracy ",
+        "suffix": ". Furthermore, we do not see any evidence that our model tends to overfit more t",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "float",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Data",
+      "hpType": "HP_Data",
+      "uncertain": {
+        "value": true,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "exp:overall_solvation_free_energy_cv",
+      "@type": "mls:Experiment",
+      "mention": {
+        "start_char_doc": 12274,
+        "end_char_doc": 12297,
+        "prefix": "d by an extensive grid-search task for tuning model hyperparameters.  We employ ",
+        "suffix": " to evaluate the prediction accuracy of the chosen model[60]; the entire dataset",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "5-fold cross-validation",
+        "start_char_doc": 12274,
+        "end_char_doc": 12297,
+        "prefix": "d by an extensive grid-search task for tuning model hyperparameters.  We employ ",
+        "suffix": " to evaluate the prediction accuracy of the chosen model[60]; the entire dataset",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "overall prediction accuracy over experimental solvation free energies",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:objective": {
+        "value": "evaluate MLSolv-A prediction, transferability, and interpretability",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hypothesis": {
+        "value": "pairwise atomistic interactions from encoded molecular features can predict and decompose solvation free energy",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:methodology": {
+        "value": "5-fold cross validation, transfer augmentation, scaffold split, visualization, and group contribution analysis",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:usesData": [
+        {
+          "@id": "dataset:solvation_energy_6594"
+        }
+      ],
+      "mls:produces": [
+        {
+          "@id": "method:mlsolv_a"
+        },
+        {
+          "@id": "model:bilm_lstm_encoder"
+        },
+        {
+          "@id": "model:gcn_encoder"
+        }
+      ],
+      "mls:realizes": [
+        {
+          "@id": "task:solvation_free_energy_prediction"
+        },
+        {
+          "@id": "task:group_contribution_estimation"
+        }
+      ],
+      "mls:hasEvaluation": [
+        {
+          "@id": "eval:bilm_lstm_mue"
+        },
+        {
+          "@id": "eval:gcn_mue"
+        }
+      ],
+      "mls:usesParameters": [
+        {
+          "@id": "hp:rmsprop_learning_rate_1e_3"
+        },
+        {
+          "@id": "hp:rmsprop_rho_0_9"
+        },
+        {
+          "@id": "hp:cv_folds_5"
+        }
+      ],
+      "mls:executes": {
+        "@id": "impl:tensorflow_keras_mlsolv_a"
+      }
+    },
+    {
+      "@id": "exp:freesolv_transfer_augmentation",
+      "@type": "mls:Experiment",
+      "mention": {
+        "start_char_doc": 17555,
+        "end_char_doc": 17582,
+        "prefix": "n Error for the Scaffold-Based Split &lt;/img&gt;  Figure 4: (a) CV-results for ",
+        "suffix": " with two different training dataset selection. Deep-colored boxes denote CV res",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "FreeSolv hydration energies",
+        "start_char_doc": 17555,
+        "end_char_doc": 17582,
+        "prefix": "n Error for the Scaffold-Based Split &lt;/img&gt;  Figure 4: (a) CV-results for ",
+        "suffix": " with two different training dataset selection. Deep-colored boxes denote CV res",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "training with FreeSolv alone vs augmented with Solv@TUM",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:objective": {
+        "value": "evaluate MLSolv-A prediction, transferability, and interpretability",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hypothesis": {
+        "value": "pairwise atomistic interactions from encoded molecular features can predict and decompose solvation free energy",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:methodology": {
+        "value": "5-fold cross validation, transfer augmentation, scaffold split, visualization, and group contribution analysis",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:usesData": [
+        {
+          "@id": "dataset:freesolv_642"
+        },
+        {
+          "@id": "dataset:solv_tum_5952"
+        }
+      ],
+      "mls:produces": [
+        {
+          "@id": "method:mlsolv_a"
+        },
+        {
+          "@id": "model:bilm_encoder"
+        },
+        {
+          "@id": "model:gcn_encoder"
+        }
+      ],
+      "mls:realizes": [
+        {
+          "@id": "task:solvation_free_energy_prediction"
+        },
+        {
+          "@id": "task:group_contribution_estimation"
+        }
+      ],
+      "mls:hasEvaluation": [
+        {
+          "@id": "eval:transfer_accuracy_gain"
+        }
+      ],
+      "mls:usesParameters": [
+        {
+          "@id": "hp:rmsprop_learning_rate_1e_3"
+        },
+        {
+          "@id": "hp:rmsprop_rho_0_9"
+        },
+        {
+          "@id": "hp:cv_folds_5"
+        }
+      ],
+      "mls:executes": {
+        "@id": "impl:tensorflow_keras_mlsolv_a"
+      }
+    },
+    {
+      "@id": "exp:scaffold_based_split_extrapolation",
+      "@type": "mls:Experiment",
+      "mention": {
+        "start_char_doc": 16639,
+        "end_char_doc": 16659,
+        "prefix": ". We investigate the model’s predictivity for extrapolation situations with the ",
+        "suffix": "[10, 39, 48]. Instead of the ordinary K-fold CV task with the random and uniform",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "scaffold-based split",
+        "start_char_doc": 16639,
+        "end_char_doc": 16659,
+        "prefix": ". We investigate the model’s predictivity for extrapolation situations with the ",
+        "suffix": "[10, 39, 48]. Instead of the ordinary K-fold CV task with the random and uniform",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "extrapolation evaluation with clustered folds",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:objective": {
+        "value": "evaluate MLSolv-A prediction, transferability, and interpretability",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hypothesis": {
+        "value": "pairwise atomistic interactions from encoded molecular features can predict and decompose solvation free energy",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:methodology": {
+        "value": "5-fold cross validation, transfer augmentation, scaffold split, visualization, and group contribution analysis",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:usesData": [
+        {
+          "@id": "dataset:solvation_energy_6594"
+        }
+      ],
+      "mls:produces": [
+        {
+          "@id": "method:mlsolv_a"
+        },
+        {
+          "@id": "model:mlsolv_a"
+        }
+      ],
+      "mls:realizes": [
+        {
+          "@id": "task:solvation_free_energy_prediction"
+        },
+        {
+          "@id": "task:group_contribution_estimation"
+        }
+      ],
+      "mls:hasEvaluation": [
+        {
+          "@id": "eval:scaffold_split_mue"
+        }
+      ],
+      "mls:usesParameters": [
+        {
+          "@id": "hp:rmsprop_learning_rate_1e_3"
+        },
+        {
+          "@id": "hp:rmsprop_rho_0_9"
+        },
+        {
+          "@id": "hp:cv_folds_5"
+        }
+      ],
+      "mls:executes": {
+        "@id": "impl:tensorflow_keras_mlsolv_a"
+      }
+    },
+    {
+      "@id": "exp:tsne_molecular_feature_visualization",
+      "@type": "mls:Experiment",
+      "mention": {
+        "start_char_doc": 13848,
+        "end_char_doc": 13868,
+        "prefix": ")[39], the deep tensor neural network (DTNN)[40], and so on.  Figure 3 presents ",
+        "suffix": " for pre-trained solute vectors y and encoded molecular feature v[43], which con",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "t-SNE visualizations",
+        "start_char_doc": 13848,
+        "end_char_doc": 13868,
+        "prefix": ")[39], the deep tensor neural network (DTNN)[40], and so on.  Figure 3 presents ",
+        "suffix": " for pre-trained solute vectors y and encoded molecular feature v[43], which con",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "visualization of pretrained vectors and encoded molecular features",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:objective": {
+        "value": "evaluate MLSolv-A prediction, transferability, and interpretability",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hypothesis": {
+        "value": "pairwise atomistic interactions from encoded molecular features can predict and decompose solvation free energy",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:methodology": {
+        "value": "5-fold cross validation, transfer augmentation, scaffold split, visualization, and group contribution analysis",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:usesData": [
+        {
+          "@id": "dataset:zinc15_visualization_15432"
+        }
+      ],
+      "mls:produces": [
+        {
+          "@id": "method:mlsolv_a"
+        },
+        {
+          "@id": "model:bilm_encoder"
+        }
+      ],
+      "mls:realizes": [
+        {
+          "@id": "task:solvation_free_energy_prediction"
+        },
+        {
+          "@id": "task:group_contribution_estimation"
+        }
+      ],
+      "mls:hasEvaluation": [
+        {
+          "@id": "eval:geometrical_correlation"
+        }
+      ],
+      "mls:usesParameters": [
+        {
+          "@id": "hp:rmsprop_learning_rate_1e_3"
+        },
+        {
+          "@id": "hp:rmsprop_rho_0_9"
+        },
+        {
+          "@id": "hp:cv_folds_5"
+        }
+      ],
+      "mls:executes": {
+        "@id": "impl:tensorflow_keras_mlsolv_a"
+      }
+    },
+    {
+      "@id": "exp:group_contribution_analysis",
+      "@type": "mls:Experiment",
+      "mention": {
+        "start_char_doc": 1105,
+        "end_char_doc": 1124,
+        "prefix": " the interaction map shows there is a great potential that our model reproduces ",
+        "suffix": " on the solvation energy, which makes us believe that the model not only provide",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "group contributions",
+        "start_char_doc": 1105,
+        "end_char_doc": 1124,
+        "prefix": " the interaction map shows there is a great potential that our model reproduces ",
+        "suffix": " on the solvation energy, which makes us believe that the model not only provide",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "atomistic group contribution analysis for five small solutes",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:objective": {
+        "value": "evaluate MLSolv-A prediction, transferability, and interpretability",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hypothesis": {
+        "value": "pairwise atomistic interactions from encoded molecular features can predict and decompose solvation free energy",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:methodology": {
+        "value": "5-fold cross validation, transfer augmentation, scaffold split, visualization, and group contribution analysis",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:usesData": [
+        {
+          "@id": "dataset:five_small_organic_solutes"
+        }
+      ],
+      "mls:produces": [
+        {
+          "@id": "method:mlsolv_a"
+        },
+        {
+          "@id": "model:bilm_encoder"
+        },
+        {
+          "@id": "model:gcn_encoder"
+        }
+      ],
+      "mls:realizes": [
+        {
+          "@id": "task:solvation_free_energy_prediction"
+        },
+        {
+          "@id": "task:group_contribution_estimation"
+        }
+      ],
+      "mls:hasEvaluation": [
+        {
+          "@id": "eval:group_contribution_hydrophilic_tendency"
+        },
+        {
+          "@id": "eval:gcn_benzene_symmetry"
+        }
+      ],
+      "mls:usesParameters": [
+        {
+          "@id": "hp:rmsprop_learning_rate_1e_3"
+        },
+        {
+          "@id": "hp:rmsprop_rho_0_9"
+        },
+        {
+          "@id": "hp:cv_folds_5"
+        }
+      ],
+      "mls:executes": {
+        "@id": "impl:tensorflow_keras_mlsolv_a"
+      }
+    },
+    {
+      "@id": "eval:bilm_lstm_mue",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 13205,
+        "end_char_doc": 13218,
+        "prefix": "ed: the mean unsigned prediction error (MUE) for the BiLM/LSTM encoder model is ",
+        "suffix": ", while the GCN model results in 0.23 kcal/mol. Both MUE values show that the ou",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "mean unsigned prediction error (MUE)",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "0.19 kcal/mol",
+        "start_char_doc": 13205,
+        "end_char_doc": 13218,
+        "prefix": "ed: the mean unsigned prediction error (MUE) for the BiLM/LSTM encoder model is ",
+        "suffix": ", while the GCN model results in 0.23 kcal/mol. Both MUE values show that the ou",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "MUE) for the BiLM/LSTM encoder model is 0.19 kcal/mol",
+        "start_char_doc": 13165,
+        "end_char_doc": 13218,
+        "prefix": "hough their differences are not pronounced: the mean unsigned prediction error (",
+        "suffix": ", while the GCN model results in 0.23 kcal/mol. Both MUE values show that the ou",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "eval:gcn_mue",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 13251,
+        "end_char_doc": 13264,
+        "prefix": "or the BiLM/LSTM encoder model is 0.19 kcal/mol, while the GCN model results in ",
+        "suffix": ". Both MUE values show that the our proposed mechanism works well and guarantees",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "mean unsigned prediction error (MUE)",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "0.23 kcal/mol",
+        "start_char_doc": 13251,
+        "end_char_doc": 13264,
+        "prefix": "or the BiLM/LSTM encoder model is 0.19 kcal/mol, while the GCN model results in ",
+        "suffix": ". Both MUE values show that the our proposed mechanism works well and guarantees",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "GCN model results in 0.23 kcal/mol",
+        "start_char_doc": 13230,
+        "end_char_doc": 13264,
+        "prefix": "diction error (MUE) for the BiLM/LSTM encoder model is 0.19 kcal/mol, while the ",
+        "suffix": ". Both MUE values show that the our proposed mechanism works well and guarantees",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "eval:transfer_accuracy_gain",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 16073,
+        "end_char_doc": 16096,
+        "prefix": "ly involves non-aqueous data points, it enhances each model’s accuracy by about ",
+        "suffix": " in terms of MUE. Those results imply that there are possible applications of th",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "MUE improvement",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "20% (BiLM) to 30% (GCN)",
+        "start_char_doc": 16073,
+        "end_char_doc": 16096,
+        "prefix": "ly involves non-aqueous data points, it enhances each model’s accuracy by about ",
+        "suffix": " in terms of MUE. Those results imply that there are possible applications of th",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "enhances each model’s accuracy by about 20% (BiLM) to 30% (GCN) in terms of MUE",
+        "start_char_doc": 16033,
+        "end_char_doc": 16112,
+        "prefix": "rgy of each point.  Solv@TUM database only involves non-aqueous data points, it ",
+        "suffix": ". Those results imply that there are possible applications of the transfer learn",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "eval:scaffold_split_mue",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 17081,
+        "end_char_doc": 17095,
+        "prefix": "ades MUEs by a factor of three, they are still within an acceptable error range ",
+        "suffix": ", given chemical accuracy 1.0 kcal/mol. Furthermore, we do not see any evidence ",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "mean unsigned prediction error (MUE)",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "~ 0.6 kcal/mol",
+        "start_char_doc": 17081,
+        "end_char_doc": 17095,
+        "prefix": "ades MUEs by a factor of three, they are still within an acceptable error range ",
+        "suffix": ", given chemical accuracy 1.0 kcal/mol. Furthermore, we do not see any evidence ",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "acceptable error range ~ 0.6 kcal/mol",
+        "start_char_doc": 17058,
+        "end_char_doc": 17095,
+        "prefix": "affold-based split degrades MUEs by a factor of three, they are still within an ",
+        "suffix": ", given chemical accuracy 1.0 kcal/mol. Furthermore, we do not see any evidence ",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "eval:chemical_accuracy_threshold",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 17121,
+        "end_char_doc": 17133,
+        "prefix": " still within an acceptable error range ~ 0.6 kcal/mol, given chemical accuracy ",
+        "suffix": ". Furthermore, we do not see any evidence that our model tends to overfit more t",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "chemical accuracy",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "1.0 kcal/mol",
+        "start_char_doc": 17121,
+        "end_char_doc": 17133,
+        "prefix": " still within an acceptable error range ~ 0.6 kcal/mol, given chemical accuracy ",
+        "suffix": ". Furthermore, we do not see any evidence that our model tends to overfit more t",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "chemical accuracy 1.0 kcal/mol",
+        "start_char_doc": 17103,
+        "end_char_doc": 17133,
+        "prefix": "of three, they are still within an acceptable error range ~ 0.6 kcal/mol, given ",
+        "suffix": ". Furthermore, we do not see any evidence that our model tends to overfit more t",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "eval:geometrical_correlation",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 20883,
+        "end_char_doc": 20918,
+        "prefix": " were taken from the FreeSolv[14, 56] and Solv@TUM database[24, 57]. We found a ",
+        "suffix": " between molecular feature vectors and predicted properties, which confirms that",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "geometrical correlation",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "significant geometrical correlation",
+        "start_char_doc": 20883,
+        "end_char_doc": 20918,
+        "prefix": " were taken from the FreeSolv[14, 56] and Solv@TUM database[24, 57]. We found a ",
+        "suffix": " between molecular feature vectors and predicted properties, which confirms that",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "significant geometrical correlation",
+        "start_char_doc": 20883,
+        "end_char_doc": 20918,
+        "prefix": " were taken from the FreeSolv[14, 56] and Solv@TUM database[24, 57]. We found a ",
+        "suffix": " between molecular feature vectors and predicted properties, which confirms that",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "eval:group_contribution_hydrophilic_tendency",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 18753,
+        "end_char_doc": 18845,
+        "prefix": "del exhibit a similar tendency in group contributions; the model estimates that ",
+        "suffix": ". It is obvious that each atom in benzene must have identical contributions to t",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "group contribution interpretability",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "atomic interactions between the solute atoms and water increases near the hydrophilic groups",
+        "start_char_doc": 18753,
+        "end_char_doc": 18845,
+        "prefix": "del exhibit a similar tendency in group contributions; the model estimates that ",
+        "suffix": ". It is obvious that each atom in benzene must have identical contributions to t",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "atomic interactions between the solute atoms and water increases near the hydrophilic groups",
+        "start_char_doc": 18753,
+        "end_char_doc": 18845,
+        "prefix": "del exhibit a similar tendency in group contributions; the model estimates that ",
+        "suffix": ". It is obvious that each atom in benzene must have identical contributions to t",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "eval:gcn_benzene_symmetry",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 19036,
+        "end_char_doc": 19068,
+        "prefix": " in Fig. 5 clearly shows that the BiLM model makes faulty predictions while the ",
+        "suffix": ". We believe that this malfunctioning of the BiLM model originates from the sequ",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "benzene group contribution symmetry",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "GCN model works well as expected",
+        "start_char_doc": 19036,
+        "end_char_doc": 19068,
+        "prefix": " in Fig. 5 clearly shows that the BiLM model makes faulty predictions while the ",
+        "suffix": ". We believe that this malfunctioning of the BiLM model originates from the sequ",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "GCN model works well as expected",
+        "start_char_doc": 19036,
+        "end_char_doc": 19068,
+        "prefix": " in Fig. 5 clearly shows that the BiLM model makes faulty predictions while the ",
+        "suffix": ". We believe that this malfunctioning of the BiLM model originates from the sequ",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "eval:bilm_benzene_faulty",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 18990,
+        "end_char_doc": 19025,
+        "prefix": "tributions to the free energy, but the results in Fig. 5 clearly shows that the ",
+        "suffix": " while the GCN model works well as expected. We believe that this malfunctioning",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "benzene group contribution symmetry",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "BiLM model makes faulty predictions",
+        "start_char_doc": 18990,
+        "end_char_doc": 19025,
+        "prefix": "tributions to the free energy, but the results in Fig. 5 clearly shows that the ",
+        "suffix": " while the GCN model works well as expected. We believe that this malfunctioning",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "BiLM model makes faulty predictions",
+        "start_char_doc": 18990,
+        "end_char_doc": 19025,
+        "prefix": "tributions to the free energy, but the results in Fig. 5 clearly shows that the ",
+        "suffix": " while the GCN model works well as expected. We believe that this malfunctioning",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "dependency:tensorflow",
+      "@type": "mls:Dependency",
+      "mention": {
+        "start_char_doc": 11829,
+        "end_char_doc": 11839,
+        "prefix": "able[50]. For the implementation of the neural network model, we mainly use the ",
+        "suffix": " 2.0 and Keras 2.3.1 frameworks[59]. Each model has L2 regularization to prevent",
+        "valueSource": "extracted"
+      },
+      "mls:packageName": {
+        "value": "Tensorflow",
+        "start_char_doc": 11829,
+        "end_char_doc": 11839,
+        "prefix": "able[50]. For the implementation of the neural network model, we mainly use the ",
+        "suffix": " 2.0 and Keras 2.3.1 frameworks[59]. Each model has L2 regularization to prevent",
+        "valueSource": "extracted"
+      },
+      "mls:version": {
+        "value": "2.0",
+        "start_char_doc": 11840,
+        "end_char_doc": 11843,
+        "prefix": "or the implementation of the neural network model, we mainly use the Tensorflow ",
+        "suffix": " and Keras 2.3.1 frameworks[59]. Each model has L2 regularization to prevent exc",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "software package",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "dependency:keras",
+      "@type": "mls:Dependency",
+      "mention": {
+        "start_char_doc": 11848,
+        "end_char_doc": 11853,
+        "prefix": "mplementation of the neural network model, we mainly use the Tensorflow 2.0 and ",
+        "suffix": " 2.3.1 frameworks[59]. Each model has L2 regularization to prevent excessive cha",
+        "valueSource": "extracted"
+      },
+      "mls:packageName": {
+        "value": "Keras",
+        "start_char_doc": 11848,
+        "end_char_doc": 11853,
+        "prefix": "mplementation of the neural network model, we mainly use the Tensorflow 2.0 and ",
+        "suffix": " 2.3.1 frameworks[59]. Each model has L2 regularization to prevent excessive cha",
+        "valueSource": "extracted"
+      },
+      "mls:version": {
+        "value": "2.3.1",
+        "start_char_doc": 11854,
+        "end_char_doc": 11859,
+        "prefix": "ntation of the neural network model, we mainly use the Tensorflow 2.0 and Keras ",
+        "suffix": " frameworks[59]. Each model has L2 regularization to prevent excessive changes o",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "software package",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "dependency:gensim",
+      "@type": "mls:Dependency",
+      "mention": {
+        "start_char_doc": 11657,
+        "end_char_doc": 11663,
+        "prefix": "9,472 organic compounds, which are collected from the ZINC15 database[58], with ",
+        "suffix": " 3.8.1 and Mol2Vec skip-gram model to construct the 128-dimensional embedding lo",
+        "valueSource": "extracted"
+      },
+      "mls:packageName": {
+        "value": "Gensim",
+        "start_char_doc": 11657,
+        "end_char_doc": 11663,
+        "prefix": "9,472 organic compounds, which are collected from the ZINC15 database[58], with ",
+        "suffix": " 3.8.1 and Mol2Vec skip-gram model to construct the 128-dimensional embedding lo",
+        "valueSource": "extracted"
+      },
+      "mls:version": {
+        "value": "3.8.1",
+        "start_char_doc": 11664,
+        "end_char_doc": 11669,
+        "prefix": "rganic compounds, which are collected from the ZINC15 database[58], with Gensim ",
+        "suffix": " and Mol2Vec skip-gram model to construct the 128-dimensional embedding lookup t",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "software package",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "dependency:scikit_learn",
+      "@type": "mls:Dependency",
+      "mention": {
+        "start_char_doc": 34637,
+        "end_char_doc": 34649,
+        "prefix": "le Machine Learning on Heterogeneous Systems*; 2015.  [60] Pedregosa, F. et al. ",
+        "suffix": ": Machine Learning in Python. *Journal of Machine Learning Research* **2011**, *",
+        "valueSource": "extracted"
+      },
+      "mls:packageName": {
+        "value": "Scikit-learn",
+        "start_char_doc": 34637,
+        "end_char_doc": 34649,
+        "prefix": "le Machine Learning on Heterogeneous Systems*; 2015.  [60] Pedregosa, F. et al. ",
+        "suffix": ": Machine Learning in Python. *Journal of Machine Learning Research* **2011**, *",
+        "valueSource": "extracted"
+      },
+      "mls:version": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "software package",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "env:tensorflow_2_keras_2_3_1",
+      "@type": "mls:Environment",
+      "mention": {
+        "start_char_doc": 11829,
+        "end_char_doc": 11859,
+        "prefix": "able[50]. For the implementation of the neural network model, we mainly use the ",
+        "suffix": " frameworks[59]. Each model has L2 regularization to prevent excessive changes o",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Tensorflow 2.0 and Keras 2.3.1",
+        "start_char_doc": 11829,
+        "end_char_doc": 11859,
+        "prefix": "able[50]. For the implementation of the neural network model, we mainly use the ",
+        "suffix": " frameworks[59]. Each model has L2 regularization to prevent excessive changes o",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "neural network implementation environment",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:pythonVersion": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:isDockerized": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "impl:tensorflow_keras_mlsolv_a",
+      "@type": "mls:MLS_Implementation",
+      "mention": {
+        "start_char_doc": 11829,
+        "end_char_doc": 11859,
+        "prefix": "able[50]. For the implementation of the neural network model, we mainly use the ",
+        "suffix": " frameworks[59]. Each model has L2 regularization to prevent excessive changes o",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Tensorflow 2.0 and Keras 2.3.1",
+        "start_char_doc": 11829,
+        "end_char_doc": 11859,
+        "prefix": "able[50]. For the implementation of the neural network model, we mainly use the ",
+        "suffix": " frameworks[59]. Each model has L2 regularization to prevent excessive changes o",
+        "valueSource": "extracted"
+      },
+      "mls:framework": {
+        "value": "Tensorflow 2.0 and Keras 2.3.1",
+        "start_char_doc": 11829,
+        "end_char_doc": 11859,
+        "prefix": "able[50]. For the implementation of the neural network model, we mainly use the ",
+        "suffix": " frameworks[59]. Each model has L2 regularization to prevent excessive changes o",
+        "valueSource": "extracted"
+      },
+      "mls:codeRepository": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:runsIn": {
+        "@id": "env:tensorflow_2_keras_2_3_1"
+      },
+      "mls:requires": [
+        {
+          "@id": "dependency:tensorflow"
+        },
+        {
+          "@id": "dependency:keras"
+        },
+        {
+          "@id": "dependency:gensim"
+        },
+        {
+          "@id": "dependency:scikit_learn"
+        }
+      ]
+    },
+    {
+      "@id": "train:skipgram_pretraining_zinc15",
+      "@type": "mls:TrainingRun",
+      "mention": {
+        "start_char_doc": 11537,
+        "end_char_doc": 11567,
+        "prefix": " gray diamonds.</caption> &lt;/img&gt;  At the very first stage, we perform the ",
+        "suffix": " for 10,229,472 organic compounds, which are collected from the ZINC15 database[",
+        "valueSource": "extracted"
+      },
+      "mls:runId": {
+        "value": "skip-gram pre-training process",
+        "start_char_doc": 11537,
+        "end_char_doc": 11567,
+        "prefix": " gray diamonds.</caption> &lt;/img&gt;  At the very first stage, we perform the ",
+        "suffix": " for 10,229,472 organic compounds, which are collected from the ZINC15 database[",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "skip-gram pre-training process for 10,229,472 organic compounds",
+        "start_char_doc": 11537,
+        "end_char_doc": 11600,
+        "prefix": " gray diamonds.</caption> &lt;/img&gt;  At the very first stage, we perform the ",
+        "suffix": ", which are collected from the ZINC15 database[58], with Gensim 3.8.1 and Mol2Ve",
+        "valueSource": "extracted"
+      },
+      "mls:prov-executedBy": {
+        "@id": "impl:tensorflow_keras_mlsolv_a"
+      },
+      "mls:prov-uses": {
+        "@id": "dataset:zinc15_pretraining_10229472"
+      },
+      "prov:wasAssociatedWith": [
+        {
+          "@id": "hp:embedding_dim_128"
+        }
+      ]
+    },
+    {
+      "@id": "train:mlsolv_a_cross_validation",
+      "@type": "mls:TrainingRun",
+      "mention": {
+        "start_char_doc": 12556,
+        "end_char_doc": 12570,
+        "prefix": " a test set, and the training run uses the remaining 4 subsets. Consequently, a ",
+        "suffix": " performs 5 independent training and test runs, and relative sizes of the traini",
+        "valueSource": "extracted"
+      },
+      "mls:runId": {
+        "value": "5-fold CV task",
+        "start_char_doc": 12556,
+        "end_char_doc": 12570,
+        "prefix": " a test set, and the training run uses the remaining 4 subsets. Consequently, a ",
+        "suffix": " performs 5 independent training and test runs, and relative sizes of the traini",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "5-fold CV task performs 5 independent training and test runs",
+        "start_char_doc": 12556,
+        "end_char_doc": 12616,
+        "prefix": " a test set, and the training run uses the remaining 4 subsets. Consequently, a ",
+        "suffix": ", and relative sizes of the training and test sets are 8 to 2. To minimize the v",
+        "valueSource": "extracted"
+      },
+      "mls:prov-executedBy": {
+        "@id": "impl:tensorflow_keras_mlsolv_a"
+      },
+      "mls:prov-uses": {
+        "@id": "dataset:solvation_energy_6594"
+      },
+      "prov:wasAssociatedWith": [
+        {
+          "@id": "hp:cv_folds_5"
+        },
+        {
+          "@id": "hp:train_test_split_8_to_2"
+        },
+        {
+          "@id": "hp:independent_random_cvs_9"
+        }
+      ]
+    },
+    {
+      "@id": "evalrun:mlsolv_a_prediction_results",
+      "@type": "mls:EvaluationRun",
+      "mention": {
+        "start_char_doc": 11275,
+        "end_char_doc": 11306,
+        "prefix": "<caption>Figure 2: (a) Prediction errors for two models in kcal/mol, taken from ",
+        "suffix": ". (b) Scatter plot between the experimental value and ML the ML predicted value.",
+        "valueSource": "extracted"
+      },
+      "mls:runId": {
+        "value": "5-fold cross validation results",
+        "start_char_doc": 11275,
+        "end_char_doc": 11306,
+        "prefix": "<caption>Figure 2: (a) Prediction errors for two models in kcal/mol, taken from ",
+        "suffix": ". (b) Scatter plot between the experimental value and ML the ML predicted value.",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "Prediction errors for two models in kcal/mol, taken from 5-fold cross validation results",
+        "start_char_doc": 11218,
+        "end_char_doc": 11306,
+        "prefix": ";6&lt;/page_number&gt;  ---   ## Page 7  &lt;img&gt;     <caption>Figure 2: (a) ",
+        "suffix": ". (b) Scatter plot between the experimental value and ML the ML predicted value.",
+        "valueSource": "extracted"
+      },
+      "mls:evaluates": {
+        "@id": "method:mlsolv_a"
+      },
+      "mls:prov-executedBy": {
+        "@id": "impl:tensorflow_keras_mlsolv_a"
+      }
+    }
+  ]
+}

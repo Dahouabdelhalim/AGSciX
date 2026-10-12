@@ -1,0 +1,3882 @@
+{
+  "@context": {
+    "mls": "http://www.w3.org/ns/mls#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "schema": "http://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "model": "https://w3id.org/mlskg/model/",
+    "algo": "https://w3id.org/mlskg/algorithm/",
+    "method": "https://w3id.org/mlskg/method/",
+    "dataset": "https://w3id.org/mlskg/dataset/",
+    "datasource": "https://w3id.org/mlskg/datasource/",
+    "task": "https://w3id.org/mlskg/task/",
+    "eval": "https://w3id.org/mlskg/eval/",
+    "hp": "https://w3id.org/mlskg/hp/",
+    "impl": "https://w3id.org/mlskg/implementation/",
+    "env": "https://w3id.org/mlskg/environment/",
+    "prompt": "https://w3id.org/mlskg/prompt/",
+    "person": "https://w3id.org/mlskg/person/",
+    "org": "https://w3id.org/mlskg/organization/",
+    "study": "https://w3id.org/mlskg/study/",
+    "exp": "https://w3id.org/mlskg/experiment/",
+    "repo": "https://w3id.org/mlskg/repository/",
+    "valueSource": "https://w3id.org/mlskg/meta/valueSource",
+    "mention": "https://w3id.org/mlskg/meta/mention"
+  },
+  "@graph": [
+    {
+      "@id": "study:tapex_table_pretraining_via_learning_a_neural_sql_executor",
+      "@type": "mls:Study",
+      "mention": {
+        "start_char_doc": 57,
+        "end_char_doc": 117,
+        "prefix": "## Page 1  Published as a conference paper at ICLR 2022",
+        "suffix": "Qian Liu†*, Bei Chen§, Jiaqi Guo◇*, Morteza Ziyadi♥, Zeqi Lin§, Weizhu Chen♥,",
+        "valueSource": "extracted"
+      },
+      "mls:title": {
+        "value": "TAPEX: TABLE PRE-TRAINING VIA LEARNING A NEURAL SQL EXECUTOR",
+        "start_char_doc": 57,
+        "end_char_doc": 117,
+        "prefix": "## Page 1  Published as a conference paper at ICLR 2022",
+        "suffix": "Qian Liu†*, Bei Chen§, Jiaqi Guo◇*, Morteza Ziyadi♥, Zeqi Lin§, Weizhu Chen♥,",
+        "valueSource": "extracted"
+      },
+      "mls:abstract": {
+        "value": "Recent progress in language model pre-training has achieved a great success via leveraging large-scale unstructured textual data. However, it is still a challenge to apply pre-training on structured tabular data due to the absence of large-scale high-quality tabular data. In this paper, we propose TAPEX to show that table pre-training can be achieved by learning a neural SQL executor over a synthetic corpus, which is obtained by automatically synthesizing executable SQL queries and their execution outputs. TAPEX addresses the data scarcity challenge via guiding the language model to mimic a SQL executor on the diverse, large-scale and high-quality synthetic corpus. We evaluate TAPEX on four benchmark datasets. Experimental results demonstrate that TAPEX outperforms previous table pre-training approaches by a large margin and achieves new state-of-the-art results on all of them. This includes improvements on the weakly-supervised WikiSQL denotation accuracy to 89.5% (+2.3%), the WikiTableQuestions denotation accuracy to 57.5% (+4.8%), the SQA denotation accuracy to 74.5% (+3.5%), and the TabFact accuracy to 84.2% (+3.2%). To our knowledge, this is the first work to exploit table pre-training via synthetic executable programs and to achieve new state-of-the-art results on various downstream tasks. Our code can be found at https://github.com/microsoft/Table-Pretraining.",
+        "start_char_doc": 436,
+        "end_char_doc": 1825,
+        "prefix": ".cn {bei.chen, morteza.ziyadi, zeqi.lin, wzchen, jlou}@microsoft.com  ABSTRACT",
+        "suffix": "1 INTRODUCTION  Pre-trained language models (LMs) such as BERT (Devlin et al.,",
+        "valueSource": "extracted"
+      },
+      "mls:issued": {
+        "value": "Published as a conference paper at ICLR 2022",
+        "start_char_doc": 11,
+        "end_char_doc": 55,
+        "prefix": "## Page 1",
+        "suffix": "TAPEX: TABLE PRE-TRAINING VIA LEARNING A NEURAL SQL EXECUTOR  Qian Liu†*, Bei",
+        "valueSource": "extracted"
+      },
+      "mls:url": {
+        "value": "https://arxiv.org/abs/2107.07653",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:doi": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:publicationVenue": {
+        "value": "ICLR 2022",
+        "start_char_doc": 46,
+        "end_char_doc": 55,
+        "prefix": "## Page 1  Published as a conference paper at",
+        "suffix": "TAPEX: TABLE PRE-TRAINING VIA LEARNING A NEURAL SQL EXECUTOR  Qian Liu†*, Bei",
+        "valueSource": "extracted"
+      },
+      "mls:hasAuthor": [
+        {
+          "@id": "person:qian_liu"
+        },
+        {
+          "@id": "person:bei_chen"
+        },
+        {
+          "@id": "person:jiaqi_guo"
+        },
+        {
+          "@id": "person:morteza_ziyadi"
+        },
+        {
+          "@id": "person:zeqi_lin"
+        },
+        {
+          "@id": "person:weizhu_chen"
+        },
+        {
+          "@id": "person:jian_guang_lou"
+        }
+      ],
+      "mls:hasContribution": [
+        {
+          "@id": "method:tapex"
+        },
+        {
+          "@id": "model:tapex"
+        },
+        {
+          "@id": "dataset:tapex_synthetic_sql_execution_corpus"
+        },
+        {
+          "@id": "task:sql_execution_pretraining"
+        },
+        {
+          "@id": "impl:tapex_fairseq"
+        }
+      ],
+      "mls:hasExperiment": [
+        {
+          "@id": "exp:main_downstream_evaluation"
+        },
+        {
+          "@id": "exp:sql_execution_analysis"
+        },
+        {
+          "@id": "exp:multi_task_finetuning"
+        },
+        {
+          "@id": "exp:natural_language_pretraining_comparison"
+        }
+      ],
+      "mls:hasEvaluation": [
+        {
+          "@id": "eval:wikisql_weak_test"
+        },
+        {
+          "@id": "eval:wikitablequestions_test"
+        },
+        {
+          "@id": "eval:sqa_test_sentence"
+        },
+        {
+          "@id": "eval:sqa_test_conversation"
+        },
+        {
+          "@id": "eval:tabfact_test"
+        },
+        {
+          "@id": "eval:sql_execution_heldout"
+        }
+      ],
+      "mls:hasImplementation": {
+        "@id": "impl:tapex_fairseq"
+      }
+    },
+    {
+      "@id": "org:beihang_university",
+      "@type": "mls:Organization",
+      "mention": {
+        "start_char_doc": 214,
+        "end_char_doc": 232,
+        "prefix": "Chen§, Jiaqi Guo◇*, Morteza Ziyadi♥, Zeqi Lin§, Weizhu Chen♥, Jian-Guang Lou§ †",
+        "suffix": ", ◇Xi'an Jiaotong University, §Microsoft Research Asia, ♥Microsoft Azure AI qian",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Beihang University",
+        "start_char_doc": 214,
+        "end_char_doc": 232,
+        "prefix": "Chen§, Jiaqi Guo◇*, Morteza Ziyadi♥, Zeqi Lin§, Weizhu Chen♥, Jian-Guang Lou§ †",
+        "suffix": ", ◇Xi'an Jiaotong University, §Microsoft Research Asia, ♥Microsoft Azure AI qian",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "university",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:url": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "org:xian_jiaotong_university",
+      "@type": "mls:Organization",
+      "mention": {
+        "start_char_doc": 235,
+        "end_char_doc": 260,
+        "prefix": "Morteza Ziyadi♥, Zeqi Lin§, Weizhu Chen♥, Jian-Guang Lou§ †Beihang University, ◇",
+        "suffix": ", §Microsoft Research Asia, ♥Microsoft Azure AI qian.liu@buaa.edu.cn, jasperguo2",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Xi'an Jiaotong University",
+        "start_char_doc": 235,
+        "end_char_doc": 260,
+        "prefix": "Morteza Ziyadi♥, Zeqi Lin§, Weizhu Chen♥, Jian-Guang Lou§ †Beihang University, ◇",
+        "suffix": ", §Microsoft Research Asia, ♥Microsoft Azure AI qian.liu@buaa.edu.cn, jasperguo2",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "university",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:url": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "org:microsoft_research_asia",
+      "@type": "mls:Organization",
+      "mention": {
+        "start_char_doc": 263,
+        "end_char_doc": 286,
+        "prefix": "Weizhu Chen♥, Jian-Guang Lou§ †Beihang University, ◇Xi'an Jiaotong University, §",
+        "suffix": ", ♥Microsoft Azure AI qian.liu@buaa.edu.cn, jasperguo2013@stu.xjtu.edu.cn {bei.c",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Microsoft Research Asia",
+        "start_char_doc": 263,
+        "end_char_doc": 286,
+        "prefix": "Weizhu Chen♥, Jian-Guang Lou§ †Beihang University, ◇Xi'an Jiaotong University, §",
+        "suffix": ", ♥Microsoft Azure AI qian.liu@buaa.edu.cn, jasperguo2013@stu.xjtu.edu.cn {bei.c",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "research lab",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:url": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "org:microsoft_azure_ai",
+      "@type": "mls:Organization",
+      "mention": {
+        "start_char_doc": 289,
+        "end_char_doc": 307,
+        "prefix": "ou§ †Beihang University, ◇Xi'an Jiaotong University, §Microsoft Research Asia, ♥",
+        "suffix": "qian.liu@buaa.edu.cn, jasperguo2013@stu.xjtu.edu.cn {bei.chen, morteza.ziyadi,",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Microsoft Azure AI",
+        "start_char_doc": 289,
+        "end_char_doc": 307,
+        "prefix": "ou§ †Beihang University, ◇Xi'an Jiaotong University, §Microsoft Research Asia, ♥",
+        "suffix": "qian.liu@buaa.edu.cn, jasperguo2013@stu.xjtu.edu.cn {bei.chen, morteza.ziyadi,",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "industry research organization",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:url": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "person:qian_liu",
+      "@type": "mls:Person",
+      "mention": {
+        "start_char_doc": 119,
+        "end_char_doc": 127,
+        "prefix": "per at ICLR 2022  TAPEX: TABLE PRE-TRAINING VIA LEARNING A NEURAL SQL EXECUTOR",
+        "suffix": "†*, Bei Chen§, Jiaqi Guo◇*, Morteza Ziyadi♥, Zeqi Lin§, Weizhu Chen♥, Jian-Guang",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Qian Liu",
+        "start_char_doc": 119,
+        "end_char_doc": 127,
+        "prefix": "per at ICLR 2022  TAPEX: TABLE PRE-TRAINING VIA LEARNING A NEURAL SQL EXECUTOR",
+        "suffix": "†*, Bei Chen§, Jiaqi Guo◇*, Morteza Ziyadi♥, Zeqi Lin§, Weizhu Chen♥, Jian-Guang",
+        "valueSource": "extracted"
+      },
+      "mls:email": {
+        "value": "qian.liu@buaa.edu.cn",
+        "start_char_doc": 308,
+        "end_char_doc": 328,
+        "prefix": "sity, ◇Xi'an Jiaotong University, §Microsoft Research Asia, ♥Microsoft Azure AI",
+        "suffix": ", jasperguo2013@stu.xjtu.edu.cn {bei.chen, morteza.ziyadi, zeqi.lin, wzchen, jlo",
+        "valueSource": "extracted"
+      },
+      "mls:affiliation": {
+        "@id": "org:beihang_university"
+      }
+    },
+    {
+      "@id": "person:bei_chen",
+      "@type": "mls:Person",
+      "mention": {
+        "start_char_doc": 131,
+        "end_char_doc": 139,
+        "prefix": "2022  TAPEX: TABLE PRE-TRAINING VIA LEARNING A NEURAL SQL EXECUTOR  Qian Liu†*,",
+        "suffix": "§, Jiaqi Guo◇*, Morteza Ziyadi♥, Zeqi Lin§, Weizhu Chen♥, Jian-Guang Lou§ †Beiha",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Bei Chen",
+        "start_char_doc": 131,
+        "end_char_doc": 139,
+        "prefix": "2022  TAPEX: TABLE PRE-TRAINING VIA LEARNING A NEURAL SQL EXECUTOR  Qian Liu†*,",
+        "suffix": "§, Jiaqi Guo◇*, Morteza Ziyadi♥, Zeqi Lin§, Weizhu Chen♥, Jian-Guang Lou§ †Beiha",
+        "valueSource": "extracted"
+      },
+      "mls:email": {
+        "value": "bei.chen@microsoft.com",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:affiliation": {
+        "@id": "org:microsoft_research_asia"
+      }
+    },
+    {
+      "@id": "person:jiaqi_guo",
+      "@type": "mls:Person",
+      "mention": {
+        "start_char_doc": 142,
+        "end_char_doc": 151,
+        "prefix": ": TABLE PRE-TRAINING VIA LEARNING A NEURAL SQL EXECUTOR  Qian Liu†*, Bei Chen§,",
+        "suffix": "◇*, Morteza Ziyadi♥, Zeqi Lin§, Weizhu Chen♥, Jian-Guang Lou§ †Beihang Universit",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Jiaqi Guo",
+        "start_char_doc": 142,
+        "end_char_doc": 151,
+        "prefix": ": TABLE PRE-TRAINING VIA LEARNING A NEURAL SQL EXECUTOR  Qian Liu†*, Bei Chen§,",
+        "suffix": "◇*, Morteza Ziyadi♥, Zeqi Lin§, Weizhu Chen♥, Jian-Guang Lou§ †Beihang Universit",
+        "valueSource": "extracted"
+      },
+      "mls:email": {
+        "value": "jasperguo2013@stu.xjtu.edu.cn",
+        "start_char_doc": 330,
+        "end_char_doc": 359,
+        "prefix": "University, §Microsoft Research Asia, ♥Microsoft Azure AI qian.liu@buaa.edu.cn,",
+        "suffix": "{bei.chen, morteza.ziyadi, zeqi.lin, wzchen, jlou}@microsoft.com  ABSTRACT  Rec",
+        "valueSource": "extracted"
+      },
+      "mls:affiliation": {
+        "@id": "org:xian_jiaotong_university"
+      }
+    },
+    {
+      "@id": "person:morteza_ziyadi",
+      "@type": "mls:Person",
+      "mention": {
+        "start_char_doc": 155,
+        "end_char_doc": 169,
+        "prefix": "RAINING VIA LEARNING A NEURAL SQL EXECUTOR  Qian Liu†*, Bei Chen§, Jiaqi Guo◇*,",
+        "suffix": "♥, Zeqi Lin§, Weizhu Chen♥, Jian-Guang Lou§ †Beihang University, ◇Xi'an Jiaotong",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Morteza Ziyadi",
+        "start_char_doc": 155,
+        "end_char_doc": 169,
+        "prefix": "RAINING VIA LEARNING A NEURAL SQL EXECUTOR  Qian Liu†*, Bei Chen§, Jiaqi Guo◇*,",
+        "suffix": "♥, Zeqi Lin§, Weizhu Chen♥, Jian-Guang Lou§ †Beihang University, ◇Xi'an Jiaotong",
+        "valueSource": "extracted"
+      },
+      "mls:email": {
+        "value": "morteza.ziyadi@microsoft.com",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:affiliation": {
+        "@id": "org:microsoft_azure_ai"
+      }
+    },
+    {
+      "@id": "person:zeqi_lin",
+      "@type": "mls:Person",
+      "mention": {
+        "start_char_doc": 172,
+        "end_char_doc": 180,
+        "prefix": "ING A NEURAL SQL EXECUTOR  Qian Liu†*, Bei Chen§, Jiaqi Guo◇*, Morteza Ziyadi♥,",
+        "suffix": "§, Weizhu Chen♥, Jian-Guang Lou§ †Beihang University, ◇Xi'an Jiaotong University",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Zeqi Lin",
+        "start_char_doc": 172,
+        "end_char_doc": 180,
+        "prefix": "ING A NEURAL SQL EXECUTOR  Qian Liu†*, Bei Chen§, Jiaqi Guo◇*, Morteza Ziyadi♥,",
+        "suffix": "§, Weizhu Chen♥, Jian-Guang Lou§ †Beihang University, ◇Xi'an Jiaotong University",
+        "valueSource": "extracted"
+      },
+      "mls:email": {
+        "value": "zeqi.lin@microsoft.com",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:affiliation": {
+        "@id": "org:microsoft_research_asia"
+      }
+    },
+    {
+      "@id": "person:weizhu_chen",
+      "@type": "mls:Person",
+      "mention": {
+        "start_char_doc": 183,
+        "end_char_doc": 194,
+        "prefix": "L SQL EXECUTOR  Qian Liu†*, Bei Chen§, Jiaqi Guo◇*, Morteza Ziyadi♥, Zeqi Lin§,",
+        "suffix": "♥, Jian-Guang Lou§ †Beihang University, ◇Xi'an Jiaotong University, §Microsoft R",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Weizhu Chen",
+        "start_char_doc": 183,
+        "end_char_doc": 194,
+        "prefix": "L SQL EXECUTOR  Qian Liu†*, Bei Chen§, Jiaqi Guo◇*, Morteza Ziyadi♥, Zeqi Lin§,",
+        "suffix": "♥, Jian-Guang Lou§ †Beihang University, ◇Xi'an Jiaotong University, §Microsoft R",
+        "valueSource": "extracted"
+      },
+      "mls:email": {
+        "value": "wzchen@microsoft.com",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:affiliation": {
+        "@id": "org:microsoft_azure_ai"
+      }
+    },
+    {
+      "@id": "person:jian_guang_lou",
+      "@type": "mls:Person",
+      "mention": {
+        "start_char_doc": 197,
+        "end_char_doc": 211,
+        "prefix": "Qian Liu†*, Bei Chen§, Jiaqi Guo◇*, Morteza Ziyadi♥, Zeqi Lin§, Weizhu Chen♥,",
+        "suffix": "§ †Beihang University, ◇Xi'an Jiaotong University, §Microsoft Research Asia, ♥Mi",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Jian-Guang Lou",
+        "start_char_doc": 197,
+        "end_char_doc": 211,
+        "prefix": "Qian Liu†*, Bei Chen§, Jiaqi Guo◇*, Morteza Ziyadi♥, Zeqi Lin§, Weizhu Chen♥,",
+        "suffix": "§ †Beihang University, ◇Xi'an Jiaotong University, §Microsoft Research Asia, ♥Mi",
+        "valueSource": "extracted"
+      },
+      "mls:email": {
+        "value": "jlou@microsoft.com",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:affiliation": {
+        "@id": "org:microsoft_research_asia"
+      }
+    },
+    {
+      "@id": "task:table_pretraining",
+      "@type": "mls:Task",
+      "mention": {
+        "start_char_doc": 754,
+        "end_char_doc": 772,
+        "prefix": "e-scale high-quality tabular data. In this paper, we propose TAPEX to show that",
+        "suffix": "can be achieved by learning a neural SQL executor over a synthetic corpus, whic",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "table pre-training",
+        "start_char_doc": 754,
+        "end_char_doc": 772,
+        "prefix": "e-scale high-quality tabular data. In this paper, we propose TAPEX to show that",
+        "suffix": "can be achieved by learning a neural SQL executor over a synthetic corpus, whic",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "Pre-training language models to understand structured tabular data.",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "task:sql_execution_pretraining",
+      "@type": "mls:Task",
+      "mention": {
+        "start_char_doc": 14869,
+        "end_char_doc": 14925,
+        "prefix": "uch as SQL queries, while unstructured text does not. Taking this into account,",
+        "suffix": ". As illustrated in Figure 3, the pre-training of TAPEX is similar to the proced",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "SQL execution",
+        "start_char_doc": 14882,
+        "end_char_doc": 14895,
+        "prefix": "eries, while unstructured text does not. Taking this into account, TAPEX adopts",
+        "suffix": "as the only pre-training task. As illustrated in Figure 3, the pre-training of",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "Pre-training task where the model predicts execution results for SQL queries over flattened tables.",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "task:table_question_answering",
+      "@type": "mls:Task",
+      "mention": {
+        "start_char_doc": 6467,
+        "end_char_doc": 6497,
+        "prefix": "re, we examine the effectiveness of TAPEX via two fundamental downstream tasks:",
+        "suffix": "(TableQA) and table-based fact verification (TableFV). To enable fine-tuning of",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "table-based question answering",
+        "start_char_doc": 6467,
+        "end_char_doc": 6497,
+        "prefix": "re, we examine the effectiveness of TAPEX via two fundamental downstream tasks:",
+        "suffix": "(TableQA) and table-based fact verification (TableFV). To enable fine-tuning of",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "Answering questions by reasoning over table content.",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "task:table_fact_verification",
+      "@type": "mls:Task",
+      "mention": {
+        "start_char_doc": 6512,
+        "end_char_doc": 6541,
+        "prefix": "two fundamental downstream tasks: table-based question answering (TableQA) and",
+        "suffix": "(TableFV). To enable fine-tuning of downstream tasks to take full advantage of",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "table-based fact verification",
+        "start_char_doc": 6512,
+        "end_char_doc": 6541,
+        "prefix": "two fundamental downstream tasks: table-based question answering (TableQA) and",
+        "suffix": "(TableFV). To enable fine-tuning of downstream tasks to take full advantage of",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "Binary verification of whether a sentence follows facts indicated by a table.",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "task:sequence_generation_for_tables",
+      "@type": "mls:Task",
+      "mention": {
+        "start_char_doc": 6202,
+        "end_char_doc": 6226,
+        "prefix": "ly simple and easy to implement. In this paper, we regard the pre-training as a",
+        "suffix": "and employ an encoder-decoder model. Specifically, we employ the pre-trained en",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "sequence generation",
+        "start_char_doc": 6202,
+        "end_char_doc": 6221,
+        "prefix": "ly simple and easy to implement. In this paper, we regard the pre-training as a",
+        "suffix": "task and employ an encoder-decoder model. Specifically, we employ the pre-train",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "Encoder-decoder sequence generation formulation for table QA and fact verification.",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "method:tapex",
+      "@type": "mls:Method",
+      "mention": {
+        "start_char_doc": 4624,
+        "end_char_doc": 4745,
+        "prefix": "ir table pre-training. All of these hinder the progress of table pre-training.",
+        "suffix": "It addresses the above challenges and achieves efficient table pre-training via",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "TAPEX",
+        "start_char_doc": 4704,
+        "end_char_doc": 4709,
+        "prefix": "In this paper, we present a novel execution-centric table pre-training approach",
+        "suffix": "(Table Pre-training via Execution). It addresses the above challenges and achie",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "Table Pre-training via Execution",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:solvesTask": [
+        {
+          "@id": "task:table_pretraining"
+        },
+        {
+          "@id": "task:sql_execution_pretraining"
+        }
+      ],
+      "mls:usesDataset": [
+        {
+          "@id": "dataset:tapex_synthetic_sql_execution_corpus"
+        }
+      ],
+      "mls:implementedBy": {
+        "@id": "impl:tapex_fairseq"
+      }
+    },
+    {
+      "@id": "method:synthetic_sql_query_sampling",
+      "@type": "mls:Method",
+      "mention": {
+        "start_char_doc": 5293,
+        "end_char_doc": 5339,
+        "prefix": "o mimic the behavior of a SQL execution engine on tables. As shown in Figure 1,",
+        "suffix": ", TAPEX first synthesizes a large-scale pre-training corpus. Then it continues p",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "sampling executable SQL queries",
+        "start_char_doc": 5296,
+        "end_char_doc": 5327,
+        "prefix": "imic the behavior of a SQL execution engine on tables. As shown in Figure 1, by",
+        "suffix": "over tables, TAPEX first synthesizes a large-scale pre-training corpus. Then it",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "Automatic synthesis of executable SQL queries from SQL templates over sampled tables.",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:solvesTask": [
+        {
+          "@id": "task:sql_execution_pretraining"
+        }
+      ],
+      "mls:usesDataset": [
+        {
+          "@id": "dataset:wikitablequestions"
+        },
+        {
+          "@id": "dataset:squall"
+        }
+      ],
+      "mls:implementedBy": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "method:generative_fine_tuning",
+      "@type": "mls:Method",
+      "mention": {
+        "start_char_doc": 9541,
+        "end_char_doc": 9563,
+        "prefix": "cating whether the NL sentence follows the fact indicated by the table.  ## 2.2",
+        "suffix": "In this section, we present a generative approach for downstream task fine-tun",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "generative fine-tuning",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:description": {
+        "value": "Formulates TableQA and TableFV as encoder-decoder generation or classification with BART.",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:solvesTask": [
+        {
+          "@id": "task:table_question_answering"
+        },
+        {
+          "@id": "task:table_fact_verification"
+        }
+      ],
+      "mls:usesDataset": [],
+      "mls:implementedBy": {
+        "@id": "impl:tapex_fairseq"
+      }
+    },
+    {
+      "@id": "method:table_flattening",
+      "@type": "mls:Method",
+      "mention": {
+        "start_char_doc": 10959,
+        "end_char_doc": 10992,
+        "prefix": "e table is non-trivial since it exhibits underlying structures. In practice, we",
+        "suffix": "so that it can be fed directly into the model. By inserting several special tok",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "flatten the table into a sequence",
+        "start_char_doc": 10959,
+        "end_char_doc": 10992,
+        "prefix": "e table is non-trivial since it exhibits underlying structures. In practice, we",
+        "suffix": "so that it can be fed directly into the model. By inserting several special tok",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "Linearizes table headers and rows with [HEAD], [ROW], row indices, and vertical bars.",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:solvesTask": [
+        {
+          "@id": "task:sequence_generation_for_tables"
+        }
+      ],
+      "mls:usesDataset": [],
+      "mls:implementedBy": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "method:multi_task_fine_tuning",
+      "@type": "mls:Method",
+      "mention": {
+        "start_char_doc": 12890,
+        "end_char_doc": 12912,
+        "prefix": "explore two ways of fine-tuning, one for vanilla fine-tuning and the other for",
+        "suffix": ". The former is to fine-tune the model on each individual downstream task. The l",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "multi-task fine-tuning",
+        "start_char_doc": 12890,
+        "end_char_doc": 12912,
+        "prefix": "explore two ways of fine-tuning, one for vanilla fine-tuning and the other for",
+        "suffix": ". The former is to fine-tune the model on each individual downstream task. The l",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "First fine-tunes on related or similar intermediate table tasks, then continues on the target task.",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:solvesTask": [
+        {
+          "@id": "task:table_question_answering"
+        },
+        {
+          "@id": "task:table_fact_verification"
+        }
+      ],
+      "mls:usesDataset": [],
+      "mls:implementedBy": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "method:sql_to_nl_pretraining_comparison",
+      "@type": "mls:Method",
+      "mention": {
+        "start_char_doc": 71427,
+        "end_char_doc": 71442,
+        "prefix": "s of a SQL query. In this experiment, we follow Zhong et al. (2020a) to train a",
+        "suffix": "and employ the model to translate SQL queries from the pre-training corpus into",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "SQL-to-NL model",
+        "start_char_doc": 71427,
+        "end_char_doc": 71442,
+        "prefix": "s of a SQL query. In this experiment, we follow Zhong et al. (2020a) to train a",
+        "suffix": "and employ the model to translate SQL queries from the pre-training corpus into",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "Translates SQL queries into natural language for a comparison pre-training corpus.",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:solvesTask": [
+        {
+          "@id": "task:table_pretraining"
+        }
+      ],
+      "mls:usesDataset": [
+        {
+          "@id": "dataset:squall"
+        }
+      ],
+      "mls:implementedBy": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "algo:sql_template_instantiation",
+      "@type": "mls:Algorithm",
+      "mention": {
+        "start_char_doc": 20250,
+        "end_char_doc": 20290,
+        "prefix": "th respect to the column text₁. Given a SQL template, at each instantiation, we",
+        "suffix": "from a sampled table to fill the template, forming a concrete SQL query. Notabl",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "SQL template instantiation",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:description": {
+        "value": "Given a SQL template, headers and cell values are uniformly sampled from a table to form concrete SQL queries.",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:partOf": {
+        "@id": "method:synthetic_sql_query_sampling"
+      }
+    },
+    {
+      "@id": "model:tapex",
+      "@type": "mls:MLS_Model",
+      "mention": {
+        "start_char_doc": 57,
+        "end_char_doc": 62,
+        "prefix": "## Page 1  Published as a conference paper at ICLR 2022",
+        "suffix": ": TABLE PRE-TRAINING VIA LEARNING A NEURAL SQL EXECUTOR  Qian Liu†*, Bei Chen§,",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "TAPEX",
+        "start_char_doc": 57,
+        "end_char_doc": 62,
+        "prefix": "## Page 1  Published as a conference paper at ICLR 2022",
+        "suffix": ": TABLE PRE-TRAINING VIA LEARNING A NEURAL SQL EXECUTOR  Qian Liu†*, Bei Chen§,",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "Execution-centric table pre-trained encoder-decoder model using BART as backbone.",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasHyperParameter": [
+        {
+          "@id": "hp:pretraining_steps_50000"
+        },
+        {
+          "@id": "hp:pretraining_batch_size_256"
+        },
+        {
+          "@id": "hp:learning_rate_3e_5"
+        }
+      ],
+      "mls:baseModel": {
+        "@id": "model:bart_large"
+      },
+      "mls:hasEvaluation": [
+        {
+          "@id": "eval:wikisql_weak_test"
+        },
+        {
+          "@id": "eval:wikisql_weak_dev"
+        },
+        {
+          "@id": "eval:wikitablequestions_test"
+        },
+        {
+          "@id": "eval:wikitablequestions_dev"
+        },
+        {
+          "@id": "eval:sqa_test_sentence"
+        },
+        {
+          "@id": "eval:sqa_test_conversation"
+        },
+        {
+          "@id": "eval:tabfact_test"
+        },
+        {
+          "@id": "eval:tabfact_dev"
+        },
+        {
+          "@id": "eval:tabfact_test_simple"
+        },
+        {
+          "@id": "eval:tabfact_test_complex"
+        },
+        {
+          "@id": "eval:tabfact_test_small"
+        },
+        {
+          "@id": "eval:sql_execution_heldout"
+        },
+        {
+          "@id": "eval:operator_select"
+        },
+        {
+          "@id": "eval:operator_filter"
+        },
+        {
+          "@id": "eval:operator_aggregate"
+        },
+        {
+          "@id": "eval:nl_corpus_wtq_dev"
+        },
+        {
+          "@id": "eval:sql_corpus_wtq_dev"
+        }
+      ]
+    },
+    {
+      "@id": "model:bart_large",
+      "@type": "mls:MLS_Model",
+      "mention": {
+        "start_char_doc": 10592,
+        "end_char_doc": 10601,
+        "prefix": "en optimizing a reconstruction loss. As for the number of layers, we employ the",
+        "suffix": "configuration in our experiments, i.e., 12 layers are used in both the encoder",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "BARTLarge",
+        "start_char_doc": 10592,
+        "end_char_doc": 10601,
+        "prefix": "en optimizing a reconstruction loss. As for the number of layers, we employ the",
+        "suffix": "configuration in our experiments, i.e., 12 layers are used in both the encoder",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "BART large configuration with 12 encoder and 12 decoder layers.",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasHyperParameter": [
+        {
+          "@id": "hp:bart_large_encoder_layers_12"
+        },
+        {
+          "@id": "hp:bart_large_decoder_layers_12"
+        }
+      ]
+    },
+    {
+      "@id": "model:sql_to_nl_bart_large",
+      "@type": "mls:MLS_Model",
+      "mention": {
+        "start_char_doc": 71427,
+        "end_char_doc": 71442,
+        "prefix": "s of a SQL query. In this experiment, we follow Zhong et al. (2020a) to train a",
+        "suffix": "and employ the model to translate SQL queries from the pre-training corpus into",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "SQL-to-NL model",
+        "start_char_doc": 71427,
+        "end_char_doc": 71442,
+        "prefix": "s of a SQL query. In this experiment, we follow Zhong et al. (2020a) to train a",
+        "suffix": "and employ the model to translate SQL queries from the pre-training corpus into",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "BART-Large model trained on SQUALL SQL-NL pairs for natural language corpus generation.",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasHyperParameter": [],
+      "mls:baseModel": {
+        "@id": "model:bart_large"
+      }
+    },
+    {
+      "@id": "dataset:tapex_synthetic_sql_execution_corpus",
+      "@type": "mls:MLS_Dataset",
+      "mention": {
+        "start_char_doc": 830,
+        "end_char_doc": 846,
+        "prefix": "hat table pre-training can be achieved by learning a neural SQL executor over a",
+        "suffix": ", which is obtained by automatically synthesizing executable SQL queries and the",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "TAPEX synthetic SQL execution corpus",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:description": {
+        "value": "Synthetic corpus of SQL queries and execution outputs used for table pre-training.",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:size": {
+        "value": "5 million pairs",
+        "start_char_doc": 21884,
+        "end_char_doc": 21899,
+        "prefix": "h based on fairseq (Ott et al., 2019). During pre-training, we synthesize up to",
+        "suffix": "of SQL queries and their execution results for  &lt;page_number&gt;5&lt;/page_n",
+        "valueSource": "extracted"
+      },
+      "mls:usedForTask": [
+        {
+          "@id": "task:sql_execution_pretraining"
+        }
+      ],
+      "mls:generatedBy": {
+        "@id": "method:synthetic_sql_query_sampling"
+      },
+      "mls:derivedFrom": [
+        {
+          "@id": "datasource:wikitablequestions_training_tables"
+        },
+        {
+          "@id": "datasource:sql_templates_from_squall"
+        },
+        {
+          "@id": "datasource:mysql_executor"
+        }
+      ]
+    },
+    {
+      "@id": "dataset:wikisql_weak",
+      "@type": "mls:MLS_Dataset",
+      "mention": {
+        "start_char_doc": 17173,
+        "end_char_doc": 17185,
+        "prefix": ">89.5</b></td>     </tr>   </tbody> </table>  Table 1: Denotation accuracies on",
+        "suffix": ". *Execution-Guided Decoding* is proposed to leverage execution results of SQL q",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "WIKISQL-WEAK",
+        "start_char_doc": 17173,
+        "end_char_doc": 17185,
+        "prefix": ">89.5</b></td>     </tr>   </tbody> </table>  Table 1: Denotation accuracies on",
+        "suffix": ". *Execution-Guided Decoding* is proposed to leverage execution results of SQL q",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "Weakly-supervised WikiSQL benchmark used for TableQA evaluation.",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:size": {
+        "value": "80,654 sentences; 24,241 tables",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:usedForTask": [
+        {
+          "@id": "task:table_question_answering"
+        }
+      ]
+    },
+    {
+      "@id": "dataset:wikitablequestions",
+      "@type": "mls:MLS_Dataset",
+      "mention": {
+        "start_char_doc": 6969,
+        "end_char_doc": 6987,
+        "prefix": "s. For example, TAPEX obtains an absolute improvement of 19.5% over BART in the",
+        "suffix": "dataset. Furthermore, TAPEX yields strong results even with a small pre-trainin",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "WIKITABLEQUESTIONS",
+        "start_char_doc": 6969,
+        "end_char_doc": 6987,
+        "prefix": "s. For example, TAPEX obtains an absolute improvement of 19.5% over BART in the",
+        "suffix": "dataset. Furthermore, TAPEX yields strong results even with a small pre-trainin",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "Complex table question answering benchmark and source of pre-training tables.",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:size": {
+        "value": "22,033 sentences; 2,108 tables",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:usedForTask": [
+        {
+          "@id": "task:table_question_answering"
+        }
+      ]
+    },
+    {
+      "@id": "dataset:sqa",
+      "@type": "mls:MLS_Dataset",
+      "mention": {
+        "start_char_doc": 1490,
+        "end_char_doc": 1493,
+        "prefix": "89.5% (+2.3%), the WikiTableQuestions denotation accuracy to 57.5% (+4.8%), the",
+        "suffix": "denotation accuracy to 74.5% (+3.5%), and the TabFact accuracy to 84.2% (+3.2%)",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "SQA",
+        "start_char_doc": 1490,
+        "end_char_doc": 1493,
+        "prefix": "89.5% (+2.3%), the WikiTableQuestions denotation accuracy to 57.5% (+4.8%), the",
+        "suffix": "denotation accuracy to 74.5% (+3.5%), and the TabFact accuracy to 84.2% (+3.2%)",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "Conversational table question answering benchmark.",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:size": {
+        "value": "17,553 sentences; 982 tables",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:usedForTask": [
+        {
+          "@id": "task:table_question_answering"
+        }
+      ]
+    },
+    {
+      "@id": "dataset:tabfact",
+      "@type": "mls:MLS_Dataset",
+      "mention": {
+        "start_char_doc": 20923,
+        "end_char_doc": 20930,
+        "prefix": "017), WIKITABLEQUESTIONS (Pasupat & Liang, 2015), SQA (Iyyer et al., 2017), and",
+        "suffix": "(Chen et al., 2020). Compared to WIKISQL-WEAK, which only requires filtering an",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "TABFACT",
+        "start_char_doc": 20923,
+        "end_char_doc": 20930,
+        "prefix": "017), WIKITABLEQUESTIONS (Pasupat & Liang, 2015), SQA (Iyyer et al., 2017), and",
+        "suffix": "(Chen et al., 2020). Compared to WIKISQL-WEAK, which only requires filtering an",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "Table-based fact verification benchmark.",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:size": {
+        "value": "118,275 sentences; 16,573 tables",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:usedForTask": [
+        {
+          "@id": "task:table_fact_verification"
+        }
+      ]
+    },
+    {
+      "@id": "dataset:squall",
+      "@type": "mls:MLS_Dataset",
+      "mention": {
+        "start_char_doc": 19946,
+        "end_char_doc": 19952,
+        "prefix": "we follow the latter, where SQL templates are automatically extracted from the",
+        "suffix": "dataset (Shi et al., 2020b). An example SQL template is: SELECT num₁ WHERE text",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "SQUALL",
+        "start_char_doc": 19946,
+        "end_char_doc": 19952,
+        "prefix": "we follow the latter, where SQL templates are automatically extracted from the",
+        "suffix": "dataset (Shi et al., 2020b). An example SQL template is: SELECT num₁ WHERE text",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "Dataset supplying SQL templates and SQL-NL pairs.",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:size": {
+        "value": "nearly 9,000 SQL-NL pairs",
+        "start_char_doc": 71683,
+        "end_char_doc": 71708,
+        "prefix": "l., 2020) and trained on the SQUALL dataset (Shi et al., 2020b), which contains",
+        "suffix": ". Then we apply the well-trained SQL-to-NL model to the pre-training corpus of T",
+        "valueSource": "extracted"
+      },
+      "mls:usedForTask": []
+    },
+    {
+      "@id": "dataset:nl_pretraining_corpus_05m",
+      "@type": "mls:MLS_Dataset",
+      "mention": {
+        "start_char_doc": 71820,
+        "end_char_doc": 71842,
+        "prefix": "SQL-to-NL model to the pre-training corpus of TAPEX (0.5 Million) and obtain a",
+        "suffix": "of the same size. By manually analyzing 100 sampled translated NL sentences, we",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "NL pre-training corpus",
+        "start_char_doc": 71820,
+        "end_char_doc": 71842,
+        "prefix": "SQL-to-NL model to the pre-training corpus of TAPEX (0.5 Million) and obtain a",
+        "suffix": "of the same size. By manually analyzing 100 sampled translated NL sentences, we",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "Natural-language corpus translated from 0.5M TAPEX SQL examples for comparison.",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:size": {
+        "value": "0.5 Million",
+        "start_char_doc": 69647,
+        "end_char_doc": 69658,
+        "prefix": "sets) at different pre-training difficulties with the same amount of examples (",
+        "suffix": "). ≤ Medium means that we only use SQL query templates with a difficulty level l",
+        "valueSource": "extracted"
+      },
+      "mls:usedForTask": [],
+      "mls:generatedBy": {
+        "@id": "method:sql_to_nl_pretraining_comparison"
+      }
+    },
+    {
+      "@id": "datasource:wikitablequestions_training_tables",
+      "@type": "mls:DataSource",
+      "mention": {
+        "start_char_doc": 19265,
+        "end_char_doc": 19299,
+        "prefix": "g public datasets. Concretely, we randomly select nearly 1, 500 tables from the",
+        "suffix": "(Pasupat & Liang, 2015) as the table source for our pre-training corpus. Notice",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "WIKITABLEQUESTIONS training set tables",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:description": {
+        "value": "Public high-quality tables selected from WIKITABLEQUESTIONS training set.",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:url": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "datasource:sql_templates_from_squall",
+      "@type": "mls:DataSource",
+      "mention": {
+        "start_char_doc": 19895,
+        "end_char_doc": 19960,
+        "prefix": "t tables (Zhong et al., 2020a). In our experiments, we follow the latter, where",
+        "suffix": "(Shi et al., 2020b). An example SQL template is: SELECT num₁ WHERE text₁ = val₁",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "SQL templates from SQUALL",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:description": {
+        "value": "SQL templates automatically extracted from SQUALL.",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:url": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "datasource:mysql_executor",
+      "@type": "mls:DataSource",
+      "mention": {
+        "start_char_doc": 15284,
+        "end_char_doc": 15289,
+        "prefix": "tains the query’s execution result through an off-the-shelf SQL executor (e.g.,",
+        "suffix": ") to serve as the supervision for the model decoder. Intuitively, the pre-traini",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "MySQL",
+        "start_char_doc": 15284,
+        "end_char_doc": 15289,
+        "prefix": "tains the query’s execution result through an off-the-shelf SQL executor (e.g.,",
+        "suffix": ") to serve as the supervision for the model decoder. Intuitively, the pre-traini",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "Off-the-shelf SQL executor used to obtain execution result supervision.",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:url": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "datasource:forward_sql_parser",
+      "@type": "mls:DataSource",
+      "mention": {
+        "start_char_doc": 69359,
+        "end_char_doc": 69396,
+        "prefix": "l SQL queries in pre-training even slightly hurts the performance.  <sup>2</sup>",
+        "suffix": "&lt;page_number&gt;16&lt;/page_number&gt;  ---   ## Page 17  Published as a co",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "forward/sql-parser",
+        "start_char_doc": 69378,
+        "end_char_doc": 69396,
+        "prefix": "e-training even slightly hurts the performance.  <sup>2</sup>https://github.com/",
+        "suffix": "&lt;page_number&gt;16&lt;/page_number&gt;  ---   ## Page 17  Published as a co",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "SQL parser used to obtain SQL elements for difficulty analysis.",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:url": {
+        "value": "https://github.com/forward/sql-parser",
+        "start_char_doc": 69359,
+        "end_char_doc": 69396,
+        "prefix": "l SQL queries in pre-training even slightly hurts the performance.  <sup>2</sup>",
+        "suffix": "&lt;page_number&gt;16&lt;/page_number&gt;  ---   ## Page 17  Published as a co",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "repo:microsoft_table_pretraining",
+      "@type": "mls:SoftwareRepository",
+      "mention": {
+        "start_char_doc": 1778,
+        "end_char_doc": 1824,
+        "prefix": "state-of-the-art results on various downstream tasks. Our code can be found at",
+        "suffix": ".  1 INTRODUCTION  Pre-trained language models (LMs) such as BERT (Devlin et al.",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "microsoft/Table-Pretraining",
+        "start_char_doc": 1797,
+        "end_char_doc": 1824,
+        "prefix": "esults on various downstream tasks. Our code can be found at https://github.com/",
+        "suffix": ".  1 INTRODUCTION  Pre-trained language models (LMs) such as BERT (Devlin et al.",
+        "valueSource": "extracted"
+      },
+      "mls:url": {
+        "value": "https://github.com/microsoft/Table-Pretraining",
+        "start_char_doc": 1778,
+        "end_char_doc": 1824,
+        "prefix": "state-of-the-art results on various downstream tasks. Our code can be found at",
+        "suffix": ".  1 INTRODUCTION  Pre-trained language models (LMs) such as BERT (Devlin et al.",
+        "valueSource": "extracted"
+      },
+      "mls:hostsImplementation": {
+        "@id": "impl:tapex_fairseq"
+      }
+    },
+    {
+      "@id": "impl:tapex_fairseq",
+      "@type": "mls:MLS_Implementation",
+      "mention": {
+        "start_char_doc": 21815,
+        "end_char_doc": 21822,
+        "prefix": "rect prediction.  **Implementation Details** We implement our approach based on",
+        "suffix": "(Ott et al., 2019). During pre-training, we synthesize up to 5 million pairs of",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "TAPEX fairseq implementation",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:framework": {
+        "value": "fairseq",
+        "start_char_doc": 21815,
+        "end_char_doc": 21822,
+        "prefix": "rect prediction.  **Implementation Details** We implement our approach based on",
+        "suffix": "(Ott et al., 2019). During pre-training, we synthesize up to 5 million pairs of",
+        "valueSource": "extracted"
+      },
+      "mls:repository": {
+        "@id": "repo:microsoft_table_pretraining"
+      },
+      "mls:implements": [
+        {
+          "@id": "method:tapex"
+        },
+        {
+          "@id": "model:tapex"
+        }
+      ],
+      "mls:usesEnvironment": {
+        "@id": "env:8_tesla_v100"
+      },
+      "mls:hasDependency": [
+        {
+          "@id": "dep:fairseq"
+        },
+        {
+          "@id": "dep:mysql"
+        },
+        {
+          "@id": "dep:sql_parser"
+        }
+      ]
+    },
+    {
+      "@id": "dep:fairseq",
+      "@type": "mls:Dependency",
+      "mention": {
+        "start_char_doc": 21815,
+        "end_char_doc": 21822,
+        "prefix": "rect prediction.  **Implementation Details** We implement our approach based on",
+        "suffix": "(Ott et al., 2019). During pre-training, we synthesize up to 5 million pairs of",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "fairseq",
+        "start_char_doc": 21815,
+        "end_char_doc": 21822,
+        "prefix": "rect prediction.  **Implementation Details** We implement our approach based on",
+        "suffix": "(Ott et al., 2019). During pre-training, we synthesize up to 5 million pairs of",
+        "valueSource": "extracted"
+      },
+      "mls:version": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:url": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "dep:mysql",
+      "@type": "mls:Dependency",
+      "mention": {
+        "start_char_doc": 15284,
+        "end_char_doc": 15289,
+        "prefix": "tains the query’s execution result through an off-the-shelf SQL executor (e.g.,",
+        "suffix": ") to serve as the supervision for the model decoder. Intuitively, the pre-traini",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "MySQL",
+        "start_char_doc": 15284,
+        "end_char_doc": 15289,
+        "prefix": "tains the query’s execution result through an off-the-shelf SQL executor (e.g.,",
+        "suffix": ") to serve as the supervision for the model decoder. Intuitively, the pre-traini",
+        "valueSource": "extracted"
+      },
+      "mls:version": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:url": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "dep:sql_parser",
+      "@type": "mls:Dependency",
+      "mention": {
+        "start_char_doc": 69359,
+        "end_char_doc": 69396,
+        "prefix": "l SQL queries in pre-training even slightly hurts the performance.  <sup>2</sup>",
+        "suffix": "&lt;page_number&gt;16&lt;/page_number&gt;  ---   ## Page 17  Published as a co",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "forward/sql-parser",
+        "start_char_doc": 69378,
+        "end_char_doc": 69396,
+        "prefix": "e-training even slightly hurts the performance.  <sup>2</sup>https://github.com/",
+        "suffix": "&lt;page_number&gt;16&lt;/page_number&gt;  ---   ## Page 17  Published as a co",
+        "valueSource": "extracted"
+      },
+      "mls:version": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:url": {
+        "value": "https://github.com/forward/sql-parser",
+        "start_char_doc": 69359,
+        "end_char_doc": 69396,
+        "prefix": "l SQL queries in pre-training even slightly hurts the performance.  <sup>2</sup>",
+        "suffix": "&lt;page_number&gt;16&lt;/page_number&gt;  ---   ## Page 17  Published as a co",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "env:8_tesla_v100",
+      "@type": "mls:Environment",
+      "mention": {
+        "start_char_doc": 26471,
+        "end_char_doc": 26488,
+        "prefix": "re runs up to 50,000 steps with a batch size of 256. It takes about 36 hours on",
+        "suffix": "to finish the pre-training. The best pre-training checkpoint is selected based",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "8 Tesla V100 GPUs",
+        "start_char_doc": 26471,
+        "end_char_doc": 26488,
+        "prefix": "re runs up to 50,000 steps with a batch size of 256. It takes about 36 hours on",
+        "suffix": "to finish the pre-training. The best pre-training checkpoint is selected based",
+        "valueSource": "extracted"
+      },
+      "mls:hardware": {
+        "value": "8 Tesla V100 GPUs",
+        "start_char_doc": 26471,
+        "end_char_doc": 26488,
+        "prefix": "re runs up to 50,000 steps with a batch size of 256. It takes about 36 hours on",
+        "suffix": "to finish the pre-training. The best pre-training checkpoint is selected based",
+        "valueSource": "extracted"
+      },
+      "mls:trainingDuration": {
+        "value": "36 hours",
+        "start_char_doc": 26459,
+        "end_char_doc": 26467,
+        "prefix": "ning procedure runs up to 50,000 steps with a batch size of 256. It takes about",
+        "suffix": "on 8 Tesla V100 GPUs to finish the pre-training. The best pre-training checkpoi",
+        "valueSource": "extracted"
+      },
+      "mls:softwareFramework": {
+        "@id": "dep:fairseq"
+      }
+    },
+    {
+      "@id": "step:select_wtq_tables",
+      "@type": "mls:DataProcessingStep",
+      "mention": {
+        "start_char_doc": 19219,
+        "end_char_doc": 19299,
+        "prefix": "we pick high-quality tables right from existing public datasets. Concretely, we",
+        "suffix": "(Pasupat & Liang, 2015) as the table source for our pre-training corpus. Notice",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "select nearly 1,500 WTQ tables",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:description": {
+        "value": "randomly select nearly 1, 500 tables from the training set of WIKITABLEQUESTIONS",
+        "start_char_doc": 19219,
+        "end_char_doc": 19299,
+        "prefix": "we pick high-quality tables right from existing public datasets. Concretely, we",
+        "suffix": "(Pasupat & Liang, 2015) as the table source for our pre-training corpus. Notice",
+        "valueSource": "extracted"
+      },
+      "mls:input": [
+        {
+          "@id": "datasource:wikitablequestions_training_tables"
+        }
+      ],
+      "mls:output": [
+        {
+          "@id": "dataset:tapex_synthetic_sql_execution_corpus"
+        }
+      ]
+    },
+    {
+      "@id": "step:extract_squall_templates",
+      "@type": "mls:DataProcessingStep",
+      "mention": {
+        "start_char_doc": 19895,
+        "end_char_doc": 19960,
+        "prefix": "t tables (Zhong et al., 2020a). In our experiments, we follow the latter, where",
+        "suffix": "(Shi et al., 2020b). An example SQL template is: SELECT num₁ WHERE text₁ = val₁",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "extract SQL templates",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:description": {
+        "value": "SQL templates are automatically extracted from the SQUALL dataset",
+        "start_char_doc": 19895,
+        "end_char_doc": 19960,
+        "prefix": "t tables (Zhong et al., 2020a). In our experiments, we follow the latter, where",
+        "suffix": "(Shi et al., 2020b). An example SQL template is: SELECT num₁ WHERE text₁ = val₁",
+        "valueSource": "extracted"
+      },
+      "mls:input": [
+        {
+          "@id": "datasource:sql_templates_from_squall"
+        }
+      ],
+      "mls:output": [
+        {
+          "@id": "dataset:tapex_synthetic_sql_execution_corpus"
+        }
+      ]
+    },
+    {
+      "@id": "step:instantiate_sql_queries",
+      "@type": "mls:DataProcessingStep",
+      "mention": {
+        "start_char_doc": 20250,
+        "end_char_doc": 20332,
+        "prefix": "th respect to the column text₁. Given a SQL template, at each instantiation, we",
+        "suffix": ", forming a concrete SQL query. Notably, SQL queries that execute with empty res",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "instantiate SQL queries",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:description": {
+        "value": "uniformly sample headers and cell values from a sampled table to fill the template",
+        "start_char_doc": 20250,
+        "end_char_doc": 20332,
+        "prefix": "th respect to the column text₁. Given a SQL template, at each instantiation, we",
+        "suffix": ", forming a concrete SQL query. Notably, SQL queries that execute with empty res",
+        "valueSource": "extracted"
+      },
+      "mls:input": [
+        {
+          "@id": "dataset:wikitablequestions"
+        },
+        {
+          "@id": "dataset:squall"
+        }
+      ],
+      "mls:output": [
+        {
+          "@id": "dataset:tapex_synthetic_sql_execution_corpus"
+        }
+      ]
+    },
+    {
+      "@id": "step:discard_empty_results",
+      "@type": "mls:DataProcessingStep",
+      "mention": {
+        "start_char_doc": 20373,
+        "end_char_doc": 20430,
+        "prefix": "om a sampled table to fill the template, forming a concrete SQL query. Notably,",
+        "suffix": ", because empty results do not reflect much information about the executability",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "discard empty execution results",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:description": {
+        "value": "SQL queries that execute with empty results are discarded",
+        "start_char_doc": 20373,
+        "end_char_doc": 20430,
+        "prefix": "om a sampled table to fill the template, forming a concrete SQL query. Notably,",
+        "suffix": ", because empty results do not reflect much information about the executability",
+        "valueSource": "extracted"
+      },
+      "mls:input": [
+        {
+          "@id": "dataset:tapex_synthetic_sql_execution_corpus"
+        }
+      ],
+      "mls:output": [
+        {
+          "@id": "dataset:tapex_synthetic_sql_execution_corpus"
+        }
+      ]
+    },
+    {
+      "@id": "step:flatten_tables",
+      "@type": "mls:DataProcessingStep",
+      "mention": {
+        "start_char_doc": 10959,
+        "end_char_doc": 10992,
+        "prefix": "e table is non-trivial since it exhibits underlying structures. In practice, we",
+        "suffix": "so that it can be fed directly into the model. By inserting several special tok",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "flatten tables",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:description": {
+        "value": "flatten the table into a sequence",
+        "start_char_doc": 10959,
+        "end_char_doc": 10992,
+        "prefix": "e table is non-trivial since it exhibits underlying structures. In practice, we",
+        "suffix": "so that it can be fed directly into the model. By inserting several special tok",
+        "valueSource": "extracted"
+      },
+      "mls:input": [
+        {
+          "@id": "dataset:wikisql_weak"
+        },
+        {
+          "@id": "dataset:wikitablequestions"
+        },
+        {
+          "@id": "dataset:sqa"
+        },
+        {
+          "@id": "dataset:tabfact"
+        }
+      ],
+      "mls:output": []
+    },
+    {
+      "@id": "step:translate_sql_to_nl",
+      "@type": "mls:DataProcessingStep",
+      "mention": {
+        "start_char_doc": 71467,
+        "end_char_doc": 71535,
+        "prefix": "follow Zhong et al. (2020a) to train a SQL-to-NL model and employ the model to",
+        "suffix": ". Concretely, our SQL-to-NL model is based on BART-Large (Lewis et al., 2020) an",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "translate SQL queries into NL sentences",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:description": {
+        "value": "translate SQL queries from the pre-training corpus into NL sentences",
+        "start_char_doc": 71467,
+        "end_char_doc": 71535,
+        "prefix": "follow Zhong et al. (2020a) to train a SQL-to-NL model and employ the model to",
+        "suffix": ". Concretely, our SQL-to-NL model is based on BART-Large (Lewis et al., 2020) an",
+        "valueSource": "extracted"
+      },
+      "mls:input": [
+        {
+          "@id": "dataset:tapex_synthetic_sql_execution_corpus"
+        },
+        {
+          "@id": "dataset:squall"
+        }
+      ],
+      "mls:output": [
+        {
+          "@id": "dataset:nl_pretraining_corpus_05m"
+        }
+      ]
+    },
+    {
+      "@id": "hp:pretraining_corpus_size_5m",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 21843,
+        "end_char_doc": 21942,
+        "prefix": "tation Details** We implement our approach based on fairseq (Ott et al., 2019).",
+        "suffix": "for  &lt;page_number&gt;5&lt;/page_number&gt;  ---   ## Page 6  Published as a",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Pre-training corpus size",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hpCategory": {
+        "value": "HP_Data",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hpType": {
+        "value": "CorpusSize",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:value": {
+        "value": "5 million",
+        "start_char_doc": 21884,
+        "end_char_doc": 21893,
+        "prefix": "h based on fairseq (Ott et al., 2019). During pre-training, we synthesize up to",
+        "suffix": "pairs of SQL queries and their execution results for  &lt;page_number&gt;5&lt;/",
+        "valueSource": "extracted"
+      },
+      "mls:unit": {
+        "value": "examples",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:appliesTo": {
+        "@id": "exp:pretraining"
+      }
+    },
+    {
+      "@id": "hp:pretraining_table_source_1500",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 19235,
+        "end_char_doc": 19255,
+        "prefix": "lity tables right from existing public datasets. Concretely, we randomly select",
+        "suffix": "from the training set of WIKITABLEQUESTIONS (Pasupat & Liang, 2015) as the tabl",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Pre-training table source size",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hpCategory": {
+        "value": "HP_Data",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hpType": {
+        "value": "NumTables",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:value": {
+        "value": "1, 500",
+        "start_char_doc": 19242,
+        "end_char_doc": 19248,
+        "prefix": "bles right from existing public datasets. Concretely, we randomly select nearly",
+        "suffix": "tables from the training set of WIKITABLEQUESTIONS (Pasupat & Liang, 2015) as t",
+        "valueSource": "extracted"
+      },
+      "mls:unit": {
+        "value": "tables",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:appliesTo": {
+        "@id": "exp:pretraining"
+      }
+    },
+    {
+      "@id": "hp:pretraining_steps_50000",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 26405,
+        "end_char_doc": 26417,
+        "prefix": "lt evaluated under the 5 million setting. Our pre-training procedure runs up to",
+        "suffix": "with a batch size of 256. It takes about 36 hours on 8 Tesla V100 GPUs to finis",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Pre-training steps",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hpCategory": {
+        "value": "HP_Training",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hpType": {
+        "value": "MaxSteps",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:value": {
+        "value": "50,000",
+        "start_char_doc": 26405,
+        "end_char_doc": 26411,
+        "prefix": "lt evaluated under the 5 million setting. Our pre-training procedure runs up to",
+        "suffix": "steps with a batch size of 256. It takes about 36 hours on 8 Tesla V100 GPUs to",
+        "valueSource": "extracted"
+      },
+      "mls:unit": {
+        "value": "steps",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:appliesTo": {
+        "@id": "exp:pretraining"
+      }
+    },
+    {
+      "@id": "hp:pretraining_batch_size_256",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 26425,
+        "end_char_doc": 26442,
+        "prefix": "he 5 million setting. Our pre-training procedure runs up to 50,000 steps with a",
+        "suffix": ". It takes about 36 hours on 8 Tesla V100 GPUs to finish the pre-training. The b",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Pre-training batch size",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hpCategory": {
+        "value": "HP_Training",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hpType": {
+        "value": "BatchSize",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:value": {
+        "value": "256",
+        "start_char_doc": 26439,
+        "end_char_doc": 26442,
+        "prefix": "etting. Our pre-training procedure runs up to 50,000 steps with a batch size of",
+        "suffix": ". It takes about 36 hours on 8 Tesla V100 GPUs to finish the pre-training. The b",
+        "valueSource": "extracted"
+      },
+      "mls:unit": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:appliesTo": {
+        "@id": "exp:pretraining"
+      }
+    },
+    {
+      "@id": "hp:finetuning_steps_20000",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 26669,
+        "end_char_doc": 26681,
+        "prefix": "lidation set. For all downstream datasets, the fine-tuning procedure runs up to",
+        "suffix": "with a batch size of 128. For both pre-training and fine-tuning, the learning r",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Fine-tuning steps",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hpCategory": {
+        "value": "HP_Training",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hpType": {
+        "value": "MaxSteps",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:value": {
+        "value": "20,000",
+        "start_char_doc": 26669,
+        "end_char_doc": 26675,
+        "prefix": "lidation set. For all downstream datasets, the fine-tuning procedure runs up to",
+        "suffix": "steps with a batch size of 128. For both pre-training and fine-tuning, the lear",
+        "valueSource": "extracted"
+      },
+      "mls:unit": {
+        "value": "steps",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:appliesTo": {
+        "@id": "exp:main_downstream_evaluation"
+      }
+    },
+    {
+      "@id": "hp:finetuning_batch_size_128",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 26689,
+        "end_char_doc": 26706,
+        "prefix": "l downstream datasets, the fine-tuning procedure runs up to 20,000 steps with a",
+        "suffix": ". For both pre-training and fine-tuning, the learning rate is 3×10⁻⁵.  4.1 MAIN",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Fine-tuning batch size",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hpCategory": {
+        "value": "HP_Training",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hpType": {
+        "value": "BatchSize",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:value": {
+        "value": "128",
+        "start_char_doc": 26703,
+        "end_char_doc": 26706,
+        "prefix": "atasets, the fine-tuning procedure runs up to 20,000 steps with a batch size of",
+        "suffix": ". For both pre-training and fine-tuning, the learning rate is 3×10⁻⁵.  4.1 MAIN",
+        "valueSource": "extracted"
+      },
+      "mls:unit": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:appliesTo": {
+        "@id": "exp:main_downstream_evaluation"
+      }
+    },
+    {
+      "@id": "hp:learning_rate_3e_5",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 26768,
+        "end_char_doc": 26774,
+        "prefix": "batch size of 128. For both pre-training and fine-tuning, the learning rate is",
+        "suffix": ".  4.1 MAIN RESULTS  Table 1, Table 2, Table 3 and Table 4 summarize the experim",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Learning rate",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hpCategory": {
+        "value": "HP_Optimization",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hpType": {
+        "value": "LearningRate",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:value": {
+        "value": "3×10⁻⁵",
+        "start_char_doc": 26768,
+        "end_char_doc": 26774,
+        "prefix": "batch size of 128. For both pre-training and fine-tuning, the learning rate is",
+        "suffix": ".  4.1 MAIN RESULTS  Table 1, Table 2, Table 3 and Table 4 summarize the experim",
+        "valueSource": "extracted"
+      },
+      "mls:unit": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:appliesTo": {
+        "@id": "exp:pretraining"
+      }
+    },
+    {
+      "@id": "hp:bart_large_encoder_layers_12",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 10642,
+        "end_char_doc": 10696,
+        "prefix": "mber of layers, we employ the BARTLarge configuration in our experiments, i.e.,",
+        "suffix": ".  **Model Input** As illustrated in Figure 2, the input contains an NL sentence",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "BARTLarge encoder layers",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hpCategory": {
+        "value": "HP_Architecture",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hpType": {
+        "value": "NumLayers",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:value": {
+        "value": "12",
+        "start_char_doc": 10642,
+        "end_char_doc": 10644,
+        "prefix": "mber of layers, we employ the BARTLarge configuration in our experiments, i.e.,",
+        "suffix": "layers are used in both the encoder and the decoder.  **Model Input** As illust",
+        "valueSource": "extracted"
+      },
+      "mls:unit": {
+        "value": "layers",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:appliesTo": {
+        "@id": "model:bart_large"
+      }
+    },
+    {
+      "@id": "hp:bart_large_decoder_layers_12",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 10642,
+        "end_char_doc": 10696,
+        "prefix": "mber of layers, we employ the BARTLarge configuration in our experiments, i.e.,",
+        "suffix": ".  **Model Input** As illustrated in Figure 2, the input contains an NL sentence",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "BARTLarge decoder layers",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hpCategory": {
+        "value": "HP_Architecture",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hpType": {
+        "value": "NumLayers",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:value": {
+        "value": "12",
+        "start_char_doc": 10642,
+        "end_char_doc": 10644,
+        "prefix": "mber of layers, we employ the BARTLarge configuration in our experiments, i.e.,",
+        "suffix": "layers are used in both the encoder and the decoder.  **Model Input** As illust",
+        "valueSource": "extracted"
+      },
+      "mls:unit": {
+        "value": "layers",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:appliesTo": {
+        "@id": "model:bart_large"
+      }
+    },
+    {
+      "@id": "hp:main_results_random_runs_5",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 27050,
+        "end_char_doc": 27066,
+        "prefix": "test sets of all datasets, we report the median performance of our approach for",
+        "suffix": ".  **WIKISQL-WEAK** As shown in Table 1, TAPEX outperforms all the baselines by",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Random runs for main results",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hpCategory": {
+        "value": "HP_Training",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hpType": {
+        "value": "NumRuns",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:value": {
+        "value": "five",
+        "start_char_doc": 27050,
+        "end_char_doc": 27054,
+        "prefix": "test sets of all datasets, we report the median performance of our approach for",
+        "suffix": "random runs.  **WIKISQL-WEAK** As shown in Table 1, TAPEX outperforms all the b",
+        "valueSource": "extracted"
+      },
+      "mls:unit": {
+        "value": "runs",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:appliesTo": {
+        "@id": "exp:main_downstream_evaluation"
+      }
+    },
+    {
+      "@id": "hp:sql_execution_heldout_queries_20000",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 30721,
+        "end_char_doc": 30748,
+        "prefix": "performs SQL execution after pre-training, we analyze its performance on nearly",
+        "suffix": "over unseen tables. Overall, the SQL execution accuracy is relatively high, as",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Held-out SQL execution queries",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hpCategory": {
+        "value": "HP_Data",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hpType": {
+        "value": "EvalSetSize",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:value": {
+        "value": "20,000",
+        "start_char_doc": 30721,
+        "end_char_doc": 30727,
+        "prefix": "performs SQL execution after pre-training, we analyze its performance on nearly",
+        "suffix": "held-out SQL queries over unseen tables. Overall, the SQL execution accuracy is",
+        "valueSource": "extracted"
+      },
+      "mls:unit": {
+        "value": "queries",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:appliesTo": {
+        "@id": "exp:sql_execution_analysis"
+      }
+    },
+    {
+      "@id": "hp:nl_corpus_size_05m",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 69647,
+        "end_char_doc": 69658,
+        "prefix": "sets) at different pre-training difficulties with the same amount of examples (",
+        "suffix": "). ≤ Medium means that we only use SQL query templates with a difficulty level l",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "NL comparison corpus size",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hpCategory": {
+        "value": "HP_Data",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hpType": {
+        "value": "CorpusSize",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:value": {
+        "value": "0.5 Million",
+        "start_char_doc": 69647,
+        "end_char_doc": 69658,
+        "prefix": "sets) at different pre-training difficulties with the same amount of examples (",
+        "suffix": "). ≤ Medium means that we only use SQL query templates with a difficulty level l",
+        "valueSource": "extracted"
+      },
+      "mls:unit": {
+        "value": "examples",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:appliesTo": {
+        "@id": "exp:natural_language_pretraining_comparison"
+      }
+    },
+    {
+      "@id": "exp:pretraining",
+      "@type": "mls:Experiment",
+      "mention": {
+        "start_char_doc": 14869,
+        "end_char_doc": 14925,
+        "prefix": "uch as SQL queries, while unstructured text does not. Taking this into account,",
+        "suffix": ". As illustrated in Figure 3, the pre-training of TAPEX is similar to the proced",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "TAPEX pre-training",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:description": {
+        "value": "TAPEX adopts SQL execution as the only pre-training task",
+        "start_char_doc": 14869,
+        "end_char_doc": 14925,
+        "prefix": "uch as SQL queries, while unstructured text does not. Taking this into account,",
+        "suffix": ". As illustrated in Figure 3, the pre-training of TAPEX is similar to the proced",
+        "valueSource": "extracted"
+      },
+      "mls:usesMethod": [
+        {
+          "@id": "method:tapex"
+        }
+      ],
+      "mls:usesDataset": [
+        {
+          "@id": "dataset:tapex_synthetic_sql_execution_corpus"
+        }
+      ],
+      "mls:addressesTask": [
+        {
+          "@id": "task:sql_execution_pretraining"
+        }
+      ],
+      "mls:hasHyperParameter": [
+        {
+          "@id": "hp:pretraining_corpus_size_5m"
+        },
+        {
+          "@id": "hp:pretraining_steps_50000"
+        },
+        {
+          "@id": "hp:pretraining_batch_size_256"
+        },
+        {
+          "@id": "hp:learning_rate_3e_5"
+        }
+      ]
+    },
+    {
+      "@id": "exp:main_downstream_evaluation",
+      "@type": "mls:Experiment",
+      "mention": {
+        "start_char_doc": 20739,
+        "end_char_doc": 20826,
+        "prefix": "erent downstream tasks to verify its effectiveness.  **Dataset and Evaluation**",
+        "suffix": "(Zhong et al., 2017), WIKITABLEQUESTIONS (Pasupat & Liang, 2015), SQA (Iyyer et",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Main downstream evaluation",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:description": {
+        "value": "We evaluate the performance of our approach on weakly-supervised WikiSQL (WIKISQL-WEAK)",
+        "start_char_doc": 20739,
+        "end_char_doc": 20826,
+        "prefix": "erent downstream tasks to verify its effectiveness.  **Dataset and Evaluation**",
+        "suffix": "(Zhong et al., 2017), WIKITABLEQUESTIONS (Pasupat & Liang, 2015), SQA (Iyyer et",
+        "valueSource": "extracted"
+      },
+      "mls:usesMethod": [
+        {
+          "@id": "method:tapex"
+        },
+        {
+          "@id": "method:generative_fine_tuning"
+        }
+      ],
+      "mls:usesDataset": [
+        {
+          "@id": "dataset:wikisql_weak"
+        },
+        {
+          "@id": "dataset:wikitablequestions"
+        },
+        {
+          "@id": "dataset:sqa"
+        },
+        {
+          "@id": "dataset:tabfact"
+        }
+      ],
+      "mls:addressesTask": [
+        {
+          "@id": "task:table_question_answering"
+        },
+        {
+          "@id": "task:table_fact_verification"
+        }
+      ],
+      "mls:hasHyperParameter": [
+        {
+          "@id": "hp:finetuning_steps_20000"
+        },
+        {
+          "@id": "hp:finetuning_batch_size_128"
+        },
+        {
+          "@id": "hp:learning_rate_3e_5"
+        },
+        {
+          "@id": "hp:main_results_random_runs_5"
+        }
+      ]
+    },
+    {
+      "@id": "exp:multi_task_finetuning",
+      "@type": "mls:Experiment",
+      "mention": {
+        "start_char_doc": 29895,
+        "end_char_doc": 29942,
+        "prefix": "i-task learning, thereby conferring benefits to downstream tasks. To verify it,",
+        "suffix": "and obtained the following findings: (1) when initialized by BART, multi-task f",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Multi-task fine-tuning",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:description": {
+        "value": "we conducted multi-task fine-tuning experiments",
+        "start_char_doc": 29895,
+        "end_char_doc": 29942,
+        "prefix": "i-task learning, thereby conferring benefits to downstream tasks. To verify it,",
+        "suffix": "and obtained the following findings: (1) when initialized by BART, multi-task f",
+        "valueSource": "extracted"
+      },
+      "mls:usesMethod": [
+        {
+          "@id": "method:multi_task_fine_tuning"
+        }
+      ],
+      "mls:usesDataset": [
+        {
+          "@id": "dataset:wikisql_weak"
+        },
+        {
+          "@id": "dataset:wikitablequestions"
+        },
+        {
+          "@id": "dataset:sqa"
+        },
+        {
+          "@id": "dataset:tabfact"
+        }
+      ],
+      "mls:addressesTask": [
+        {
+          "@id": "task:table_question_answering"
+        },
+        {
+          "@id": "task:table_fact_verification"
+        }
+      ],
+      "mls:hasHyperParameter": []
+    },
+    {
+      "@id": "exp:sql_execution_analysis",
+      "@type": "mls:Experiment",
+      "mention": {
+        "start_char_doc": 30714,
+        "end_char_doc": 30767,
+        "prefix": "TAPEX performs SQL execution after pre-training, we analyze its performance on",
+        "suffix": ". Overall, the SQL execution accuracy is relatively high, as TAPEX correctly “ex",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "SQL execution analysis",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:description": {
+        "value": "nearly 20,000 held-out SQL queries over unseen tables",
+        "start_char_doc": 30714,
+        "end_char_doc": 30767,
+        "prefix": "TAPEX performs SQL execution after pre-training, we analyze its performance on",
+        "suffix": ". Overall, the SQL execution accuracy is relatively high, as TAPEX correctly “ex",
+        "valueSource": "extracted"
+      },
+      "mls:usesMethod": [
+        {
+          "@id": "method:tapex"
+        }
+      ],
+      "mls:usesDataset": [
+        {
+          "@id": "dataset:tapex_synthetic_sql_execution_corpus"
+        }
+      ],
+      "mls:addressesTask": [
+        {
+          "@id": "task:sql_execution_pretraining"
+        }
+      ],
+      "mls:hasHyperParameter": [
+        {
+          "@id": "hp:sql_execution_heldout_queries_20000"
+        }
+      ]
+    },
+    {
+      "@id": "exp:natural_language_pretraining_comparison",
+      "@type": "mls:Experiment",
+      "mention": {
+        "start_char_doc": 67572,
+        "end_char_doc": 67668,
+        "prefix": "e SQL queries.  in pre-training impact the performance of downstream tasks? (2)",
+        "suffix": "### C.1 IMPACT OF SQL QUERY DIFFICULTY IN PRE-TRAINING  **SQL Difficulty Crite",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Natural language pre-training comparison",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:description": {
+        "value": "Would it be better to use natural language sentences instead of SQL queries during pre-training?",
+        "start_char_doc": 67572,
+        "end_char_doc": 67668,
+        "prefix": "e SQL queries.  in pre-training impact the performance of downstream tasks? (2)",
+        "suffix": "### C.1 IMPACT OF SQL QUERY DIFFICULTY IN PRE-TRAINING  **SQL Difficulty Crite",
+        "valueSource": "extracted"
+      },
+      "mls:usesMethod": [
+        {
+          "@id": "method:sql_to_nl_pretraining_comparison"
+        }
+      ],
+      "mls:usesDataset": [
+        {
+          "@id": "dataset:tapex_synthetic_sql_execution_corpus"
+        },
+        {
+          "@id": "dataset:nl_pretraining_corpus_05m"
+        },
+        {
+          "@id": "dataset:squall"
+        }
+      ],
+      "mls:addressesTask": [
+        {
+          "@id": "task:table_pretraining"
+        }
+      ],
+      "mls:hasHyperParameter": [
+        {
+          "@id": "hp:nl_corpus_size_05m"
+        }
+      ]
+    },
+    {
+      "@id": "eval:wikisql_weak_test",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 27162,
+        "end_char_doc": 27241,
+        "prefix": "K** As shown in Table 1, TAPEX outperforms all the baselines by a large margin.",
+        "suffix": ", which is 3.7% higher than BART and 2.3% higher than the previous best performa",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "WIKISQL-WEAK test denotation accuracy",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:metric": {
+        "value": "denotation accuracy",
+        "start_char_doc": 1387,
+        "end_char_doc": 1406,
+        "prefix": "lts on all of them. This includes improvements on the weakly-supervised WikiSQL",
+        "suffix": "to 89.5% (+2.3%), the WikiTableQuestions denotation accuracy to 57.5% (+4.8%),",
+        "valueSource": "extracted"
+      },
+      "mls:score": {
+        "value": "89.5%",
+        "start_char_doc": 27236,
+        "end_char_doc": 27241,
+        "prefix": "rgin. On the test set of WIKISQL-WEAK, TAPEX registers a denotation accuracy of",
+        "suffix": ", which is 3.7% higher than BART and 2.3% higher than the previous best performa",
+        "valueSource": "extracted"
+      },
+      "mls:benchmark": {
+        "value": "WIKISQL-WEAK",
+        "start_char_doc": 17173,
+        "end_char_doc": 17185,
+        "prefix": ">89.5</b></td>     </tr>   </tbody> </table>  Table 1: Denotation accuracies on",
+        "suffix": ". *Execution-Guided Decoding* is proposed to leverage execution results of SQL q",
+        "valueSource": "extracted"
+      },
+      "mls:evaluatesModel": {
+        "@id": "model:tapex"
+      },
+      "mls:evaluatesTask": {
+        "@id": "task:table_question_answering"
+      },
+      "mls:usesDataset": {
+        "@id": "dataset:wikisql_weak"
+      },
+      "mls:partOfExperiment": {
+        "@id": "exp:main_downstream_evaluation"
+      }
+    },
+    {
+      "@id": "eval:wikisql_weak_dev",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 17060,
+        "end_char_doc": 17080,
+        "prefix": "<td>87.3</td>       <td>85.8</td>     </tr>     <tr>       <td>TAPEX</td>",
+        "suffix": "<td><b>89.5</b></td>     </tr>   </tbody> </table>  Table 1: Denotation a",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "WIKISQL-WEAK dev denotation accuracy",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:metric": {
+        "value": "denotation accuracy",
+        "start_char_doc": 1387,
+        "end_char_doc": 1406,
+        "prefix": "lts on all of them. This includes improvements on the weakly-supervised WikiSQL",
+        "suffix": "to 89.5% (+2.3%), the WikiTableQuestions denotation accuracy to 57.5% (+4.8%),",
+        "valueSource": "extracted"
+      },
+      "mls:score": {
+        "value": "89.2",
+        "start_char_doc": 17067,
+        "end_char_doc": 17071,
+        "prefix": "3</td>       <td>85.8</td>     </tr>     <tr>       <td>TAPEX</td>       <td><b>",
+        "suffix": "</b></td>       <td><b>89.5</b></td>     </tr>   </tbody> </table>  Table 1: Den",
+        "valueSource": "extracted"
+      },
+      "mls:benchmark": {
+        "value": "WIKISQL-WEAK",
+        "start_char_doc": 17173,
+        "end_char_doc": 17185,
+        "prefix": ">89.5</b></td>     </tr>   </tbody> </table>  Table 1: Denotation accuracies on",
+        "suffix": ". *Execution-Guided Decoding* is proposed to leverage execution results of SQL q",
+        "valueSource": "extracted"
+      },
+      "mls:evaluatesModel": {
+        "@id": "model:tapex"
+      },
+      "mls:evaluatesTask": {
+        "@id": "task:table_question_answering"
+      },
+      "mls:usesDataset": {
+        "@id": "dataset:wikisql_weak"
+      },
+      "mls:partOfExperiment": {
+        "@id": "exp:main_downstream_evaluation"
+      }
+    },
+    {
+      "@id": "eval:wikitablequestions_test",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 27593,
+        "end_char_doc": 27664,
+        "prefix": "KISQL-WEAK.  **WIKITABLEQUESTIONS** On the more challenging WIKITABLEQUESTIONS,",
+        "suffix": ", surpassing the previous best system by 4.8% (Table 2). Meanwhile, we find that",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "WIKITABLEQUESTIONS test denotation accuracy",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:metric": {
+        "value": "denotation accuracy",
+        "start_char_doc": 1387,
+        "end_char_doc": 1406,
+        "prefix": "lts on all of them. This includes improvements on the weakly-supervised WikiSQL",
+        "suffix": "to 89.5% (+2.3%), the WikiTableQuestions denotation accuracy to 57.5% (+4.8%),",
+        "valueSource": "extracted"
+      },
+      "mls:score": {
+        "value": "57.5%",
+        "start_char_doc": 27659,
+        "end_char_doc": 27664,
+        "prefix": "BLEQUESTIONS, TAPEX also achieves a new state-of-the-art denotation accuracy of",
+        "suffix": ", surpassing the previous best system by 4.8% (Table 2). Meanwhile, we find that",
+        "valueSource": "extracted"
+      },
+      "mls:benchmark": {
+        "value": "WIKITABLEQUESTIONS",
+        "start_char_doc": 6969,
+        "end_char_doc": 6987,
+        "prefix": "s. For example, TAPEX obtains an absolute improvement of 19.5% over BART in the",
+        "suffix": "dataset. Furthermore, TAPEX yields strong results even with a small pre-trainin",
+        "valueSource": "extracted"
+      },
+      "mls:evaluatesModel": {
+        "@id": "model:tapex"
+      },
+      "mls:evaluatesTask": {
+        "@id": "task:table_question_answering"
+      },
+      "mls:usesDataset": {
+        "@id": "dataset:wikitablequestions"
+      },
+      "mls:partOfExperiment": {
+        "@id": "exp:main_downstream_evaluation"
+      }
+    },
+    {
+      "@id": "eval:wikitablequestions_dev",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 18641,
+        "end_char_doc": 18661,
+        "prefix": "<td>37.2</td>       <td>38.0</td>     </tr>     <tr>       <td>TAPEX</td>",
+        "suffix": "<td><b>57.5</b></td>     </tr>   </tbody> </table>  Table 2: Denotation a",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "WIKITABLEQUESTIONS dev denotation accuracy",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:metric": {
+        "value": "denotation accuracy",
+        "start_char_doc": 1387,
+        "end_char_doc": 1406,
+        "prefix": "lts on all of them. This includes improvements on the weakly-supervised WikiSQL",
+        "suffix": "to 89.5% (+2.3%), the WikiTableQuestions denotation accuracy to 57.5% (+4.8%),",
+        "valueSource": "extracted"
+      },
+      "mls:score": {
+        "value": "57.0",
+        "start_char_doc": 18648,
+        "end_char_doc": 18652,
+        "prefix": "2</td>       <td>38.0</td>     </tr>     <tr>       <td>TAPEX</td>       <td><b>",
+        "suffix": "</b></td>       <td><b>57.5</b></td>     </tr>   </tbody> </table>  Table 2: Den",
+        "valueSource": "extracted"
+      },
+      "mls:benchmark": {
+        "value": "WIKITABLEQUESTIONS",
+        "start_char_doc": 6969,
+        "end_char_doc": 6987,
+        "prefix": "s. For example, TAPEX obtains an absolute improvement of 19.5% over BART in the",
+        "suffix": "dataset. Furthermore, TAPEX yields strong results even with a small pre-trainin",
+        "valueSource": "extracted"
+      },
+      "mls:evaluatesModel": {
+        "@id": "model:tapex"
+      },
+      "mls:evaluatesTask": {
+        "@id": "task:table_question_answering"
+      },
+      "mls:usesDataset": {
+        "@id": "dataset:wikitablequestions"
+      },
+      "mls:partOfExperiment": {
+        "@id": "exp:main_downstream_evaluation"
+      }
+    },
+    {
+      "@id": "eval:sqa_test_sentence",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 28793,
+        "end_char_doc": 28815,
+        "prefix": "art denotation accuracy in terms of both the conversation level (48.4%) and the",
+        "suffix": ". This improvement is also a surprise to us since SQA is a conversational datase",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "SQA sentence-level denotation accuracy",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:metric": {
+        "value": "denotation accuracy",
+        "start_char_doc": 1387,
+        "end_char_doc": 1406,
+        "prefix": "lts on all of them. This includes improvements on the weakly-supervised WikiSQL",
+        "suffix": "to 89.5% (+2.3%), the WikiTableQuestions denotation accuracy to 57.5% (+4.8%),",
+        "valueSource": "extracted"
+      },
+      "mls:score": {
+        "value": "74.5%",
+        "start_char_doc": 28809,
+        "end_char_doc": 28814,
+        "prefix": "ccuracy in terms of both the conversation level (48.4%) and the sentence level (",
+        "suffix": "). This improvement is also a surprise to us since SQA is a conversational datas",
+        "valueSource": "extracted"
+      },
+      "mls:benchmark": {
+        "value": "SQA",
+        "start_char_doc": 1490,
+        "end_char_doc": 1493,
+        "prefix": "89.5% (+2.3%), the WikiTableQuestions denotation accuracy to 57.5% (+4.8%), the",
+        "suffix": "denotation accuracy to 74.5% (+3.5%), and the TabFact accuracy to 84.2% (+3.2%)",
+        "valueSource": "extracted"
+      },
+      "mls:evaluatesModel": {
+        "@id": "model:tapex"
+      },
+      "mls:evaluatesTask": {
+        "@id": "task:table_question_answering"
+      },
+      "mls:usesDataset": {
+        "@id": "dataset:sqa"
+      },
+      "mls:partOfExperiment": {
+        "@id": "exp:main_downstream_evaluation"
+      }
+    },
+    {
+      "@id": "eval:sqa_test_conversation",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 28758,
+        "end_char_doc": 28784,
+        "prefix": "X again obtains a new state-of-the-art denotation accuracy in terms of both the",
+        "suffix": "and the sentence level (74.5%). This improvement is also a surprise to us since",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "SQA conversation-level denotation accuracy",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:metric": {
+        "value": "denotation accuracy",
+        "start_char_doc": 1387,
+        "end_char_doc": 1406,
+        "prefix": "lts on all of them. This includes improvements on the weakly-supervised WikiSQL",
+        "suffix": "to 89.5% (+2.3%), the WikiTableQuestions denotation accuracy to 57.5% (+4.8%),",
+        "valueSource": "extracted"
+      },
+      "mls:score": {
+        "value": "48.4%",
+        "start_char_doc": 28778,
+        "end_char_doc": 28783,
+        "prefix": "w state-of-the-art denotation accuracy in terms of both the conversation level (",
+        "suffix": ") and the sentence level (74.5%). This improvement is also a surprise to us sinc",
+        "valueSource": "extracted"
+      },
+      "mls:benchmark": {
+        "value": "SQA",
+        "start_char_doc": 1490,
+        "end_char_doc": 1493,
+        "prefix": "89.5% (+2.3%), the WikiTableQuestions denotation accuracy to 57.5% (+4.8%), the",
+        "suffix": "denotation accuracy to 74.5% (+3.5%), and the TabFact accuracy to 84.2% (+3.2%)",
+        "valueSource": "extracted"
+      },
+      "mls:evaluatesModel": {
+        "@id": "model:tapex"
+      },
+      "mls:evaluatesTask": {
+        "@id": "task:table_question_answering"
+      },
+      "mls:usesDataset": {
+        "@id": "dataset:sqa"
+      },
+      "mls:partOfExperiment": {
+        "@id": "exp:main_downstream_evaluation"
+      }
+    },
+    {
+      "@id": "eval:tabfact_test",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 1540,
+        "end_char_doc": 1573,
+        "prefix": "ccuracy to 57.5% (+4.8%), the SQA denotation accuracy to 74.5% (+3.5%), and the",
+        "suffix": ". To our knowledge, this is the first work to exploit table pre-training via syn",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "TABFACT test accuracy",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:metric": {
+        "value": "accuracy",
+        "start_char_doc": 1398,
+        "end_char_doc": 1406,
+        "prefix": "of them. This includes improvements on the weakly-supervised WikiSQL denotation",
+        "suffix": "to 89.5% (+2.3%), the WikiTableQuestions denotation accuracy to 57.5% (+4.8%),",
+        "valueSource": "extracted"
+      },
+      "mls:score": {
+        "value": "84.2%",
+        "start_char_doc": 1560,
+        "end_char_doc": 1565,
+        "prefix": ".8%), the SQA denotation accuracy to 74.5% (+3.5%), and the TabFact accuracy to",
+        "suffix": "(+3.2%). To our knowledge, this is the first work to exploit table pre-training",
+        "valueSource": "extracted"
+      },
+      "mls:benchmark": {
+        "value": "TABFACT",
+        "start_char_doc": 20923,
+        "end_char_doc": 20930,
+        "prefix": "017), WIKITABLEQUESTIONS (Pasupat & Liang, 2015), SQA (Iyyer et al., 2017), and",
+        "suffix": "(Chen et al., 2020). Compared to WIKISQL-WEAK, which only requires filtering an",
+        "valueSource": "extracted"
+      },
+      "mls:evaluatesModel": {
+        "@id": "model:tapex"
+      },
+      "mls:evaluatesTask": {
+        "@id": "task:table_fact_verification"
+      },
+      "mls:usesDataset": {
+        "@id": "dataset:tabfact"
+      },
+      "mls:partOfExperiment": {
+        "@id": "exp:main_downstream_evaluation"
+      }
+    },
+    {
+      "@id": "eval:tabfact_dev",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 25864,
+        "end_char_doc": 25884,
+        "prefix": "<td><b>82.5</b></td>     </tr>     <tr>       <td><b>TAPEX</b></td>",
+        "suffix": "<td><b>84.2</b></td>       <td><b>93.9</b></td>       <td><b>79.6</b></td",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "TABFACT dev accuracy",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:metric": {
+        "value": "accuracy",
+        "start_char_doc": 1398,
+        "end_char_doc": 1406,
+        "prefix": "of them. This includes improvements on the weakly-supervised WikiSQL denotation",
+        "suffix": "to 89.5% (+2.3%), the WikiTableQuestions denotation accuracy to 57.5% (+4.8%),",
+        "valueSource": "extracted"
+      },
+      "mls:score": {
+        "value": "84.6",
+        "start_char_doc": 25871,
+        "end_char_doc": 25875,
+        "prefix": "td><b>82.5</b></td>     </tr>     <tr>       <td><b>TAPEX</b></td>       <td><b>",
+        "suffix": "</b></td>       <td><b>84.2</b></td>       <td><b>93.9</b></td>       <td><b>79.",
+        "valueSource": "extracted"
+      },
+      "mls:benchmark": {
+        "value": "TABFACT",
+        "start_char_doc": 20923,
+        "end_char_doc": 20930,
+        "prefix": "017), WIKITABLEQUESTIONS (Pasupat & Liang, 2015), SQA (Iyyer et al., 2017), and",
+        "suffix": "(Chen et al., 2020). Compared to WIKISQL-WEAK, which only requires filtering an",
+        "valueSource": "extracted"
+      },
+      "mls:evaluatesModel": {
+        "@id": "model:tapex"
+      },
+      "mls:evaluatesTask": {
+        "@id": "task:table_fact_verification"
+      },
+      "mls:usesDataset": {
+        "@id": "dataset:tabfact"
+      },
+      "mls:partOfExperiment": {
+        "@id": "exp:main_downstream_evaluation"
+      }
+    },
+    {
+      "@id": "eval:tabfact_test_simple",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 25918,
+        "end_char_doc": 25938,
+        "prefix": "d><b>TAPEX</b></td>       <td><b>84.6</b></td>       <td><b>84.2</b></td>",
+        "suffix": "<td><b>79.6</b></td>       <td><b>85.9</b></td>     </tr>     <tr>",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "TABFACT Test_simple accuracy",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:metric": {
+        "value": "accuracy",
+        "start_char_doc": 1398,
+        "end_char_doc": 1406,
+        "prefix": "of them. This includes improvements on the weakly-supervised WikiSQL denotation",
+        "suffix": "to 89.5% (+2.3%), the WikiTableQuestions denotation accuracy to 57.5% (+4.8%),",
+        "valueSource": "extracted"
+      },
+      "mls:score": {
+        "value": "93.9",
+        "start_char_doc": 25925,
+        "end_char_doc": 25929,
+        "prefix": "PEX</b></td>       <td><b>84.6</b></td>       <td><b>84.2</b></td>       <td><b>",
+        "suffix": "</b></td>       <td><b>79.6</b></td>       <td><b>85.9</b></td>     </tr>     <t",
+        "valueSource": "extracted"
+      },
+      "mls:benchmark": {
+        "value": "TABFACT",
+        "start_char_doc": 20923,
+        "end_char_doc": 20930,
+        "prefix": "017), WIKITABLEQUESTIONS (Pasupat & Liang, 2015), SQA (Iyyer et al., 2017), and",
+        "suffix": "(Chen et al., 2020). Compared to WIKISQL-WEAK, which only requires filtering an",
+        "valueSource": "extracted"
+      },
+      "mls:evaluatesModel": {
+        "@id": "model:tapex"
+      },
+      "mls:evaluatesTask": {
+        "@id": "task:table_fact_verification"
+      },
+      "mls:usesDataset": {
+        "@id": "dataset:tabfact"
+      },
+      "mls:partOfExperiment": {
+        "@id": "exp:main_downstream_evaluation"
+      }
+    },
+    {
+      "@id": "eval:tabfact_test_complex",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 25945,
+        "end_char_doc": 25965,
+        "prefix": "td><b>84.6</b></td>       <td><b>84.2</b></td>       <td><b>93.9</b></td>",
+        "suffix": "<td><b>85.9</b></td>     </tr>     <tr>       <td>Human Performance</td>",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "TABFACT Test_complex accuracy",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:metric": {
+        "value": "accuracy",
+        "start_char_doc": 1398,
+        "end_char_doc": 1406,
+        "prefix": "of them. This includes improvements on the weakly-supervised WikiSQL denotation",
+        "suffix": "to 89.5% (+2.3%), the WikiTableQuestions denotation accuracy to 57.5% (+4.8%),",
+        "valueSource": "extracted"
+      },
+      "mls:score": {
+        "value": "79.6",
+        "start_char_doc": 25952,
+        "end_char_doc": 25956,
+        "prefix": "4.6</b></td>       <td><b>84.2</b></td>       <td><b>93.9</b></td>       <td><b>",
+        "suffix": "</b></td>       <td><b>85.9</b></td>     </tr>     <tr>       <td>Human Performa",
+        "valueSource": "extracted"
+      },
+      "mls:benchmark": {
+        "value": "TABFACT",
+        "start_char_doc": 20923,
+        "end_char_doc": 20930,
+        "prefix": "017), WIKITABLEQUESTIONS (Pasupat & Liang, 2015), SQA (Iyyer et al., 2017), and",
+        "suffix": "(Chen et al., 2020). Compared to WIKISQL-WEAK, which only requires filtering an",
+        "valueSource": "extracted"
+      },
+      "mls:evaluatesModel": {
+        "@id": "model:tapex"
+      },
+      "mls:evaluatesTask": {
+        "@id": "task:table_fact_verification"
+      },
+      "mls:usesDataset": {
+        "@id": "dataset:tabfact"
+      },
+      "mls:partOfExperiment": {
+        "@id": "exp:main_downstream_evaluation"
+      }
+    },
+    {
+      "@id": "eval:tabfact_test_small",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 25972,
+        "end_char_doc": 25992,
+        "prefix": "td><b>84.2</b></td>       <td><b>93.9</b></td>       <td><b>79.6</b></td>",
+        "suffix": "</tr>     <tr>       <td>Human Performance</td>       <td>-</td>       <td>",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "TABFACT Test_small accuracy",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:metric": {
+        "value": "accuracy",
+        "start_char_doc": 1398,
+        "end_char_doc": 1406,
+        "prefix": "of them. This includes improvements on the weakly-supervised WikiSQL denotation",
+        "suffix": "to 89.5% (+2.3%), the WikiTableQuestions denotation accuracy to 57.5% (+4.8%),",
+        "valueSource": "extracted"
+      },
+      "mls:score": {
+        "value": "85.9",
+        "start_char_doc": 25979,
+        "end_char_doc": 25983,
+        "prefix": "4.2</b></td>       <td><b>93.9</b></td>       <td><b>79.6</b></td>       <td><b>",
+        "suffix": "</b></td>     </tr>     <tr>       <td>Human Performance</td>       <td>-</td>",
+        "valueSource": "extracted"
+      },
+      "mls:benchmark": {
+        "value": "TABFACT",
+        "start_char_doc": 20923,
+        "end_char_doc": 20930,
+        "prefix": "017), WIKITABLEQUESTIONS (Pasupat & Liang, 2015), SQA (Iyyer et al., 2017), and",
+        "suffix": "(Chen et al., 2020). Compared to WIKISQL-WEAK, which only requires filtering an",
+        "valueSource": "extracted"
+      },
+      "mls:evaluatesModel": {
+        "@id": "model:tapex"
+      },
+      "mls:evaluatesTask": {
+        "@id": "task:table_fact_verification"
+      },
+      "mls:usesDataset": {
+        "@id": "dataset:tabfact"
+      },
+      "mls:partOfExperiment": {
+        "@id": "exp:main_downstream_evaluation"
+      }
+    },
+    {
+      "@id": "eval:sql_execution_heldout",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 30828,
+        "end_char_doc": 30879,
+        "prefix": "over unseen tables. Overall, the SQL execution accuracy is relatively high, as",
+        "suffix": "¹. In particular, TAPEX performs better on Filter, Aggregate and Superlative ope",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Held-out SQL execution accuracy",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:metric": {
+        "value": "execution accuracy",
+        "start_char_doc": 30786,
+        "end_char_doc": 30804,
+        "prefix": "ance on nearly 20,000 held-out SQL queries over unseen tables. Overall, the SQL",
+        "suffix": "is relatively high, as TAPEX correctly “executes” 89.6% of the SQL queries¹. In",
+        "valueSource": "extracted"
+      },
+      "mls:score": {
+        "value": "89.6%",
+        "start_char_doc": 30855,
+        "end_char_doc": 30860,
+        "prefix": "l, the SQL execution accuracy is relatively high, as TAPEX correctly “executes”",
+        "suffix": "of the SQL queries¹. In particular, TAPEX performs better on Filter, Aggregate",
+        "valueSource": "extracted"
+      },
+      "mls:benchmark": {
+        "value": "held-out SQL queries",
+        "start_char_doc": 30728,
+        "end_char_doc": 30748,
+        "prefix": "s SQL execution after pre-training, we analyze its performance on nearly 20,000",
+        "suffix": "over unseen tables. Overall, the SQL execution accuracy is relatively high, as",
+        "valueSource": "extracted"
+      },
+      "mls:evaluatesModel": {
+        "@id": "model:tapex"
+      },
+      "mls:evaluatesTask": {
+        "@id": "task:sql_execution_pretraining"
+      },
+      "mls:usesDataset": {
+        "@id": "dataset:tapex_synthetic_sql_execution_corpus"
+      },
+      "mls:partOfExperiment": {
+        "@id": "exp:sql_execution_analysis"
+      }
+    },
+    {
+      "@id": "eval:operator_select",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 32401,
+        "end_char_doc": 32416,
+        "prefix": "th>BART</th>       <th>TAPEX</th>     </tr>   </thead>   <tbody>     <tr>",
+        "suffix": "<td>What is <u>the years won</u> for each team?</td>       <td>41.3%</td>",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "SQL Select operator execution accuracy",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:metric": {
+        "value": "execution accuracy",
+        "start_char_doc": 30786,
+        "end_char_doc": 30804,
+        "prefix": "ance on nearly 20,000 held-out SQL queries over unseen tables. Overall, the SQL",
+        "suffix": "is relatively high, as TAPEX correctly “executes” 89.6% of the SQL queries¹. In",
+        "valueSource": "extracted"
+      },
+      "mls:score": {
+        "value": "89.6",
+        "start_char_doc": 30855,
+        "end_char_doc": 30859,
+        "prefix": "l, the SQL execution accuracy is relatively high, as TAPEX correctly “executes”",
+        "suffix": "% of the SQL queries¹. In particular, TAPEX performs better on Filter, Aggregate",
+        "valueSource": "extracted"
+      },
+      "mls:benchmark": {
+        "value": "Select",
+        "start_char_doc": 32405,
+        "end_char_doc": 32411,
+        "prefix": "ART</th>       <th>TAPEX</th>     </tr>   </thead>   <tbody>     <tr>       <td>",
+        "suffix": "</td>       <td>What is <u>the years won</u> for each team?</td>       <td>41.3%",
+        "valueSource": "extracted"
+      },
+      "mls:evaluatesModel": {
+        "@id": "model:tapex"
+      },
+      "mls:evaluatesTask": {
+        "@id": "task:sql_execution_pretraining"
+      },
+      "mls:usesDataset": {
+        "@id": "dataset:tapex_synthetic_sql_execution_corpus"
+      },
+      "mls:partOfExperiment": {
+        "@id": "exp:sql_execution_analysis"
+      }
+    },
+    {
+      "@id": "eval:operator_filter",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 32552,
+        "end_char_doc": 32567,
+        "prefix": "td>       <td>41.3%</td>       <td>64.8% (+23.5%)</td>     </tr>     <tr>",
+        "suffix": "<td>How long did <u>Taiki Tsuchiya</u> last?</td>       <td>40.1%</td>",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "SQL Filter operator execution accuracy",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:metric": {
+        "value": "execution accuracy",
+        "start_char_doc": 30786,
+        "end_char_doc": 30804,
+        "prefix": "ance on nearly 20,000 held-out SQL queries over unseen tables. Overall, the SQL",
+        "suffix": "is relatively high, as TAPEX correctly “executes” 89.6% of the SQL queries¹. In",
+        "valueSource": "extracted"
+      },
+      "mls:score": {
+        "value": "90.6",
+        "start_char_doc": 76464,
+        "end_char_doc": 76468,
+        "prefix": "<td>SELECT City WHERE Country = Greece</td>       <td>72.4</td>       <td>",
+        "suffix": "</td>     </tr>     <tr>       <td>1904</td>       <td>St. Louis</td>       <td>",
+        "valueSource": "extracted"
+      },
+      "mls:benchmark": {
+        "value": "Filter",
+        "start_char_doc": 30922,
+        "end_char_doc": 30928,
+        "prefix": "y “executes” 89.6% of the SQL queries¹. In particular, TAPEX performs better on",
+        "suffix": ", Aggregate and Superlative operators, indicating that it is highly accurate in",
+        "valueSource": "extracted"
+      },
+      "mls:evaluatesModel": {
+        "@id": "model:tapex"
+      },
+      "mls:evaluatesTask": {
+        "@id": "task:sql_execution_pretraining"
+      },
+      "mls:usesDataset": {
+        "@id": "dataset:tapex_synthetic_sql_execution_corpus"
+      },
+      "mls:partOfExperiment": {
+        "@id": "exp:sql_execution_analysis"
+      }
+    },
+    {
+      "@id": "eval:operator_aggregate",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 32700,
+        "end_char_doc": 32718,
+        "prefix": "td>       <td>40.1%</td>       <td>65.7% (+25.6%)</td>     </tr>     <tr>",
+        "suffix": "<td>What is the <u>amount of</u> matches drawn?</td>       <td>26.9 %</td",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "SQL Aggregate operator execution accuracy",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:metric": {
+        "value": "execution accuracy",
+        "start_char_doc": 30786,
+        "end_char_doc": 30804,
+        "prefix": "ance on nearly 20,000 held-out SQL queries over unseen tables. Overall, the SQL",
+        "suffix": "is relatively high, as TAPEX correctly “executes” 89.6% of the SQL queries¹. In",
+        "valueSource": "extracted"
+      },
+      "mls:score": {
+        "value": "89.9",
+        "start_char_doc": 76684,
+        "end_char_doc": 76688,
+        "prefix": "<td>SELECT AVG (Nations) WHERE Year < 2000</td>       <td>34.2</td>       <td>",
+        "suffix": "</td>     </tr>     <tr>       <td>1908</td>       <td>London</td>       <td>UK<",
+        "valueSource": "extracted"
+      },
+      "mls:benchmark": {
+        "value": "Aggregate",
+        "start_char_doc": 30930,
+        "end_char_doc": 30939,
+        "prefix": "tes” 89.6% of the SQL queries¹. In particular, TAPEX performs better on Filter,",
+        "suffix": "and Superlative operators, indicating that it is highly accurate in table cell",
+        "valueSource": "extracted"
+      },
+      "mls:evaluatesModel": {
+        "@id": "model:tapex"
+      },
+      "mls:evaluatesTask": {
+        "@id": "task:sql_execution_pretraining"
+      },
+      "mls:usesDataset": {
+        "@id": "dataset:tapex_synthetic_sql_execution_corpus"
+      },
+      "mls:partOfExperiment": {
+        "@id": "exp:sql_execution_analysis"
+      }
+    },
+    {
+      "@id": "eval:nl_corpus_wtq_dev",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 74165,
+        "end_char_doc": 74179,
+        "prefix": ">54.2</td>       <td>68.9</td>       <td>83.6</td>     </tr>     <tr>       <td>",
+        "suffix": "</td>       <td>87.5</td>       <td>52.8</td>       <td>68.7</td>       <td>83.7",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "NL corpus WIKITABLEQUESTIONS dev denotation accuracy",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:metric": {
+        "value": "denotation accuracy",
+        "start_char_doc": 1387,
+        "end_char_doc": 1406,
+        "prefix": "lts on all of them. This includes improvements on the weakly-supervised WikiSQL",
+        "suffix": "to 89.5% (+2.3%), the WikiTableQuestions denotation accuracy to 57.5% (+4.8%),",
+        "valueSource": "extracted"
+      },
+      "mls:score": {
+        "value": "52.8",
+        "start_char_doc": 74215,
+        "end_char_doc": 74219,
+        "prefix": "</tr>     <tr>       <td>TAPEX with. NL</td>       <td>87.5</td>       <td>",
+        "suffix": "</td>       <td>68.7</td>       <td>83.7</td>     </tr>   </tbody> </table>  Tab",
+        "valueSource": "extracted"
+      },
+      "mls:benchmark": {
+        "value": "WIKITABLEQUESTIONS",
+        "start_char_doc": 6969,
+        "end_char_doc": 6987,
+        "prefix": "s. For example, TAPEX obtains an absolute improvement of 19.5% over BART in the",
+        "suffix": "dataset. Furthermore, TAPEX yields strong results even with a small pre-trainin",
+        "valueSource": "extracted"
+      },
+      "mls:evaluatesModel": {
+        "@id": "model:tapex"
+      },
+      "mls:evaluatesTask": {
+        "@id": "task:table_question_answering"
+      },
+      "mls:usesDataset": {
+        "@id": "dataset:nl_pretraining_corpus_05m"
+      },
+      "mls:partOfExperiment": {
+        "@id": "exp:natural_language_pretraining_comparison"
+      }
+    },
+    {
+      "@id": "eval:sql_corpus_wtq_dev",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 74035,
+        "end_char_doc": 74050,
+        "prefix": "A</th>       <th>TABFACT</th>     </tr>   </thead>   <tbody>     <tr>       <td>",
+        "suffix": "</td>       <td>88.8</td>       <td>54.2</td>       <td>68.9</td>       <td>83.6",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "SQL corpus WIKITABLEQUESTIONS dev denotation accuracy",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:metric": {
+        "value": "denotation accuracy",
+        "start_char_doc": 1387,
+        "end_char_doc": 1406,
+        "prefix": "lts on all of them. This includes improvements on the weakly-supervised WikiSQL",
+        "suffix": "to 89.5% (+2.3%), the WikiTableQuestions denotation accuracy to 57.5% (+4.8%),",
+        "valueSource": "extracted"
+      },
+      "mls:score": {
+        "value": "54.2",
+        "start_char_doc": 74086,
+        "end_char_doc": 74090,
+        "prefix": "<tbody>     <tr>       <td>TAPEX with. SQL</td>       <td>88.8</td>       <td>",
+        "suffix": "</td>       <td>68.9</td>       <td>83.6</td>     </tr>     <tr>       <td>TAPEX",
+        "valueSource": "extracted"
+      },
+      "mls:benchmark": {
+        "value": "WIKITABLEQUESTIONS",
+        "start_char_doc": 6969,
+        "end_char_doc": 6987,
+        "prefix": "s. For example, TAPEX obtains an absolute improvement of 19.5% over BART in the",
+        "suffix": "dataset. Furthermore, TAPEX yields strong results even with a small pre-trainin",
+        "valueSource": "extracted"
+      },
+      "mls:evaluatesModel": {
+        "@id": "model:tapex"
+      },
+      "mls:evaluatesTask": {
+        "@id": "task:table_question_answering"
+      },
+      "mls:usesDataset": {
+        "@id": "dataset:tapex_synthetic_sql_execution_corpus"
+      },
+      "mls:partOfExperiment": {
+        "@id": "exp:natural_language_pretraining_comparison"
+      }
+    },
+    {
+      "@id": "prompt:flattened_table_template",
+      "@type": "mls:Prompt",
+      "mention": {
+        "start_char_doc": 11150,
+        "end_char_doc": 11215,
+        "prefix": "okens to indicate the table boundaries, a flattened table can be represented as",
+        "suffix": ". Here [HEAD] and [ROW] are special tokens indicating the region of table header",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "flattened table template",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:template": {
+        "value": "T* = [HEAD], c₁, · · ·, cₙ, [ROW], 1, r₁, [ROW], 2, r₂, · · ·, rₘ",
+        "start_char_doc": 11150,
+        "end_char_doc": 11215,
+        "prefix": "okens to indicate the table boundaries, a flattened table can be represented as",
+        "suffix": ". Here [HEAD] and [ROW] are special tokens indicating the region of table header",
+        "valueSource": "extracted"
+      },
+      "mls:usedBy": {
+        "@id": "method:table_flattening"
+      }
+    }
+  ]
+}

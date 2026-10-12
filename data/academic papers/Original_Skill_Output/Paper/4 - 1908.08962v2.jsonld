@@ -1,0 +1,4747 @@
+{
+  "@context": {
+    "mls": "http://www.w3.org/ns/mls#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "schema": "http://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "model": "https://w3id.org/mlskg/model/",
+    "algo": "https://w3id.org/mlskg/algorithm/",
+    "method": "https://w3id.org/mlskg/method/",
+    "dataset": "https://w3id.org/mlskg/dataset/",
+    "datasource": "https://w3id.org/mlskg/datasource/",
+    "task": "https://w3id.org/mlskg/task/",
+    "eval": "https://w3id.org/mlskg/eval/",
+    "hp": "https://w3id.org/mlskg/hp/",
+    "impl": "https://w3id.org/mlskg/implementation/",
+    "env": "https://w3id.org/mlskg/environment/",
+    "prompt": "https://w3id.org/mlskg/prompt/",
+    "person": "https://w3id.org/mlskg/person/",
+    "org": "https://w3id.org/mlskg/organization/",
+    "study": "https://w3id.org/mlskg/study/",
+    "exp": "https://w3id.org/mlskg/experiment/",
+    "repo": "https://w3id.org/mlskg/repository/",
+    "valueSource": "https://w3id.org/mlskg/meta/valueSource",
+    "mention": "https://w3id.org/mlskg/meta/mention"
+  },
+  "@graph": [
+    {
+      "@id": "study:well_read_students_learn_better_2019",
+      "@type": "mls:Study",
+      "mention": {
+        "start_char_doc": 13,
+        "end_char_doc": 94,
+        "prefix": "## Page 1  #",
+        "suffix": "**Iulia Turc, Ming-Wei Chang, Kenton Lee, Kristina Toutanova** Google Research",
+        "valueSource": "extracted"
+      },
+      "mls:title": {
+        "value": "WELL-READ STUDENTS LEARN BETTER: ON THE IMPORTANCE OF PRE-TRAINING COMPACT MODELS",
+        "start_char_doc": 13,
+        "end_char_doc": 94,
+        "prefix": "## Page 1  #",
+        "suffix": "**Iulia Turc, Ming-Wei Chang, Kenton Lee, Kristina Toutanova** Google Research",
+        "valueSource": "extracted"
+      },
+      "mls:abstract": {
+        "value": "Recent developments in natural language representations have been accompanied by large and expensive models that leverage vast amounts of general-domain text through self-supervised pre-training. Due to the cost of applying such models to down-stream tasks, several model compression techniques on pre-trained language representations have been proposed (Sun et al., 2019a; Sanh, 2019). However, surprisingly, the simple baseline of just pre-training and fine-tuning compact models has been overlooked. In this paper, we first show that pre-training remains important in the context of smaller architectures, and fine-tuning pre-trained compact models can be competitive to more elaborate methods proposed in concurrent work. Starting with pre-trained compact models, we then explore transferring task knowledge from large fine-tuned models through standard knowledge distillation. The resulting simple, yet effective and general algorithm, *Pre-trained Distillation*, brings further improvements. Through extensive experiments, we more generally explore the interaction between pre-training and distillation under two variables that have been under-studied: model size and properties of unlabeled task data. One surprising observation is that they have a compound effect even when sequentially applied on the *same* data. To accelerate future research, we will make our 24 pre-trained miniature BERT models publicly available.",
+        "start_char_doc": 245,
+        "end_char_doc": 1672,
+        "prefix": "Research {iuliaturc, mingweichang, kentonl, kristout}@google.com  ## ABSTRACT",
+        "suffix": "## 1 INTRODUCTION  Self-supervised learning on a general-domain text corpus fo",
+        "valueSource": "extracted"
+      },
+      "mls:issued": {
+        "value": "25 Sep 2019",
+        "start_char_doc": 3990,
+        "end_char_doc": 4001,
+        "prefix": "age_number&gt;1&lt;/page_number&gt; &lt;watermark&gt;arXiv:1908.08962v2 [cs.CL]",
+        "suffix": "&lt;/watermark&gt;  ---   ## Page 2  **Algorithm 1** **Require:** student $\\thet",
+        "valueSource": "extracted"
+      },
+      "mls:url": {
+        "value": "https://arxiv.org/abs/1908.08962",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:doi": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:publicationVenue": {
+        "value": "arXiv",
+        "start_char_doc": 3963,
+        "end_char_doc": 3968,
+        "prefix": "ptional fine-tuning.  &lt;page_number&gt;1&lt;/page_number&gt; &lt;watermark&gt;",
+        "suffix": ":1908.08962v2 [cs.CL] 25 Sep 2019&lt;/watermark&gt;  ---   ## Page 2  **Algorith",
+        "valueSource": "extracted"
+      },
+      "mls:hasAuthor": [
+        {
+          "@id": "person:turc_iulia"
+        },
+        {
+          "@id": "person:chang_ming_wei"
+        },
+        {
+          "@id": "person:lee_kenton"
+        },
+        {
+          "@id": "person:toutanova_kristina"
+        }
+      ],
+      "mls:hasContribution": [
+        {
+          "@id": "method:pre_trained_distillation"
+        },
+        {
+          "@id": "model:miniature_bert_models"
+        },
+        {
+          "@id": "model:compact_transformer_students"
+        }
+      ],
+      "mls:hasExperiment": [
+        {
+          "@id": "exp:concurrent_work_comparison"
+        },
+        {
+          "@id": "exp:student_architecture_grid"
+        },
+        {
+          "@id": "exp:analysis_baselines"
+        },
+        {
+          "@id": "exp:transfer_set_size"
+        },
+        {
+          "@id": "exp:domain_shift"
+        },
+        {
+          "@id": "exp:compound_effect"
+        }
+      ],
+      "mls:hasEvaluation": [
+        {
+          "@id": "eval:pd_test_meta_score"
+        },
+        {
+          "@id": "eval:pd_dev_meta_score"
+        },
+        {
+          "@id": "eval:pd_amazon_teacher_recovery"
+        },
+        {
+          "@id": "eval:pd_mnli_compound_gain"
+        }
+      ]
+    },
+    {
+      "@id": "org:google_research",
+      "@type": "mls:Organization",
+      "mention": {
+        "start_char_doc": 159,
+        "end_char_doc": 174,
+        "prefix": "COMPACT MODELS  **Iulia Turc, Ming-Wei Chang, Kenton Lee, Kristina Toutanova**",
+        "suffix": "{iuliaturc, mingweichang, kentonl, kristout}@google.com  ## ABSTRACT  Recent de",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Google Research",
+        "start_char_doc": 159,
+        "end_char_doc": 174,
+        "prefix": "COMPACT MODELS  **Iulia Turc, Ming-Wei Chang, Kenton Lee, Kristina Toutanova**",
+        "suffix": "{iuliaturc, mingweichang, kentonl, kristout}@google.com  ## ABSTRACT  Recent de",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "research organization",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:url": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "person:turc_iulia",
+      "@type": "mls:Person",
+      "mention": {
+        "start_char_doc": 98,
+        "end_char_doc": 108,
+        "prefix": "READ STUDENTS LEARN BETTER: ON THE IMPORTANCE OF PRE-TRAINING COMPACT MODELS  **",
+        "suffix": ", Ming-Wei Chang, Kenton Lee, Kristina Toutanova** Google Research {iuliaturc, m",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Iulia Turc",
+        "start_char_doc": 98,
+        "end_char_doc": 108,
+        "prefix": "READ STUDENTS LEARN BETTER: ON THE IMPORTANCE OF PRE-TRAINING COMPACT MODELS  **",
+        "suffix": ", Ming-Wei Chang, Kenton Lee, Kristina Toutanova** Google Research {iuliaturc, m",
+        "valueSource": "extracted"
+      },
+      "mls:email": {
+        "value": "iuliaturc@google.com",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:affiliation": {
+        "@id": "org:google_research"
+      }
+    },
+    {
+      "@id": "person:chang_ming_wei",
+      "@type": "mls:Person",
+      "mention": {
+        "start_char_doc": 110,
+        "end_char_doc": 124,
+        "prefix": "S LEARN BETTER: ON THE IMPORTANCE OF PRE-TRAINING COMPACT MODELS  **Iulia Turc,",
+        "suffix": ", Kenton Lee, Kristina Toutanova** Google Research {iuliaturc, mingweichang, ken",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Ming-Wei Chang",
+        "start_char_doc": 110,
+        "end_char_doc": 124,
+        "prefix": "S LEARN BETTER: ON THE IMPORTANCE OF PRE-TRAINING COMPACT MODELS  **Iulia Turc,",
+        "suffix": ", Kenton Lee, Kristina Toutanova** Google Research {iuliaturc, mingweichang, ken",
+        "valueSource": "extracted"
+      },
+      "mls:email": {
+        "value": "mingweichang@google.com",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:affiliation": {
+        "@id": "org:google_research"
+      }
+    },
+    {
+      "@id": "person:lee_kenton",
+      "@type": "mls:Person",
+      "mention": {
+        "start_char_doc": 126,
+        "end_char_doc": 136,
+        "prefix": "ON THE IMPORTANCE OF PRE-TRAINING COMPACT MODELS  **Iulia Turc, Ming-Wei Chang,",
+        "suffix": ", Kristina Toutanova** Google Research {iuliaturc, mingweichang, kentonl, kristo",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Kenton Lee",
+        "start_char_doc": 126,
+        "end_char_doc": 136,
+        "prefix": "ON THE IMPORTANCE OF PRE-TRAINING COMPACT MODELS  **Iulia Turc, Ming-Wei Chang,",
+        "suffix": ", Kristina Toutanova** Google Research {iuliaturc, mingweichang, kentonl, kristo",
+        "valueSource": "extracted"
+      },
+      "mls:email": {
+        "value": "kentonl@google.com",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:affiliation": {
+        "@id": "org:google_research"
+      }
+    },
+    {
+      "@id": "person:toutanova_kristina",
+      "@type": "mls:Person",
+      "mention": {
+        "start_char_doc": 138,
+        "end_char_doc": 156,
+        "prefix": "TANCE OF PRE-TRAINING COMPACT MODELS  **Iulia Turc, Ming-Wei Chang, Kenton Lee,",
+        "suffix": "** Google Research {iuliaturc, mingweichang, kentonl, kristout}@google.com  ## A",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Kristina Toutanova",
+        "start_char_doc": 138,
+        "end_char_doc": 156,
+        "prefix": "TANCE OF PRE-TRAINING COMPACT MODELS  **Iulia Turc, Ming-Wei Chang, Kenton Lee,",
+        "suffix": "** Google Research {iuliaturc, mingweichang, kentonl, kristout}@google.com  ## A",
+        "valueSource": "extracted"
+      },
+      "mls:email": {
+        "value": "kristout@google.com",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:affiliation": {
+        "@id": "org:google_research"
+      }
+    },
+    {
+      "@id": "task:model_compression",
+      "@type": "mls:Task",
+      "mention": {
+        "start_char_doc": 511,
+        "end_char_doc": 528,
+        "prefix": "training. Due to the cost of applying such models to down-stream tasks, several",
+        "suffix": "techniques on pre-trained language representations have been proposed (Sun et a",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "model compression",
+        "start_char_doc": 511,
+        "end_char_doc": 528,
+        "prefix": "training. Due to the cost of applying such models to down-stream tasks, several",
+        "suffix": "techniques on pre-trained language representations have been proposed (Sun et a",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "Build compact models under memory and latency constraints.",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:metrics": {
+        "value": "accuracy/F1/meta score",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "task:language_model_pretraining",
+      "@type": "mls:Task",
+      "mention": {
+        "start_char_doc": 2554,
+        "end_char_doc": 2586,
+        "prefix": "the same two-staged approach?* In other words, we explore the idea of applying",
+        "suffix": "and task fine-tuning to compact architectures directly. This simple baseline ha",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "language model pre-training",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:description": {
+        "value": "Self-supervised masked language model pre-training for compact models.",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:metrics": {
+        "value": "masked LM and next sentence objectives",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "task:knowledge_distillation",
+      "@type": "mls:Task",
+      "mention": {
+        "start_char_doc": 1103,
+        "end_char_doc": 1125,
+        "prefix": "plore transferring task knowledge from large fine-tuned models through standard",
+        "suffix": ". The resulting simple, yet effective and general algorithm, *Pre-trained Distil",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "knowledge distillation",
+        "start_char_doc": 1103,
+        "end_char_doc": 1125,
+        "prefix": "plore transferring task knowledge from large fine-tuned models through standard",
+        "suffix": ". The resulting simple, yet effective and general algorithm, *Pre-trained Distil",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "Train a compact student to recover teacher predictions.",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:metrics": {
+        "value": "accuracy/F1",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "task:sentiment_classification",
+      "@type": "mls:Task",
+      "mention": {
+        "start_char_doc": 24722,
+        "end_char_doc": 24746,
+        "prefix": "s and Datasets  The tasks and associated datasets are summarized in Table 4.  **",
+        "suffix": "** aims to classify text according to the polarities of opinions it contains. We",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Sentiment classification",
+        "start_char_doc": 24722,
+        "end_char_doc": 24746,
+        "prefix": "s and Datasets  The tasks and associated datasets are summarized in Table 4.  **",
+        "suffix": "** aims to classify text according to the polarities of opinions it contains. We",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "Classify text according to opinion polarity.",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:metrics": {
+        "value": "accuracy",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "task:natural_language_inference",
+      "@type": "mls:Task",
+      "mention": {
+        "start_char_doc": 25417,
+        "end_char_doc": 25443,
+        "prefix": ") as unlabeled transfer data (note that SST-2 consists of single sentences).  **",
+        "suffix": "** involves classifying pairs of sentences (a premise and a hypothesis) as *enta",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Natural language inference",
+        "start_char_doc": 25417,
+        "end_char_doc": 25443,
+        "prefix": ") as unlabeled transfer data (note that SST-2 consists of single sentences).  **",
+        "suffix": "** involves classifying pairs of sentences (a premise and a hypothesis) as *enta",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "Classify sentence pairs as entailment, contradiction, or neutral.",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:metrics": {
+        "value": "accuracy",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "task:textual_entailment",
+      "@type": "mls:Task",
+      "mention": {
+        "start_char_doc": 25922,
+        "end_char_doc": 25940,
+        "prefix": "tence-pair datasets: SNLI (Bowman et al., 2015) and QQP (Chen et al., 2018).  **",
+        "suffix": "** is similar to NLI, but restricted to binary classification (*entailment* vs *",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Textual entailment",
+        "start_char_doc": 25922,
+        "end_char_doc": 25940,
+        "prefix": "tence-pair datasets: SNLI (Bowman et al., 2015) and QQP (Chen et al., 2018).  **",
+        "suffix": "** is similar to NLI, but restricted to binary classification (*entailment* vs *",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "Binary entailment versus non-entailment classification.",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:metrics": {
+        "value": "accuracy",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "method:pre_trained_distillation",
+      "@type": "mls:Method",
+      "mention": {
+        "start_char_doc": 1187,
+        "end_char_doc": 1211,
+        "prefix": "ledge distillation. The resulting simple, yet effective and general algorithm, *",
+        "suffix": "*, brings further improvements. Through extensive experiments, we more generally",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Pre-trained Distillation",
+        "start_char_doc": 1187,
+        "end_char_doc": 1211,
+        "prefix": "ledge distillation. The resulting simple, yet effective and general algorithm, *",
+        "suffix": "*, brings further improvements. Through extensive experiments, we more generally",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "Pre-training on D_LM, task-specific distillation on D_T, and optional fine-tuning on D_L.",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:solvesTask": [
+        {
+          "@id": "task:model_compression"
+        },
+        {
+          "@id": "task:language_model_pretraining"
+        },
+        {
+          "@id": "task:knowledge_distillation"
+        }
+      ],
+      "mls:subMethod": [
+        {
+          "@id": "method:masked_lm_plus_pretraining"
+        },
+        {
+          "@id": "method:task_specific_distillation"
+        },
+        {
+          "@id": "method:pre_trained_distillation_with_finetuning"
+        }
+      ],
+      "mls:achieves": [
+        {
+          "@id": "eval:pd_test_sst2"
+        },
+        {
+          "@id": "eval:pd_test_mrpc"
+        },
+        {
+          "@id": "eval:pd_test_qqp"
+        },
+        {
+          "@id": "eval:pd_test_mnli"
+        },
+        {
+          "@id": "eval:pd_test_qnli"
+        },
+        {
+          "@id": "eval:pd_test_rte"
+        },
+        {
+          "@id": "eval:pd_test_meta_score"
+        },
+        {
+          "@id": "eval:pd_dev_meta_score"
+        },
+        {
+          "@id": "eval:pd_dev_mrpc"
+        },
+        {
+          "@id": "eval:pd_dev_qqp"
+        },
+        {
+          "@id": "eval:pd_dev_mnli"
+        },
+        {
+          "@id": "eval:pd_dev_qnli"
+        },
+        {
+          "@id": "eval:pd_dev_rte"
+        },
+        {
+          "@id": "eval:pd_amazon_teacher_recovery"
+        },
+        {
+          "@id": "eval:pd_amazon_speedup"
+        },
+        {
+          "@id": "eval:pd_transfer_5m_match"
+        },
+        {
+          "@id": "eval:pd_mnli_compound_gain"
+        },
+        {
+          "@id": "eval:rte_tiny_gain"
+        }
+      ],
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:bookcorpus_english_wikipedia"
+        },
+        {
+          "@id": "dataset:nli_star"
+        },
+        {
+          "@id": "dataset:amazon_book_reviews"
+        },
+        {
+          "@id": "dataset:amazon_movie_reviews"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:glue_selected_6"
+        },
+        {
+          "@id": "dataset:amazon_book_reviews"
+        },
+        {
+          "@id": "dataset:mnli"
+        },
+        {
+          "@id": "dataset:rte"
+        }
+      ]
+    },
+    {
+      "@id": "method:pre_trained_distillation_with_finetuning",
+      "@type": "mls:Method",
+      "mention": {
+        "start_char_doc": 37106,
+        "end_char_doc": 37110,
+        "prefix": "d by $S$), we show that distillation requires an in-domain transfer set. PD and",
+        "suffix": "are more robust to transfer set domain.  common $n = 100$ words. For each of th",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "PD-F",
+        "start_char_doc": 37106,
+        "end_char_doc": 37110,
+        "prefix": "d by $S$), we show that distillation requires an in-domain transfer set. PD and",
+        "suffix": "are more robust to transfer set domain.  common $n = 100$ words. For each of th",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "Three-step Pre-trained Distillation with optional final fine-tuning.",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:solvesTask": [
+        {
+          "@id": "task:model_compression"
+        },
+        {
+          "@id": "task:knowledge_distillation"
+        }
+      ],
+      "mls:subMethod": []
+    },
+    {
+      "@id": "method:pre_training_fine_tuning",
+      "@type": "mls:Method",
+      "mention": {
+        "start_char_doc": 20294,
+        "end_char_doc": 20318,
+        "prefix": "ation Unlabeled transfer data → Distillation → Compact model Large Teacher  (c)",
+        "suffix": "(PF) Unlabeled LM data → Pre-training Labeled data → Fine-tuning → Compact mode",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "pre-training+fine-tuning",
+        "start_char_doc": 2963,
+        "end_char_doc": 2987,
+        "prefix": "ge model objective. Concurrent work to ours proposes variations of the standard",
+        "suffix": "procedure, but with limited generality (Sun et al., 2019a; Sanh, 2019). We make",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "Pre-train compact models on unlabeled LM data and fine-tune on labeled tasks.",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:solvesTask": [
+        {
+          "@id": "task:language_model_pretraining"
+        },
+        {
+          "@id": "task:model_compression"
+        }
+      ],
+      "mls:subMethod": []
+    },
+    {
+      "@id": "method:masked_lm_plus_pretraining",
+      "@type": "mls:Method",
+      "mention": {
+        "start_char_doc": 4254,
+        "end_char_doc": 4260,
+        "prefix": "{D}_T$, labeled data $\\mathcal{D}_L$  1: Initialize $\\theta$ by pre-training an",
+        "suffix": "$ on $\\mathcal{D}_{LM}$ 2: **for each** $x \\in \\mathcal{D}_T$ **do** 3: Get loss",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "MLM$^+",
+        "start_char_doc": 4254,
+        "end_char_doc": 4260,
+        "prefix": "{D}_T$, labeled data $\\mathcal{D}_L$  1: Initialize $\\theta$ by pre-training an",
+        "suffix": "$ on $\\mathcal{D}_{LM}$ 2: **for each** $x \\in \\mathcal{D}_T$ **do** 3: Get loss",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "Masked language model plus next sentence pre-training objective following BERT.",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:solvesTask": [
+        {
+          "@id": "task:language_model_pretraining"
+        }
+      ],
+      "mls:subMethod": []
+    },
+    {
+      "@id": "method:task_specific_distillation",
+      "@type": "mls:Method",
+      "mention": {
+        "start_char_doc": 3850,
+        "end_char_doc": 3876,
+        "prefix": "andard training operations: masked LM (MLM) pre-training (Devlin et al., 2018),",
+        "suffix": ", and optional fine-tuning.  &lt;page_number&gt;1&lt;/page_number&gt; &lt;waterm",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "task-specific distillation",
+        "start_char_doc": 3850,
+        "end_char_doc": 3876,
+        "prefix": "andard training operations: masked LM (MLM) pre-training (Devlin et al., 2018),",
+        "suffix": ", and optional fine-tuning.  &lt;page_number&gt;1&lt;/page_number&gt; &lt;waterm",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "Distillation on unlabeled transfer data using teacher soft labels.",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:solvesTask": [
+        {
+          "@id": "task:knowledge_distillation"
+        }
+      ],
+      "mls:subMethod": []
+    },
+    {
+      "@id": "method:spearman_domain_shift",
+      "@type": "mls:Method",
+      "mention": {
+        "start_char_doc": 35827,
+        "end_char_doc": 35864,
+        "prefix": "between $\\mathcal{D}_L$ and $\\mathcal{D}_T$. We measure domain shift using the *",
+        "suffix": "* (which we refer to as *Spearman* or simply $S$), introduced as a general metri",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Spearman rank correlation coefficient",
+        "start_char_doc": 35827,
+        "end_char_doc": 35864,
+        "prefix": "between $\\mathcal{D}_L$ and $\\mathcal{D}_T$. We measure domain shift using the *",
+        "suffix": "* (which we refer to as *Spearman* or simply $S$), introduced as a general metri",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "Corpus-similarity measure for transfer-set domain shift.",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:solvesTask": [
+        {
+          "@id": "task:model_compression"
+        }
+      ],
+      "mls:subMethod": []
+    },
+    {
+      "@id": "algo:pre_trained_distillation_algorithm",
+      "@type": "mls:MLS_Algorithm",
+      "mention": {
+        "start_char_doc": 4040,
+        "end_char_doc": 4051,
+        "prefix": "gt;arXiv:1908.08962v2 [cs.CL] 25 Sep 2019&lt;/watermark&gt;  ---   ## Page 2  **",
+        "suffix": "** **Require:** student $\\theta$, teacher $\\Omega$, unlabeled LM data $\\mathcal{",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Pre-trained Distillation",
+        "start_char_doc": 1187,
+        "end_char_doc": 1211,
+        "prefix": "ledge distillation. The resulting simple, yet effective and general algorithm, *",
+        "suffix": "*, brings further improvements. Through extensive experiments, we more generally",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "Algorithm 1",
+        "start_char_doc": 4040,
+        "end_char_doc": 4051,
+        "prefix": "gt;arXiv:1908.08962v2 [cs.CL] 25 Sep 2019&lt;/watermark&gt;  ---   ## Page 2  **",
+        "suffix": "** **Require:** student $\\theta$, teacher $\\Omega$, unlabeled LM data $\\mathcal{",
+        "valueSource": "extracted"
+      },
+      "mls:pseudoCode": {
+        "value": "Initialize $\\theta$ by pre-training an MLM$^+$ on $\\mathcal{D}_{LM}$",
+        "start_char_doc": 4215,
+        "end_char_doc": 4283,
+        "prefix": "LM}$, unlabeled transfer data $\\mathcal{D}_T$, labeled data $\\mathcal{D}_L$  1:",
+        "suffix": "2: **for each** $x \\in \\mathcal{D}_T$ **do** 3: Get loss $L \\leftarrow -\\sum_y",
+        "valueSource": "extracted"
+      },
+      "mls:partOf": {
+        "@id": "method:pre_trained_distillation"
+      }
+    },
+    {
+      "@id": "model:miniature_bert_models",
+      "@type": "mls:MLS_Model",
+      "mention": {
+        "start_char_doc": 1616,
+        "end_char_doc": 1652,
+        "prefix": "lly applied on the *same* data. To accelerate future research, we will make our",
+        "suffix": "publicly available.  ## 1 INTRODUCTION  Self-supervised learning on a general-d",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "24 pre-trained miniature BERT models",
+        "start_char_doc": 1616,
+        "end_char_doc": 1652,
+        "prefix": "lly applied on the *same* data. To accelerate future research, we will make our",
+        "suffix": "publicly available.  ## 1 INTRODUCTION  Self-supervised learning on a general-d",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "Miniature BERT models released by the authors.",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:architecture": {
+        "value": "bidirectional Transformer / BERT-style",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:parameters": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:trainedOn": [],
+      "mls:evaluatedOn": []
+    },
+    {
+      "@id": "model:compact_transformer_students",
+      "@type": "mls:MLS_Model",
+      "mention": {
+        "start_char_doc": 712,
+        "end_char_doc": 726,
+        "prefix": "However, surprisingly, the simple baseline of just pre-training and fine-tuning",
+        "suffix": "has been overlooked. In this paper, we first show that pre-training remains imp",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "compact Transformer students",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:description": {
+        "value": "Grid of compact Transformer student models with varying layers and hidden size.",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:architecture": {
+        "value": "Transformer architecture",
+        "start_char_doc": 21318,
+        "end_char_doc": 21342,
+        "prefix": "thus departing from the settings used in Section 4.  All our models follow the",
+        "suffix": "(Vaswani et al., 2017) and input processing used in BERT (Devlin et al., 2018).",
+        "valueSource": "extracted"
+      },
+      "mls:parameters": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:trainedOn": [],
+      "mls:evaluatedOn": [],
+      "mls:hasHyperParameter": [
+        {
+          "@id": "hp:student_layers_grid"
+        },
+        {
+          "@id": "hp:hidden_size_grid"
+        },
+        {
+          "@id": "hp:self_attention_heads_h_over_64"
+        },
+        {
+          "@id": "hp:feed_forward_size_4h"
+        }
+      ]
+    },
+    {
+      "@id": "model:transformer_tiny",
+      "@type": "mls:MLS_Model",
+      "mention": {
+        "start_char_doc": 10348,
+        "end_char_doc": 10368,
+        "prefix": "), and Base (L=12, H=768).  we investigate an array of 24 model sizes, from our",
+        "suffix": "(4m parameters) all the way up to Transformer$_{BASE}$ (110m parameters)$^1$. T",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Transformer$_{TINY}$",
+        "start_char_doc": 10348,
+        "end_char_doc": 10368,
+        "prefix": "), and Base (L=12, H=768).  we investigate an array of 24 model sizes, from our",
+        "suffix": "(4m parameters) all the way up to Transformer$_{BASE}$ (110m parameters)$^1$. T",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "Smallest student model in the grid.",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:architecture": {
+        "value": "2L/128H",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:parameters": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:trainedOn": [],
+      "mls:evaluatedOn": []
+    },
+    {
+      "@id": "model:transformer_mini",
+      "@type": "mls:MLS_Model",
+      "mention": {
+        "start_char_doc": 32987,
+        "end_char_doc": 33013,
+        "prefix": ", with particularly remarkable results on the Amazon Book Reviews corpus, where",
+        "suffix": "recovers the accuracy of the teacher at a 31x decrease in model size and 16x sp",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Transformer<sub>MINI</sub>",
+        "start_char_doc": 32987,
+        "end_char_doc": 33013,
+        "prefix": ", with particularly remarkable results on the Amazon Book Reviews corpus, where",
+        "suffix": "recovers the accuracy of the teacher at a 31x decrease in model size and 16x sp",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "Compact student model highlighted in analysis.",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:architecture": {
+        "value": "4L/256H",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:parameters": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:trainedOn": [],
+      "mls:evaluatedOn": []
+    },
+    {
+      "@id": "model:transformer_small",
+      "@type": "mls:MLS_Model",
+      "mention": {
+        "start_char_doc": 10230,
+        "end_char_doc": 10248,
+        "prefix": "ive models (underlined) for most figures: Tiny (L=2, H=128), Mini (L=4, H=256),",
+        "suffix": ", Medium (L=8, H=512), and Base (L=12, H=768).  we investigate an array of 24 mo",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Transformer$_{SMALL}$",
+        "start_char_doc": 22058,
+        "end_char_doc": 22079,
+        "prefix": "s 3 times smaller and 1.25 times faster than the teacher; the cheapest student,",
+        "suffix": ", is 77 times smaller and 65 times faster. For readability, we report results on",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "Compact student model highlighted in analysis.",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:architecture": {
+        "value": "4L/512H",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:parameters": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:trainedOn": [],
+      "mls:evaluatedOn": []
+    },
+    {
+      "@id": "model:transformer_medium",
+      "@type": "mls:MLS_Model",
+      "mention": {
+        "start_char_doc": 10250,
+        "end_char_doc": 10269,
+        "prefix": "ed) for most figures: Tiny (L=2, H=128), Mini (L=4, H=256), Small (L=4, H=512),",
+        "suffix": ", and Base (L=12, H=768).  we investigate an array of 24 model sizes, from our T",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Transformer$_{MEDIUM}$",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:description": {
+        "value": "Compact student model highlighted in analysis.",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:architecture": {
+        "value": "8L/512H",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:parameters": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:trainedOn": [],
+      "mls:evaluatedOn": []
+    },
+    {
+      "@id": "model:transformer_base",
+      "@type": "mls:MLS_Model",
+      "mention": {
+        "start_char_doc": 10403,
+        "end_char_doc": 10423,
+        "prefix": "24 model sizes, from our Transformer$_{TINY}$ (4m parameters) all the way up to",
+        "suffix": "(110m parameters)$^1$. The student model sizes and their relative speed-up comp",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Transformer$_{BASE}$",
+        "start_char_doc": 10403,
+        "end_char_doc": 10423,
+        "prefix": "24 model sizes, from our Transformer$_{TINY}$ (4m parameters) all the way up to",
+        "suffix": "(110m parameters)$^1$. The student model sizes and their relative speed-up comp",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "Largest student model; same architecture as BERT_BASE.",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:architecture": {
+        "value": "12L/768H",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:parameters": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:trainedOn": [],
+      "mls:evaluatedOn": []
+    },
+    {
+      "@id": "model:bert_base_teacher",
+      "@type": "mls:MLS_Model",
+      "mention": {
+        "start_char_doc": 7985,
+        "end_char_doc": 8016,
+        "prefix": "t about the best architectural choice. In Section 4, the teacher is pre-trained",
+        "suffix": "on labeled end-task data. In Section 6, we use BERT$_{\\text{LARGE}}$ instead.",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "BERT$_{\\text{BASE}}$ teacher",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:description": {
+        "value": "12-layer BERT_BASE teacher used in the concurrent-work comparison.",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:architecture": {
+        "value": "12/768",
+        "start_char_doc": 17172,
+        "end_char_doc": 17178,
+        "prefix": "le>  Table 3: **Model Quality**. All students are 6/768 BERT models, trained by",
+        "suffix": "BERT teachers. Concurrent results are cited as reported by their authors. Our d",
+        "valueSource": "extracted"
+      },
+      "mls:parameters": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:trainedOn": [],
+      "mls:evaluatedOn": []
+    },
+    {
+      "@id": "model:bert_large_teacher",
+      "@type": "mls:MLS_Model",
+      "mention": {
+        "start_char_doc": 9914,
+        "end_char_doc": 9928,
+        "prefix": ">     <td>2.43</td>     <td>1.25</td>   </tr> </table> (b) Relative speedup wrt",
+        "suffix": "on TPU v2  Table 1: Student models with various numbers of transformer layers (",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "BERT$_{LARGE}$",
+        "start_char_doc": 9914,
+        "end_char_doc": 9928,
+        "prefix": ">     <td>2.43</td>     <td>1.25</td>   </tr> </table> (b) Relative speedup wrt",
+        "suffix": "on TPU v2  Table 1: Student models with various numbers of transformer layers (",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "24L/1024H teacher with 340M parameters.",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:architecture": {
+        "value": "24L/1024H",
+        "start_char_doc": 21805,
+        "end_char_doc": 21814,
+        "prefix": "of the Transformer architectures.  The teacher, BERT$_{LARGE}$, has dimensions",
+        "suffix": "and 340M parameters. We experiment with 24 student models, with sizes and relat",
+        "valueSource": "extracted"
+      },
+      "mls:parameters": {
+        "value": "340M parameters",
+        "start_char_doc": 21819,
+        "end_char_doc": 21834,
+        "prefix": "ormer architectures.  The teacher, BERT$_{LARGE}$, has dimensions 24L/1024H and",
+        "suffix": ". We experiment with 24 student models, with sizes and relative latencies listed",
+        "valueSource": "extracted"
+      },
+      "mls:trainedOn": [],
+      "mls:evaluatedOn": [],
+      "mls:hasHyperParameter": [
+        {
+          "@id": "hp:teacher_bert_large_layers"
+        },
+        {
+          "@id": "hp:teacher_bert_large_hidden"
+        },
+        {
+          "@id": "hp:teacher_bert_large_parameters"
+        }
+      ]
+    },
+    {
+      "@id": "dataset:bookcorpus_english_wikipedia",
+      "@type": "mls:MLS_Dataset",
+      "mention": {
+        "start_char_doc": 27015,
+        "end_char_doc": 27045,
+        "prefix": "of Amazon Product Data. Unless otherwise stated, $\\mathcal{D}_{LM}$ consists of",
+        "suffix": ".  ## 6 Analysis  In this section, we conduct experiments that help us understan",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "BookCorpus & English Wikipedia",
+        "start_char_doc": 27015,
+        "end_char_doc": 27045,
+        "prefix": "of Amazon Product Data. Unless otherwise stated, $\\mathcal{D}_{LM}$ consists of",
+        "suffix": ".  ## 6 Analysis  In this section, we conduct experiments that help us understan",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "Unlabeled LM pre-training corpus.",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:numInstances": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:modality": {
+        "value": "text",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:usedForTask": {
+        "@id": "task:language_model_pretraining"
+      },
+      "prov-derivedFrom": [
+        {
+          "@id": "datasource:bookcorpus"
+        },
+        {
+          "@id": "datasource:english_wikipedia"
+        }
+      ]
+    },
+    {
+      "@id": "dataset:amazon_book_reviews",
+      "@type": "mls:MLS_Dataset",
+      "mention": {
+        "start_char_doc": 24868,
+        "end_char_doc": 24887,
+        "prefix": "polarities of opinions it contains. We perform 3-way document classification on",
+        "suffix": "(He & McAuley, 2016). Its considerable size (8m) allows us to closely follow th",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Amazon Book Reviews",
+        "start_char_doc": 24868,
+        "end_char_doc": 24887,
+        "prefix": "polarities of opinions it contains. We perform 3-way document classification on",
+        "suffix": "(He & McAuley, 2016). Its considerable size (8m) allows us to closely follow th",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "3-way document sentiment classification dataset and transfer source.",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:numInstances": {
+        "value": "8m",
+        "start_char_doc": 24933,
+        "end_char_doc": 24935,
+        "prefix": "ssification on Amazon Book Reviews (He & McAuley, 2016). Its considerable size (",
+        "suffix": ") allows us to closely follow the standard distillation setting, where there is",
+        "valueSource": "extracted"
+      },
+      "mls:modality": {
+        "value": "text",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:usedForTask": {
+        "@id": "task:sentiment_classification"
+      },
+      "prov-derivedFrom": {
+        "@id": "datasource:amazon_product_data"
+      }
+    },
+    {
+      "@id": "dataset:amazon_movie_reviews",
+      "@type": "mls:MLS_Dataset",
+      "mention": {
+        "start_char_doc": 25311,
+        "end_char_doc": 25331,
+        "prefix": "r work on the GLUE leaderboard (Wang et al., 2018). We use whole documents from",
+        "suffix": "(1.7m) as unlabeled transfer data (note that SST-2 consists of single sentences",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Amazon Movie Reviews",
+        "start_char_doc": 25311,
+        "end_char_doc": 25331,
+        "prefix": "r work on the GLUE leaderboard (Wang et al., 2018). We use whole documents from",
+        "suffix": "(1.7m) as unlabeled transfer data (note that SST-2 consists of single sentences",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "Whole-document unlabeled transfer data for SST-2.",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:numInstances": {
+        "value": "1.7m",
+        "start_char_doc": 25333,
+        "end_char_doc": 25337,
+        "prefix": "derboard (Wang et al., 2018). We use whole documents from Amazon Movie Reviews (",
+        "suffix": ") as unlabeled transfer data (note that SST-2 consists of single sentences).  **",
+        "valueSource": "extracted"
+      },
+      "mls:modality": {
+        "value": "text",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:usedForTask": {
+        "@id": "task:sentiment_classification"
+      },
+      "prov-derivedFrom": {
+        "@id": "datasource:amazon_product_data"
+      }
+    },
+    {
+      "@id": "dataset:sst_2",
+      "@type": "mls:MLS_Dataset",
+      "mention": {
+        "start_char_doc": 15066,
+        "end_char_doc": 15071,
+        "prefix": "ata.  <table>   <thead>     <tr>       <th></th>       <th>Model</th>       <th>",
+        "suffix": "<br>(acc)</th>       <th>MRPC<br>(f1/acc)</th>       <th>QQP<br>(f1/acc)</th>",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "SST-2",
+        "start_char_doc": 15066,
+        "end_char_doc": 15071,
+        "prefix": "ata.  <table>   <thead>     <tr>       <th></th>       <th>Model</th>       <th>",
+        "suffix": "<br>(acc)</th>       <th>MRPC<br>(f1/acc)</th>       <th>QQP<br>(f1/acc)</th>",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "Binary sentence sentiment classification dataset from GLUE.",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:numInstances": {
+        "value": "68k",
+        "start_char_doc": 26560,
+        "end_char_doc": 26563,
+        "prefix": "5k)</td>       <td>NLI* (1.3m samples)</td>     </tr>     <tr>       <td>SST-2 (",
+        "suffix": ")</td>       <td>Movie Reviews* (1.7m samples)</td>     </tr>     <tr>       <td",
+        "valueSource": "extracted"
+      },
+      "mls:modality": {
+        "value": "text",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:usedForTask": {
+        "@id": "task:sentiment_classification"
+      }
+    },
+    {
+      "@id": "dataset:mnli",
+      "@type": "mls:MLS_Dataset",
+      "mention": {
+        "start_char_doc": 15159,
+        "end_char_doc": 15163,
+        "prefix": ")</th>       <th>MRPC<br>(f1/acc)</th>       <th>QQP<br>(f1/acc)</th>       <th>",
+        "suffix": "<br>(acc m/mm)</th>       <th>QNLI<br>(acc)</th>       <th>RTE<br>(acc)</th>",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "MNLI",
+        "start_char_doc": 15159,
+        "end_char_doc": 15163,
+        "prefix": ")</th>       <th>MRPC<br>(f1/acc)</th>       <th>QQP<br>(f1/acc)</th>       <th>",
+        "suffix": "<br>(acc m/mm)</th>       <th>QNLI<br>(acc)</th>       <th>RTE<br>(acc)</th>",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "Natural language inference target dataset.",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:numInstances": {
+        "value": "390k",
+        "start_char_doc": 26398,
+        "end_char_doc": 26402,
+        "prefix": "($\\mathcal{D}_T$)</th>     </tr>   </thead>   <tbody>     <tr>       <td>MNLI (",
+        "suffix": ")</td>       <td>NLI* (1.3m samples)</td>     </tr>     <tr>       <td>RTE (2.5k",
+        "valueSource": "extracted"
+      },
+      "mls:modality": {
+        "value": "text",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:usedForTask": {
+        "@id": "task:natural_language_inference"
+      }
+    },
+    {
+      "@id": "dataset:snli",
+      "@type": "mls:MLS_Dataset",
+      "mention": {
+        "start_char_doc": 25863,
+        "end_char_doc": 25867,
+        "prefix": "to obtain, we supplement $\\mathcal{D}_T$ with two other sentence-pair datasets:",
+        "suffix": "(Bowman et al., 2015) and QQP (Chen et al., 2018).  **Textual entailment** is s",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "SNLI",
+        "start_char_doc": 25863,
+        "end_char_doc": 25867,
+        "prefix": "to obtain, we supplement $\\mathcal{D}_T$ with two other sentence-pair datasets:",
+        "suffix": "(Bowman et al., 2015) and QQP (Chen et al., 2018).  **Textual entailment** is s",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "Sentence-pair dataset included in NLI* transfer data.",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:numInstances": {
+        "value": "570k",
+        "start_char_doc": 26883,
+        "end_char_doc": 26887,
+        "prefix": "hard labels are discarded. NLI* refers to the collection of MNLI (390k), SNLI (",
+        "suffix": ") and QQP (400k). The reviews datasets are part of Amazon Product Data. Unless o",
+        "valueSource": "extracted"
+      },
+      "mls:modality": {
+        "value": "text",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:usedForTask": {
+        "@id": "task:natural_language_inference"
+      }
+    },
+    {
+      "@id": "dataset:qqp",
+      "@type": "mls:MLS_Dataset",
+      "mention": {
+        "start_char_doc": 15128,
+        "end_char_doc": 15131,
+        "prefix": "el</th>       <th>SST-2<br>(acc)</th>       <th>MRPC<br>(f1/acc)</th>       <th>",
+        "suffix": "<br>(f1/acc)</th>       <th>MNLI<br>(acc m/mm)</th>       <th>QNLI<br>(acc)</th>",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "QQP",
+        "start_char_doc": 15128,
+        "end_char_doc": 15131,
+        "prefix": "el</th>       <th>SST-2<br>(acc)</th>       <th>MRPC<br>(f1/acc)</th>       <th>",
+        "suffix": "<br>(f1/acc)</th>       <th>MNLI<br>(acc m/mm)</th>       <th>QNLI<br>(acc)</th>",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "Quora Question Pairs included in NLI* transfer data and GLUE evaluation.",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:numInstances": {
+        "value": "400k",
+        "start_char_doc": 26898,
+        "end_char_doc": 26902,
+        "prefix": "e discarded. NLI* refers to the collection of MNLI (390k), SNLI (570k) and QQP (",
+        "suffix": "). The reviews datasets are part of Amazon Product Data. Unless otherwise stated",
+        "valueSource": "extracted"
+      },
+      "mls:modality": {
+        "value": "text",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:usedForTask": {
+        "@id": "task:natural_language_inference"
+      }
+    },
+    {
+      "@id": "dataset:nli_star",
+      "@type": "mls:MLS_Dataset",
+      "mention": {
+        "start_char_doc": 26419,
+        "end_char_doc": 26423,
+        "prefix": "h>     </tr>   </thead>   <tbody>     <tr>       <td>MNLI (390k)</td>       <td>",
+        "suffix": "(1.3m samples)</td>     </tr>     <tr>       <td>RTE (2.5k)</td>       <td>NLI*",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "NLI*",
+        "start_char_doc": 26419,
+        "end_char_doc": 26423,
+        "prefix": "h>     </tr>   </thead>   <tbody>     <tr>       <td>MNLI (390k)</td>       <td>",
+        "suffix": "(1.3m samples)</td>     </tr>     <tr>       <td>RTE (2.5k)</td>       <td>NLI*",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "Collection of MNLI, SNLI and QQP used as unlabeled transfer data.",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:numInstances": {
+        "value": "1.3m samples",
+        "start_char_doc": 26425,
+        "end_char_doc": 26437,
+        "prefix": "</tr>   </thead>   <tbody>     <tr>       <td>MNLI (390k)</td>       <td>NLI* (",
+        "suffix": ")</td>     </tr>     <tr>       <td>RTE (2.5k)</td>       <td>NLI* (1.3m samples",
+        "valueSource": "extracted"
+      },
+      "mls:modality": {
+        "value": "text",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:usedForTask": {
+        "@id": "task:natural_language_inference"
+      }
+    },
+    {
+      "@id": "dataset:rte",
+      "@type": "mls:MLS_Dataset",
+      "mention": {
+        "start_char_doc": 15222,
+        "end_char_doc": 15225,
+        "prefix": ")</th>       <th>MNLI<br>(acc m/mm)</th>       <th>QNLI<br>(acc)</th>       <th>",
+        "suffix": "<br>(acc)</th>       <th>Meta<br>Score</th>     </tr>   </thead>   <tbody>     <",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "RTE",
+        "start_char_doc": 15222,
+        "end_char_doc": 15225,
+        "prefix": ")</th>       <th>MNLI<br>(acc m/mm)</th>       <th>QNLI<br>(acc)</th>       <th>",
+        "suffix": "<br>(acc)</th>       <th>Meta<br>Score</th>     </tr>   </thead>   <tbody>     <",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "Binary textual entailment dataset.",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:numInstances": {
+        "value": "2.5k",
+        "start_char_doc": 26478,
+        "end_char_doc": 26482,
+        "prefix": "390k)</td>       <td>NLI* (1.3m samples)</td>     </tr>     <tr>       <td>RTE (",
+        "suffix": ")</td>       <td>NLI* (1.3m samples)</td>     </tr>     <tr>       <td>SST-2 (68",
+        "valueSource": "extracted"
+      },
+      "mls:modality": {
+        "value": "text",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:usedForTask": {
+        "@id": "task:textual_entailment"
+      }
+    },
+    {
+      "@id": "dataset:mrpc",
+      "@type": "mls:MLS_Dataset",
+      "mention": {
+        "start_char_doc": 15096,
+        "end_char_doc": 15100,
+        "prefix": "r>       <th></th>       <th>Model</th>       <th>SST-2<br>(acc)</th>       <th>",
+        "suffix": "<br>(f1/acc)</th>       <th>QQP<br>(f1/acc)</th>       <th>MNLI<br>(acc m/mm)</t",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "MRPC",
+        "start_char_doc": 15096,
+        "end_char_doc": 15100,
+        "prefix": "r>       <th></th>       <th>Model</th>       <th>SST-2<br>(acc)</th>       <th>",
+        "suffix": "<br>(f1/acc)</th>       <th>QQP<br>(f1/acc)</th>       <th>MNLI<br>(acc m/mm)</t",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "GLUE paraphrase task used in model-quality comparison.",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:numInstances": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:modality": {
+        "value": "text",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:usedForTask": {
+        "@id": "task:natural_language_inference"
+      }
+    },
+    {
+      "@id": "dataset:qnli",
+      "@type": "mls:MLS_Dataset",
+      "mention": {
+        "start_char_doc": 15193,
+        "end_char_doc": 15197,
+        "prefix": "/th>       <th>QQP<br>(f1/acc)</th>       <th>MNLI<br>(acc m/mm)</th>       <th>",
+        "suffix": "<br>(acc)</th>       <th>RTE<br>(acc)</th>       <th>Meta<br>Score</th>     </tr",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "QNLI",
+        "start_char_doc": 15193,
+        "end_char_doc": 15197,
+        "prefix": "/th>       <th>QQP<br>(f1/acc)</th>       <th>MNLI<br>(acc m/mm)</th>       <th>",
+        "suffix": "<br>(acc)</th>       <th>RTE<br>(acc)</th>       <th>Meta<br>Score</th>     </tr",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "GLUE question-answering NLI task used in model-quality comparison.",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:numInstances": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:modality": {
+        "value": "text",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:usedForTask": {
+        "@id": "task:natural_language_inference"
+      }
+    },
+    {
+      "@id": "dataset:glue_selected_6",
+      "@type": "mls:MLS_Dataset",
+      "mention": {
+        "start_char_doc": 20557,
+        "end_char_doc": 20569,
+        "prefix": "sis (Section 6).  the labeled set ($D_T = D_L$). Table 3 reports results on the",
+        "suffix": "selected by Sun et al. (2019a) and shows that, on average, PD performs best. Fo",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "6 GLUE tasks",
+        "start_char_doc": 20557,
+        "end_char_doc": 20569,
+        "prefix": "sis (Section 6).  the labeled set ($D_T = D_L$). Table 3 reports results on the",
+        "suffix": "selected by Sun et al. (2019a) and shows that, on average, PD performs best. Fo",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "Six GLUE tasks selected by Sun et al. for direct comparison.",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:numInstances": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:modality": {
+        "value": "text",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:usedForTask": {
+        "@id": "task:model_compression"
+      }
+    },
+    {
+      "@id": "datasource:amazon_product_data",
+      "@type": "mls:DataSource",
+      "mention": {
+        "start_char_doc": 26938,
+        "end_char_doc": 26957,
+        "prefix": "on of MNLI (390k), SNLI (570k) and QQP (400k). The reviews datasets are part of",
+        "suffix": ". Unless otherwise stated, $\\mathcal{D}_{LM}$ consists of BookCorpus & English W",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Amazon Product Data",
+        "start_char_doc": 26938,
+        "end_char_doc": 26957,
+        "prefix": "on of MNLI (390k), SNLI (570k) and QQP (400k). The reviews datasets are part of",
+        "suffix": ". Unless otherwise stated, $\\mathcal{D}_{LM}$ consists of BookCorpus & English W",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "review corpus",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:url": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "datasource:glue_leaderboard",
+      "@type": "mls:DataSource",
+      "mention": {
+        "start_char_doc": 17678,
+        "end_char_doc": 17694,
+        "prefix": "omputed on 6 tasks only, and is therefore <u>not</u> directly comparable to the",
+        "suffix": ".  Figure 3: Pre-trained Distillation (PD) and concurrent work on model compress",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "GLUE leaderboard",
+        "start_char_doc": 17678,
+        "end_char_doc": 17694,
+        "prefix": "omputed on 6 tasks only, and is therefore <u>not</u> directly comparable to the",
+        "suffix": ".  Figure 3: Pre-trained Distillation (PD) and concurrent work on model compress",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "benchmark",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:url": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "datasource:cloud_tpus",
+      "@type": "mls:DataSource",
+      "mention": {
+        "start_char_doc": 10066,
+        "end_char_doc": 10076,
+        "prefix": "f transformer layers (L) and hidden embedding sizes (H). Latency is computed on",
+        "suffix": "with batch size 1 and sequence length 512. For readability, we focus on five mo",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Cloud TPUs",
+        "start_char_doc": 10066,
+        "end_char_doc": 10076,
+        "prefix": "f transformer layers (L) and hidden embedding sizes (H). Latency is computed on",
+        "suffix": "with batch size 1 and sequence length 512. For readability, we focus on five mo",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "hardware platform",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:url": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "datasource:bookcorpus",
+      "@type": "mls:DataSource",
+      "mention": {
+        "start_char_doc": 27015,
+        "end_char_doc": 27025,
+        "prefix": "of Amazon Product Data. Unless otherwise stated, $\\mathcal{D}_{LM}$ consists of",
+        "suffix": "& English Wikipedia.  ## 6 Analysis  In this section, we conduct experiments th",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "BookCorpus",
+        "start_char_doc": 27015,
+        "end_char_doc": 27025,
+        "prefix": "of Amazon Product Data. Unless otherwise stated, $\\mathcal{D}_{LM}$ consists of",
+        "suffix": "& English Wikipedia.  ## 6 Analysis  In this section, we conduct experiments th",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "text corpus",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:url": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "datasource:english_wikipedia",
+      "@type": "mls:DataSource",
+      "mention": {
+        "start_char_doc": 27028,
+        "end_char_doc": 27045,
+        "prefix": "duct Data. Unless otherwise stated, $\\mathcal{D}_{LM}$ consists of BookCorpus &",
+        "suffix": ".  ## 6 Analysis  In this section, we conduct experiments that help us understan",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "English Wikipedia",
+        "start_char_doc": 27028,
+        "end_char_doc": 27045,
+        "prefix": "duct Data. Unless otherwise stated, $\\mathcal{D}_{LM}$ consists of BookCorpus &",
+        "suffix": ".  ## 6 Analysis  In this section, we conduct experiments that help us understan",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "encyclopedic text corpus",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:url": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "step:mlm_plus_pretraining",
+      "@type": "mls:DataProcessingStep",
+      "mention": {
+        "start_char_doc": 24261,
+        "end_char_doc": 24327,
+        "prefix": "ge_number&gt;5&lt;/page_number&gt;  ---   ## Page 6  Following BERT, we perform",
+        "suffix": "(collectively referred to as MLM$^+$ from here on). The resulting model is fine",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "MLM+ pre-training",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:description": {
+        "value": "pre-training with the masked LM (MLM) and next sentence objectives",
+        "start_char_doc": 24261,
+        "end_char_doc": 24327,
+        "prefix": "ge_number&gt;5&lt;/page_number&gt;  ---   ## Page 6  Following BERT, we perform",
+        "suffix": "(collectively referred to as MLM$^+$ from here on). The resulting model is fine",
+        "valueSource": "extracted"
+      },
+      "mls:input": [
+        {
+          "@id": "dataset:bookcorpus_english_wikipedia"
+        }
+      ],
+      "mls:output": [
+        {
+          "@id": "model:compact_transformer_students"
+        }
+      ]
+    },
+    {
+      "@id": "step:teacher_soft_label_generation",
+      "@type": "mls:DataProcessingStep",
+      "mention": {
+        "start_char_doc": 22867,
+        "end_char_doc": 22934,
+        "prefix": "pressive student. For classification tasks, distillation exposes the student to",
+        "suffix": "$p_l = \\text{softmax}(z_l/T)$, where $p_l$ is the output probability for class",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "teacher soft-label generation",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:description": {
+        "value": "soft labels, namely the class probabilities produced by the teacher",
+        "start_char_doc": 22867,
+        "end_char_doc": 22934,
+        "prefix": "pressive student. For classification tasks, distillation exposes the student to",
+        "suffix": "$p_l = \\text{softmax}(z_l/T)$, where $p_l$ is the output probability for class",
+        "valueSource": "extracted"
+      },
+      "mls:input": [
+        {
+          "@id": "model:bert_large_teacher"
+        }
+      ],
+      "mls:output": [
+        {
+          "@id": "dataset:nli_star"
+        },
+        {
+          "@id": "dataset:amazon_book_reviews"
+        },
+        {
+          "@id": "dataset:amazon_movie_reviews"
+        }
+      ]
+    },
+    {
+      "@id": "step:discard_hard_labels_for_transfer",
+      "@type": "mls:DataProcessingStep",
+      "mention": {
+        "start_char_doc": 26804,
+        "end_char_doc": 26829,
+        "prefix": "tbody> </table>  Table 4: **Datasets used for analysis.** A star indicates that",
+        "suffix": ". NLI* refers to the collection of MNLI (390k), SNLI (570k) and QQP (400k). The",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "discard hard labels for transfer",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:description": {
+        "value": "hard labels are discarded",
+        "start_char_doc": 26804,
+        "end_char_doc": 26829,
+        "prefix": "tbody> </table>  Table 4: **Datasets used for analysis.** A star indicates that",
+        "suffix": ". NLI* refers to the collection of MNLI (390k), SNLI (570k) and QQP (400k). The",
+        "valueSource": "extracted"
+      },
+      "mls:input": [
+        {
+          "@id": "dataset:nli_star"
+        },
+        {
+          "@id": "dataset:amazon_book_reviews"
+        },
+        {
+          "@id": "dataset:amazon_movie_reviews"
+        }
+      ],
+      "mls:output": []
+    },
+    {
+      "@id": "step:domain_shift_ranking",
+      "@type": "mls:DataProcessingStep",
+      "mention": {
+        "start_char_doc": 36193,
+        "end_char_doc": 36224,
+        "prefix": "rriff & Rose, 1998): for two datasets $X$ and $Y$, we compute the corresponding",
+        "suffix": "of their most  &lt;page_number&gt;8&lt;/page_number&gt;  ---   ## Page 9  Amazo",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "domain-shift Spearman ranking",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:description": {
+        "value": "frequency ranks $F_X$ and $F_Y$",
+        "start_char_doc": 36193,
+        "end_char_doc": 36224,
+        "prefix": "rriff & Rose, 1998): for two datasets $X$ and $Y$, we compute the corresponding",
+        "suffix": "of their most  &lt;page_number&gt;8&lt;/page_number&gt;  ---   ## Page 9  Amazo",
+        "valueSource": "extracted"
+      },
+      "mls:input": [
+        {
+          "@id": "dataset:amazon_book_reviews"
+        }
+      ],
+      "mls:output": []
+    },
+    {
+      "@id": "env:cloud_tpu_v2",
+      "@type": "mls:Environment",
+      "mention": {
+        "start_char_doc": 9932,
+        "end_char_doc": 9938,
+        "prefix": ">     <td>1.25</td>   </tr> </table> (b) Relative speedup wrt BERT$_{LARGE}$ on",
+        "suffix": "Table 1: Student models with various numbers of transformer layers (L) and hid",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Cloud TPU v2",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hardwareSpecs": {
+        "value": "Cloud TPUs",
+        "start_char_doc": 10066,
+        "end_char_doc": 10076,
+        "prefix": "f transformer layers (L) and hidden embedding sizes (H). Latency is computed on",
+        "suffix": "with batch size 1 and sequence length 512. For readability, we focus on five mo",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "Latency is computed on Cloud TPUs with batch size 1 and sequence length 512",
+        "start_char_doc": 10043,
+        "end_char_doc": 10118,
+        "prefix": "with various numbers of transformer layers (L) and hidden embedding sizes (H).",
+        "suffix": ". For readability, we focus on five models (underlined) for most figures: Tiny (",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "impl:bert_transformer_experiments",
+      "@type": "mls:MLS_Implementation",
+      "mention": {
+        "start_char_doc": 1641,
+        "end_char_doc": 1645,
+        "prefix": "data. To accelerate future research, we will make our 24 pre-trained miniature",
+        "suffix": "models publicly available.  ## 1 INTRODUCTION  Self-supervised learning on a ge",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "BERT-style Transformer experiments",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:framework": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:codeRepository": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:runsIn": {
+        "@id": "env:cloud_tpu_v2"
+      }
+    },
+    {
+      "@id": "hp:student_layers_grid",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 8489,
+        "end_char_doc": 8492,
+        "prefix": "<th>H=256</th>     <th>H=512</th>     <th>H=768</th>   </tr>   <tr>     <td>",
+        "suffix": "</td>     <td>4.4</td>     <td>9.7</td>     <td>22.8</td>     <td>39.2</td>   </",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Student layer grid",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Architecture",
+      "hpType": "NumLayers",
+      "uncertain": false,
+      "mls:hasValue": {
+        "value": "L=2, L=4, L=6, L=8, L=10, L=12",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:unit": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:hidden_size_grid",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 8398,
+        "end_char_doc": 8403,
+        "prefix": "gt;2&lt;/page_number&gt;  ---   ## Page 3  <table>   <tr>     <th></th>     <th>",
+        "suffix": "</th>     <th>H=256</th>     <th>H=512</th>     <th>H=768</th>   </tr>   <tr>",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Hidden embedding size grid",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Architecture",
+      "hpType": "HiddenSize",
+      "uncertain": false,
+      "mls:hasValue": {
+        "value": "H=128, H=256, H=512, H=768",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:unit": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:self_attention_heads_h_over_64",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 21606,
+        "end_char_doc": 21610,
+        "prefix": "by their $L/H$ dimensions. We always fix the number of self-attention heads to $",
+        "suffix": "$ and the feed-forward/filter size to $4H$. The end-task models are obtained by",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Self-attention heads",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Architecture",
+      "hpType": "AttentionHeads",
+      "uncertain": false,
+      "mls:hasValue": {
+        "value": "H/64",
+        "start_char_doc": 21606,
+        "end_char_doc": 21610,
+        "prefix": "by their $L/H$ dimensions. We always fix the number of self-attention heads to $",
+        "suffix": "$ and the feed-forward/filter size to $4H$. The end-task models are obtained by",
+        "valueSource": "extracted"
+      },
+      "mls:unit": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:feed_forward_size_4h",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 21649,
+        "end_char_doc": 21651,
+        "prefix": "e number of self-attention heads to $H/64$ and the feed-forward/filter size to $",
+        "suffix": "$. The end-task models are obtained by stacking a linear classifier on top of th",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Feed-forward/filter size",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Architecture",
+      "hpType": "HiddenSize",
+      "uncertain": false,
+      "mls:hasValue": {
+        "value": "4H",
+        "start_char_doc": 21649,
+        "end_char_doc": 21651,
+        "prefix": "e number of self-attention heads to $H/64$ and the feed-forward/filter size to $",
+        "suffix": "$. The end-task models are obtained by stacking a linear classifier on top of th",
+        "valueSource": "extracted"
+      },
+      "mls:unit": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:teacher_bert_large_layers",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 21805,
+        "end_char_doc": 21814,
+        "prefix": "of the Transformer architectures.  The teacher, BERT$_{LARGE}$, has dimensions",
+        "suffix": "and 340M parameters. We experiment with 24 student models, with sizes and relat",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "BERT_LARGE teacher layers",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Architecture",
+      "hpType": "NumLayers",
+      "uncertain": false,
+      "mls:hasValue": {
+        "value": "24L",
+        "start_char_doc": 21805,
+        "end_char_doc": 21808,
+        "prefix": "of the Transformer architectures.  The teacher, BERT$_{LARGE}$, has dimensions",
+        "suffix": "/1024H and 340M parameters. We experiment with 24 student models, with sizes and",
+        "valueSource": "extracted"
+      },
+      "mls:unit": {
+        "value": "layers",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:teacher_bert_large_hidden",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 21805,
+        "end_char_doc": 21814,
+        "prefix": "of the Transformer architectures.  The teacher, BERT$_{LARGE}$, has dimensions",
+        "suffix": "and 340M parameters. We experiment with 24 student models, with sizes and relat",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "BERT_LARGE teacher hidden size",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Architecture",
+      "hpType": "HiddenSize",
+      "uncertain": false,
+      "mls:hasValue": {
+        "value": "1024H",
+        "start_char_doc": 21809,
+        "end_char_doc": 21814,
+        "prefix": "the Transformer architectures.  The teacher, BERT$_{LARGE}$, has dimensions 24L/",
+        "suffix": "and 340M parameters. We experiment with 24 student models, with sizes and relat",
+        "valueSource": "extracted"
+      },
+      "mls:unit": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:teacher_bert_large_parameters",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 21819,
+        "end_char_doc": 21834,
+        "prefix": "ormer architectures.  The teacher, BERT$_{LARGE}$, has dimensions 24L/1024H and",
+        "suffix": ". We experiment with 24 student models, with sizes and relative latencies listed",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "BERT_LARGE teacher parameters",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Architecture",
+      "hpType": "UnknownArchitectureHP",
+      "uncertain": true,
+      "mls:hasValue": {
+        "value": "340M",
+        "start_char_doc": 21819,
+        "end_char_doc": 21823,
+        "prefix": "ormer architectures.  The teacher, BERT$_{LARGE}$, has dimensions 24L/1024H and",
+        "suffix": "parameters. We experiment with 24 student models, with sizes and relative laten",
+        "valueSource": "extracted"
+      },
+      "mls:unit": {
+        "value": "parameters",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:comparison_student_layers",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 19885,
+        "end_char_doc": 19905,
+        "prefix": "ed in the two studies mentioned above. We perform Pre-trained Distillation on a",
+        "suffix": "with task supervision from a 12-layer BERT<sub>BASE</sub> teacher, using embedd",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Comparison student layers",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Architecture",
+      "hpType": "NumLayers",
+      "uncertain": false,
+      "mls:hasValue": {
+        "value": "6-layer",
+        "start_char_doc": 19885,
+        "end_char_doc": 19892,
+        "prefix": "ed in the two studies mentioned above. We perform Pre-trained Distillation on a",
+        "suffix": "BERT student with task supervision from a 12-layer BERT<sub>BASE</sub> teacher,",
+        "valueSource": "extracted"
+      },
+      "mls:unit": {
+        "value": "layers",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:comparison_student_embedding_size",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 19979,
+        "end_char_doc": 19997,
+        "prefix": "tudent with task supervision from a 12-layer BERT<sub>BASE</sub> teacher, using",
+        "suffix": "for both models. For distillation, our transfer set coincides with  &lt;page_nu",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Comparison student embedding size",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Architecture",
+      "hpType": "HiddenSize",
+      "uncertain": false,
+      "mls:hasValue": {
+        "value": "768",
+        "start_char_doc": 19994,
+        "end_char_doc": 19997,
+        "prefix": "k supervision from a 12-layer BERT<sub>BASE</sub> teacher, using embedding size",
+        "suffix": "for both models. For distillation, our transfer set coincides with  &lt;page_nu",
+        "valueSource": "extracted"
+      },
+      "mls:unit": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:comparison_teacher_layers",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 19935,
+        "end_char_doc": 19971,
+        "prefix": "Pre-trained Distillation on a 6-layer BERT student with task supervision from a",
+        "suffix": ", using embedding size 768 for both models. For distillation, our transfer set c",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Comparison teacher layers",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Architecture",
+      "hpType": "NumLayers",
+      "uncertain": false,
+      "mls:hasValue": {
+        "value": "12-layer",
+        "start_char_doc": 19935,
+        "end_char_doc": 19943,
+        "prefix": "Pre-trained Distillation on a 6-layer BERT student with task supervision from a",
+        "suffix": "BERT<sub>BASE</sub> teacher, using embedding size 768 for both models. For dist",
+        "valueSource": "extracted"
+      },
+      "mls:unit": {
+        "value": "layers",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:dev_average_runs",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 17287,
+        "end_char_doc": 17293,
+        "prefix": "sults are cited as reported by their authors. Our dev results are averaged over",
+        "suffix": ". Our test results are evaluated on the GLUE server, using the model that perfor",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Development averaging runs",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Training",
+      "hpType": "RandomSeed",
+      "uncertain": false,
+      "mls:hasValue": {
+        "value": "5",
+        "start_char_doc": 17287,
+        "end_char_doc": 17288,
+        "prefix": "sults are cited as reported by their authors. Our dev results are averaged over",
+        "suffix": "runs. Our test results are evaluated on the GLUE server, using the model that p",
+        "valueSource": "extracted"
+      },
+      "mls:unit": {
+        "value": "runs",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:distillation_temperature",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 23535,
+        "end_char_doc": 23551,
+        "prefix": "Students are always distilled on the soft labels produced by the teacher with a",
+        "suffix": "².  **Pre-training+Fine-tuning** (Figure 4c) (Dai & Le, 2015; Devlin et al., 201",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Distillation temperature",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Training",
+      "hpType": "HP_Training",
+      "uncertain": true,
+      "mls:hasValue": {
+        "value": "1",
+        "start_char_doc": 23550,
+        "end_char_doc": 23551,
+        "prefix": "ways distilled on the soft labels produced by the teacher with a temperature of",
+        "suffix": "².  **Pre-training+Fine-tuning** (Figure 4c) (Dai & Le, 2015; Devlin et al., 201",
+        "valueSource": "extracted"
+      },
+      "mls:unit": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:latency_batch_size",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 10082,
+        "end_char_doc": 10094,
+        "prefix": "yers (L) and hidden embedding sizes (H). Latency is computed on Cloud TPUs with",
+        "suffix": "and sequence length 512. For readability, we focus on five models (underlined)",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Latency batch size",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Training",
+      "hpType": "BatchSize",
+      "uncertain": false,
+      "mls:hasValue": {
+        "value": "1",
+        "start_char_doc": 10093,
+        "end_char_doc": 10094,
+        "prefix": "d hidden embedding sizes (H). Latency is computed on Cloud TPUs with batch size",
+        "suffix": "and sequence length 512. For readability, we focus on five models (underlined)",
+        "valueSource": "extracted"
+      },
+      "mls:unit": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:latency_sequence_length",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 10099,
+        "end_char_doc": 10118,
+        "prefix": "en embedding sizes (H). Latency is computed on Cloud TPUs with batch size 1 and",
+        "suffix": ". For readability, we focus on five models (underlined) for most figures: Tiny (",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Latency sequence length",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Data",
+      "hpType": "MaxSequenceLength",
+      "uncertain": false,
+      "mls:hasValue": {
+        "value": "512",
+        "start_char_doc": 10115,
+        "end_char_doc": 10118,
+        "prefix": "es (H). Latency is computed on Cloud TPUs with batch size 1 and sequence length",
+        "suffix": ". For readability, we focus on five models (underlined) for most figures: Tiny (",
+        "valueSource": "extracted"
+      },
+      "mls:unit": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:model_grid_count",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 21855,
+        "end_char_doc": 21872,
+        "prefix": "ERT$_{LARGE}$, has dimensions 24L/1024H and 340M parameters. We experiment with",
+        "suffix": ", with sizes and relative latencies listed in Table 1. The most expensive studen",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Student model grid count",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Architecture",
+      "hpType": "UnknownArchitectureHP",
+      "uncertain": true,
+      "mls:hasValue": {
+        "value": "24",
+        "start_char_doc": 21855,
+        "end_char_doc": 21857,
+        "prefix": "ERT$_{LARGE}$, has dimensions 24L/1024H and 340M parameters. We experiment with",
+        "suffix": "student models, with sizes and relative latencies listed in Table 1. The most e",
+        "valueSource": "extracted"
+      },
+      "mls:unit": {
+        "value": "models",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:model_parameter_range",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 5820,
+        "end_char_doc": 5841,
+        "prefix": "quality of unlabeled data. While experimenting with 24 models of various sizes (",
+        "suffix": ") and depth/width trade-offs, we observe that pre-trained students can leverage",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Student parameter range",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Architecture",
+      "hpType": "UnknownArchitectureHP",
+      "uncertain": true,
+      "mls:hasValue": {
+        "value": "4m to 110m",
+        "start_char_doc": 5820,
+        "end_char_doc": 5830,
+        "prefix": "quality of unlabeled data. While experimenting with 24 models of various sizes (",
+        "suffix": "parameters) and depth/width trade-offs, we observe that pre-trained students ca",
+        "valueSource": "extracted"
+      },
+      "mls:unit": {
+        "value": "parameters",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:nli_transfer_size",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 26425,
+        "end_char_doc": 26437,
+        "prefix": "</tr>   </thead>   <tbody>     <tr>       <td>MNLI (390k)</td>       <td>NLI* (",
+        "suffix": ")</td>     </tr>     <tr>       <td>RTE (2.5k)</td>       <td>NLI* (1.3m samples",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "NLI* transfer size",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Data",
+      "hpType": "TrainValTestSplit",
+      "uncertain": false,
+      "mls:hasValue": {
+        "value": "1.3m samples",
+        "start_char_doc": 26425,
+        "end_char_doc": 26437,
+        "prefix": "</tr>   </thead>   <tbody>     <tr>       <td>MNLI (390k)</td>       <td>NLI* (",
+        "suffix": ")</td>     </tr>     <tr>       <td>RTE (2.5k)</td>       <td>NLI* (1.3m samples",
+        "valueSource": "extracted"
+      },
+      "mls:unit": {
+        "value": "samples",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:movie_reviews_transfer_size",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 26596,
+        "end_char_doc": 26608,
+        "prefix": "s)</td>     </tr>     <tr>       <td>SST-2 (68k)</td>       <td>Movie Reviews* (",
+        "suffix": ")</td>     </tr>     <tr>       <td>Book Reviews (50k)</td>       <td>Book Revie",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Movie Reviews transfer size",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Data",
+      "hpType": "TrainValTestSplit",
+      "uncertain": false,
+      "mls:hasValue": {
+        "value": "1.7m samples",
+        "start_char_doc": 26596,
+        "end_char_doc": 26608,
+        "prefix": "s)</td>     </tr>     <tr>       <td>SST-2 (68k)</td>       <td>Movie Reviews* (",
+        "suffix": ")</td>     </tr>     <tr>       <td>Book Reviews (50k)</td>       <td>Book Revie",
+        "valueSource": "extracted"
+      },
+      "mls:unit": {
+        "value": "samples",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:book_reviews_transfer_size",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 26693,
+        "end_char_doc": 26703,
+        "prefix": ">     </tr>     <tr>       <td>Book Reviews (50k)</td>       <td>Book Reviews* (",
+        "suffix": ")</td>     </tr>   </tbody> </table>  Table 4: **Datasets used for analysis.** A",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Book Reviews transfer size",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Data",
+      "hpType": "TrainValTestSplit",
+      "uncertain": false,
+      "mls:hasValue": {
+        "value": "8m samples",
+        "start_char_doc": 26693,
+        "end_char_doc": 26703,
+        "prefix": ">     </tr>     <tr>       <td>Book Reviews (50k)</td>       <td>Book Reviews* (",
+        "suffix": ")</td>     </tr>   </tbody> </table>  Table 4: **Datasets used for analysis.** A",
+        "valueSource": "extracted"
+      },
+      "mls:unit": {
+        "value": "samples",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:pd_transfer_size_teacher_match",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 34986,
+        "end_char_doc": 34998,
+        "prefix": "n contrast, PD achieves the same performance with Transformer<sub>MINI</sub> on",
+        "suffix": ". In other words, PD can match the teacher model with 10x smaller model and 1.5x",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "PD teacher-match transfer size",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Data",
+      "hpType": "TrainValTestSplit",
+      "uncertain": false,
+      "mls:hasValue": {
+        "value": "5m",
+        "start_char_doc": 34986,
+        "end_char_doc": 34988,
+        "prefix": "n contrast, PD achieves the same performance with Transformer<sub>MINI</sub> on",
+        "suffix": "instances. In other words, PD can match the teacher model with 10x smaller mode",
+        "valueSource": "extracted"
+      },
+      "mls:unit": {
+        "value": "instances",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:domain_shift_fixed_size",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 37542,
+        "end_char_doc": 37556,
+        "prefix": "tead of varying the size of the transfer sets, this time we keep size fixed (to",
+        "suffix": ") and vary the source of the unlabeled text used for distillation. Transfer set",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Domain-shift fixed transfer size",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Data",
+      "hpType": "TrainValTestSplit",
+      "uncertain": false,
+      "mls:hasValue": {
+        "value": "1.7m documents",
+        "start_char_doc": 37542,
+        "end_char_doc": 37556,
+        "prefix": "tead of varying the size of the transfer sets, this time we keep size fixed (to",
+        "suffix": ") and vary the source of the unlabeled text used for distillation. Transfer set",
+        "valueSource": "extracted"
+      },
+      "mls:unit": {
+        "value": "documents",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:spearman_word_count",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 37160,
+        "end_char_doc": 37167,
+        "prefix": "main transfer set. PD and PD-F are more robust to transfer set domain.  common $",
+        "suffix": "$ words. For each of these words, the difference $d$ between ranks in $F_X$ and",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Spearman common-word count",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Data",
+      "hpType": "TrainValTestSplit",
+      "uncertain": false,
+      "mls:hasValue": {
+        "value": "100",
+        "start_char_doc": 37164,
+        "end_char_doc": 37167,
+        "prefix": "transfer set. PD and PD-F are more robust to transfer set domain.  common $n =",
+        "suffix": "$ words. For each of these words, the difference $d$ between ranks in $F_X$ and",
+        "valueSource": "extracted"
+      },
+      "mls:unit": {
+        "value": "words",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "exp:concurrent_work_comparison",
+      "@type": "mls:Experiment",
+      "mention": {
+        "start_char_doc": 19751,
+        "end_char_doc": 19802,
+        "prefix": "facilitate direct comparison, in this section we perform an experiment with the",
+        "suffix": "used in the two studies mentioned above. We perform Pre-trained Distillation on",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Concurrent-work comparison",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:description": {
+        "value": "same model architecture, sizes and dataset settings",
+        "start_char_doc": 19751,
+        "end_char_doc": 19802,
+        "prefix": "facilitate direct comparison, in this section we perform an experiment with the",
+        "suffix": "used in the two studies mentioned above. We perform Pre-trained Distillation on",
+        "valueSource": "extracted"
+      },
+      "mls:objective": {
+        "value": "Concurrent-work comparison",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hypothesis": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:methodology": {
+        "value": "same model architecture, sizes and dataset settings",
+        "start_char_doc": 19751,
+        "end_char_doc": 19802,
+        "prefix": "facilitate direct comparison, in this section we perform an experiment with the",
+        "suffix": "used in the two studies mentioned above. We perform Pre-trained Distillation on",
+        "valueSource": "extracted"
+      },
+      "mls:usesMethod": [
+        {
+          "@id": "method:pre_trained_distillation"
+        }
+      ],
+      "mls:usesData": [
+        {
+          "@id": "dataset:glue_selected_6"
+        }
+      ],
+      "mls:usesModel": [
+        {
+          "@id": "model:compact_transformer_students"
+        },
+        {
+          "@id": "model:bert_base_teacher"
+        }
+      ],
+      "mls:usesParameters": [
+        {
+          "@id": "hp:comparison_student_layers"
+        },
+        {
+          "@id": "hp:comparison_student_embedding_size"
+        },
+        {
+          "@id": "hp:comparison_teacher_layers"
+        },
+        {
+          "@id": "hp:dev_average_runs"
+        }
+      ],
+      "mls:executes": {
+        "@id": "impl:bert_transformer_experiments"
+      }
+    },
+    {
+      "@id": "exp:student_architecture_grid",
+      "@type": "mls:Experiment",
+      "mention": {
+        "start_char_doc": 21855,
+        "end_char_doc": 21925,
+        "prefix": "ERT$_{LARGE}$, has dimensions 24L/1024H and 340M parameters. We experiment with",
+        "suffix": ". The most expensive student, Transformer$_{BASE}$, is 3 times smaller and 1.25",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Student architecture grid",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:description": {
+        "value": "24 student models, with sizes and relative latencies listed in Table 1",
+        "start_char_doc": 21855,
+        "end_char_doc": 21925,
+        "prefix": "ERT$_{LARGE}$, has dimensions 24L/1024H and 340M parameters. We experiment with",
+        "suffix": ". The most expensive student, Transformer$_{BASE}$, is 3 times smaller and 1.25",
+        "valueSource": "extracted"
+      },
+      "mls:objective": {
+        "value": "Student architecture grid",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hypothesis": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:methodology": {
+        "value": "24 student models, with sizes and relative latencies listed in Table 1",
+        "start_char_doc": 21855,
+        "end_char_doc": 21925,
+        "prefix": "ERT$_{LARGE}$, has dimensions 24L/1024H and 340M parameters. We experiment with",
+        "suffix": ". The most expensive student, Transformer$_{BASE}$, is 3 times smaller and 1.25",
+        "valueSource": "extracted"
+      },
+      "mls:usesMethod": [
+        {
+          "@id": "method:pre_trained_distillation"
+        },
+        {
+          "@id": "method:pre_training_fine_tuning"
+        }
+      ],
+      "mls:usesData": [
+        {
+          "@id": "dataset:sst_2"
+        }
+      ],
+      "mls:usesModel": [
+        {
+          "@id": "model:compact_transformer_students"
+        },
+        {
+          "@id": "model:bert_large_teacher"
+        }
+      ],
+      "mls:usesParameters": [
+        {
+          "@id": "hp:student_layers_grid"
+        },
+        {
+          "@id": "hp:hidden_size_grid"
+        },
+        {
+          "@id": "hp:self_attention_heads_h_over_64"
+        },
+        {
+          "@id": "hp:feed_forward_size_4h"
+        },
+        {
+          "@id": "hp:model_grid_count"
+        }
+      ],
+      "mls:executes": {
+        "@id": "impl:bert_transformer_experiments"
+      }
+    },
+    {
+      "@id": "exp:analysis_baselines",
+      "@type": "mls:Experiment",
+      "mention": {
+        "start_char_doc": 31880,
+        "end_char_doc": 31966,
+        "prefix": "labeled set.  **Comparison to analysis baselines** First, we quantify how much",
+        "suffix": ". We compare it against the baselines established in Section 5.1 (basic training",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Analysis baseline comparison",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:description": {
+        "value": "Pre-trained Distillation improves upon its constituent operations applied in isolation",
+        "start_char_doc": 31880,
+        "end_char_doc": 31966,
+        "prefix": "labeled set.  **Comparison to analysis baselines** First, we quantify how much",
+        "suffix": ". We compare it against the baselines established in Section 5.1 (basic training",
+        "valueSource": "extracted"
+      },
+      "mls:objective": {
+        "value": "Analysis baseline comparison",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hypothesis": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:methodology": {
+        "value": "Pre-trained Distillation improves upon its constituent operations applied in isolation",
+        "start_char_doc": 31880,
+        "end_char_doc": 31966,
+        "prefix": "labeled set.  **Comparison to analysis baselines** First, we quantify how much",
+        "suffix": ". We compare it against the baselines established in Section 5.1 (basic training",
+        "valueSource": "extracted"
+      },
+      "mls:usesMethod": [
+        {
+          "@id": "method:pre_trained_distillation"
+        },
+        {
+          "@id": "method:pre_training_fine_tuning"
+        },
+        {
+          "@id": "method:task_specific_distillation"
+        }
+      ],
+      "mls:usesData": [
+        {
+          "@id": "dataset:bookcorpus_english_wikipedia"
+        },
+        {
+          "@id": "dataset:amazon_book_reviews"
+        },
+        {
+          "@id": "dataset:mnli"
+        },
+        {
+          "@id": "dataset:rte"
+        }
+      ],
+      "mls:usesModel": [
+        {
+          "@id": "model:compact_transformer_students"
+        },
+        {
+          "@id": "model:bert_large_teacher"
+        }
+      ],
+      "mls:usesParameters": [],
+      "mls:executes": {
+        "@id": "impl:bert_transformer_experiments"
+      }
+    },
+    {
+      "@id": "exp:transfer_set_size",
+      "@type": "mls:Experiment",
+      "mention": {
+        "start_char_doc": 34283,
+        "end_char_doc": 34314,
+        "prefix": "amine the robustness of Pre-trained Distillation in the rest of the section.  **",
+        "suffix": "** It is generally accepted that distillation is reliant upon a large transfer s",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Transfer set size robustness",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:description": {
+        "value": "Robustness to transfer set size",
+        "start_char_doc": 34283,
+        "end_char_doc": 34314,
+        "prefix": "amine the robustness of Pre-trained Distillation in the rest of the section.  **",
+        "suffix": "** It is generally accepted that distillation is reliant upon a large transfer s",
+        "valueSource": "extracted"
+      },
+      "mls:objective": {
+        "value": "Transfer set size robustness",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hypothesis": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:methodology": {
+        "value": "Robustness to transfer set size",
+        "start_char_doc": 34283,
+        "end_char_doc": 34314,
+        "prefix": "amine the robustness of Pre-trained Distillation in the rest of the section.  **",
+        "suffix": "** It is generally accepted that distillation is reliant upon a large transfer s",
+        "valueSource": "extracted"
+      },
+      "mls:usesMethod": [
+        {
+          "@id": "method:pre_trained_distillation"
+        },
+        {
+          "@id": "method:task_specific_distillation"
+        }
+      ],
+      "mls:usesData": [
+        {
+          "@id": "dataset:amazon_book_reviews"
+        }
+      ],
+      "mls:usesModel": [
+        {
+          "@id": "model:transformer_mini"
+        },
+        {
+          "@id": "model:transformer_base"
+        }
+      ],
+      "mls:usesParameters": [
+        {
+          "@id": "hp:book_reviews_transfer_size"
+        },
+        {
+          "@id": "hp:pd_transfer_size_teacher_match"
+        }
+      ],
+      "mls:executes": {
+        "@id": "impl:bert_transformer_experiments"
+      }
+    },
+    {
+      "@id": "exp:domain_shift",
+      "@type": "mls:Experiment",
+      "mention": {
+        "start_char_doc": 36859,
+        "end_char_doc": 36901,
+        "prefix": "showing performance vs Spearman Correlation Coefficient&lt;/img&gt; Figure 9: **",
+        "suffix": ".** By keeping $|\\mathcal{D}_T|$ fixed (1.7m) and varying the correlation betwee",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Domain shift robustness",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:description": {
+        "value": "Robustness to domain shift in transfer set",
+        "start_char_doc": 36859,
+        "end_char_doc": 36901,
+        "prefix": "showing performance vs Spearman Correlation Coefficient&lt;/img&gt; Figure 9: **",
+        "suffix": ".** By keeping $|\\mathcal{D}_T|$ fixed (1.7m) and varying the correlation betwee",
+        "valueSource": "extracted"
+      },
+      "mls:objective": {
+        "value": "Domain shift robustness",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hypothesis": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:methodology": {
+        "value": "Robustness to domain shift in transfer set",
+        "start_char_doc": 36859,
+        "end_char_doc": 36901,
+        "prefix": "showing performance vs Spearman Correlation Coefficient&lt;/img&gt; Figure 9: **",
+        "suffix": ".** By keeping $|\\mathcal{D}_T|$ fixed (1.7m) and varying the correlation betwee",
+        "valueSource": "extracted"
+      },
+      "mls:usesMethod": [
+        {
+          "@id": "method:pre_trained_distillation"
+        },
+        {
+          "@id": "method:pre_trained_distillation_with_finetuning"
+        },
+        {
+          "@id": "method:spearman_domain_shift"
+        }
+      ],
+      "mls:usesData": [
+        {
+          "@id": "dataset:amazon_book_reviews"
+        },
+        {
+          "@id": "dataset:amazon_movie_reviews"
+        }
+      ],
+      "mls:usesModel": [
+        {
+          "@id": "model:compact_transformer_students"
+        }
+      ],
+      "mls:usesParameters": [
+        {
+          "@id": "hp:domain_shift_fixed_size"
+        },
+        {
+          "@id": "hp:spearman_word_count"
+        }
+      ],
+      "mls:executes": {
+        "@id": "impl:bert_transformer_experiments"
+      }
+    },
+    {
+      "@id": "exp:compound_effect",
+      "@type": "mls:Experiment",
+      "mention": {
+        "start_char_doc": 38455,
+        "end_char_doc": 38524,
+        "prefix": "larger gain from learning from the teacher, compared to distillation.  ### 6.3",
+        "suffix": "We investigate the interaction between pre-training and distillation by applyi",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Compound effect of pre-training and distillation",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:description": {
+        "value": "BETTER TOGETHER: THE COMPOUND EFFECT OF PRE-TRAINING AND DISTILLATION",
+        "start_char_doc": 38455,
+        "end_char_doc": 38524,
+        "prefix": "larger gain from learning from the teacher, compared to distillation.  ### 6.3",
+        "suffix": "We investigate the interaction between pre-training and distillation by applyi",
+        "valueSource": "extracted"
+      },
+      "mls:objective": {
+        "value": "Compound effect of pre-training and distillation",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hypothesis": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:methodology": {
+        "value": "BETTER TOGETHER: THE COMPOUND EFFECT OF PRE-TRAINING AND DISTILLATION",
+        "start_char_doc": 38455,
+        "end_char_doc": 38524,
+        "prefix": "larger gain from learning from the teacher, compared to distillation.  ### 6.3",
+        "suffix": "We investigate the interaction between pre-training and distillation by applyi",
+        "valueSource": "extracted"
+      },
+      "mls:usesMethod": [
+        {
+          "@id": "method:pre_trained_distillation"
+        },
+        {
+          "@id": "method:pre_training_fine_tuning"
+        }
+      ],
+      "mls:usesData": [
+        {
+          "@id": "dataset:nli_star"
+        },
+        {
+          "@id": "dataset:mnli"
+        }
+      ],
+      "mls:usesModel": [
+        {
+          "@id": "model:compact_transformer_students"
+        }
+      ],
+      "mls:usesParameters": [],
+      "mls:executes": {
+        "@id": "impl:bert_transformer_experiments"
+      }
+    },
+    {
+      "@id": "eval:pd_test_sst2",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 15787,
+        "end_char_doc": 15829,
+        "prefix": "<td>87.9</td>       <td>64.2</td>       <td>81.6</td>     </tr>     <tr>",
+        "suffix": "<td><strong>86.8/81.7</strong></td>       <td><strong>70.4/88.9</strong><",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "PD test SST-2 accuracy",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:measure": {
+        "value": "acc",
+        "start_char_doc": 311,
+        "end_char_doc": 314,
+        "prefix": "## ABSTRACT  Recent developments in natural language representations have been",
+        "suffix": "ompanied by large and expensive models that leverage vast amounts of general-dom",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "91.8",
+        "start_char_doc": 15820,
+        "end_char_doc": 15824,
+        "prefix": ">       <td>81.6</td>     </tr>     <tr>       <td>PD (our work)</td>       <td>",
+        "suffix": "</td>       <td><strong>86.8/81.7</strong></td>       <td><strong>70.4/88.9</str",
+        "valueSource": "extracted"
+      },
+      "mls:benchmark": {
+        "value": "SST-2",
+        "start_char_doc": 15066,
+        "end_char_doc": 15071,
+        "prefix": "ata.  <table>   <thead>     <tr>       <th></th>       <th>Model</th>       <th>",
+        "suffix": "<br>(acc)</th>       <th>MRPC<br>(f1/acc)</th>       <th>QQP<br>(f1/acc)</th>",
+        "valueSource": "extracted"
+      },
+      "mls:onDataset": {
+        "@id": "dataset:sst_2"
+      },
+      "mls:evaluates": {
+        "@id": "method:pre_trained_distillation"
+      },
+      "prov-producedBy": {
+        "@id": "exp:concurrent_work_comparison"
+      }
+    },
+    {
+      "@id": "eval:pd_test_mrpc",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 15836,
+        "end_char_doc": 15871,
+        "prefix": "</td>     </tr>     <tr>       <td>PD (our work)</td>       <td>91.8</td>",
+        "suffix": "<td><strong>70.4/88.9</strong></td>       <td><strong>82.8/82.2</strong><",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "PD test MRPC F1/accuracy",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:measure": {
+        "value": "f1/acc",
+        "start_char_doc": 15105,
+        "end_char_doc": 15111,
+        "prefix": "<th></th>       <th>Model</th>       <th>SST-2<br>(acc)</th>       <th>MRPC<br>(",
+        "suffix": ")</th>       <th>QQP<br>(f1/acc)</th>       <th>MNLI<br>(acc m/mm)</th>       <t",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "86.8/81.7",
+        "start_char_doc": 15848,
+        "end_char_doc": 15857,
+        "prefix": "tr>     <tr>       <td>PD (our work)</td>       <td>91.8</td>       <td><strong>",
+        "suffix": "</strong></td>       <td><strong>70.4/88.9</strong></td>       <td><strong>82.8/",
+        "valueSource": "extracted"
+      },
+      "mls:benchmark": {
+        "value": "MRPC",
+        "start_char_doc": 15096,
+        "end_char_doc": 15100,
+        "prefix": "r>       <th></th>       <th>Model</th>       <th>SST-2<br>(acc)</th>       <th>",
+        "suffix": "<br>(f1/acc)</th>       <th>QQP<br>(f1/acc)</th>       <th>MNLI<br>(acc m/mm)</t",
+        "valueSource": "extracted"
+      },
+      "mls:onDataset": {
+        "@id": "dataset:mrpc"
+      },
+      "mls:evaluates": {
+        "@id": "method:pre_trained_distillation"
+      },
+      "prov-producedBy": {
+        "@id": "exp:concurrent_work_comparison"
+      }
+    },
+    {
+      "@id": "eval:pd_test_qqp",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 15878,
+        "end_char_doc": 15913,
+        "prefix": "work)</td>       <td>91.8</td>       <td><strong>86.8/81.7</strong></td>",
+        "suffix": "<td><strong>82.8/82.2</strong></td>       <td>88.9</td>       <td>65.3</t",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "PD test QQP F1/accuracy",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:measure": {
+        "value": "f1/acc",
+        "start_char_doc": 15105,
+        "end_char_doc": 15111,
+        "prefix": "<th></th>       <th>Model</th>       <th>SST-2<br>(acc)</th>       <th>MRPC<br>(",
+        "suffix": ")</th>       <th>QQP<br>(f1/acc)</th>       <th>MNLI<br>(acc m/mm)</th>       <t",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "70.4/88.9",
+        "start_char_doc": 15890,
+        "end_char_doc": 15899,
+        "prefix": "<td>91.8</td>       <td><strong>86.8/81.7</strong></td>       <td><strong>",
+        "suffix": "</strong></td>       <td><strong>82.8/82.2</strong></td>       <td>88.9</td>",
+        "valueSource": "extracted"
+      },
+      "mls:benchmark": {
+        "value": "QQP",
+        "start_char_doc": 15128,
+        "end_char_doc": 15131,
+        "prefix": "el</th>       <th>SST-2<br>(acc)</th>       <th>MRPC<br>(f1/acc)</th>       <th>",
+        "suffix": "<br>(f1/acc)</th>       <th>MNLI<br>(acc m/mm)</th>       <th>QNLI<br>(acc)</th>",
+        "valueSource": "extracted"
+      },
+      "mls:onDataset": {
+        "@id": "dataset:qqp"
+      },
+      "mls:evaluates": {
+        "@id": "method:pre_trained_distillation"
+      },
+      "prov-producedBy": {
+        "@id": "exp:concurrent_work_comparison"
+      }
+    },
+    {
+      "@id": "eval:pd_test_mnli",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 15920,
+        "end_char_doc": 15955,
+        "prefix": "<strong>86.8/81.7</strong></td>       <td><strong>70.4/88.9</strong></td>",
+        "suffix": "<td>88.9</td>       <td>65.3</td>       <td><strong>82.1</strong></td>",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "PD test MNLI accuracy m/mm",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:measure": {
+        "value": "acc m/mm",
+        "start_char_doc": 15168,
+        "end_char_doc": 15176,
+        "prefix": "<th>MRPC<br>(f1/acc)</th>       <th>QQP<br>(f1/acc)</th>       <th>MNLI<br>(",
+        "suffix": ")</th>       <th>QNLI<br>(acc)</th>       <th>RTE<br>(acc)</th>       <th>Meta<b",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "82.8/82.2",
+        "start_char_doc": 15932,
+        "end_char_doc": 15941,
+        "prefix": "/81.7</strong></td>       <td><strong>70.4/88.9</strong></td>       <td><strong>",
+        "suffix": "</strong></td>       <td>88.9</td>       <td>65.3</td>       <td><strong>82.1</s",
+        "valueSource": "extracted"
+      },
+      "mls:benchmark": {
+        "value": "MNLI",
+        "start_char_doc": 15159,
+        "end_char_doc": 15163,
+        "prefix": ")</th>       <th>MRPC<br>(f1/acc)</th>       <th>QQP<br>(f1/acc)</th>       <th>",
+        "suffix": "<br>(acc m/mm)</th>       <th>QNLI<br>(acc)</th>       <th>RTE<br>(acc)</th>",
+        "valueSource": "extracted"
+      },
+      "mls:onDataset": {
+        "@id": "dataset:mnli"
+      },
+      "mls:evaluates": {
+        "@id": "method:pre_trained_distillation"
+      },
+      "prov-producedBy": {
+        "@id": "exp:concurrent_work_comparison"
+      }
+    },
+    {
+      "@id": "eval:pd_test_qnli",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 15962,
+        "end_char_doc": 15975,
+        "prefix": "<strong>70.4/88.9</strong></td>       <td><strong>82.8/82.2</strong></td>",
+        "suffix": "<td>65.3</td>       <td><strong>82.1</strong></td>     </tr>     <tr>",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "PD test QNLI accuracy",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:measure": {
+        "value": "acc",
+        "start_char_doc": 311,
+        "end_char_doc": 314,
+        "prefix": "## ABSTRACT  Recent developments in natural language representations have been",
+        "suffix": "ompanied by large and expensive models that leverage vast amounts of general-dom",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "88.9",
+        "start_char_doc": 15966,
+        "end_char_doc": 15970,
+        "prefix": "ong>70.4/88.9</strong></td>       <td><strong>82.8/82.2</strong></td>       <td>",
+        "suffix": "</td>       <td>65.3</td>       <td><strong>82.1</strong></td>     </tr>     <tr",
+        "valueSource": "extracted"
+      },
+      "mls:benchmark": {
+        "value": "QNLI",
+        "start_char_doc": 15193,
+        "end_char_doc": 15197,
+        "prefix": "/th>       <th>QQP<br>(f1/acc)</th>       <th>MNLI<br>(acc m/mm)</th>       <th>",
+        "suffix": "<br>(acc)</th>       <th>RTE<br>(acc)</th>       <th>Meta<br>Score</th>     </tr",
+        "valueSource": "extracted"
+      },
+      "mls:onDataset": {
+        "@id": "dataset:qnli"
+      },
+      "mls:evaluates": {
+        "@id": "method:pre_trained_distillation"
+      },
+      "prov-producedBy": {
+        "@id": "exp:concurrent_work_comparison"
+      }
+    },
+    {
+      "@id": "eval:pd_test_rte",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 15982,
+        "end_char_doc": 15995,
+        "prefix": "trong></td>       <td><strong>82.8/82.2</strong></td>       <td>88.9</td>",
+        "suffix": "<td><strong>82.1</strong></td>     </tr>     <tr>       <td>Sun et al. (2",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "PD test RTE accuracy",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:measure": {
+        "value": "acc",
+        "start_char_doc": 311,
+        "end_char_doc": 314,
+        "prefix": "## ABSTRACT  Recent developments in natural language representations have been",
+        "suffix": "ompanied by large and expensive models that leverage vast amounts of general-dom",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "65.3",
+        "start_char_doc": 15986,
+        "end_char_doc": 15990,
+        "prefix": "g></td>       <td><strong>82.8/82.2</strong></td>       <td>88.9</td>       <td>",
+        "suffix": "</td>       <td><strong>82.1</strong></td>     </tr>     <tr>       <td>Sun et a",
+        "valueSource": "extracted"
+      },
+      "mls:benchmark": {
+        "value": "RTE",
+        "start_char_doc": 15222,
+        "end_char_doc": 15225,
+        "prefix": ")</th>       <th>MNLI<br>(acc m/mm)</th>       <th>QNLI<br>(acc)</th>       <th>",
+        "suffix": "<br>(acc)</th>       <th>Meta<br>Score</th>     </tr>   </thead>   <tbody>     <",
+        "valueSource": "extracted"
+      },
+      "mls:onDataset": {
+        "@id": "dataset:rte"
+      },
+      "mls:evaluates": {
+        "@id": "method:pre_trained_distillation"
+      },
+      "prov-producedBy": {
+        "@id": "exp:concurrent_work_comparison"
+      }
+    },
+    {
+      "@id": "eval:pd_test_meta_score",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 16002,
+        "end_char_doc": 16032,
+        "prefix": "d><strong>82.8/82.2</strong></td>       <td>88.9</td>       <td>65.3</td>",
+        "suffix": "</tr>     <tr>       <td>Sun et al. (2019a)</td>       <td>92.0</td>",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "PD test meta score",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:measure": {
+        "value": "Meta Score",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "82.1",
+        "start_char_doc": 16014,
+        "end_char_doc": 16018,
+        "prefix": ".8/82.2</strong></td>       <td>88.9</td>       <td>65.3</td>       <td><strong>",
+        "suffix": "</strong></td>     </tr>     <tr>       <td>Sun et al. (2019a)</td>       <td>92",
+        "valueSource": "extracted"
+      },
+      "mls:benchmark": {
+        "value": "6 GLUE tasks",
+        "start_char_doc": 20557,
+        "end_char_doc": 20569,
+        "prefix": "sis (Section 6).  the labeled set ($D_T = D_L$). Table 3 reports results on the",
+        "suffix": "selected by Sun et al. (2019a) and shows that, on average, PD performs best. Fo",
+        "valueSource": "extracted"
+      },
+      "mls:onDataset": {
+        "@id": "dataset:glue_selected_6"
+      },
+      "mls:evaluates": {
+        "@id": "method:pre_trained_distillation"
+      },
+      "prov-producedBy": {
+        "@id": "exp:concurrent_work_comparison"
+      }
+    },
+    {
+      "@id": "eval:pd_dev_meta_score",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 16800,
+        "end_char_doc": 16830,
+        "prefix": "<td><strong>89.4</strong></td>       <td><strong>66.7</strong></td>",
+        "suffix": "</tr>     <tr>       <td>Sanh (2019)</td>       <td><strong>92.7</strong></",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "PD dev meta score",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:measure": {
+        "value": "Meta Score",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "84.4",
+        "start_char_doc": 16812,
+        "end_char_doc": 16816,
+        "prefix": "trong>89.4</strong></td>       <td><strong>66.7</strong></td>       <td><strong>",
+        "suffix": "</strong></td>     </tr>     <tr>       <td>Sanh (2019)</td>       <td><strong>9",
+        "valueSource": "extracted"
+      },
+      "mls:benchmark": {
+        "value": "6 GLUE tasks",
+        "start_char_doc": 20557,
+        "end_char_doc": 20569,
+        "prefix": "sis (Section 6).  the labeled set ($D_T = D_L$). Table 3 reports results on the",
+        "suffix": "selected by Sun et al. (2019a) and shows that, on average, PD performs best. Fo",
+        "valueSource": "extracted"
+      },
+      "mls:onDataset": {
+        "@id": "dataset:glue_selected_6"
+      },
+      "mls:evaluates": {
+        "@id": "method:pre_trained_distillation"
+      },
+      "prov-producedBy": {
+        "@id": "exp:concurrent_work_comparison"
+      }
+    },
+    {
+      "@id": "eval:pd_dev_mrpc",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 16600,
+        "end_char_doc": 16635,
+        "prefix": "</td>     </tr>     <tr>       <td>PD (our work)</td>       <td>91.1</td>",
+        "suffix": "<td><strong>87.4/90.7</strong></td>       <td><strong>82.5/83.4</strong><",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "PD dev MRPC F1/accuracy",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:measure": {
+        "value": "f1/acc",
+        "start_char_doc": 15105,
+        "end_char_doc": 15111,
+        "prefix": "<th></th>       <th>Model</th>       <th>SST-2<br>(acc)</th>       <th>MRPC<br>(",
+        "suffix": ")</th>       <th>QQP<br>(f1/acc)</th>       <th>MNLI<br>(acc m/mm)</th>       <t",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "89.4/84.9",
+        "start_char_doc": 16612,
+        "end_char_doc": 16621,
+        "prefix": "tr>     <tr>       <td>PD (our work)</td>       <td>91.1</td>       <td><strong>",
+        "suffix": "</strong></td>       <td><strong>87.4/90.7</strong></td>       <td><strong>82.5/",
+        "valueSource": "extracted"
+      },
+      "mls:benchmark": {
+        "value": "MRPC",
+        "start_char_doc": 15096,
+        "end_char_doc": 15100,
+        "prefix": "r>       <th></th>       <th>Model</th>       <th>SST-2<br>(acc)</th>       <th>",
+        "suffix": "<br>(f1/acc)</th>       <th>QQP<br>(f1/acc)</th>       <th>MNLI<br>(acc m/mm)</t",
+        "valueSource": "extracted"
+      },
+      "mls:onDataset": {
+        "@id": "dataset:mrpc"
+      },
+      "mls:evaluates": {
+        "@id": "method:pre_trained_distillation"
+      },
+      "prov-producedBy": {
+        "@id": "exp:concurrent_work_comparison"
+      }
+    },
+    {
+      "@id": "eval:pd_dev_qqp",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 16642,
+        "end_char_doc": 16677,
+        "prefix": "work)</td>       <td>91.1</td>       <td><strong>89.4/84.9</strong></td>",
+        "suffix": "<td><strong>82.5/83.4</strong></td>       <td><strong>89.4</strong></td>",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "PD dev QQP F1/accuracy",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:measure": {
+        "value": "f1/acc",
+        "start_char_doc": 15105,
+        "end_char_doc": 15111,
+        "prefix": "<th></th>       <th>Model</th>       <th>SST-2<br>(acc)</th>       <th>MRPC<br>(",
+        "suffix": ")</th>       <th>QQP<br>(f1/acc)</th>       <th>MNLI<br>(acc m/mm)</th>       <t",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "87.4/90.7",
+        "start_char_doc": 16654,
+        "end_char_doc": 16663,
+        "prefix": "<td>91.1</td>       <td><strong>89.4/84.9</strong></td>       <td><strong>",
+        "suffix": "</strong></td>       <td><strong>82.5/83.4</strong></td>       <td><strong>89.4<",
+        "valueSource": "extracted"
+      },
+      "mls:benchmark": {
+        "value": "QQP",
+        "start_char_doc": 15128,
+        "end_char_doc": 15131,
+        "prefix": "el</th>       <th>SST-2<br>(acc)</th>       <th>MRPC<br>(f1/acc)</th>       <th>",
+        "suffix": "<br>(f1/acc)</th>       <th>MNLI<br>(acc m/mm)</th>       <th>QNLI<br>(acc)</th>",
+        "valueSource": "extracted"
+      },
+      "mls:onDataset": {
+        "@id": "dataset:qqp"
+      },
+      "mls:evaluates": {
+        "@id": "method:pre_trained_distillation"
+      },
+      "prov-producedBy": {
+        "@id": "exp:concurrent_work_comparison"
+      }
+    },
+    {
+      "@id": "eval:pd_dev_mnli",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 16684,
+        "end_char_doc": 16719,
+        "prefix": "<strong>89.4/84.9</strong></td>       <td><strong>87.4/90.7</strong></td>",
+        "suffix": "<td><strong>89.4</strong></td>       <td><strong>66.7</strong></td>",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "PD dev MNLI accuracy m/mm",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:measure": {
+        "value": "acc m/mm",
+        "start_char_doc": 15168,
+        "end_char_doc": 15176,
+        "prefix": "<th>MRPC<br>(f1/acc)</th>       <th>QQP<br>(f1/acc)</th>       <th>MNLI<br>(",
+        "suffix": ")</th>       <th>QNLI<br>(acc)</th>       <th>RTE<br>(acc)</th>       <th>Meta<b",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "82.5/83.4",
+        "start_char_doc": 16696,
+        "end_char_doc": 16705,
+        "prefix": "/84.9</strong></td>       <td><strong>87.4/90.7</strong></td>       <td><strong>",
+        "suffix": "</strong></td>       <td><strong>89.4</strong></td>       <td><strong>66.7</stro",
+        "valueSource": "extracted"
+      },
+      "mls:benchmark": {
+        "value": "MNLI",
+        "start_char_doc": 15159,
+        "end_char_doc": 15163,
+        "prefix": ")</th>       <th>MRPC<br>(f1/acc)</th>       <th>QQP<br>(f1/acc)</th>       <th>",
+        "suffix": "<br>(acc m/mm)</th>       <th>QNLI<br>(acc)</th>       <th>RTE<br>(acc)</th>",
+        "valueSource": "extracted"
+      },
+      "mls:onDataset": {
+        "@id": "dataset:mnli"
+      },
+      "mls:evaluates": {
+        "@id": "method:pre_trained_distillation"
+      },
+      "prov-producedBy": {
+        "@id": "exp:concurrent_work_comparison"
+      }
+    },
+    {
+      "@id": "eval:pd_dev_qnli",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 16726,
+        "end_char_doc": 16756,
+        "prefix": "<strong>87.4/90.7</strong></td>       <td><strong>82.5/83.4</strong></td>",
+        "suffix": "<td><strong>66.7</strong></td>       <td><strong>84.4</strong></td>     <",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "PD dev QNLI accuracy",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:measure": {
+        "value": "acc",
+        "start_char_doc": 311,
+        "end_char_doc": 314,
+        "prefix": "## ABSTRACT  Recent developments in natural language representations have been",
+        "suffix": "ompanied by large and expensive models that leverage vast amounts of general-dom",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "89.4",
+        "start_char_doc": 16738,
+        "end_char_doc": 16742,
+        "prefix": "/90.7</strong></td>       <td><strong>82.5/83.4</strong></td>       <td><strong>",
+        "suffix": "</strong></td>       <td><strong>66.7</strong></td>       <td><strong>84.4</stro",
+        "valueSource": "extracted"
+      },
+      "mls:benchmark": {
+        "value": "QNLI",
+        "start_char_doc": 15193,
+        "end_char_doc": 15197,
+        "prefix": "/th>       <th>QQP<br>(f1/acc)</th>       <th>MNLI<br>(acc m/mm)</th>       <th>",
+        "suffix": "<br>(acc)</th>       <th>RTE<br>(acc)</th>       <th>Meta<br>Score</th>     </tr",
+        "valueSource": "extracted"
+      },
+      "mls:onDataset": {
+        "@id": "dataset:qnli"
+      },
+      "mls:evaluates": {
+        "@id": "method:pre_trained_distillation"
+      },
+      "prov-producedBy": {
+        "@id": "exp:concurrent_work_comparison"
+      }
+    },
+    {
+      "@id": "eval:pd_dev_rte",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 16763,
+        "end_char_doc": 16793,
+        "prefix": "<td><strong>82.5/83.4</strong></td>       <td><strong>89.4</strong></td>",
+        "suffix": "<td><strong>84.4</strong></td>     </tr>     <tr>       <td>Sanh (2019)</",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "PD dev RTE accuracy",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:measure": {
+        "value": "acc",
+        "start_char_doc": 311,
+        "end_char_doc": 314,
+        "prefix": "## ABSTRACT  Recent developments in natural language representations have been",
+        "suffix": "ompanied by large and expensive models that leverage vast amounts of general-dom",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "66.7",
+        "start_char_doc": 16775,
+        "end_char_doc": 16779,
+        "prefix": ">82.5/83.4</strong></td>       <td><strong>89.4</strong></td>       <td><strong>",
+        "suffix": "</strong></td>       <td><strong>84.4</strong></td>     </tr>     <tr>       <td",
+        "valueSource": "extracted"
+      },
+      "mls:benchmark": {
+        "value": "RTE",
+        "start_char_doc": 15222,
+        "end_char_doc": 15225,
+        "prefix": ")</th>       <th>MNLI<br>(acc m/mm)</th>       <th>QNLI<br>(acc)</th>       <th>",
+        "suffix": "<br>(acc)</th>       <th>Meta<br>Score</th>     </tr>   </thead>   <tbody>     <",
+        "valueSource": "extracted"
+      },
+      "mls:onDataset": {
+        "@id": "dataset:rte"
+      },
+      "mls:evaluates": {
+        "@id": "method:pre_trained_distillation"
+      },
+      "prov-producedBy": {
+        "@id": "exp:concurrent_work_comparison"
+      }
+    },
+    {
+      "@id": "eval:pd_amazon_teacher_recovery",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 33056,
+        "end_char_doc": 33082,
+        "prefix": "pus, where Transformer<sub>MINI</sub> recovers the accuracy of the teacher at a",
+        "suffix": "and 16x speed-up. Distillation achieves the same performance with Transformer<s",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "PD Amazon teacher recovery model-size decrease",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:measure": {
+        "value": "model size decrease",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "31x",
+        "start_char_doc": 33056,
+        "end_char_doc": 33059,
+        "prefix": "pus, where Transformer<sub>MINI</sub> recovers the accuracy of the teacher at a",
+        "suffix": "decrease in model size and 16x speed-up. Distillation achieves the same perform",
+        "valueSource": "extracted"
+      },
+      "mls:benchmark": {
+        "value": "Amazon Book Reviews",
+        "start_char_doc": 24868,
+        "end_char_doc": 24887,
+        "prefix": "polarities of opinions it contains. We perform 3-way document classification on",
+        "suffix": "(He & McAuley, 2016). Its considerable size (8m) allows us to closely follow th",
+        "valueSource": "extracted"
+      },
+      "mls:onDataset": {
+        "@id": "dataset:amazon_book_reviews"
+      },
+      "mls:evaluates": {
+        "@id": "method:pre_trained_distillation"
+      },
+      "prov-producedBy": {
+        "@id": "exp:analysis_baselines"
+      }
+    },
+    {
+      "@id": "eval:pd_amazon_speedup",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 33087,
+        "end_char_doc": 33099,
+        "prefix": "</sub> recovers the accuracy of the teacher at a 31x decrease in model size and",
+        "suffix": ". Distillation achieves the same performance with Transformer<sub>BASE</sub>, wh",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "PD Amazon teacher recovery speed-up",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:measure": {
+        "value": "speed-up",
+        "start_char_doc": 10490,
+        "end_char_doc": 10498,
+        "prefix": "rmer$_{BASE}$ (110m parameters)$^1$. The student model sizes and their relative",
+        "suffix": "compared to the BERT$_{LARGE}$ teacher can be found in Table 1. Interested read",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "16x",
+        "start_char_doc": 33087,
+        "end_char_doc": 33090,
+        "prefix": "</sub> recovers the accuracy of the teacher at a 31x decrease in model size and",
+        "suffix": "speed-up. Distillation achieves the same performance with Transformer<sub>BASE<",
+        "valueSource": "extracted"
+      },
+      "mls:benchmark": {
+        "value": "Amazon Book Reviews",
+        "start_char_doc": 24868,
+        "end_char_doc": 24887,
+        "prefix": "polarities of opinions it contains. We perform 3-way document classification on",
+        "suffix": "(He & McAuley, 2016). Its considerable size (8m) allows us to closely follow th",
+        "valueSource": "extracted"
+      },
+      "mls:onDataset": {
+        "@id": "dataset:amazon_book_reviews"
+      },
+      "mls:evaluates": {
+        "@id": "method:pre_trained_distillation"
+      },
+      "prov-producedBy": {
+        "@id": "exp:analysis_baselines"
+      }
+    },
+    {
+      "@id": "eval:pd_transfer_5m_match",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 34986,
+        "end_char_doc": 34998,
+        "prefix": "n contrast, PD achieves the same performance with Transformer<sub>MINI</sub> on",
+        "suffix": ". In other words, PD can match the teacher model with 10x smaller model and 1.5x",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "PD teacher match transfer amount",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:measure": {
+        "value": "transfer data",
+        "start_char_doc": 4151,
+        "end_char_doc": 4164,
+        "prefix": "ent $\\theta$, teacher $\\Omega$, unlabeled LM data $\\mathcal{D}_{LM}$, unlabeled",
+        "suffix": "$\\mathcal{D}_T$, labeled data $\\mathcal{D}_L$  1: Initialize $\\theta$ by pre-tr",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "5m",
+        "start_char_doc": 34986,
+        "end_char_doc": 34988,
+        "prefix": "n contrast, PD achieves the same performance with Transformer<sub>MINI</sub> on",
+        "suffix": "instances. In other words, PD can match the teacher model with 10x smaller mode",
+        "valueSource": "extracted"
+      },
+      "mls:benchmark": {
+        "value": "Amazon Book Reviews",
+        "start_char_doc": 24868,
+        "end_char_doc": 24887,
+        "prefix": "polarities of opinions it contains. We perform 3-way document classification on",
+        "suffix": "(He & McAuley, 2016). Its considerable size (8m) allows us to closely follow th",
+        "valueSource": "extracted"
+      },
+      "mls:onDataset": {
+        "@id": "dataset:amazon_book_reviews"
+      },
+      "mls:evaluates": {
+        "@id": "method:pre_trained_distillation"
+      },
+      "prov-producedBy": {
+        "@id": "exp:analysis_baselines"
+      }
+    },
+    {
+      "@id": "eval:pd_mnli_compound_gain",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 39220,
+        "end_char_doc": 39235,
+        "prefix": "them on $\\mathcal{D}_T = NLI^*$. As shown in Figure 10, PD is better than PF by",
+        "suffix": "over all student sizes. Note that even when pre-training and then distilling on",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "PD over PF same-data MNLI gain",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:measure": {
+        "value": "average accuracy gain",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "2.2%",
+        "start_char_doc": 39220,
+        "end_char_doc": 39224,
+        "prefix": "them on $\\mathcal{D}_T = NLI^*$. As shown in Figure 10, PD is better than PF by",
+        "suffix": "on average over all student sizes. Note that even when pre-training and then di",
+        "valueSource": "extracted"
+      },
+      "mls:benchmark": {
+        "value": "MNLI",
+        "start_char_doc": 15159,
+        "end_char_doc": 15163,
+        "prefix": ")</th>       <th>MRPC<br>(f1/acc)</th>       <th>QQP<br>(f1/acc)</th>       <th>",
+        "suffix": "<br>(acc m/mm)</th>       <th>QNLI<br>(acc)</th>       <th>RTE<br>(acc)</th>",
+        "valueSource": "extracted"
+      },
+      "mls:onDataset": {
+        "@id": "dataset:mnli"
+      },
+      "mls:evaluates": {
+        "@id": "method:pre_trained_distillation"
+      },
+      "prov-producedBy": {
+        "@id": "exp:analysis_baselines"
+      }
+    },
+    {
+      "@id": "eval:rte_tiny_gain",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 33369,
+        "end_char_doc": 33390,
+        "prefix": "lation. On RTE, Pre-trained Distillation improves Transformer<sub>TINY</sub> by",
+        "suffix": "over the closest baseline (pre-training+fine-tuning) and is the only method to",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "RTE Transformer_TINY gain over closest baseline",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:measure": {
+        "value": "absolute gain",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "more than 5%",
+        "start_char_doc": 33369,
+        "end_char_doc": 33381,
+        "prefix": "lation. On RTE, Pre-trained Distillation improves Transformer<sub>TINY</sub> by",
+        "suffix": "absolute over the closest baseline (pre-training+fine-tuning) and is the only m",
+        "valueSource": "extracted"
+      },
+      "mls:benchmark": {
+        "value": "RTE",
+        "start_char_doc": 15222,
+        "end_char_doc": 15225,
+        "prefix": ")</th>       <th>MNLI<br>(acc m/mm)</th>       <th>QNLI<br>(acc)</th>       <th>",
+        "suffix": "<br>(acc)</th>       <th>Meta<br>Score</th>     </tr>   </thead>   <tbody>     <",
+        "valueSource": "extracted"
+      },
+      "mls:onDataset": {
+        "@id": "dataset:rte"
+      },
+      "mls:evaluates": {
+        "@id": "method:pre_trained_distillation"
+      },
+      "prov-producedBy": {
+        "@id": "exp:analysis_baselines"
+      }
+    },
+    {
+      "@id": "prompt:pd_algorithm_template",
+      "@type": "mls:Prompt",
+      "mention": {
+        "start_char_doc": 4056,
+        "end_char_doc": 4101,
+        "prefix": "962v2 [cs.CL] 25 Sep 2019&lt;/watermark&gt;  ---   ## Page 2  **Algorithm 1** **",
+        "suffix": ", unlabeled LM data $\\mathcal{D}_{LM}$, unlabeled transfer data $\\mathcal{D}_T$,",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Pre-trained Distillation algorithm template",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:text": {
+        "value": "student $\\theta$, teacher $\\Omega$, unlabeled LM data $\\mathcal{D}_{LM}$, unlabeled transfer data $\\mathcal{D}_T$, labeled data $\\mathcal{D}_L$",
+        "start_char_doc": 4067,
+        "end_char_doc": 4210,
+        "prefix": "L] 25 Sep 2019&lt;/watermark&gt;  ---   ## Page 2  **Algorithm 1** **Require:**",
+        "suffix": "1: Initialize $\\theta$ by pre-training an MLM$^+$ on $\\mathcal{D}_{LM}$ 2: **f",
+        "valueSource": "extracted"
+      },
+      "mls:usesContext": {
+        "value": true,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:usedBy": {
+        "@id": "algo:pre_trained_distillation_algorithm"
+      }
+    }
+  ]
+}

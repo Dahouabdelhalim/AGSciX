@@ -1,0 +1,3876 @@
+{
+  "@context": {
+    "mls": "http://www.w3.org/ns/mls#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "schema": "http://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "model": "https://w3id.org/mlskg/model/",
+    "algo": "https://w3id.org/mlskg/algorithm/",
+    "method": "https://w3id.org/mlskg/method/",
+    "dataset": "https://w3id.org/mlskg/dataset/",
+    "datasource": "https://w3id.org/mlskg/datasource/",
+    "task": "https://w3id.org/mlskg/task/",
+    "eval": "https://w3id.org/mlskg/eval/",
+    "hp": "https://w3id.org/mlskg/hp/",
+    "impl": "https://w3id.org/mlskg/implementation/",
+    "env": "https://w3id.org/mlskg/environment/",
+    "prompt": "https://w3id.org/mlskg/prompt/",
+    "person": "https://w3id.org/mlskg/person/",
+    "org": "https://w3id.org/mlskg/organization/",
+    "study": "https://w3id.org/mlskg/study/",
+    "exp": "https://w3id.org/mlskg/experiment/",
+    "repo": "https://w3id.org/mlskg/repository/",
+    "valueSource": "https://w3id.org/mlskg/meta/valueSource",
+    "mention": "https://w3id.org/mlskg/meta/mention"
+  },
+  "@graph": [
+    {
+      "@id": "study:unsupervised_cross_lingual_representation_learning_at_scale",
+      "@type": "mls:Study",
+      "mention": {
+        "start_char_doc": 13,
+        "end_char_doc": 72,
+        "prefix": "## Page 1 #",
+        "suffix": "Alexis Conneau* Kartikay Khandelwal* Naman",
+        "valueSource": "extracted"
+      },
+      "mls:title": {
+        "value": "Unsupervised Cross-lingual Representation Learning at Scale",
+        "start_char_doc": 13,
+        "end_char_doc": 72,
+        "prefix": "## Page 1 #",
+        "suffix": "Alexis Conneau* Kartikay Khandelwal* Naman",
+        "valueSource": "extracted"
+      },
+      "mls:abstract": {
+        "value": "This paper shows that pretraining multilingual language models at scale leads to significant performance gains for a wide range of cross-lingual transfer tasks. We train a Transformer-based masked language model on one hundred languages, using more than two terabytes of filtered CommonCrawl data. Our model, dubbed XLM-R, significantly outperforms multilingual BERT (mBERT) on a variety of cross-lingual benchmarks, including +14.6% average accuracy on XNLI, +13% average F1 score on MLQA, and +2.4% F1 score on NER. XLM-R performs particularly well on low-resource languages, improving 15.7% in XNLI accuracy for Swahili and 11.4% for Urdu over previous XLM models. We also present a detailed empirical analysis of the key factors that are required to achieve these gains, including the trade-offs between (1) positive transfer and capacity dilution and (2) the performance of high and low resource languages at scale. Finally, we show, for the first time, the possibility of multilingual modeling without sacrificing per-language performance; XLM-R is very competitive with strong monolingual models on the GLUE and XNLI benchmarks. We will make our code, data and models publicly available.¹",
+        "start_char_doc": 333,
+        "end_char_doc": 1528,
+        "prefix": "8 Apr 2020&lt;/watermark&gt; ## Abstract",
+        "suffix": "## 1 Introduction The goal",
+        "valueSource": "extracted"
+      },
+      "mls:issued": {
+        "value": "8 Apr 2020",
+        "start_char_doc": 290,
+        "end_char_doc": 300,
+        "prefix": "Stoyanov Facebook AI &lt;watermark&gt;arXiv:1911.02116v2 [cs.CL]",
+        "suffix": "&lt;/watermark&gt; ## Abstract This paper",
+        "valueSource": "extracted"
+      },
+      "mls:url": {
+        "value": "https://arxiv.org/abs/1911.02116",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:doi": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:publicationVenue": {
+        "value": "arXiv:1911.02116v2 [cs.CL]",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:timestamp": {
+        "value": "2026-09-29",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasAuthor": [
+        {
+          "@id": "person:conneau_alexis"
+        },
+        {
+          "@id": "person:khandelwal_kartikay"
+        },
+        {
+          "@id": "person:goyal_naman"
+        },
+        {
+          "@id": "person:chaudhary_vishrav"
+        },
+        {
+          "@id": "person:wenzek_guillaume"
+        },
+        {
+          "@id": "person:guzman_francisco"
+        },
+        {
+          "@id": "person:grave_edouard"
+        },
+        {
+          "@id": "person:ott_myle"
+        },
+        {
+          "@id": "person:zettlemoyer_luke"
+        },
+        {
+          "@id": "person:stoyanov_veselin"
+        }
+      ],
+      "mls:contains": [
+        {
+          "@id": "exp:xlm_r_multilingual_pretraining"
+        },
+        {
+          "@id": "exp:xlm_r_xnli_cross_lingual_transfer"
+        },
+        {
+          "@id": "exp:xlm_r_named_entity_recognition"
+        },
+        {
+          "@id": "exp:xlm_r_mlqa_question_answering"
+        },
+        {
+          "@id": "exp:xlm_r_glue_natural_language_understanding"
+        },
+        {
+          "@id": "exp:xlm_r_scaling_ablation_analysis"
+        }
+      ],
+      "mls:implements": {
+        "@id": "repo:facebookresearch_fairseq_py_pytext_xlm"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "paper:1911_02116v2"
+      }
+    },
+    {
+      "@id": "org:facebook_ai",
+      "@type": "mls:Organization",
+      "mention": {
+        "start_char_doc": 233,
+        "end_char_doc": 244,
+        "prefix": "Ott Luke Zettlemoyer Veselin Stoyanov",
+        "suffix": "&lt;watermark&gt;arXiv:1911.02116v2 [cs.CL] 8 Apr 2020&lt;/watermark&gt;",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Facebook AI",
+        "start_char_doc": 233,
+        "end_char_doc": 244,
+        "prefix": "Ott Luke Zettlemoyer Veselin Stoyanov",
+        "suffix": "&lt;watermark&gt;arXiv:1911.02116v2 [cs.CL] 8 Apr 2020&lt;/watermark&gt;",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "industrial AI research laboratory",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "person:conneau_alexis",
+      "@type": "mls:Person",
+      "mention": {
+        "start_char_doc": 74,
+        "end_char_doc": 88,
+        "prefix": "Cross-lingual Representation Learning at Scale",
+        "suffix": "* Kartikay Khandelwal* Naman Goyal",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Alexis Conneau",
+        "start_char_doc": 74,
+        "end_char_doc": 88,
+        "prefix": "Cross-lingual Representation Learning at Scale",
+        "suffix": "* Kartikay Khandelwal* Naman Goyal",
+        "valueSource": "extracted"
+      },
+      "mls:affiliation": {
+        "value": "Facebook AI",
+        "start_char_doc": 233,
+        "end_char_doc": 244,
+        "prefix": "Ott Luke Zettlemoyer Veselin Stoyanov",
+        "suffix": "&lt;watermark&gt;arXiv:1911.02116v2 [cs.CL] 8 Apr 2020&lt;/watermark&gt;",
+        "valueSource": "extracted"
+      },
+      "mls:email": {
+        "value": "{aconneau, kartikayk}@fb.com",
+        "start_char_doc": 2010,
+        "end_char_doc": 2038,
+        "prefix": "answering. *Equal contribution. Correspondence to",
+        "suffix": "¹https://github.com/facebookresearch/(fairseq-py, pytext, xlm) Multilingual masked",
+        "valueSource": "extracted"
+      },
+      "mls:orcid": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:prov-affiliatedWith": [
+        {
+          "@id": "org:facebook_ai"
+        }
+      ]
+    },
+    {
+      "@id": "person:khandelwal_kartikay",
+      "@type": "mls:Person",
+      "mention": {
+        "start_char_doc": 90,
+        "end_char_doc": 109,
+        "prefix": "Learning at Scale Alexis Conneau*",
+        "suffix": "* Naman Goyal Vishrav Chaudhary",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Kartikay Khandelwal",
+        "start_char_doc": 90,
+        "end_char_doc": 109,
+        "prefix": "Learning at Scale Alexis Conneau*",
+        "suffix": "* Naman Goyal Vishrav Chaudhary",
+        "valueSource": "extracted"
+      },
+      "mls:affiliation": {
+        "value": "Facebook AI",
+        "start_char_doc": 233,
+        "end_char_doc": 244,
+        "prefix": "Ott Luke Zettlemoyer Veselin Stoyanov",
+        "suffix": "&lt;watermark&gt;arXiv:1911.02116v2 [cs.CL] 8 Apr 2020&lt;/watermark&gt;",
+        "valueSource": "extracted"
+      },
+      "mls:email": {
+        "value": "{aconneau, kartikayk}@fb.com",
+        "start_char_doc": 2010,
+        "end_char_doc": 2038,
+        "prefix": "answering. *Equal contribution. Correspondence to",
+        "suffix": "¹https://github.com/facebookresearch/(fairseq-py, pytext, xlm) Multilingual masked",
+        "valueSource": "extracted"
+      },
+      "mls:orcid": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:prov-affiliatedWith": [
+        {
+          "@id": "org:facebook_ai"
+        }
+      ]
+    },
+    {
+      "@id": "person:goyal_naman",
+      "@type": "mls:Person",
+      "mention": {
+        "start_char_doc": 111,
+        "end_char_doc": 122,
+        "prefix": "Scale Alexis Conneau* Kartikay Khandelwal*",
+        "suffix": "Vishrav Chaudhary Guillaume Wenzek Francisco",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Naman Goyal",
+        "start_char_doc": 111,
+        "end_char_doc": 122,
+        "prefix": "Scale Alexis Conneau* Kartikay Khandelwal*",
+        "suffix": "Vishrav Chaudhary Guillaume Wenzek Francisco",
+        "valueSource": "extracted"
+      },
+      "mls:affiliation": {
+        "value": "Facebook AI",
+        "start_char_doc": 233,
+        "end_char_doc": 244,
+        "prefix": "Ott Luke Zettlemoyer Veselin Stoyanov",
+        "suffix": "&lt;watermark&gt;arXiv:1911.02116v2 [cs.CL] 8 Apr 2020&lt;/watermark&gt;",
+        "valueSource": "extracted"
+      },
+      "mls:email": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:orcid": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:prov-affiliatedWith": [
+        {
+          "@id": "org:facebook_ai"
+        }
+      ]
+    },
+    {
+      "@id": "person:chaudhary_vishrav",
+      "@type": "mls:Person",
+      "mention": {
+        "start_char_doc": 123,
+        "end_char_doc": 140,
+        "prefix": "Conneau* Kartikay Khandelwal* Naman Goyal",
+        "suffix": "Guillaume Wenzek Francisco Guzmán Edouard",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Vishrav Chaudhary",
+        "start_char_doc": 123,
+        "end_char_doc": 140,
+        "prefix": "Conneau* Kartikay Khandelwal* Naman Goyal",
+        "suffix": "Guillaume Wenzek Francisco Guzmán Edouard",
+        "valueSource": "extracted"
+      },
+      "mls:affiliation": {
+        "value": "Facebook AI",
+        "start_char_doc": 233,
+        "end_char_doc": 244,
+        "prefix": "Ott Luke Zettlemoyer Veselin Stoyanov",
+        "suffix": "&lt;watermark&gt;arXiv:1911.02116v2 [cs.CL] 8 Apr 2020&lt;/watermark&gt;",
+        "valueSource": "extracted"
+      },
+      "mls:email": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:orcid": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:prov-affiliatedWith": [
+        {
+          "@id": "org:facebook_ai"
+        }
+      ]
+    },
+    {
+      "@id": "person:wenzek_guillaume",
+      "@type": "mls:Person",
+      "mention": {
+        "start_char_doc": 141,
+        "end_char_doc": 157,
+        "prefix": "Khandelwal* Naman Goyal Vishrav Chaudhary",
+        "suffix": "Francisco Guzmán Edouard Grave Myle",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Guillaume Wenzek",
+        "start_char_doc": 141,
+        "end_char_doc": 157,
+        "prefix": "Khandelwal* Naman Goyal Vishrav Chaudhary",
+        "suffix": "Francisco Guzmán Edouard Grave Myle",
+        "valueSource": "extracted"
+      },
+      "mls:affiliation": {
+        "value": "Facebook AI",
+        "start_char_doc": 233,
+        "end_char_doc": 244,
+        "prefix": "Ott Luke Zettlemoyer Veselin Stoyanov",
+        "suffix": "&lt;watermark&gt;arXiv:1911.02116v2 [cs.CL] 8 Apr 2020&lt;/watermark&gt;",
+        "valueSource": "extracted"
+      },
+      "mls:email": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:orcid": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:prov-affiliatedWith": [
+        {
+          "@id": "org:facebook_ai"
+        }
+      ]
+    },
+    {
+      "@id": "person:guzman_francisco",
+      "@type": "mls:Person",
+      "mention": {
+        "start_char_doc": 158,
+        "end_char_doc": 174,
+        "prefix": "Goyal Vishrav Chaudhary Guillaume Wenzek",
+        "suffix": "Edouard Grave Myle Ott Luke",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Francisco Guzmán",
+        "start_char_doc": 158,
+        "end_char_doc": 174,
+        "prefix": "Goyal Vishrav Chaudhary Guillaume Wenzek",
+        "suffix": "Edouard Grave Myle Ott Luke",
+        "valueSource": "extracted"
+      },
+      "mls:affiliation": {
+        "value": "Facebook AI",
+        "start_char_doc": 233,
+        "end_char_doc": 244,
+        "prefix": "Ott Luke Zettlemoyer Veselin Stoyanov",
+        "suffix": "&lt;watermark&gt;arXiv:1911.02116v2 [cs.CL] 8 Apr 2020&lt;/watermark&gt;",
+        "valueSource": "extracted"
+      },
+      "mls:email": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:orcid": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:prov-affiliatedWith": [
+        {
+          "@id": "org:facebook_ai"
+        }
+      ]
+    },
+    {
+      "@id": "person:grave_edouard",
+      "@type": "mls:Person",
+      "mention": {
+        "start_char_doc": 175,
+        "end_char_doc": 188,
+        "prefix": "Chaudhary Guillaume Wenzek Francisco Guzmán",
+        "suffix": "Myle Ott Luke Zettlemoyer Veselin",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Edouard Grave",
+        "start_char_doc": 175,
+        "end_char_doc": 188,
+        "prefix": "Chaudhary Guillaume Wenzek Francisco Guzmán",
+        "suffix": "Myle Ott Luke Zettlemoyer Veselin",
+        "valueSource": "extracted"
+      },
+      "mls:affiliation": {
+        "value": "Facebook AI",
+        "start_char_doc": 233,
+        "end_char_doc": 244,
+        "prefix": "Ott Luke Zettlemoyer Veselin Stoyanov",
+        "suffix": "&lt;watermark&gt;arXiv:1911.02116v2 [cs.CL] 8 Apr 2020&lt;/watermark&gt;",
+        "valueSource": "extracted"
+      },
+      "mls:email": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:orcid": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:prov-affiliatedWith": [
+        {
+          "@id": "org:facebook_ai"
+        }
+      ]
+    },
+    {
+      "@id": "person:ott_myle",
+      "@type": "mls:Person",
+      "mention": {
+        "start_char_doc": 189,
+        "end_char_doc": 197,
+        "prefix": "Wenzek Francisco Guzmán Edouard Grave",
+        "suffix": "Luke Zettlemoyer Veselin Stoyanov Facebook",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Myle Ott",
+        "start_char_doc": 189,
+        "end_char_doc": 197,
+        "prefix": "Wenzek Francisco Guzmán Edouard Grave",
+        "suffix": "Luke Zettlemoyer Veselin Stoyanov Facebook",
+        "valueSource": "extracted"
+      },
+      "mls:affiliation": {
+        "value": "Facebook AI",
+        "start_char_doc": 233,
+        "end_char_doc": 244,
+        "prefix": "Ott Luke Zettlemoyer Veselin Stoyanov",
+        "suffix": "&lt;watermark&gt;arXiv:1911.02116v2 [cs.CL] 8 Apr 2020&lt;/watermark&gt;",
+        "valueSource": "extracted"
+      },
+      "mls:email": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:orcid": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:prov-affiliatedWith": [
+        {
+          "@id": "org:facebook_ai"
+        }
+      ]
+    },
+    {
+      "@id": "person:zettlemoyer_luke",
+      "@type": "mls:Person",
+      "mention": {
+        "start_char_doc": 198,
+        "end_char_doc": 214,
+        "prefix": "Guzmán Edouard Grave Myle Ott",
+        "suffix": "Veselin Stoyanov Facebook AI &lt;watermark&gt;arXiv:1911.02116v2",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Luke Zettlemoyer",
+        "start_char_doc": 198,
+        "end_char_doc": 214,
+        "prefix": "Guzmán Edouard Grave Myle Ott",
+        "suffix": "Veselin Stoyanov Facebook AI &lt;watermark&gt;arXiv:1911.02116v2",
+        "valueSource": "extracted"
+      },
+      "mls:affiliation": {
+        "value": "Facebook AI",
+        "start_char_doc": 233,
+        "end_char_doc": 244,
+        "prefix": "Ott Luke Zettlemoyer Veselin Stoyanov",
+        "suffix": "&lt;watermark&gt;arXiv:1911.02116v2 [cs.CL] 8 Apr 2020&lt;/watermark&gt;",
+        "valueSource": "extracted"
+      },
+      "mls:email": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:orcid": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:prov-affiliatedWith": [
+        {
+          "@id": "org:facebook_ai"
+        }
+      ]
+    },
+    {
+      "@id": "person:stoyanov_veselin",
+      "@type": "mls:Person",
+      "mention": {
+        "start_char_doc": 215,
+        "end_char_doc": 231,
+        "prefix": "Grave Myle Ott Luke Zettlemoyer",
+        "suffix": "Facebook AI &lt;watermark&gt;arXiv:1911.02116v2 [cs.CL] 8",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Veselin Stoyanov",
+        "start_char_doc": 215,
+        "end_char_doc": 231,
+        "prefix": "Grave Myle Ott Luke Zettlemoyer",
+        "suffix": "Facebook AI &lt;watermark&gt;arXiv:1911.02116v2 [cs.CL] 8",
+        "valueSource": "extracted"
+      },
+      "mls:affiliation": {
+        "value": "Facebook AI",
+        "start_char_doc": 233,
+        "end_char_doc": 244,
+        "prefix": "Ott Luke Zettlemoyer Veselin Stoyanov",
+        "suffix": "&lt;watermark&gt;arXiv:1911.02116v2 [cs.CL] 8 Apr 2020&lt;/watermark&gt;",
+        "valueSource": "extracted"
+      },
+      "mls:email": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:orcid": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:prov-affiliatedWith": [
+        {
+          "@id": "org:facebook_ai"
+        }
+      ]
+    },
+    {
+      "@id": "datasource:commoncrawl",
+      "@type": "mls:DataSource",
+      "mention": {
+        "start_char_doc": 613,
+        "end_char_doc": 624,
+        "prefix": "than two terabytes of filtered",
+        "suffix": "data. Our model, dubbed XLM-R,",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "CommonCrawl",
+        "start_char_doc": 613,
+        "end_char_doc": 624,
+        "prefix": "than two terabytes of filtered",
+        "suffix": "data. Our model, dubbed XLM-R,",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "web crawl",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:url": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:license": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "datasource:wikipedia",
+      "@type": "mls:DataSource",
+      "mention": {
+        "start_char_doc": 2763,
+        "end_char_doc": 2772,
+        "prefix": "of these studies pre-train on",
+        "suffix": ", which provides a relatively",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Wikipedia",
+        "start_char_doc": 2763,
+        "end_char_doc": 2772,
+        "prefix": "of these studies pre-train on",
+        "suffix": ", which provides a relatively",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "online encyclopedia",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:url": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:license": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "datasource:cc_net",
+      "@type": "mls:DataSource",
+      "mention": {
+        "start_char_doc": 12548,
+        "end_char_doc": 12590,
+        "prefix": "English to other lan- ²",
+        "suffix": "--- ## Page 4 guages.",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "CCNet",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "data extraction software repository",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:url": {
+        "value": "https://github.com/facebookresearch/cc_net",
+        "start_char_doc": 12548,
+        "end_char_doc": 12590,
+        "prefix": "English to other lan- ²",
+        "suffix": "--- ## Page 4 guages.",
+        "valueSource": "extracted"
+      },
+      "mls:license": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "dataset:cc_100",
+      "@type": "mls:MLS_Dataset",
+      "mention": {
+        "start_char_doc": 8958,
+        "end_char_doc": 8964,
+        "prefix": "mBERT and XLM-100, and the",
+        "suffix": "used for XLM-R. CC-100 increases",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "CC-100",
+        "start_char_doc": 8958,
+        "end_char_doc": 8964,
+        "prefix": "mBERT and XLM-100, and the",
+        "suffix": "used for XLM-R. CC-100 increases",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "2.5 TB of newly created clean CommonCrawl data in 100 languages",
+        "start_char_doc": 45494,
+        "end_char_doc": 45557,
+        "prefix": "masked language model trained on",
+        "suffix": ". We show that it",
+        "valueSource": "extracted"
+      },
+      "mls:numInstances": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:language": {
+        "value": "100 languages",
+        "start_char_doc": 1837,
+        "end_char_doc": 1850,
+        "prefix": "model pre-trained on text in",
+        "suffix": ", which obtains state-of-the-art performance",
+        "valueSource": "extracted"
+      },
+      "mls:license": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:modality": {
+        "value": "text",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:numClasses": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "datasource:commoncrawl"
+        }
+      ],
+      "mls:processedThrough": [
+        {
+          "@id": "step:commoncrawl_cleaning_filtering"
+        },
+        {
+          "@id": "step:sentencepiece_raw_text_tokenization"
+        }
+      ]
+    },
+    {
+      "@id": "dataset:xnli",
+      "@type": "mls:MLS_Dataset",
+      "mention": {
+        "start_char_doc": 787,
+        "end_char_doc": 791,
+        "prefix": "including +14.6% average accuracy on",
+        "suffix": ", +13% average F1 score",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "XNLI",
+        "start_char_doc": 787,
+        "end_char_doc": 791,
+        "prefix": "including +14.6% average accuracy on",
+        "suffix": ", +13% average F1 score",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "The XNLI dataset comes with ground-truth dev and test sets in 15 languages, and a ground-truth English training set.",
+        "start_char_doc": 12215,
+        "end_char_doc": 12331,
+        "prefix": "**Cross-lingual Natural Language Inference (XNLI).**",
+        "suffix": "The training set has been",
+        "valueSource": "extracted"
+      },
+      "mls:numInstances": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:language": {
+        "value": "15 languages",
+        "start_char_doc": 12277,
+        "end_char_doc": 12289,
+        "prefix": "dev and test sets in",
+        "suffix": ", and a ground-truth English",
+        "valueSource": "extracted"
+      },
+      "mls:license": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:modality": {
+        "value": "text",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:numClasses": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "dataset:conll_2002",
+      "@type": "mls:MLS_Dataset",
+      "mention": {
+        "start_char_doc": 13213,
+        "end_char_doc": 13223,
+        "prefix": "For NER, we consider the",
+        "suffix": "(Sang, 2002) and CoNLL-2003 (Tjong",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "CoNLL-2002",
+        "start_char_doc": 13213,
+        "end_char_doc": 13223,
+        "prefix": "For NER, we consider the",
+        "suffix": "(Sang, 2002) and CoNLL-2003 (Tjong",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "the CoNLL-2002 (Sang, 2002) and CoNLL-2003 (Tjong Kim Sang and De Meulder, 2003) datasets in English, Dutch, Spanish and German",
+        "start_char_doc": 13209,
+        "end_char_doc": 13336,
+        "prefix": "Recognition.** For NER, we consider",
+        "suffix": ". We fine-tune multilingual models",
+        "valueSource": "extracted"
+      },
+      "mls:numInstances": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:language": {
+        "value": "English, Dutch, Spanish and German",
+        "start_char_doc": 13302,
+        "end_char_doc": 13336,
+        "prefix": "De Meulder, 2003) datasets in",
+        "suffix": ". We fine-tune multilingual models",
+        "valueSource": "extracted"
+      },
+      "mls:license": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:modality": {
+        "value": "text",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:numClasses": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "dataset:conll_2003",
+      "@type": "mls:MLS_Dataset",
+      "mention": {
+        "start_char_doc": 13241,
+        "end_char_doc": 13251,
+        "prefix": "the CoNLL-2002 (Sang, 2002) and",
+        "suffix": "(Tjong Kim Sang and De",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "CoNLL-2003",
+        "start_char_doc": 13241,
+        "end_char_doc": 13251,
+        "prefix": "the CoNLL-2002 (Sang, 2002) and",
+        "suffix": "(Tjong Kim Sang and De",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "the CoNLL-2002 (Sang, 2002) and CoNLL-2003 (Tjong Kim Sang and De Meulder, 2003) datasets in English, Dutch, Spanish and German",
+        "start_char_doc": 13209,
+        "end_char_doc": 13336,
+        "prefix": "Recognition.** For NER, we consider",
+        "suffix": ". We fine-tune multilingual models",
+        "valueSource": "extracted"
+      },
+      "mls:numInstances": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:language": {
+        "value": "English, Dutch, Spanish and German",
+        "start_char_doc": 13302,
+        "end_char_doc": 13336,
+        "prefix": "De Meulder, 2003) datasets in",
+        "suffix": ". We fine-tune multilingual models",
+        "valueSource": "extracted"
+      },
+      "mls:license": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:modality": {
+        "value": "text",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:numClasses": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "dataset:mlqa",
+      "@type": "mls:MLS_Dataset",
+      "mention": {
+        "start_char_doc": 818,
+        "end_char_doc": 822,
+        "prefix": "+13% average F1 score on",
+        "suffix": ", and +2.4% F1 score",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "MLQA",
+        "start_char_doc": 818,
+        "end_char_doc": 822,
+        "prefix": "+13% average F1 score on",
+        "suffix": ", and +2.4% F1 score",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "the MLQA benchmark from Lewis et al. (2019), which extends the English SQuAD benchmark to Spanish, German, Arabic, Hindi, Vietnamese and Chinese",
+        "start_char_doc": 13691,
+        "end_char_doc": 13835,
+        "prefix": "**Cross-lingual Question Answering.** We use",
+        "suffix": ". We report the F1",
+        "valueSource": "extracted"
+      },
+      "mls:numInstances": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:language": {
+        "value": "English, Spanish, German, Arabic, Hindi, Vietnamese and Chinese",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:license": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:modality": {
+        "value": "text",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:numClasses": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "dataset:glue",
+      "@type": "mls:MLS_Dataset",
+      "mention": {
+        "start_char_doc": 12052,
+        "end_char_doc": 12066,
+        "prefix": "question answering. We use the",
+        "suffix": "to evaluate the English performance",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "GLUE",
+        "start_char_doc": 12052,
+        "end_char_doc": 12056,
+        "prefix": "question answering. We use the",
+        "suffix": "benchmark to evaluate the English",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "the GLUE benchmark (Wang et al., 2018) which gathers multiple classification tasks, such as MNLI (Williams et al., 2017), SST-2 (Socher et al., 2013), or QNLI (Rajpurkar et al., 2018)",
+        "start_char_doc": 14021,
+        "end_char_doc": 14204,
+        "prefix": "performance of our model on",
+        "suffix": ". We use BERT$_{Large}$ and",
+        "valueSource": "extracted"
+      },
+      "mls:numInstances": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:language": {
+        "value": "English",
+        "start_char_doc": 10498,
+        "end_char_doc": 10505,
+        "prefix": "and sequence labeling evaluation benchmarks:",
+        "suffix": ", French, German, Russian, Chinese,",
+        "valueSource": "extracted"
+      },
+      "mls:license": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:modality": {
+        "value": "text",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:numClasses": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "dataset:squad",
+      "@type": "mls:MLS_Dataset",
+      "mention": {
+        "start_char_doc": 13762,
+        "end_char_doc": 13767,
+        "prefix": "(2019), which extends the English",
+        "suffix": "benchmark to Spanish, German, Arabic,",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "SQuAD",
+        "start_char_doc": 13762,
+        "end_char_doc": 13767,
+        "prefix": "(2019), which extends the English",
+        "suffix": "benchmark to Spanish, German, Arabic,",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "English SQuAD benchmark",
+        "start_char_doc": 13754,
+        "end_char_doc": 13777,
+        "prefix": "al. (2019), which extends the",
+        "suffix": "to Spanish, German, Arabic, Hindi,",
+        "valueSource": "extracted"
+      },
+      "mls:numInstances": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:language": {
+        "value": "English",
+        "start_char_doc": 10498,
+        "end_char_doc": 10505,
+        "prefix": "and sequence labeling evaluation benchmarks:",
+        "suffix": ", French, German, Russian, Chinese,",
+        "valueSource": "extracted"
+      },
+      "mls:license": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:modality": {
+        "value": "text",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:numClasses": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "task:cross_lingual_language_understanding",
+      "@type": "mls:MLS_Task",
+      "mention": {
+        "start_char_doc": 1586,
+        "end_char_doc": 1628,
+        "prefix": "this paper is to improve",
+        "suffix": ", by carefully studying the",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "cross-lingual language understanding",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:description": {
+        "value": "improve cross-lingual language understanding (XLU)",
+        "start_char_doc": 1578,
+        "end_char_doc": 1628,
+        "prefix": "of this paper is to",
+        "suffix": ", by carefully studying the",
+        "valueSource": "extracted"
+      },
+      "mls:category": {
+        "value": "natural language processing",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:metrics": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "task:multilingual_masked_language_modeling",
+      "@type": "mls:MLS_Task",
+      "mention": {
+        "start_char_doc": 8544,
+        "end_char_doc": 8570,
+        "prefix": "al., 2017) trained with the",
+        "suffix": "(Devlin et al., 2018; Lample",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "multilingual masked language modeling",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:description": {
+        "value": "train the model to predict the masked tokens in the input",
+        "start_char_doc": 8697,
+        "end_char_doc": 8754,
+        "prefix": "text from each language and",
+        "suffix": ". We apply subword tok-",
+        "valueSource": "extracted"
+      },
+      "mls:category": {
+        "value": "natural language processing",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:metrics": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "task:cross_lingual_natural_language_inference",
+      "@type": "mls:MLS_Task",
+      "mention": {
+        "start_char_doc": 2474,
+        "end_char_doc": 2514,
+        "prefix": "a number of benchmarks including",
+        "suffix": "(Bowman et al., 2015; Williams",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "cross-lingual natural language inference",
+        "start_char_doc": 2474,
+        "end_char_doc": 2514,
+        "prefix": "a number of benchmarks including",
+        "suffix": "(Bowman et al., 2015; Williams",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "cross-lingual natural language inference",
+        "start_char_doc": 2474,
+        "end_char_doc": 2514,
+        "prefix": "a number of benchmarks including",
+        "suffix": "(Bowman et al., 2015; Williams",
+        "valueSource": "extracted"
+      },
+      "mls:category": {
+        "value": "natural language processing",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:metrics": {
+        "value": "accuracy",
+        "start_char_doc": 775,
+        "end_char_doc": 783,
+        "prefix": "cross-lingual benchmarks, including +14.6% average",
+        "suffix": "on XNLI, +13% average F1",
+        "valueSource": "extracted"
+      },
+      "mls:benchmarkedOn": [
+        {
+          "@id": "dataset:xnli"
+        }
+      ]
+    },
+    {
+      "@id": "task:named_entity_recognition",
+      "@type": "mls:MLS_Task",
+      "mention": {
+        "start_char_doc": 4029,
+        "end_char_doc": 4053,
+        "prefix": "--- ## Page 2 on",
+        "suffix": ", and 9.1% average F1-score",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "named entity recognition",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:description": {
+        "value": "Named Entity Recognition",
+        "start_char_doc": 4029,
+        "end_char_doc": 4053,
+        "prefix": "--- ## Page 2 on",
+        "suffix": ", and 9.1% average F1-score",
+        "valueSource": "extracted"
+      },
+      "mls:category": {
+        "value": "natural language processing",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:metrics": {
+        "value": "F1 score",
+        "start_char_doc": 806,
+        "end_char_doc": 814,
+        "prefix": "accuracy on XNLI, +13% average",
+        "suffix": "on MLQA, and +2.4% F1",
+        "valueSource": "extracted"
+      },
+      "mls:benchmarkedOn": [
+        {
+          "@id": "dataset:conll_2002"
+        },
+        {
+          "@id": "dataset:conll_2003"
+        }
+      ]
+    },
+    {
+      "@id": "task:cross_lingual_question_answering",
+      "@type": "mls:MLS_Task",
+      "mention": {
+        "start_char_doc": 13648,
+        "end_char_doc": 13680,
+        "prefix": "Akbik et al. (2018). **",
+        "suffix": ".** We use the MLQA",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "cross-lingual question answering",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:description": {
+        "value": "Cross-lingual Question Answering",
+        "start_char_doc": 13648,
+        "end_char_doc": 13680,
+        "prefix": "Akbik et al. (2018). **",
+        "suffix": ".** We use the MLQA",
+        "valueSource": "extracted"
+      },
+      "mls:category": {
+        "value": "natural language processing",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:metrics": {
+        "value": "F1 score as well as the exact match (EM) score",
+        "start_char_doc": 13851,
+        "end_char_doc": 13897,
+        "prefix": "and Chinese. We report the",
+        "suffix": "for cross-lingual transfer from English.",
+        "valueSource": "extracted"
+      },
+      "mls:benchmarkedOn": [
+        {
+          "@id": "dataset:mlqa"
+        },
+        {
+          "@id": "dataset:squad"
+        }
+      ]
+    },
+    {
+      "@id": "task:natural_language_understanding",
+      "@type": "mls:MLS_Task",
+      "mention": {
+        "start_char_doc": 4998,
+        "end_char_doc": 5028,
+        "prefix": "state of the art in",
+        "suffix": ". Parallel work on cross-lingual",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "natural language understanding",
+        "start_char_doc": 4998,
+        "end_char_doc": 5028,
+        "prefix": "state of the art in",
+        "suffix": ". Parallel work on cross-lingual",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "natural language understanding tasks",
+        "start_char_doc": 37123,
+        "end_char_doc": 37159,
+        "prefix": "understanding tasks as well as",
+        "suffix": "for each language. To that",
+        "valueSource": "extracted"
+      },
+      "mls:category": {
+        "value": "natural language processing",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:metrics": {
+        "value": "average dev performance",
+        "start_char_doc": 37279,
+        "end_char_doc": 37302,
+        "prefix": "4, that XLM-R obtains better",
+        "suffix": "than BERTLarge by 1.6% and",
+        "valueSource": "extracted"
+      },
+      "mls:benchmarkedOn": [
+        {
+          "@id": "dataset:glue"
+        }
+      ]
+    },
+    {
+      "@id": "model:xlm_r",
+      "@type": [
+        "mls:MLS_Model",
+        "mls:Method"
+      ],
+      "mention": {
+        "start_char_doc": 649,
+        "end_char_doc": 654,
+        "prefix": "CommonCrawl data. Our model, dubbed",
+        "suffix": ", significantly outperforms multilingual BERT",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "XLM-R",
+        "start_char_doc": 649,
+        "end_char_doc": 654,
+        "prefix": "CommonCrawl data. Our model, dubbed",
+        "suffix": ", significantly outperforms multilingual BERT",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "Transformer-based masked language model on one hundred languages",
+        "start_char_doc": 505,
+        "end_char_doc": 569,
+        "prefix": "transfer tasks. We train a",
+        "suffix": ", using more than two",
+        "valueSource": "extracted"
+      },
+      "mls:architecture": {
+        "value": "large Transformer model with 24 layers and 1024 hidden states, with a 250k vocabulary",
+        "start_char_doc": 22535,
+        "end_char_doc": 22620,
+        "prefix": "Conneau (2019) and use a",
+        "suffix": ". We use the multilingual",
+        "valueSource": "extracted"
+      },
+      "mls:parameters": {
+        "value": "550M params",
+        "start_char_doc": 9685,
+        "end_char_doc": 9696,
+        "prefix": "= 1024, A = 16,",
+        "suffix": "). For all of our",
+        "valueSource": "extracted"
+      },
+      "mls:version": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:cc_100"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:xnli"
+        },
+        {
+          "@id": "dataset:conll_2002"
+        },
+        {
+          "@id": "dataset:conll_2003"
+        },
+        {
+          "@id": "dataset:mlqa"
+        },
+        {
+          "@id": "dataset:glue"
+        }
+      ],
+      "mls:achieves": [
+        {
+          "@id": "eval:xnli_cross_lingual_transfer_accuracy"
+        },
+        {
+          "@id": "eval:xnli_translate_train_all_accuracy"
+        },
+        {
+          "@id": "eval:ner_all_f1"
+        },
+        {
+          "@id": "eval:mlqa_f1"
+        },
+        {
+          "@id": "eval:mlqa_exact_match"
+        },
+        {
+          "@id": "eval:glue_average_dev"
+        }
+      ],
+      "mls:subMethod": [
+        {
+          "@id": "method:multilingual_masked_language_modeling"
+        },
+        {
+          "@id": "method:sentence_piece_tokenization"
+        }
+      ]
+    },
+    {
+      "@id": "model:xlm_r_base",
+      "@type": [
+        "mls:MLS_Model",
+        "mls:Method"
+      ],
+      "mention": {
+        "start_char_doc": 9598,
+        "end_char_doc": 9608,
+        "prefix": "and train two different models:",
+        "suffix": "(L = 12, H =",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "XLM-R Base",
+        "start_char_doc": 9598,
+        "end_char_doc": 9608,
+        "prefix": "and train two different models:",
+        "suffix": "(L = 12, H =",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "XLM-R Base (L = 12, H = 768, A = 12, 270M params)",
+        "start_char_doc": 9598,
+        "end_char_doc": 9647,
+        "prefix": "and train two different models:",
+        "suffix": "and XLM-R (L = 24,",
+        "valueSource": "extracted"
+      },
+      "mls:architecture": {
+        "value": "L = 12, H = 768, A = 12",
+        "start_char_doc": 9610,
+        "end_char_doc": 9633,
+        "prefix": "different models: XLM-R Base (",
+        "suffix": ", 270M params) and XLM-R",
+        "valueSource": "extracted"
+      },
+      "mls:parameters": {
+        "value": "270M params",
+        "start_char_doc": 9635,
+        "end_char_doc": 9646,
+        "prefix": "= 768, A = 12,",
+        "suffix": ") and XLM-R (L =",
+        "valueSource": "extracted"
+      },
+      "mls:version": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:cc_100"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:xnli"
+        },
+        {
+          "@id": "dataset:conll_2002"
+        },
+        {
+          "@id": "dataset:conll_2003"
+        },
+        {
+          "@id": "dataset:mlqa"
+        }
+      ],
+      "mls:achieves": [
+        {
+          "@id": "eval:xnli_xlm_r_base_accuracy"
+        },
+        {
+          "@id": "eval:mlqa_xlm_r_base_f1"
+        }
+      ]
+    },
+    {
+      "@id": "method:multilingual_masked_language_modeling",
+      "@type": "mls:Method",
+      "mention": {
+        "start_char_doc": 8544,
+        "end_char_doc": 8570,
+        "prefix": "al., 2017) trained with the",
+        "suffix": "(Devlin et al., 2018; Lample",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "multilingual MLM objective",
+        "start_char_doc": 8544,
+        "end_char_doc": 8570,
+        "prefix": "al., 2017) trained with the",
+        "suffix": "(Devlin et al., 2018; Lample",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "trained with the multilingual MLM objective",
+        "start_char_doc": 8527,
+        "end_char_doc": 8570,
+        "prefix": "model (Vaswani et al., 2017)",
+        "suffix": "(Devlin et al., 2018; Lample",
+        "valueSource": "extracted"
+      },
+      "mls:version": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:cc_100"
+        }
+      ],
+      "mls:evaluatedOn": [],
+      "mls:achieves": []
+    },
+    {
+      "@id": "method:sentence_piece_tokenization",
+      "@type": "mls:Method",
+      "mention": {
+        "start_char_doc": 9157,
+        "end_char_doc": 9171,
+        "prefix": "on raw text data using",
+        "suffix": "(Kudo and Richardson, 2018) with",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Sentence Piece",
+        "start_char_doc": 9157,
+        "end_char_doc": 9171,
+        "prefix": "on raw text data using",
+        "suffix": "(Kudo and Richardson, 2018) with",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "using Sentence Piece (Kudo and Richardson, 2018)",
+        "start_char_doc": 9151,
+        "end_char_doc": 9199,
+        "prefix": "directly on raw text data",
+        "suffix": "with a unigram language model",
+        "valueSource": "extracted"
+      },
+      "mls:version": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:cc_100"
+        }
+      ],
+      "mls:evaluatedOn": [],
+      "mls:achieves": []
+    },
+    {
+      "@id": "method:translate_train_all",
+      "@type": "mls:Method",
+      "mention": {
+        "start_char_doc": 12944,
+        "end_char_doc": 12963,
+        "prefix": "on each training set (iii)",
+        "suffix": "(multi-language): we fine-tune a multilingual",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "translate-train-all",
+        "start_char_doc": 12944,
+        "end_char_doc": 12963,
+        "prefix": "on each training set (iii)",
+        "suffix": "(multi-language): we fine-tune a multilingual",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "we fine-tune a multilingual model on the concatenation of all training sets from translate-train",
+        "start_char_doc": 12982,
+        "end_char_doc": 13078,
+        "prefix": "training set (iii) translate-train-all (multi-language):",
+        "suffix": ". For the translations, we",
+        "valueSource": "extracted"
+      },
+      "mls:version": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:trainedOn": [],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:xnli"
+        }
+      ],
+      "mls:achieves": [
+        {
+          "@id": "eval:xnli_translate_train_all_accuracy"
+        }
+      ]
+    },
+    {
+      "@id": "method:language_sampling_alpha",
+      "@type": "mls:Method",
+      "mention": {
+        "start_char_doc": 9302,
+        "end_char_doc": 9323,
+        "prefix": "different languages using the same",
+        "suffix": "as Lample and Conneau (2019),",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "language sampling",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:description": {
+        "value": "sample batches from different languages using the same sampling distribution as Lample and Conneau (2019), but with $\\alpha = 0.3$",
+        "start_char_doc": 9247,
+        "end_char_doc": 9377,
+        "prefix": "language model (Kudo, 2018). We",
+        "suffix": ". Unlike Lample and Conneau",
+        "valueSource": "extracted"
+      },
+      "mls:version": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:cc_100"
+        }
+      ],
+      "mls:evaluatedOn": [],
+      "mls:achieves": []
+    },
+    {
+      "@id": "repo:facebookresearch_fairseq_py_pytext_xlm",
+      "@type": "mls:SoftwareRepository",
+      "mention": {
+        "start_char_doc": 2040,
+        "end_char_doc": 2101,
+        "prefix": "Correspondence to {aconneau, kartikayk}@fb.com ¹",
+        "suffix": "Multilingual masked language models (MLM)",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "facebookresearch/fairseq-py, pytext, xlm",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:url": {
+        "value": "https://github.com/facebookresearch/(fairseq-py, pytext, xlm)",
+        "start_char_doc": 2040,
+        "end_char_doc": 2101,
+        "prefix": "Correspondence to {aconneau, kartikayk}@fb.com ¹",
+        "suffix": "Multilingual masked language models (MLM)",
+        "valueSource": "extracted"
+      },
+      "mls:version": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:programmingLanguage": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:license": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:contains": [
+        {
+          "@id": "impl:xlm_r_public_code"
+        }
+      ],
+      "mls:supports": [
+        {
+          "@id": "env:nvidia_v100_32gb"
+        }
+      ]
+    },
+    {
+      "@id": "impl:xlm_r_public_code",
+      "@type": "mls:MLS_Implementation",
+      "mention": {
+        "start_char_doc": 1486,
+        "end_char_doc": 1526,
+        "prefix": "benchmarks. We will make our",
+        "suffix": ".¹ ## 1 Introduction The",
+        "valueSource": "extracted"
+      },
+      "mls:codeRepository": {
+        "value": "https://github.com/facebookresearch/(fairseq-py, pytext, xlm)",
+        "start_char_doc": 2040,
+        "end_char_doc": 2101,
+        "prefix": "Correspondence to {aconneau, kartikayk}@fb.com ¹",
+        "suffix": "Multilingual masked language models (MLM)",
+        "valueSource": "extracted"
+      },
+      "mls:framework": {
+        "value": "fairseq-py, pytext, xlm",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:executionCommand": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:entryPoint": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:branch": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:runsIn": {
+        "@id": "env:nvidia_v100_32gb"
+      }
+    },
+    {
+      "@id": "env:nvidia_v100_32gb",
+      "@type": "mls:Environment",
+      "mention": {
+        "start_char_doc": 22708,
+        "end_char_doc": 22742,
+        "prefix": "for 1.5 Million updates on",
+        "suffix": "with a batch size of",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "five-hundred 32GB Nvidia V100 GPUs",
+        "start_char_doc": 22708,
+        "end_char_doc": 22742,
+        "prefix": "for 1.5 Million updates on",
+        "suffix": "with a batch size of",
+        "valueSource": "extracted"
+      },
+      "mls:hardwareSpecs": {
+        "value": "five-hundred 32GB Nvidia V100 GPUs",
+        "start_char_doc": 22708,
+        "end_char_doc": 22742,
+        "prefix": "for 1.5 Million updates on",
+        "suffix": "with a batch size of",
+        "valueSource": "extracted"
+      },
+      "mls:os": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:pythonVersion": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:isDockerized": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "step:commoncrawl_cleaning_filtering",
+      "@type": "mls:DataProcessingStep",
+      "mention": {
+        "start_char_doc": 11227,
+        "end_char_doc": 11280,
+        "prefix": "language and use it to",
+        "suffix": ". We consider one CommonCrawl",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "We use an internal language identification model in combination with the one from fastText (Joulin et al., 2017). We train language models in each language and use it to filter documents as described in Wenzek et al. (2019).",
+        "start_char_doc": 11057,
+        "end_char_doc": 11281,
+        "prefix": "CommonCrawl Corpus in 100 languages.",
+        "suffix": "We consider one CommonCrawl dump",
+        "valueSource": "extracted"
+      },
+      "mls:transformationType": {
+        "value": "language identification and document filtering",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "prov:used": {
+        "@id": "datasource:commoncrawl"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "datasource:cc_net"
+      }
+    },
+    {
+      "@id": "step:sentencepiece_raw_text_tokenization",
+      "@type": "mls:DataProcessingStep",
+      "mention": {
+        "start_char_doc": 22786,
+        "end_char_doc": 22812,
+        "prefix": "of 8192. We leverage the",
+        "suffix": "from CommonCrawl in 100 languages",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "we train a Sentence Piece model (SPM) and apply it directly on raw text data for all languages",
+        "start_char_doc": 22102,
+        "end_char_doc": 22196,
+        "prefix": "use on raw text. Instead,",
+        "suffix": ". We did not observe",
+        "valueSource": "extracted"
+      },
+      "mls:transformationType": {
+        "value": "subword tokenization",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "prov:used": {
+        "@id": "dataset:cc_100"
+      }
+    },
+    {
+      "@id": "hp:language_sampling_alpha_xlm_r",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 9363,
+        "end_char_doc": 9377,
+        "prefix": "and Conneau (2019), but with",
+        "suffix": ". Unlike Lample and Conneau",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "language_sampling_alpha",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "0.3",
+        "start_char_doc": 9373,
+        "end_char_doc": 9376,
+        "prefix": "(2019), but with $\\alpha =",
+        "suffix": "$. Unlike Lample and Conneau",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Data",
+      "hpType": "HP_Data",
+      "uncertain": true
+    },
+    {
+      "@id": "hp:vocabulary_size_xlm_r",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 22605,
+        "end_char_doc": 22620,
+        "prefix": "1024 hidden states, with a",
+        "suffix": ". We use the multilingual",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "vocabulary_size",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "250k",
+        "start_char_doc": 22605,
+        "end_char_doc": 22609,
+        "prefix": "1024 hidden states, with a",
+        "suffix": "vocabulary. We use the multilingual",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Architecture",
+      "hpType": "UnknownArchitectureHP",
+      "uncertain": false
+    },
+    {
+      "@id": "hp:num_layers_xlm_r",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 22564,
+        "end_char_doc": 22573,
+        "prefix": "a large Transformer model with",
+        "suffix": "and 1024 hidden states, with",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "num_layers",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "24",
+        "start_char_doc": 22564,
+        "end_char_doc": 22566,
+        "prefix": "a large Transformer model with",
+        "suffix": "layers and 1024 hidden states,",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Architecture",
+      "hpType": "NumLayers",
+      "uncertain": false
+    },
+    {
+      "@id": "hp:hidden_size_xlm_r",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 22578,
+        "end_char_doc": 22596,
+        "prefix": "model with 24 layers and",
+        "suffix": ", with a 250k vocabulary.",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "hidden_size",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "1024",
+        "start_char_doc": 22578,
+        "end_char_doc": 22582,
+        "prefix": "model with 24 layers and",
+        "suffix": "hidden states, with a 250k",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Architecture",
+      "hpType": "HiddenSize",
+      "uncertain": false
+    },
+    {
+      "@id": "hp:attention_heads_xlm_r",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 9677,
+        "end_char_doc": 9683,
+        "prefix": "= 24, H = 1024,",
+        "suffix": ", 550M params). For all",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "num_attention_heads",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "16",
+        "start_char_doc": 9681,
+        "end_char_doc": 9683,
+        "prefix": "H = 1024, A =",
+        "suffix": ", 550M params). For all",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Architecture",
+      "hpType": "AttentionHeads",
+      "uncertain": false
+    },
+    {
+      "@id": "hp:num_parameters_xlm_r",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 9685,
+        "end_char_doc": 9696,
+        "prefix": "= 1024, A = 16,",
+        "suffix": "). For all of our",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "num_parameters",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "550M",
+        "start_char_doc": 9685,
+        "end_char_doc": 9689,
+        "prefix": "= 1024, A = 16,",
+        "suffix": "params). For all of our",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Architecture",
+      "hpType": "UnknownArchitectureHP",
+      "uncertain": false
+    },
+    {
+      "@id": "hp:max_steps_xlm_r",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 22685,
+        "end_char_doc": 22704,
+        "prefix": "train our XLM-R model for",
+        "suffix": "on five-hundred 32GB Nvidia V100",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "training_updates",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "1.5 Million updates",
+        "start_char_doc": 22685,
+        "end_char_doc": 22704,
+        "prefix": "train our XLM-R model for",
+        "suffix": "on five-hundred 32GB Nvidia V100",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Training",
+      "hpType": "MaxSteps",
+      "uncertain": false
+    },
+    {
+      "@id": "hp:batch_size_xlm_r",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 22750,
+        "end_char_doc": 22768,
+        "prefix": "Nvidia V100 GPUs with a",
+        "suffix": ". We leverage the SPM-preprocessed",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "batch_size",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "8192",
+        "start_char_doc": 22764,
+        "end_char_doc": 22768,
+        "prefix": "with a batch size of",
+        "suffix": ". We leverage the SPM-preprocessed",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Training",
+      "hpType": "BatchSize",
+      "uncertain": false
+    },
+    {
+      "@id": "hp:num_layers_xlm_r_base",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 9610,
+        "end_char_doc": 9616,
+        "prefix": "different models: XLM-R Base (",
+        "suffix": ", H = 768, A",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "num_layers",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "12",
+        "start_char_doc": 9614,
+        "end_char_doc": 9616,
+        "prefix": "models: XLM-R Base (L =",
+        "suffix": ", H = 768, A",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Architecture",
+      "hpType": "NumLayers",
+      "uncertain": false
+    },
+    {
+      "@id": "hp:hidden_size_xlm_r_base",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 9618,
+        "end_char_doc": 9625,
+        "prefix": "XLM-R Base (L = 12,",
+        "suffix": ", A = 12, 270M",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "hidden_size",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "768",
+        "start_char_doc": 9622,
+        "end_char_doc": 9625,
+        "prefix": "(L = 12, H =",
+        "suffix": ", A = 12, 270M",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Architecture",
+      "hpType": "HiddenSize",
+      "uncertain": false
+    },
+    {
+      "@id": "hp:attention_heads_xlm_r_base",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 9627,
+        "end_char_doc": 9633,
+        "prefix": "= 12, H = 768,",
+        "suffix": ", 270M params) and XLM-R",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "num_attention_heads",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "12",
+        "start_char_doc": 9631,
+        "end_char_doc": 9633,
+        "prefix": "H = 768, A =",
+        "suffix": ", 270M params) and XLM-R",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Architecture",
+      "hpType": "AttentionHeads",
+      "uncertain": false
+    },
+    {
+      "@id": "hp:num_parameters_xlm_r_base",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 9635,
+        "end_char_doc": 9646,
+        "prefix": "= 768, A = 12,",
+        "suffix": ") and XLM-R (L =",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "num_parameters",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "270M",
+        "start_char_doc": 9635,
+        "end_char_doc": 9639,
+        "prefix": "= 768, A = 12,",
+        "suffix": "params) and XLM-R (L =",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Architecture",
+      "hpType": "UnknownArchitectureHP",
+      "uncertain": false
+    },
+    {
+      "@id": "hp:vocabulary_size_ablation_bertbase",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 9770,
+        "end_char_doc": 9795,
+        "prefix": "a BERTBase architecture with a",
+        "suffix": ". Appendix B goes into",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "vocabulary_size",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "150K tokens",
+        "start_char_doc": 9784,
+        "end_char_doc": 9795,
+        "prefix": "architecture with a vocabulary of",
+        "suffix": ". Appendix B goes into",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Architecture",
+      "hpType": "UnknownArchitectureHP",
+      "uncertain": false
+    },
+    {
+      "@id": "eval:xnli_cross_lingual_transfer_accuracy",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 23985,
+        "end_char_doc": 24013,
+        "prefix": "on XNLI. On cross-lingual transfer,",
+        "suffix": ", outperforming the XLM-100 and",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "XNLI cross-lingual transfer average accuracy",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "80.9%",
+        "start_char_doc": 23999,
+        "end_char_doc": 24004,
+        "prefix": "On cross-lingual transfer, XLM-R obtains",
+        "suffix": "accuracy, outperforming the XLM-100 and",
+        "valueSource": "extracted"
+      },
+      "mls:stdDev": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:confidenceInterval": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:onDataset": {
+        "@id": "dataset:xnli"
+      }
+    },
+    {
+      "@id": "eval:xnli_translate_train_all_accuracy",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 24551,
+        "end_char_doc": 24573,
+        "prefix": "XLM-R further improves performance and",
+        "suffix": ", a new overall state",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "XNLI translate-train-all average accuracy",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "83.6%",
+        "start_char_doc": 24559,
+        "end_char_doc": 24564,
+        "prefix": "further improves performance and reaches",
+        "suffix": "accuracy, a new overall state",
+        "valueSource": "extracted"
+      },
+      "mls:stdDev": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:confidenceInterval": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:onDataset": {
+        "@id": "dataset:xnli"
+      }
+    },
+    {
+      "@id": "eval:ner_each_f1",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 34826,
+        "end_char_doc": 34840,
+        "prefix": "<td>N</td> <td>92.92</td> <td>92.53</td> <td>89.72</td> <td>85.81</td>",
+        "suffix": "</tr> <tr> <td></td> <td>en</td> <td>1</td>",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "NER each-language average F1",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "90.24",
+        "start_char_doc": 34830,
+        "end_char_doc": 34835,
+        "prefix": "<td>92.92</td> <td>92.53</td> <td>89.72</td> <td>85.81</td> <td>",
+        "suffix": "</td> </tr> <tr> <td></td> <td>en</td>",
+        "valueSource": "extracted"
+      },
+      "mls:stdDev": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:confidenceInterval": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:onDataset": {
+        "@id": "dataset:conll_2003"
+      }
+    },
+    {
+      "@id": "eval:ner_cross_lingual_transfer_f1",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 35001,
+        "end_char_doc": 35015,
+        "prefix": "<td>1</td> <td>92.92</td> <td>80.80</td> <td>78.64</td> <td>71.40</td>",
+        "suffix": "</tr> <tr> <td></td> <td>all</td> <td>1</td>",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "NER cross-lingual transfer average F1",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "80.94",
+        "start_char_doc": 35005,
+        "end_char_doc": 35010,
+        "prefix": "<td>92.92</td> <td>80.80</td> <td>78.64</td> <td>71.40</td> <td>",
+        "suffix": "</td> </tr> <tr> <td></td> <td>all</td>",
+        "valueSource": "extracted"
+      },
+      "mls:stdDev": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:confidenceInterval": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:onDataset": {
+        "@id": "dataset:conll_2003"
+      }
+    },
+    {
+      "@id": "eval:ner_all_f1",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 36170,
+        "end_char_doc": 36196,
+        "prefix": "all languages leads to an",
+        "suffix": ", outperforming cross-lingual transfer approach",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "NER all-languages average F1",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "89.43%",
+        "start_char_doc": 36190,
+        "end_char_doc": 36196,
+        "prefix": "an average F1 score of",
+        "suffix": ", outperforming cross-lingual transfer approach",
+        "valueSource": "extracted"
+      },
+      "mls:stdDev": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:confidenceInterval": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:onDataset": {
+        "@id": "dataset:conll_2003"
+      }
+    },
+    {
+      "@id": "eval:mlqa_f1",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 36575,
+        "end_char_doc": 36616,
+        "prefix": "in Table 3. XLM-R obtains",
+        "suffix": "while the previous state of",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "MLQA average F1",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "70.7%",
+        "start_char_doc": 36601,
+        "end_char_doc": 36606,
+        "prefix": "F1 and accuracy scores of",
+        "suffix": "and 52.7% while the previous",
+        "valueSource": "extracted"
+      },
+      "mls:stdDev": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:confidenceInterval": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:onDataset": {
+        "@id": "dataset:mlqa"
+      }
+    },
+    {
+      "@id": "eval:mlqa_exact_match",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 36575,
+        "end_char_doc": 36616,
+        "prefix": "in Table 3. XLM-R obtains",
+        "suffix": "while the previous state of",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "MLQA average exact match",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "52.7%",
+        "start_char_doc": 36611,
+        "end_char_doc": 36616,
+        "prefix": "accuracy scores of 70.7% and",
+        "suffix": "while the previous state of",
+        "valueSource": "extracted"
+      },
+      "mls:stdDev": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:confidenceInterval": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:onDataset": {
+        "@id": "dataset:mlqa"
+      }
+    },
+    {
+      "@id": "eval:glue_average_dev",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 40366,
+        "end_char_doc": 40379,
+        "prefix": "<tr> <td>XLNetLarge†</td> <td>1</td> <td>89.8/-</td> <td>93.9</td>",
+        "suffix": "<td>95.6</td> <td>89.2</td> <td>91.8</td> <td>92.0</td> </tr>",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "GLUE average dev score",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "91.8",
+        "start_char_doc": 40370,
+        "end_char_doc": 40374,
+        "prefix": "<td>XLNetLarge†</td> <td>1</td> <td>89.8/-</td> <td>93.9</td> <td>",
+        "suffix": "</td> <td>95.6</td> <td>89.2</td> <td>91.8</td> <td>92.0</td>",
+        "valueSource": "extracted"
+      },
+      "mls:stdDev": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:confidenceInterval": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:onDataset": {
+        "@id": "dataset:glue"
+      }
+    },
+    {
+      "@id": "eval:xnli_xlm_r_base_accuracy",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 26590,
+        "end_char_doc": 26603,
+        "prefix": "<td>76.3</td> <td>72.8</td> <td>73.5</td> <td>76.4</td> <td>73.6</td>",
+        "suffix": "<td>69.4</td> <td>69.7</td> <td>66.7</td> <td>75.4</td> </tr>",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "XLM-R Base XNLI cross-lingual transfer average accuracy",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "76.2",
+        "start_char_doc": 26594,
+        "end_char_doc": 26598,
+        "prefix": "<td>72.8</td> <td>73.5</td> <td>76.4</td> <td>73.6</td> <td>",
+        "suffix": "</td> <td>69.4</td> <td>69.7</td> <td>66.7</td> <td>75.4</td>",
+        "valueSource": "extracted"
+      },
+      "mls:stdDev": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:confidenceInterval": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:onDataset": {
+        "@id": "dataset:xnli"
+      }
+    },
+    {
+      "@id": "eval:mlqa_xlm_r_base_f1",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 38903,
+        "end_char_doc": 38923,
+        "prefix": "/ 44.7</td> <td>61.8 / 39.3</td>",
+        "suffix": "</tr> <tr> <td>XLM-R</td> <td>en</td> <td>100</td>",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "XLM-R Base MLQA average F1",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "63.7",
+        "start_char_doc": 38907,
+        "end_char_doc": 38911,
+        "prefix": "44.7</td> <td>61.8 / 39.3</td> <td>",
+        "suffix": "/ 46.3</td> </tr> <tr> <td>XLM-R</td>",
+        "valueSource": "extracted"
+      },
+      "mls:stdDev": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:confidenceInterval": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:onDataset": {
+        "@id": "dataset:mlqa"
+      }
+    },
+    {
+      "@id": "exp:xlm_r_multilingual_pretraining",
+      "@type": "mls:Experiment",
+      "mention": {
+        "start_char_doc": 9907,
+        "end_char_doc": 9937,
+        "prefix": "referenced in this paper. **",
+        "suffix": ".** XLM-R is trained on",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "XLM-R is trained on 100 languages",
+        "start_char_doc": 9941,
+        "end_char_doc": 9974,
+        "prefix": "**Scaling to a hundred languages.**",
+        "suffix": "; we provide a full",
+        "valueSource": "extracted"
+      },
+      "mls:objective": {
+        "value": "improve cross-lingual language understanding (XLU)",
+        "start_char_doc": 1578,
+        "end_char_doc": 1628,
+        "prefix": "of this paper is to",
+        "suffix": ", by carefully studying the",
+        "valueSource": "extracted"
+      },
+      "mls:hypothesis": {
+        "value": "pretraining multilingual language models at scale leads to significant performance gains",
+        "start_char_doc": 355,
+        "end_char_doc": 443,
+        "prefix": "Abstract This paper shows that",
+        "suffix": "for a wide range of",
+        "valueSource": "extracted"
+      },
+      "mls:methodology": {
+        "value": "We use the multilingual MLM loss and train our XLM-R model for 1.5 Million updates on five-hundred 32GB Nvidia V100 GPUs with a batch size of 8192.",
+        "start_char_doc": 22622,
+        "end_char_doc": 22769,
+        "prefix": "states, with a 250k vocabulary.",
+        "suffix": "We leverage the SPM-preprocessed text",
+        "valueSource": "extracted"
+      },
+      "mls:realizes": [
+        {
+          "@id": "task:multilingual_masked_language_modeling"
+        },
+        {
+          "@id": "task:cross_lingual_language_understanding"
+        }
+      ],
+      "mls:usesData": [
+        {
+          "@id": "dataset:cc_100"
+        }
+      ],
+      "mls:produces": [
+        {
+          "@id": "model:xlm_r"
+        },
+        {
+          "@id": "model:xlm_r_base"
+        }
+      ],
+      "mls:usesParameters": [
+        {
+          "@id": "hp:language_sampling_alpha_xlm_r"
+        },
+        {
+          "@id": "hp:vocabulary_size_xlm_r"
+        },
+        {
+          "@id": "hp:num_layers_xlm_r"
+        },
+        {
+          "@id": "hp:hidden_size_xlm_r"
+        },
+        {
+          "@id": "hp:attention_heads_xlm_r"
+        },
+        {
+          "@id": "hp:num_parameters_xlm_r"
+        },
+        {
+          "@id": "hp:max_steps_xlm_r"
+        },
+        {
+          "@id": "hp:batch_size_xlm_r"
+        }
+      ],
+      "mls:executes": [
+        {
+          "@id": "impl:xlm_r_public_code"
+        }
+      ]
+    },
+    {
+      "@id": "exp:xlm_r_xnli_cross_lingual_transfer",
+      "@type": "mls:Experiment",
+      "mention": {
+        "start_char_doc": 23915,
+        "end_char_doc": 23956,
+        "prefix": "for validation in each language.",
+        "suffix": ". On cross-lingual transfer, XLM-R",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "XLM-R sets a new state of the art on XNLI",
+        "start_char_doc": 23915,
+        "end_char_doc": 23956,
+        "prefix": "for validation in each language.",
+        "suffix": ". On cross-lingual transfer, XLM-R",
+        "valueSource": "extracted"
+      },
+      "mls:objective": {
+        "value": "cross-lingual transfer from English",
+        "start_char_doc": 12496,
+        "end_char_doc": 12531,
+        "prefix": "We evaluate our model on",
+        "suffix": "to other lan- ²https://github.com/facebookresearch/cc_net ---",
+        "valueSource": "extracted"
+      },
+      "mls:hypothesis": {
+        "value": "Multilingual training is similar to practical applications where training sets are available in various languages for the same task",
+        "start_char_doc": 24648,
+        "end_char_doc": 24779,
+        "prefix": "XNLI, outperforming Unicoder by 5.1%.",
+        "suffix": ". In the case of",
+        "valueSource": "extracted"
+      },
+      "mls:methodology": {
+        "value": "using the translate-train-all approach which leverages training sets from multiple languages",
+        "start_char_doc": 32968,
+        "end_char_doc": 33060,
+        "prefix": "different seeds. We show that",
+        "suffix": ", XLM-R obtains a new",
+        "valueSource": "extracted"
+      },
+      "mls:realizes": [
+        {
+          "@id": "task:cross_lingual_natural_language_inference"
+        }
+      ],
+      "mls:usesData": [
+        {
+          "@id": "dataset:xnli"
+        }
+      ],
+      "mls:produces": [
+        {
+          "@id": "model:xlm_r"
+        },
+        {
+          "@id": "method:translate_train_all"
+        }
+      ],
+      "mls:usesParameters": [
+        {
+          "@id": "hp:language_sampling_alpha_xlm_r"
+        },
+        {
+          "@id": "hp:vocabulary_size_xlm_r"
+        },
+        {
+          "@id": "hp:num_layers_xlm_r"
+        },
+        {
+          "@id": "hp:hidden_size_xlm_r"
+        },
+        {
+          "@id": "hp:attention_heads_xlm_r"
+        },
+        {
+          "@id": "hp:num_parameters_xlm_r"
+        },
+        {
+          "@id": "hp:max_steps_xlm_r"
+        },
+        {
+          "@id": "hp:batch_size_xlm_r"
+        }
+      ],
+      "mls:executes": [
+        {
+          "@id": "impl:xlm_r_public_code"
+        }
+      ],
+      "mls:result": [
+        {
+          "@id": "eval:xnli_cross_lingual_transfer_accuracy"
+        },
+        {
+          "@id": "eval:xnli_translate_train_all_accuracy"
+        }
+      ]
+    },
+    {
+      "@id": "exp:xlm_r_named_entity_recognition",
+      "@type": "mls:Experiment",
+      "mention": {
+        "start_char_doc": 4029,
+        "end_char_doc": 4053,
+        "prefix": "--- ## Page 2 on",
+        "suffix": ", and 9.1% average F1-score",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "we consider the CoNLL-2002 (Sang, 2002) and CoNLL-2003 (Tjong Kim Sang and De Meulder, 2003) datasets in English, Dutch, Spanish and German",
+        "start_char_doc": 13197,
+        "end_char_doc": 13336,
+        "prefix": "**Named Entity Recognition.** For NER,",
+        "suffix": ". We fine-tune multilingual models",
+        "valueSource": "extracted"
+      },
+      "mls:objective": {
+        "value": "evaluate cross-lingual transfer",
+        "start_char_doc": 13404,
+        "end_char_doc": 13435,
+        "prefix": "on the English set to",
+        "suffix": ", (2) on each set",
+        "valueSource": "extracted"
+      },
+      "mls:hypothesis": {
+        "value": "our XLM-R model still performs on par with the state of the art",
+        "start_char_doc": 35872,
+        "end_char_doc": 35935,
+        "prefix": "al. (2018). Without the CRF,",
+        "suffix": ", outperforming Akbik et al.",
+        "valueSource": "extracted"
+      },
+      "mls:methodology": {
+        "value": "We fine-tune multilingual models either (1) on the English set to evaluate cross-lingual transfer, (2) on each set to evaluate per-language performance, or (3) on all sets to evaluate multilingual learning.",
+        "start_char_doc": 13338,
+        "end_char_doc": 13544,
+        "prefix": "English, Dutch, Spanish and German.",
+        "suffix": "We report the F1 score,",
+        "valueSource": "extracted"
+      },
+      "mls:realizes": [
+        {
+          "@id": "task:named_entity_recognition"
+        }
+      ],
+      "mls:usesData": [
+        {
+          "@id": "dataset:conll_2002"
+        },
+        {
+          "@id": "dataset:conll_2003"
+        }
+      ],
+      "mls:produces": [
+        {
+          "@id": "model:xlm_r"
+        }
+      ],
+      "mls:usesParameters": [
+        {
+          "@id": "hp:language_sampling_alpha_xlm_r"
+        },
+        {
+          "@id": "hp:vocabulary_size_xlm_r"
+        },
+        {
+          "@id": "hp:num_layers_xlm_r"
+        },
+        {
+          "@id": "hp:hidden_size_xlm_r"
+        },
+        {
+          "@id": "hp:attention_heads_xlm_r"
+        },
+        {
+          "@id": "hp:num_parameters_xlm_r"
+        },
+        {
+          "@id": "hp:max_steps_xlm_r"
+        },
+        {
+          "@id": "hp:batch_size_xlm_r"
+        }
+      ],
+      "mls:executes": [
+        {
+          "@id": "impl:xlm_r_public_code"
+        }
+      ],
+      "mls:result": [
+        {
+          "@id": "eval:ner_each_f1"
+        },
+        {
+          "@id": "eval:ner_cross_lingual_transfer_f1"
+        },
+        {
+          "@id": "eval:ner_all_f1"
+        }
+      ]
+    },
+    {
+      "@id": "exp:xlm_r_mlqa_question_answering",
+      "@type": "mls:Experiment",
+      "mention": {
+        "start_char_doc": 4098,
+        "end_char_doc": 4116,
+        "prefix": "9.1% average F1-score on cross-lingual",
+        "suffix": ". We also evaluate monolingual",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "We also obtain new state of the art results on the MLQA cross-lingual question answering benchmark",
+        "start_char_doc": 36279,
+        "end_char_doc": 36377,
+        "prefix": "approach by 8.49%. **Question Answering.**",
+        "suffix": ", introduced by Lewis et",
+        "valueSource": "extracted"
+      },
+      "mls:objective": {
+        "value": "evaluating on the 7 languages of the dataset",
+        "start_char_doc": 36485,
+        "end_char_doc": 36529,
+        "prefix": "the English training data and",
+        "suffix": ". We report results in",
+        "valueSource": "extracted"
+      },
+      "mls:hypothesis": {
+        "value": "confirming its strong monolingual performance",
+        "start_char_doc": 36784,
+        "end_char_doc": 36829,
+        "prefix": "even outperforms BERT-Large on English,",
+        "suffix": ". ### 5.3 Multilingual versus",
+        "valueSource": "extracted"
+      },
+      "mls:methodology": {
+        "value": "training on the English training data and evaluating on the 7 languages of the dataset",
+        "start_char_doc": 36443,
+        "end_char_doc": 36529,
+        "prefix": "We follow their procedure by",
+        "suffix": ". We report results in",
+        "valueSource": "extracted"
+      },
+      "mls:realizes": [
+        {
+          "@id": "task:cross_lingual_question_answering"
+        }
+      ],
+      "mls:usesData": [
+        {
+          "@id": "dataset:mlqa"
+        },
+        {
+          "@id": "dataset:squad"
+        }
+      ],
+      "mls:produces": [
+        {
+          "@id": "model:xlm_r"
+        }
+      ],
+      "mls:usesParameters": [
+        {
+          "@id": "hp:language_sampling_alpha_xlm_r"
+        },
+        {
+          "@id": "hp:vocabulary_size_xlm_r"
+        },
+        {
+          "@id": "hp:num_layers_xlm_r"
+        },
+        {
+          "@id": "hp:hidden_size_xlm_r"
+        },
+        {
+          "@id": "hp:attention_heads_xlm_r"
+        },
+        {
+          "@id": "hp:num_parameters_xlm_r"
+        },
+        {
+          "@id": "hp:max_steps_xlm_r"
+        },
+        {
+          "@id": "hp:batch_size_xlm_r"
+        }
+      ],
+      "mls:executes": [
+        {
+          "@id": "impl:xlm_r_public_code"
+        }
+      ],
+      "mls:result": [
+        {
+          "@id": "eval:mlqa_f1"
+        },
+        {
+          "@id": "eval:mlqa_exact_match"
+        }
+      ]
+    },
+    {
+      "@id": "exp:xlm_r_glue_natural_language_understanding",
+      "@type": "mls:Experiment",
+      "mention": {
+        "start_char_doc": 13942,
+        "end_char_doc": 13956,
+        "prefix": "cross-lingual transfer from English. **",
+        "suffix": ".** Finally, we evaluate the",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "we evaluate XLM-R on the GLUE benchmark",
+        "start_char_doc": 37192,
+        "end_char_doc": 37231,
+        "prefix": "each language. To that end,",
+        "suffix": ". We show in Table",
+        "valueSource": "extracted"
+      },
+      "mls:objective": {
+        "value": "obtain a multilingual model with strong performance on both, cross-lingual understanding tasks as well as natural language understanding tasks for each language",
+        "start_char_doc": 37017,
+        "end_char_doc": 37177,
+        "prefix": "RoBERTa.** Our goal is to",
+        "suffix": ". To that end, we",
+        "valueSource": "extracted"
+      },
+      "mls:hypothesis": {
+        "value": "These results demonstrate the possibility of learning one model for many languages while maintaining strong performance on per-language downstream tasks",
+        "start_char_doc": 39566,
+        "end_char_doc": 39718,
+        "prefix": "et al. (2019). vocabulary dilution.",
+        "suffix": ". particular task can overcome",
+        "valueSource": "extracted"
+      },
+      "mls:methodology": {
+        "value": "We show in Table 4, that XLM-R obtains better average dev performance than BERTLarge by 1.6% and reaches performance on par with XLNetLarge.",
+        "start_char_doc": 37233,
+        "end_char_doc": 37373,
+        "prefix": "XLM-R on the GLUE benchmark.",
+        "suffix": "The RoBERTa model outperforms XLM-R",
+        "valueSource": "extracted"
+      },
+      "mls:realizes": [
+        {
+          "@id": "task:natural_language_understanding"
+        }
+      ],
+      "mls:usesData": [
+        {
+          "@id": "dataset:glue"
+        }
+      ],
+      "mls:produces": [
+        {
+          "@id": "model:xlm_r"
+        }
+      ],
+      "mls:usesParameters": [
+        {
+          "@id": "hp:language_sampling_alpha_xlm_r"
+        },
+        {
+          "@id": "hp:vocabulary_size_xlm_r"
+        },
+        {
+          "@id": "hp:num_layers_xlm_r"
+        },
+        {
+          "@id": "hp:hidden_size_xlm_r"
+        },
+        {
+          "@id": "hp:attention_heads_xlm_r"
+        },
+        {
+          "@id": "hp:num_parameters_xlm_r"
+        },
+        {
+          "@id": "hp:max_steps_xlm_r"
+        },
+        {
+          "@id": "hp:batch_size_xlm_r"
+        }
+      ],
+      "mls:executes": [
+        {
+          "@id": "impl:xlm_r_public_code"
+        }
+      ],
+      "mls:result": [
+        {
+          "@id": "eval:glue_average_dev"
+        }
+      ]
+    },
+    {
+      "@id": "exp:xlm_r_scaling_ablation_analysis",
+      "@type": "mls:Experiment",
+      "mention": {
+        "start_char_doc": 14675,
+        "end_char_doc": 14738,
+        "prefix": "on low-resource languages. ### 5.1",
+        "suffix": "Much of the work done",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "we present a comprehensive study of different factors that are important to pretraining large scale multilingual models",
+        "start_char_doc": 14995,
+        "end_char_doc": 15114,
+        "prefix": "downstream tasks. In this section,",
+        "suffix": ". We highlight the trade-offs",
+        "valueSource": "extracted"
+      },
+      "mls:objective": {
+        "value": "highlight the trade-offs and limitations of these models as we scale to one hundred languages",
+        "start_char_doc": 15119,
+        "end_char_doc": 15212,
+        "prefix": "large scale multilingual models. We",
+        "suffix": ". **Transfer-dilution Trade-off and Curse",
+        "valueSource": "extracted"
+      },
+      "mls:hypothesis": {
+        "value": "the curse of multilinguality kicks in and degrades performance across all languages",
+        "start_char_doc": 16154,
+        "end_char_doc": 16237,
+        "prefix": "resource languages. Beyond this point",
+        "suffix": ". Specifically, the overall XNLI",
+        "valueSource": "extracted"
+      },
+      "mls:methodology": {
+        "value": "we investigate the impact of varying the $\\alpha$ parameter which controls the exponential smoothing of the language sampling rate",
+        "start_char_doc": 18658,
+        "end_char_doc": 18788,
+        "prefix": "of the subword vocab). Specifically,",
+        "suffix": ". Similar to Lample and",
+        "valueSource": "extracted"
+      },
+      "mls:realizes": [
+        {
+          "@id": "task:multilingual_masked_language_modeling"
+        },
+        {
+          "@id": "task:cross_lingual_language_understanding"
+        }
+      ],
+      "mls:usesData": [
+        {
+          "@id": "dataset:cc_100"
+        }
+      ],
+      "mls:produces": [
+        {
+          "@id": "method:language_sampling_alpha"
+        },
+        {
+          "@id": "model:xlm_r"
+        }
+      ],
+      "mls:usesParameters": [
+        {
+          "@id": "hp:language_sampling_alpha_xlm_r"
+        },
+        {
+          "@id": "hp:vocabulary_size_ablation_bertbase"
+        },
+        {
+          "@id": "hp:vocabulary_size_xlm_r"
+        }
+      ],
+      "mls:executes": [
+        {
+          "@id": "impl:xlm_r_public_code"
+        }
+      ]
+    }
+  ]
+}

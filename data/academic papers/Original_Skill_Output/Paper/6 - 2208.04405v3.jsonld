@@ -1,0 +1,3193 @@
+{
+  "@context": {
+    "mls": "http://www.w3.org/ns/mls#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "schema": "http://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "model": "https://w3id.org/mlskg/model/",
+    "algo": "https://w3id.org/mlskg/algorithm/",
+    "method": "https://w3id.org/mlskg/method/",
+    "dataset": "https://w3id.org/mlskg/dataset/",
+    "datasource": "https://w3id.org/mlskg/datasource/",
+    "task": "https://w3id.org/mlskg/task/",
+    "eval": "https://w3id.org/mlskg/eval/",
+    "hp": "https://w3id.org/mlskg/hp/",
+    "impl": "https://w3id.org/mlskg/implementation/",
+    "env": "https://w3id.org/mlskg/environment/",
+    "prompt": "https://w3id.org/mlskg/prompt/",
+    "person": "https://w3id.org/mlskg/person/",
+    "org": "https://w3id.org/mlskg/organization/",
+    "study": "https://w3id.org/mlskg/study/",
+    "exp": "https://w3id.org/mlskg/experiment/",
+    "repo": "https://w3id.org/mlskg/repository/",
+    "valueSource": "https://w3id.org/mlskg/meta/valueSource",
+    "mention": "https://w3id.org/mlskg/meta/mention"
+  },
+  "@graph": [
+    {
+      "@id": "study:recovering_graph_underlying_networked_dynamical_systems_partial_observability_2023",
+      "@type": "mls:Study",
+      "mention": {
+        "start_char_doc": 88,
+        "end_char_doc": 201,
+        "prefix": "1  &lt;watermark&gt;arXiv:2208.04405v3 [cs.LG] 12 Apr 2023&lt;/watermark&gt;  # ",
+        "suffix": "  Sérgio Machado$^{2,5}$, Anirudh Sridhar$^{3}$, Paulo Gil$^{2,4}$, Jorge Henriq",
+        "valueSource": "extracted"
+      },
+      "mls:title": {
+        "value": "Recovering the Graph Underlying Networked Dynamical Systems under Partial Observability: A Deep Learning Approach",
+        "start_char_doc": 88,
+        "end_char_doc": 201,
+        "prefix": "1  &lt;watermark&gt;arXiv:2208.04405v3 [cs.LG] 12 Apr 2023&lt;/watermark&gt;  # ",
+        "suffix": "  Sérgio Machado$^{2,5}$, Anirudh Sridhar$^{3}$, Paulo Gil$^{2,4}$, Jorge Henriq",
+        "valueSource": "extracted"
+      },
+      "mls:abstract": {
+        "value": "We study the problem of graph structure identification, i.e., of recovering the graph of dependencies among time series. We model these time series data as components of the state of linear stochastic *networked* dynamical systems. We assume partial observability, where the state evolution of only a subset of nodes comprising the network is observed. We propose a new feature-based paradigm: to each pair of nodes, we compute a feature vector from the observed time series. We prove that these features are linearly separable, i.e., there exists a hyperplane that separates the cluster of features associated with connected pairs of nodes from those of disconnected pairs. This renders the features amenable to train a variety of classifiers to perform causal inference. In particular, we use these features to train Convolutional Neural Networks (CNNs). The resulting causal inference mechanism outperforms state-of-the-art counterparts w.r.t. sample-complexity. The trained CNNs generalize well over structurally distinct networks (dense or sparse) and noise-level profiles. Remarkably, they also generalize well to real-world networks while trained over a synthetic network – namely, a particular realization of a random graph.",
+        "start_char_doc": 812,
+        "end_char_doc": 2044,
+        "prefix": "u, {psg,jh}@dei.uc.pt, moura@andrew.cmu.edu, augusto.pt@gmail.com  ## Abstract  ",
+        "suffix": "  ## Introduction  *Networked* dynamical systems are characterized by a set of i",
+        "valueSource": "extracted"
+      },
+      "mls:issued": {
+        "value": "12 Apr 2023",
+        "start_char_doc": 55,
+        "end_char_doc": 66,
+        "prefix": "## Page 1  &lt;watermark&gt;arXiv:2208.04405v3 [cs.LG] ",
+        "suffix": "&lt;/watermark&gt;  # Recovering the Graph Underlying Networked Dynamical System",
+        "valueSource": "extracted"
+      },
+      "mls:url": {
+        "value": "https://arxiv.org/abs/2208.04405",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:doi": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:publicationVenue": {
+        "value": "Association for the Advancement of Artificial Intelligence",
+        "start_char_doc": 5363,
+        "end_char_doc": 5421,
+        "prefix": " 2016).  *Corresponding author. E-mail: augusto.pt@gmail.com. Copyright © 2023, ",
+        "suffix": " (www.aaai.org). All rights reserved.  ---   ## Page 2  mermaid graph TD     sub",
+        "valueSource": "extracted"
+      },
+      "mls:hasAuthor": [
+        {
+          "@id": "person:machado_sergio"
+        },
+        {
+          "@id": "person:sridhar_anirudh"
+        },
+        {
+          "@id": "person:gil_paulo"
+        },
+        {
+          "@id": "person:henriques_jorge"
+        },
+        {
+          "@id": "person:moura_jose_m_f"
+        },
+        {
+          "@id": "person:santos_augusto"
+        }
+      ],
+      "mls:hasContribution": [
+        {
+          "@id": "task:graph_structure_identification"
+        },
+        {
+          "@id": "method:feature_vector_based_setting"
+        },
+        {
+          "@id": "method:consistent_linear_separability"
+        },
+        {
+          "@id": "method:cnn_feature_classifier"
+        },
+        {
+          "@id": "method:granger_augmented_feature_vector"
+        }
+      ],
+      "mls:hasExperiment": [
+        {
+          "@id": "exp:linear_separability_theorem"
+        },
+        {
+          "@id": "exp:synthetic_random_graph_training"
+        },
+        {
+          "@id": "exp:sample_complexity_simulation"
+        },
+        {
+          "@id": "exp:real_world_network_generalization"
+        },
+        {
+          "@id": "exp:noise_robustness"
+        },
+        {
+          "@id": "exp:granger_feature_augmentation"
+        }
+      ],
+      "mls:hasEvaluation": [
+        {
+          "@id": "eval:accuracy_metric"
+        },
+        {
+          "@id": "eval:cnn_sample_complexity"
+        },
+        {
+          "@id": "eval:cnn_real_world_generalization"
+        },
+        {
+          "@id": "eval:noise_robustness"
+        },
+        {
+          "@id": "eval:granger_feature_gain"
+        },
+        {
+          "@id": "eval:cnn_overall_superiority"
+        }
+      ],
+      "mls:implements": {
+        "@id": "repo:asanctvs_structure_identification"
+      }
+    },
+    {
+      "@id": "org:instituto_de_telecomunicacoes",
+      "@type": "mls:Organization",
+      "mention": {
+        "start_char_doc": 348,
+        "end_char_doc": 387,
+        "prefix": " Jorge Henriques$^{2}$, José M. F. Moura$^{5}$, Augusto Santos$^{1,2*}$  $^{1}$ ",
+        "suffix": " $^{2}$ University of Coimbra, Portugal $^{3}$ Department of Electrical and Comp",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Instituto de Telecomunicações, Portugal",
+        "start_char_doc": 348,
+        "end_char_doc": 387,
+        "prefix": " Jorge Henriques$^{2}$, José M. F. Moura$^{5}$, Augusto Santos$^{1,2*}$  $^{1}$ ",
+        "suffix": " $^{2}$ University of Coimbra, Portugal $^{3}$ Department of Electrical and Comp",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "org:university_of_coimbra",
+      "@type": "mls:Organization",
+      "mention": {
+        "start_char_doc": 395,
+        "end_char_doc": 426,
+        "prefix": " Augusto Santos$^{1,2*}$  $^{1}$ Instituto de Telecomunicações, Portugal $^{2}$ ",
+        "suffix": " $^{3}$ Department of Electrical and Computer Engineering at Princeton Universit",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "University of Coimbra, Portugal",
+        "start_char_doc": 395,
+        "end_char_doc": 426,
+        "prefix": " Augusto Santos$^{1,2*}$  $^{1}$ Instituto de Telecomunicações, Portugal $^{2}$ ",
+        "suffix": " $^{3}$ Department of Electrical and Computer Engineering at Princeton Universit",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "org:princeton_ece",
+      "@type": "mls:Organization",
+      "mention": {
+        "start_char_doc": 434,
+        "end_char_doc": 528,
+        "prefix": "uto de Telecomunicações, Portugal $^{2}$ University of Coimbra, Portugal $^{3}$ ",
+        "suffix": " $^{4}$ Universidade Nova de Lisboa, Portugal $^{5}$ Department of Electrical an",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Department of Electrical and Computer Engineering at Princeton University, New Jersey, NJ, USA",
+        "start_char_doc": 434,
+        "end_char_doc": 528,
+        "prefix": "uto de Telecomunicações, Portugal $^{2}$ University of Coimbra, Portugal $^{3}$ ",
+        "suffix": " $^{4}$ Universidade Nova de Lisboa, Portugal $^{5}$ Department of Electrical an",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "org:universidade_nova_de_lisboa",
+      "@type": "mls:Organization",
+      "mention": {
+        "start_char_doc": 536,
+        "end_char_doc": 573,
+        "prefix": "al and Computer Engineering at Princeton University, New Jersey, NJ, USA $^{4}$ ",
+        "suffix": " $^{5}$ Department of Electrical and Computer Engineering at Carnegie Mellon Uni",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Universidade Nova de Lisboa, Portugal",
+        "start_char_doc": 536,
+        "end_char_doc": 573,
+        "prefix": "al and Computer Engineering at Princeton University, New Jersey, NJ, USA $^{4}$ ",
+        "suffix": " $^{5}$ Department of Electrical and Computer Engineering at Carnegie Mellon Uni",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "org:cmu_ece",
+      "@type": "mls:Organization",
+      "mention": {
+        "start_char_doc": 581,
+        "end_char_doc": 681,
+        "prefix": "ersity, New Jersey, NJ, USA $^{4}$ Universidade Nova de Lisboa, Portugal $^{5}$ ",
+        "suffix": "  smachado@student.dei.uc.pt, asridhar@princeton.edu, {psg,jh}@dei.uc.pt, moura@",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Department of Electrical and Computer Engineering at Carnegie Mellon University, Pittsburgh, PA, USA",
+        "start_char_doc": 581,
+        "end_char_doc": 681,
+        "prefix": "ersity, New Jersey, NJ, USA $^{4}$ Universidade Nova de Lisboa, Portugal $^{5}$ ",
+        "suffix": "  smachado@student.dei.uc.pt, asridhar@princeton.edu, {psg,jh}@dei.uc.pt, moura@",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "org:aaai",
+      "@type": "mls:Organization",
+      "mention": {
+        "start_char_doc": 5363,
+        "end_char_doc": 5421,
+        "prefix": " 2016).  *Corresponding author. E-mail: augusto.pt@gmail.com. Copyright © 2023, ",
+        "suffix": " (www.aaai.org). All rights reserved.  ---   ## Page 2  mermaid graph TD     sub",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Association for the Advancement of Artificial Intelligence",
+        "start_char_doc": 5363,
+        "end_char_doc": 5421,
+        "prefix": " 2016).  *Corresponding author. E-mail: augusto.pt@gmail.com. Copyright © 2023, ",
+        "suffix": " (www.aaai.org). All rights reserved.  ---   ## Page 2  mermaid graph TD     sub",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "org:fct",
+      "@type": "mls:Organization",
+      "mention": {
+        "start_char_doc": 41337,
+        "end_char_doc": 41390,
+        "prefix": "ork of S. Machado, A. Santos, J. Henriques and P. Gil was funded in part by the ",
+        "suffix": ", I.P./MCTES through national funds (PIDDAC), within the scope of CISUC R&D Unit",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "FCT - Foundation for Science and Technology, Portugal",
+        "start_char_doc": 41337,
+        "end_char_doc": 41390,
+        "prefix": "ork of S. Machado, A. Santos, J. Henriques and P. Gil was funded in part by the ",
+        "suffix": ", I.P./MCTES through national funds (PIDDAC), within the scope of CISUC R&D Unit",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "org:cisuc",
+      "@type": "mls:Organization",
+      "mention": {
+        "start_char_doc": 41456,
+        "end_char_doc": 41470,
+        "prefix": "logy, Portugal, I.P./MCTES through national funds (PIDDAC), within the scope of ",
+        "suffix": " - UIDB/00326/2020 or project code UIDP/00326/2020 and CTS - Centro de Tecnologi",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "CISUC R&D Unit",
+        "start_char_doc": 41456,
+        "end_char_doc": 41470,
+        "prefix": "logy, Portugal, I.P./MCTES through national funds (PIDDAC), within the scope of ",
+        "suffix": " - UIDB/00326/2020 or project code UIDP/00326/2020 and CTS - Centro de Tecnologi",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "org:cts",
+      "@type": "mls:Organization",
+      "mention": {
+        "start_char_doc": 41525,
+        "end_char_doc": 41562,
+        "prefix": "e scope of CISUC R&D Unit - UIDB/00326/2020 or project code UIDP/00326/2020 and ",
+        "suffix": " - UIDB/00066/2020. The work of José M. F. Moura was funded in part by the U.S. ",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "CTS - Centro de Tecnologia e Sistemas",
+        "start_char_doc": 41525,
+        "end_char_doc": 41562,
+        "prefix": "e scope of CISUC R&D Unit - UIDB/00326/2020 or project code UIDP/00326/2020 and ",
+        "suffix": " - UIDB/00066/2020. The work of José M. F. Moura was funded in part by the U.S. ",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "org:us_nsf",
+      "@type": "mls:Organization",
+      "mention": {
+        "start_char_doc": 41637,
+        "end_char_doc": 41669,
+        "prefix": "temas - UIDB/00066/2020. The work of José M. F. Moura was funded in part by the ",
+        "suffix": " under Grant CCN 1513936. The work of Anirudh Sridhar was funded by the U.S. Nat",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "U.S. National Science Foundation",
+        "start_char_doc": 41637,
+        "end_char_doc": 41669,
+        "prefix": "temas - UIDB/00066/2020. The work of José M. F. Moura was funded in part by the ",
+        "suffix": " under Grant CCN 1513936. The work of Anirudh Sridhar was funded by the U.S. Nat",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "org:c3ai_dti",
+      "@type": "mls:Organization",
+      "mention": {
+        "start_char_doc": 41838,
+        "end_char_doc": 41876,
+        "prefix": "ence Foundation under Grants CCF-1908308 and ECCS-2039716, and a grant from the ",
+        "suffix": ". The source code for the numerical experiments can be found at https://github.c",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "C3.ai Digital Transformation Institute",
+        "start_char_doc": 41838,
+        "end_char_doc": 41876,
+        "prefix": "ence Foundation under Grants CCF-1908308 and ECCS-2039716, and a grant from the ",
+        "suffix": ". The source code for the numerical experiments can be found at https://github.c",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "person:machado_sergio",
+      "@type": "mls:Person",
+      "mention": {
+        "start_char_doc": 203,
+        "end_char_doc": 217,
+        "prefix": "worked Dynamical Systems under Partial Observability: A Deep Learning Approach  ",
+        "suffix": "$^{2,5}$, Anirudh Sridhar$^{3}$, Paulo Gil$^{2,4}$, Jorge Henriques$^{2}$, José ",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Sérgio Machado",
+        "start_char_doc": 203,
+        "end_char_doc": 217,
+        "prefix": "worked Dynamical Systems under Partial Observability: A Deep Learning Approach  ",
+        "suffix": "$^{2,5}$, Anirudh Sridhar$^{3}$, Paulo Gil$^{2,4}$, Jorge Henriques$^{2}$, José ",
+        "valueSource": "extracted"
+      },
+      "mls:email": {
+        "value": "smachado@student.dei.uc.pt",
+        "start_char_doc": 683,
+        "end_char_doc": 709,
+        "prefix": "al and Computer Engineering at Carnegie Mellon University, Pittsburgh, PA, USA  ",
+        "suffix": ", asridhar@princeton.edu, {psg,jh}@dei.uc.pt, moura@andrew.cmu.edu, augusto.pt@g",
+        "valueSource": "extracted"
+      },
+      "mls:affiliation": [
+        {
+          "@id": "org:university_of_coimbra"
+        },
+        {
+          "@id": "org:cmu_ece"
+        }
+      ]
+    },
+    {
+      "@id": "person:sridhar_anirudh",
+      "@type": "mls:Person",
+      "mention": {
+        "start_char_doc": 227,
+        "end_char_doc": 242,
+        "prefix": " under Partial Observability: A Deep Learning Approach  Sérgio Machado$^{2,5}$, ",
+        "suffix": "$^{3}$, Paulo Gil$^{2,4}$, Jorge Henriques$^{2}$, José M. F. Moura$^{5}$, August",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Anirudh Sridhar",
+        "start_char_doc": 227,
+        "end_char_doc": 242,
+        "prefix": " under Partial Observability: A Deep Learning Approach  Sérgio Machado$^{2,5}$, ",
+        "suffix": "$^{3}$, Paulo Gil$^{2,4}$, Jorge Henriques$^{2}$, José M. F. Moura$^{5}$, August",
+        "valueSource": "extracted"
+      },
+      "mls:email": {
+        "value": "asridhar@princeton.edu",
+        "start_char_doc": 711,
+        "end_char_doc": 733,
+        "prefix": "at Carnegie Mellon University, Pittsburgh, PA, USA  smachado@student.dei.uc.pt, ",
+        "suffix": ", {psg,jh}@dei.uc.pt, moura@andrew.cmu.edu, augusto.pt@gmail.com  ## Abstract  W",
+        "valueSource": "extracted"
+      },
+      "mls:affiliation": [
+        {
+          "@id": "org:princeton_ece"
+        }
+      ]
+    },
+    {
+      "@id": "person:gil_paulo",
+      "@type": "mls:Person",
+      "mention": {
+        "start_char_doc": 250,
+        "end_char_doc": 259,
+        "prefix": "ility: A Deep Learning Approach  Sérgio Machado$^{2,5}$, Anirudh Sridhar$^{3}$, ",
+        "suffix": "$^{2,4}$, Jorge Henriques$^{2}$, José M. F. Moura$^{5}$, Augusto Santos$^{1,2*}$",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Paulo Gil",
+        "start_char_doc": 250,
+        "end_char_doc": 259,
+        "prefix": "ility: A Deep Learning Approach  Sérgio Machado$^{2,5}$, Anirudh Sridhar$^{3}$, ",
+        "suffix": "$^{2,4}$, Jorge Henriques$^{2}$, José M. F. Moura$^{5}$, Augusto Santos$^{1,2*}$",
+        "valueSource": "extracted"
+      },
+      "mls:email": {
+        "value": "{psg,jh}@dei.uc.pt",
+        "start_char_doc": 735,
+        "end_char_doc": 753,
+        "prefix": "rsity, Pittsburgh, PA, USA  smachado@student.dei.uc.pt, asridhar@princeton.edu, ",
+        "suffix": ", moura@andrew.cmu.edu, augusto.pt@gmail.com  ## Abstract  We study the problem ",
+        "valueSource": "extracted"
+      },
+      "mls:affiliation": [
+        {
+          "@id": "org:university_of_coimbra"
+        },
+        {
+          "@id": "org:universidade_nova_de_lisboa"
+        }
+      ]
+    },
+    {
+      "@id": "person:henriques_jorge",
+      "@type": "mls:Person",
+      "mention": {
+        "start_char_doc": 269,
+        "end_char_doc": 284,
+        "prefix": "ing Approach  Sérgio Machado$^{2,5}$, Anirudh Sridhar$^{3}$, Paulo Gil$^{2,4}$, ",
+        "suffix": "$^{2}$, José M. F. Moura$^{5}$, Augusto Santos$^{1,2*}$  $^{1}$ Instituto de Tel",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Jorge Henriques",
+        "start_char_doc": 269,
+        "end_char_doc": 284,
+        "prefix": "ing Approach  Sérgio Machado$^{2,5}$, Anirudh Sridhar$^{3}$, Paulo Gil$^{2,4}$, ",
+        "suffix": "$^{2}$, José M. F. Moura$^{5}$, Augusto Santos$^{1,2*}$  $^{1}$ Instituto de Tel",
+        "valueSource": "extracted"
+      },
+      "mls:email": {
+        "value": "{psg,jh}@dei.uc.pt",
+        "start_char_doc": 735,
+        "end_char_doc": 753,
+        "prefix": "rsity, Pittsburgh, PA, USA  smachado@student.dei.uc.pt, asridhar@princeton.edu, ",
+        "suffix": ", moura@andrew.cmu.edu, augusto.pt@gmail.com  ## Abstract  We study the problem ",
+        "valueSource": "extracted"
+      },
+      "mls:affiliation": [
+        {
+          "@id": "org:university_of_coimbra"
+        }
+      ]
+    },
+    {
+      "@id": "person:moura_jose_m_f",
+      "@type": "mls:Person",
+      "mention": {
+        "start_char_doc": 292,
+        "end_char_doc": 308,
+        "prefix": "chado$^{2,5}$, Anirudh Sridhar$^{3}$, Paulo Gil$^{2,4}$, Jorge Henriques$^{2}$, ",
+        "suffix": "$^{5}$, Augusto Santos$^{1,2*}$  $^{1}$ Instituto de Telecomunicações, Portugal ",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "José M. F. Moura",
+        "start_char_doc": 292,
+        "end_char_doc": 308,
+        "prefix": "chado$^{2,5}$, Anirudh Sridhar$^{3}$, Paulo Gil$^{2,4}$, Jorge Henriques$^{2}$, ",
+        "suffix": "$^{5}$, Augusto Santos$^{1,2*}$  $^{1}$ Instituto de Telecomunicações, Portugal ",
+        "valueSource": "extracted"
+      },
+      "mls:email": {
+        "value": "moura@andrew.cmu.edu",
+        "start_char_doc": 755,
+        "end_char_doc": 775,
+        "prefix": "A, USA  smachado@student.dei.uc.pt, asridhar@princeton.edu, {psg,jh}@dei.uc.pt, ",
+        "suffix": ", augusto.pt@gmail.com  ## Abstract  We study the problem of graph structure ide",
+        "valueSource": "extracted"
+      },
+      "mls:affiliation": [
+        {
+          "@id": "org:cmu_ece"
+        }
+      ]
+    },
+    {
+      "@id": "person:santos_augusto",
+      "@type": "mls:Person",
+      "mention": {
+        "start_char_doc": 316,
+        "end_char_doc": 330,
+        "prefix": "ridhar$^{3}$, Paulo Gil$^{2,4}$, Jorge Henriques$^{2}$, José M. F. Moura$^{5}$, ",
+        "suffix": "$^{1,2*}$  $^{1}$ Instituto de Telecomunicações, Portugal $^{2}$ University of C",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Augusto Santos",
+        "start_char_doc": 316,
+        "end_char_doc": 330,
+        "prefix": "ridhar$^{3}$, Paulo Gil$^{2,4}$, Jorge Henriques$^{2}$, José M. F. Moura$^{5}$, ",
+        "suffix": "$^{1,2*}$  $^{1}$ Instituto de Telecomunicações, Portugal $^{2}$ University of C",
+        "valueSource": "extracted"
+      },
+      "mls:email": {
+        "value": "augusto.pt@gmail.com",
+        "start_char_doc": 777,
+        "end_char_doc": 797,
+        "prefix": "nt.dei.uc.pt, asridhar@princeton.edu, {psg,jh}@dei.uc.pt, moura@andrew.cmu.edu, ",
+        "suffix": "  ## Abstract  We study the problem of graph structure identification, i.e., of ",
+        "valueSource": "extracted"
+      },
+      "mls:affiliation": [
+        {
+          "@id": "org:instituto_de_telecomunicacoes"
+        },
+        {
+          "@id": "org:university_of_coimbra"
+        }
+      ]
+    },
+    {
+      "@id": "task:graph_structure_identification",
+      "@type": "mls:MLS_Task",
+      "mention": {
+        "start_char_doc": 877,
+        "end_char_doc": 931,
+        "prefix": "  ## Abstract  We study the problem of graph structure identification, i.e., of ",
+        "suffix": ". We model these time series data as components of the state of linear stochasti",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "graph structure identification",
+        "start_char_doc": 836,
+        "end_char_doc": 866,
+        "prefix": "oura@andrew.cmu.edu, augusto.pt@gmail.com  ## Abstract  We study the problem of ",
+        "suffix": ", i.e., of recovering the graph of dependencies among time series. We model thes",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "recovering the graph of dependencies among time series",
+        "start_char_doc": 877,
+        "end_char_doc": 931,
+        "prefix": "  ## Abstract  We study the problem of graph structure identification, i.e., of ",
+        "suffix": ". We model these time series data as components of the state of linear stochasti",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "task:causal_inference",
+      "@type": "mls:MLS_Task",
+      "mention": {
+        "start_char_doc": 1567,
+        "end_char_doc": 1583,
+        "prefix": "This renders the features amenable to train a variety of classifiers to perform ",
+        "suffix": ". In particular, we use these features to train Convolutional Neural Networks (C",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "causal inference",
+        "start_char_doc": 1567,
+        "end_char_doc": 1583,
+        "prefix": "This renders the features amenable to train a variety of classifiers to perform ",
+        "suffix": ". In particular, we use these features to train Convolutional Neural Networks (C",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "perform causal inference",
+        "start_char_doc": 1559,
+        "end_char_doc": 1583,
+        "prefix": " pairs. This renders the features amenable to train a variety of classifiers to ",
+        "suffix": ". In particular, we use these features to train Convolutional Neural Networks (C",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "task:partial_observability_graph_reconstruction",
+      "@type": "mls:MLS_Task",
+      "mention": {
+        "start_char_doc": 40170,
+        "end_char_doc": 40191,
+        "prefix": "c networked dynamical systems. Only the time series of some nodes are observed (",
+        "suffix": "). We proposed a novel feature-based paradigm and proved that the features were ",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "partial observability",
+        "start_char_doc": 40170,
+        "end_char_doc": 40191,
+        "prefix": "c networked dynamical systems. Only the time series of some nodes are observed (",
+        "suffix": "). We proposed a novel feature-based paradigm and proved that the features were ",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "Only the time series of some nodes are observed (partial observability).",
+        "start_char_doc": 40121,
+        "end_char_doc": 40193,
+        "prefix": "e series are indexed as nodes in linear stochastic networked dynamical systems. ",
+        "suffix": " We proposed a novel feature-based paradigm and proved that the features were co",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "task:recover_support_submatrix_as",
+      "@type": "mls:MLS_Task",
+      "mention": {
+        "start_char_doc": 15753,
+        "end_char_doc": 15798,
+        "prefix": "A)$ stands for the spectral radius of $A$.  This work deals with the problem of ",
+        "suffix": ", i.e., the graph structure of connections among the observed nodes in the subse",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "recovering the support of the submatrix $A_S$",
+        "start_char_doc": 15753,
+        "end_char_doc": 15798,
+        "prefix": "A)$ stands for the spectral radius of $A$.  This work deals with the problem of ",
+        "suffix": ", i.e., the graph structure of connections among the observed nodes in the subse",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "This work deals with the problem of recovering the support of the submatrix $A_S$",
+        "start_char_doc": 15717,
+        "end_char_doc": 15798,
+        "prefix": "e, i.e., $\\rho(A) < 1$, where $\\rho(A)$ stands for the spectral radius of $A$.  ",
+        "suffix": ", i.e., the graph structure of connections among the observed nodes in the subse",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "task:structure_identification_sample_complexity",
+      "@type": "mls:MLS_Task",
+      "mention": {
+        "start_char_doc": 38931,
+        "end_char_doc": 38960,
+        "prefix": "e consider 1000 Monte Carlo runs across all plots.  Fig. 3 (a) – (f) depict the ",
+        "suffix": " of the estimators across structurally distinct networks, considering: i) Grange",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "sample-complexity performance",
+        "start_char_doc": 38931,
+        "end_char_doc": 38960,
+        "prefix": "e consider 1000 Monte Carlo runs across all plots.  Fig. 3 (a) – (f) depict the ",
+        "suffix": " of the estimators across structurally distinct networks, considering: i) Grange",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "sample-complexity performance of the estimators across structurally distinct networks",
+        "start_char_doc": 38931,
+        "end_char_doc": 39016,
+        "prefix": "e consider 1000 Monte Carlo runs across all plots.  Fig. 3 (a) – (f) depict the ",
+        "suffix": ", considering: i) Granger under partial observability $\\left[ \\widehat{R}_1(n) \\",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "datasource:network_data_repository",
+      "@type": "mls:DataSource",
+      "mention": {
+        "start_char_doc": 36629,
+        "end_char_doc": 36660,
+        "prefix": "or in the feature vector.&lt;/img&gt;  to real-world networks obtained from the ",
+        "suffix": ", with (a) for a Brain structural connectivity matrix of a monkey and (b) for an",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "database (Rossi and Ahmed 2015)",
+        "start_char_doc": 36629,
+        "end_char_doc": 36660,
+        "prefix": "or in the feature vector.&lt;/img&gt;  to real-world networks obtained from the ",
+        "suffix": ", with (a) for a Brain structural connectivity matrix of a monkey and (b) for an",
+        "valueSource": "extracted"
+      },
+      "mls:url": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "datasource:erdos_renyi_model",
+      "@type": "mls:DataSource",
+      "mention": {
+        "start_char_doc": 35855,
+        "end_char_doc": 35866,
+        "prefix": " the support graph $G$, we considered the realization of random graph models as ",
+        "suffix": " for undirected graphs, binomial random graphs for directed graphs, and real-wor",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Erdős–Rényi",
+        "start_char_doc": 35855,
+        "end_char_doc": 35866,
+        "prefix": " the support graph $G$, we considered the realization of random graph models as ",
+        "suffix": " for undirected graphs, binomial random graphs for directed graphs, and real-wor",
+        "valueSource": "extracted"
+      },
+      "mls:url": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "datasource:binomial_random_graph_model",
+      "@type": "mls:DataSource",
+      "mention": {
+        "start_char_doc": 35890,
+        "end_char_doc": 35912,
+        "prefix": "ed the realization of random graph models as Erdős–Rényi for undirected graphs, ",
+        "suffix": " for directed graphs, and real-world networks.  We train the classifiers over on",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "binomial random graphs",
+        "start_char_doc": 35890,
+        "end_char_doc": 35912,
+        "prefix": "ed the realization of random graph models as Erdős–Rényi for undirected graphs, ",
+        "suffix": " for directed graphs, and real-world networks.  We train the classifiers over on",
+        "valueSource": "extracted"
+      },
+      "mls:url": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "datasource:github_structure_identification",
+      "@type": "mls:DataSource",
+      "mention": {
+        "start_char_doc": 41940,
+        "end_char_doc": 41992,
+        "prefix": "mation Institute. The source code for the numerical experiments can be found at ",
+        "suffix": ".  # References  Adams, J.; Hansen, N. R.; and Zhang, K. 2021. Identification of",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "https://github.com/ASanctvs/Structure-Identification",
+        "start_char_doc": 41940,
+        "end_char_doc": 41992,
+        "prefix": "mation Institute. The source code for the numerical experiments can be found at ",
+        "suffix": ".  # References  Adams, J.; Hansen, N. R.; and Zhang, K. 2021. Identification of",
+        "valueSource": "extracted"
+      },
+      "mls:url": {
+        "value": "https://github.com/ASanctvs/Structure-Identification",
+        "start_char_doc": 41940,
+        "end_char_doc": 41992,
+        "prefix": "mation Institute. The source code for the numerical experiments can be found at ",
+        "suffix": ".  # References  Adams, J.; Hansen, N. R.; and Zhang, K. 2021. Identification of",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "dataset:observed_time_series",
+      "@type": "mls:MLS_Dataset",
+      "mention": {
+        "start_char_doc": 1266,
+        "end_char_doc": 1286,
+        "prefix": "ure-based paradigm: to each pair of nodes, we compute a feature vector from the ",
+        "suffix": ". We prove that these features are linearly separable, i.e., there exists a hype",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "observed time series",
+        "start_char_doc": 1266,
+        "end_char_doc": 1286,
+        "prefix": "ure-based paradigm: to each pair of nodes, we compute a feature vector from the ",
+        "suffix": ". We prove that these features are linearly separable, i.e., there exists a hype",
+        "valueSource": "extracted"
+      },
+      "mls:usedDataSource": [
+        {
+          "@id": "datasource:erdos_renyi_model"
+        },
+        {
+          "@id": "datasource:binomial_random_graph_model"
+        },
+        {
+          "@id": "datasource:network_data_repository"
+        }
+      ],
+      "mls:hasTask": {
+        "@id": "task:graph_structure_identification"
+      }
+    },
+    {
+      "@id": "dataset:synthetic_random_graph_training_network",
+      "@type": "mls:MLS_Dataset",
+      "mention": {
+        "start_char_doc": 35990,
+        "end_char_doc": 36058,
+        "prefix": "hs for directed graphs, and real-world networks.  We train the classifiers over ",
+        "suffix": " and apply them to distinct networks, including real-world ones, where $p$ is th",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "one realization of a random graph model with $p = 0.5$ and $N = 100$",
+        "start_char_doc": 35990,
+        "end_char_doc": 36058,
+        "prefix": "hs for directed graphs, and real-world networks.  We train the classifiers over ",
+        "suffix": " and apply them to distinct networks, including real-world ones, where $p$ is th",
+        "valueSource": "extracted"
+      },
+      "mls:usedDataSource": [
+        {
+          "@id": "datasource:erdos_renyi_model"
+        }
+      ],
+      "mls:hasTask": {
+        "@id": "task:graph_structure_identification"
+      }
+    },
+    {
+      "@id": "dataset:erdos_renyi_undirected_graphs",
+      "@type": "mls:MLS_Dataset",
+      "mention": {
+        "start_char_doc": 25681,
+        "end_char_doc": 25698,
+        "prefix": "r to real-world networks; (c)-(d) refer to undirected graphs (realization of an ",
+        "suffix": "); and plots (e)-(f) refer to directed graphs (realization of a binomial random ",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Erdős–Rényi model",
+        "start_char_doc": 25681,
+        "end_char_doc": 25698,
+        "prefix": "r to real-world networks; (c)-(d) refer to undirected graphs (realization of an ",
+        "suffix": "); and plots (e)-(f) refer to directed graphs (realization of a binomial random ",
+        "valueSource": "extracted"
+      },
+      "mls:usedDataSource": [
+        {
+          "@id": "datasource:erdos_renyi_model"
+        }
+      ],
+      "mls:hasTask": {
+        "@id": "task:graph_structure_identification"
+      }
+    },
+    {
+      "@id": "dataset:binomial_directed_graphs",
+      "@type": "mls:MLS_Dataset",
+      "mention": {
+        "start_char_doc": 25762,
+        "end_char_doc": 25783,
+        "prefix": "rdős–Rényi model); and plots (e)-(f) refer to directed graphs (realization of a ",
+        "suffix": "). We assume that we can only observe |S| = 20 nodes.&lt;/img&gt;  **Proof.** De",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "binomial random graph",
+        "start_char_doc": 25762,
+        "end_char_doc": 25783,
+        "prefix": "rdős–Rényi model); and plots (e)-(f) refer to directed graphs (realization of a ",
+        "suffix": "). We assume that we can only observe |S| = 20 nodes.&lt;/img&gt;  **Proof.** De",
+        "valueSource": "extracted"
+      },
+      "mls:usedDataSource": [
+        {
+          "@id": "datasource:binomial_random_graph_model"
+        }
+      ],
+      "mls:hasTask": {
+        "@id": "task:graph_structure_identification"
+      }
+    },
+    {
+      "@id": "dataset:real_world_networks",
+      "@type": "mls:MLS_Dataset",
+      "mention": {
+        "start_char_doc": 36591,
+        "end_char_doc": 36610,
+        "prefix": "s the inclusion of the Granger estimator in the feature vector.&lt;/img&gt;  to ",
+        "suffix": " obtained from the database (Rossi and Ahmed 2015), with (a) for a Brain structu",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "real-world networks",
+        "start_char_doc": 36591,
+        "end_char_doc": 36610,
+        "prefix": "s the inclusion of the Granger estimator in the feature vector.&lt;/img&gt;  to ",
+        "suffix": " obtained from the database (Rossi and Ahmed 2015), with (a) for a Brain structu",
+        "valueSource": "extracted"
+      },
+      "mls:usedDataSource": [
+        {
+          "@id": "datasource:network_data_repository"
+        }
+      ],
+      "mls:hasTask": {
+        "@id": "task:graph_structure_identification"
+      }
+    },
+    {
+      "@id": "dataset:monkey_brain_structural_connectivity",
+      "@type": "mls:MLS_Dataset",
+      "mention": {
+        "start_char_doc": 36677,
+        "end_char_doc": 36725,
+        "prefix": "orld networks obtained from the database (Rossi and Ahmed 2015), with (a) for a ",
+        "suffix": " and (b) for an enzyme biochemical network; (c) – (d) refer to symmetric regimes",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Brain structural connectivity matrix of a monkey",
+        "start_char_doc": 36677,
+        "end_char_doc": 36725,
+        "prefix": "orld networks obtained from the database (Rossi and Ahmed 2015), with (a) for a ",
+        "suffix": " and (b) for an enzyme biochemical network; (c) – (d) refer to symmetric regimes",
+        "valueSource": "extracted"
+      },
+      "mls:usedDataSource": [
+        {
+          "@id": "datasource:network_data_repository"
+        }
+      ],
+      "mls:hasTask": {
+        "@id": "task:graph_structure_identification"
+      }
+    },
+    {
+      "@id": "dataset:enzyme_biochemical_network",
+      "@type": "mls:MLS_Dataset",
+      "mention": {
+        "start_char_doc": 36741,
+        "end_char_doc": 36767,
+        "prefix": " with (a) for a Brain structural connectivity matrix of a monkey and (b) for an ",
+        "suffix": "; (c) – (d) refer to symmetric regimes where the underlying support graph of the",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "enzyme biochemical network",
+        "start_char_doc": 36741,
+        "end_char_doc": 36767,
+        "prefix": " with (a) for a Brain structural connectivity matrix of a monkey and (b) for an ",
+        "suffix": "; (c) – (d) refer to symmetric regimes where the underlying support graph of the",
+        "valueSource": "extracted"
+      },
+      "mls:usedDataSource": [
+        {
+          "@id": "datasource:network_data_repository"
+        }
+      ],
+      "mls:hasTask": {
+        "@id": "task:graph_structure_identification"
+      }
+    },
+    {
+      "@id": "dataset:time_series_y_l",
+      "@type": "mls:MLS_Dataset",
+      "mention": {
+        "start_char_doc": 34922,
+        "end_char_doc": 34972,
+        "prefix": " across structurally distinct graphs.  To generate the matrix $A$ to obtain the ",
+        "suffix": ", given a graph $G$, the following procedure was considered. Let $G$ be a given ",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "time series data $\\{\\mathbf{y}(\\ell)\\}_{\\ell=0}^n$",
+        "start_char_doc": 34922,
+        "end_char_doc": 34972,
+        "prefix": " across structurally distinct graphs.  To generate the matrix $A$ to obtain the ",
+        "suffix": ", given a graph $G$, the following procedure was considered. Let $G$ be a given ",
+        "valueSource": "extracted"
+      },
+      "mls:usedDataSource": [
+        {
+          "@id": "datasource:erdos_renyi_model"
+        },
+        {
+          "@id": "datasource:binomial_random_graph_model"
+        },
+        {
+          "@id": "datasource:network_data_repository"
+        }
+      ],
+      "mls:hasTask": {
+        "@id": "task:graph_structure_identification"
+      }
+    },
+    {
+      "@id": "model:linear_stochastic_networked_dynamical_system",
+      "@type": "mls:MLS_Model",
+      "mention": {
+        "start_char_doc": 995,
+        "end_char_doc": 1042,
+        "prefix": "mong time series. We model these time series data as components of the state of ",
+        "suffix": ". We assume partial observability, where the state evolution of only a subset of",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "linear stochastic *networked* dynamical systems",
+        "start_char_doc": 995,
+        "end_char_doc": 1042,
+        "prefix": "mong time series. We model these time series data as components of the state of ",
+        "suffix": ". We assume partial observability, where the state evolution of only a subset of",
+        "valueSource": "extracted"
+      },
+      "mls:hasTask": [
+        {
+          "@id": "task:graph_structure_identification"
+        }
+      ]
+    },
+    {
+      "@id": "model:interaction_matrix_a",
+      "@type": "mls:MLS_Model",
+      "mention": {
+        "start_char_doc": 14461,
+        "end_char_doc": 14483,
+        "prefix": "ovariance matrices, with high probability, under the following regime: *i)* the ",
+        "suffix": " is symmetric; *ii)* the noise $x$ is *diagonal* and homogeneous, i.e., its cova",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "interaction matrix $A$",
+        "start_char_doc": 14461,
+        "end_char_doc": 14483,
+        "prefix": "ovariance matrices, with high probability, under the following regime: *i)* the ",
+        "suffix": " is symmetric; *ii)* the noise $x$ is *diagonal* and homogeneous, i.e., its cova",
+        "valueSource": "extracted"
+      },
+      "mls:hasTask": [
+        {
+          "@id": "task:recover_support_submatrix_as"
+        }
+      ]
+    },
+    {
+      "@id": "model:convolutional_neural_networks",
+      "@type": "mls:MLS_Model",
+      "mention": {
+        "start_char_doc": 1631,
+        "end_char_doc": 1667,
+        "prefix": "iers to perform causal inference. In particular, we use these features to train ",
+        "suffix": ". The resulting causal inference mechanism outperforms state-of-the-art counterp",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Convolutional Neural Networks (CNNs)",
+        "start_char_doc": 1631,
+        "end_char_doc": 1667,
+        "prefix": "iers to perform causal inference. In particular, we use these features to train ",
+        "suffix": ". The resulting causal inference mechanism outperforms state-of-the-art counterp",
+        "valueSource": "extracted"
+      },
+      "mls:hasTask": [
+        {
+          "@id": "task:causal_inference"
+        }
+      ]
+    },
+    {
+      "@id": "model:linear_svm",
+      "@type": "mls:MLS_Model",
+      "mention": {
+        "start_char_doc": 33122,
+        "end_char_doc": 33159,
+        "prefix": "n Theorem 1, by studying the performance of trained classifiers, in particular, ",
+        "suffix": " and Convolutional Neural Networks (CNNs). The training set is given by $$ \\text",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "linear Support Vector Machines (SVMs)",
+        "start_char_doc": 33122,
+        "end_char_doc": 33159,
+        "prefix": "n Theorem 1, by studying the performance of trained classifiers, in particular, ",
+        "suffix": " and Convolutional Neural Networks (CNNs). The training set is given by $$ \\text",
+        "valueSource": "extracted"
+      },
+      "mls:hasTask": [
+        {
+          "@id": "task:causal_inference"
+        }
+      ]
+    },
+    {
+      "@id": "model:graph_reconstruction_module",
+      "@type": "mls:MLS_Model",
+      "mention": {
+        "start_char_doc": 5908,
+        "end_char_doc": 5935,
+        "prefix": "es]         L[Time Series]     end      subgraph Graph Reconstruction         M[",
+        "suffix": "]         N[Reconstructed Graph]     end      A --> B     B --> C     C --> D   ",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Graph Reconstruction Module",
+        "start_char_doc": 5908,
+        "end_char_doc": 5935,
+        "prefix": "es]         L[Time Series]     end      subgraph Graph Reconstruction         M[",
+        "suffix": "]         N[Reconstructed Graph]     end      A --> B     B --> C     C --> D   ",
+        "valueSource": "extracted"
+      },
+      "mls:hasTask": [
+        {
+          "@id": "task:graph_structure_identification"
+        }
+      ]
+    },
+    {
+      "@id": "method:feature_vector_based_setting",
+      "@type": "mls:Method",
+      "mention": {
+        "start_char_doc": 7122,
+        "end_char_doc": 7150,
+        "prefix": "ion matrix, etc. – which dates back to (Chow and Liu 1968). We propose a novel *",
+        "suffix": "* constructed for each pair of nodes from their time series. In this novel setti",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "feature vector based setting",
+        "start_char_doc": 7122,
+        "end_char_doc": 7150,
+        "prefix": "ion matrix, etc. – which dates back to (Chow and Liu 1968). We propose a novel *",
+        "suffix": "* constructed for each pair of nodes from their time series. In this novel setti",
+        "valueSource": "extracted"
+      },
+      "mls:uses": [
+        {
+          "@id": "model:convolutional_neural_networks"
+        },
+        {
+          "@id": "model:linear_svm"
+        }
+      ],
+      "mls:addressesTask": {
+        "@id": "task:graph_structure_identification"
+      }
+    },
+    {
+      "@id": "method:covariance_based_feature_tensor",
+      "@type": "mls:Method",
+      "mention": {
+        "start_char_doc": 32956,
+        "end_char_doc": 32981,
+        "prefix": "om the observed time series, we address the linear separability property of the ",
+        "suffix": " $\\left\\{ \\mathcal{T}_{ij}^{(n)} \\right\\}_{ij}$ established in Theorem 1, by stu",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "covariance-based features",
+        "start_char_doc": 32956,
+        "end_char_doc": 32981,
+        "prefix": "om the observed time series, we address the linear separability property of the ",
+        "suffix": " $\\left\\{ \\mathcal{T}_{ij}^{(n)} \\right\\}_{ij}$ established in Theorem 1, by stu",
+        "valueSource": "extracted"
+      },
+      "mls:uses": [
+        {
+          "@id": "model:linear_stochastic_networked_dynamical_system"
+        }
+      ],
+      "mls:addressesTask": {
+        "@id": "task:graph_structure_identification"
+      }
+    },
+    {
+      "@id": "method:consistent_linear_separability",
+      "@type": "mls:Method",
+      "mention": {
+        "start_char_doc": 23589,
+        "end_char_doc": 23620,
+        "prefix": "ures $\\left\\{\\mathcal{T}_{ij}^{(n)}\\right\\}_{i \\neq j} \\subset \\mathbb{R}^M$ is ",
+        "suffix": " w.h.p.  *Proof.* Since $E^{(n)}(\\mathbf{w}) = \\sum_{\\ell=1}^M w_\\ell E_\\ell^{(n",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "consistently linearly separable",
+        "start_char_doc": 23589,
+        "end_char_doc": 23620,
+        "prefix": "ures $\\left\\{\\mathcal{T}_{ij}^{(n)}\\right\\}_{i \\neq j} \\subset \\mathbb{R}^M$ is ",
+        "suffix": " w.h.p.  *Proof.* Since $E^{(n)}(\\mathbf{w}) = \\sum_{\\ell=1}^M w_\\ell E_\\ell^{(n",
+        "valueSource": "extracted"
+      },
+      "mls:uses": [
+        {
+          "@id": "model:convolutional_neural_networks"
+        },
+        {
+          "@id": "model:linear_svm"
+        }
+      ],
+      "mls:addressesTask": {
+        "@id": "task:graph_structure_identification"
+      }
+    },
+    {
+      "@id": "method:cnn_feature_classifier",
+      "@type": "mls:Method",
+      "mention": {
+        "start_char_doc": 1782,
+        "end_char_doc": 1794,
+        "prefix": "chanism outperforms state-of-the-art counterparts w.r.t. sample-complexity. The ",
+        "suffix": " generalize well over structurally distinct networks (dense or sparse) and noise",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "trained CNNs",
+        "start_char_doc": 1782,
+        "end_char_doc": 1794,
+        "prefix": "chanism outperforms state-of-the-art counterparts w.r.t. sample-complexity. The ",
+        "suffix": " generalize well over structurally distinct networks (dense or sparse) and noise",
+        "valueSource": "extracted"
+      },
+      "mls:uses": [
+        {
+          "@id": "model:convolutional_neural_networks"
+        }
+      ],
+      "mls:addressesTask": {
+        "@id": "task:graph_structure_identification"
+      }
+    },
+    {
+      "@id": "method:linear_svm_feature_classifier",
+      "@type": "mls:Method",
+      "mention": {
+        "start_char_doc": 37393,
+        "end_char_doc": 37404,
+        "prefix": "(a) – (b).  Fig. 4a illustrates the robustness of both the trained CNNs and the ",
+        "suffix": " against distinct noise-level regimes. The CNNs and SVMs are trained with a nois",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "linear SVMs",
+        "start_char_doc": 37393,
+        "end_char_doc": 37404,
+        "prefix": "(a) – (b).  Fig. 4a illustrates the robustness of both the trained CNNs and the ",
+        "suffix": " against distinct noise-level regimes. The CNNs and SVMs are trained with a nois",
+        "valueSource": "extracted"
+      },
+      "mls:uses": [
+        {
+          "@id": "model:linear_svm"
+        }
+      ],
+      "mls:addressesTask": {
+        "@id": "task:graph_structure_identification"
+      }
+    },
+    {
+      "@id": "method:normalized_feature_vectors",
+      "@type": "mls:Method",
+      "mention": {
+        "start_char_doc": 33413,
+        "end_char_doc": 33439,
+        "prefix": "neq 0\\}} \\right) \\right\\}_{i \\neq j} \\quad (16) $$ where we have introduced the ",
+        "suffix": " $$ \\overline{\\mathcal{T}}_{ij}^{(n)} := \\frac{\\mathcal{T}_{ij}^{(n)}}{\\max_{i \\",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "normalized feature vectors",
+        "start_char_doc": 33413,
+        "end_char_doc": 33439,
+        "prefix": "neq 0\\}} \\right) \\right\\}_{i \\neq j} \\quad (16) $$ where we have introduced the ",
+        "suffix": " $$ \\overline{\\mathcal{T}}_{ij}^{(n)} := \\frac{\\mathcal{T}_{ij}^{(n)}}{\\max_{i \\",
+        "valueSource": "extracted"
+      },
+      "mls:uses": [
+        {
+          "@id": "model:convolutional_neural_networks"
+        },
+        {
+          "@id": "model:linear_svm"
+        }
+      ],
+      "mls:addressesTask": {
+        "@id": "task:graph_structure_identification"
+      }
+    },
+    {
+      "@id": "method:granger_augmented_feature_vector",
+      "@type": "mls:Method",
+      "mention": {
+        "start_char_doc": 37746,
+        "end_char_doc": 37797,
+        "prefix": "input noise in the dynamics (1). Fig. 4b shows the gain in performance when the ",
+        "suffix": ". In particular, when we include in the feature vector  $$ \\mathcal{T}_{ij}^{(n)",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Granger estimator is included in the feature vector",
+        "start_char_doc": 37746,
+        "end_char_doc": 37797,
+        "prefix": "input noise in the dynamics (1). Fig. 4b shows the gain in performance when the ",
+        "suffix": ". In particular, when we include in the feature vector  $$ \\mathcal{T}_{ij}^{(n)",
+        "valueSource": "extracted"
+      },
+      "mls:uses": [
+        {
+          "@id": "algo:granger_partial_observability_estimator"
+        }
+      ],
+      "mls:addressesTask": {
+        "@id": "task:graph_structure_identification"
+      }
+    },
+    {
+      "@id": "method:gaussian_mixture_stratification",
+      "@type": "mls:Method",
+      "mention": {
+        "start_char_doc": 39637,
+        "end_char_doc": 39653,
+        "prefix": "022); iv) the linear SVM; and v) the trained CNNs. For classification, we apply ",
+        "suffix": " over the sorted entries of the matrix-valued estimators in order to stratify th",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Gaussian mixture",
+        "start_char_doc": 39637,
+        "end_char_doc": 39653,
+        "prefix": "022); iv) the linear SVM; and v) the trained CNNs. For classification, we apply ",
+        "suffix": " over the sorted entries of the matrix-valued estimators in order to stratify th",
+        "valueSource": "extracted"
+      },
+      "mls:uses": [
+        {
+          "@id": "algo:gaussian_mixture_classification"
+        }
+      ],
+      "mls:addressesTask": {
+        "@id": "task:graph_structure_identification"
+      }
+    },
+    {
+      "@id": "method:laplacian_rule_generation",
+      "@type": "mls:Method",
+      "mention": {
+        "start_char_doc": 35605,
+        "end_char_doc": 35619,
+        "prefix": "sum to $\\alpha < 1$ and its support is given by $G$. This is often cast as the *",
+        "suffix": "* (Sayed 2014). This interaction matrix renders the networked dynamical system (",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Laplacian rule",
+        "start_char_doc": 35605,
+        "end_char_doc": 35619,
+        "prefix": "sum to $\\alpha < 1$ and its support is given by $G$. This is often cast as the *",
+        "suffix": "* (Sayed 2014). This interaction matrix renders the networked dynamical system (",
+        "valueSource": "extracted"
+      },
+      "mls:uses": [
+        {
+          "@id": "model:interaction_matrix_a"
+        }
+      ],
+      "mls:addressesTask": {
+        "@id": "task:graph_structure_identification"
+      }
+    },
+    {
+      "@id": "method:pairwise_local_estimation",
+      "@type": "mls:Method",
+      "mention": {
+        "start_char_doc": 26737,
+        "end_char_doc": 26752,
+        "prefix": "$ and $j$. As such, it is possible to reconstruct the connectivity pattern in a ",
+        "suffix": ". This is a special property that results from the fact that each lag-moment, or",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "pairwise manner",
+        "start_char_doc": 26737,
+        "end_char_doc": 26752,
+        "prefix": "$ and $j$. As such, it is possible to reconstruct the connectivity pattern in a ",
+        "suffix": ". This is a special property that results from the fact that each lag-moment, or",
+        "valueSource": "extracted"
+      },
+      "mls:uses": [
+        {
+          "@id": "method:covariance_based_feature_tensor"
+        }
+      ],
+      "mls:addressesTask": {
+        "@id": "task:graph_structure_identification"
+      }
+    },
+    {
+      "@id": "algo:granger_partial_observability_estimator",
+      "@type": "mls:MLS_Algorithm",
+      "mention": {
+        "start_char_doc": 19762,
+        "end_char_doc": 19769,
+        "prefix": "re provably structurally consistent under partial observability include: $i)$ **",
+        "suffix": "** $\\left[\\widehat{R}_1(n)\\right]_S \\left(\\left[\\widehat{R}_0(n)\\right]_S\\right)",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Granger",
+        "start_char_doc": 19762,
+        "end_char_doc": 19769,
+        "prefix": "re provably structurally consistent under partial observability include: $i)$ **",
+        "suffix": "** $\\left[\\widehat{R}_1(n)\\right]_S \\left(\\left[\\widehat{R}_0(n)\\right]_S\\right)",
+        "valueSource": "extracted"
+      },
+      "mls:implementsMethod": {
+        "@id": "method:granger_augmented_feature_vector"
+      }
+    },
+    {
+      "@id": "algo:one_lag_estimator",
+      "@type": "mls:MLS_Algorithm",
+      "mention": {
+        "start_char_doc": 19865,
+        "end_char_doc": 19872,
+        "prefix": "at{R}_1(n)\\right]_S \\left(\\left[\\widehat{R}_0(n)\\right]_S\\right)^{-1}$; $ii)$ **",
+        "suffix": "** $\\left[\\widehat{R}_1(n)\\right]_S$; $iii)$ **Residual** $\\left[\\widehat{R}_1(n",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "One-lag",
+        "start_char_doc": 19865,
+        "end_char_doc": 19872,
+        "prefix": "at{R}_1(n)\\right]_S \\left(\\left[\\widehat{R}_0(n)\\right]_S\\right)^{-1}$; $ii)$ **",
+        "suffix": "** $\\left[\\widehat{R}_1(n)\\right]_S$; $iii)$ **Residual** $\\left[\\widehat{R}_1(n",
+        "valueSource": "extracted"
+      },
+      "mls:implementsMethod": {
+        "@id": "method:gaussian_mixture_stratification"
+      }
+    },
+    {
+      "@id": "algo:r1_minus_r3_estimator",
+      "@type": "mls:MLS_Algorithm",
+      "mention": {
+        "start_char_doc": 39464,
+        "end_char_doc": 39501,
+        "prefix": " several network connectivity regimes (Matta, Santos, and Sayed 2022); iii) the ",
+        "suffix": " that is structurally consistent (Chen, Wang, and Shen 2022); iv) the linear SVM",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "$\\widehat{R}_1(n) - \\widehat{R}_3(n)$",
+        "start_char_doc": 39464,
+        "end_char_doc": 39501,
+        "prefix": " several network connectivity regimes (Matta, Santos, and Sayed 2022); iii) the ",
+        "suffix": " that is structurally consistent (Chen, Wang, and Shen 2022); iv) the linear SVM",
+        "valueSource": "extracted"
+      },
+      "mls:implementsMethod": {
+        "@id": "method:consistent_linear_separability"
+      }
+    },
+    {
+      "@id": "algo:residual_estimator",
+      "@type": "mls:MLS_Algorithm",
+      "mention": {
+        "start_char_doc": 19919,
+        "end_char_doc": 19927,
+        "prefix": "]_S\\right)^{-1}$; $ii)$ **One-lag** $\\left[\\widehat{R}_1(n)\\right]_S$; $iii)$ **",
+        "suffix": "** $\\left[\\widehat{R}_1(n)\\right]_S - \\left[\\widehat{R}_0(n)\\right]_S$. These la",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Residual",
+        "start_char_doc": 19919,
+        "end_char_doc": 19927,
+        "prefix": "]_S\\right)^{-1}$; $ii)$ **One-lag** $\\left[\\widehat{R}_1(n)\\right]_S$; $iii)$ **",
+        "suffix": "** $\\left[\\widehat{R}_1(n)\\right]_S - \\left[\\widehat{R}_0(n)\\right]_S$. These la",
+        "valueSource": "extracted"
+      },
+      "mls:implementsMethod": {
+        "@id": "method:gaussian_mixture_stratification"
+      }
+    },
+    {
+      "@id": "algo:gaussian_mixture_classification",
+      "@type": "mls:MLS_Algorithm",
+      "mention": {
+        "start_char_doc": 39637,
+        "end_char_doc": 39653,
+        "prefix": "022); iv) the linear SVM; and v) the trained CNNs. For classification, we apply ",
+        "suffix": " over the sorted entries of the matrix-valued estimators in order to stratify th",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Gaussian mixture",
+        "start_char_doc": 39637,
+        "end_char_doc": 39653,
+        "prefix": "022); iv) the linear SVM; and v) the trained CNNs. For classification, we apply ",
+        "suffix": " over the sorted entries of the matrix-valued estimators in order to stratify th",
+        "valueSource": "extracted"
+      },
+      "mls:implementsMethod": {
+        "@id": "method:gaussian_mixture_stratification"
+      }
+    },
+    {
+      "@id": "algo:svm_margin_algorithm",
+      "@type": "mls:MLS_Algorithm",
+      "mention": {
+        "start_char_doc": 28592,
+        "end_char_doc": 28605,
+        "prefix": "rplanes that consistently separate the features, as in Fig. 2. For example, the ",
+        "suffix": " is designed to find these margins. More concretely,  $$ \\Gamma\\left(T^{(n)}\\rig",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "SVM algorithm",
+        "start_char_doc": 28592,
+        "end_char_doc": 28605,
+        "prefix": "rplanes that consistently separate the features, as in Fig. 2. For example, the ",
+        "suffix": " is designed to find these margins. More concretely,  $$ \\Gamma\\left(T^{(n)}\\rig",
+        "valueSource": "extracted"
+      },
+      "mls:implementsMethod": {
+        "@id": "method:linear_svm_feature_classifier"
+      }
+    },
+    {
+      "@id": "hp:feature_start_lag_D_le_1",
+      "@type": "mls:HP_Data",
+      "mention": {
+        "start_char_doc": 22439,
+        "end_char_doc": 22447,
+        "prefix": "to an order-3 tensor-valued estimator. As we will show in the next section, if $",
+        "suffix": "$ and $L \\geq 3$, then this estimator is linearly structurally consistent w.h.p.",
+        "valueSource": "extracted"
+      },
+      "mls:parameterName": {
+        "value": "D",
+        "start_char_doc": 130,
+        "end_char_doc": 131,
+        "prefix": ".LG] 12 Apr 2023&lt;/watermark&gt;  # Recovering the Graph Underlying Networked ",
+        "suffix": "ynamical Systems under Partial Observability: A Deep Learning Approach  Sérgio M",
+        "valueSource": "extracted"
+      },
+      "mls:parameterValue": {
+        "value": "D \\leq 1",
+        "start_char_doc": 22439,
+        "end_char_doc": 22447,
+        "prefix": "to an order-3 tensor-valued estimator. As we will show in the next section, if $",
+        "suffix": "$ and $L \\geq 3$, then this estimator is linearly structurally consistent w.h.p.",
+        "valueSource": "extracted"
+      },
+      "mls:role": {
+        "value": "start lag bound",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:appliesTo": {
+        "value": "Theorem 1 feature vector",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:feature_end_lag_L_ge_3",
+      "@type": "mls:HP_Data",
+      "mention": {
+        "start_char_doc": 22454,
+        "end_char_doc": 22462,
+        "prefix": "ensor-valued estimator. As we will show in the next section, if $D \\leq 1$ and $",
+        "suffix": "$, then this estimator is linearly structurally consistent w.h.p.  **Features Se",
+        "valueSource": "extracted"
+      },
+      "mls:parameterName": {
+        "value": "L",
+        "start_char_doc": 51,
+        "end_char_doc": 52,
+        "prefix": "## Page 1  &lt;watermark&gt;arXiv:2208.04405v3 [cs.",
+        "suffix": "G] 12 Apr 2023&lt;/watermark&gt;  # Recovering the Graph Underlying Networked Dy",
+        "valueSource": "extracted"
+      },
+      "mls:parameterValue": {
+        "value": "L \\geq 3",
+        "start_char_doc": 22454,
+        "end_char_doc": 22462,
+        "prefix": "ensor-valued estimator. As we will show in the next section, if $D \\leq 1$ and $",
+        "suffix": "$, then this estimator is linearly structurally consistent w.h.p.  **Features Se",
+        "valueSource": "extracted"
+      },
+      "mls:role": {
+        "value": "end lag bound",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:appliesTo": {
+        "value": "Theorem 1 feature vector",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:training_feature_min_lag_minus_100",
+      "@type": "mls:HP_Data",
+      "mention": {
+        "start_char_doc": 33694,
+        "end_char_doc": 33698,
+        "prefix": "tures given by, $$ \\mathcal{T}_{ij}^{(n)} \\triangleq \\left( \\left[ \\widehat{R}_{",
+        "suffix": "}(n) \\right]_{ij}, \\left[ \\widehat{R}_{-99}(n) \\right]_{ij}, \\dots, \\left[ \\wide",
+        "valueSource": "extracted"
+      },
+      "mls:parameterName": {
+        "value": "minimum feature lag",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:parameterValue": {
+        "value": "-100",
+        "start_char_doc": 33694,
+        "end_char_doc": 33698,
+        "prefix": "tures given by, $$ \\mathcal{T}_{ij}^{(n)} \\triangleq \\left( \\left[ \\widehat{R}_{",
+        "suffix": "}(n) \\right]_{ij}, \\left[ \\widehat{R}_{-99}(n) \\right]_{ij}, \\dots, \\left[ \\wide",
+        "valueSource": "extracted"
+      },
+      "mls:role": {
+        "value": "lag window",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:appliesTo": {
+        "value": "training feature vector",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:training_feature_max_lag_100",
+      "@type": "mls:HP_Data",
+      "mention": {
+        "start_char_doc": 33786,
+        "end_char_doc": 33789,
+        "prefix": "ght]_{ij}, \\left[ \\widehat{R}_{-99}(n) \\right]_{ij}, \\dots, \\left[ \\widehat{R}_{",
+        "suffix": "}(n) \\right]_{ij} \\right). $$ In other words, for training, we provide a normali",
+        "valueSource": "extracted"
+      },
+      "mls:parameterName": {
+        "value": "maximum feature lag",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:parameterValue": {
+        "value": "100",
+        "start_char_doc": 33786,
+        "end_char_doc": 33789,
+        "prefix": "ght]_{ij}, \\left[ \\widehat{R}_{-99}(n) \\right]_{ij}, \\dots, \\left[ \\widehat{R}_{",
+        "suffix": "}(n) \\right]_{ij} \\right). $$ In other words, for training, we provide a normali",
+        "valueSource": "extracted"
+      },
+      "mls:role": {
+        "value": "lag window",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:appliesTo": {
+        "value": "training feature vector",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:training_random_graph_probability",
+      "@type": "mls:HP_Data",
+      "mention": {
+        "start_char_doc": 36040,
+        "end_char_doc": 36043,
+        "prefix": "We train the classifiers over one realization of a random graph model with $p = ",
+        "suffix": "$ and $N = 100$ and apply them to distinct networks, including real-world ones, ",
+        "valueSource": "extracted"
+      },
+      "mls:parameterName": {
+        "value": "p",
+        "start_char_doc": 59,
+        "end_char_doc": 60,
+        "prefix": "## Page 1  &lt;watermark&gt;arXiv:2208.04405v3 [cs.LG] 12 A",
+        "suffix": "r 2023&lt;/watermark&gt;  # Recovering the Graph Underlying Networked Dynamical ",
+        "valueSource": "extracted"
+      },
+      "mls:parameterValue": {
+        "value": "0.5",
+        "start_char_doc": 36040,
+        "end_char_doc": 36043,
+        "prefix": "We train the classifiers over one realization of a random graph model with $p = ",
+        "suffix": "$ and $N = 100$ and apply them to distinct networks, including real-world ones, ",
+        "valueSource": "extracted"
+      },
+      "mls:role": {
+        "value": "edge or arrow drawing probability",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:appliesTo": {
+        "value": "synthetic training network",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:training_network_nodes",
+      "@type": "mls:HP_Data",
+      "mention": {
+        "start_char_doc": 36054,
+        "end_char_doc": 36057,
+        "prefix": "lassifiers over one realization of a random graph model with $p = 0.5$ and $N = ",
+        "suffix": "$ and apply them to distinct networks, including real-world ones, where $p$ is t",
+        "valueSource": "extracted"
+      },
+      "mls:parameterName": {
+        "value": "N",
+        "start_char_doc": 120,
+        "end_char_doc": 121,
+        "prefix": "4405v3 [cs.LG] 12 Apr 2023&lt;/watermark&gt;  # Recovering the Graph Underlying ",
+        "suffix": "etworked Dynamical Systems under Partial Observability: A Deep Learning Approach",
+        "valueSource": "extracted"
+      },
+      "mls:parameterValue": {
+        "value": "100",
+        "start_char_doc": 36054,
+        "end_char_doc": 36057,
+        "prefix": "lassifiers over one realization of a random graph model with $p = 0.5$ and $N = ",
+        "suffix": "$ and apply them to distinct networks, including real-world ones, where $p$ is t",
+        "valueSource": "extracted"
+      },
+      "mls:role": {
+        "value": "number of nodes",
+        "start_char_doc": 14105,
+        "end_char_doc": 14120,
+        "prefix": "y of these estimators is established in the *thermodynamic limit*, i.e., as the ",
+        "suffix": " scales to infinite, which fits the framework of large-scale networks. Recently,",
+        "valueSource": "inferred"
+      },
+      "mls:appliesTo": {
+        "value": "synthetic training network",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:observed_nodes_count",
+      "@type": "mls:HP_Data",
+      "mention": {
+        "start_char_doc": 25827,
+        "end_char_doc": 25829,
+        "prefix": "alization of a binomial random graph). We assume that we can only observe |S| = ",
+        "suffix": " nodes.&lt;/img&gt;  **Proof.** Define the vector $\\mathbf{w} \\in \\{-1, 0, 1\\}^M",
+        "valueSource": "extracted"
+      },
+      "mls:parameterName": {
+        "value": "|S|",
+        "start_char_doc": 15971,
+        "end_char_doc": 15974,
+        "prefix": "servation of the subvector $[y(n)]_S = [y_{m_1}(n) \\ y_{m_2}(n) \\ \\dots \\ y_{m_{",
+        "suffix": "}}(n)]^\\top \\in \\mathbb{R}^{|S|}$ over time $n$, where $|S|$ is the cardinality ",
+        "valueSource": "extracted"
+      },
+      "mls:parameterValue": {
+        "value": "20",
+        "start_char_doc": 25827,
+        "end_char_doc": 25829,
+        "prefix": "alization of a binomial random graph). We assume that we can only observe |S| = ",
+        "suffix": " nodes.&lt;/img&gt;  **Proof.** Define the vector $\\mathbf{w} \\in \\{-1, 0, 1\\}^M",
+        "valueSource": "extracted"
+      },
+      "mls:role": {
+        "value": "number of observed nodes",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:appliesTo": {
+        "value": "partial observability setup",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:observed_node_subset",
+      "@type": "mls:HP_Data",
+      "mention": {
+        "start_char_doc": 36346,
+        "end_char_doc": 36369,
+        "prefix": "an only observe the time series data from $|S| = 20$ nodes, that is, we assume $",
+        "suffix": "$.  ---   ## Page 7  &lt;img&gt;Figure 4: (a) depicts the robustness against the",
+        "valueSource": "extracted"
+      },
+      "mls:parameterName": {
+        "value": "S",
+        "start_char_doc": 140,
+        "end_char_doc": 141,
+        "prefix": "r 2023&lt;/watermark&gt;  # Recovering the Graph Underlying Networked Dynamical ",
+        "suffix": "ystems under Partial Observability: A Deep Learning Approach  Sérgio Machado$^{2",
+        "valueSource": "extracted"
+      },
+      "mls:parameterValue": {
+        "value": "S = \\{1, 2, \\dots, 20\\}",
+        "start_char_doc": 36346,
+        "end_char_doc": 36369,
+        "prefix": "an only observe the time series data from $|S| = 20$ nodes, that is, we assume $",
+        "suffix": "$.  ---   ## Page 7  &lt;img&gt;Figure 4: (a) depicts the robustness against the",
+        "valueSource": "extracted"
+      },
+      "mls:role": {
+        "value": "observed node subset",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:appliesTo": {
+        "value": "partial observability setup",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:noise_variance_training",
+      "@type": "mls:HP_Data",
+      "mention": {
+        "start_char_doc": 37503,
+        "end_char_doc": 37506,
+        "prefix": "oise-level regimes. The CNNs and SVMs are trained with a noise variance of σ² = ",
+        "suffix": ", but generalize well over an extended range of noise variance. Fig. 4a shows th",
+        "valueSource": "extracted"
+      },
+      "mls:parameterName": {
+        "value": "sigma squared",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:parameterValue": {
+        "value": "0.5",
+        "start_char_doc": 37503,
+        "end_char_doc": 37506,
+        "prefix": "oise-level regimes. The CNNs and SVMs are trained with a noise variance of σ² = ",
+        "suffix": ", but generalize well over an extended range of noise variance. Fig. 4a shows th",
+        "valueSource": "extracted"
+      },
+      "mls:role": {
+        "value": "training noise variance",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:appliesTo": {
+        "value": "noise robustness experiment",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:monte_carlo_runs",
+      "@type": "mls:HP_Training",
+      "mention": {
+        "start_char_doc": 38862,
+        "end_char_doc": 38866,
+        "prefix": "ed over the total number of directed pairs in the underlying graph. We consider ",
+        "suffix": " Monte Carlo runs across all plots.  Fig. 3 (a) – (f) depict the sample-complexi",
+        "valueSource": "extracted"
+      },
+      "mls:parameterName": {
+        "value": "Monte Carlo runs",
+        "start_char_doc": 38867,
+        "end_char_doc": 38883,
+        "prefix": "er the total number of directed pairs in the underlying graph. We consider 1000 ",
+        "suffix": " across all plots.  Fig. 3 (a) – (f) depict the sample-complexity performance of",
+        "valueSource": "extracted"
+      },
+      "mls:parameterValue": {
+        "value": "1000",
+        "start_char_doc": 38862,
+        "end_char_doc": 38866,
+        "prefix": "ed over the total number of directed pairs in the underlying graph. We consider ",
+        "suffix": " Monte Carlo runs across all plots.  Fig. 3 (a) – (f) depict the sample-complexi",
+        "valueSource": "extracted"
+      },
+      "mls:role": {
+        "value": "number of simulation runs",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:appliesTo": {
+        "value": "all plots",
+        "start_char_doc": 38891,
+        "end_char_doc": 38900,
+        "prefix": "irected pairs in the underlying graph. We consider 1000 Monte Carlo runs across ",
+        "suffix": ".  Fig. 3 (a) – (f) depict the sample-complexity performance of the estimators a",
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:stability_spectral_radius",
+      "@type": "mls:HP_Architecture",
+      "mention": {
+        "start_char_doc": 15655,
+        "end_char_doc": 15658,
+        "prefix": "linking the nodes. The dynamical system is assumed to be stable, i.e., $\\rho(A) ",
+        "suffix": "$, where $\\rho(A)$ stands for the spectral radius of $A$.  This work deals with ",
+        "valueSource": "extracted"
+      },
+      "mls:parameterName": {
+        "value": "rho(A)",
+        "start_char_doc": 15648,
+        "end_char_doc": 15654,
+        "prefix": " graph linking the nodes. The dynamical system is assumed to be stable, i.e., $\\",
+        "suffix": " < 1$, where $\\rho(A)$ stands for the spectral radius of $A$.  This work deals w",
+        "valueSource": "extracted"
+      },
+      "mls:parameterValue": {
+        "value": "\\rho(A) < 1",
+        "start_char_doc": 15647,
+        "end_char_doc": 15658,
+        "prefix": "g graph linking the nodes. The dynamical system is assumed to be stable, i.e., $",
+        "suffix": "$, where $\\rho(A)$ stands for the spectral radius of $A$.  This work deals with ",
+        "valueSource": "extracted"
+      },
+      "mls:role": {
+        "value": "dynamical-system stability condition",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:appliesTo": {
+        "value": "linear networked dynamical system",
+        "start_char_doc": 5022,
+        "end_char_doc": 5055,
+        "prefix": " settings for network identification from time series since a great class of non",
+        "suffix": "s can be addressed via linearization about the equilibria under small-noise regi",
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:interaction_alpha_constraint",
+      "@type": "mls:HP_Architecture",
+      "mention": {
+        "start_char_doc": 35443,
+        "end_char_doc": 35471,
+        "prefix": " $d_{\\max}(G)$ is the maximum *in-flow* degree of the underlying graph $G$ and $",
+        "suffix": "$ are some constants. In other words, the rows of $A$ sum to $\\alpha < 1$ and it",
+        "valueSource": "extracted"
+      },
+      "mls:parameterName": {
+        "value": "alpha constraint",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:parameterValue": {
+        "value": "0 < \\alpha_1 \\leq \\alpha < 1",
+        "start_char_doc": 35443,
+        "end_char_doc": 35471,
+        "prefix": " $d_{\\max}(G)$ is the maximum *in-flow* degree of the underlying graph $G$ and $",
+        "suffix": "$ are some constants. In other words, the rows of $A$ sum to $\\alpha < 1$ and it",
+        "valueSource": "extracted"
+      },
+      "mls:role": {
+        "value": "interaction matrix scaling constraint",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:appliesTo": {
+        "value": "Laplacian rule",
+        "start_char_doc": 35605,
+        "end_char_doc": 35619,
+        "prefix": "sum to $\\alpha < 1$ and its support is given by $G$. This is often cast as the *",
+        "suffix": "* (Sayed 2014). This interaction matrix renders the networked dynamical system (",
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:row_sum_alpha",
+      "@type": "mls:HP_Architecture",
+      "mention": {
+        "start_char_doc": 35534,
+        "end_char_doc": 35543,
+        "prefix": "1 \\leq \\alpha < 1$ are some constants. In other words, the rows of $A$ sum to $\\",
+        "suffix": "$ and its support is given by $G$. This is often cast as the *Laplacian rule* (S",
+        "valueSource": "extracted"
+      },
+      "mls:parameterName": {
+        "value": "row sum",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:parameterValue": {
+        "value": "alpha < 1",
+        "start_char_doc": 35534,
+        "end_char_doc": 35543,
+        "prefix": "1 \\leq \\alpha < 1$ are some constants. In other words, the rows of $A$ sum to $\\",
+        "suffix": "$ and its support is given by $G$. This is often cast as the *Laplacian rule* (S",
+        "valueSource": "extracted"
+      },
+      "mls:role": {
+        "value": "interaction matrix row-sum constraint",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:appliesTo": {
+        "value": "Laplacian rule",
+        "start_char_doc": 35605,
+        "end_char_doc": 35619,
+        "prefix": "sum to $\\alpha < 1$ and its support is given by $G$. This is often cast as the *",
+        "suffix": "* (Sayed 2014). This interaction matrix renders the networked dynamical system (",
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:noise_covariance",
+      "@type": "mls:HP_Data",
+      "mention": {
+        "start_char_doc": 15402,
+        "end_char_doc": 15413,
+        "prefix": "tion noise associated with the $N$ nodes of the system with covariance matrix $\\",
+        "suffix": "$, and independent across time $n$; $A \\in \\mathbb{R}_+^{N \\times N}$ refers to ",
+        "valueSource": "extracted"
+      },
+      "mls:parameterName": {
+        "value": "noise covariance",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:parameterValue": {
+        "value": "\\sigma^2 I_N",
+        "start_char_doc": 15286,
+        "end_char_doc": 15298,
+        "prefix": "cts the states $y_i(n)$ of each node $i$ at time $n$; $x(n) \\sim \\mathcal{N}(0, ",
+        "suffix": ")$ represents the excitation noise associated with the $N$ nodes of the system w",
+        "valueSource": "extracted"
+      },
+      "mls:role": {
+        "value": "excitation noise covariance",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:appliesTo": {
+        "value": "linear stochastic dynamics",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "exp:linear_separability_theorem",
+      "@type": "mls:Experiment",
+      "mention": {
+        "start_char_doc": 14615,
+        "end_char_doc": 14624,
+        "prefix": " homogeneous, i.e., its covariance matrix is a multiple of the identity matrix. ",
+        "suffix": " in (Chen, Wang, and Shen 2022) will be used in the present work to establish an",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Theorem 1",
+        "start_char_doc": 14615,
+        "end_char_doc": 14624,
+        "prefix": " homogeneous, i.e., its covariance matrix is a multiple of the identity matrix. ",
+        "suffix": " in (Chen, Wang, and Shen 2022) will be used in the present work to establish an",
+        "valueSource": "extracted"
+      },
+      "mls:usesMethod": [
+        {
+          "@id": "method:consistent_linear_separability"
+        }
+      ],
+      "mls:usesDataset": [
+        {
+          "@id": "dataset:synthetic_random_graph_training_network"
+        },
+        {
+          "@id": "dataset:real_world_networks"
+        },
+        {
+          "@id": "dataset:observed_time_series"
+        }
+      ],
+      "mls:hasHyperParameter": [
+        {
+          "@id": "hp:training_random_graph_probability"
+        },
+        {
+          "@id": "hp:training_network_nodes"
+        },
+        {
+          "@id": "hp:observed_nodes_count"
+        },
+        {
+          "@id": "hp:noise_variance_training"
+        },
+        {
+          "@id": "hp:monte_carlo_runs"
+        }
+      ],
+      "mls:hasEvaluation": [
+        {
+          "@id": "eval:feature_linear_separability"
+        }
+      ]
+    },
+    {
+      "@id": "exp:synthetic_random_graph_training",
+      "@type": "mls:Experiment",
+      "mention": {
+        "start_char_doc": 35963,
+        "end_char_doc": 36029,
+        "prefix": "raphs, binomial random graphs for directed graphs, and real-world networks.  We ",
+        "suffix": " with $p = 0.5$ and $N = 100$ and apply them to distinct networks, including rea",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "train the classifiers over one realization of a random graph model",
+        "start_char_doc": 35963,
+        "end_char_doc": 36029,
+        "prefix": "raphs, binomial random graphs for directed graphs, and real-world networks.  We ",
+        "suffix": " with $p = 0.5$ and $N = 100$ and apply them to distinct networks, including rea",
+        "valueSource": "extracted"
+      },
+      "mls:usesMethod": [
+        {
+          "@id": "method:cnn_feature_classifier"
+        },
+        {
+          "@id": "method:linear_svm_feature_classifier"
+        }
+      ],
+      "mls:usesDataset": [
+        {
+          "@id": "dataset:synthetic_random_graph_training_network"
+        },
+        {
+          "@id": "dataset:real_world_networks"
+        },
+        {
+          "@id": "dataset:observed_time_series"
+        }
+      ],
+      "mls:hasHyperParameter": [
+        {
+          "@id": "hp:training_random_graph_probability"
+        },
+        {
+          "@id": "hp:training_network_nodes"
+        },
+        {
+          "@id": "hp:observed_nodes_count"
+        },
+        {
+          "@id": "hp:noise_variance_training"
+        },
+        {
+          "@id": "hp:monte_carlo_runs"
+        }
+      ],
+      "mls:hasEvaluation": [
+        {
+          "@id": "eval:cnn_sample_complexity"
+        }
+      ]
+    },
+    {
+      "@id": "exp:sample_complexity_simulation",
+      "@type": "mls:Experiment",
+      "mention": {
+        "start_char_doc": 38931,
+        "end_char_doc": 38960,
+        "prefix": "e consider 1000 Monte Carlo runs across all plots.  Fig. 3 (a) – (f) depict the ",
+        "suffix": " of the estimators across structurally distinct networks, considering: i) Grange",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "sample-complexity performance",
+        "start_char_doc": 38931,
+        "end_char_doc": 38960,
+        "prefix": "e consider 1000 Monte Carlo runs across all plots.  Fig. 3 (a) – (f) depict the ",
+        "suffix": " of the estimators across structurally distinct networks, considering: i) Grange",
+        "valueSource": "extracted"
+      },
+      "mls:usesMethod": [
+        {
+          "@id": "algo:granger_partial_observability_estimator"
+        },
+        {
+          "@id": "algo:one_lag_estimator"
+        },
+        {
+          "@id": "algo:r1_minus_r3_estimator"
+        },
+        {
+          "@id": "method:linear_svm_feature_classifier"
+        },
+        {
+          "@id": "method:cnn_feature_classifier"
+        }
+      ],
+      "mls:usesDataset": [
+        {
+          "@id": "dataset:synthetic_random_graph_training_network"
+        },
+        {
+          "@id": "dataset:real_world_networks"
+        },
+        {
+          "@id": "dataset:observed_time_series"
+        }
+      ],
+      "mls:hasHyperParameter": [
+        {
+          "@id": "hp:training_random_graph_probability"
+        },
+        {
+          "@id": "hp:training_network_nodes"
+        },
+        {
+          "@id": "hp:observed_nodes_count"
+        },
+        {
+          "@id": "hp:noise_variance_training"
+        },
+        {
+          "@id": "hp:monte_carlo_runs"
+        }
+      ],
+      "mls:hasEvaluation": [
+        {
+          "@id": "eval:cnn_overall_superiority"
+        },
+        {
+          "@id": "eval:accuracy_metric"
+        }
+      ]
+    },
+    {
+      "@id": "exp:real_world_network_generalization",
+      "@type": "mls:Experiment",
+      "mention": {
+        "start_char_doc": 37244,
+        "end_char_doc": 37285,
+        "prefix": "Rényi (for undirected networks) random graph model with p = 0.5 and N = 100, it ",
+        "suffix": " as demonstrated in Figs. 3 (a) – (b).  Fig. 4a illustrates the robustness of bo",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "generalizes well over real-world networks",
+        "start_char_doc": 37244,
+        "end_char_doc": 37285,
+        "prefix": "Rényi (for undirected networks) random graph model with p = 0.5 and N = 100, it ",
+        "suffix": " as demonstrated in Figs. 3 (a) – (b).  Fig. 4a illustrates the robustness of bo",
+        "valueSource": "extracted"
+      },
+      "mls:usesMethod": [
+        {
+          "@id": "method:cnn_feature_classifier"
+        }
+      ],
+      "mls:usesDataset": [
+        {
+          "@id": "dataset:synthetic_random_graph_training_network"
+        },
+        {
+          "@id": "dataset:real_world_networks"
+        },
+        {
+          "@id": "dataset:observed_time_series"
+        }
+      ],
+      "mls:hasHyperParameter": [
+        {
+          "@id": "hp:training_random_graph_probability"
+        },
+        {
+          "@id": "hp:training_network_nodes"
+        },
+        {
+          "@id": "hp:observed_nodes_count"
+        },
+        {
+          "@id": "hp:noise_variance_training"
+        },
+        {
+          "@id": "hp:monte_carlo_runs"
+        }
+      ],
+      "mls:hasEvaluation": [
+        {
+          "@id": "eval:cnn_real_world_generalization"
+        }
+      ]
+    },
+    {
+      "@id": "exp:noise_robustness",
+      "@type": "mls:Experiment",
+      "mention": {
+        "start_char_doc": 36427,
+        "end_char_doc": 36464,
+        "prefix": " = \\{1, 2, \\dots, 20\\}$.  ---   ## Page 7  &lt;img&gt;Figure 4: (a) depicts the ",
+        "suffix": " for both the CNN and the SVM; and (b) considers the inclusion of the Granger es",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "robustness against the noise variance",
+        "start_char_doc": 36427,
+        "end_char_doc": 36464,
+        "prefix": " = \\{1, 2, \\dots, 20\\}$.  ---   ## Page 7  &lt;img&gt;Figure 4: (a) depicts the ",
+        "suffix": " for both the CNN and the SVM; and (b) considers the inclusion of the Granger es",
+        "valueSource": "extracted"
+      },
+      "mls:usesMethod": [
+        {
+          "@id": "method:cnn_feature_classifier"
+        },
+        {
+          "@id": "method:linear_svm_feature_classifier"
+        }
+      ],
+      "mls:usesDataset": [
+        {
+          "@id": "dataset:synthetic_random_graph_training_network"
+        },
+        {
+          "@id": "dataset:real_world_networks"
+        },
+        {
+          "@id": "dataset:observed_time_series"
+        }
+      ],
+      "mls:hasHyperParameter": [
+        {
+          "@id": "hp:training_random_graph_probability"
+        },
+        {
+          "@id": "hp:training_network_nodes"
+        },
+        {
+          "@id": "hp:observed_nodes_count"
+        },
+        {
+          "@id": "hp:noise_variance_training"
+        },
+        {
+          "@id": "hp:monte_carlo_runs"
+        }
+      ],
+      "mls:hasEvaluation": [
+        {
+          "@id": "eval:noise_robustness"
+        }
+      ]
+    },
+    {
+      "@id": "exp:granger_feature_augmentation",
+      "@type": "mls:Experiment",
+      "mention": {
+        "start_char_doc": 36517,
+        "end_char_doc": 36573,
+        "prefix": " against the noise variance for both the CNN and the SVM; and (b) considers the ",
+        "suffix": ".&lt;/img&gt;  to real-world networks obtained from the database (Rossi and Ahme",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "inclusion of the Granger estimator in the feature vector",
+        "start_char_doc": 36517,
+        "end_char_doc": 36573,
+        "prefix": " against the noise variance for both the CNN and the SVM; and (b) considers the ",
+        "suffix": ".&lt;/img&gt;  to real-world networks obtained from the database (Rossi and Ahme",
+        "valueSource": "extracted"
+      },
+      "mls:usesMethod": [
+        {
+          "@id": "method:granger_augmented_feature_vector"
+        }
+      ],
+      "mls:usesDataset": [
+        {
+          "@id": "dataset:synthetic_random_graph_training_network"
+        },
+        {
+          "@id": "dataset:real_world_networks"
+        },
+        {
+          "@id": "dataset:observed_time_series"
+        }
+      ],
+      "mls:hasHyperParameter": [
+        {
+          "@id": "hp:training_random_graph_probability"
+        },
+        {
+          "@id": "hp:training_network_nodes"
+        },
+        {
+          "@id": "hp:observed_nodes_count"
+        },
+        {
+          "@id": "hp:noise_variance_training"
+        },
+        {
+          "@id": "hp:monte_carlo_runs"
+        }
+      ],
+      "mls:hasEvaluation": [
+        {
+          "@id": "eval:granger_feature_gain"
+        }
+      ]
+    },
+    {
+      "@id": "eval:feature_linear_separability",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 1321,
+        "end_char_doc": 1339,
+        "prefix": " feature vector from the observed time series. We prove that these features are ",
+        "suffix": ", i.e., there exists a hyperplane that separates the cluster of features associa",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "linear separability",
+        "start_char_doc": 14788,
+        "end_char_doc": 14807,
+        "prefix": "ortant result regarding the proposed set of feature vectors, namely, consistent ",
+        "suffix": ". This property will further yield a competitive performance for the trained CNN",
+        "valueSource": "inferred"
+      },
+      "mls:value": {
+        "value": "linearly separable",
+        "start_char_doc": 1321,
+        "end_char_doc": 1339,
+        "prefix": " feature vector from the observed time series. We prove that these features are ",
+        "suffix": ", i.e., there exists a hyperplane that separates the cluster of features associa",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "there exists a hyperplane that separates the cluster of features associated with connected pairs of nodes from those of disconnected pairs",
+        "start_char_doc": 1347,
+        "end_char_doc": 1485,
+        "prefix": "bserved time series. We prove that these features are linearly separable, i.e., ",
+        "suffix": ". This renders the features amenable to train a variety of classifiers to perfor",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "eval:accuracy_metric",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 38723,
+        "end_char_doc": 38731,
+        "prefix": "e a CNN.  ## Simulation Results  In the numerical results considered, we define ",
+        "suffix": " as the number of directed pairs correctly classified over the total number of d",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "accuracy",
+        "start_char_doc": 7782,
+        "end_char_doc": 7790,
+        "prefix": " CNNs trained with our features outperform state-of-the-art methods in terms of ",
+        "suffix": " and sample complexity.  ### Related Work  Causal inference relies on the nature",
+        "valueSource": "inferred"
+      },
+      "mls:value": {
+        "value": "accuracy",
+        "start_char_doc": 38723,
+        "end_char_doc": 38731,
+        "prefix": "e a CNN.  ## Simulation Results  In the numerical results considered, we define ",
+        "suffix": " as the number of directed pairs correctly classified over the total number of d",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "number of directed pairs correctly classified over the total number of directed pairs in the underlying graph",
+        "start_char_doc": 38739,
+        "end_char_doc": 38848,
+        "prefix": "ulation Results  In the numerical results considered, we define accuracy as the ",
+        "suffix": ". We consider 1000 Monte Carlo runs across all plots.  Fig. 3 (a) – (f) depict t",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "eval:cnn_sample_complexity",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 1710,
+        "end_char_doc": 1776,
+        "prefix": " Convolutional Neural Networks (CNNs). The resulting causal inference mechanism ",
+        "suffix": ". The trained CNNs generalize well over structurally distinct networks (dense or",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "sample-complexity",
+        "start_char_doc": 1759,
+        "end_char_doc": 1776,
+        "prefix": "ing causal inference mechanism outperforms state-of-the-art counterparts w.r.t. ",
+        "suffix": ". The trained CNNs generalize well over structurally distinct networks (dense or",
+        "valueSource": "inferred"
+      },
+      "mls:value": {
+        "value": "outperforms state-of-the-art counterparts w.r.t. sample-complexity",
+        "start_char_doc": 1710,
+        "end_char_doc": 1776,
+        "prefix": " Convolutional Neural Networks (CNNs). The resulting causal inference mechanism ",
+        "suffix": ". The trained CNNs generalize well over structurally distinct networks (dense or",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "outperforms state-of-the-art counterparts w.r.t. sample-complexity",
+        "start_char_doc": 1710,
+        "end_char_doc": 1776,
+        "prefix": " Convolutional Neural Networks (CNNs). The resulting causal inference mechanism ",
+        "suffix": ". The trained CNNs generalize well over structurally distinct networks (dense or",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "eval:cnn_real_world_generalization",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 1913,
+        "end_char_doc": 1951,
+        "prefix": "inct networks (dense or sparse) and noise-level profiles. Remarkably, they also ",
+        "suffix": " while trained over a synthetic network – namely, a particular realization of a ",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "generalization",
+        "start_char_doc": 34789,
+        "end_char_doc": 34803,
+        "prefix": "he performance of the trained CNNs. Furthermore, this normalization renders the ",
+        "suffix": " performance of the trained CNNs robust across structurally distinct graphs.  To",
+        "valueSource": "inferred"
+      },
+      "mls:value": {
+        "value": "generalize well to real-world networks",
+        "start_char_doc": 1913,
+        "end_char_doc": 1951,
+        "prefix": "inct networks (dense or sparse) and noise-level profiles. Remarkably, they also ",
+        "suffix": " while trained over a synthetic network – namely, a particular realization of a ",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "generalize well to real-world networks",
+        "start_char_doc": 1913,
+        "end_char_doc": 1951,
+        "prefix": "inct networks (dense or sparse) and noise-level profiles. Remarkably, they also ",
+        "suffix": " while trained over a synthetic network – namely, a particular realization of a ",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "eval:noise_robustness",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 37629,
+        "end_char_doc": 37677,
+        "prefix": "e of noise variance. Fig. 4a shows that the performance of these classifiers is ",
+        "suffix": " in the dynamics (1). Fig. 4b shows the gain in performance when the Granger est",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "robustness",
+        "start_char_doc": 36427,
+        "end_char_doc": 36437,
+        "prefix": " = \\{1, 2, \\dots, 20\\}$.  ---   ## Page 7  &lt;img&gt;Figure 4: (a) depicts the ",
+        "suffix": " against the noise variance for both the CNN and the SVM; and (b) considers the ",
+        "valueSource": "inferred"
+      },
+      "mls:value": {
+        "value": "not sensitive to the variance of the input noise",
+        "start_char_doc": 37629,
+        "end_char_doc": 37677,
+        "prefix": "e of noise variance. Fig. 4a shows that the performance of these classifiers is ",
+        "suffix": " in the dynamics (1). Fig. 4b shows the gain in performance when the Granger est",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "not sensitive to the variance of the input noise",
+        "start_char_doc": 37629,
+        "end_char_doc": 37677,
+        "prefix": "e of noise variance. Fig. 4a shows that the performance of these classifiers is ",
+        "suffix": " in the dynamics (1). Fig. 4b shows the gain in performance when the Granger est",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "eval:granger_feature_gain",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 37717,
+        "end_char_doc": 37736,
+        "prefix": "itive to the variance of the input noise in the dynamics (1). Fig. 4b shows the ",
+        "suffix": " when the Granger estimator is included in the feature vector. In particular, wh",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "performance gain",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:value": {
+        "value": "gain in performance",
+        "start_char_doc": 37717,
+        "end_char_doc": 37736,
+        "prefix": "itive to the variance of the input noise in the dynamics (1). Fig. 4b shows the ",
+        "suffix": " when the Granger estimator is included in the feature vector. In particular, wh",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "gain in performance",
+        "start_char_doc": 37717,
+        "end_char_doc": 37736,
+        "prefix": "itive to the variance of the input noise in the dynamics (1). Fig. 4b shows the ",
+        "suffix": " when the Granger estimator is included in the feature vector. In particular, wh",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "eval:cnn_overall_superiority",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 39790,
+        "end_char_doc": 39853,
+        "prefix": "in order to stratify the connected and disconnected pairs. Our results show the ",
+        "suffix": ". Figs. 3 (a) – (b) refer  ## Concluding Remarks  This paper considered the prob",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "comparative performance",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:value": {
+        "value": "overall superiority in performance for the CNN-based classifier",
+        "start_char_doc": 39790,
+        "end_char_doc": 39853,
+        "prefix": "in order to stratify the connected and disconnected pairs. Our results show the ",
+        "suffix": ". Figs. 3 (a) – (b) refer  ## Concluding Remarks  This paper considered the prob",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "overall superiority in performance for the CNN-based classifier",
+        "start_char_doc": 39790,
+        "end_char_doc": 39853,
+        "prefix": "in order to stratify the connected and disconnected pairs. Our results show the ",
+        "suffix": ". Figs. 3 (a) – (b) refer  ## Concluding Remarks  This paper considered the prob",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "eval:reduced_samples_required",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 40634,
+        "end_char_doc": 40687,
+        "prefix": "d over this set of features exhibited remarkable sample-complexity performance, ",
+        "suffix": " to reach a certain level of accuracy, as compared with other state-of-the-art e",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "sample efficiency",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:value": {
+        "value": "significantly reducing the number of samples required",
+        "start_char_doc": 40634,
+        "end_char_doc": 40687,
+        "prefix": "d over this set of features exhibited remarkable sample-complexity performance, ",
+        "suffix": " to reach a certain level of accuracy, as compared with other state-of-the-art e",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "significantly reducing the number of samples required",
+        "start_char_doc": 40634,
+        "end_char_doc": 40687,
+        "prefix": "d over this set of features exhibited remarkable sample-complexity performance, ",
+        "suffix": " to reach a certain level of accuracy, as compared with other state-of-the-art e",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "repo:asanctvs_structure_identification",
+      "@type": "mls:SoftwareRepository",
+      "mention": {
+        "start_char_doc": 41940,
+        "end_char_doc": 41992,
+        "prefix": "mation Institute. The source code for the numerical experiments can be found at ",
+        "suffix": ".  # References  Adams, J.; Hansen, N. R.; and Zhang, K. 2021. Identification of",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "ASanctvs/Structure-Identification",
+        "start_char_doc": 41959,
+        "end_char_doc": 41992,
+        "prefix": "he source code for the numerical experiments can be found at https://github.com/",
+        "suffix": ".  # References  Adams, J.; Hansen, N. R.; and Zhang, K. 2021. Identification of",
+        "valueSource": "inferred"
+      },
+      "mls:url": {
+        "value": "https://github.com/ASanctvs/Structure-Identification",
+        "start_char_doc": 41940,
+        "end_char_doc": 41992,
+        "prefix": "mation Institute. The source code for the numerical experiments can be found at ",
+        "suffix": ".  # References  Adams, J.; Hansen, N. R.; and Zhang, K. 2021. Identification of",
+        "valueSource": "extracted"
+      },
+      "mls:implementsStudy": {
+        "@id": "study:recovering_graph_underlying_networked_dynamical_systems_partial_observability_2023"
+      }
+    },
+    {
+      "@id": "impl:numerical_experiments",
+      "@type": "mls:MLS_Implementation",
+      "mention": {
+        "start_char_doc": 41902,
+        "end_char_doc": 41923,
+        "prefix": " grant from the C3.ai Digital Transformation Institute. The source code for the ",
+        "suffix": " can be found at https://github.com/ASanctvs/Structure-Identification.  # Refere",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "numerical experiments",
+        "start_char_doc": 41902,
+        "end_char_doc": 41923,
+        "prefix": " grant from the C3.ai Digital Transformation Institute. The source code for the ",
+        "suffix": " can be found at https://github.com/ASanctvs/Structure-Identification.  # Refere",
+        "valueSource": "extracted"
+      },
+      "mls:codeRepository": {
+        "@id": "repo:asanctvs_structure_identification"
+      },
+      "mls:implementsMethod": [
+        {
+          "@id": "method:cnn_feature_classifier"
+        },
+        {
+          "@id": "method:linear_svm_feature_classifier"
+        },
+        {
+          "@id": "method:gaussian_mixture_stratification"
+        }
+      ],
+      "mls:hasExperiment": [
+        {
+          "@id": "exp:sample_complexity_simulation"
+        },
+        {
+          "@id": "exp:noise_robustness"
+        },
+        {
+          "@id": "exp:granger_feature_augmentation"
+        }
+      ]
+    },
+    {
+      "@id": "env:simulation_environment",
+      "@type": "mls:Environment",
+      "mention": {
+        "start_char_doc": 38683,
+        "end_char_doc": 38700,
+        "prefix": "se new features to train classifiers like a CNN.  ## Simulation Results  In the ",
+        "suffix": " considered, we define accuracy as the number of directed pairs correctly classi",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "simulation environment",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:description": {
+        "value": "1000 Monte Carlo runs across all plots",
+        "start_char_doc": 38862,
+        "end_char_doc": 38900,
+        "prefix": "ed over the total number of directed pairs in the underlying graph. We consider ",
+        "suffix": ".  Fig. 3 (a) – (f) depict the sample-complexity performance of the estimators a",
+        "valueSource": "extracted"
+      },
+      "mls:hasHyperParameter": [
+        {
+          "@id": "hp:monte_carlo_runs"
+        },
+        {
+          "@id": "hp:observed_nodes_count"
+        }
+      ]
+    },
+    {
+      "@id": "method:theorem1_feature_vector",
+      "@type": "mls:Method",
+      "mention": {
+        "start_char_doc": 24876,
+        "end_char_doc": 25033,
+        "prefix": "or each pair $ij$, with $i \\neq j$, define the associated feature vector as, $$ ",
+        "suffix": ", $$ with $D \\leq 1$ and $L \\geq 3$, and assume that the interaction matrix $A$ ",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "$\\mathcal{T}_{ij}^{(n)}$",
+        "start_char_doc": 26309,
+        "end_char_doc": 26333,
+        "prefix": " 2 (Locality of the structural estimation).** Note that, to compute the feature ",
+        "suffix": " associated with each pair $ij$ defined in Theorem 1, we need only the time seri",
+        "valueSource": "extracted"
+      },
+      "mls:formula": {
+        "value": "\\mathcal{T}_{ij}^{(n)} := \\left(\\left[\\widehat{R}_D(n)\\right]_{ij}, \\left[\\widehat{R}_{D+1}(n)\\right]_{ij}, \\ldots, \\left[\\widehat{R}_L(n)\\right]_{ij}\\right)",
+        "start_char_doc": 24876,
+        "end_char_doc": 25033,
+        "prefix": "or each pair $ij$, with $i \\neq j$, define the associated feature vector as, $$ ",
+        "suffix": ", $$ with $D \\leq 1$ and $L \\geq 3$, and assume that the interaction matrix $A$ ",
+        "valueSource": "extracted"
+      },
+      "mls:hasHyperParameter": [
+        {
+          "@id": "hp:feature_start_lag_D_le_1"
+        },
+        {
+          "@id": "hp:feature_end_lag_L_ge_3"
+        }
+      ],
+      "mls:addressesTask": {
+        "@id": "task:graph_structure_identification"
+      }
+    },
+    {
+      "@id": "method:training_feature_vector_lag_window",
+      "@type": "mls:Method",
+      "mention": {
+        "start_char_doc": 33633,
+        "end_char_doc": 33815,
+        "prefix": "n)} \\right\\|_\\infty}, \\quad (17) $$ with the unnormalized features given by, $$ ",
+        "suffix": " $$ In other words, for training, we provide a normalized feature $\\overline{\\ma",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "$\\mathcal{T}_{ij}^{(n)}$",
+        "start_char_doc": 26309,
+        "end_char_doc": 26333,
+        "prefix": " 2 (Locality of the structural estimation).** Note that, to compute the feature ",
+        "suffix": " associated with each pair $ij$ defined in Theorem 1, we need only the time seri",
+        "valueSource": "extracted"
+      },
+      "mls:formula": {
+        "value": "\\mathcal{T}_{ij}^{(n)} \\triangleq \\left( \\left[ \\widehat{R}_{-100}(n) \\right]_{ij}, \\left[ \\widehat{R}_{-99}(n) \\right]_{ij}, \\dots, \\left[ \\widehat{R}_{100}(n) \\right]_{ij} \\right).",
+        "start_char_doc": 33633,
+        "end_char_doc": 33815,
+        "prefix": "n)} \\right\\|_\\infty}, \\quad (17) $$ with the unnormalized features given by, $$ ",
+        "suffix": " $$ In other words, for training, we provide a normalized feature $\\overline{\\ma",
+        "valueSource": "extracted"
+      },
+      "mls:hasHyperParameter": [
+        {
+          "@id": "hp:training_feature_min_lag_minus_100"
+        },
+        {
+          "@id": "hp:training_feature_max_lag_100"
+        }
+      ],
+      "mls:addressesTask": {
+        "@id": "task:graph_structure_identification"
+      }
+    },
+    {
+      "@id": "method:normalized_training_feature",
+      "@type": "mls:Method",
+      "mention": {
+        "start_char_doc": 33443,
+        "end_char_doc": 33573,
+        "prefix": "neq j} \\quad (16) $$ where we have introduced the normalized feature vectors $$ ",
+        "suffix": ", \\quad (17) $$ with the unnormalized features given by, $$ \\mathcal{T}_{ij}^{(n",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "$\\overline{\\mathcal{T}}_{ij}^{(n)}$",
+        "start_char_doc": 33881,
+        "end_char_doc": 33916,
+        "prefix": "_{ij} \\right). $$ In other words, for training, we provide a normalized feature ",
+        "suffix": " associated with the pair $ij$ as input to a classifier and the output should be",
+        "valueSource": "extracted"
+      },
+      "mls:formula": {
+        "value": "\\overline{\\mathcal{T}}_{ij}^{(n)} := \\frac{\\mathcal{T}_{ij}^{(n)}}{\\max_{i \\neq j} \\left\\| \\mathcal{T}_{ij}^{(n)} \\right\\|_\\infty}",
+        "start_char_doc": 33443,
+        "end_char_doc": 33573,
+        "prefix": "neq j} \\quad (16) $$ where we have introduced the normalized feature vectors $$ ",
+        "suffix": ", \\quad (17) $$ with the unnormalized features given by, $$ \\mathcal{T}_{ij}^{(n",
+        "valueSource": "extracted"
+      },
+      "mls:hasHyperParameter": [],
+      "mls:addressesTask": {
+        "@id": "task:graph_structure_identification"
+      }
+    },
+    {
+      "@id": "algo:granger_augmented_formula",
+      "@type": "mls:MLS_Algorithm",
+      "mention": {
+        "start_char_doc": 38062,
+        "end_char_doc": 38174,
+        "prefix": " \\left[ \\widehat{R}_{100}(n) \\right]_{ij} \\right) $$  the additional component $",
+        "suffix": "$ that is the Granger under partial observability, with only $|S| = 20$ nodes ob",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "$\\widehat{A}_S$",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:formula": {
+        "value": "\\widehat{A}_S \\triangleq \\left[ \\widehat{R}_1(n) \\right]_S \\left( \\left[ \\widehat{R}_0(n) \\right]_S \\right)^{-1}",
+        "start_char_doc": 38062,
+        "end_char_doc": 38174,
+        "prefix": " \\left[ \\widehat{R}_{100}(n) \\right]_{ij} \\right) $$  the additional component $",
+        "suffix": "$ that is the Granger under partial observability, with only $|S| = 20$ nodes ob",
+        "valueSource": "extracted"
+      },
+      "mls:hasHyperParameter": [
+        {
+          "@id": "hp:observed_nodes_count"
+        }
+      ],
+      "mls:addressesTask": {
+        "@id": "task:graph_structure_identification"
+      }
+    },
+    {
+      "@id": "exp:funding_fct",
+      "@type": "mls:Experiment",
+      "mention": {
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:name": {
+        "value": "funding acknowledgement for org:fct",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:fundedBy": {
+        "@id": "org:fct"
+      },
+      "mls:beneficiary": [
+        {
+          "@id": "person:machado_sergio"
+        },
+        {
+          "@id": "person:santos_augusto"
+        },
+        {
+          "@id": "person:henriques_jorge"
+        },
+        {
+          "@id": "person:gil_paulo"
+        }
+      ],
+      "mls:description": {
+        "value": "funded",
+        "start_char_doc": 41315,
+        "end_char_doc": 41321,
+        "prefix": "Acknowledgments  The work of S. Machado, A. Santos, J. Henriques and P. Gil was ",
+        "suffix": " in part by the FCT - Foundation for Science and Technology, Portugal, I.P./MCTE",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "exp:funding_us_nsf",
+      "@type": "mls:Experiment",
+      "mention": {
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:name": {
+        "value": "funding acknowledgement for org:us_nsf",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:fundedBy": {
+        "@id": "org:us_nsf"
+      },
+      "mls:beneficiary": [
+        {
+          "@id": "person:moura_jose_m_f"
+        },
+        {
+          "@id": "person:sridhar_anirudh"
+        }
+      ],
+      "mls:description": {
+        "value": "funded",
+        "start_char_doc": 41315,
+        "end_char_doc": 41321,
+        "prefix": "Acknowledgments  The work of S. Machado, A. Santos, J. Henriques and P. Gil was ",
+        "suffix": " in part by the FCT - Foundation for Science and Technology, Portugal, I.P./MCTE",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "exp:funding_c3ai_dti",
+      "@type": "mls:Experiment",
+      "mention": {
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:name": {
+        "value": "funding acknowledgement for org:c3ai_dti",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:fundedBy": {
+        "@id": "org:c3ai_dti"
+      },
+      "mls:beneficiary": [
+        {
+          "@id": "person:sridhar_anirudh"
+        }
+      ],
+      "mls:description": {
+        "value": "funded",
+        "start_char_doc": 41315,
+        "end_char_doc": 41321,
+        "prefix": "Acknowledgments  The work of S. Machado, A. Santos, J. Henriques and P. Gil was ",
+        "suffix": " in part by the FCT - Foundation for Science and Technology, Portugal, I.P./MCTE",
+        "valueSource": "extracted"
+      }
+    }
+  ]
+}

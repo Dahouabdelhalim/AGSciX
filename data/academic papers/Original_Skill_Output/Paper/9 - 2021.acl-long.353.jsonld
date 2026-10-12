@@ -1,0 +1,4355 @@
+{
+  "@context": {
+    "mls": "http://www.w3.org/ns/mls#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "schema": "http://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "model": "https://w3id.org/mlskg/model/",
+    "algo": "https://w3id.org/mlskg/algorithm/",
+    "method": "https://w3id.org/mlskg/method/",
+    "dataset": "https://w3id.org/mlskg/dataset/",
+    "datasource": "https://w3id.org/mlskg/datasource/",
+    "task": "https://w3id.org/mlskg/task/",
+    "eval": "https://w3id.org/mlskg/eval/",
+    "hp": "https://w3id.org/mlskg/hp/",
+    "impl": "https://w3id.org/mlskg/implementation/",
+    "env": "https://w3id.org/mlskg/environment/",
+    "prompt": "https://w3id.org/mlskg/prompt/",
+    "person": "https://w3id.org/mlskg/person/",
+    "org": "https://w3id.org/mlskg/organization/",
+    "study": "https://w3id.org/mlskg/study/",
+    "exp": "https://w3id.org/mlskg/experiment/",
+    "repo": "https://w3id.org/mlskg/repository/",
+    "valueSource": "https://w3id.org/mlskg/meta/valueSource",
+    "mention": "https://w3id.org/mlskg/meta/mention"
+  },
+  "@graph": [
+    {
+      "@id": "study:prefix_tuning_optimizing_continuous_prompts_for_generation_2021",
+      "@type": "mls:Study",
+      "mention": {
+        "start_char_doc": 13,
+        "end_char_doc": 72,
+        "prefix": "## Page 1  # ",
+        "suffix": "  **Xiang Lisa Li**   Stanford University   xlisali@stanford.edu  **Percy Liang*",
+        "valueSource": "extracted"
+      },
+      "mls:title": {
+        "value": "Prefix-Tuning: Optimizing Continuous Prompts for Generation",
+        "start_char_doc": 13,
+        "end_char_doc": 72,
+        "prefix": "## Page 1  # ",
+        "suffix": "  **Xiang Lisa Li**   Stanford University   xlisali@stanford.edu  **Percy Liang*",
+        "valueSource": "extracted"
+      },
+      "mls:abstract": {
+        "value": "Fine-tuning is the de facto way of leveraging large pretrained language models for downstream tasks. However, fine-tuning modifies all the language model parameters and therefore necessitates storing a full copy for each task. In this paper, we propose prefix-tuning, a lightweight alternative to fine-tuning for natural language generation tasks, which keeps language model parameters frozen and instead optimizes a sequence of *continuous task-specific* vectors, which we call the *prefix*. Prefix-tuning draws inspiration from prompting for language models, allowing subsequent tokens to attend to this prefix as if it were “virtual tokens”. We apply prefix-tuning to GPT-2 for table-to-text generation and to BART for summarization. We show that by modifying only 0.1% of the parameters, prefix-tuning obtains comparable performance in the full data setting, outperforms fine-tuning in low-data settings, and extrapolates better to examples with topics that are unseen during training.",
+        "start_char_doc": 215,
+        "end_char_doc": 1204,
+        "prefix": "u  **Percy Liang**   Stanford University   pliang@cs.stanford.edu  ## Abstract  ",
+        "suffix": "  ## 1 Introduction  Fine-tuning is the prevalent paradigm for using large pretr",
+        "valueSource": "extracted"
+      },
+      "mls:issued": {
+        "value": "August 1–6, 2021",
+        "start_char_doc": 3618,
+        "end_char_doc": 3634,
+        "prefix": " International Joint Conference on Natural Language Processing, pages 4582–4597 ",
+        "suffix": ". ©2021 Association for Computational Linguistics  ---   ## Page 2  In this pape",
+        "valueSource": "extracted"
+      },
+      "mls:url": {
+        "value": "https://aclanthology.org/2021.acl-long.353/",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:doi": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:publicationVenue": {
+        "value": "Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing",
+        "start_char_doc": 3438,
+        "end_char_doc": 3600,
+        "prefix": "ons at one time step.&lt;/img&gt;  &lt;page_number&gt;4582&lt;/page_number&gt;  ",
+        "suffix": ", pages 4582–4597 August 1–6, 2021. ©2021 Association for Computational Linguist",
+        "valueSource": "extracted"
+      },
+      "mls:hasAuthor": [
+        {
+          "@id": "person:li_xiang_lisa"
+        },
+        {
+          "@id": "person:liang_percy"
+        }
+      ],
+      "mls:hasContribution": [
+        {
+          "@id": "method:prefix_tuning"
+        },
+        {
+          "@id": "prompt:continuous_task_specific_prefix"
+        },
+        {
+          "@id": "method:prefix_reparameterization"
+        },
+        {
+          "@id": "method:embedding_only_ablation"
+        },
+        {
+          "@id": "method:infix_tuning_ablation"
+        }
+      ],
+      "mls:hasExperiment": [
+        {
+          "@id": "exp:table_to_text_generation"
+        },
+        {
+          "@id": "exp:xsum_summarization"
+        },
+        {
+          "@id": "exp:low_data_setting"
+        },
+        {
+          "@id": "exp:extrapolation_unseen_topics"
+        },
+        {
+          "@id": "exp:intrinsic_prefix_length"
+        },
+        {
+          "@id": "exp:embedding_only_and_infix"
+        },
+        {
+          "@id": "exp:initialization_ablation"
+        },
+        {
+          "@id": "exp:data_efficiency"
+        }
+      ],
+      "mls:hasEvaluation": [
+        {
+          "@id": "eval:prefix_table_to_text_e2e_bleu"
+        },
+        {
+          "@id": "eval:prefix_webnlg_all_bleu"
+        },
+        {
+          "@id": "eval:prefix_dart_bleu"
+        },
+        {
+          "@id": "eval:prefix_xsum_rouge_l_2pct"
+        },
+        {
+          "@id": "eval:prefix_xsum_rouge_l_0_1pct"
+        },
+        {
+          "@id": "eval:low_data_bleu_gain"
+        },
+        {
+          "@id": "eval:extrapolation_news_to_sports_rouge_l"
+        },
+        {
+          "@id": "eval:storage_parameter_reduction"
+        }
+      ],
+      "mls:implements": {
+        "@id": "repo:xiangli1999_prefixtuning"
+      }
+    },
+    {
+      "@id": "org:stanford_university",
+      "@type": "mls:Organization",
+      "mention": {
+        "start_char_doc": 94,
+        "end_char_doc": 113,
+        "prefix": "refix-Tuning: Optimizing Continuous Prompts for Generation  **Xiang Lisa Li**   ",
+        "suffix": "   xlisali@stanford.edu  **Percy Liang**   Stanford University   pliang@cs.stanf",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Stanford University",
+        "start_char_doc": 94,
+        "end_char_doc": 113,
+        "prefix": "refix-Tuning: Optimizing Continuous Prompts for Generation  **Xiang Lisa Li**   ",
+        "suffix": "   xlisali@stanford.edu  **Percy Liang**   Stanford University   pliang@cs.stanf",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "academic institution",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "org:association_for_computational_linguistics",
+      "@type": "mls:Organization",
+      "mention": {
+        "start_char_doc": 3484,
+        "end_char_doc": 3525,
+        "prefix": "mber&gt;4582&lt;/page_number&gt;  Proceedings of the 59th Annual Meeting of the ",
+        "suffix": " and the 11th International Joint Conference on Natural Language Processing, pag",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Association for Computational Linguistics",
+        "start_char_doc": 3484,
+        "end_char_doc": 3525,
+        "prefix": "mber&gt;4582&lt;/page_number&gt;  Proceedings of the 59th Annual Meeting of the ",
+        "suffix": " and the 11th International Joint Conference on Natural Language Processing, pag",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "professional association",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "person:li_xiang_lisa",
+      "@type": "mls:Person",
+      "mention": {
+        "start_char_doc": 76,
+        "end_char_doc": 89,
+        "prefix": "## Page 1  # Prefix-Tuning: Optimizing Continuous Prompts for Generation  **",
+        "suffix": "**   Stanford University   xlisali@stanford.edu  **Percy Liang**   Stanford Univ",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Xiang Lisa Li",
+        "start_char_doc": 76,
+        "end_char_doc": 89,
+        "prefix": "## Page 1  # Prefix-Tuning: Optimizing Continuous Prompts for Generation  **",
+        "suffix": "**   Stanford University   xlisali@stanford.edu  **Percy Liang**   Stanford Univ",
+        "valueSource": "extracted"
+      },
+      "mls:email": {
+        "value": "xlisali@stanford.edu",
+        "start_char_doc": 116,
+        "end_char_doc": 136,
+        "prefix": "ng Continuous Prompts for Generation  **Xiang Lisa Li**   Stanford University   ",
+        "suffix": "  **Percy Liang**   Stanford University   pliang@cs.stanford.edu  ## Abstract  F",
+        "valueSource": "extracted"
+      },
+      "mls:affiliation": {
+        "@id": "org:stanford_university"
+      }
+    },
+    {
+      "@id": "person:liang_percy",
+      "@type": "mls:Person",
+      "mention": {
+        "start_char_doc": 140,
+        "end_char_doc": 151,
+        "prefix": "r Generation  **Xiang Lisa Li**   Stanford University   xlisali@stanford.edu  **",
+        "suffix": "**   Stanford University   pliang@cs.stanford.edu  ## Abstract  Fine-tuning is t",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Percy Liang",
+        "start_char_doc": 140,
+        "end_char_doc": 151,
+        "prefix": "r Generation  **Xiang Lisa Li**   Stanford University   xlisali@stanford.edu  **",
+        "suffix": "**   Stanford University   pliang@cs.stanford.edu  ## Abstract  Fine-tuning is t",
+        "valueSource": "extracted"
+      },
+      "mls:email": {
+        "value": "pliang@cs.stanford.edu",
+        "start_char_doc": 178,
+        "end_char_doc": 200,
+        "prefix": "ford University   xlisali@stanford.edu  **Percy Liang**   Stanford University   ",
+        "suffix": "  ## Abstract  Fine-tuning is the de facto way of leveraging large pretrained la",
+        "valueSource": "extracted"
+      },
+      "mls:affiliation": {
+        "@id": "org:stanford_university"
+      }
+    },
+    {
+      "@id": "task:natural_language_generation",
+      "@type": "mls:MLS_Task",
+      "mention": {
+        "start_char_doc": 528,
+        "end_char_doc": 555,
+        "prefix": "s paper, we propose prefix-tuning, a lightweight alternative to fine-tuning for ",
+        "suffix": " tasks, which keeps language model parameters frozen and instead optimizes a seq",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "natural language generation",
+        "start_char_doc": 528,
+        "end_char_doc": 555,
+        "prefix": "s paper, we propose prefix-tuning, a lightweight alternative to fine-tuning for ",
+        "suffix": " tasks, which keeps language model parameters frozen and instead optimizes a seq",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "conditional NLG with frozen pretrained language models",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:category": {
+        "value": "natural language generation",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "task:table_to_text_generation",
+      "@type": "mls:MLS_Task",
+      "mention": {
+        "start_char_doc": 896,
+        "end_char_doc": 920,
+        "prefix": "this prefix as if it were “virtual tokens”. We apply prefix-tuning to GPT-2 for ",
+        "suffix": " and to BART for summarization. We show that by modifying only 0.1% of the param",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "table-to-text generation",
+        "start_char_doc": 896,
+        "end_char_doc": 920,
+        "prefix": "this prefix as if it were “virtual tokens”. We apply prefix-tuning to GPT-2 for ",
+        "suffix": " and to BART for summarization. We show that by modifying only 0.1% of the param",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "generate text from linearized tables",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:category": {
+        "value": "natural language generation",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "task:abstractive_summarization",
+      "@type": "mls:MLS_Task",
+      "mention": {
+        "start_char_doc": 937,
+        "end_char_doc": 950,
+        "prefix": "”. We apply prefix-tuning to GPT-2 for table-to-text generation and to BART for ",
+        "suffix": ". We show that by modifying only 0.1% of the parameters, prefix-tuning obtains c",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "summarization",
+        "start_char_doc": 937,
+        "end_char_doc": 950,
+        "prefix": "”. We apply prefix-tuning to GPT-2 for table-to-text generation and to BART for ",
+        "suffix": ". We show that by modifying only 0.1% of the parameters, prefix-tuning obtains c",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "generate summaries from articles",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:category": {
+        "value": "natural language generation",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "task:low_data_generation",
+      "@type": "mls:MLS_Task",
+      "mention": {
+        "start_char_doc": 1105,
+        "end_char_doc": 1122,
+        "prefix": "ins comparable performance in the full data setting, outperforms fine-tuning in ",
+        "suffix": ", and extrapolates better to examples with topics that are unseen during trainin",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "low-data settings",
+        "start_char_doc": 1105,
+        "end_char_doc": 1122,
+        "prefix": "ins comparable performance in the full data setting, outperforms fine-tuning in ",
+        "suffix": ", and extrapolates better to examples with topics that are unseen during trainin",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "generation when training examples are scarce",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:category": {
+        "value": "natural language generation",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "task:extrapolation_to_unseen_topics",
+      "@type": "mls:MLS_Task",
+      "mention": {
+        "start_char_doc": 27079,
+        "end_char_doc": 27121,
+        "prefix": "iption that is faithful to the table.  ## 6.4 Extrapolation  We now investigate ",
+        "suffix": " for both table-to-text and summarization. In order to construct an extrapolatio",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "extrapolation performance to unseen topics",
+        "start_char_doc": 27079,
+        "end_char_doc": 27121,
+        "prefix": "iption that is faithful to the table.  ## 6.4 Extrapolation  We now investigate ",
+        "suffix": " for both table-to-text and summarization. In order to construct an extrapolatio",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "generalize to unseen table categories or article topics",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:category": {
+        "value": "natural language generation",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "datasource:e2e",
+      "@type": "mls:DataSource",
+      "mention": {
+        "start_char_doc": 19292,
+        "end_char_doc": 19295,
+        "prefix": "aluate on three standard neural generation datasets for the table-to-text task: ",
+        "suffix": " (Novikova et al., 2017), WebNLG (Gardent et al., 2017), and DART (Radev et al.,",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "E2E",
+        "start_char_doc": 19292,
+        "end_char_doc": 19295,
+        "prefix": "aluate on three standard neural generation datasets for the table-to-text task: ",
+        "suffix": " (Novikova et al., 2017), WebNLG (Gardent et al., 2017), and DART (Radev et al.,",
+        "valueSource": "extracted"
+      },
+      "mls:url": {
+        "value": "E2E",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "benchmark dataset",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "datasource:webnlg",
+      "@type": "mls:DataSource",
+      "mention": {
+        "start_char_doc": 19321,
+        "end_char_doc": 19327,
+        "prefix": "al generation datasets for the table-to-text task: E2E (Novikova et al., 2017), ",
+        "suffix": " (Gardent et al., 2017), and DART (Radev et al., 2020), as shown in Table 1. The",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "WebNLG",
+        "start_char_doc": 19321,
+        "end_char_doc": 19327,
+        "prefix": "al generation datasets for the table-to-text task: E2E (Novikova et al., 2017), ",
+        "suffix": " (Gardent et al., 2017), and DART (Radev et al., 2020), as shown in Table 1. The",
+        "valueSource": "extracted"
+      },
+      "mls:url": {
+        "value": "WebNLG",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "benchmark dataset",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "datasource:dart",
+      "@type": "mls:DataSource",
+      "mention": {
+        "start_char_doc": 19356,
+        "end_char_doc": 19360,
+        "prefix": "e-to-text task: E2E (Novikova et al., 2017), WebNLG (Gardent et al., 2017), and ",
+        "suffix": " (Radev et al., 2020), as shown in Table 1. The datasets are ordered by increasi",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "DART",
+        "start_char_doc": 19356,
+        "end_char_doc": 19360,
+        "prefix": "e-to-text task: E2E (Novikova et al., 2017), WebNLG (Gardent et al., 2017), and ",
+        "suffix": " (Radev et al., 2020), as shown in Table 1. The datasets are ordered by increasi",
+        "valueSource": "extracted"
+      },
+      "mls:url": {
+        "value": "DART",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "benchmark dataset",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "datasource:xsum",
+      "@type": "mls:DataSource",
+      "mention": {
+        "start_char_doc": 19749,
+        "end_char_doc": 19753,
+        "prefix": " scripts (see details in Appendix A.1).  For the summarization task, we use the ",
+        "suffix": " (Narayan et al., 2018) dataset, which is an abstractive summarization dataset o",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "XSUM",
+        "start_char_doc": 19749,
+        "end_char_doc": 19753,
+        "prefix": " scripts (see details in Appendix A.1).  For the summarization task, we use the ",
+        "suffix": " (Narayan et al., 2018) dataset, which is an abstractive summarization dataset o",
+        "valueSource": "extracted"
+      },
+      "mls:url": {
+        "value": "XSUM",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "benchmark dataset",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "datasource:codalab_prefix_tuning",
+      "@type": "mls:DataSource",
+      "mention": {
+        "start_char_doc": 47372,
+        "end_char_doc": 47448,
+        "prefix": "ps://github.com/XiangLi1999/PrefixTuning. Experiments and data are available at ",
+        "suffix": ".  &lt;page_number&gt;4590&lt;/page_number&gt;  ---   ## Page 10  # References  ",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "https://worksheets.codalab.org/worksheets/0x16e0c8e7ab1f4b22aaccddc8b586541f",
+        "start_char_doc": 47372,
+        "end_char_doc": 47448,
+        "prefix": "ps://github.com/XiangLi1999/PrefixTuning. Experiments and data are available at ",
+        "suffix": ".  &lt;page_number&gt;4590&lt;/page_number&gt;  ---   ## Page 10  # References  ",
+        "valueSource": "extracted"
+      },
+      "mls:url": {
+        "value": "https://worksheets.codalab.org/worksheets/0x16e0c8e7ab1f4b22aaccddc8b586541f",
+        "start_char_doc": 47372,
+        "end_char_doc": 47448,
+        "prefix": "ps://github.com/XiangLi1999/PrefixTuning. Experiments and data are available at ",
+        "suffix": ".  &lt;page_number&gt;4590&lt;/page_number&gt;  ---   ## Page 10  # References  ",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "experiment/data artifact",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "dataset:e2e",
+      "@type": "mls:MLS_Dataset",
+      "mention": {
+        "start_char_doc": 19292,
+        "end_char_doc": 19295,
+        "prefix": "aluate on three standard neural generation datasets for the table-to-text task: ",
+        "suffix": " (Novikova et al., 2017), WebNLG (Gardent et al., 2017), and DART (Radev et al.,",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "E2E",
+        "start_char_doc": 19292,
+        "end_char_doc": 19295,
+        "prefix": "aluate on three standard neural generation datasets for the table-to-text task: ",
+        "suffix": " (Novikova et al., 2017), WebNLG (Gardent et al., 2017), and DART (Radev et al.,",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "1 domain (i.e. restaurant reviews)",
+        "start_char_doc": 19477,
+        "end_char_doc": 19511,
+        "prefix": "ble 1. The datasets are ordered by increasing complexity and size. E2E only has ",
+        "suffix": "; WebNLG has 14 domains, and DART is open-domain, using open-domain tables from ",
+        "valueSource": "extracted"
+      },
+      "mls:numInstances": {
+        "value": "50K",
+        "start_char_doc": 4828,
+        "end_char_doc": 4831,
+        "prefix": "pecific prefix, yielding a very small overhead for each additional task (e.g., 2",
+        "suffix": " parameters for table-to-text).  In contrast to full fine-tuning, prefix-tuning ",
+        "valueSource": "extracted"
+      },
+      "mls:modality": {
+        "value": "text",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:prov-derivedFrom": {
+        "@id": "datasource:e2e"
+      }
+    },
+    {
+      "@id": "dataset:webnlg",
+      "@type": "mls:MLS_Dataset",
+      "mention": {
+        "start_char_doc": 19321,
+        "end_char_doc": 19327,
+        "prefix": "al generation datasets for the table-to-text task: E2E (Novikova et al., 2017), ",
+        "suffix": " (Gardent et al., 2017), and DART (Radev et al., 2020), as shown in Table 1. The",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "WebNLG",
+        "start_char_doc": 19321,
+        "end_char_doc": 19327,
+        "prefix": "al generation datasets for the table-to-text task: E2E (Novikova et al., 2017), ",
+        "suffix": " (Gardent et al., 2017), and DART (Radev et al., 2020), as shown in Table 1. The",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "14 domains",
+        "start_char_doc": 19524,
+        "end_char_doc": 19534,
+        "prefix": "omplexity and size. E2E only has 1 domain (i.e. restaurant reviews); WebNLG has ",
+        "suffix": ", and DART is open-domain, using open-domain tables from Wikipedia. For evaluati",
+        "valueSource": "extracted"
+      },
+      "mls:numInstances": {
+        "value": "22K",
+        "start_char_doc": 21228,
+        "end_char_doc": 21231,
+        "prefix": "Force GTX TITAN X machines. Prefix-tuning takes 0.2 hours per epoch to train on ",
+        "suffix": " examples, whereas fine-tuning takes around 0.3 hours per epoch. The summarizati",
+        "valueSource": "extracted"
+      },
+      "mls:modality": {
+        "value": "text",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:prov-derivedFrom": {
+        "@id": "datasource:webnlg"
+      }
+    },
+    {
+      "@id": "dataset:dart",
+      "@type": "mls:MLS_Dataset",
+      "mention": {
+        "start_char_doc": 19356,
+        "end_char_doc": 19360,
+        "prefix": "e-to-text task: E2E (Novikova et al., 2017), WebNLG (Gardent et al., 2017), and ",
+        "suffix": " (Radev et al., 2020), as shown in Table 1. The datasets are ordered by increasi",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "DART",
+        "start_char_doc": 19356,
+        "end_char_doc": 19360,
+        "prefix": "e-to-text task: E2E (Novikova et al., 2017), WebNLG (Gardent et al., 2017), and ",
+        "suffix": " (Radev et al., 2020), as shown in Table 1. The datasets are ordered by increasi",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "open-domain, using open-domain tables from Wikipedia",
+        "start_char_doc": 19548,
+        "end_char_doc": 19600,
+        "prefix": "only has 1 domain (i.e. restaurant reviews); WebNLG has 14 domains, and DART is ",
+        "suffix": ". For evaluation, we report the metrics using the official evaluation scripts (s",
+        "valueSource": "extracted"
+      },
+      "mls:numInstances": {
+        "value": "82K",
+        "start_char_doc": 22193,
+        "end_char_doc": 22196,
+        "prefix": ">49.6</td>       <td>30.7</td>     </tr>     <tr>       <td>DART</td>       <td>",
+        "suffix": "</td>       <td>38.8</td>       <td>27.3</td>     </tr>     <tr>       <td>XSUM<",
+        "valueSource": "extracted"
+      },
+      "mls:modality": {
+        "value": "text",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:prov-derivedFrom": {
+        "@id": "datasource:dart"
+      }
+    },
+    {
+      "@id": "dataset:xsum",
+      "@type": "mls:MLS_Dataset",
+      "mention": {
+        "start_char_doc": 19749,
+        "end_char_doc": 19753,
+        "prefix": " scripts (see details in Appendix A.1).  For the summarization task, we use the ",
+        "suffix": " (Narayan et al., 2018) dataset, which is an abstractive summarization dataset o",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "XSUM",
+        "start_char_doc": 19749,
+        "end_char_doc": 19753,
+        "prefix": " scripts (see details in Appendix A.1).  For the summarization task, we use the ",
+        "suffix": " (Narayan et al., 2018) dataset, which is an abstractive summarization dataset o",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "abstractive summarization dataset on news articles",
+        "start_char_doc": 19798,
+        "end_char_doc": 19848,
+        "prefix": "summarization task, we use the XSUM (Narayan et al., 2018) dataset, which is an ",
+        "suffix": ". We report ROUGE-1, ROUGE-2 and ROUGE-L.  ### 5.2 Methods  For table-to-text ge",
+        "valueSource": "extracted"
+      },
+      "mls:numInstances": {
+        "value": "225K",
+        "start_char_doc": 22291,
+        "end_char_doc": 22295,
+        "prefix": ">38.8</td>       <td>27.3</td>     </tr>     <tr>       <td>XSUM</td>       <td>",
+        "suffix": "</td>       <td>473.3</td>       <td>28.1</td>     </tr>   </tbody> </table>  Ta",
+        "valueSource": "extracted"
+      },
+      "mls:modality": {
+        "value": "text",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:prov-derivedFrom": {
+        "@id": "datasource:xsum"
+      }
+    },
+    {
+      "@id": "dataset:low_data_e2e_xsum",
+      "@type": "mls:MLS_Dataset",
+      "mention": {
+        "start_char_doc": 26176,
+        "end_char_doc": 26195,
+        "prefix": " for table-to-text and XSUM for summarization) to obtain small datasets of size ",
+        "suffix": ". For each size, we sample 5 different datasets and average over 2 training rand",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "{50, 100, 200, 500}",
+        "start_char_doc": 26176,
+        "end_char_doc": 26195,
+        "prefix": " for table-to-text and XSUM for summarization) to obtain small datasets of size ",
+        "suffix": ". For each size, we sample 5 different datasets and average over 2 training rand",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "small datasets of size {50, 100, 200, 500}",
+        "start_char_doc": 26153,
+        "end_char_doc": 26195,
+        "prefix": "e the full dataset (E2E for table-to-text and XSUM for summarization) to obtain ",
+        "suffix": ". For each size, we sample 5 different datasets and average over 2 training rand",
+        "valueSource": "extracted"
+      },
+      "mls:numInstances": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:modality": {
+        "value": "text",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:prov-derivedFrom": {
+        "@id": "datasource:e2e"
+      }
+    },
+    {
+      "@id": "dataset:extrapolation_webnlg_unseen",
+      "@type": "mls:MLS_Dataset",
+      "mention": {
+        "start_char_doc": 25412,
+        "end_char_doc": 25418,
+        "prefix": "s SEEN, UN-SEEN, and ALL respectively; SEEN categories appear at training time; ",
+        "suffix": " categories only appears at test time; and ALL is the combination of the two.  (",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "UNSEEN",
+        "start_char_doc": 25412,
+        "end_char_doc": 25418,
+        "prefix": "s SEEN, UN-SEEN, and ALL respectively; SEEN categories appear at training time; ",
+        "suffix": " categories only appears at test time; and ALL is the combination of the two.  (",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "5 categories that only appear at test time",
+        "start_char_doc": 27437,
+        "end_char_doc": 27479,
+        "prefix": "cs. There are 9 categories that appear in training and dev, denoted as SEEN and ",
+        "suffix": ", denoted as UNSEEN. So we evaluate extrapolation by training on the SEEN catego",
+        "valueSource": "extracted"
+      },
+      "mls:numInstances": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:modality": {
+        "value": "text",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:prov-derivedFrom": {
+        "@id": "datasource:webnlg"
+      }
+    },
+    {
+      "@id": "model:gpt_2_medium",
+      "@type": "mls:MLS_Model",
+      "mention": {
+        "start_char_doc": 20520,
+        "end_char_doc": 20536,
+        "prefix": "., 2020).  ### 5.3 Architectures and Hyperparameters  For table-to-text, we use ",
+        "suffix": " and GPT-2$_{LARGE}$. For summarization, we use BART$_{LARGE}$. Our implementati",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "GPT-2$_{MEDIUM}$",
+        "start_char_doc": 20520,
+        "end_char_doc": 20536,
+        "prefix": "., 2020).  ### 5.3 Architectures and Hyperparameters  For table-to-text, we use ",
+        "suffix": " and GPT-2$_{LARGE}$. For summarization, we use BART$_{LARGE}$. Our implementati",
+        "valueSource": "extracted"
+      },
+      "mls:architecture": {
+        "value": "autoregressive neural language model",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:e2e"
+        },
+        {
+          "@id": "dataset:webnlg"
+        },
+        {
+          "@id": "dataset:dart"
+        },
+        {
+          "@id": "dataset:xsum"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:e2e"
+        },
+        {
+          "@id": "dataset:webnlg"
+        },
+        {
+          "@id": "dataset:dart"
+        },
+        {
+          "@id": "dataset:xsum"
+        }
+      ]
+    },
+    {
+      "@id": "model:gpt_2_large",
+      "@type": "mls:MLS_Model",
+      "mention": {
+        "start_char_doc": 20541,
+        "end_char_doc": 20556,
+        "prefix": "chitectures and Hyperparameters  For table-to-text, we use GPT-2$_{MEDIUM}$ and ",
+        "suffix": ". For summarization, we use BART$_{LARGE}$. Our implementation is based on the H",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "GPT-2$_{LARGE}$",
+        "start_char_doc": 20541,
+        "end_char_doc": 20556,
+        "prefix": "chitectures and Hyperparameters  For table-to-text, we use GPT-2$_{MEDIUM}$ and ",
+        "suffix": ". For summarization, we use BART$_{LARGE}$. Our implementation is based on the H",
+        "valueSource": "extracted"
+      },
+      "mls:architecture": {
+        "value": "autoregressive neural language model",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:e2e"
+        },
+        {
+          "@id": "dataset:webnlg"
+        },
+        {
+          "@id": "dataset:dart"
+        },
+        {
+          "@id": "dataset:xsum"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:e2e"
+        },
+        {
+          "@id": "dataset:webnlg"
+        },
+        {
+          "@id": "dataset:dart"
+        },
+        {
+          "@id": "dataset:xsum"
+        }
+      ]
+    },
+    {
+      "@id": "model:gpt_2",
+      "@type": "mls:MLS_Model",
+      "mention": {
+        "start_char_doc": 886,
+        "end_char_doc": 891,
+        "prefix": "attend to this prefix as if it were “virtual tokens”. We apply prefix-tuning to ",
+        "suffix": " for table-to-text generation and to BART for summarization. We show that by mod",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "GPT-2",
+        "start_char_doc": 886,
+        "end_char_doc": 891,
+        "prefix": "attend to this prefix as if it were “virtual tokens”. We apply prefix-tuning to ",
+        "suffix": " for table-to-text generation and to BART for summarization. We show that by mod",
+        "valueSource": "extracted"
+      },
+      "mls:architecture": {
+        "value": "autoregressive neural language model",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:e2e"
+        },
+        {
+          "@id": "dataset:webnlg"
+        },
+        {
+          "@id": "dataset:dart"
+        },
+        {
+          "@id": "dataset:xsum"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:e2e"
+        },
+        {
+          "@id": "dataset:webnlg"
+        },
+        {
+          "@id": "dataset:dart"
+        },
+        {
+          "@id": "dataset:xsum"
+        }
+      ]
+    },
+    {
+      "@id": "model:bart_large",
+      "@type": "mls:MLS_Model",
+      "mention": {
+        "start_char_doc": 20584,
+        "end_char_doc": 20598,
+        "prefix": "to-text, we use GPT-2$_{MEDIUM}$ and GPT-2$_{LARGE}$. For summarization, we use ",
+        "suffix": ". Our implementation is based on the Hugging Face Transformers (Wolf et al., 202",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "BART$_{LARGE}$",
+        "start_char_doc": 20584,
+        "end_char_doc": 20598,
+        "prefix": "to-text, we use GPT-2$_{MEDIUM}$ and GPT-2$_{LARGE}$. For summarization, we use ",
+        "suffix": ". Our implementation is based on the Hugging Face Transformers (Wolf et al., 202",
+        "valueSource": "extracted"
+      },
+      "mls:architecture": {
+        "value": "encoder-decoder architecture",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:e2e"
+        },
+        {
+          "@id": "dataset:webnlg"
+        },
+        {
+          "@id": "dataset:dart"
+        },
+        {
+          "@id": "dataset:xsum"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:e2e"
+        },
+        {
+          "@id": "dataset:webnlg"
+        },
+        {
+          "@id": "dataset:dart"
+        },
+        {
+          "@id": "dataset:xsum"
+        }
+      ]
+    },
+    {
+      "@id": "model:bart",
+      "@type": "mls:MLS_Model",
+      "mention": {
+        "start_char_doc": 928,
+        "end_char_doc": 932,
+        "prefix": "al tokens”. We apply prefix-tuning to GPT-2 for table-to-text generation and to ",
+        "suffix": " for summarization. We show that by modifying only 0.1% of the parameters, prefi",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "BART",
+        "start_char_doc": 928,
+        "end_char_doc": 932,
+        "prefix": "al tokens”. We apply prefix-tuning to GPT-2 for table-to-text generation and to ",
+        "suffix": " for summarization. We show that by modifying only 0.1% of the parameters, prefi",
+        "valueSource": "extracted"
+      },
+      "mls:architecture": {
+        "value": "encoder-decoder architecture",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:e2e"
+        },
+        {
+          "@id": "dataset:webnlg"
+        },
+        {
+          "@id": "dataset:dart"
+        },
+        {
+          "@id": "dataset:xsum"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:e2e"
+        },
+        {
+          "@id": "dataset:webnlg"
+        },
+        {
+          "@id": "dataset:dart"
+        },
+        {
+          "@id": "dataset:xsum"
+        }
+      ]
+    },
+    {
+      "@id": "method:prefix_tuning",
+      "@type": "mls:Method",
+      "mention": {
+        "start_char_doc": 485,
+        "end_char_doc": 498,
+        "prefix": "s storing a full copy for each task. In this paper, we propose prefix-tuning, a ",
+        "suffix": "lternative to fine-tuning for natural language generation tasks, which keeps lan",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "prefix-tuning",
+        "start_char_doc": 468,
+        "end_char_doc": 481,
+        "prefix": "efore necessitates storing a full copy for each task. In this paper, we propose ",
+        "suffix": ", a lightweight alternative to fine-tuning for natural language generation tasks",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "lightweight alternative to fine-tuning for natural language generation tasks",
+        "start_char_doc": 485,
+        "end_char_doc": 561,
+        "prefix": "s storing a full copy for each task. In this paper, we propose prefix-tuning, a ",
+        "suffix": ", which keeps language model parameters frozen and instead optimizes a sequence ",
+        "valueSource": "extracted"
+      },
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:e2e"
+        },
+        {
+          "@id": "dataset:webnlg"
+        },
+        {
+          "@id": "dataset:dart"
+        },
+        {
+          "@id": "dataset:xsum"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:e2e"
+        },
+        {
+          "@id": "dataset:webnlg"
+        },
+        {
+          "@id": "dataset:dart"
+        },
+        {
+          "@id": "dataset:xsum"
+        }
+      ]
+    },
+    {
+      "@id": "prompt:continuous_task_specific_prefix",
+      "@type": "mls:Prompt",
+      "mention": {
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:name": {
+        "value": "continuous task-specific vectors",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:description": {
+        "value": "continuous task-specific vectors",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:e2e"
+        },
+        {
+          "@id": "dataset:webnlg"
+        },
+        {
+          "@id": "dataset:dart"
+        },
+        {
+          "@id": "dataset:xsum"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:e2e"
+        },
+        {
+          "@id": "dataset:webnlg"
+        },
+        {
+          "@id": "dataset:dart"
+        },
+        {
+          "@id": "dataset:xsum"
+        }
+      ]
+    },
+    {
+      "@id": "method:prefix_reparameterization",
+      "@type": "mls:Method",
+      "mention": {
+        "start_char_doc": 18627,
+        "end_char_doc": 18705,
+        "prefix": "ters leads to unstable optimization and a slight drop in performance.$^3$ So we ",
+        "suffix": " by a smaller matrix ($P'_\\theta$) composed with a large feedforward neural netw",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "reparametrize the matrix $P_\\theta[i, :] = \\text{MLP}_\\theta(P'_\\theta[i, :])$",
+        "start_char_doc": 18627,
+        "end_char_doc": 18705,
+        "prefix": "ters leads to unstable optimization and a slight drop in performance.$^3$ So we ",
+        "suffix": " by a smaller matrix ($P'_\\theta$) composed with a large feedforward neural netw",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "reparametrize the matrix $P_\\theta[i, :] = \\text{MLP}_\\theta(P'_\\theta[i, :])$",
+        "start_char_doc": 18627,
+        "end_char_doc": 18705,
+        "prefix": "ters leads to unstable optimization and a slight drop in performance.$^3$ So we ",
+        "suffix": " by a smaller matrix ($P'_\\theta$) composed with a large feedforward neural netw",
+        "valueSource": "extracted"
+      },
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:e2e"
+        },
+        {
+          "@id": "dataset:webnlg"
+        },
+        {
+          "@id": "dataset:dart"
+        },
+        {
+          "@id": "dataset:xsum"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:e2e"
+        },
+        {
+          "@id": "dataset:webnlg"
+        },
+        {
+          "@id": "dataset:dart"
+        },
+        {
+          "@id": "dataset:xsum"
+        }
+      ]
+    },
+    {
+      "@id": "method:full_fine_tuning",
+      "@type": "mls:Method",
+      "mention": {
+        "start_char_doc": 4879,
+        "end_char_doc": 4895,
+        "prefix": "each additional task (e.g., 250K parameters for table-to-text).  In contrast to ",
+        "suffix": ", prefix-tuning is also modular: we train an upstream prefix which steers an unm",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "full fine-tuning",
+        "start_char_doc": 4879,
+        "end_char_doc": 4895,
+        "prefix": "each additional task (e.g., 250K parameters for table-to-text).  In contrast to ",
+        "suffix": ", prefix-tuning is also modular: we train an upstream prefix which steers an unm",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "full fine-tuning",
+        "start_char_doc": 4879,
+        "end_char_doc": 4895,
+        "prefix": "each additional task (e.g., 250K parameters for table-to-text).  In contrast to ",
+        "suffix": ", prefix-tuning is also modular: we train an upstream prefix which steers an unm",
+        "valueSource": "extracted"
+      },
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:e2e"
+        },
+        {
+          "@id": "dataset:webnlg"
+        },
+        {
+          "@id": "dataset:dart"
+        },
+        {
+          "@id": "dataset:xsum"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:e2e"
+        },
+        {
+          "@id": "dataset:webnlg"
+        },
+        {
+          "@id": "dataset:dart"
+        },
+        {
+          "@id": "dataset:xsum"
+        }
+      ]
+    },
+    {
+      "@id": "method:adapter_tuning",
+      "@type": "mls:Method",
+      "mention": {
+        "start_char_doc": 1992,
+        "end_char_doc": 2006,
+        "prefix": " pretrained parameters and only tunes a smaller set of parameters. For example, ",
+        "suffix": " (Rebuffi et al., 2017; Houlsby et al., 2019) inserts additional task-specific l",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "adapter-tuning",
+        "start_char_doc": 1992,
+        "end_char_doc": 2006,
+        "prefix": " pretrained parameters and only tunes a smaller set of parameters. For example, ",
+        "suffix": " (Rebuffi et al., 2017; Houlsby et al., 2019) inserts additional task-specific l",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "adapter-tuning",
+        "start_char_doc": 1992,
+        "end_char_doc": 2006,
+        "prefix": " pretrained parameters and only tunes a smaller set of parameters. For example, ",
+        "suffix": " (Rebuffi et al., 2017; Houlsby et al., 2019) inserts additional task-specific l",
+        "valueSource": "extracted"
+      },
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:e2e"
+        },
+        {
+          "@id": "dataset:webnlg"
+        },
+        {
+          "@id": "dataset:dart"
+        },
+        {
+          "@id": "dataset:xsum"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:e2e"
+        },
+        {
+          "@id": "dataset:webnlg"
+        },
+        {
+          "@id": "dataset:dart"
+        },
+        {
+          "@id": "dataset:xsum"
+        }
+      ]
+    },
+    {
+      "@id": "method:ft_top2",
+      "@type": "mls:Method",
+      "mention": {
+        "start_char_doc": 20052,
+        "end_char_doc": 20059,
+        "prefix": "e other methods: full fine-tuning (FT-FULL), fine-tuning only the top 2 layers (",
+        "suffix": "), and adapter-tuning (ADAPTER).$^5$ We also report the current state-of-the-art",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "FT-TOP2",
+        "start_char_doc": 20052,
+        "end_char_doc": 20059,
+        "prefix": "e other methods: full fine-tuning (FT-FULL), fine-tuning only the top 2 layers (",
+        "suffix": "), and adapter-tuning (ADAPTER).$^5$ We also report the current state-of-the-art",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "FT-TOP2",
+        "start_char_doc": 20052,
+        "end_char_doc": 20059,
+        "prefix": "e other methods: full fine-tuning (FT-FULL), fine-tuning only the top 2 layers (",
+        "suffix": "), and adapter-tuning (ADAPTER).$^5$ We also report the current state-of-the-art",
+        "valueSource": "extracted"
+      },
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:e2e"
+        },
+        {
+          "@id": "dataset:webnlg"
+        },
+        {
+          "@id": "dataset:dart"
+        },
+        {
+          "@id": "dataset:xsum"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:e2e"
+        },
+        {
+          "@id": "dataset:webnlg"
+        },
+        {
+          "@id": "dataset:dart"
+        },
+        {
+          "@id": "dataset:xsum"
+        }
+      ]
+    },
+    {
+      "@id": "method:embedding_only_ablation",
+      "@type": "mls:Method",
+      "mention": {
+        "start_char_doc": 39024,
+        "end_char_doc": 39038,
+        "prefix": "nuous embeddings of the “virtual tokens.” We instantiate that idea and call it *",
+        "suffix": "*. The word embeddings are free parameters, and the remaining activation layers ",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "embedding-only",
+        "start_char_doc": 39024,
+        "end_char_doc": 39038,
+        "prefix": "nuous embeddings of the “virtual tokens.” We instantiate that idea and call it *",
+        "suffix": "*. The word embeddings are free parameters, and the remaining activation layers ",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "embedding-only",
+        "start_char_doc": 39024,
+        "end_char_doc": 39038,
+        "prefix": "nuous embeddings of the “virtual tokens.” We instantiate that idea and call it *",
+        "suffix": "*. The word embeddings are free parameters, and the remaining activation layers ",
+        "valueSource": "extracted"
+      },
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:e2e"
+        },
+        {
+          "@id": "dataset:webnlg"
+        },
+        {
+          "@id": "dataset:dart"
+        },
+        {
+          "@id": "dataset:xsum"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:e2e"
+        },
+        {
+          "@id": "dataset:webnlg"
+        },
+        {
+          "@id": "dataset:dart"
+        },
+        {
+          "@id": "dataset:xsum"
+        }
+      ]
+    },
+    {
+      "@id": "method:infix_tuning_ablation",
+      "@type": "mls:Method",
+      "mention": {
+        "start_char_doc": 39907,
+        "end_char_doc": 39919,
+        "prefix": "ce the trainable activations between x and y (i.e. [x; INFIX; y]) and call this ",
+        "suffix": ". Table 5 (bottom) shows that infix-tuning slightly underperforms prefix-tuning.",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "infix-tuning",
+        "start_char_doc": 39907,
+        "end_char_doc": 39919,
+        "prefix": "ce the trainable activations between x and y (i.e. [x; INFIX; y]) and call this ",
+        "suffix": ". Table 5 (bottom) shows that infix-tuning slightly underperforms prefix-tuning.",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "infix-tuning",
+        "start_char_doc": 39907,
+        "end_char_doc": 39919,
+        "prefix": "ce the trainable activations between x and y (i.e. [x; INFIX; y]) and call this ",
+        "suffix": ". Table 5 (bottom) shows that infix-tuning slightly underperforms prefix-tuning.",
+        "valueSource": "extracted"
+      },
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:e2e"
+        },
+        {
+          "@id": "dataset:webnlg"
+        },
+        {
+          "@id": "dataset:dart"
+        },
+        {
+          "@id": "dataset:xsum"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:e2e"
+        },
+        {
+          "@id": "dataset:webnlg"
+        },
+        {
+          "@id": "dataset:dart"
+        },
+        {
+          "@id": "dataset:xsum"
+        }
+      ]
+    },
+    {
+      "@id": "method:real_word_initialization",
+      "@type": "mls:Method",
+      "mention": {
+        "start_char_doc": 38442,
+        "end_char_doc": 38496,
+        "prefix": "t reports two metrics (on two vertical axes).&lt;/img&gt;  &lt;img&gt;Figure 5: ",
+        "suffix": " significantly outperforms random initialization, in low-data settings.&lt;/img&",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Initializing the prefix with activations of real words",
+        "start_char_doc": 38442,
+        "end_char_doc": 38496,
+        "prefix": "t reports two metrics (on two vertical axes).&lt;/img&gt;  &lt;img&gt;Figure 5: ",
+        "suffix": " significantly outperforms random initialization, in low-data settings.&lt;/img&",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "Initializing the prefix with activations of real words",
+        "start_char_doc": 38442,
+        "end_char_doc": 38496,
+        "prefix": "t reports two metrics (on two vertical axes).&lt;/img&gt;  &lt;img&gt;Figure 5: ",
+        "suffix": " significantly outperforms random initialization, in low-data settings.&lt;/img&",
+        "valueSource": "extracted"
+      },
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:e2e"
+        },
+        {
+          "@id": "dataset:webnlg"
+        },
+        {
+          "@id": "dataset:dart"
+        },
+        {
+          "@id": "dataset:xsum"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:e2e"
+        },
+        {
+          "@id": "dataset:webnlg"
+        },
+        {
+          "@id": "dataset:dart"
+        },
+        {
+          "@id": "dataset:xsum"
+        }
+      ]
+    },
+    {
+      "@id": "algo:adamw",
+      "@type": "mls:MLS_Algorithm",
+      "mention": {
+        "start_char_doc": 20712,
+        "end_char_doc": 20727,
+        "prefix": "he Hugging Face Transformers (Wolf et al., 2020).  At training time, we use the ",
+        "suffix": " (Loshchilov and Hutter, 2019) and a linear learning rate scheduler, as suggeste",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "AdamW optimizer",
+        "start_char_doc": 20712,
+        "end_char_doc": 20727,
+        "prefix": "he Hugging Face Transformers (Wolf et al., 2020).  At training time, we use the ",
+        "suffix": " (Loshchilov and Hutter, 2019) and a linear learning rate scheduler, as suggeste",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "AdamW optimizer",
+        "start_char_doc": 20712,
+        "end_char_doc": 20727,
+        "prefix": "he Hugging Face Transformers (Wolf et al., 2020).  At training time, we use the ",
+        "suffix": " (Loshchilov and Hutter, 2019) and a linear learning rate scheduler, as suggeste",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "algo:linear_learning_rate_scheduler",
+      "@type": "mls:MLS_Algorithm",
+      "mention": {
+        "start_char_doc": 20764,
+        "end_char_doc": 20794,
+        "prefix": "t training time, we use the AdamW optimizer (Loshchilov and Hutter, 2019) and a ",
+        "suffix": ", as suggested by the Hugging Face default setup. The hyperparameters we tune in",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "linear learning rate scheduler",
+        "start_char_doc": 20764,
+        "end_char_doc": 20794,
+        "prefix": "t training time, we use the AdamW optimizer (Loshchilov and Hutter, 2019) and a ",
+        "suffix": ", as suggested by the Hugging Face default setup. The hyperparameters we tune in",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "linear learning rate scheduler",
+        "start_char_doc": 20764,
+        "end_char_doc": 20794,
+        "prefix": "t training time, we use the AdamW optimizer (Loshchilov and Hutter, 2019) and a ",
+        "suffix": ", as suggested by the Hugging Face default setup. The hyperparameters we tune in",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "algo:beam_search",
+      "@type": "mls:MLS_Algorithm",
+      "mention": {
+        "start_char_doc": 21653,
+        "end_char_doc": 21664,
+        "prefix": "ry, whereas fine-tuning takes 50%.  At decoding time, for table-to-text, we use ",
+        "suffix": " with beam size 5. For summarization, we use beam size 6 and length normalizatio",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "beam search",
+        "start_char_doc": 21653,
+        "end_char_doc": 21664,
+        "prefix": "ry, whereas fine-tuning takes 50%.  At decoding time, for table-to-text, we use ",
+        "suffix": " with beam size 5. For summarization, we use beam size 6 and length normalizatio",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "beam search",
+        "start_char_doc": 21653,
+        "end_char_doc": 21664,
+        "prefix": "ry, whereas fine-tuning takes 50%.  At decoding time, for table-to-text, we use ",
+        "suffix": " with beam size 5. For summarization, we use beam size 6 and length normalizatio",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "algo:early_stopping",
+      "@type": "mls:MLS_Algorithm",
+      "mention": {
+        "start_char_doc": 27814,
+        "end_char_doc": 27828,
+        "prefix": "r each training set. We use the dev split to choose hyperparameters and perform ",
+        "suffix": ".  10The number in the parenthesis refers to the training size.  &lt;page_number",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "early stopping",
+        "start_char_doc": 27814,
+        "end_char_doc": 27828,
+        "prefix": "r each training set. We use the dev split to choose hyperparameters and perform ",
+        "suffix": ".  10The number in the parenthesis refers to the training size.  &lt;page_number",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "early stopping",
+        "start_char_doc": 27814,
+        "end_char_doc": 27828,
+        "prefix": "r each training set. We use the dev split to choose hyperparameters and perform ",
+        "suffix": ".  10The number in the parenthesis refers to the training size.  &lt;page_number",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "hp:default_epochs_10",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 21015,
+        "end_char_doc": 21024,
+        "prefix": "efix length. Hyperparameter details are in the appendix. The default setting is ",
+        "suffix": ", batch size 5, learning rate $5 \\cdot 10^{-5}$ and prefix length 10. The table-",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "default epochs",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "10 epochs",
+        "start_char_doc": 21015,
+        "end_char_doc": 21024,
+        "prefix": "efix length. Hyperparameter details are in the appendix. The default setting is ",
+        "suffix": ", batch size 5, learning rate $5 \\cdot 10^{-5}$ and prefix length 10. The table-",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "integer",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Training",
+      "hpType": "NumEpochs",
+      "uncertain": {
+        "value": false,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:default_batch_size_5",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 21026,
+        "end_char_doc": 21038,
+        "prefix": ". Hyperparameter details are in the appendix. The default setting is 10 epochs, ",
+        "suffix": ", learning rate $5 \\cdot 10^{-5}$ and prefix length 10. The table-to-text models",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "default batch size",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "batch size 5",
+        "start_char_doc": 21026,
+        "end_char_doc": 21038,
+        "prefix": ". Hyperparameter details are in the appendix. The default setting is 10 epochs, ",
+        "suffix": ", learning rate $5 \\cdot 10^{-5}$ and prefix length 10. The table-to-text models",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "integer",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Training",
+      "hpType": "BatchSize",
+      "uncertain": {
+        "value": false,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:default_learning_rate_5e_5",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 21054,
+        "end_char_doc": 21071,
+        "prefix": " in the appendix. The default setting is 10 epochs, batch size 5, learning rate ",
+        "suffix": " and prefix length 10. The table-to-text models are trained on TITAN Xp or GeFor",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "default learning rate",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "$5 \\cdot 10^{-5}$",
+        "start_char_doc": 21054,
+        "end_char_doc": 21071,
+        "prefix": " in the appendix. The default setting is 10 epochs, batch size 5, learning rate ",
+        "suffix": " and prefix length 10. The table-to-text models are trained on TITAN Xp or GeFor",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "float",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Optimization",
+      "hpType": "LearningRate",
+      "uncertain": {
+        "value": false,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:default_prefix_length_10",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 21076,
+        "end_char_doc": 21092,
+        "prefix": "default setting is 10 epochs, batch size 5, learning rate $5 \\cdot 10^{-5}$ and ",
+        "suffix": ". The table-to-text models are trained on TITAN Xp or GeForce GTX TITAN X machin",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "default prefix length",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "prefix length 10",
+        "start_char_doc": 21076,
+        "end_char_doc": 21092,
+        "prefix": "default setting is 10 epochs, batch size 5, learning rate $5 \\cdot 10^{-5}$ and ",
+        "suffix": ". The table-to-text models are trained on TITAN Xp or GeForce GTX TITAN X machin",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "integer",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Data",
+      "hpType": "MaxSequenceLength",
+      "uncertain": {
+        "value": false,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:table_to_text_k_512",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 22837,
+        "end_char_doc": 22844,
+        "prefix": "ext{dim}(h_i)$ while $P_\\theta$ has dimensions $|P_{idx}| \\times k$. We choose $",
+        "suffix": "$ for table-to-text and 800 for summarization. MLP$_\\theta$ maps from $k$ to $\\t",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "table-to-text reparameterization k",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "k = 512",
+        "start_char_doc": 22837,
+        "end_char_doc": 22844,
+        "prefix": "ext{dim}(h_i)$ while $P_\\theta$ has dimensions $|P_{idx}| \\times k$. We choose $",
+        "suffix": "$ for table-to-text and 800 for summarization. MLP$_\\theta$ maps from $k$ to $\\t",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "integer",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Architecture",
+      "hpType": "HiddenSize",
+      "uncertain": {
+        "value": false,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:summarization_k_800",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 22868,
+        "end_char_doc": 22871,
+        "prefix": " has dimensions $|P_{idx}| \\times k$. We choose $k = 512$ for table-to-text and ",
+        "suffix": " for summarization. MLP$_\\theta$ maps from $k$ to $\\text{dim}(h_i)$. $^5$Same im",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "summarization reparameterization k",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "800",
+        "start_char_doc": 22868,
+        "end_char_doc": 22871,
+        "prefix": " has dimensions $|P_{idx}| \\times k$. We choose $k = 512$ for table-to-text and ",
+        "suffix": " for summarization. MLP$_\\theta$ maps from $k$ to $\\text{dim}(h_i)$. $^5$Same im",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "integer",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Architecture",
+      "hpType": "HiddenSize",
+      "uncertain": {
+        "value": false,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:table_to_text_beam_size_5",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 21670,
+        "end_char_doc": 21681,
+        "prefix": "tuning takes 50%.  At decoding time, for table-to-text, we use beam search with ",
+        "suffix": ". For summarization, we use beam size 6 and length normalization 0.8. Decoding t",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "table-to-text beam size",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "beam size 5",
+        "start_char_doc": 21670,
+        "end_char_doc": 21681,
+        "prefix": "tuning takes 50%.  At decoding time, for table-to-text, we use beam search with ",
+        "suffix": ". For summarization, we use beam size 6 and length normalization 0.8. Decoding t",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "integer",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Data",
+      "hpType": "MaxSequenceLength",
+      "uncertain": {
+        "value": true,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:summarization_beam_size_6",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 21709,
+        "end_char_doc": 21720,
+        "prefix": "r table-to-text, we use beam search with beam size 5. For summarization, we use ",
+        "suffix": " and length normalization 0.8. Decoding takes 1.2 seconds per sentence (without ",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "summarization beam size",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "beam size 6",
+        "start_char_doc": 21709,
+        "end_char_doc": 21720,
+        "prefix": "r table-to-text, we use beam search with beam size 5. For summarization, we use ",
+        "suffix": " and length normalization 0.8. Decoding takes 1.2 seconds per sentence (without ",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "integer",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Data",
+      "hpType": "MaxSequenceLength",
+      "uncertain": {
+        "value": true,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:length_normalization_0_8",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 21746,
+        "end_char_doc": 21749,
+        "prefix": "ith beam size 5. For summarization, we use beam size 6 and length normalization ",
+        "suffix": ". Decoding takes 1.2 seconds per sentence (without  <table>   <thead>     <tr>  ",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "length normalization",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "0.8",
+        "start_char_doc": 21746,
+        "end_char_doc": 21749,
+        "prefix": "ith beam size 5. For summarization, we use beam size 6 and length normalization ",
+        "suffix": ". Decoding takes 1.2 seconds per sentence (without  <table>   <thead>     <tr>  ",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "float",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Optimization",
+      "hpType": "DecayRate",
+      "uncertain": {
+        "value": true,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:low_data_sizes",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 26176,
+        "end_char_doc": 26195,
+        "prefix": " for table-to-text and XSUM for summarization) to obtain small datasets of size ",
+        "suffix": ". For each size, we sample 5 different datasets and average over 2 training rand",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "low-data sizes",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "{50, 100, 200, 500}",
+        "start_char_doc": 26176,
+        "end_char_doc": 26195,
+        "prefix": " for table-to-text and XSUM for summarization) to obtain small datasets of size ",
+        "suffix": ". For each size, we sample 5 different datasets and average over 2 training rand",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Data",
+      "hpType": "TrainValTestSplit",
+      "uncertain": {
+        "value": false,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:low_data_random_datasets_5",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 26222,
+        "end_char_doc": 26242,
+        "prefix": " to obtain small datasets of size {50, 100, 200, 500}. For each size, we sample ",
+        "suffix": " and average over 2 training random seeds. Thus, we average over 10 models for e",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "low-data random datasets",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "5 different datasets",
+        "start_char_doc": 26222,
+        "end_char_doc": 26242,
+        "prefix": " to obtain small datasets of size {50, 100, 200, 500}. For each size, we sample ",
+        "suffix": " and average over 2 training random seeds. Thus, we average over 10 models for e",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "integer",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Training",
+      "hpType": "RandomSeed",
+      "uncertain": {
+        "value": true,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:low_data_training_random_seeds_2",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 26260,
+        "end_char_doc": 26283,
+        "prefix": " 100, 200, 500}. For each size, we sample 5 different datasets and average over ",
+        "suffix": ". Thus, we average over 10 models for each low-data setting. 9  Figure 3 (right)",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "training random seeds",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "2 training random seeds",
+        "start_char_doc": 26260,
+        "end_char_doc": 26283,
+        "prefix": " 100, 200, 500}. For each size, we sample 5 different datasets and average over ",
+        "suffix": ". Thus, we average over 10 models for each low-data setting. 9  Figure 3 (right)",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "integer",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Training",
+      "hpType": "RandomSeed",
+      "uncertain": {
+        "value": true,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:dev_split_30_percent",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 27711,
+        "end_char_doc": 27730,
+        "prefix": "ct two extrapolation data splits:  9We also sample a dev split (with dev size = ",
+        "suffix": ") for each training set. We use the dev split to choose hyperparameters and perf",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "dev split",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "30% × training size",
+        "start_char_doc": 27711,
+        "end_char_doc": 27730,
+        "prefix": "ct two extrapolation data splits:  9We also sample a dev split (with dev size = ",
+        "suffix": ") for each training set. We use the dev split to choose hyperparameters and perf",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Data",
+      "hpType": "TrainValTestSplit",
+      "uncertain": {
+        "value": false,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:prefix_e2e_lr_8e_05",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 63864,
+        "end_char_doc": 63869,
+        "prefix": "nge of each hyperparameters: the learning rates are selected from {1e-5, 5e-05, ",
+        "suffix": "}; the number of epochs are selected from {5, 10} for table-to-text and {5, 25, ",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Prefix E2E learning rate",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "8e-05",
+        "start_char_doc": 63864,
+        "end_char_doc": 63869,
+        "prefix": "nge of each hyperparameters: the learning rates are selected from {1e-5, 5e-05, ",
+        "suffix": "}; the number of epochs are selected from {5, 10} for table-to-text and {5, 25, ",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "float",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Optimization",
+      "hpType": "LearningRate",
+      "uncertain": {
+        "value": false,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:prefix_xsum_lr_5e_05",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 63857,
+        "end_char_doc": 63862,
+        "prefix": "arch range of each hyperparameters: the learning rates are selected from {1e-5, ",
+        "suffix": ", 8e-05}; the number of epochs are selected from {5, 10} for table-to-text and {",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Prefix XSUM learning rate",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "5e-05",
+        "start_char_doc": 63857,
+        "end_char_doc": 63862,
+        "prefix": "arch range of each hyperparameters: the learning rates are selected from {1e-5, ",
+        "suffix": ", 8e-05}; the number of epochs are selected from {5, 10} for table-to-text and {",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "float",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Optimization",
+      "hpType": "LearningRate",
+      "uncertain": {
+        "value": false,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:prefix_xsum_epochs_30",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 7973,
+        "end_char_doc": 7975,
+        "prefix": "ork, which tunes around 3.6% of the LM parameters, our method obtains a further ",
+        "suffix": "x reduction in task-specific parameters, tuning only 0.1% while maintaining comp",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Prefix XSUM epochs",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "30",
+        "start_char_doc": 7973,
+        "end_char_doc": 7975,
+        "prefix": "ork, which tunes around 3.6% of the LM parameters, our method obtains a further ",
+        "suffix": "x reduction in task-specific parameters, tuning only 0.1% while maintaining comp",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "integer",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Training",
+      "hpType": "NumEpochs",
+      "uncertain": {
+        "value": false,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:prefix_xsum_batch_size_14",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 19524,
+        "end_char_doc": 19526,
+        "prefix": "omplexity and size. E2E only has 1 domain (i.e. restaurant reviews); WebNLG has ",
+        "suffix": " domains, and DART is open-domain, using open-domain tables from Wikipedia. For ",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Prefix XSUM batch size",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "14",
+        "start_char_doc": 19524,
+        "end_char_doc": 19526,
+        "prefix": "omplexity and size. E2E only has 1 domain (i.e. restaurant reviews); WebNLG has ",
+        "suffix": " domains, and DART is open-domain, using open-domain tables from Wikipedia. For ",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "integer",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Training",
+      "hpType": "BatchSize",
+      "uncertain": {
+        "value": false,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:prefix_xsum_length_100",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 5661,
+        "end_char_doc": 5664,
+        "prefix": "abstractive summarization using BART. In terms of storage, prefix-tuning stores ",
+        "suffix": "0x fewer parameters than full fine-tuning. In terms of performance when trained ",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Prefix XSUM prefix length",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "100",
+        "start_char_doc": 5661,
+        "end_char_doc": 5664,
+        "prefix": "abstractive summarization using BART. In terms of storage, prefix-tuning stores ",
+        "suffix": "0x fewer parameters than full fine-tuning. In terms of performance when trained ",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "integer",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Data",
+      "hpType": "MaxSequenceLength",
+      "uncertain": {
+        "value": false,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "exp:table_to_text_generation",
+      "@type": "mls:Experiment",
+      "mention": {
+        "start_char_doc": 23268,
+        "end_char_doc": 23292,
+        "prefix": "r batch (using a batch size of 10) for summarization.  # 6 Main Results  ## 6.1 ",
+        "suffix": "  We find that by updating only 0.1% task-specific parameters, 7 prefix-tuning i",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Table-to-text Generation",
+        "start_char_doc": 23268,
+        "end_char_doc": 23292,
+        "prefix": "r batch (using a batch size of 10) for summarization.  # 6 Main Results  ## 6.1 ",
+        "suffix": "  We find that by updating only 0.1% task-specific parameters, 7 prefix-tuning i",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "Table-to-text Generation",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:objective": {
+        "value": "evaluate prefix-tuning as a lightweight alternative to fine-tuning",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hypothesis": {
+        "value": "continuous task-specific prefixes can adapt frozen language models for generation with few trainable parameters",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:methodology": {
+        "value": "compare prefix-tuning with fine-tuning, adapters, ablations, low-data settings, and extrapolation splits",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:usesData": [
+        {
+          "@id": "dataset:e2e"
+        },
+        {
+          "@id": "dataset:webnlg"
+        },
+        {
+          "@id": "dataset:dart"
+        }
+      ],
+      "mls:produces": [
+        {
+          "@id": "method:prefix_tuning"
+        },
+        {
+          "@id": "model:gpt_2_medium"
+        },
+        {
+          "@id": "model:gpt_2_large"
+        }
+      ],
+      "mls:realizes": [
+        {
+          "@id": "task:natural_language_generation"
+        }
+      ],
+      "mls:hasEvaluation": [
+        {
+          "@id": "eval:prefix_table_to_text_e2e_bleu"
+        },
+        {
+          "@id": "eval:prefix_webnlg_all_bleu"
+        },
+        {
+          "@id": "eval:prefix_dart_bleu"
+        }
+      ],
+      "mls:usesParameters": [
+        {
+          "@id": "hp:default_learning_rate_5e_5"
+        },
+        {
+          "@id": "hp:default_batch_size_5"
+        },
+        {
+          "@id": "hp:default_prefix_length_10"
+        }
+      ],
+      "mls:executes": {
+        "@id": "impl:huggingface_transformers_prefix_tuning"
+      }
+    },
+    {
+      "@id": "exp:xsum_summarization",
+      "@type": "mls:Experiment",
+      "mention": {
+        "start_char_doc": 24803,
+        "end_char_doc": 24816,
+        "prefix": "to scale to even larger models with a similar architecture, like GPT-3.  ## 6.2 ",
+        "suffix": "  As shown in Table 3, with 2% parameters, prefix-tuning obtains slightly lower ",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Summarization",
+        "start_char_doc": 24803,
+        "end_char_doc": 24816,
+        "prefix": "to scale to even larger models with a similar architecture, like GPT-3.  ## 6.2 ",
+        "suffix": "  As shown in Table 3, with 2% parameters, prefix-tuning obtains slightly lower ",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "Summarization",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:objective": {
+        "value": "evaluate prefix-tuning as a lightweight alternative to fine-tuning",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hypothesis": {
+        "value": "continuous task-specific prefixes can adapt frozen language models for generation with few trainable parameters",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:methodology": {
+        "value": "compare prefix-tuning with fine-tuning, adapters, ablations, low-data settings, and extrapolation splits",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:usesData": [
+        {
+          "@id": "dataset:xsum"
+        }
+      ],
+      "mls:produces": [
+        {
+          "@id": "method:prefix_tuning"
+        },
+        {
+          "@id": "model:bart_large"
+        }
+      ],
+      "mls:realizes": [
+        {
+          "@id": "task:natural_language_generation"
+        }
+      ],
+      "mls:hasEvaluation": [
+        {
+          "@id": "eval:prefix_xsum_rouge_l_2pct"
+        },
+        {
+          "@id": "eval:prefix_xsum_rouge_l_0_1pct"
+        }
+      ],
+      "mls:usesParameters": [
+        {
+          "@id": "hp:default_learning_rate_5e_5"
+        },
+        {
+          "@id": "hp:default_batch_size_5"
+        },
+        {
+          "@id": "hp:default_prefix_length_10"
+        }
+      ],
+      "mls:executes": {
+        "@id": "impl:huggingface_transformers_prefix_tuning"
+      }
+    },
+    {
+      "@id": "exp:low_data_setting",
+      "@type": "mls:Experiment",
+      "mention": {
+        "start_char_doc": 25811,
+        "end_char_doc": 25827,
+        "prefix": "ble-to-text because it requires selecting key contents from an article.  ## 6.3 ",
+        "suffix": "  Based on the results from table-to-text (§6.1) and summarization (§6.2), we ob",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Low-data Setting",
+        "start_char_doc": 25811,
+        "end_char_doc": 25827,
+        "prefix": "ble-to-text because it requires selecting key contents from an article.  ## 6.3 ",
+        "suffix": "  Based on the results from table-to-text (§6.1) and summarization (§6.2), we ob",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "Low-data Setting",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:objective": {
+        "value": "evaluate prefix-tuning as a lightweight alternative to fine-tuning",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hypothesis": {
+        "value": "continuous task-specific prefixes can adapt frozen language models for generation with few trainable parameters",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:methodology": {
+        "value": "compare prefix-tuning with fine-tuning, adapters, ablations, low-data settings, and extrapolation splits",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:usesData": [
+        {
+          "@id": "dataset:low_data_e2e_xsum"
+        }
+      ],
+      "mls:produces": [
+        {
+          "@id": "method:prefix_tuning"
+        },
+        {
+          "@id": "model:gpt_2"
+        },
+        {
+          "@id": "model:bart"
+        }
+      ],
+      "mls:realizes": [
+        {
+          "@id": "task:natural_language_generation"
+        }
+      ],
+      "mls:hasEvaluation": [
+        {
+          "@id": "eval:low_data_bleu_gain"
+        }
+      ],
+      "mls:usesParameters": [
+        {
+          "@id": "hp:default_learning_rate_5e_5"
+        },
+        {
+          "@id": "hp:default_batch_size_5"
+        },
+        {
+          "@id": "hp:default_prefix_length_10"
+        }
+      ],
+      "mls:executes": {
+        "@id": "impl:huggingface_transformers_prefix_tuning"
+      }
+    },
+    {
+      "@id": "exp:extrapolation_unseen_topics",
+      "@type": "mls:Experiment",
+      "mention": {
+        "start_char_doc": 27045,
+        "end_char_doc": 27058,
+        "prefix": "uning (100, 200) generates a description that is faithful to the table.  ## 6.4 ",
+        "suffix": "  We now investigate extrapolation performance to unseen topics for both table-t",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Extrapolation",
+        "start_char_doc": 27045,
+        "end_char_doc": 27058,
+        "prefix": "uning (100, 200) generates a description that is faithful to the table.  ## 6.4 ",
+        "suffix": "  We now investigate extrapolation performance to unseen topics for both table-t",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "Extrapolation",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:objective": {
+        "value": "evaluate prefix-tuning as a lightweight alternative to fine-tuning",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hypothesis": {
+        "value": "continuous task-specific prefixes can adapt frozen language models for generation with few trainable parameters",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:methodology": {
+        "value": "compare prefix-tuning with fine-tuning, adapters, ablations, low-data settings, and extrapolation splits",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:usesData": [
+        {
+          "@id": "dataset:extrapolation_webnlg_unseen"
+        },
+        {
+          "@id": "dataset:xsum"
+        }
+      ],
+      "mls:produces": [
+        {
+          "@id": "method:prefix_tuning"
+        },
+        {
+          "@id": "model:gpt_2"
+        },
+        {
+          "@id": "model:bart"
+        }
+      ],
+      "mls:realizes": [
+        {
+          "@id": "task:natural_language_generation"
+        }
+      ],
+      "mls:hasEvaluation": [
+        {
+          "@id": "eval:extrapolation_news_to_sports_rouge_l"
+        },
+        {
+          "@id": "eval:extrapolation_within_news_rouge_l"
+        }
+      ],
+      "mls:usesParameters": [
+        {
+          "@id": "hp:default_learning_rate_5e_5"
+        },
+        {
+          "@id": "hp:default_batch_size_5"
+        },
+        {
+          "@id": "hp:default_prefix_length_10"
+        }
+      ],
+      "mls:executes": {
+        "@id": "impl:huggingface_transformers_prefix_tuning"
+      }
+    },
+    {
+      "@id": "exp:intrinsic_prefix_length",
+      "@type": "mls:Experiment",
+      "mention": {
+        "start_char_doc": 37689,
+        "end_char_doc": 37702,
+        "prefix": "strategies. §7.5 further studies the data efficiency of prefix-tuning.  ### 7.1 ",
+        "suffix": "  A longer prefix means more trainable parameters, and therefore more expressive",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Prefix Length",
+        "start_char_doc": 37689,
+        "end_char_doc": 37702,
+        "prefix": "strategies. §7.5 further studies the data efficiency of prefix-tuning.  ### 7.1 ",
+        "suffix": "  A longer prefix means more trainable parameters, and therefore more expressive",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "Prefix Length",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:objective": {
+        "value": "evaluate prefix-tuning as a lightweight alternative to fine-tuning",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hypothesis": {
+        "value": "continuous task-specific prefixes can adapt frozen language models for generation with few trainable parameters",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:methodology": {
+        "value": "compare prefix-tuning with fine-tuning, adapters, ablations, low-data settings, and extrapolation splits",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:usesData": [
+        {
+          "@id": "dataset:e2e"
+        },
+        {
+          "@id": "dataset:xsum"
+        }
+      ],
+      "mls:produces": [
+        {
+          "@id": "method:prefix_tuning"
+        },
+        {
+          "@id": "method:prefix_tuning"
+        }
+      ],
+      "mls:realizes": [
+        {
+          "@id": "task:natural_language_generation"
+        }
+      ],
+      "mls:hasEvaluation": [
+        {
+          "@id": "eval:prefix_length_threshold"
+        }
+      ],
+      "mls:usesParameters": [
+        {
+          "@id": "hp:default_learning_rate_5e_5"
+        },
+        {
+          "@id": "hp:default_batch_size_5"
+        },
+        {
+          "@id": "hp:default_prefix_length_10"
+        }
+      ],
+      "mls:executes": {
+        "@id": "impl:huggingface_transformers_prefix_tuning"
+      }
+    },
+    {
+      "@id": "exp:embedding_only_and_infix",
+      "@type": "mls:Experiment",
+      "mention": {
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:name": {
+        "value": "Embedding-only and Infixing",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:description": {
+        "value": "Embedding-only and Infixing",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:objective": {
+        "value": "evaluate prefix-tuning as a lightweight alternative to fine-tuning",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hypothesis": {
+        "value": "continuous task-specific prefixes can adapt frozen language models for generation with few trainable parameters",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:methodology": {
+        "value": "compare prefix-tuning with fine-tuning, adapters, ablations, low-data settings, and extrapolation splits",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:usesData": [
+        {
+          "@id": "dataset:e2e"
+        }
+      ],
+      "mls:produces": [
+        {
+          "@id": "method:prefix_tuning"
+        },
+        {
+          "@id": "method:embedding_only_ablation"
+        },
+        {
+          "@id": "method:infix_tuning_ablation"
+        }
+      ],
+      "mls:realizes": [
+        {
+          "@id": "task:natural_language_generation"
+        }
+      ],
+      "mls:hasEvaluation": [
+        {
+          "@id": "eval:prefix_intrinsic_e2e_bleu"
+        },
+        {
+          "@id": "eval:embedding_only_drop"
+        }
+      ],
+      "mls:usesParameters": [
+        {
+          "@id": "hp:default_learning_rate_5e_5"
+        },
+        {
+          "@id": "hp:default_batch_size_5"
+        },
+        {
+          "@id": "hp:default_prefix_length_10"
+        }
+      ],
+      "mls:executes": {
+        "@id": "impl:huggingface_transformers_prefix_tuning"
+      }
+    },
+    {
+      "@id": "exp:initialization_ablation",
+      "@type": "mls:Experiment",
+      "mention": {
+        "start_char_doc": 40150,
+        "end_char_doc": 40164,
+        "prefix": " x and y whereas infix-tuning can only influence the activations of y.  ### 7.4 ",
+        "suffix": "  We find that how the prefix is initialized has a large impact in low-data sett",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Initialization",
+        "start_char_doc": 40150,
+        "end_char_doc": 40164,
+        "prefix": " x and y whereas infix-tuning can only influence the activations of y.  ### 7.4 ",
+        "suffix": "  We find that how the prefix is initialized has a large impact in low-data sett",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "Initialization",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:objective": {
+        "value": "evaluate prefix-tuning as a lightweight alternative to fine-tuning",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hypothesis": {
+        "value": "continuous task-specific prefixes can adapt frozen language models for generation with few trainable parameters",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:methodology": {
+        "value": "compare prefix-tuning with fine-tuning, adapters, ablations, low-data settings, and extrapolation splits",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:usesData": [
+        {
+          "@id": "dataset:e2e"
+        },
+        {
+          "@id": "dataset:xsum"
+        }
+      ],
+      "mls:produces": [
+        {
+          "@id": "method:prefix_tuning"
+        },
+        {
+          "@id": "method:real_word_initialization"
+        }
+      ],
+      "mls:realizes": [
+        {
+          "@id": "task:natural_language_generation"
+        }
+      ],
+      "mls:hasEvaluation": [
+        {
+          "@id": "eval:real_word_initialization_gain"
+        }
+      ],
+      "mls:usesParameters": [
+        {
+          "@id": "hp:default_learning_rate_5e_5"
+        },
+        {
+          "@id": "hp:default_batch_size_5"
+        },
+        {
+          "@id": "hp:default_prefix_length_10"
+        }
+      ],
+      "mls:executes": {
+        "@id": "impl:huggingface_transformers_prefix_tuning"
+      }
+    },
+    {
+      "@id": "exp:data_efficiency",
+      "@type": "mls:Experiment",
+      "mention": {
+        "start_char_doc": 41029,
+        "end_char_doc": 41044,
+        "prefix": "g’s philosophy, which preserves the pretrained LM as much as possible.  ### 7.5 ",
+        "suffix": "  We also investigate the data efficiency of prefix-tuning (without initializati",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Data Efficiency",
+        "start_char_doc": 41029,
+        "end_char_doc": 41044,
+        "prefix": "g’s philosophy, which preserves the pretrained LM as much as possible.  ### 7.5 ",
+        "suffix": "  We also investigate the data efficiency of prefix-tuning (without initializati",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "Data Efficiency",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:objective": {
+        "value": "evaluate prefix-tuning as a lightweight alternative to fine-tuning",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hypothesis": {
+        "value": "continuous task-specific prefixes can adapt frozen language models for generation with few trainable parameters",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:methodology": {
+        "value": "compare prefix-tuning with fine-tuning, adapters, ablations, low-data settings, and extrapolation splits",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:usesData": [
+        {
+          "@id": "dataset:e2e"
+        }
+      ],
+      "mls:produces": [
+        {
+          "@id": "method:prefix_tuning"
+        },
+        {
+          "@id": "method:prefix_tuning"
+        }
+      ],
+      "mls:realizes": [
+        {
+          "@id": "task:natural_language_generation"
+        }
+      ],
+      "mls:hasEvaluation": [
+        {
+          "@id": "eval:data_efficiency_over_20_percent"
+        }
+      ],
+      "mls:usesParameters": [
+        {
+          "@id": "hp:default_learning_rate_5e_5"
+        },
+        {
+          "@id": "hp:default_batch_size_5"
+        },
+        {
+          "@id": "hp:default_prefix_length_10"
+        }
+      ],
+      "mls:executes": {
+        "@id": "impl:huggingface_transformers_prefix_tuning"
+      }
+    },
+    {
+      "@id": "eval:prefix_table_to_text_e2e_bleu",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 30589,
+        "end_char_doc": 30593,
+        "prefix": ">0.47</td>       <td>0.94</td>       <td>0.33</td>     </tr>     <tr>       <td>",
+        "suffix": "IX(0.1%)</td>       <td>70.3</td>       <td>8.82</td>       <td>46.3</td>       ",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "BLEU",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "70.3",
+        "start_char_doc": 30617,
+        "end_char_doc": 30621,
+        "prefix": "d>       <td>0.33</td>     </tr>     <tr>       <td>PREFIX(0.1%)</td>       <td>",
+        "suffix": "</td>       <td>8.82</td>       <td>46.3</td>       <td>72.1</td>       <td>2.46",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "PREFIX(0.1%)",
+        "start_char_doc": 30589,
+        "end_char_doc": 30601,
+        "prefix": ">0.47</td>       <td>0.94</td>       <td>0.33</td>     </tr>     <tr>       <td>",
+        "suffix": "</td>       <td>70.3</td>       <td>8.82</td>       <td>46.3</td>       <td>72.1",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "eval:prefix_webnlg_all_bleu",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 30589,
+        "end_char_doc": 30593,
+        "prefix": ">0.47</td>       <td>0.94</td>       <td>0.33</td>     </tr>     <tr>       <td>",
+        "suffix": "IX(0.1%)</td>       <td>70.3</td>       <td>8.82</td>       <td>46.3</td>       ",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "WebNLG BLEU all",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "55.0",
+        "start_char_doc": 30757,
+        "end_char_doc": 30761,
+        "prefix": "72.1</td>       <td>2.46</td>       <td>62.9</td>       <td>45.3</td>       <td>",
+        "suffix": "</td>       <td>0.44</td>       <td>0.37</td>       <td>0.41</td>       <td>0.35",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "PREFIX(0.1%)",
+        "start_char_doc": 30589,
+        "end_char_doc": 30601,
+        "prefix": ">0.47</td>       <td>0.94</td>       <td>0.33</td>     </tr>     <tr>       <td>",
+        "suffix": "</td>       <td>70.3</td>       <td>8.82</td>       <td>46.3</td>       <td>72.1",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "eval:prefix_dart_bleu",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 30589,
+        "end_char_doc": 30593,
+        "prefix": ">0.47</td>       <td>0.94</td>       <td>0.33</td>     </tr>     <tr>       <td>",
+        "suffix": "IX(0.1%)</td>       <td>70.3</td>       <td>8.82</td>       <td>46.3</td>       ",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "DART BLEU",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "46.4",
+        "start_char_doc": 30897,
+        "end_char_doc": 30901,
+        "prefix": "0.41</td>       <td>0.35</td>       <td>0.51</td>       <td>0.42</td>       <td>",
+        "suffix": "</td>       <td>0.38</td>       <td>0.46</td>       <td>0.50</td>       <td>0.94",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "PREFIX(0.1%)",
+        "start_char_doc": 30589,
+        "end_char_doc": 30601,
+        "prefix": ">0.47</td>       <td>0.94</td>       <td>0.33</td>     </tr>     <tr>       <td>",
+        "suffix": "</td>       <td>70.3</td>       <td>8.82</td>       <td>46.3</td>       <td>72.1",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "eval:prefix_xsum_rouge_l_2pct",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 24926,
+        "end_char_doc": 24931,
+        "prefix": " parameters, prefix-tuning obtains slightly lower performance than fine-tuning (",
+        "suffix": " vs. 37.25 in ROUGE-L). With only 0.1% parameters, prefix-tuning underperforms f",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "ROUGE-L",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "36.05",
+        "start_char_doc": 24926,
+        "end_char_doc": 24931,
+        "prefix": " parameters, prefix-tuning obtains slightly lower performance than fine-tuning (",
+        "suffix": " vs. 37.25 in ROUGE-L). With only 0.1% parameters, prefix-tuning underperforms f",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "36.05",
+        "start_char_doc": 24926,
+        "end_char_doc": 24931,
+        "prefix": " parameters, prefix-tuning obtains slightly lower performance than fine-tuning (",
+        "suffix": " vs. 37.25 in ROUGE-L). With only 0.1% parameters, prefix-tuning underperforms f",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "eval:prefix_xsum_rouge_l_0_1pct",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 25028,
+        "end_char_doc": 25033,
+        "prefix": "GE-L). With only 0.1% parameters, prefix-tuning underperforms full fine-tuning (",
+        "suffix": " vs. 37.25). There are several differences between XSUM and the three table-to-t",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "ROUGE-L",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "35.05",
+        "start_char_doc": 25028,
+        "end_char_doc": 25033,
+        "prefix": "GE-L). With only 0.1% parameters, prefix-tuning underperforms full fine-tuning (",
+        "suffix": " vs. 37.25). There are several differences between XSUM and the three table-to-t",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "35.05",
+        "start_char_doc": 25028,
+        "end_char_doc": 25033,
+        "prefix": "GE-L). With only 0.1% parameters, prefix-tuning underperforms full fine-tuning (",
+        "suffix": " vs. 37.25). There are several differences between XSUM and the three table-to-t",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "eval:low_data_bleu_gain",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 26436,
+        "end_char_doc": 26444,
+        "prefix": "(right) shows that prefix-tuning outperforms fine-tuning in low-data regimes by ",
+        "suffix": " on average, in addition to requiring much fewer parameters, but the gap narrows",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "BLEU gain",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "2.9 BLEU",
+        "start_char_doc": 26436,
+        "end_char_doc": 26444,
+        "prefix": "(right) shows that prefix-tuning outperforms fine-tuning in low-data regimes by ",
+        "suffix": " on average, in addition to requiring much fewer parameters, but the gap narrows",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "2.9 BLEU",
+        "start_char_doc": 26436,
+        "end_char_doc": 26444,
+        "prefix": "(right) shows that prefix-tuning outperforms fine-tuning in low-data regimes by ",
+        "suffix": " on average, in addition to requiring much fewer parameters, but the gap narrows",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "eval:extrapolation_news_to_sports_rouge_l",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 36251,
+        "end_char_doc": 36256,
+        "prefix": " <tr>       <td>PREFIX</td>       <td>39.23</td>       <td>16.74</td>       <td>",
+        "suffix": "</td>       <td>39.41</td>       <td>16.87</td>       <td>31.47</td>     </tr>  ",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "ROUGE-L",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "31.51",
+        "start_char_doc": 36251,
+        "end_char_doc": 36256,
+        "prefix": " <tr>       <td>PREFIX</td>       <td>39.23</td>       <td>16.74</td>       <td>",
+        "suffix": "</td>       <td>39.41</td>       <td>16.87</td>       <td>31.47</td>     </tr>  ",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "31.51",
+        "start_char_doc": 36251,
+        "end_char_doc": 36256,
+        "prefix": " <tr>       <td>PREFIX</td>       <td>39.23</td>       <td>16.74</td>       <td>",
+        "suffix": "</td>       <td>39.41</td>       <td>16.87</td>       <td>31.47</td>     </tr>  ",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "eval:extrapolation_within_news_rouge_l",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 36314,
+        "end_char_doc": 36319,
+        "prefix": "4</td>       <td>31.51</td>       <td>39.41</td>       <td>16.87</td>       <td>",
+        "suffix": "</td>     </tr>   </tbody> </table>  Table 4: Extrapolation performance on XSUM.",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "ROUGE-L",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "31.47",
+        "start_char_doc": 36314,
+        "end_char_doc": 36319,
+        "prefix": "4</td>       <td>31.51</td>       <td>39.41</td>       <td>16.87</td>       <td>",
+        "suffix": "</td>     </tr>   </tbody> </table>  Table 4: Extrapolation performance on XSUM.",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "31.47",
+        "start_char_doc": 36314,
+        "end_char_doc": 36319,
+        "prefix": "4</td>       <td>31.51</td>       <td>39.41</td>       <td>16.87</td>       <td>",
+        "suffix": "</td>     </tr>   </tbody> </table>  Table 4: Extrapolation performance on XSUM.",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "eval:storage_parameter_reduction",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 5661,
+        "end_char_doc": 5683,
+        "prefix": "abstractive summarization using BART. In terms of storage, prefix-tuning stores ",
+        "suffix": " than full fine-tuning. In terms of performance when trained on full datasets, p",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "parameter storage",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "1000x fewer parameters",
+        "start_char_doc": 5661,
+        "end_char_doc": 5683,
+        "prefix": "abstractive summarization using BART. In terms of storage, prefix-tuning stores ",
+        "suffix": " than full fine-tuning. In terms of performance when trained on full datasets, p",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "1000x fewer parameters",
+        "start_char_doc": 5661,
+        "end_char_doc": 5683,
+        "prefix": "abstractive summarization using BART. In terms of storage, prefix-tuning stores ",
+        "suffix": " than full fine-tuning. In terms of performance when trained on full datasets, p",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "eval:task_specific_parameters_0_1",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 983,
+        "end_char_doc": 987,
+        "prefix": "o-text generation and to BART for summarization. We show that by modifying only ",
+        "suffix": " of the parameters, prefix-tuning obtains comparable performance in the full dat",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "trainable parameters",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "0.1%",
+        "start_char_doc": 983,
+        "end_char_doc": 987,
+        "prefix": "o-text generation and to BART for summarization. We show that by modifying only ",
+        "suffix": " of the parameters, prefix-tuning obtains comparable performance in the full dat",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "0.1%",
+        "start_char_doc": 983,
+        "end_char_doc": 987,
+        "prefix": "o-text generation and to BART for summarization. We show that by modifying only ",
+        "suffix": " of the parameters, prefix-tuning obtains comparable performance in the full dat",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "eval:parameter_reduction_30x",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 7973,
+        "end_char_doc": 7986,
+        "prefix": "ork, which tunes around 3.6% of the LM parameters, our method obtains a further ",
+        "suffix": " in task-specific parameters, tuning only 0.1% while maintaining comparable perf",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "parameter reduction",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "30x reduction",
+        "start_char_doc": 7973,
+        "end_char_doc": 7986,
+        "prefix": "ork, which tunes around 3.6% of the LM parameters, our method obtains a further ",
+        "suffix": " in task-specific parameters, tuning only 0.1% while maintaining comparable perf",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "30x reduction",
+        "start_char_doc": 7973,
+        "end_char_doc": 7986,
+        "prefix": "ork, which tunes around 3.6% of the LM parameters, our method obtains a further ",
+        "suffix": " in task-specific parameters, tuning only 0.1% while maintaining comparable perf",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "eval:adapter_bleu_gap",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 23814,
+        "end_char_doc": 23857,
+        "prefix": "shows that prefix-tuning is significantly better than ADAPTER (0.1%), attaining ",
+        "suffix": ". Even when we compare with fine-tuning (100%) and adapter-tuning (3.0%), which ",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "BLEU improvement",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "4.1 BLEU improvement per dataset on average",
+        "start_char_doc": 23814,
+        "end_char_doc": 23857,
+        "prefix": "shows that prefix-tuning is significantly better than ADAPTER (0.1%), attaining ",
+        "suffix": ". Even when we compare with fine-tuning (100%) and adapter-tuning (3.0%), which ",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "4.1 BLEU improvement per dataset on average",
+        "start_char_doc": 23814,
+        "end_char_doc": 23857,
+        "prefix": "shows that prefix-tuning is significantly better than ADAPTER (0.1%), attaining ",
+        "suffix": ". Even when we compare with fine-tuning (100%) and adapter-tuning (3.0%), which ",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "eval:prefix_length_threshold",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 38617,
+        "end_char_doc": 38660,
+        "prefix": "ization, in low-data settings.&lt;/img&gt;  length increases up to a threshold (",
+        "suffix": ") and then a slight performance drop occurs. Prefixes longer than the threshold ",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "prefix length threshold",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "200 for summarization, 10 for table-to-text",
+        "start_char_doc": 38617,
+        "end_char_doc": 38660,
+        "prefix": "ization, in low-data settings.&lt;/img&gt;  length increases up to a threshold (",
+        "suffix": ") and then a slight performance drop occurs. Prefixes longer than the threshold ",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "200 for summarization, 10 for table-to-text",
+        "start_char_doc": 38617,
+        "end_char_doc": 38660,
+        "prefix": "ization, in low-data settings.&lt;/img&gt;  length increases up to a threshold (",
+        "suffix": ") and then a slight performance drop occurs. Prefixes longer than the threshold ",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "eval:prefix_intrinsic_e2e_bleu",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 41731,
+        "end_char_doc": 41735,
+        "prefix": "UGE</th>       <th>CIDEr</th>     </tr>   </thead>   <tbody>     <tr>       <td>",
+        "suffix": "EFIX**</td>       <td>70.3</td>       <td>8.82</td>       <td>46.3</td>       <t",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "BLEU",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "70.3",
+        "start_char_doc": 30617,
+        "end_char_doc": 30621,
+        "prefix": "d>       <td>0.33</td>     </tr>     <tr>       <td>PREFIX(0.1%)</td>       <td>",
+        "suffix": "</td>       <td>8.82</td>       <td>46.3</td>       <td>72.1</td>       <td>2.46",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "**PREFIX**",
+        "start_char_doc": 41731,
+        "end_char_doc": 41741,
+        "prefix": "UGE</th>       <th>CIDEr</th>     </tr>   </thead>   <tbody>     <tr>       <td>",
+        "suffix": "</td>       <td>70.3</td>       <td>8.82</td>       <td>46.3</td>       <td>72.1",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "eval:embedding_only_drop",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 39180,
+        "end_char_doc": 39211,
+        "prefix": "activation layers are computed by the Transformer. Table 5 (top) shows that the ",
+        "suffix": ", suggesting that tuning only the embedding layer is not sufficiently expressive",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "performance",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "performance drops significantly",
+        "start_char_doc": 39180,
+        "end_char_doc": 39211,
+        "prefix": "activation layers are computed by the Transformer. Table 5 (top) shows that the ",
+        "suffix": ", suggesting that tuning only the embedding layer is not sufficiently expressive",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "performance drops significantly",
+        "start_char_doc": 39180,
+        "end_char_doc": 39211,
+        "prefix": "activation layers are computed by the Transformer. Table 5 (top) shows that the ",
+        "suffix": ", suggesting that tuning only the embedding layer is not sufficiently expressive",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "eval:real_word_initialization_gain",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 40372,
+        "end_char_doc": 40405,
+        "prefix": "ance with high variance. Initializing the prefix with activations of real words ",
+        "suffix": ", as shown in Figure 5. In particular, initializing with task relevant words suc",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "initialization",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "significantly improves generation",
+        "start_char_doc": 40372,
+        "end_char_doc": 40405,
+        "prefix": "ance with high variance. Initializing the prefix with activations of real words ",
+        "suffix": ", as shown in Figure 5. In particular, initializing with task relevant words suc",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "significantly improves generation",
+        "start_char_doc": 40372,
+        "end_char_doc": 40405,
+        "prefix": "ance with high variance. Initializing the prefix with activations of real words ",
+        "suffix": ", as shown in Figure 5. In particular, initializing with task relevant words suc",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "eval:data_efficiency_over_20_percent",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 41374,
+        "end_char_doc": 41399,
+        "prefix": "e 6 shows that prefix-tuning has better performance than fine-tuning when using ",
+        "suffix": ". For data scale of 10%, prefix-tuning with random initialization yields compara",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "data efficiency",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "more than 20% of the data",
+        "start_char_doc": 41374,
+        "end_char_doc": 41399,
+        "prefix": "e 6 shows that prefix-tuning has better performance than fine-tuning when using ",
+        "suffix": ". For data scale of 10%, prefix-tuning with random initialization yields compara",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "more than 20% of the data",
+        "start_char_doc": 41374,
+        "end_char_doc": 41399,
+        "prefix": "e 6 shows that prefix-tuning has better performance than fine-tuning when using ",
+        "suffix": ". For data scale of 10%, prefix-tuning with random initialization yields compara",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "dependency:huggingface_transformers",
+      "@type": "mls:Dependency",
+      "mention": {
+        "start_char_doc": 20635,
+        "end_char_doc": 20660,
+        "prefix": "$. For summarization, we use BART$_{LARGE}$. Our implementation is based on the ",
+        "suffix": " (Wolf et al., 2020).  At training time, we use the AdamW optimizer (Loshchilov ",
+        "valueSource": "extracted"
+      },
+      "mls:packageName": {
+        "value": "Hugging Face Transformers",
+        "start_char_doc": 20635,
+        "end_char_doc": 20660,
+        "prefix": "$. For summarization, we use BART$_{LARGE}$. Our implementation is based on the ",
+        "suffix": " (Wolf et al., 2020).  At training time, we use the AdamW optimizer (Loshchilov ",
+        "valueSource": "extracted"
+      },
+      "mls:version": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "software package",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "dependency:pytorch",
+      "@type": "mls:Dependency",
+      "mention": {
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:packageName": {
+        "value": "PyTorch",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:version": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "software package",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "repo:xiangli1999_prefixtuning",
+      "@type": "mls:SoftwareRepository",
+      "mention": {
+        "start_char_doc": 47289,
+        "end_char_doc": 47332,
+        "prefix": "y a Stanford Graduate Fellowship.  ## Reproducibility  Our code is available at ",
+        "suffix": ". Experiments and data are available at https://worksheets.codalab.org/worksheet",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "XiangLi1999/PrefixTuning",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:url": {
+        "value": "https://github.com/XiangLi1999/PrefixTuning",
+        "start_char_doc": 47289,
+        "end_char_doc": 47332,
+        "prefix": "y a Stanford Graduate Fellowship.  ## Reproducibility  Our code is available at ",
+        "suffix": ". Experiments and data are available at https://worksheets.codalab.org/worksheet",
+        "valueSource": "extracted"
+      },
+      "mls:documentationUrl": {
+        "value": "https://worksheets.codalab.org/worksheets/0x16e0c8e7ab1f4b22aaccddc8b586541f",
+        "start_char_doc": 47372,
+        "end_char_doc": 47448,
+        "prefix": "ps://github.com/XiangLi1999/PrefixTuning. Experiments and data are available at ",
+        "suffix": ".  &lt;page_number&gt;4590&lt;/page_number&gt;  ---   ## Page 10  # References  ",
+        "valueSource": "extracted"
+      },
+      "mls:contains": {
+        "@id": "impl:huggingface_transformers_prefix_tuning"
+      }
+    },
+    {
+      "@id": "env:titan_xp_gtx_titan_x_v100",
+      "@type": "mls:Environment",
+      "mention": {
+        "start_char_doc": 21134,
+        "end_char_doc": 21165,
+        "prefix": "$5 \\cdot 10^{-5}$ and prefix length 10. The table-to-text models are trained on ",
+        "suffix": " machines. Prefix-tuning takes 0.2 hours per epoch to train on 22K examples, whe",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "TITAN Xp or GeForce GTX TITAN X",
+        "start_char_doc": 21134,
+        "end_char_doc": 21165,
+        "prefix": "$5 \\cdot 10^{-5}$ and prefix length 10. The table-to-text models are trained on ",
+        "suffix": " machines. Prefix-tuning takes 0.2 hours per epoch to train on 22K examples, whe",
+        "valueSource": "extracted"
+      },
+      "mls:hardwareSpecs": [
+        {
+          "value": "TITAN Xp or GeForce GTX TITAN X",
+          "start_char_doc": 21134,
+          "end_char_doc": 21165,
+          "prefix": "$5 \\cdot 10^{-5}$ and prefix length 10. The table-to-text models are trained on ",
+          "suffix": " machines. Prefix-tuning takes 0.2 hours per epoch to train on 22K examples, whe",
+          "valueSource": "extracted"
+        },
+        {
+          "value": "Tesla V100 machines",
+          "start_char_doc": 21336,
+          "end_char_doc": 21355,
+          "prefix": "uning takes around 0.3 hours per epoch. The summarization models are trained on ",
+          "suffix": ", taking 1.25 hours per epoch on the XSUM dataset. For *time efficiency*, prefix",
+          "valueSource": "extracted"
+        }
+      ]
+    },
+    {
+      "@id": "impl:huggingface_transformers_prefix_tuning",
+      "@type": "mls:MLS_Implementation",
+      "mention": {
+        "start_char_doc": 20635,
+        "end_char_doc": 20660,
+        "prefix": "$. For summarization, we use BART$_{LARGE}$. Our implementation is based on the ",
+        "suffix": " (Wolf et al., 2020).  At training time, we use the AdamW optimizer (Loshchilov ",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Hugging Face Transformers",
+        "start_char_doc": 20635,
+        "end_char_doc": 20660,
+        "prefix": "$. For summarization, we use BART$_{LARGE}$. Our implementation is based on the ",
+        "suffix": " (Wolf et al., 2020).  At training time, we use the AdamW optimizer (Loshchilov ",
+        "valueSource": "extracted"
+      },
+      "mls:framework": {
+        "value": "Hugging Face Transformers",
+        "start_char_doc": 20635,
+        "end_char_doc": 20660,
+        "prefix": "$. For summarization, we use BART$_{LARGE}$. Our implementation is based on the ",
+        "suffix": " (Wolf et al., 2020).  At training time, we use the AdamW optimizer (Loshchilov ",
+        "valueSource": "extracted"
+      },
+      "mls:codeRepository": {
+        "@id": "repo:xiangli1999_prefixtuning"
+      },
+      "mls:runsIn": {
+        "@id": "env:titan_xp_gtx_titan_x_v100"
+      },
+      "mls:requires": [
+        {
+          "@id": "dependency:huggingface_transformers"
+        },
+        {
+          "@id": "dependency:pytorch"
+        }
+      ]
+    },
+    {
+      "@id": "train:prefix_tuning_training",
+      "@type": "mls:TrainingRun",
+      "mention": {
+        "start_char_doc": 20712,
+        "end_char_doc": 20727,
+        "prefix": "he Hugging Face Transformers (Wolf et al., 2020).  At training time, we use the ",
+        "suffix": " (Loshchilov and Hutter, 2019) and a linear learning rate scheduler, as suggeste",
+        "valueSource": "extracted"
+      },
+      "mls:runId": {
+        "value": "prefix-tuning training",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:description": {
+        "value": "At training time, we use the AdamW optimizer",
+        "start_char_doc": 20683,
+        "end_char_doc": 20727,
+        "prefix": " implementation is based on the Hugging Face Transformers (Wolf et al., 2020).  ",
+        "suffix": " (Loshchilov and Hutter, 2019) and a linear learning rate scheduler, as suggeste",
+        "valueSource": "extracted"
+      },
+      "mls:prov-executedBy": {
+        "@id": "impl:huggingface_transformers_prefix_tuning"
+      },
+      "mls:prov-uses": [
+        {
+          "@id": "dataset:e2e"
+        },
+        {
+          "@id": "dataset:webnlg"
+        },
+        {
+          "@id": "dataset:dart"
+        },
+        {
+          "@id": "dataset:xsum"
+        }
+      ],
+      "prov:wasAssociatedWith": [
+        {
+          "@id": "hp:default_learning_rate_5e_5"
+        },
+        {
+          "@id": "hp:default_batch_size_5"
+        },
+        {
+          "@id": "hp:default_prefix_length_10"
+        }
+      ]
+    },
+    {
+      "@id": "evalrun:prefix_tuning_generation_eval",
+      "@type": "mls:EvaluationRun",
+      "mention": {
+        "start_char_doc": 19650,
+        "end_char_doc": 19677,
+        "prefix": "n-domain tables from Wikipedia. For evaluation, we report the metrics using the ",
+        "suffix": " (see details in Appendix A.1).  For the summarization task, we use the XSUM (Na",
+        "valueSource": "extracted"
+      },
+      "mls:runId": {
+        "value": "official evaluation scripts",
+        "start_char_doc": 19650,
+        "end_char_doc": 19677,
+        "prefix": "n-domain tables from Wikipedia. For evaluation, we report the metrics using the ",
+        "suffix": " (see details in Appendix A.1).  For the summarization task, we use the XSUM (Na",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "we report the metrics using the official evaluation scripts",
+        "start_char_doc": 19618,
+        "end_char_doc": 19677,
+        "prefix": "d DART is open-domain, using open-domain tables from Wikipedia. For evaluation, ",
+        "suffix": " (see details in Appendix A.1).  For the summarization task, we use the XSUM (Na",
+        "valueSource": "extracted"
+      },
+      "mls:evaluates": {
+        "@id": "method:prefix_tuning"
+      },
+      "mls:prov-executedBy": {
+        "@id": "impl:huggingface_transformers_prefix_tuning"
+      }
+    }
+  ]
+}
