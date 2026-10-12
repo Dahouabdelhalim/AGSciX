@@ -1,0 +1,3670 @@
+{
+  "@context": {
+    "mls": "http://www.w3.org/ns/mls#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "schema": "http://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "model": "https://w3id.org/mlskg/model/",
+    "algo": "https://w3id.org/mlskg/algorithm/",
+    "method": "https://w3id.org/mlskg/method/",
+    "dataset": "https://w3id.org/mlskg/dataset/",
+    "datasource": "https://w3id.org/mlskg/datasource/",
+    "task": "https://w3id.org/mlskg/task/",
+    "eval": "https://w3id.org/mlskg/eval/",
+    "hp": "https://w3id.org/mlskg/hp/",
+    "impl": "https://w3id.org/mlskg/implementation/",
+    "env": "https://w3id.org/mlskg/environment/",
+    "prompt": "https://w3id.org/mlskg/prompt/",
+    "person": "https://w3id.org/mlskg/person/",
+    "org": "https://w3id.org/mlskg/organization/",
+    "study": "https://w3id.org/mlskg/study/",
+    "exp": "https://w3id.org/mlskg/experiment/",
+    "repo": "https://w3id.org/mlskg/repository/",
+    "dep": "https://w3id.org/mlskg/dependency/",
+    "run": "https://w3id.org/mlskg/run/",
+    "step": "https://w3id.org/mlskg/step/",
+    "valueSource": "https://w3id.org/mlskg/meta/valueSource",
+    "mention": "https://w3id.org/mlskg/meta/mention"
+  },
+  "@graph": [
+    {
+      "@id": "study:generative_adversarial_nets_2014",
+      "@type": "mls:Study",
+      "mention": {
+        "start_char_doc": 13,
+        "end_char_doc": 40,
+        "prefix": "## Page 1 #",
+        "suffix": "Ian J. Goodfellow, Jean Pouget-Abadie*,",
+        "valueSource": "extracted"
+      },
+      "mls:title": {
+        "value": "Generative Adversarial Nets",
+        "start_char_doc": 13,
+        "end_char_doc": 40,
+        "prefix": "## Page 1 #",
+        "suffix": "Ian J. Goodfellow, Jean Pouget-Abadie*,",
+        "valueSource": "extracted"
+      },
+      "mls:abstract": {
+        "value": "We propose a new framework for estimating generative models via an adversarial process, in which we simultaneously train two models: a generative model $G$ that captures the data distribution, and a discriminative model $D$ that estimates the probability that a sample came from the training data rather than $G$. The training procedure for $G$ is to maximize the probability of $D$ making a mistake. This framework corresponds to a minimax two-player game. In the space of arbitrary functions $G$ and $D$, a unique solution exists, with $G$ recovering the training data distribution and $D$ equal to $\\frac{1}{2}$ everywhere. In the case where $G$ and $D$ are defined by multilayer perceptrons, the entire system can be trained with backpropagation. There is no need for any Markov chains or unrolled approximate inference networks during either training or generation of samples. Experiments demonstrate the potential of the framework through qualitative and quantitative evaluation of the generated samples.",
+        "start_char_doc": 364,
+        "end_char_doc": 1374,
+        "prefix": "10 Jun 2014&lt;/watermark&gt; ## Abstract",
+        "suffix": "## 1 Introduction The promise",
+        "valueSource": "extracted"
+      },
+      "mls:url": {
+        "value": "https://arxiv.org/abs/1406.2661",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:doi": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:citation": {
+        "value": "arXiv:1406.2661v1 [stat.ML] 10 Jun 2014",
+        "start_char_doc": 292,
+        "end_char_doc": 331,
+        "prefix": "Montréal, QC H3C 3J7 &lt;watermark&gt;",
+        "suffix": "&lt;/watermark&gt; ## Abstract We propose",
+        "valueSource": "extracted"
+      },
+      "mls:publicationVenue": {
+        "value": "arXiv",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:issued": {
+        "value": "2014-06-10",
+        "start_char_doc": 320,
+        "end_char_doc": 331,
+        "prefix": "QC H3C 3J7 &lt;watermark&gt;arXiv:1406.2661v1 [stat.ML]",
+        "suffix": "&lt;/watermark&gt; ## Abstract We propose",
+        "valueSource": "extracted"
+      },
+      "mls:hasAuthor": [
+        {
+          "@id": "person:goodfellow_ian_j"
+        },
+        {
+          "@id": "person:pouget_abadie_jean"
+        },
+        {
+          "@id": "person:mirza_mehdi"
+        },
+        {
+          "@id": "person:xu_bing"
+        },
+        {
+          "@id": "person:warde_farley_david"
+        },
+        {
+          "@id": "person:ozair_sherjil"
+        },
+        {
+          "@id": "person:courville_aaron"
+        },
+        {
+          "@id": "person:bengio_yoshua"
+        }
+      ],
+      "mls:contains": [
+        {
+          "@id": "exp:generative_adversarial_nets_image_generation_2014"
+        }
+      ],
+      "mls:implements": {
+        "@id": "repo:goodfeli_adversarial"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "paper:5_1406_2661v1"
+      }
+    },
+    {
+      "@id": "org:universite_de_montreal",
+      "@type": "mls:Organization",
+      "mention": {
+        "start_char_doc": 230,
+        "end_char_doc": 252,
+        "prefix": "d'informatique et de recherche opérationnelle",
+        "suffix": "Montréal, QC H3C 3J7 &lt;watermark&gt;arXiv:1406.2661v1",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Université de Montréal",
+        "start_char_doc": 230,
+        "end_char_doc": 252,
+        "prefix": "d'informatique et de recherche opérationnelle",
+        "suffix": "Montréal, QC H3C 3J7 &lt;watermark&gt;arXiv:1406.2661v1",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "university",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:url": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "org:ecole_polytechnique",
+      "@type": "mls:Organization",
+      "mention": {
+        "start_char_doc": 3123,
+        "end_char_doc": 3142,
+        "prefix": "visiting Université de Montréal from",
+        "suffix": ". †Sherjil Ozair is visiting",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Ecole Polytechnique",
+        "start_char_doc": 3123,
+        "end_char_doc": 3142,
+        "prefix": "visiting Université de Montréal from",
+        "suffix": ". †Sherjil Ozair is visiting",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "university",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:url": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "org:indian_institute_of_technology_delhi",
+      "@type": "mls:Organization",
+      "mention": {
+        "start_char_doc": 3199,
+        "end_char_doc": 3235,
+        "prefix": "visiting Université de Montréal from",
+        "suffix": "‡Yoshua Bengio is a CIFAR",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Indian Institute of Technology Delhi",
+        "start_char_doc": 3199,
+        "end_char_doc": 3235,
+        "prefix": "visiting Université de Montréal from",
+        "suffix": "‡Yoshua Bengio is a CIFAR",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "university",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:url": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "org:cifar",
+      "@type": "mls:Organization",
+      "mention": {
+        "start_char_doc": 3256,
+        "end_char_doc": 3261,
+        "prefix": "Delhi ‡Yoshua Bengio is a",
+        "suffix": "Senior Fellow. ¹All code and",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "CIFAR",
+        "start_char_doc": 3256,
+        "end_char_doc": 3261,
+        "prefix": "Delhi ‡Yoshua Bengio is a",
+        "suffix": "Senior Fellow. ¹All code and",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "research institute",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:url": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "org:compute_canada",
+      "@type": "mls:Organization",
+      "mention": {
+        "start_char_doc": 23490,
+        "end_char_doc": 23504,
+        "prefix": "Research Chairs for funding, and",
+        "suffix": ", and Calcul Québec for",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Compute Canada",
+        "start_char_doc": 23490,
+        "end_char_doc": 23504,
+        "prefix": "Research Chairs for funding, and",
+        "suffix": ", and Calcul Québec for",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "computational resource provider",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:url": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "org:calcul_quebec",
+      "@type": "mls:Organization",
+      "mention": {
+        "start_char_doc": 23510,
+        "end_char_doc": 23523,
+        "prefix": "funding, and Compute Canada, and",
+        "suffix": "for providing computational resources. Ian",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Calcul Québec",
+        "start_char_doc": 23510,
+        "end_char_doc": 23523,
+        "prefix": "funding, and Compute Canada, and",
+        "suffix": "for providing computational resources. Ian",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "computational resource provider",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:url": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "person:goodfellow_ian_j",
+      "@type": "mls:Person",
+      "mention": {
+        "start_char_doc": 42,
+        "end_char_doc": 59,
+        "prefix": "1 # Generative Adversarial Nets",
+        "suffix": ", Jean Pouget-Abadie*, Mehdi Mirza,",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Ian J. Goodfellow",
+        "start_char_doc": 42,
+        "end_char_doc": 59,
+        "prefix": "1 # Generative Adversarial Nets",
+        "suffix": ", Jean Pouget-Abadie*, Mehdi Mirza,",
+        "valueSource": "extracted"
+      },
+      "mls:affiliation": {
+        "value": "Université de Montréal",
+        "start_char_doc": 230,
+        "end_char_doc": 252,
+        "prefix": "d'informatique et de recherche opérationnelle",
+        "suffix": "Montréal, QC H3C 3J7 &lt;watermark&gt;arXiv:1406.2661v1",
+        "valueSource": "extracted"
+      },
+      "mls:email": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:orcid": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:prov-affiliatedWith": [
+        {
+          "@id": "org:universite_de_montreal"
+        }
+      ]
+    },
+    {
+      "@id": "person:pouget_abadie_jean",
+      "@type": "mls:Person",
+      "mention": {
+        "start_char_doc": 61,
+        "end_char_doc": 79,
+        "prefix": "Adversarial Nets Ian J. Goodfellow,",
+        "suffix": "*, Mehdi Mirza, Bing Xu,",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Jean Pouget-Abadie",
+        "start_char_doc": 61,
+        "end_char_doc": 79,
+        "prefix": "Adversarial Nets Ian J. Goodfellow,",
+        "suffix": "*, Mehdi Mirza, Bing Xu,",
+        "valueSource": "extracted"
+      },
+      "mls:affiliation": {
+        "value": "Université de Montréal",
+        "start_char_doc": 230,
+        "end_char_doc": 252,
+        "prefix": "d'informatique et de recherche opérationnelle",
+        "suffix": "Montréal, QC H3C 3J7 &lt;watermark&gt;arXiv:1406.2661v1",
+        "valueSource": "extracted"
+      },
+      "mls:email": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:orcid": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:prov-affiliatedWith": [
+        {
+          "@id": "org:universite_de_montreal"
+        },
+        {
+          "@id": "org:ecole_polytechnique"
+        }
+      ]
+    },
+    {
+      "@id": "person:mirza_mehdi",
+      "@type": "mls:Person",
+      "mention": {
+        "start_char_doc": 82,
+        "end_char_doc": 93,
+        "prefix": "Ian J. Goodfellow, Jean Pouget-Abadie*,",
+        "suffix": ", Bing Xu, David Warde-Farley,",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Mehdi Mirza",
+        "start_char_doc": 82,
+        "end_char_doc": 93,
+        "prefix": "Ian J. Goodfellow, Jean Pouget-Abadie*,",
+        "suffix": ", Bing Xu, David Warde-Farley,",
+        "valueSource": "extracted"
+      },
+      "mls:affiliation": {
+        "value": "Université de Montréal",
+        "start_char_doc": 230,
+        "end_char_doc": 252,
+        "prefix": "d'informatique et de recherche opérationnelle",
+        "suffix": "Montréal, QC H3C 3J7 &lt;watermark&gt;arXiv:1406.2661v1",
+        "valueSource": "extracted"
+      },
+      "mls:email": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:orcid": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:prov-affiliatedWith": [
+        {
+          "@id": "org:universite_de_montreal"
+        }
+      ]
+    },
+    {
+      "@id": "person:xu_bing",
+      "@type": "mls:Person",
+      "mention": {
+        "start_char_doc": 95,
+        "end_char_doc": 102,
+        "prefix": "Goodfellow, Jean Pouget-Abadie*, Mehdi Mirza,",
+        "suffix": ", David Warde-Farley, Sherjil Ozair†,",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Bing Xu",
+        "start_char_doc": 95,
+        "end_char_doc": 102,
+        "prefix": "Goodfellow, Jean Pouget-Abadie*, Mehdi Mirza,",
+        "suffix": ", David Warde-Farley, Sherjil Ozair†,",
+        "valueSource": "extracted"
+      },
+      "mls:affiliation": {
+        "value": "Université de Montréal",
+        "start_char_doc": 230,
+        "end_char_doc": 252,
+        "prefix": "d'informatique et de recherche opérationnelle",
+        "suffix": "Montréal, QC H3C 3J7 &lt;watermark&gt;arXiv:1406.2661v1",
+        "valueSource": "extracted"
+      },
+      "mls:email": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:orcid": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:prov-affiliatedWith": [
+        {
+          "@id": "org:universite_de_montreal"
+        }
+      ]
+    },
+    {
+      "@id": "person:warde_farley_david",
+      "@type": "mls:Person",
+      "mention": {
+        "start_char_doc": 104,
+        "end_char_doc": 122,
+        "prefix": "Pouget-Abadie*, Mehdi Mirza, Bing Xu,",
+        "suffix": ", Sherjil Ozair†, Aaron Courville,",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "David Warde-Farley",
+        "start_char_doc": 104,
+        "end_char_doc": 122,
+        "prefix": "Pouget-Abadie*, Mehdi Mirza, Bing Xu,",
+        "suffix": ", Sherjil Ozair†, Aaron Courville,",
+        "valueSource": "extracted"
+      },
+      "mls:affiliation": {
+        "value": "Université de Montréal",
+        "start_char_doc": 230,
+        "end_char_doc": 252,
+        "prefix": "d'informatique et de recherche opérationnelle",
+        "suffix": "Montréal, QC H3C 3J7 &lt;watermark&gt;arXiv:1406.2661v1",
+        "valueSource": "extracted"
+      },
+      "mls:email": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:orcid": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:prov-affiliatedWith": [
+        {
+          "@id": "org:universite_de_montreal"
+        }
+      ]
+    },
+    {
+      "@id": "person:ozair_sherjil",
+      "@type": "mls:Person",
+      "mention": {
+        "start_char_doc": 124,
+        "end_char_doc": 137,
+        "prefix": "Mirza, Bing Xu, David Warde-Farley,",
+        "suffix": "†, Aaron Courville, Yoshua Bengio‡",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Sherjil Ozair",
+        "start_char_doc": 124,
+        "end_char_doc": 137,
+        "prefix": "Mirza, Bing Xu, David Warde-Farley,",
+        "suffix": "†, Aaron Courville, Yoshua Bengio‡",
+        "valueSource": "extracted"
+      },
+      "mls:affiliation": {
+        "value": "Université de Montréal",
+        "start_char_doc": 230,
+        "end_char_doc": 252,
+        "prefix": "d'informatique et de recherche opérationnelle",
+        "suffix": "Montréal, QC H3C 3J7 &lt;watermark&gt;arXiv:1406.2661v1",
+        "valueSource": "extracted"
+      },
+      "mls:email": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:orcid": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:prov-affiliatedWith": [
+        {
+          "@id": "org:universite_de_montreal"
+        },
+        {
+          "@id": "org:indian_institute_of_technology_delhi"
+        }
+      ]
+    },
+    {
+      "@id": "person:courville_aaron",
+      "@type": "mls:Person",
+      "mention": {
+        "start_char_doc": 140,
+        "end_char_doc": 155,
+        "prefix": "Xu, David Warde-Farley, Sherjil Ozair†,",
+        "suffix": ", Yoshua Bengio‡ Département d'informatique",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Aaron Courville",
+        "start_char_doc": 140,
+        "end_char_doc": 155,
+        "prefix": "Xu, David Warde-Farley, Sherjil Ozair†,",
+        "suffix": ", Yoshua Bengio‡ Département d'informatique",
+        "valueSource": "extracted"
+      },
+      "mls:affiliation": {
+        "value": "Université de Montréal",
+        "start_char_doc": 230,
+        "end_char_doc": 252,
+        "prefix": "d'informatique et de recherche opérationnelle",
+        "suffix": "Montréal, QC H3C 3J7 &lt;watermark&gt;arXiv:1406.2661v1",
+        "valueSource": "extracted"
+      },
+      "mls:email": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:orcid": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:prov-affiliatedWith": [
+        {
+          "@id": "org:universite_de_montreal"
+        }
+      ]
+    },
+    {
+      "@id": "person:bengio_yoshua",
+      "@type": "mls:Person",
+      "mention": {
+        "start_char_doc": 157,
+        "end_char_doc": 170,
+        "prefix": "Warde-Farley, Sherjil Ozair†, Aaron Courville,",
+        "suffix": "‡ Département d'informatique et de",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Yoshua Bengio",
+        "start_char_doc": 157,
+        "end_char_doc": 170,
+        "prefix": "Warde-Farley, Sherjil Ozair†, Aaron Courville,",
+        "suffix": "‡ Département d'informatique et de",
+        "valueSource": "extracted"
+      },
+      "mls:affiliation": {
+        "value": "Université de Montréal",
+        "start_char_doc": 230,
+        "end_char_doc": 252,
+        "prefix": "d'informatique et de recherche opérationnelle",
+        "suffix": "Montréal, QC H3C 3J7 &lt;watermark&gt;arXiv:1406.2661v1",
+        "valueSource": "extracted"
+      },
+      "mls:email": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:orcid": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:prov-affiliatedWith": [
+        {
+          "@id": "org:universite_de_montreal"
+        },
+        {
+          "@id": "org:cifar"
+        }
+      ]
+    },
+    {
+      "@id": "repo:goodfeli_adversarial",
+      "@type": "SoftwareRepository",
+      "mention": {
+        "start_char_doc": 3320,
+        "end_char_doc": 3362,
+        "prefix": "code and hyperparameters available at",
+        "suffix": "&lt;page_number&gt;1&lt;/page_number&gt; --- ## Page 2",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "goodfeli/adversarial",
+        "start_char_doc": 3320,
+        "end_char_doc": 3362,
+        "prefix": "code and hyperparameters available at",
+        "suffix": "&lt;page_number&gt;1&lt;/page_number&gt; --- ## Page 2",
+        "valueSource": "extracted"
+      },
+      "mls:url": {
+        "value": "http://www.github.com/goodfeli/adversarial",
+        "start_char_doc": 3320,
+        "end_char_doc": 3362,
+        "prefix": "code and hyperparameters available at",
+        "suffix": "&lt;page_number&gt;1&lt;/page_number&gt; --- ## Page 2",
+        "valueSource": "extracted"
+      },
+      "mls:version": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:programmingLanguage": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:dateModified": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:license": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:documentationUrl": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:contains": [
+        {
+          "@id": "impl:goodfeli_adversarial"
+        }
+      ],
+      "mls:supports": [
+        {
+          "@id": "env:compute_canada_calcul_quebec"
+        }
+      ]
+    },
+    {
+      "@id": "impl:goodfeli_adversarial",
+      "@type": "mls:MLS_Implementation",
+      "mention": {
+        "start_char_doc": 3320,
+        "end_char_doc": 3362,
+        "prefix": "code and hyperparameters available at",
+        "suffix": "&lt;page_number&gt;1&lt;/page_number&gt; --- ## Page 2",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "adversarial",
+        "start_char_doc": 3320,
+        "end_char_doc": 3362,
+        "prefix": "code and hyperparameters available at",
+        "suffix": "&lt;page_number&gt;1&lt;/page_number&gt; --- ## Page 2",
+        "valueSource": "extracted"
+      },
+      "mls:codeRepository": {
+        "value": "http://www.github.com/goodfeli/adversarial",
+        "start_char_doc": 3320,
+        "end_char_doc": 3362,
+        "prefix": "code and hyperparameters available at",
+        "suffix": "&lt;page_number&gt;1&lt;/page_number&gt; --- ## Page 2",
+        "valueSource": "extracted"
+      },
+      "mls:framework": {
+        "value": "Pylearn2 and Theano",
+        "start_char_doc": 23213,
+        "end_char_doc": 23237,
+        "prefix": "to thank the developers of",
+        "suffix": "[7, 1], particularly Frédéric Bastien",
+        "valueSource": "extracted"
+      },
+      "mls:executionCommand": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:entryPoint": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:branch": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:runsIn": {
+        "@id": "env:compute_canada_calcul_quebec"
+      },
+      "mls:requires": [
+        {
+          "@id": "dep:pylearn2"
+        },
+        {
+          "@id": "dep:theano"
+        }
+      ]
+    },
+    {
+      "@id": "dep:pylearn2",
+      "@type": "Dependency",
+      "mention": {
+        "start_char_doc": 23213,
+        "end_char_doc": 23221,
+        "prefix": "to thank the developers of",
+        "suffix": "[12] and Theano [7, 1],",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Pylearn2",
+        "start_char_doc": 23213,
+        "end_char_doc": 23221,
+        "prefix": "to thank the developers of",
+        "suffix": "[12] and Theano [7, 1],",
+        "valueSource": "extracted"
+      },
+      "mls:version": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:packageName": {
+        "value": "Pylearn2",
+        "start_char_doc": 23213,
+        "end_char_doc": 23221,
+        "prefix": "to thank the developers of",
+        "suffix": "[12] and Theano [7, 1],",
+        "valueSource": "extracted"
+      },
+      "mls:dependencyType": {
+        "value": "machine learning library",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:isOptional": {
+        "value": false,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "dep:theano",
+      "@type": "Dependency",
+      "mention": {
+        "start_char_doc": 23231,
+        "end_char_doc": 23237,
+        "prefix": "developers of Pylearn2 [12] and",
+        "suffix": "[7, 1], particularly Frédéric Bastien",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Theano",
+        "start_char_doc": 23231,
+        "end_char_doc": 23237,
+        "prefix": "developers of Pylearn2 [12] and",
+        "suffix": "[7, 1], particularly Frédéric Bastien",
+        "valueSource": "extracted"
+      },
+      "mls:version": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:packageName": {
+        "value": "Theano",
+        "start_char_doc": 23231,
+        "end_char_doc": 23237,
+        "prefix": "developers of Pylearn2 [12] and",
+        "suffix": "[7, 1], particularly Frédéric Bastien",
+        "valueSource": "extracted"
+      },
+      "mls:dependencyType": {
+        "value": "machine learning library",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:isOptional": {
+        "value": false,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "env:compute_canada_calcul_quebec",
+      "@type": "mls:Environment",
+      "mention": {
+        "start_char_doc": 23490,
+        "end_char_doc": 23523,
+        "prefix": "Research Chairs for funding, and",
+        "suffix": "for providing computational resources. Ian",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Compute Canada, and Calcul Québec",
+        "start_char_doc": 23490,
+        "end_char_doc": 23523,
+        "prefix": "Research Chairs for funding, and",
+        "suffix": "for providing computational resources. Ian",
+        "valueSource": "extracted"
+      },
+      "mls:hardwareSpecs": {
+        "value": "computational resources",
+        "start_char_doc": 23538,
+        "end_char_doc": 23561,
+        "prefix": "and Calcul Québec for providing",
+        "suffix": ". Ian Goodfellow is supported",
+        "valueSource": "extracted"
+      },
+      "mls:os": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:pythonVersion": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:requirementsFile": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:isDockerized": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "exp:generative_adversarial_nets_image_generation_2014",
+      "@type": "mls:Experiment",
+      "mention": {
+        "start_char_doc": 17854,
+        "end_char_doc": 17881,
+        "prefix": "of theoretical guarantees. **5 Experiments**",
+        "suffix": "on a range of datasets",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "Adversarial nets are trained and evaluated on MNIST, the Toronto Face Database, and CIFAR-10 using qualitative samples and Parzen-window log-likelihood estimates.",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:objective": {
+        "value": "estimating generative models via an adversarial process",
+        "start_char_doc": 395,
+        "end_char_doc": 450,
+        "prefix": "propose a new framework for",
+        "suffix": ", in which we simultaneously",
+        "valueSource": "extracted"
+      },
+      "mls:hypothesis": {
+        "value": "this minimax game has a global optimum for $p_g = p_{\\text{data}}$",
+        "start_char_doc": 12090,
+        "end_char_doc": 12156,
+        "prefix": "show in section 4.1 that",
+        "suffix": ". We will then show",
+        "valueSource": "extracted"
+      },
+      "mls:methodology": {
+        "value": "Minibatch stochastic gradient descent training of generative adversarial nets",
+        "start_char_doc": 12335,
+        "end_char_doc": 12412,
+        "prefix": "## Page 4 **Algorithm 1**",
+        "suffix": ". The number of steps",
+        "valueSource": "extracted"
+      },
+      "mls:realizes": [
+        {
+          "@id": "task:generative_modeling"
+        },
+        {
+          "@id": "task:generative_model_estimation"
+        },
+        {
+          "@id": "task:image_sample_generation"
+        },
+        {
+          "@id": "task:density_estimation"
+        }
+      ],
+      "mls:usesData": [
+        {
+          "@id": "dataset:mnist"
+        },
+        {
+          "@id": "dataset:toronto_face_database"
+        },
+        {
+          "@id": "dataset:cifar_10"
+        }
+      ],
+      "mls:produces": [
+        {
+          "@id": "method:adversarial_nets"
+        },
+        {
+          "@id": "algo:minimax_two_player_game_training"
+        },
+        {
+          "@id": "method:minibatch_stochastic_gradient_descent"
+        },
+        {
+          "@id": "method:gaussian_parzen_window_evaluation"
+        },
+        {
+          "@id": "method:backpropagation"
+        },
+        {
+          "@id": "method:dropout"
+        },
+        {
+          "@id": "model:generative_adversarial_net"
+        },
+        {
+          "@id": "model:generator_g"
+        },
+        {
+          "@id": "model:discriminator_d"
+        },
+        {
+          "@id": "model:multilayer_perceptron_generator"
+        },
+        {
+          "@id": "model:multilayer_perceptron_discriminator"
+        },
+        {
+          "@id": "model:cifar10_convolutional_discriminator_deconvolutional_generator"
+        },
+        {
+          "@id": "eval:parzen_window_log_likelihood"
+        },
+        {
+          "@id": "eval:mnist_adversarial_nets_log_likelihood"
+        },
+        {
+          "@id": "eval:tfd_adversarial_nets_log_likelihood"
+        },
+        {
+          "@id": "eval:qualitative_generated_sample_evaluation"
+        },
+        {
+          "@id": "eval:nearest_training_example_check"
+        }
+      ],
+      "mls:usesParameters": [
+        {
+          "@id": "hp:discriminator_steps_k"
+        },
+        {
+          "@id": "hp:minibatch_size_m_noise"
+        },
+        {
+          "@id": "hp:minibatch_size_m_data"
+        },
+        {
+          "@id": "hp:optimizer_momentum"
+        },
+        {
+          "@id": "hp:parzen_sigma_cross_validated"
+        },
+        {
+          "@id": "hp:generator_rectifier_linear_activations"
+        },
+        {
+          "@id": "hp:generator_sigmoid_activations"
+        },
+        {
+          "@id": "hp:discriminator_maxout_activations"
+        },
+        {
+          "@id": "hp:discriminator_dropout"
+        },
+        {
+          "@id": "hp:generator_noise_input_layer"
+        },
+        {
+          "@id": "hp:noise_prior_p_z"
+        },
+        {
+          "@id": "hp:discriminator_fixed_point_output"
+        }
+      ],
+      "mls:executes": [
+        {
+          "@id": "impl:goodfeli_adversarial"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "study:generative_adversarial_nets_2014"
+      },
+      "prov:wasAssociatedWith": [
+        {
+          "@id": "org:universite_de_montreal"
+        }
+      ]
+    },
+    {
+      "@id": "task:generative_modeling",
+      "@type": "mls:MLS_Task",
+      "mention": {
+        "start_char_doc": 406,
+        "end_char_doc": 423,
+        "prefix": "a new framework for estimating",
+        "suffix": "via an adversarial process, in",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "generative models",
+        "start_char_doc": 406,
+        "end_char_doc": 423,
+        "prefix": "a new framework for estimating",
+        "suffix": "via an adversarial process, in",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "learning models that represent probability distributions over data",
+        "start_char_doc": 406,
+        "end_char_doc": 423,
+        "prefix": "a new framework for estimating",
+        "suffix": "via an adversarial process, in",
+        "valueSource": "extracted"
+      },
+      "mls:category": {
+        "value": "unsupervised learning",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:metrics": {
+        "value": "Parzen-window log-likelihood; qualitative sample quality",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:benchmarkedOn": [
+        {
+          "@id": "dataset:mnist"
+        },
+        {
+          "@id": "dataset:toronto_face_database"
+        },
+        {
+          "@id": "dataset:cifar_10"
+        }
+      ]
+    },
+    {
+      "@id": "task:generative_model_estimation",
+      "@type": "mls:MLS_Task",
+      "mention": {
+        "start_char_doc": 395,
+        "end_char_doc": 423,
+        "prefix": "propose a new framework for",
+        "suffix": "via an adversarial process, in",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "estimating generative models",
+        "start_char_doc": 395,
+        "end_char_doc": 423,
+        "prefix": "propose a new framework for",
+        "suffix": "via an adversarial process, in",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "estimating generative models via an adversarial process",
+        "start_char_doc": 395,
+        "end_char_doc": 450,
+        "prefix": "propose a new framework for",
+        "suffix": ", in which we simultaneously",
+        "valueSource": "extracted"
+      },
+      "mls:category": {
+        "value": "model estimation",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:metrics": {
+        "value": "Parzen-window log-likelihood",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:benchmarkedOn": [
+        {
+          "@id": "dataset:mnist"
+        },
+        {
+          "@id": "dataset:toronto_face_database"
+        },
+        {
+          "@id": "dataset:cifar_10"
+        }
+      ]
+    },
+    {
+      "@id": "task:image_sample_generation",
+      "@type": "mls:MLS_Task",
+      "mention": {
+        "start_char_doc": 1223,
+        "end_char_doc": 1244,
+        "prefix": "networks during either training or",
+        "suffix": ". Experiments demonstrate the potential",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "generation of samples",
+        "start_char_doc": 1223,
+        "end_char_doc": 1244,
+        "prefix": "networks during either training or",
+        "suffix": ". Experiments demonstrate the potential",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "generating samples from learned image distributions without Markov chain mixing",
+        "start_char_doc": 1223,
+        "end_char_doc": 1244,
+        "prefix": "networks during either training or",
+        "suffix": ". Experiments demonstrate the potential",
+        "valueSource": "extracted"
+      },
+      "mls:category": {
+        "value": "sample generation",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:metrics": {
+        "value": "qualitative generated sample evaluation",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:benchmarkedOn": [
+        {
+          "@id": "dataset:mnist"
+        },
+        {
+          "@id": "dataset:toronto_face_database"
+        },
+        {
+          "@id": "dataset:cifar_10"
+        }
+      ]
+    },
+    {
+      "@id": "task:density_estimation",
+      "@type": "mls:MLS_Task",
+      "mention": {
+        "start_char_doc": 18411,
+        "end_char_doc": 18443,
+        "prefix": "the generator network. We estimate",
+        "suffix": "under $p_g$ by fitting a",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "probability of the test set data",
+        "start_char_doc": 18411,
+        "end_char_doc": 18443,
+        "prefix": "the generator network. We estimate",
+        "suffix": "under $p_g$ by fitting a",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "estimating probability of test data under the generator distribution using a Gaussian Parzen window",
+        "start_char_doc": 18411,
+        "end_char_doc": 18443,
+        "prefix": "the generator network. We estimate",
+        "suffix": "under $p_g$ by fitting a",
+        "valueSource": "extracted"
+      },
+      "mls:category": {
+        "value": "density estimation",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:metrics": {
+        "value": "mean log-likelihood",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:benchmarkedOn": [
+        {
+          "@id": "dataset:mnist"
+        },
+        {
+          "@id": "dataset:toronto_face_database"
+        },
+        {
+          "@id": "dataset:cifar_10"
+        }
+      ]
+    },
+    {
+      "@id": "datasource:mnist",
+      "@type": "mls:DataSource",
+      "mention": {
+        "start_char_doc": 17915,
+        "end_char_doc": 17920,
+        "prefix": "a range of datasets including",
+        "suffix": "[23], the Toronto Face Database",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "MNIST",
+        "start_char_doc": 17915,
+        "end_char_doc": 17920,
+        "prefix": "a range of datasets including",
+        "suffix": "[23], the Toronto Face Database",
+        "valueSource": "extracted"
+      },
+      "mls:url": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "benchmark image dataset",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:license": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "datasource:toronto_face_database",
+      "@type": "mls:DataSource",
+      "mention": {
+        "start_char_doc": 17930,
+        "end_char_doc": 17957,
+        "prefix": "of datasets including MNIST[23], the",
+        "suffix": "[28], and CIFAR-10 [21]. The",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Toronto Face Database (TFD)",
+        "start_char_doc": 17930,
+        "end_char_doc": 17957,
+        "prefix": "of datasets including MNIST[23], the",
+        "suffix": "[28], and CIFAR-10 [21]. The",
+        "valueSource": "extracted"
+      },
+      "mls:url": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "face image dataset",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:license": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "datasource:cifar_10",
+      "@type": "mls:DataSource",
+      "mention": {
+        "start_char_doc": 17968,
+        "end_char_doc": 17976,
+        "prefix": "Face Database (TFD) [28], and",
+        "suffix": "[21]. The generator nets used",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "CIFAR-10",
+        "start_char_doc": 17968,
+        "end_char_doc": 17976,
+        "prefix": "Face Database (TFD) [28], and",
+        "suffix": "[21]. The generator nets used",
+        "valueSource": "extracted"
+      },
+      "mls:url": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "benchmark image dataset",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:license": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "dataset:mnist",
+      "@type": "mls:MLS_Dataset",
+      "mention": {
+        "start_char_doc": 17915,
+        "end_char_doc": 17924,
+        "prefix": "a range of datasets including",
+        "suffix": ", the Toronto Face Database",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "MNIST",
+        "start_char_doc": 17915,
+        "end_char_doc": 17924,
+        "prefix": "a range of datasets including",
+        "suffix": ", the Toronto Face Database",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "handwritten digit images",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:numInstances": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:language": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:license": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:modality": {
+        "value": "image",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:numClasses": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "datasource:mnist"
+        }
+      ]
+    },
+    {
+      "@id": "dataset:toronto_face_database",
+      "@type": "mls:MLS_Dataset",
+      "mention": {
+        "start_char_doc": 17930,
+        "end_char_doc": 17962,
+        "prefix": "of datasets including MNIST[23], the",
+        "suffix": ", and CIFAR-10 [21]. The",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Toronto Face Database (TFD)",
+        "start_char_doc": 17930,
+        "end_char_doc": 17962,
+        "prefix": "of datasets including MNIST[23], the",
+        "suffix": ", and CIFAR-10 [21]. The",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "face images",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:numInstances": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:language": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:license": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:modality": {
+        "value": "image",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:numClasses": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "datasource:toronto_face_database"
+        }
+      ]
+    },
+    {
+      "@id": "dataset:cifar_10",
+      "@type": "mls:MLS_Dataset",
+      "mention": {
+        "start_char_doc": 17968,
+        "end_char_doc": 17981,
+        "prefix": "Face Database (TFD) [28], and",
+        "suffix": ". The generator nets used",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "CIFAR-10",
+        "start_char_doc": 17968,
+        "end_char_doc": 17981,
+        "prefix": "Face Database (TFD) [28], and",
+        "suffix": ". The generator nets used",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "natural images",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:numInstances": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:language": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:license": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:modality": {
+        "value": "image",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:numClasses": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "datasource:cifar_10"
+        }
+      ]
+    },
+    {
+      "@id": "method:adversarial_nets",
+      "@type": "mls:Method",
+      "mention": {
+        "start_char_doc": 2469,
+        "end_char_doc": 2485,
+        "prefix": "¹ In the proposed *",
+        "suffix": "* framework, the generative model",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "adversarial nets",
+        "start_char_doc": 2469,
+        "end_char_doc": 2485,
+        "prefix": "¹ In the proposed *",
+        "suffix": "* framework, the generative model",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "a generative model is pitted against an adversary, a discriminative model",
+        "start_char_doc": 2469,
+        "end_char_doc": 2485,
+        "prefix": "¹ In the proposed *",
+        "suffix": "* framework, the generative model",
+        "valueSource": "extracted"
+      },
+      "mls:version": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:mnist"
+        },
+        {
+          "@id": "dataset:toronto_face_database"
+        },
+        {
+          "@id": "dataset:cifar_10"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:mnist"
+        },
+        {
+          "@id": "dataset:toronto_face_database"
+        },
+        {
+          "@id": "dataset:cifar_10"
+        }
+      ],
+      "mls:achieves": [
+        {
+          "@id": "eval:parzen_window_log_likelihood"
+        },
+        {
+          "@id": "eval:mnist_adversarial_nets_log_likelihood"
+        },
+        {
+          "@id": "eval:tfd_adversarial_nets_log_likelihood"
+        },
+        {
+          "@id": "eval:qualitative_generated_sample_evaluation"
+        },
+        {
+          "@id": "eval:nearest_training_example_check"
+        }
+      ],
+      "mls:subMethod": []
+    },
+    {
+      "@id": "algo:minimax_two_player_game_training",
+      "@type": "mls:MLS_Algorithm",
+      "mention": {
+        "start_char_doc": 9430,
+        "end_char_doc": 9441,
+        "prefix": "procedure is formally presented in",
+        "suffix": ". In practice, equation 1",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "two-player minimax game",
+        "start_char_doc": 9430,
+        "end_char_doc": 9441,
+        "prefix": "procedure is formally presented in",
+        "suffix": ". In practice, equation 1",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "D and G play a two-player minimax game with value function V(G, D)",
+        "start_char_doc": 9430,
+        "end_char_doc": 9441,
+        "prefix": "procedure is formally presented in",
+        "suffix": ". In practice, equation 1",
+        "valueSource": "extracted"
+      },
+      "mls:version": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:mnist"
+        },
+        {
+          "@id": "dataset:toronto_face_database"
+        },
+        {
+          "@id": "dataset:cifar_10"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:mnist"
+        },
+        {
+          "@id": "dataset:toronto_face_database"
+        },
+        {
+          "@id": "dataset:cifar_10"
+        }
+      ],
+      "mls:achieves": [
+        {
+          "@id": "eval:parzen_window_log_likelihood"
+        },
+        {
+          "@id": "eval:mnist_adversarial_nets_log_likelihood"
+        },
+        {
+          "@id": "eval:tfd_adversarial_nets_log_likelihood"
+        },
+        {
+          "@id": "eval:qualitative_generated_sample_evaluation"
+        },
+        {
+          "@id": "eval:nearest_training_example_check"
+        }
+      ],
+      "mls:subMethod": [],
+      "mls:complexity": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:pseudoCode": {
+        "value": "Algorithm 1",
+        "start_char_doc": 9430,
+        "end_char_doc": 9441,
+        "prefix": "procedure is formally presented in",
+        "suffix": ". In practice, equation 1",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "method:minibatch_stochastic_gradient_descent",
+      "@type": "mls:Method",
+      "mention": {
+        "start_char_doc": 12335,
+        "end_char_doc": 12372,
+        "prefix": "## Page 4 **Algorithm 1**",
+        "suffix": "training of generative adversarial nets.",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Minibatch stochastic gradient descent",
+        "start_char_doc": 12335,
+        "end_char_doc": 12372,
+        "prefix": "## Page 4 **Algorithm 1**",
+        "suffix": "training of generative adversarial nets.",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "minibatch stochastic gradient descent training of generative adversarial nets",
+        "start_char_doc": 12335,
+        "end_char_doc": 12372,
+        "prefix": "## Page 4 **Algorithm 1**",
+        "suffix": "training of generative adversarial nets.",
+        "valueSource": "extracted"
+      },
+      "mls:version": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:mnist"
+        },
+        {
+          "@id": "dataset:toronto_face_database"
+        },
+        {
+          "@id": "dataset:cifar_10"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:mnist"
+        },
+        {
+          "@id": "dataset:toronto_face_database"
+        },
+        {
+          "@id": "dataset:cifar_10"
+        }
+      ],
+      "mls:achieves": [
+        {
+          "@id": "eval:parzen_window_log_likelihood"
+        },
+        {
+          "@id": "eval:mnist_adversarial_nets_log_likelihood"
+        },
+        {
+          "@id": "eval:tfd_adversarial_nets_log_likelihood"
+        },
+        {
+          "@id": "eval:qualitative_generated_sample_evaluation"
+        },
+        {
+          "@id": "eval:nearest_training_example_check"
+        }
+      ],
+      "mls:subMethod": []
+    },
+    {
+      "@id": "method:gaussian_parzen_window_evaluation",
+      "@type": "mls:Method",
+      "mention": {
+        "start_char_doc": 18469,
+        "end_char_doc": 18491,
+        "prefix": "under $p_g$ by fitting a",
+        "suffix": "to the samples generated with",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Gaussian Parzen window",
+        "start_char_doc": 18469,
+        "end_char_doc": 18491,
+        "prefix": "under $p_g$ by fitting a",
+        "suffix": "to the samples generated with",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "fitting a Gaussian Parzen window to samples generated with G and reporting log-likelihood",
+        "start_char_doc": 18469,
+        "end_char_doc": 18491,
+        "prefix": "under $p_g$ by fitting a",
+        "suffix": "to the samples generated with",
+        "valueSource": "extracted"
+      },
+      "mls:version": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:mnist"
+        },
+        {
+          "@id": "dataset:toronto_face_database"
+        },
+        {
+          "@id": "dataset:cifar_10"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:mnist"
+        },
+        {
+          "@id": "dataset:toronto_face_database"
+        },
+        {
+          "@id": "dataset:cifar_10"
+        }
+      ],
+      "mls:achieves": [
+        {
+          "@id": "eval:parzen_window_log_likelihood"
+        },
+        {
+          "@id": "eval:mnist_adversarial_nets_log_likelihood"
+        },
+        {
+          "@id": "eval:tfd_adversarial_nets_log_likelihood"
+        },
+        {
+          "@id": "eval:qualitative_generated_sample_evaluation"
+        },
+        {
+          "@id": "eval:nearest_training_example_check"
+        }
+      ],
+      "mls:subMethod": []
+    },
+    {
+      "@id": "method:backpropagation",
+      "@type": "mls:Method",
+      "mention": {
+        "start_char_doc": 1098,
+        "end_char_doc": 1113,
+        "prefix": "system can be trained with",
+        "suffix": ". There is no need",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "backpropagation",
+        "start_char_doc": 1098,
+        "end_char_doc": 1113,
+        "prefix": "system can be trained with",
+        "suffix": ". There is no need",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "training the multilayer perceptron generator and discriminator with backpropagation",
+        "start_char_doc": 1098,
+        "end_char_doc": 1113,
+        "prefix": "system can be trained with",
+        "suffix": ". There is no need",
+        "valueSource": "extracted"
+      },
+      "mls:version": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:mnist"
+        },
+        {
+          "@id": "dataset:toronto_face_database"
+        },
+        {
+          "@id": "dataset:cifar_10"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:mnist"
+        },
+        {
+          "@id": "dataset:toronto_face_database"
+        },
+        {
+          "@id": "dataset:cifar_10"
+        }
+      ],
+      "mls:achieves": [
+        {
+          "@id": "eval:parzen_window_log_likelihood"
+        },
+        {
+          "@id": "eval:mnist_adversarial_nets_log_likelihood"
+        },
+        {
+          "@id": "eval:tfd_adversarial_nets_log_likelihood"
+        },
+        {
+          "@id": "eval:qualitative_generated_sample_evaluation"
+        },
+        {
+          "@id": "eval:nearest_training_example_check"
+        }
+      ],
+      "mls:subMethod": []
+    },
+    {
+      "@id": "method:dropout",
+      "@type": "mls:Method",
+      "mention": {
+        "start_char_doc": 18140,
+        "end_char_doc": 18147,
+        "prefix": "net used maxout [10] activations.",
+        "suffix": "[17] was applied in training",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Dropout",
+        "start_char_doc": 18140,
+        "end_char_doc": 18147,
+        "prefix": "net used maxout [10] activations.",
+        "suffix": "[17] was applied in training",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "dropout applied in training the discriminator net",
+        "start_char_doc": 18140,
+        "end_char_doc": 18147,
+        "prefix": "net used maxout [10] activations.",
+        "suffix": "[17] was applied in training",
+        "valueSource": "extracted"
+      },
+      "mls:version": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:mnist"
+        },
+        {
+          "@id": "dataset:toronto_face_database"
+        },
+        {
+          "@id": "dataset:cifar_10"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:mnist"
+        },
+        {
+          "@id": "dataset:toronto_face_database"
+        },
+        {
+          "@id": "dataset:cifar_10"
+        }
+      ],
+      "mls:achieves": [
+        {
+          "@id": "eval:parzen_window_log_likelihood"
+        },
+        {
+          "@id": "eval:mnist_adversarial_nets_log_likelihood"
+        },
+        {
+          "@id": "eval:tfd_adversarial_nets_log_likelihood"
+        },
+        {
+          "@id": "eval:qualitative_generated_sample_evaluation"
+        },
+        {
+          "@id": "eval:nearest_training_example_check"
+        }
+      ],
+      "mls:subMethod": []
+    },
+    {
+      "@id": "model:generative_adversarial_net",
+      "@type": "mls:MLS_Model",
+      "mention": {
+        "start_char_doc": 10019,
+        "end_char_doc": 10046,
+        "prefix": "in learning. &lt;img&gt; Figure 1:",
+        "suffix": "are trained by simultaneously updating",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Generative adversarial nets",
+        "start_char_doc": 10019,
+        "end_char_doc": 10046,
+        "prefix": "in learning. &lt;img&gt; Figure 1:",
+        "suffix": "are trained by simultaneously updating",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "adversarial framework with generator and discriminator networks",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:architecture": {
+        "value": "adversarial framework with generator and discriminator networks",
+        "start_char_doc": 10019,
+        "end_char_doc": 10046,
+        "prefix": "in learning. &lt;img&gt; Figure 1:",
+        "suffix": "are trained by simultaneously updating",
+        "valueSource": "extracted"
+      },
+      "mls:parameters": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:mnist"
+        },
+        {
+          "@id": "dataset:toronto_face_database"
+        },
+        {
+          "@id": "dataset:cifar_10"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:mnist"
+        },
+        {
+          "@id": "dataset:toronto_face_database"
+        },
+        {
+          "@id": "dataset:cifar_10"
+        }
+      ],
+      "mls:achieves": [
+        {
+          "@id": "eval:parzen_window_log_likelihood"
+        },
+        {
+          "@id": "eval:mnist_adversarial_nets_log_likelihood"
+        },
+        {
+          "@id": "eval:tfd_adversarial_nets_log_likelihood"
+        },
+        {
+          "@id": "eval:qualitative_generated_sample_evaluation"
+        },
+        {
+          "@id": "eval:nearest_training_example_check"
+        }
+      ],
+      "mls:subMethod": [
+        {
+          "@id": "method:backpropagation"
+        }
+      ]
+    },
+    {
+      "@id": "model:generator_g",
+      "@type": "mls:MLS_Model",
+      "mention": {
+        "start_char_doc": 517,
+        "end_char_doc": 555,
+        "prefix": "models: a generative model $",
+        "suffix": ", and a discriminative model",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "generative model $G$",
+        "start_char_doc": 517,
+        "end_char_doc": 555,
+        "prefix": "models: a generative model $",
+        "suffix": ", and a discriminative model",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "generator that captures the data distribution and maps noise to data space",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:architecture": {
+        "value": "generator that captures the data distribution and maps noise to data space",
+        "start_char_doc": 517,
+        "end_char_doc": 555,
+        "prefix": "models: a generative model $",
+        "suffix": ", and a discriminative model",
+        "valueSource": "extracted"
+      },
+      "mls:parameters": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:mnist"
+        },
+        {
+          "@id": "dataset:toronto_face_database"
+        },
+        {
+          "@id": "dataset:cifar_10"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:mnist"
+        },
+        {
+          "@id": "dataset:toronto_face_database"
+        },
+        {
+          "@id": "dataset:cifar_10"
+        }
+      ],
+      "mls:achieves": [
+        {
+          "@id": "eval:parzen_window_log_likelihood"
+        },
+        {
+          "@id": "eval:mnist_adversarial_nets_log_likelihood"
+        },
+        {
+          "@id": "eval:tfd_adversarial_nets_log_likelihood"
+        },
+        {
+          "@id": "eval:qualitative_generated_sample_evaluation"
+        },
+        {
+          "@id": "eval:nearest_training_example_check"
+        }
+      ],
+      "mls:subMethod": [
+        {
+          "@id": "method:backpropagation"
+        }
+      ]
+    },
+    {
+      "@id": "model:discriminator_d",
+      "@type": "mls:MLS_Model",
+      "mention": {
+        "start_char_doc": 585,
+        "end_char_doc": 618,
+        "prefix": "and a discriminative model $",
+        "suffix": "that a sample came from",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "discriminative model $D$",
+        "start_char_doc": 585,
+        "end_char_doc": 618,
+        "prefix": "and a discriminative model $",
+        "suffix": "that a sample came from",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "discriminator that estimates whether samples came from data rather than G",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:architecture": {
+        "value": "discriminator that estimates whether samples came from data rather than G",
+        "start_char_doc": 585,
+        "end_char_doc": 618,
+        "prefix": "and a discriminative model $",
+        "suffix": "that a sample came from",
+        "valueSource": "extracted"
+      },
+      "mls:parameters": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:mnist"
+        },
+        {
+          "@id": "dataset:toronto_face_database"
+        },
+        {
+          "@id": "dataset:cifar_10"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:mnist"
+        },
+        {
+          "@id": "dataset:toronto_face_database"
+        },
+        {
+          "@id": "dataset:cifar_10"
+        }
+      ],
+      "mls:achieves": [
+        {
+          "@id": "eval:parzen_window_log_likelihood"
+        },
+        {
+          "@id": "eval:mnist_adversarial_nets_log_likelihood"
+        },
+        {
+          "@id": "eval:tfd_adversarial_nets_log_likelihood"
+        },
+        {
+          "@id": "eval:qualitative_generated_sample_evaluation"
+        },
+        {
+          "@id": "eval:nearest_training_example_check"
+        }
+      ],
+      "mls:subMethod": [
+        {
+          "@id": "method:backpropagation"
+        }
+      ]
+    },
+    {
+      "@id": "model:multilayer_perceptron_generator",
+      "@type": "mls:MLS_Model",
+      "mention": {
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:name": {
+        "value": "multilayer perceptron",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:description": {
+        "value": "generator G represented by a multilayer perceptron",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:architecture": {
+        "value": "generator G represented by a multilayer perceptron",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:parameters": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:mnist"
+        },
+        {
+          "@id": "dataset:toronto_face_database"
+        },
+        {
+          "@id": "dataset:cifar_10"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:mnist"
+        },
+        {
+          "@id": "dataset:toronto_face_database"
+        },
+        {
+          "@id": "dataset:cifar_10"
+        }
+      ],
+      "mls:achieves": [
+        {
+          "@id": "eval:parzen_window_log_likelihood"
+        },
+        {
+          "@id": "eval:mnist_adversarial_nets_log_likelihood"
+        },
+        {
+          "@id": "eval:tfd_adversarial_nets_log_likelihood"
+        },
+        {
+          "@id": "eval:qualitative_generated_sample_evaluation"
+        },
+        {
+          "@id": "eval:nearest_training_example_check"
+        }
+      ],
+      "mls:subMethod": [
+        {
+          "@id": "method:backpropagation"
+        }
+      ]
+    },
+    {
+      "@id": "model:multilayer_perceptron_discriminator",
+      "@type": "mls:MLS_Model",
+      "mention": {
+        "start_char_doc": 7683,
+        "end_char_doc": 7714,
+        "prefix": "$\\theta_g$. We also define a",
+        "suffix": "(x; \\theta_d)$ that outputs a",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "multilayer perceptron discriminator",
+        "start_char_doc": 7683,
+        "end_char_doc": 7714,
+        "prefix": "$\\theta_g$. We also define a",
+        "suffix": "(x; \\theta_d)$ that outputs a",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "discriminator D represented by a multilayer perceptron",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:architecture": {
+        "value": "discriminator D represented by a multilayer perceptron",
+        "start_char_doc": 7683,
+        "end_char_doc": 7714,
+        "prefix": "$\\theta_g$. We also define a",
+        "suffix": "(x; \\theta_d)$ that outputs a",
+        "valueSource": "extracted"
+      },
+      "mls:parameters": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:mnist"
+        },
+        {
+          "@id": "dataset:toronto_face_database"
+        },
+        {
+          "@id": "dataset:cifar_10"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:mnist"
+        },
+        {
+          "@id": "dataset:toronto_face_database"
+        },
+        {
+          "@id": "dataset:cifar_10"
+        }
+      ],
+      "mls:achieves": [
+        {
+          "@id": "eval:parzen_window_log_likelihood"
+        },
+        {
+          "@id": "eval:mnist_adversarial_nets_log_likelihood"
+        },
+        {
+          "@id": "eval:tfd_adversarial_nets_log_likelihood"
+        },
+        {
+          "@id": "eval:qualitative_generated_sample_evaluation"
+        },
+        {
+          "@id": "eval:nearest_training_example_check"
+        }
+      ],
+      "mls:subMethod": [
+        {
+          "@id": "method:backpropagation"
+        }
+      ]
+    },
+    {
+      "@id": "model:cifar10_convolutional_discriminator_deconvolutional_generator",
+      "@type": "mls:MLS_Model",
+      "mention": {
+        "start_char_doc": 21281,
+        "end_char_doc": 21340,
+        "prefix": "connected model) d) CIFAR-10 (",
+        "suffix": ")&lt;/img&gt; &lt;page_number&gt;6&lt;/page_number&gt; --- ## Page",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "convolutional discriminator and “deconvolutional” generator",
+        "start_char_doc": 21281,
+        "end_char_doc": 21340,
+        "prefix": "connected model) d) CIFAR-10 (",
+        "suffix": ")&lt;/img&gt; &lt;page_number&gt;6&lt;/page_number&gt; --- ## Page",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "CIFAR-10 variant with convolutional discriminator and deconvolutional generator",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:architecture": {
+        "value": "CIFAR-10 variant with convolutional discriminator and deconvolutional generator",
+        "start_char_doc": 21281,
+        "end_char_doc": 21340,
+        "prefix": "connected model) d) CIFAR-10 (",
+        "suffix": ")&lt;/img&gt; &lt;page_number&gt;6&lt;/page_number&gt; --- ## Page",
+        "valueSource": "extracted"
+      },
+      "mls:parameters": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:mnist"
+        },
+        {
+          "@id": "dataset:toronto_face_database"
+        },
+        {
+          "@id": "dataset:cifar_10"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:mnist"
+        },
+        {
+          "@id": "dataset:toronto_face_database"
+        },
+        {
+          "@id": "dataset:cifar_10"
+        }
+      ],
+      "mls:achieves": [
+        {
+          "@id": "eval:parzen_window_log_likelihood"
+        },
+        {
+          "@id": "eval:mnist_adversarial_nets_log_likelihood"
+        },
+        {
+          "@id": "eval:tfd_adversarial_nets_log_likelihood"
+        },
+        {
+          "@id": "eval:qualitative_generated_sample_evaluation"
+        },
+        {
+          "@id": "eval:nearest_training_example_check"
+        }
+      ],
+      "mls:subMethod": [
+        {
+          "@id": "method:backpropagation"
+        }
+      ]
+    },
+    {
+      "@id": "eval:parzen_window_log_likelihood",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 19223,
+        "end_char_doc": 19267,
+        "prefix": "</tr> </tbody> </table> Table 1:",
+        "suffix": ". The reported numbers on",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "Parzen window-based log-likelihood estimates",
+        "start_char_doc": 19223,
+        "end_char_doc": 19267,
+        "prefix": "</tr> </tbody> </table> Table 1:",
+        "suffix": ". The reported numbers on",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:stdDev": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:confidenceInterval": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:description": {
+        "value": "Parzen window-based log-likelihood estimates",
+        "start_char_doc": 19223,
+        "end_char_doc": 19267,
+        "prefix": "</tr> </tbody> </table> Table 1:",
+        "suffix": ". The reported numbers on",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "eval:mnist_adversarial_nets_log_likelihood",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 19134,
+        "end_char_doc": 19141,
+        "prefix": "</tr> <tr> <td>Adversarial nets</td> <td><b>",
+        "suffix": "</b></td> <td><b>2057 ± 26</b></td> </tr>",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "mean log-likelihood",
+        "start_char_doc": 19134,
+        "end_char_doc": 19141,
+        "prefix": "</tr> <tr> <td>Adversarial nets</td> <td><b>",
+        "suffix": "</b></td> <td><b>2057 ± 26</b></td> </tr>",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "225",
+        "start_char_doc": 19134,
+        "end_char_doc": 19141,
+        "prefix": "</tr> <tr> <td>Adversarial nets</td> <td><b>",
+        "suffix": "</b></td> <td><b>2057 ± 26</b></td> </tr>",
+        "valueSource": "extracted"
+      },
+      "mls:stdDev": {
+        "value": "2",
+        "start_char_doc": 19134,
+        "end_char_doc": 19141,
+        "prefix": "</tr> <tr> <td>Adversarial nets</td> <td><b>",
+        "suffix": "</b></td> <td><b>2057 ± 26</b></td> </tr>",
+        "valueSource": "extracted"
+      },
+      "mls:confidenceInterval": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:description": {
+        "value": "225 ± 2",
+        "start_char_doc": 19134,
+        "end_char_doc": 19141,
+        "prefix": "</tr> <tr> <td>Adversarial nets</td> <td><b>",
+        "suffix": "</b></td> <td><b>2057 ± 26</b></td> </tr>",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "eval:tfd_adversarial_nets_log_likelihood",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 19164,
+        "end_char_doc": 19173,
+        "prefix": "nets</td> <td><b>225 ± 2</b></td> <td><b>",
+        "suffix": "</b></td> </tr> </tbody> </table> Table",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "mean log-likelihood",
+        "start_char_doc": 19164,
+        "end_char_doc": 19173,
+        "prefix": "nets</td> <td><b>225 ± 2</b></td> <td><b>",
+        "suffix": "</b></td> </tr> </tbody> </table> Table",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "2057",
+        "start_char_doc": 19164,
+        "end_char_doc": 19173,
+        "prefix": "nets</td> <td><b>225 ± 2</b></td> <td><b>",
+        "suffix": "</b></td> </tr> </tbody> </table> Table",
+        "valueSource": "extracted"
+      },
+      "mls:stdDev": {
+        "value": "26",
+        "start_char_doc": 19164,
+        "end_char_doc": 19173,
+        "prefix": "nets</td> <td><b>225 ± 2</b></td> <td><b>",
+        "suffix": "</b></td> </tr> </tbody> </table> Table",
+        "valueSource": "extracted"
+      },
+      "mls:confidenceInterval": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:description": {
+        "value": "2057 ± 26",
+        "start_char_doc": 19164,
+        "end_char_doc": 19173,
+        "prefix": "nets</td> <td><b>225 ± 2</b></td> <td><b>",
+        "suffix": "</b></td> </tr> </tbody> </table> Table",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "eval:qualitative_generated_sample_evaluation",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:measure": {
+        "value": "qualitative evaluation of the generated samples",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:stdDev": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:confidenceInterval": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:description": {
+        "value": "qualitative evaluation of the generated samples",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "eval:nearest_training_example_check",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 20753,
+        "end_char_doc": 20777,
+        "prefix": "model. Rightmost column shows the",
+        "suffix": "of the neighboring sample, in",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "nearest training example",
+        "start_char_doc": 20753,
+        "end_char_doc": 20777,
+        "prefix": "model. Rightmost column shows the",
+        "suffix": "of the neighboring sample, in",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:stdDev": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:confidenceInterval": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:description": {
+        "value": "nearest training example",
+        "start_char_doc": 20753,
+        "end_char_doc": 20777,
+        "prefix": "model. Rightmost column shows the",
+        "suffix": "of the neighboring sample, in",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "hp:discriminator_steps_k",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 12500,
+        "end_char_doc": 12505,
+        "prefix": "a hyperparameter. We used $",
+        "suffix": "$, the least expensive option,",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "number of discriminator steps",
+        "start_char_doc": 12500,
+        "end_char_doc": 12505,
+        "prefix": "a hyperparameter. We used $",
+        "suffix": "$, the least expensive option,",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "k = 1",
+        "start_char_doc": 12500,
+        "end_char_doc": 12505,
+        "prefix": "a hyperparameter. We used $",
+        "suffix": "$, the least expensive option,",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Training",
+      "hpType": "MaxSteps",
+      "uncertain": false
+    },
+    {
+      "@id": "hp:minibatch_size_m_noise",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 12647,
+        "end_char_doc": 12662,
+        "prefix": "do • Sample minibatch of",
+        "suffix": "{z^(1), ..., z^(m)} from noise",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "noise minibatch size",
+        "start_char_doc": 12647,
+        "end_char_doc": 12662,
+        "prefix": "do • Sample minibatch of",
+        "suffix": "{z^(1), ..., z^(m)} from noise",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "m",
+        "start_char_doc": 12647,
+        "end_char_doc": 12662,
+        "prefix": "do • Sample minibatch of",
+        "suffix": "{z^(1), ..., z^(m)} from noise",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Training",
+      "hpType": "BatchSize",
+      "uncertain": false
+    },
+    {
+      "@id": "hp:minibatch_size_m_data",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 12738,
+        "end_char_doc": 12748,
+        "prefix": "p_g(z). • Sample minibatch of",
+        "suffix": "{x^(1), ..., x^(m)} from data",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "data minibatch size",
+        "start_char_doc": 12738,
+        "end_char_doc": 12748,
+        "prefix": "p_g(z). • Sample minibatch of",
+        "suffix": "{x^(1), ..., x^(m)} from data",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "m",
+        "start_char_doc": 12738,
+        "end_char_doc": 12748,
+        "prefix": "p_g(z). • Sample minibatch of",
+        "suffix": "{x^(1), ..., x^(m)} from data",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Training",
+      "hpType": "BatchSize",
+      "uncertain": false
+    },
+    {
+      "@id": "hp:optimizer_momentum",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 13274,
+        "end_char_doc": 13282,
+        "prefix": "gradient-based learning rule. We used",
+        "suffix": "in our experiments. ## 4.1",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "momentum",
+        "start_char_doc": 13274,
+        "end_char_doc": 13282,
+        "prefix": "gradient-based learning rule. We used",
+        "suffix": "in our experiments. ## 4.1",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "momentum",
+        "start_char_doc": 13274,
+        "end_char_doc": 13282,
+        "prefix": "gradient-based learning rule. We used",
+        "suffix": "in our experiments. ## 4.1",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Optimization",
+      "hpType": "Momentum",
+      "uncertain": false
+    },
+    {
+      "@id": "hp:parzen_sigma_cross_validated",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 19498,
+        "end_char_doc": 19531,
+        "prefix": "the dataset, with a different",
+        "suffix": "of each fold. On TFD,",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Gaussian Parzen window sigma",
+        "start_char_doc": 19498,
+        "end_char_doc": 19531,
+        "prefix": "the dataset, with a different",
+        "suffix": "of each fold. On TFD,",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "σ chosen using the validation set",
+        "start_char_doc": 19498,
+        "end_char_doc": 19531,
+        "prefix": "the dataset, with a different",
+        "suffix": "of each fold. On TFD,",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Optimization",
+      "hpType": "HP_Optimization",
+      "uncertain": true
+    },
+    {
+      "@id": "hp:generator_rectifier_linear_activations",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 18020,
+        "end_char_doc": 18048,
+        "prefix": "nets used a mixture of",
+        "suffix": "[19, 9] and sigmoid activations,",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "generator rectifier linear activations",
+        "start_char_doc": 18020,
+        "end_char_doc": 18048,
+        "prefix": "nets used a mixture of",
+        "suffix": "[19, 9] and sigmoid activations,",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "rectifier linear activations",
+        "start_char_doc": 18020,
+        "end_char_doc": 18048,
+        "prefix": "nets used a mixture of",
+        "suffix": "[19, 9] and sigmoid activations,",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Architecture",
+      "hpType": "UnknownArchitectureHP",
+      "uncertain": false
+    },
+    {
+      "@id": "hp:generator_sigmoid_activations",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 18061,
+        "end_char_doc": 18080,
+        "prefix": "linear activations [19, 9] and",
+        "suffix": ", while the discriminator net",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "generator sigmoid activations",
+        "start_char_doc": 18061,
+        "end_char_doc": 18080,
+        "prefix": "linear activations [19, 9] and",
+        "suffix": ", while the discriminator net",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "sigmoid activations",
+        "start_char_doc": 18061,
+        "end_char_doc": 18080,
+        "prefix": "linear activations [19, 9] and",
+        "suffix": ", while the discriminator net",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Architecture",
+      "hpType": "UnknownArchitectureHP",
+      "uncertain": false
+    },
+    {
+      "@id": "hp:discriminator_maxout_activations",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 18115,
+        "end_char_doc": 18138,
+        "prefix": "while the discriminator net used",
+        "suffix": ". Dropout [17] was applied",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "discriminator maxout activations",
+        "start_char_doc": 18115,
+        "end_char_doc": 18138,
+        "prefix": "while the discriminator net used",
+        "suffix": ". Dropout [17] was applied",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "maxout activations",
+        "start_char_doc": 18115,
+        "end_char_doc": 18138,
+        "prefix": "while the discriminator net used",
+        "suffix": ". Dropout [17] was applied",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Architecture",
+      "hpType": "UnknownArchitectureHP",
+      "uncertain": false
+    },
+    {
+      "@id": "hp:discriminator_dropout",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 18140,
+        "end_char_doc": 18198,
+        "prefix": "net used maxout [10] activations.",
+        "suffix": ". While our theoretical framework",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "discriminator dropout",
+        "start_char_doc": 18140,
+        "end_char_doc": 18198,
+        "prefix": "net used maxout [10] activations.",
+        "suffix": ". While our theoretical framework",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "Dropout applied in training the discriminator net",
+        "start_char_doc": 18140,
+        "end_char_doc": 18198,
+        "prefix": "net used maxout [10] activations.",
+        "suffix": ". While our theoretical framework",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Architecture",
+      "hpType": "Dropout",
+      "uncertain": false
+    },
+    {
+      "@id": "hp:generator_noise_input_layer",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 18355,
+        "end_char_doc": 18396,
+        "prefix": "the input to only the",
+        "suffix": ". We estimate probability of",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "generator noise input layer",
+        "start_char_doc": 18355,
+        "end_char_doc": 18396,
+        "prefix": "the input to only the",
+        "suffix": ". We estimate probability of",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "bottommost layer",
+        "start_char_doc": 18355,
+        "end_char_doc": 18396,
+        "prefix": "the input to only the",
+        "suffix": ". We estimate probability of",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Architecture",
+      "hpType": "UnknownArchitectureHP",
+      "uncertain": false
+    },
+    {
+      "@id": "hp:noise_prior_p_z",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 7491,
+        "end_char_doc": 7497,
+        "prefix": "on input noise variables $",
+        "suffix": "$, then represent a mapping",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "noise prior",
+        "start_char_doc": 7491,
+        "end_char_doc": 7497,
+        "prefix": "on input noise variables $",
+        "suffix": "$, then represent a mapping",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "p_z(z)",
+        "start_char_doc": 7491,
+        "end_char_doc": 7497,
+        "prefix": "on input noise variables $",
+        "suffix": "$, then represent a mapping",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Data",
+      "hpType": "TrainValTestSplit",
+      "uncertain": false
+    },
+    {
+      "@id": "hp:discriminator_fixed_point_output",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 952,
+        "end_char_doc": 989,
+        "prefix": "the training data distribution and",
+        "suffix": ". In the case where",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "discriminator equilibrium output",
+        "start_char_doc": 952,
+        "end_char_doc": 989,
+        "prefix": "the training data distribution and",
+        "suffix": ". In the case where",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "1/2",
+        "start_char_doc": 952,
+        "end_char_doc": 989,
+        "prefix": "the training data distribution and",
+        "suffix": ". In the case where",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Architecture",
+      "hpType": "UnknownArchitectureHP",
+      "uncertain": false
+    }
+  ]
+}

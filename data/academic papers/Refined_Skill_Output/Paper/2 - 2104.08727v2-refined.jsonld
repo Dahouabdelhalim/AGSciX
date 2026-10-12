@@ -1,0 +1,3860 @@
+{
+  "@context": {
+    "mls": "http://www.w3.org/ns/mls#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "schema": "http://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "model": "https://w3id.org/mlskg/model/",
+    "algo": "https://w3id.org/mlskg/algorithm/",
+    "method": "https://w3id.org/mlskg/method/",
+    "dataset": "https://w3id.org/mlskg/dataset/",
+    "datasource": "https://w3id.org/mlskg/datasource/",
+    "task": "https://w3id.org/mlskg/task/",
+    "eval": "https://w3id.org/mlskg/eval/",
+    "hp": "https://w3id.org/mlskg/hp/",
+    "impl": "https://w3id.org/mlskg/implementation/",
+    "env": "https://w3id.org/mlskg/environment/",
+    "prompt": "https://w3id.org/mlskg/prompt/",
+    "person": "https://w3id.org/mlskg/person/",
+    "org": "https://w3id.org/mlskg/organization/",
+    "study": "https://w3id.org/mlskg/study/",
+    "exp": "https://w3id.org/mlskg/experiment/",
+    "repo": "https://w3id.org/mlskg/repository/",
+    "dep": "https://w3id.org/mlskg/dependency/",
+    "run": "https://w3id.org/mlskg/run/",
+    "step": "https://w3id.org/mlskg/step/",
+    "valueSource": "https://w3id.org/mlskg/meta/valueSource",
+    "mention": "https://w3id.org/mlskg/meta/mention"
+  },
+  "@graph": [
+    {
+      "@id": "study:gooaq_open_question_answering_with_diverse_answer_types_2021",
+      "@type": "mls:Study",
+      "mention": {
+        "start_char_doc": 49,
+        "end_char_doc": 107,
+        "prefix": "## Page 1 <header>EMNLP-Findings'21</header> #",
+        "suffix": "Daniel Khashabi¹ Amos Ng Tushar",
+        "valueSource": "extracted"
+      },
+      "mls:title": {
+        "value": "GOOAQ 🥑: Open Question Answering with Diverse Answer Types",
+        "start_char_doc": 49,
+        "end_char_doc": 107,
+        "prefix": "## Page 1 <header>EMNLP-Findings'21</header> #",
+        "suffix": "Daniel Khashabi¹ Amos Ng Tushar",
+        "valueSource": "extracted"
+      },
+      "mls:abstract": {
+        "value": "While day-to-day questions come with a variety of answer types, the current open question-answering (QA) literature represents isolated efforts on niche response types, with a heavy focus on specific kinds of short responses (people, places, etc.). To address this gap, we present GOOAQ, a large-scale dataset collected from Google questions and answers, containing 3 million questions with diverse answer types ranging from factual short answers to snippets to collections. Our human evaluation shows that 94% of the mined answers are accurate, enabling fine-tuning a pre-trained language model for answering GOOAQ questions. We use this dataset to study inherent differences between models producing different answer types, and observe interesting trends. For example, in line with recent work, LM’s strong performance on GOOAQ’s short-answer questions heavily benefits from annotated data. However, their surprisingly high quality in generating coherent and accurate answers for questions requiring long responses (such as ‘how’ and ‘why’ questions) is less reliant on observing annotated data and mainly supported by their pre-training. Moreover, we show that GOOAQ is a valuable training resource, resulting in strong performance on the recent ELI5 long-answers dataset. We release GOOAQ to facilitate further research on improving QA with diverse response types.¹",
+        "start_char_doc": 437,
+        "end_char_doc": 1806,
+        "prefix": "10 Sep 2021&lt;/watermark&gt; ## Abstract",
+        "suffix": "## 1 Introduction Research in",
+        "valueSource": "extracted"
+      },
+      "mls:url": {
+        "value": "https://arxiv.org/abs/2104.08727",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:doi": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:citation": {
+        "value": "arXiv:2104.08727v2 [cs.CL] 10 Sep 2021",
+        "start_char_doc": 366,
+        "end_char_doc": 404,
+        "prefix": "Pennsylvania, Philadelphia, PA, USA &lt;watermark&gt;",
+        "suffix": "&lt;/watermark&gt; ## Abstract While day-to-day",
+        "valueSource": "extracted"
+      },
+      "mls:publicationVenue": {
+        "value": "EMNLP-Findings'21",
+        "start_char_doc": 19,
+        "end_char_doc": 36,
+        "prefix": "## Page 1 <header>",
+        "suffix": "</header> # GOOAQ 🥑: Open",
+        "valueSource": "extracted"
+      },
+      "mls:issued": {
+        "value": "10 Sep 2021",
+        "start_char_doc": 393,
+        "end_char_doc": 404,
+        "prefix": "Philadelphia, PA, USA &lt;watermark&gt;arXiv:2104.08727v2 [cs.CL]",
+        "suffix": "&lt;/watermark&gt; ## Abstract While day-to-day",
+        "valueSource": "extracted"
+      },
+      "mls:hasAuthor": [
+        {
+          "@id": "person:khashabi_daniel"
+        },
+        {
+          "@id": "person:ng_amos"
+        },
+        {
+          "@id": "person:khot_tushar"
+        },
+        {
+          "@id": "person:sabharwal_ashish"
+        },
+        {
+          "@id": "person:hajishirzi_hannaneh"
+        },
+        {
+          "@id": "person:callison_burch_chris"
+        }
+      ],
+      "mls:contains": [
+        {
+          "@id": "exp:gooaq_t5_open_question_answering_2021"
+        }
+      ],
+      "mls:implements": {
+        "@id": "repo:allenai_gooaq"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "paper:2104_08727v2"
+      }
+    },
+    {
+      "@id": "exp:gooaq_t5_open_question_answering_2021",
+      "@type": "mls:Experiment",
+      "mention": {
+        "start_char_doc": 20515,
+        "end_char_doc": 20536,
+        "prefix": "for future work. ## 4",
+        "suffix": "GOOAQ naturally forms a dataset",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "We benchmarked two variants of a state-of-the-art self-contained text generation model (T5, without retrieval) on three different sub-tasks of GOOAQ: short, snippet, and collection response questions",
+        "start_char_doc": 35658,
+        "end_char_doc": 35857,
+        "prefix": "of questions asked by users.",
+        "suffix": ". Our analysis, using both",
+        "valueSource": "extracted"
+      },
+      "mls:objective": {
+        "value": "study inherent differences between models producing different answer types",
+        "start_char_doc": 1087,
+        "end_char_doc": 1161,
+        "prefix": "We use this dataset to",
+        "suffix": ", and observe interesting trends.",
+        "valueSource": "extracted"
+      },
+      "mls:hypothesis": {
+        "value": "GOOAQ is a valuable training resource, resulting in strong performance on the recent ELI5 long-answers dataset",
+        "start_char_doc": 1601,
+        "end_char_doc": 1711,
+        "prefix": "pre-training. Moreover, we show that",
+        "suffix": ". We release GOOAQ to",
+        "valueSource": "extracted"
+      },
+      "mls:methodology": {
+        "value": "Both models were trained for 20k steps on the training splits, dumping checkpoints every 2k steps (with 196,608 tokens per batch on v3-128 TPUs) with the default hyperparameters",
+        "start_char_doc": 27464,
+        "end_char_doc": 27641,
+        "prefix": "and the largest model (‘11B’).",
+        "suffix": ". We select the checkpoint",
+        "valueSource": "extracted"
+      },
+      "mls:realizes": [
+        {
+          "@id": "task:open_question_answering"
+        },
+        {
+          "@id": "task:closed_book_open_qa"
+        },
+        {
+          "@id": "task:short_answer_open_qa"
+        },
+        {
+          "@id": "task:snippet_answer_open_qa"
+        },
+        {
+          "@id": "task:collection_answer_open_qa"
+        },
+        {
+          "@id": "task:long_form_question_answering"
+        }
+      ],
+      "mls:usesData": [
+        {
+          "@id": "dataset:gooaq"
+        },
+        {
+          "@id": "dataset:gooaq_short_answer_subset"
+        },
+        {
+          "@id": "dataset:gooaq_snippet_answer_subset"
+        },
+        {
+          "@id": "dataset:gooaq_collection_answer_subset"
+        },
+        {
+          "@id": "dataset:eli5"
+        }
+      ],
+      "mls:produces": [
+        {
+          "@id": "dataset:gooaq"
+        },
+        {
+          "@id": "model:t5_small"
+        },
+        {
+          "@id": "model:t5_11b"
+        },
+        {
+          "@id": "method:gooaq_dataset_construction"
+        },
+        {
+          "@id": "method:human_preference_evaluation"
+        }
+      ],
+      "mls:usesParameters": [
+        {
+          "@id": "hp:gooaq_train_size_2k"
+        },
+        {
+          "@id": "hp:gooaq_train_size_20k"
+        },
+        {
+          "@id": "hp:gooaq_train_size_200k"
+        },
+        {
+          "@id": "hp:gooaq_snippet_train_size_2m"
+        },
+        {
+          "@id": "hp:gooaq_eval_min_instances"
+        },
+        {
+          "@id": "hp:t5_training_steps"
+        },
+        {
+          "@id": "hp:t5_checkpoint_interval"
+        },
+        {
+          "@id": "hp:t5_tokens_per_batch"
+        },
+        {
+          "@id": "hp:t5_model_size_small"
+        },
+        {
+          "@id": "hp:t5_model_size_11b"
+        },
+        {
+          "@id": "hp:human_eval_annotators"
+        },
+        {
+          "@id": "hp:quality_assessment_annotators"
+        }
+      ],
+      "mls:executes": [
+        {
+          "@id": "impl:gooaq_t5_evaluation"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "paper:2104_08727v2"
+      }
+    },
+    {
+      "@id": "person:khashabi_daniel",
+      "@type": "mls:Person",
+      "mention": {
+        "start_char_doc": 109,
+        "end_char_doc": 124,
+        "prefix": "Answering with Diverse Answer Types",
+        "suffix": "¹ Amos Ng Tushar Khot¹",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Daniel Khashabi",
+        "start_char_doc": 109,
+        "end_char_doc": 124,
+        "prefix": "Answering with Diverse Answer Types",
+        "suffix": "¹ Amos Ng Tushar Khot¹",
+        "valueSource": "extracted"
+      },
+      "mls:affiliation": {
+        "value": "Allen Institute for AI, Seattle, WA, USA",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:email": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:orcid": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:prov-affiliatedWith": [
+        {
+          "@id": "org:allen_institute_for_ai"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "paper:2104_08727v2"
+      }
+    },
+    {
+      "@id": "person:ng_amos",
+      "@type": "mls:Person",
+      "mention": {
+        "start_char_doc": 126,
+        "end_char_doc": 133,
+        "prefix": "Diverse Answer Types Daniel Khashabi¹",
+        "suffix": "Tushar Khot¹ Ashish Sabharwal¹ Hannaneh",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Amos Ng",
+        "start_char_doc": 126,
+        "end_char_doc": 133,
+        "prefix": "Diverse Answer Types Daniel Khashabi¹",
+        "suffix": "Tushar Khot¹ Ashish Sabharwal¹ Hannaneh",
+        "valueSource": "extracted"
+      },
+      "mls:affiliation": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:email": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:orcid": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:prov-affiliatedWith": [],
+      "prov:wasDerivedFrom": {
+        "@id": "paper:2104_08727v2"
+      }
+    },
+    {
+      "@id": "person:khot_tushar",
+      "@type": "mls:Person",
+      "mention": {
+        "start_char_doc": 134,
+        "end_char_doc": 145,
+        "prefix": "Types Daniel Khashabi¹ Amos Ng",
+        "suffix": "¹ Ashish Sabharwal¹ Hannaneh Hajishirzi¹,²",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Tushar Khot",
+        "start_char_doc": 134,
+        "end_char_doc": 145,
+        "prefix": "Types Daniel Khashabi¹ Amos Ng",
+        "suffix": "¹ Ashish Sabharwal¹ Hannaneh Hajishirzi¹,²",
+        "valueSource": "extracted"
+      },
+      "mls:affiliation": {
+        "value": "Allen Institute for AI, Seattle, WA, USA",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:email": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:orcid": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:prov-affiliatedWith": [
+        {
+          "@id": "org:allen_institute_for_ai"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "paper:2104_08727v2"
+      }
+    },
+    {
+      "@id": "person:sabharwal_ashish",
+      "@type": "mls:Person",
+      "mention": {
+        "start_char_doc": 147,
+        "end_char_doc": 163,
+        "prefix": "Khashabi¹ Amos Ng Tushar Khot¹",
+        "suffix": "¹ Hannaneh Hajishirzi¹,² Chris Callison-Burch³",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Ashish Sabharwal",
+        "start_char_doc": 147,
+        "end_char_doc": 163,
+        "prefix": "Khashabi¹ Amos Ng Tushar Khot¹",
+        "suffix": "¹ Hannaneh Hajishirzi¹,² Chris Callison-Burch³",
+        "valueSource": "extracted"
+      },
+      "mls:affiliation": {
+        "value": "Allen Institute for AI, Seattle, WA, USA",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:email": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:orcid": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:prov-affiliatedWith": [
+        {
+          "@id": "org:allen_institute_for_ai"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "paper:2104_08727v2"
+      }
+    },
+    {
+      "@id": "person:hajishirzi_hannaneh",
+      "@type": "mls:Person",
+      "mention": {
+        "start_char_doc": 165,
+        "end_char_doc": 184,
+        "prefix": "Ng Tushar Khot¹ Ashish Sabharwal¹",
+        "suffix": "¹,² Chris Callison-Burch³ ¹Allen Institute",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Hannaneh Hajishirzi",
+        "start_char_doc": 165,
+        "end_char_doc": 184,
+        "prefix": "Ng Tushar Khot¹ Ashish Sabharwal¹",
+        "suffix": "¹,² Chris Callison-Burch³ ¹Allen Institute",
+        "valueSource": "extracted"
+      },
+      "mls:affiliation": {
+        "value": "Allen Institute for AI, Seattle, WA, USA; University of Washington, Seattle, WA, USA",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:email": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:orcid": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:prov-affiliatedWith": [
+        {
+          "@id": "org:allen_institute_for_ai"
+        },
+        {
+          "@id": "org:university_of_washington"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "paper:2104_08727v2"
+      }
+    },
+    {
+      "@id": "person:callison_burch_chris",
+      "@type": "mls:Person",
+      "mention": {
+        "start_char_doc": 188,
+        "end_char_doc": 208,
+        "prefix": "Khot¹ Ashish Sabharwal¹ Hannaneh Hajishirzi¹,²",
+        "suffix": "³ ¹Allen Institute for AI,",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Chris Callison-Burch",
+        "start_char_doc": 188,
+        "end_char_doc": 208,
+        "prefix": "Khot¹ Ashish Sabharwal¹ Hannaneh Hajishirzi¹,²",
+        "suffix": "³ ¹Allen Institute for AI,",
+        "valueSource": "extracted"
+      },
+      "mls:affiliation": {
+        "value": "University of Pennsylvania, Philadelphia, PA, USA",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:email": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:orcid": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:prov-affiliatedWith": [
+        {
+          "@id": "org:university_of_pennsylvania"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "paper:2104_08727v2"
+      }
+    },
+    {
+      "@id": "org:allen_institute_for_ai",
+      "@type": "mls:Organization",
+      "mention": {
+        "start_char_doc": 212,
+        "end_char_doc": 252,
+        "prefix": "Hannaneh Hajishirzi¹,² Chris Callison-Burch³ ¹",
+        "suffix": "²University of Washington, Seattle, WA,",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Allen Institute for AI, Seattle, WA, USA",
+        "start_char_doc": 212,
+        "end_char_doc": 252,
+        "prefix": "Hannaneh Hajishirzi¹,² Chris Callison-Burch³ ¹",
+        "suffix": "²University of Washington, Seattle, WA,",
+        "valueSource": "extracted"
+      },
+      "mls:url": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "research institute",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "paper:2104_08727v2"
+      }
+    },
+    {
+      "@id": "org:university_of_washington",
+      "@type": "mls:Organization",
+      "mention": {
+        "start_char_doc": 254,
+        "end_char_doc": 296,
+        "prefix": "AI, Seattle, WA, USA ²",
+        "suffix": "³University of Pennsylvania, Philadelphia, PA,",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "University of Washington, Seattle, WA, USA",
+        "start_char_doc": 254,
+        "end_char_doc": 296,
+        "prefix": "AI, Seattle, WA, USA ²",
+        "suffix": "³University of Pennsylvania, Philadelphia, PA,",
+        "valueSource": "extracted"
+      },
+      "mls:url": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "university",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "paper:2104_08727v2"
+      }
+    },
+    {
+      "@id": "org:university_of_pennsylvania",
+      "@type": "mls:Organization",
+      "mention": {
+        "start_char_doc": 298,
+        "end_char_doc": 347,
+        "prefix": "Washington, Seattle, WA, USA ³",
+        "suffix": "&lt;watermark&gt;arXiv:2104.08727v2 [cs.CL] 10 Sep 2021&lt;/watermark&gt;",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "University of Pennsylvania, Philadelphia, PA, USA",
+        "start_char_doc": 298,
+        "end_char_doc": 347,
+        "prefix": "Washington, Seattle, WA, USA ³",
+        "suffix": "&lt;watermark&gt;arXiv:2104.08727v2 [cs.CL] 10 Sep 2021&lt;/watermark&gt;",
+        "valueSource": "extracted"
+      },
+      "mls:url": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "university",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "paper:2104_08727v2"
+      }
+    },
+    {
+      "@id": "org:google",
+      "@type": "mls:Organization",
+      "mention": {
+        "start_char_doc": 762,
+        "end_char_doc": 768,
+        "prefix": "a large-scale dataset collected from",
+        "suffix": "questions and answers, containing 3",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Google",
+        "start_char_doc": 762,
+        "end_char_doc": 768,
+        "prefix": "a large-scale dataset collected from",
+        "suffix": "questions and answers, containing 3",
+        "valueSource": "extracted"
+      },
+      "mls:url": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "company",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "paper:2104_08727v2"
+      }
+    },
+    {
+      "@id": "org:amazon_mechanical_turk",
+      "@type": "mls:Organization",
+      "mention": {
+        "start_char_doc": 16550,
+        "end_char_doc": 16578,
+        "prefix": "and their answers. We use",
+        "suffix": "to annotate about 2.5k randomly",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Amazon Mechanical Turk (AMT)",
+        "start_char_doc": 16550,
+        "end_char_doc": 16578,
+        "prefix": "and their answers. We use",
+        "suffix": "to annotate about 2.5k randomly",
+        "valueSource": "extracted"
+      },
+      "mls:url": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "crowdsourcing platform",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "paper:2104_08727v2"
+      }
+    },
+    {
+      "@id": "datasource:google_autocomplete",
+      "@type": "mls:DataSource",
+      "mention": {
+        "start_char_doc": 12634,
+        "end_char_doc": 12656,
+        "prefix": "set of questions we use",
+        "suffix": ".⁴ A similar strategy was",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Google auto-completion",
+        "start_char_doc": 12634,
+        "end_char_doc": 12656,
+        "prefix": "set of questions we use",
+        "suffix": ".⁴ A similar strategy was",
+        "valueSource": "extracted"
+      },
+      "mls:url": {
+        "value": "http://google.com/complete/search?client=chrome&q=...",
+        "start_char_doc": 14902,
+        "end_char_doc": 14955,
+        "prefix": "major category is ‘collection’ ⁴",
+        "suffix": "--- ## Page 4 answers",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "search autocomplete service",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:license": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "paper:2104_08727v2"
+      }
+    },
+    {
+      "@id": "datasource:google_answer_boxes",
+      "@type": "mls:DataSource",
+      "mention": {
+        "start_char_doc": 13465,
+        "end_char_doc": 13484,
+        "prefix": "collected questions, we extract the",
+        "suffix": "shown on top of the",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Google answer boxes",
+        "start_char_doc": 13465,
+        "end_char_doc": 13484,
+        "prefix": "collected questions, we extract the",
+        "suffix": "shown on top of the",
+        "valueSource": "extracted"
+      },
+      "mls:url": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "search result answer boxes",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:license": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "paper:2104_08727v2"
+      }
+    },
+    {
+      "@id": "datasource:amazon_mechanical_turk",
+      "@type": "mls:DataSource",
+      "mention": {
+        "start_char_doc": 16550,
+        "end_char_doc": 16578,
+        "prefix": "and their answers. We use",
+        "suffix": "to annotate about 2.5k randomly",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Amazon Mechanical Turk",
+        "start_char_doc": 16550,
+        "end_char_doc": 16572,
+        "prefix": "and their answers. We use",
+        "suffix": "(AMT) to annotate about 2.5k",
+        "valueSource": "extracted"
+      },
+      "mls:url": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "crowdsourcing platform",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:license": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "paper:2104_08727v2"
+      }
+    },
+    {
+      "@id": "datasource:reddit",
+      "@type": "mls:DataSource",
+      "mention": {
+        "start_char_doc": 11132,
+        "end_char_doc": 11145,
+        "prefix": "2021), containing questions/answers mined from",
+        "suffix": ". In contrast, GOOAQ is",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Reddit",
+        "start_char_doc": 11132,
+        "end_char_doc": 11138,
+        "prefix": "2021), containing questions/answers mined from",
+        "suffix": "forums. In contrast, GOOAQ is",
+        "valueSource": "extracted"
+      },
+      "mls:url": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "web forum",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:license": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "paper:2104_08727v2"
+      }
+    },
+    {
+      "@id": "datasource:selenium",
+      "@type": "mls:DataSource",
+      "mention": {
+        "start_char_doc": 44822,
+        "end_char_doc": 44830,
+        "prefix": "HTML search results. We use",
+        "suffix": "⁸ which simulates browser experience.",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Selenium",
+        "start_char_doc": 44822,
+        "end_char_doc": 44830,
+        "prefix": "HTML search results. We use",
+        "suffix": "⁸ which simulates browser experience.",
+        "valueSource": "extracted"
+      },
+      "mls:url": {
+        "value": "https://github.com/SeleniumHQ/selenium/",
+        "start_char_doc": 45786,
+        "end_char_doc": 45825,
+        "prefix": "of the given question. &lt;watermark&gt;8",
+        "suffix": "&lt;/watermark&gt; <table> <tr> <td>Type: curr-conv</td>",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "browser automation software",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:license": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "paper:2104_08727v2"
+      }
+    },
+    {
+      "@id": "dataset:gooaq",
+      "@type": "mls:MLS_Dataset",
+      "mention": {
+        "start_char_doc": 49,
+        "end_char_doc": 54,
+        "prefix": "## Page 1 <header>EMNLP-Findings'21</header> #",
+        "suffix": "🥑: Open Question Answering with",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "GOOAQ",
+        "start_char_doc": 49,
+        "end_char_doc": 54,
+        "prefix": "## Page 1 <header>EMNLP-Findings'21</header> #",
+        "suffix": "🥑: Open Question Answering with",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "a large-scale dataset collected from Google questions and answers, containing 3 million questions with diverse answer types ranging from factual short answers to snippets to collections",
+        "start_char_doc": 725,
+        "end_char_doc": 910,
+        "prefix": "this gap, we present GOOAQ,",
+        "suffix": ". Our human evaluation shows",
+        "valueSource": "extracted"
+      },
+      "mls:numInstances": {
+        "value": "3 million questions",
+        "start_char_doc": 803,
+        "end_char_doc": 822,
+        "prefix": "Google questions and answers, containing",
+        "suffix": "with diverse answer types ranging",
+        "valueSource": "extracted"
+      },
+      "mls:language": {
+        "value": "English",
+        "start_char_doc": 16833,
+        "end_char_doc": 16840,
+        "prefix": "our task is focused on",
+        "suffix": ", we required workers to",
+        "valueSource": "extracted"
+      },
+      "mls:license": {
+        "value": "appropriate license",
+        "start_char_doc": 4047,
+        "end_char_doc": 4066,
+        "prefix": "available at https://github.com/allenai/gooaq under an",
+        "suffix": ". ²In contrast, the short",
+        "valueSource": "extracted"
+      },
+      "mls:modality": {
+        "value": "text question-answer pairs",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:numClasses": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:subDatasetOf": [],
+      "mls:prov-derivedFrom": [
+        {
+          "@id": "datasource:google_autocomplete"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "paper:2104_08727v2"
+      }
+    },
+    {
+      "@id": "dataset:gooaq_short_answer_subset",
+      "@type": "mls:MLS_Dataset",
+      "mention": {
+        "start_char_doc": 870,
+        "end_char_doc": 883,
+        "prefix": "answer types ranging from factual",
+        "suffix": "to snippets to collections. Our",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "GOOAQ short-answer subset",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:description": {
+        "value": "short answers",
+        "start_char_doc": 870,
+        "end_char_doc": 883,
+        "prefix": "answer types ranging from factual",
+        "suffix": "to snippets to collections. Our",
+        "valueSource": "extracted"
+      },
+      "mls:numInstances": {
+        "value": "275k",
+        "start_char_doc": 15281,
+        "end_char_doc": 15285,
+        "prefix": "<tbody> <tr> <td>short answers</td> <td>",
+        "suffix": "</td> <td>-</td> <td>-</td> </tr> <tr>",
+        "valueSource": "extracted"
+      },
+      "mls:language": {
+        "value": "English",
+        "start_char_doc": 16833,
+        "end_char_doc": 16840,
+        "prefix": "our task is focused on",
+        "suffix": ", we required workers to",
+        "valueSource": "extracted"
+      },
+      "mls:license": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:modality": {
+        "value": "text question-answer pairs",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:numClasses": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:subDatasetOf": [
+        {
+          "@id": "dataset:gooaq"
+        }
+      ],
+      "mls:prov-derivedFrom": [
+        {
+          "@id": "datasource:google_answer_boxes"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "paper:2104_08727v2"
+      }
+    },
+    {
+      "@id": "dataset:gooaq_snippet_answer_subset",
+      "@type": "mls:MLS_Dataset",
+      "mention": {
+        "start_char_doc": 887,
+        "end_char_doc": 894,
+        "prefix": "from factual short answers to",
+        "suffix": "s to collections. Our human",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "GOOAQ snippet-answer subset",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:description": {
+        "value": "snippet",
+        "start_char_doc": 887,
+        "end_char_doc": 894,
+        "prefix": "from factual short answers to",
+        "suffix": "s to collections. Our human",
+        "valueSource": "extracted"
+      },
+      "mls:numInstances": {
+        "value": "2.7M",
+        "start_char_doc": 14792,
+        "end_char_doc": 14796,
+        "prefix": "received ‘snippet’ answers with over",
+        "suffix": "responses (examples shown in the",
+        "valueSource": "extracted"
+      },
+      "mls:language": {
+        "value": "English",
+        "start_char_doc": 16833,
+        "end_char_doc": 16840,
+        "prefix": "our task is focused on",
+        "suffix": ", we required workers to",
+        "valueSource": "extracted"
+      },
+      "mls:license": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:modality": {
+        "value": "text question-answer pairs",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:numClasses": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:subDatasetOf": [
+        {
+          "@id": "dataset:gooaq"
+        }
+      ],
+      "mls:prov-derivedFrom": [
+        {
+          "@id": "datasource:google_answer_boxes"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "paper:2104_08727v2"
+      }
+    },
+    {
+      "@id": "dataset:gooaq_collection_answer_subset",
+      "@type": "mls:MLS_Dataset",
+      "mention": {
+        "start_char_doc": 899,
+        "end_char_doc": 909,
+        "prefix": "short answers to snippets to",
+        "suffix": "s. Our human evaluation shows",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "GOOAQ collection-answer subset",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:description": {
+        "value": "collection",
+        "start_char_doc": 899,
+        "end_char_doc": 909,
+        "prefix": "short answers to snippets to",
+        "suffix": "s. Our human evaluation shows",
+        "valueSource": "extracted"
+      },
+      "mls:numInstances": {
+        "value": "329k",
+        "start_char_doc": 14987,
+        "end_char_doc": 14991,
+        "prefix": "## Page 4 answers with",
+        "suffix": "questions (examples shown on the",
+        "valueSource": "extracted"
+      },
+      "mls:language": {
+        "value": "English",
+        "start_char_doc": 16833,
+        "end_char_doc": 16840,
+        "prefix": "our task is focused on",
+        "suffix": ", we required workers to",
+        "valueSource": "extracted"
+      },
+      "mls:license": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:modality": {
+        "value": "text question-answer pairs",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:numClasses": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:subDatasetOf": [
+        {
+          "@id": "dataset:gooaq"
+        }
+      ],
+      "mls:prov-derivedFrom": [
+        {
+          "@id": "datasource:google_answer_boxes"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "paper:2104_08727v2"
+      }
+    },
+    {
+      "@id": "dataset:eli5",
+      "@type": "mls:MLS_Dataset",
+      "mention": {
+        "start_char_doc": 1686,
+        "end_char_doc": 1690,
+        "prefix": "strong performance on the recent",
+        "suffix": "long-answers dataset. We release GOOAQ",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "ELI5",
+        "start_char_doc": 1686,
+        "end_char_doc": 1690,
+        "prefix": "strong performance on the recent",
+        "suffix": "long-answers dataset. We release GOOAQ",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "a relatively recent dataset with long-answer questions extracted from Reddit posts",
+        "start_char_doc": 33424,
+        "end_char_doc": 33506,
+        "prefix": "ELI5 (Fan et al., 2019),",
+        "suffix": ". <table> <thead> <tr> <th>Model</th>",
+        "valueSource": "extracted"
+      },
+      "mls:numInstances": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:language": {
+        "value": "English",
+        "start_char_doc": 16833,
+        "end_char_doc": 16840,
+        "prefix": "our task is focused on",
+        "suffix": ", we required workers to",
+        "valueSource": "extracted"
+      },
+      "mls:license": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:modality": {
+        "value": "text question-answer pairs",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:numClasses": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:subDatasetOf": [],
+      "mls:prov-derivedFrom": [
+        {
+          "@id": "datasource:reddit"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "paper:2104_08727v2"
+      }
+    },
+    {
+      "@id": "dataset:natural_questions",
+      "@type": "mls:MLS_Dataset",
+      "mention": {
+        "start_char_doc": 10283,
+        "end_char_doc": 10305,
+        "prefix": "closely related work is the",
+        "suffix": "dataset (Kwiatkowski et al., 2019;",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Natural Questions",
+        "start_char_doc": 4195,
+        "end_char_doc": 4212,
+        "prefix": "counts. For instance, 65% of",
+        "suffix": "(Kwiatkowski et al., 2019) begin",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "questions written by Google users, and answers that were manually extracted from Wikipedia articles",
+        "start_char_doc": 10374,
+        "end_char_doc": 10473,
+        "prefix": "et al., 2019) which contains",
+        "suffix": ". While our questions (extracted",
+        "valueSource": "extracted"
+      },
+      "mls:numInstances": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:language": {
+        "value": "English",
+        "start_char_doc": 16833,
+        "end_char_doc": 16840,
+        "prefix": "our task is focused on",
+        "suffix": ", we required workers to",
+        "valueSource": "extracted"
+      },
+      "mls:license": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:modality": {
+        "value": "text question-answer pairs",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:numClasses": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:subDatasetOf": [],
+      "mls:prov-derivedFrom": [
+        {
+          "@id": "datasource:google_autocomplete"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "paper:2104_08727v2"
+      }
+    },
+    {
+      "@id": "step:query_extraction_google_autocomplete",
+      "@type": "mls:DataProcessingStep",
+      "mention": {
+        "start_char_doc": 12562,
+        "end_char_doc": 12578,
+        "prefix": "from answer boxes. ### 3.1.1",
+        "suffix": "To extract a rich yet",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "extracting questions from search auto-complete",
+        "start_char_doc": 12462,
+        "end_char_doc": 12508,
+        "prefix": "dataset involved two main steps,",
+        "suffix": "and extracting answers from answer",
+        "valueSource": "extracted"
+      },
+      "mls:transformationType": {
+        "value": "data collection",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:codeReference": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "prov:used": {
+        "@id": "datasource:google_autocomplete"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "paper:2104_08727v2"
+      }
+    },
+    {
+      "@id": "step:answer_extraction_google_answer_boxes",
+      "@type": "mls:DataProcessingStep",
+      "mention": {
+        "start_char_doc": 13387,
+        "end_char_doc": 13404,
+        "prefix": "about 8 tokens. ### 3.1.2",
+        "suffix": "To mine answers to our",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "extracting answers from answer boxes",
+        "start_char_doc": 12513,
+        "end_char_doc": 12549,
+        "prefix": "questions from search auto-complete and",
+        "suffix": ". ### 3.1.1 Query Extraction",
+        "valueSource": "extracted"
+      },
+      "mls:transformationType": {
+        "value": "answer extraction",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:codeReference": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "prov:used": {
+        "@id": "datasource:google_answer_boxes"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "paper:2104_08727v2"
+      }
+    },
+    {
+      "@id": "step:answer_type_inference_html_tags",
+      "@type": "mls:DataProcessingStep",
+      "mention": {
+        "start_char_doc": 14186,
+        "end_char_doc": 14208,
+        "prefix": "examples in Fig. 1. **",
+        "suffix": ".** We use the HTML",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "HTML tags of the search results to infer answer type tags",
+        "start_char_doc": 14223,
+        "end_char_doc": 14280,
+        "prefix": "Type Categories.** We use the",
+        "suffix": "for each answer. The overall",
+        "valueSource": "extracted"
+      },
+      "mls:transformationType": {
+        "value": "type inference",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:codeReference": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "prov:used": {
+        "@id": "datasource:google_answer_boxes"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "paper:2104_08727v2"
+      }
+    },
+    {
+      "@id": "step:leakage_control_dissimilar_splits",
+      "@type": "mls:DataProcessingStep",
+      "mention": {
+        "start_char_doc": 21488,
+        "end_char_doc": 21499,
+        "prefix": "snippet, or a collection, **",
+        "suffix": ".** For each sub-task, we",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "selecting the most dissimilar instances to our evaluation splits",
+        "start_char_doc": 21926,
+        "end_char_doc": 21990,
+        "prefix": "we create training splits by",
+        "suffix": ". The measure of similarity",
+        "valueSource": "extracted"
+      },
+      "mls:transformationType": {
+        "value": "train/dev/test split construction",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:codeReference": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "prov:used": {
+        "@id": "dataset:gooaq"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "paper:2104_08727v2"
+      }
+    },
+    {
+      "@id": "task:open_question_answering",
+      "@type": "mls:MLS_Task",
+      "mention": {
+        "start_char_doc": 513,
+        "end_char_doc": 541,
+        "prefix": "of answer types, the current",
+        "suffix": "literature represents isolated efforts on",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "open question answering",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:description": {
+        "value": "open question-answering (QA)",
+        "start_char_doc": 513,
+        "end_char_doc": 541,
+        "prefix": "of answer types, the current",
+        "suffix": "literature represents isolated efforts on",
+        "valueSource": "extracted"
+      },
+      "mls:category": {
+        "value": "question answering",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:metrics": {
+        "value": "ROUGE-L; human preference accuracy",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:benchmarkedOn": [
+        {
+          "@id": "dataset:gooaq"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "paper:2104_08727v2"
+      }
+    },
+    {
+      "@id": "task:closed_book_open_qa",
+      "@type": "mls:MLS_Task",
+      "mention": {
+        "start_char_doc": 20816,
+        "end_char_doc": 20834,
+        "prefix": "we consider the so-called ‘",
+        "suffix": "(Roberts et al., 2020) where",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "closed-book open QA",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:description": {
+        "value": "closed-book’ setup",
+        "start_char_doc": 20816,
+        "end_char_doc": 20834,
+        "prefix": "we consider the so-called ‘",
+        "suffix": "(Roberts et al., 2020) where",
+        "valueSource": "extracted"
+      },
+      "mls:category": {
+        "value": "question answering",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:metrics": {
+        "value": "ROUGE-L; human preference accuracy",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:benchmarkedOn": [
+        {
+          "@id": "dataset:gooaq"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "paper:2104_08727v2"
+      }
+    },
+    {
+      "@id": "task:short_answer_open_qa",
+      "@type": "mls:MLS_Task",
+      "mention": {
+        "start_char_doc": 21114,
+        "end_char_doc": 21139,
+        "prefix": "GOOAQ into three sub-tasks: (T<sub>short</sub>)",
+        "suffix": ", (T<sub>snippet</sub>) snippet responses questions,",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "short response questions",
+        "start_char_doc": 7694,
+        "end_char_doc": 7718,
+        "prefix": "expected, in this setting on",
+        "suffix": ", they perform surprisingly well",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "short responses questions",
+        "start_char_doc": 21114,
+        "end_char_doc": 21139,
+        "prefix": "GOOAQ into three sub-tasks: (T<sub>short</sub>)",
+        "suffix": ", (T<sub>snippet</sub>) snippet responses questions,",
+        "valueSource": "extracted"
+      },
+      "mls:category": {
+        "value": "short-answer question answering",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:metrics": {
+        "value": "ROUGE-L; human preference accuracy",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:benchmarkedOn": [
+        {
+          "@id": "dataset:gooaq_short_answer_subset"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "paper:2104_08727v2"
+      }
+    },
+    {
+      "@id": "task:snippet_answer_open_qa",
+      "@type": "mls:MLS_Task",
+      "mention": {
+        "start_char_doc": 21163,
+        "end_char_doc": 21190,
+        "prefix": "(T<sub>short</sub>) short responses questions, (T<sub>snippet</sub>)",
+        "suffix": ", and (T<sub>collection</sub>) collection response",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "snippet responses questions",
+        "start_char_doc": 21163,
+        "end_char_doc": 21190,
+        "prefix": "(T<sub>short</sub>) short responses questions, (T<sub>snippet</sub>)",
+        "suffix": ", and (T<sub>collection</sub>) collection response",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "snippet responses questions",
+        "start_char_doc": 21163,
+        "end_char_doc": 21190,
+        "prefix": "(T<sub>short</sub>) short responses questions, (T<sub>snippet</sub>)",
+        "suffix": ", and (T<sub>collection</sub>) collection response",
+        "valueSource": "extracted"
+      },
+      "mls:category": {
+        "value": "long-answer question answering",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:metrics": {
+        "value": "ROUGE-L; human preference accuracy",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:benchmarkedOn": [
+        {
+          "@id": "dataset:gooaq_snippet_answer_subset"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "paper:2104_08727v2"
+      }
+    },
+    {
+      "@id": "task:collection_answer_open_qa",
+      "@type": "mls:MLS_Task",
+      "mention": {
+        "start_char_doc": 8179,
+        "end_char_doc": 8208,
+        "prefix": "data, whereas both snippet and",
+        "suffix": "show minimal gains (e.g., only",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "collection response questions",
+        "start_char_doc": 8179,
+        "end_char_doc": 8208,
+        "prefix": "data, whereas both snippet and",
+        "suffix": "show minimal gains (e.g., only",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "collection response questions",
+        "start_char_doc": 8179,
+        "end_char_doc": 8208,
+        "prefix": "data, whereas both snippet and",
+        "suffix": "show minimal gains (e.g., only",
+        "valueSource": "extracted"
+      },
+      "mls:category": {
+        "value": "collection-answer question answering",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:metrics": {
+        "value": "ROUGE-L; human preference accuracy",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:benchmarkedOn": [
+        {
+          "@id": "dataset:gooaq_collection_answer_subset"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "paper:2104_08727v2"
+      }
+    },
+    {
+      "@id": "task:long_form_question_answering",
+      "@type": "mls:MLS_Task",
+      "mention": {
+        "start_char_doc": 33457,
+        "end_char_doc": 33506,
+        "prefix": "a relatively recent dataset with",
+        "suffix": ". <table> <thead> <tr> <th>Model</th>",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "long-answer questions",
+        "start_char_doc": 33457,
+        "end_char_doc": 33478,
+        "prefix": "a relatively recent dataset with",
+        "suffix": "extracted from Reddit posts. <table>",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "long-answer questions extracted from Reddit posts",
+        "start_char_doc": 33457,
+        "end_char_doc": 33506,
+        "prefix": "a relatively recent dataset with",
+        "suffix": ". <table> <thead> <tr> <th>Model</th>",
+        "valueSource": "extracted"
+      },
+      "mls:category": {
+        "value": "long-form question answering",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:metrics": {
+        "value": "Score",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:benchmarkedOn": [
+        {
+          "@id": "dataset:eli5"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "paper:2104_08727v2"
+      }
+    },
+    {
+      "@id": "method:gooaq_dataset_construction",
+      "@type": "mls:Method",
+      "mention": {
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:name": {
+        "value": "GOOAQ dataset construction",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:description": {
+        "value": "Constructing this dataset involved two main steps, extracting questions from search auto-complete and extracting answers from answer boxes",
+        "start_char_doc": 12411,
+        "end_char_doc": 12549,
+        "prefix": "assessment. ## 3.1 Dataset Construction",
+        "suffix": ". ### 3.1.1 Query Extraction",
+        "valueSource": "extracted"
+      },
+      "mls:version": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:trainedOn": [],
+      "mls:evaluatedOn": [],
+      "mls:achieves": [],
+      "prov:wasDerivedFrom": {
+        "@id": "paper:2104_08727v2"
+      }
+    },
+    {
+      "@id": "method:human_preference_evaluation",
+      "@type": "mls:Method",
+      "mention": {
+        "start_char_doc": 916,
+        "end_char_doc": 932,
+        "prefix": "to snippets to collections. Our",
+        "suffix": "shows that 94% of the",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "human evaluation",
+        "start_char_doc": 916,
+        "end_char_doc": 932,
+        "prefix": "to snippets to collections. Our",
+        "suffix": "shows that 94% of the",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "we ask crowdworkers to indicate if they prefer the predicted answer by the model or the Google answer",
+        "start_char_doc": 22837,
+        "end_char_doc": 22938,
+        "prefix": "evaluation for generated text. Specifically,",
+        "suffix": "for each question (without revealing",
+        "valueSource": "extracted"
+      },
+      "mls:version": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:trainedOn": [],
+      "mls:evaluatedOn": [],
+      "mls:achieves": [],
+      "prov:wasDerivedFrom": {
+        "@id": "paper:2104_08727v2"
+      }
+    },
+    {
+      "@id": "method:rouge_l_automatic_evaluation",
+      "@type": "mls:Method",
+      "mention": {
+        "start_char_doc": 22468,
+        "end_char_doc": 22475,
+        "prefix": "**Automatic evaluation.** We use the",
+        "suffix": "metric (Lin, 2004), which is",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "ROUGE-L",
+        "start_char_doc": 22468,
+        "end_char_doc": 22475,
+        "prefix": "**Automatic evaluation.** We use the",
+        "suffix": "metric (Lin, 2004), which is",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "ROUGE-L metric",
+        "start_char_doc": 22468,
+        "end_char_doc": 22482,
+        "prefix": "**Automatic evaluation.** We use the",
+        "suffix": "(Lin, 2004), which is a",
+        "valueSource": "extracted"
+      },
+      "mls:version": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:trainedOn": [],
+      "mls:evaluatedOn": [],
+      "mls:achieves": [],
+      "prov:wasDerivedFrom": {
+        "@id": "paper:2104_08727v2"
+      }
+    },
+    {
+      "@id": "method:google_autocomplete_question_mining",
+      "@type": "mls:Method",
+      "mention": {
+        "start_char_doc": 12634,
+        "end_char_doc": 12656,
+        "prefix": "set of questions we use",
+        "suffix": ".⁴ A similar strategy was",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Google auto-completion",
+        "start_char_doc": 12634,
+        "end_char_doc": 12656,
+        "prefix": "set of questions we use",
+        "suffix": ".⁴ A similar strategy was",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "To extract a rich yet natural set of questions we use Google auto-completion",
+        "start_char_doc": 12580,
+        "end_char_doc": 12656,
+        "prefix": "boxes. ### 3.1.1 Query Extraction",
+        "suffix": ".⁴ A similar strategy was",
+        "valueSource": "extracted"
+      },
+      "mls:version": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:trainedOn": [],
+      "mls:evaluatedOn": [],
+      "mls:achieves": [],
+      "prov:wasDerivedFrom": {
+        "@id": "paper:2104_08727v2"
+      }
+    },
+    {
+      "@id": "method:google_answer_box_mining",
+      "@type": "mls:Method",
+      "mention": {
+        "start_char_doc": 13465,
+        "end_char_doc": 13484,
+        "prefix": "collected questions, we extract the",
+        "suffix": "shown on top of the",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Google answer boxes",
+        "start_char_doc": 13465,
+        "end_char_doc": 13484,
+        "prefix": "collected questions, we extract the",
+        "suffix": "shown on top of the",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "we extract the Google answer boxes shown on top of the search results",
+        "start_char_doc": 13450,
+        "end_char_doc": 13519,
+        "prefix": "answers to our collected questions,",
+        "suffix": "when the questions are issued",
+        "valueSource": "extracted"
+      },
+      "mls:version": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:trainedOn": [],
+      "mls:evaluatedOn": [],
+      "mls:achieves": [],
+      "prov:wasDerivedFrom": {
+        "@id": "paper:2104_08727v2"
+      }
+    },
+    {
+      "@id": "model:t5_small",
+      "@type": [
+        "mls:MLS_Model",
+        "mls:Method"
+      ],
+      "mention": {
+        "start_char_doc": 30698,
+        "end_char_doc": 30706,
+        "prefix": "answer questions, especially for the",
+        "suffix": "model. This is, at least",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "T5-small",
+        "start_char_doc": 30698,
+        "end_char_doc": 30706,
+        "prefix": "answer questions, especially for the",
+        "suffix": "model. This is, at least",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "smallest model (‘small’)",
+        "start_char_doc": 27408,
+        "end_char_doc": 27432,
+        "prefix": "capture the two extremes: the",
+        "suffix": "and the largest model (‘11B’).",
+        "valueSource": "extracted"
+      },
+      "mls:version": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:architecture": {
+        "value": "text-to-text framework",
+        "start_char_doc": 27134,
+        "end_char_doc": 27156,
+        "prefix": "et al., 2020), a recent",
+        "suffix": "that has achieved state-of-the-art results",
+        "valueSource": "extracted"
+      },
+      "mls:parameters": {
+        "value": "small",
+        "start_char_doc": 7612,
+        "end_char_doc": 7617,
+        "prefix": "2020) on GOOAQ with a",
+        "suffix": "amount of labeled data. While",
+        "valueSource": "extracted"
+      },
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:gooaq"
+        },
+        {
+          "@id": "dataset:gooaq_short_answer_subset"
+        },
+        {
+          "@id": "dataset:gooaq_snippet_answer_subset"
+        },
+        {
+          "@id": "dataset:gooaq_collection_answer_subset"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:gooaq"
+        },
+        {
+          "@id": "dataset:eli5"
+        }
+      ],
+      "mls:achieves": [
+        {
+          "@id": "eval:t5_small_eli5_gooaq_supervision"
+        },
+        {
+          "@id": "eval:t5_small_error_incompleteness"
+        }
+      ],
+      "mls:subMethod": [
+        {
+          "@id": "method:rouge_l_automatic_evaluation"
+        },
+        {
+          "@id": "method:human_preference_evaluation"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "paper:2104_08727v2"
+      }
+    },
+    {
+      "@id": "model:t5_11b",
+      "@type": [
+        "mls:MLS_Model",
+        "mls:Method"
+      ],
+      "mention": {
+        "start_char_doc": 28232,
+        "end_char_doc": 28238,
+        "prefix": "& right) demonstrate that the",
+        "suffix": "model is surprisingly effective at",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "T5-11B",
+        "start_char_doc": 28232,
+        "end_char_doc": 28238,
+        "prefix": "& right) demonstrate that the",
+        "suffix": "model is surprisingly effective at",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "largest model (‘11B’)",
+        "start_char_doc": 27441,
+        "end_char_doc": 27462,
+        "prefix": "smallest model (‘small’) and the",
+        "suffix": ". Both models were trained",
+        "valueSource": "extracted"
+      },
+      "mls:version": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:architecture": {
+        "value": "text-to-text framework",
+        "start_char_doc": 27134,
+        "end_char_doc": 27156,
+        "prefix": "et al., 2020), a recent",
+        "suffix": "that has achieved state-of-the-art results",
+        "valueSource": "extracted"
+      },
+      "mls:parameters": {
+        "value": "11B",
+        "start_char_doc": 23838,
+        "end_char_doc": 23841,
+        "prefix": "4: Evaluation of T5 (small,",
+        "suffix": ") models on different sub-tasks",
+        "valueSource": "extracted"
+      },
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:gooaq"
+        },
+        {
+          "@id": "dataset:gooaq_short_answer_subset"
+        },
+        {
+          "@id": "dataset:gooaq_snippet_answer_subset"
+        },
+        {
+          "@id": "dataset:gooaq_collection_answer_subset"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:gooaq"
+        },
+        {
+          "@id": "dataset:eli5"
+        }
+      ],
+      "mls:achieves": [
+        {
+          "@id": "eval:t5_11b_eli5_gooaq_supervision"
+        },
+        {
+          "@id": "eval:t5_11b_preference_snippet_collection_2k"
+        },
+        {
+          "@id": "eval:t5_11b_error_incompleteness"
+        },
+        {
+          "@id": "eval:t5_11b_error_incoherence"
+        }
+      ],
+      "mls:subMethod": [
+        {
+          "@id": "method:rouge_l_automatic_evaluation"
+        },
+        {
+          "@id": "method:human_preference_evaluation"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "paper:2104_08727v2"
+      }
+    },
+    {
+      "@id": "repo:allenai_gooaq",
+      "@type": "mls:SoftwareRepository",
+      "mention": {
+        "start_char_doc": 4005,
+        "end_char_doc": 4037,
+        "prefix": "¹The dataset is available at",
+        "suffix": "under an appropriate license. ²In",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "allenai/gooaq",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:url": {
+        "value": "https://github.com/allenai/gooaq",
+        "start_char_doc": 4005,
+        "end_char_doc": 4037,
+        "prefix": "¹The dataset is available at",
+        "suffix": "under an appropriate license. ²In",
+        "valueSource": "extracted"
+      },
+      "mls:version": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:programmingLanguage": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:license": {
+        "value": "appropriate license",
+        "start_char_doc": 4047,
+        "end_char_doc": 4066,
+        "prefix": "available at https://github.com/allenai/gooaq under an",
+        "suffix": ". ²In contrast, the short",
+        "valueSource": "extracted"
+      },
+      "mls:documentationUrl": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:contains": [
+        {
+          "@id": "impl:gooaq_t5_evaluation"
+        }
+      ],
+      "mls:supports": [
+        {
+          "@id": "env:v3_128_tpus"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "paper:2104_08727v2"
+      }
+    },
+    {
+      "@id": "dep:selenium",
+      "@type": "mls:Dependency",
+      "mention": {
+        "start_char_doc": 44822,
+        "end_char_doc": 44830,
+        "prefix": "HTML search results. We use",
+        "suffix": "⁸ which simulates browser experience.",
+        "valueSource": "extracted"
+      },
+      "mls:packageName": {
+        "value": "Selenium",
+        "start_char_doc": 44822,
+        "end_char_doc": 44830,
+        "prefix": "HTML search results. We use",
+        "suffix": "⁸ which simulates browser experience.",
+        "valueSource": "extracted"
+      },
+      "mls:version": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "browser automation software",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:isOptional": {
+        "value": false,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "paper:2104_08727v2"
+      }
+    },
+    {
+      "@id": "impl:gooaq_t5_evaluation",
+      "@type": "mls:MLS_Implementation",
+      "mention": {
+        "start_char_doc": 27464,
+        "end_char_doc": 27502,
+        "prefix": "and the largest model (‘11B’).",
+        "suffix": "on the training splits, dumping",
+        "valueSource": "extracted"
+      },
+      "mls:identifier": {
+        "value": "T5 evaluation on GOOAQ",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:codeRepository": {
+        "@id": "repo:allenai_gooaq"
+      },
+      "mls:framework": {
+        "value": "T5 model",
+        "start_char_doc": 26993,
+        "end_char_doc": 27001,
+        "prefix": "cases when evaluating our largest",
+        "suffix": ") and were broken at",
+        "valueSource": "extracted"
+      },
+      "mls:executionCommand": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:entryPoint": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:branch": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:runsIn": {
+        "@id": "env:v3_128_tpus"
+      },
+      "mls:requires": [
+        {
+          "@id": "dep:selenium"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "paper:2104_08727v2"
+      }
+    },
+    {
+      "@id": "env:v3_128_tpus",
+      "@type": "mls:Environment",
+      "mention": {
+        "start_char_doc": 27596,
+        "end_char_doc": 27607,
+        "prefix": "196,608 tokens per batch on",
+        "suffix": ") with the default hyperparameters.",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "v3-128 TPUs",
+        "start_char_doc": 27596,
+        "end_char_doc": 27607,
+        "prefix": "196,608 tokens per batch on",
+        "suffix": ") with the default hyperparameters.",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "TPU machines for conducting experiments were provided by Google",
+        "start_char_doc": 39336,
+        "end_char_doc": 39399,
+        "prefix": "their help throughout this project.",
+        "suffix": ". Chris Callison-Burch was supported",
+        "valueSource": "extracted"
+      },
+      "mls:hardwareSpecs": {
+        "value": "v3-128 TPUs",
+        "start_char_doc": 27596,
+        "end_char_doc": 27607,
+        "prefix": "196,608 tokens per batch on",
+        "suffix": ") with the default hyperparameters.",
+        "valueSource": "extracted"
+      },
+      "mls:os": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:pythonVersion": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "paper:2104_08727v2"
+      }
+    },
+    {
+      "@id": "hp:gooaq_train_size_2k",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 8274,
+        "end_char_doc": 8276,
+        "prefix": "5-10% improvement when going from",
+        "suffix": "training examples to 200k or",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "training data size",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "2k",
+        "start_char_doc": 8274,
+        "end_char_doc": 8276,
+        "prefix": "5-10% improvement when going from",
+        "suffix": "training examples to 200k or",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Data",
+      "hpType": "TrainValTestSplit",
+      "uncertain": false,
+      "prov:wasDerivedFrom": {
+        "@id": "paper:2104_08727v2"
+      }
+    },
+    {
+      "@id": "hp:gooaq_train_size_20k",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 22300,
+        "end_char_doc": 22303,
+        "prefix": "of the following sizes: 2k,",
+        "suffix": ", 200k. For T<sub>snippet</sub>, we",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "training data size",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "20k",
+        "start_char_doc": 22300,
+        "end_char_doc": 22303,
+        "prefix": "of the following sizes: 2k,",
+        "suffix": ", 200k. For T<sub>snippet</sub>, we",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Data",
+      "hpType": "TrainValTestSplit",
+      "uncertain": false,
+      "prov:wasDerivedFrom": {
+        "@id": "paper:2104_08727v2"
+      }
+    },
+    {
+      "@id": "hp:gooaq_train_size_200k",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 8298,
+        "end_char_doc": 8302,
+        "prefix": "from 2k training examples to",
+        "suffix": "or even 2 million). Lastly,",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "training data size",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "200k",
+        "start_char_doc": 8298,
+        "end_char_doc": 8302,
+        "prefix": "from 2k training examples to",
+        "suffix": "or even 2 million). Lastly,",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Data",
+      "hpType": "TrainValTestSplit",
+      "uncertain": false,
+      "prov:wasDerivedFrom": {
+        "@id": "paper:2104_08727v2"
+      }
+    },
+    {
+      "@id": "hp:gooaq_snippet_train_size_2m",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 22351,
+        "end_char_doc": 22366,
+        "prefix": "T<sub>snippet</sub>, we also have a",
+        "suffix": "since this sub-task has more",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Tsnippet training data size",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "2M",
+        "start_char_doc": 22351,
+        "end_char_doc": 22353,
+        "prefix": "T<sub>snippet</sub>, we also have a",
+        "suffix": "training set since this sub-task",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Data",
+      "hpType": "TrainValTestSplit",
+      "uncertain": false,
+      "prov:wasDerivedFrom": {
+        "@id": "paper:2104_08727v2"
+      }
+    },
+    {
+      "@id": "hp:gooaq_eval_min_instances",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 21609,
+        "end_char_doc": 21622,
+        "prefix": "evaluation split contains at least",
+        "suffix": "of each response type. We",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "minimum evaluation split instances",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "500 instances",
+        "start_char_doc": 21609,
+        "end_char_doc": 21622,
+        "prefix": "evaluation split contains at least",
+        "suffix": "of each response type. We",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Data",
+      "hpType": "TrainValTestSplit",
+      "uncertain": false,
+      "prov:wasDerivedFrom": {
+        "@id": "paper:2104_08727v2"
+      }
+    },
+    {
+      "@id": "hp:t5_training_steps",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 27493,
+        "end_char_doc": 27502,
+        "prefix": "Both models were trained for",
+        "suffix": "on the training splits, dumping",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "training steps",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "20k steps",
+        "start_char_doc": 27493,
+        "end_char_doc": 27502,
+        "prefix": "Both models were trained for",
+        "suffix": "on the training splits, dumping",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Training",
+      "hpType": "MaxSteps",
+      "uncertain": false,
+      "prov:wasDerivedFrom": {
+        "@id": "paper:2104_08727v2"
+      }
+    },
+    {
+      "@id": "hp:t5_checkpoint_interval",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 27553,
+        "end_char_doc": 27561,
+        "prefix": "training splits, dumping checkpoints every",
+        "suffix": "(with 196,608 tokens per batch",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "checkpoint interval",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "2k steps",
+        "start_char_doc": 27553,
+        "end_char_doc": 27561,
+        "prefix": "training splits, dumping checkpoints every",
+        "suffix": "(with 196,608 tokens per batch",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Training",
+      "hpType": "MaxSteps",
+      "uncertain": false,
+      "prov:wasDerivedFrom": {
+        "@id": "paper:2104_08727v2"
+      }
+    },
+    {
+      "@id": "hp:t5_tokens_per_batch",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 27568,
+        "end_char_doc": 27592,
+        "prefix": "checkpoints every 2k steps (with",
+        "suffix": "on v3-128 TPUs) with the",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "tokens per batch",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "196,608 tokens per batch",
+        "start_char_doc": 27568,
+        "end_char_doc": 27592,
+        "prefix": "checkpoints every 2k steps (with",
+        "suffix": "on v3-128 TPUs) with the",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Training",
+      "hpType": "BatchSize",
+      "uncertain": false,
+      "prov:wasDerivedFrom": {
+        "@id": "paper:2104_08727v2"
+      }
+    },
+    {
+      "@id": "hp:t5_model_size_small",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 27408,
+        "end_char_doc": 27432,
+        "prefix": "capture the two extremes: the",
+        "suffix": "and the largest model (‘11B’).",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "T5 model size",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "small",
+        "start_char_doc": 7612,
+        "end_char_doc": 7617,
+        "prefix": "2020) on GOOAQ with a",
+        "suffix": "amount of labeled data. While",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Architecture",
+      "hpType": "UnknownArchitectureHP",
+      "uncertain": true,
+      "prov:wasDerivedFrom": {
+        "@id": "paper:2104_08727v2"
+      }
+    },
+    {
+      "@id": "hp:t5_model_size_11b",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 27441,
+        "end_char_doc": 27462,
+        "prefix": "smallest model (‘small’) and the",
+        "suffix": ". Both models were trained",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "T5 model size",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "11B",
+        "start_char_doc": 23838,
+        "end_char_doc": 23841,
+        "prefix": "4: Evaluation of T5 (small,",
+        "suffix": ") models on different sub-tasks",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Architecture",
+      "hpType": "UnknownArchitectureHP",
+      "uncertain": true,
+      "prov:wasDerivedFrom": {
+        "@id": "paper:2104_08727v2"
+      }
+    },
+    {
+      "@id": "hp:human_eval_annotators",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 26183,
+        "end_char_doc": 26207,
+        "prefix": "question, we obtain annotations from",
+        "suffix": "and aggregate via a majority",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "human evaluation annotators",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "5 independent annotators",
+        "start_char_doc": 26183,
+        "end_char_doc": 26207,
+        "prefix": "question, we obtain annotations from",
+        "suffix": "and aggregate via a majority",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Data",
+      "hpType": "TrainValTestSplit",
+      "uncertain": false,
+      "prov:wasDerivedFrom": {
+        "@id": "paper:2104_08727v2"
+      }
+    },
+    {
+      "@id": "hp:quality_assessment_annotators",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 17390,
+        "end_char_doc": 17414,
+        "prefix": "Each example is annotated by",
+        "suffix": "and aggregated via a majority",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "quality assessment annotators",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "3 independent annotators",
+        "start_char_doc": 17390,
+        "end_char_doc": 17414,
+        "prefix": "Each example is annotated by",
+        "suffix": "and aggregated via a majority",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Data",
+      "hpType": "TrainValTestSplit",
+      "uncertain": false,
+      "prov:wasDerivedFrom": {
+        "@id": "paper:2104_08727v2"
+      }
+    },
+    {
+      "@id": "eval:gooaq_answer_validity_overall",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 16064,
+        "end_char_doc": 16068,
+        "prefix": "<tr> <td>Overall</td> <td>3.1M</td> <td>98.6</td> <td>",
+        "suffix": "</td> </tr> </tbody> </table> Table",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "% of valid answers",
+        "start_char_doc": 15178,
+        "end_char_doc": 15196,
+        "prefix": "<th>% of valid questions</th> <th>",
+        "suffix": "</th> </tr> </thead> <tbody> <tr>",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "94.5",
+        "start_char_doc": 16064,
+        "end_char_doc": 16068,
+        "prefix": "<tr> <td>Overall</td> <td>3.1M</td> <td>98.6</td> <td>",
+        "suffix": "</td> </tr> </tbody> </table> Table",
+        "valueSource": "extracted"
+      },
+      "mls:stdDev": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:confidenceInterval": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:onDataset": {
+        "@id": "dataset:gooaq"
+      },
+      "mls:evaluatesTask": {
+        "@id": "task:open_question_answering"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "paper:2104_08727v2"
+      }
+    },
+    {
+      "@id": "eval:gooaq_valid_questions_overall",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 16044,
+        "end_char_doc": 16048,
+        "prefix": "</tr> <tr> <td>Overall</td> <td>3.1M</td> <td>",
+        "suffix": "</td> <td>94.5</td> </tr> </tbody> </table>",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "% of valid questions",
+        "start_char_doc": 15142,
+        "end_char_doc": 15162,
+        "prefix": "<tr> <th>Answer types</th> <th>Count</th> <th>",
+        "suffix": "</th> <th>% of valid answers</th>",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "98.6",
+        "start_char_doc": 16044,
+        "end_char_doc": 16048,
+        "prefix": "</tr> <tr> <td>Overall</td> <td>3.1M</td> <td>",
+        "suffix": "</td> <td>94.5</td> </tr> </tbody> </table>",
+        "valueSource": "extracted"
+      },
+      "mls:stdDev": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:confidenceInterval": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:onDataset": {
+        "@id": "dataset:gooaq"
+      },
+      "mls:evaluatesTask": {
+        "@id": "task:open_question_answering"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "paper:2104_08727v2"
+      }
+    },
+    {
+      "@id": "eval:t5_11b_preference_snippet_collection_2k",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 28396,
+        "end_char_doc": 28412,
+        "prefix": "model’s answer over Google’s in",
+        "suffix": ".⁷ This is in contrast",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "human preference accuracy",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "30%",
+        "start_char_doc": 28396,
+        "end_char_doc": 28399,
+        "prefix": "model’s answer over Google’s in",
+        "suffix": "of the cases.⁷ This is",
+        "valueSource": "extracted"
+      },
+      "mls:stdDev": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:confidenceInterval": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:onDataset": {
+        "@id": "dataset:gooaq"
+      },
+      "mls:evaluatesTask": {
+        "@id": "task:snippet_answer_open_qa"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "paper:2104_08727v2"
+      }
+    },
+    {
+      "@id": "eval:t5_short_answer_2k_accuracy",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 28499,
+        "end_char_doc": 28509,
+        "prefix": "the model’s accuracy is only",
+        "suffix": "and crowdworkers prefer Google’s answers",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "human preference accuracy",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": "around 10%",
+        "start_char_doc": 28499,
+        "end_char_doc": 28509,
+        "prefix": "the model’s accuracy is only",
+        "suffix": "and crowdworkers prefer Google’s answers",
+        "valueSource": "extracted"
+      },
+      "mls:stdDev": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:confidenceInterval": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:onDataset": {
+        "@id": "dataset:gooaq_short_answer_subset"
+      },
+      "mls:evaluatesTask": {
+        "@id": "task:short_answer_open_qa"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "paper:2104_08727v2"
+      }
+    },
+    {
+      "@id": "eval:t5_small_eli5_gooaq_supervision",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 33748,
+        "end_char_doc": 33761,
+        "prefix": "<td>T5-small</td> <td>GOOAQ (no ELI5)</td> <td>no</td>",
+        "suffix": "</tr> <tr> <td>T5-11B</td> <td>GOOAQ (no",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "Score",
+        "start_char_doc": 33618,
+        "end_char_doc": 33623,
+        "prefix": "<th>Model</th> <th>Supervision</th> <th>Uses IR?</th> <th>",
+        "suffix": "</th> </tr> </thead> <tbody> <tr>",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "21.7",
+        "start_char_doc": 33752,
+        "end_char_doc": 33756,
+        "prefix": "<td>GOOAQ (no ELI5)</td> <td>no</td> <td>",
+        "suffix": "</td> </tr> <tr> <td>T5-11B</td> <td>GOOAQ",
+        "valueSource": "extracted"
+      },
+      "mls:stdDev": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:confidenceInterval": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:onDataset": {
+        "@id": "dataset:eli5"
+      },
+      "mls:evaluatesTask": {
+        "@id": "task:long_form_question_answering"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "paper:2104_08727v2"
+      }
+    },
+    {
+      "@id": "eval:t5_11b_eli5_gooaq_supervision",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 33858,
+        "end_char_doc": 33871,
+        "prefix": "<td>T5-11B</td> <td>GOOAQ (no ELI5)</td> <td>no</td>",
+        "suffix": "</tr> <tr> <td>T5-small</td> <td>ELI5</td> <td>no</td>",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "Score",
+        "start_char_doc": 33618,
+        "end_char_doc": 33623,
+        "prefix": "<th>Model</th> <th>Supervision</th> <th>Uses IR?</th> <th>",
+        "suffix": "</th> </tr> </thead> <tbody> <tr>",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "22.9",
+        "start_char_doc": 33862,
+        "end_char_doc": 33866,
+        "prefix": "<td>GOOAQ (no ELI5)</td> <td>no</td> <td>",
+        "suffix": "</td> </tr> <tr> <td>T5-small</td> <td>ELI5</td>",
+        "valueSource": "extracted"
+      },
+      "mls:stdDev": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:confidenceInterval": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:onDataset": {
+        "@id": "dataset:eli5"
+      },
+      "mls:evaluatesTask": {
+        "@id": "task:long_form_question_answering"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "paper:2104_08727v2"
+      }
+    },
+    {
+      "@id": "eval:t5_small_error_incompleteness",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 32664,
+        "end_char_doc": 32677,
+        "prefix": "</tr> </thead> <tbody> <tr> <td>T5-small</td>",
+        "suffix": "<td>65.0</td> <td>47.5</td> <td>2.5</td> </tr> <tr>",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "Incompleteness",
+        "start_char_doc": 32492,
+        "end_char_doc": 32506,
+        "prefix": "<table> <thead> <tr> <th>Model</th> <th>",
+        "suffix": "</th> <th>Redundancy</th> <th>Hallucination</th> <th>Incoherence</th> </tr>",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "52.5",
+        "start_char_doc": 32668,
+        "end_char_doc": 32672,
+        "prefix": "</thead> <tbody> <tr> <td>T5-small</td> <td>",
+        "suffix": "</td> <td>65.0</td> <td>47.5</td> <td>2.5</td> </tr>",
+        "valueSource": "extracted"
+      },
+      "mls:stdDev": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:confidenceInterval": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:onDataset": {
+        "@id": "dataset:gooaq"
+      },
+      "mls:evaluatesTask": {
+        "@id": "task:open_question_answering"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "paper:2104_08727v2"
+      }
+    },
+    {
+      "@id": "eval:t5_11b_error_incompleteness",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 32784,
+        "end_char_doc": 32797,
+        "prefix": "<td>47.5</td> <td>2.5</td> </tr> <tr> <td>T5-11B</td>",
+        "suffix": "<td>8.3</td> <td>18.3</td> <td>0.0</td> </tr> </tbody>",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "Incompleteness",
+        "start_char_doc": 32492,
+        "end_char_doc": 32506,
+        "prefix": "<table> <thead> <tr> <th>Model</th> <th>",
+        "suffix": "</th> <th>Redundancy</th> <th>Hallucination</th> <th>Incoherence</th> </tr>",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "22.5",
+        "start_char_doc": 32788,
+        "end_char_doc": 32792,
+        "prefix": "<td>2.5</td> </tr> <tr> <td>T5-11B</td> <td>",
+        "suffix": "</td> <td>8.3</td> <td>18.3</td> <td>0.0</td> </tr>",
+        "valueSource": "extracted"
+      },
+      "mls:stdDev": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:confidenceInterval": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:onDataset": {
+        "@id": "dataset:gooaq"
+      },
+      "mls:evaluatesTask": {
+        "@id": "task:open_question_answering"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "paper:2104_08727v2"
+      }
+    },
+    {
+      "@id": "eval:t5_11b_error_incoherence",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 32843,
+        "end_char_doc": 32855,
+        "prefix": "<tr> <td>T5-11B</td> <td>22.5</td> <td>8.3</td> <td>18.3</td>",
+        "suffix": "</tr> </tbody> </table> Table 2:",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "Incoherence",
+        "start_char_doc": 32577,
+        "end_char_doc": 32588,
+        "prefix": "<th>Model</th> <th>Incompleteness</th> <th>Redundancy</th> <th>Hallucination</th> <th>",
+        "suffix": "</th> </tr> </thead> <tbody> <tr>",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "0.0",
+        "start_char_doc": 32847,
+        "end_char_doc": 32850,
+        "prefix": "<td>T5-11B</td> <td>22.5</td> <td>8.3</td> <td>18.3</td> <td>",
+        "suffix": "</td> </tr> </tbody> </table> Table",
+        "valueSource": "extracted"
+      },
+      "mls:stdDev": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:confidenceInterval": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:onDataset": {
+        "@id": "dataset:gooaq"
+      },
+      "mls:evaluatesTask": {
+        "@id": "task:open_question_answering"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "paper:2104_08727v2"
+      }
+    },
+    {
+      "@id": "run:t5_small_gooaq_training",
+      "@type": "mls:TrainingRun",
+      "mention": {
+        "start_char_doc": 27464,
+        "end_char_doc": 27502,
+        "prefix": "and the largest model (‘11B’).",
+        "suffix": "on the training splits, dumping",
+        "valueSource": "extracted"
+      },
+      "mls:runId": {
+        "value": "run:t5_small_gooaq_training",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:description": {
+        "value": "T5-small trained on GOOAQ training splits",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "prov:used": [
+        {
+          "@id": "dataset:gooaq"
+        },
+        {
+          "@id": "model:t5_small"
+        }
+      ],
+      "prov:wasAssociatedWith": [
+        {
+          "@id": "hp:t5_training_steps"
+        },
+        {
+          "@id": "hp:t5_tokens_per_batch"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "paper:2104_08727v2"
+      }
+    },
+    {
+      "@id": "run:t5_11b_gooaq_training",
+      "@type": "mls:TrainingRun",
+      "mention": {
+        "start_char_doc": 27464,
+        "end_char_doc": 27502,
+        "prefix": "and the largest model (‘11B’).",
+        "suffix": "on the training splits, dumping",
+        "valueSource": "extracted"
+      },
+      "mls:runId": {
+        "value": "run:t5_11b_gooaq_training",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:description": {
+        "value": "T5-11B trained on GOOAQ training splits",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "prov:used": [
+        {
+          "@id": "dataset:gooaq"
+        },
+        {
+          "@id": "model:t5_11b"
+        }
+      ],
+      "prov:wasAssociatedWith": [
+        {
+          "@id": "hp:t5_training_steps"
+        },
+        {
+          "@id": "hp:t5_tokens_per_batch"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "paper:2104_08727v2"
+      }
+    },
+    {
+      "@id": "run:t5_models_eli5_evaluation",
+      "@type": "mls:EvaluationRun",
+      "mention": {
+        "start_char_doc": 33382,
+        "end_char_doc": 33403,
+        "prefix": "on questions from GOOAQ and",
+        "suffix": "(Fan et al., 2019), a",
+        "valueSource": "extracted"
+      },
+      "mls:runId": {
+        "value": "run:t5_models_eli5_evaluation",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:description": {
+        "value": "T5 models trained on GOOAQ and evaluated on ELI5",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "prov:used": [
+        {
+          "@id": "dataset:eli5"
+        }
+      ],
+      "prov:wasAssociatedWith": [
+        {
+          "@id": "hp:t5_training_steps"
+        },
+        {
+          "@id": "hp:t5_tokens_per_batch"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "paper:2104_08727v2"
+      }
+    }
+  ]
+}

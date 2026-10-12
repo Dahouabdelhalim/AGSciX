@@ -1,0 +1,4715 @@
+{
+  "@context": {
+    "mls": "http://www.w3.org/ns/mls#",
+    "schema": "http://schema.org/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "study": "https://w3id.org/mlskg/study/",
+    "person": "https://w3id.org/mlskg/person/",
+    "org": "https://w3id.org/mlskg/organization/",
+    "task": "https://w3id.org/mlskg/task/",
+    "dataset": "https://w3id.org/mlskg/dataset/",
+    "datasource": "https://w3id.org/mlskg/datasource/",
+    "method": "https://w3id.org/mlskg/method/",
+    "model": "https://w3id.org/mlskg/model/",
+    "algo": "https://w3id.org/mlskg/algorithm/",
+    "prompt": "https://w3id.org/mlskg/prompt/",
+    "eval": "https://w3id.org/mlskg/eval/",
+    "hp": "https://w3id.org/mlskg/hp/",
+    "impl": "https://w3id.org/mlskg/implementation/",
+    "env": "https://w3id.org/mlskg/environment/",
+    "repo": "https://w3id.org/mlskg/repository/",
+    "exp": "https://w3id.org/mlskg/experiment/",
+    "valueSource": "https://w3id.org/mlskg/meta/valueSource",
+    "mention": "https://w3id.org/mlskg/meta/mention",
+    "hasAuthor": {
+      "@id": "mls:hasAuthor",
+      "@type": "@id"
+    },
+    "contains": {
+      "@id": "mls:contains",
+      "@type": "@id"
+    },
+    "implements": {
+      "@id": "mls:implements",
+      "@type": "@id"
+    },
+    "prov-affiliatedWith": {
+      "@id": "mls:prov-affiliatedWith",
+      "@type": "@id"
+    },
+    "prov-derivedFrom": {
+      "@id": "prov:wasDerivedFrom",
+      "@type": "@id"
+    },
+    "subTaskOf": {
+      "@id": "mls:subTaskOf",
+      "@type": "@id"
+    },
+    "subMethod": {
+      "@id": "mls:subMethod",
+      "@type": "@id"
+    },
+    "subDatasetOf": {
+      "@id": "mls:subDatasetOf",
+      "@type": "@id"
+    },
+    "realizes": {
+      "@id": "mls:realizes",
+      "@type": "@id"
+    },
+    "usesData": {
+      "@id": "mls:usesData",
+      "@type": "@id"
+    },
+    "trainedOn": {
+      "@id": "mls:trainedOn",
+      "@type": "@id"
+    },
+    "benchmarkedOn": {
+      "@id": "mls:benchmarkedOn",
+      "@type": "@id"
+    },
+    "uses": {
+      "@id": "prov:used",
+      "@type": "@id"
+    },
+    "prov-uses": {
+      "@id": "prov:used",
+      "@type": "@id"
+    },
+    "achieves": {
+      "@id": "mls:achieves",
+      "@type": "@id"
+    },
+    "usesParameters": {
+      "@id": "mls:usesParameters",
+      "@type": "@id"
+    },
+    "runsIn": {
+      "@id": "mls:runsIn",
+      "@type": "@id"
+    },
+    "wasAssociatedWith": {
+      "@id": "prov:wasAssociatedWith",
+      "@type": "@id"
+    }
+  },
+  "@graph": [
+    {
+      "@id": "study:prefix_tuning_optimizing_continuous_prompts_for_generation_2021",
+      "@type": "Study",
+      "mention": {
+        "start_char_doc": 13,
+        "end_char_doc": 72,
+        "prefix": "## Page 1 #",
+        "suffix": "**Xiang Lisa Li** Stanford University",
+        "valueSource": "extracted"
+      },
+      "schema:title": {
+        "value": "Prefix-Tuning: Optimizing Continuous Prompts for Generation",
+        "start_char_doc": 13,
+        "end_char_doc": 72,
+        "prefix": "## Page 1 #",
+        "suffix": "**Xiang Lisa Li** Stanford University",
+        "valueSource": "extracted"
+      },
+      "schema:abstract": {
+        "value": "Fine-tuning is the de facto way of leveraging large pretrained language models for downstream tasks. However, fine-tuning modifies all the language model parameters and therefore necessitates storing a full copy for each task. In this paper, we propose prefix-tuning, a lightweight alternative to fine-tuning for natural language generation tasks, which keeps language model parameters frozen and instead optimizes a sequence of *continuous task-specific* vectors, which we call the *prefix*. Prefix-tuning draws inspiration from prompting for language models, allowing subsequent tokens to attend to this prefix as if it were “virtual tokens”. We apply prefix-tuning to GPT-2 for table-to-text generation and to BART for summarization. We show that by modifying only 0.1% of the parameters, prefix-tuning obtains comparable performance in the full data setting, outperforms fine-tuning in low-data settings, and extrapolates better to examples with topics that are unseen during training.",
+        "start_char_doc": 215,
+        "end_char_doc": 1204,
+        "prefix": "Stanford University pliang@cs.stanford.edu ## Abstract",
+        "suffix": "## 1 Introduction Fine-tuning is",
+        "valueSource": "extracted"
+      },
+      "schema:publicationVenue": {
+        "value": "Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing, pages 4582–4597 August 1–6, 2021. ©2021 Association for Computational Linguistics",
+        "start_char_doc": 3438,
+        "end_char_doc": 3683,
+        "prefix": "at one time step.&lt;/img&gt; &lt;page_number&gt;4582&lt;/page_number&gt;",
+        "suffix": "--- ## Page 2 In",
+        "valueSource": "extracted"
+      },
+      "hasAuthor": [
+        {
+          "@id": "person:li_xiang_lisa"
+        },
+        {
+          "@id": "person:liang_percy"
+        }
+      ],
+      "contains": [
+        {
+          "@id": "exp:prefix_tuning_table_to_text_generation"
+        },
+        {
+          "@id": "exp:prefix_tuning_xsum_summarization"
+        },
+        {
+          "@id": "exp:prefix_tuning_low_data_generation"
+        },
+        {
+          "@id": "exp:prefix_tuning_extrapolation"
+        },
+        {
+          "@id": "exp:prefix_tuning_intrinsic_evaluation"
+        }
+      ],
+      "implements": [
+        {
+          "@id": "repo:xiangli1999_prefixtuning"
+        },
+        {
+          "@id": "impl:hugging_face_transformers"
+        }
+      ],
+      "prov-derivedFrom": {
+        "@id": "paper:9_2021_acl_long_353"
+      }
+    },
+    {
+      "@id": "person:li_xiang_lisa",
+      "@type": "Person",
+      "mention": {
+        "start_char_doc": 76,
+        "end_char_doc": 89,
+        "prefix": "Continuous Prompts for Generation **",
+        "suffix": "** Stanford University xlisali@stanford.edu **Percy",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Xiang Lisa Li",
+        "start_char_doc": 76,
+        "end_char_doc": 89,
+        "prefix": "Continuous Prompts for Generation **",
+        "suffix": "** Stanford University xlisali@stanford.edu **Percy",
+        "valueSource": "extracted"
+      },
+      "schema:email": {
+        "value": "xlisali@stanford.edu",
+        "start_char_doc": 116,
+        "end_char_doc": 136,
+        "prefix": "**Xiang Lisa Li** Stanford University",
+        "suffix": "**Percy Liang** Stanford University pliang@cs.stanford.edu",
+        "valueSource": "extracted"
+      },
+      "prov-affiliatedWith": {
+        "@id": "org:stanford_university"
+      }
+    },
+    {
+      "@id": "person:liang_percy",
+      "@type": "Person",
+      "mention": {
+        "start_char_doc": 140,
+        "end_char_doc": 151,
+        "prefix": "Li** Stanford University xlisali@stanford.edu **",
+        "suffix": "** Stanford University pliang@cs.stanford.edu ##",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Percy Liang",
+        "start_char_doc": 140,
+        "end_char_doc": 151,
+        "prefix": "Li** Stanford University xlisali@stanford.edu **",
+        "suffix": "** Stanford University pliang@cs.stanford.edu ##",
+        "valueSource": "extracted"
+      },
+      "schema:email": {
+        "value": "pliang@cs.stanford.edu",
+        "start_char_doc": 178,
+        "end_char_doc": 200,
+        "prefix": "xlisali@stanford.edu **Percy Liang** Stanford University",
+        "suffix": "## Abstract Fine-tuning is the",
+        "valueSource": "extracted"
+      },
+      "prov-affiliatedWith": {
+        "@id": "org:stanford_university"
+      }
+    },
+    {
+      "@id": "org:stanford_university",
+      "@type": "Organization",
+      "mention": {
+        "start_char_doc": 94,
+        "end_char_doc": 113,
+        "prefix": "for Generation **Xiang Lisa Li**",
+        "suffix": "xlisali@stanford.edu **Percy Liang** Stanford University",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Stanford University",
+        "start_char_doc": 94,
+        "end_char_doc": 113,
+        "prefix": "for Generation **Xiang Lisa Li**",
+        "suffix": "xlisali@stanford.edu **Percy Liang** Stanford University",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "task:natural_language_generation",
+      "@type": "MLS_Task",
+      "mention": {
+        "start_char_doc": 528,
+        "end_char_doc": 555,
+        "prefix": "lightweight alternative to fine-tuning for",
+        "suffix": "tasks, which keeps language model",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "natural language generation",
+        "start_char_doc": 528,
+        "end_char_doc": 555,
+        "prefix": "lightweight alternative to fine-tuning for",
+        "suffix": "tasks, which keeps language model",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "task:table_to_text_generation",
+      "@type": "MLS_Task",
+      "mention": {
+        "start_char_doc": 896,
+        "end_char_doc": 920,
+        "prefix": "apply prefix-tuning to GPT-2 for",
+        "suffix": "and to BART for summarization.",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "table-to-text generation",
+        "start_char_doc": 896,
+        "end_char_doc": 920,
+        "prefix": "apply prefix-tuning to GPT-2 for",
+        "suffix": "and to BART for summarization.",
+        "valueSource": "extracted"
+      },
+      "subTaskOf": {
+        "@id": "task:natural_language_generation"
+      }
+    },
+    {
+      "@id": "task:abstractive_summarization",
+      "@type": "MLS_Task",
+      "mention": {
+        "start_char_doc": 5581,
+        "end_char_doc": 5606,
+        "prefix": "table-to-text generation using GPT-2 and",
+        "suffix": "using BART. In terms of",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "abstractive summarization",
+        "start_char_doc": 5581,
+        "end_char_doc": 5606,
+        "prefix": "table-to-text generation using GPT-2 and",
+        "suffix": "using BART. In terms of",
+        "valueSource": "extracted"
+      },
+      "subTaskOf": {
+        "@id": "task:natural_language_generation"
+      }
+    },
+    {
+      "@id": "task:low_data_generation",
+      "@type": "MLS_Task",
+      "mention": {
+        "start_char_doc": 1105,
+        "end_char_doc": 1122,
+        "prefix": "data setting, outperforms fine-tuning in",
+        "suffix": ", and extrapolates better to",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "low-data settings",
+        "start_char_doc": 1105,
+        "end_char_doc": 1122,
+        "prefix": "data setting, outperforms fine-tuning in",
+        "suffix": ", and extrapolates better to",
+        "valueSource": "extracted"
+      },
+      "subTaskOf": {
+        "@id": "task:natural_language_generation"
+      }
+    },
+    {
+      "@id": "task:extrapolation_to_unseen_topics",
+      "@type": "MLS_Task",
+      "mention": {
+        "start_char_doc": 27079,
+        "end_char_doc": 27121,
+        "prefix": "6.4 Extrapolation We now investigate",
+        "suffix": "for both table-to-text and summarization.",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "extrapolation performance to unseen topics",
+        "start_char_doc": 27079,
+        "end_char_doc": 27121,
+        "prefix": "6.4 Extrapolation We now investigate",
+        "suffix": "for both table-to-text and summarization.",
+        "valueSource": "extracted"
+      },
+      "subTaskOf": {
+        "@id": "task:natural_language_generation"
+      }
+    },
+    {
+      "@id": "dataset:e2e",
+      "@type": "MLS_Dataset",
+      "mention": {
+        "start_char_doc": 60642,
+        "end_char_doc": 60645,
+        "prefix": "datasets for the table-to-text task:",
+        "suffix": "(Novikova et al., 2017), WebNLG",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "E2E",
+        "start_char_doc": 60642,
+        "end_char_doc": 60645,
+        "prefix": "datasets for the table-to-text task:",
+        "suffix": "(Novikova et al., 2017), WebNLG",
+        "valueSource": "extracted"
+      },
+      "schema:numInstances": {
+        "value": "50K",
+        "start_char_doc": 60773,
+        "end_char_doc": 60776,
+        "prefix": "The E2E dataset contains approximately",
+        "suffix": "examples with 8 distinct fields;",
+        "valueSource": "extracted"
+      },
+      "schema:description": {
+        "value": "The E2E dataset contains approximately 50K examples with 8 distinct fields",
+        "start_char_doc": 60734,
+        "end_char_doc": 60808,
+        "prefix": "DART (Radev et al., 2020).",
+        "suffix": "; it contains multiple test",
+        "valueSource": "extracted"
+      },
+      "prov-derivedFrom": {
+        "@id": "datasource:e2e_nlg_challenge"
+      }
+    },
+    {
+      "@id": "dataset:webnlg",
+      "@type": "MLS_Dataset",
+      "mention": {
+        "start_char_doc": 60671,
+        "end_char_doc": 60677,
+        "prefix": "E2E (Novikova et al., 2017),",
+        "suffix": "(Gardent et al., 2017), and",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "WebNLG",
+        "start_char_doc": 60671,
+        "end_char_doc": 60677,
+        "prefix": "E2E (Novikova et al., 2017),",
+        "suffix": "(Gardent et al., 2017), and",
+        "valueSource": "extracted"
+      },
+      "schema:numInstances": {
+        "value": "22K",
+        "start_char_doc": 61169,
+        "end_char_doc": 61172,
+        "prefix": "al., 2017) dataset consists of",
+        "suffix": "examples, and the input $x$",
+        "valueSource": "extracted"
+      },
+      "schema:description": {
+        "value": "The WebNLG (Gardent et al., 2017) dataset consists of 22K examples",
+        "start_char_doc": 61115,
+        "end_char_doc": 61181,
+        "prefix": "CIDEr (Vedantam et al., 2015).",
+        "suffix": ", and the input $x$",
+        "valueSource": "extracted"
+      },
+      "prov-derivedFrom": {
+        "@id": "datasource:dbpedia"
+      }
+    },
+    {
+      "@id": "dataset:dart",
+      "@type": "MLS_Dataset",
+      "mention": {
+        "start_char_doc": 60706,
+        "end_char_doc": 60710,
+        "prefix": "(Gardent et al., 2017), and",
+        "suffix": "(Radev et al., 2020). The",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "DART",
+        "start_char_doc": 60706,
+        "end_char_doc": 60710,
+        "prefix": "(Gardent et al., 2017), and",
+        "suffix": "(Radev et al., 2020). The",
+        "valueSource": "extracted"
+      },
+      "schema:numInstances": {
+        "value": "82K",
+        "start_char_doc": 61905,
+        "end_char_doc": 61908,
+        "prefix": "is 21.6. It consists of",
+        "suffix": "examples from WikiSQL, WikiTableQuestions, E2E,",
+        "valueSource": "extracted"
+      },
+      "schema:description": {
+        "value": "DART (Radev et al., 2020) is an open domain table-to-text dataset",
+        "start_char_doc": 61718,
+        "end_char_doc": 61783,
+        "prefix": "TER (Snover et al., 2006).",
+        "suffix": ", with similar input format",
+        "valueSource": "extracted"
+      },
+      "prov-derivedFrom": {
+        "@id": "datasource:wikipedia"
+      }
+    },
+    {
+      "@id": "dataset:xsum",
+      "@type": "MLS_Dataset",
+      "mention": {
+        "start_char_doc": 62225,
+        "end_char_doc": 62229,
+        "prefix": "summarization task, we use the",
+        "suffix": "(Narayan et al., 2018) dataset,",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "XSUM",
+        "start_char_doc": 62225,
+        "end_char_doc": 62229,
+        "prefix": "summarization task, we use the",
+        "suffix": "(Narayan et al., 2018) dataset,",
+        "valueSource": "extracted"
+      },
+      "schema:numInstances": {
+        "value": "225K",
+        "start_char_doc": 62336,
+        "end_char_doc": 62340,
+        "prefix": "on news articles. There are",
+        "suffix": "examples. The average length of",
+        "valueSource": "extracted"
+      },
+      "schema:description": {
+        "value": "the XSUM (Narayan et al., 2018) dataset, which is an abstractive summarization dataset on news articles",
+        "start_char_doc": 62221,
+        "end_char_doc": 62324,
+        "prefix": "the summarization task, we use",
+        "suffix": ". There are 225K examples.",
+        "valueSource": "extracted"
+      },
+      "prov-derivedFrom": {
+        "@id": "datasource:bbc_news"
+      }
+    },
+    {
+      "@id": "dataset:xsum_news_to_sports",
+      "@type": "MLS_Dataset",
+      "mention": {
+        "start_char_doc": 63124,
+        "end_char_doc": 63138,
+        "prefix": "construct two extrapolation data splits",
+        "suffix": "and within-news from the original",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "news-to-sports",
+        "start_char_doc": 63124,
+        "end_char_doc": 63138,
+        "prefix": "construct two extrapolation data splits",
+        "suffix": "and within-news from the original",
+        "valueSource": "extracted"
+      },
+      "subDatasetOf": {
+        "@id": "dataset:xsum"
+      },
+      "schema:description": {
+        "value": "news-to-sports",
+        "start_char_doc": 63124,
+        "end_char_doc": 63138,
+        "prefix": "construct two extrapolation data splits",
+        "suffix": "and within-news from the original",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "dataset:xsum_within_news",
+      "@type": "MLS_Dataset",
+      "mention": {
+        "start_char_doc": 63143,
+        "end_char_doc": 63154,
+        "prefix": "extrapolation data splits news-to-sports and",
+        "suffix": "from the original XSUM dataset.",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "within-news",
+        "start_char_doc": 63143,
+        "end_char_doc": 63154,
+        "prefix": "extrapolation data splits news-to-sports and",
+        "suffix": "from the original XSUM dataset.",
+        "valueSource": "extracted"
+      },
+      "subDatasetOf": {
+        "@id": "dataset:xsum"
+      },
+      "schema:description": {
+        "value": "within-news",
+        "start_char_doc": 63143,
+        "end_char_doc": 63154,
+        "prefix": "extrapolation data splits news-to-sports and",
+        "suffix": "from the original XSUM dataset.",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "dataset:webnlg_seen_unseen_split",
+      "@type": "MLS_Dataset",
+      "mention": {
+        "start_char_doc": 27428,
+        "end_char_doc": 27449,
+        "prefix": "training and dev, denoted as",
+        "suffix": "that only appear at test",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "SEEN and 5 categories",
+        "start_char_doc": 27428,
+        "end_char_doc": 27449,
+        "prefix": "training and dev, denoted as",
+        "suffix": "that only appear at test",
+        "valueSource": "extracted"
+      },
+      "subDatasetOf": {
+        "@id": "dataset:webnlg"
+      },
+      "schema:description": {
+        "value": "SEEN and 5 categories",
+        "start_char_doc": 27428,
+        "end_char_doc": 27449,
+        "prefix": "training and dev, denoted as",
+        "suffix": "that only appear at test",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "datasource:e2e_nlg_challenge",
+      "@type": "DataSource",
+      "mention": {
+        "start_char_doc": 60642,
+        "end_char_doc": 60645,
+        "prefix": "datasets for the table-to-text task:",
+        "suffix": "(Novikova et al., 2017), WebNLG",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "E2E",
+        "start_char_doc": 60642,
+        "end_char_doc": 60645,
+        "prefix": "datasets for the table-to-text task:",
+        "suffix": "(Novikova et al., 2017), WebNLG",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "datasource:dbpedia",
+      "@type": "DataSource",
+      "mention": {
+        "start_char_doc": 61374,
+        "end_char_doc": 61381,
+        "prefix": "describes entities from 9 distinct",
+        "suffix": "categories (e.g., Monument). The test",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "DBpedia",
+        "start_char_doc": 61374,
+        "end_char_doc": 61381,
+        "prefix": "describes entities from 9 distinct",
+        "suffix": "categories (e.g., Monument). The test",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "datasource:wikipedia",
+      "@type": "DataSource",
+      "mention": {
+        "start_char_doc": 19591,
+        "end_char_doc": 19600,
+        "prefix": "open-domain, using open-domain tables from",
+        "suffix": ". For evaluation, we report",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Wikipedia",
+        "start_char_doc": 19591,
+        "end_char_doc": 19600,
+        "prefix": "open-domain, using open-domain tables from",
+        "suffix": ". For evaluation, we report",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "datasource:bbc_news",
+      "@type": "DataSource",
+      "mention": {
+        "start_char_doc": 63214,
+        "end_char_doc": 63222,
+        "prefix": "XSUM dataset is drawn from",
+        "suffix": ", and we identify the",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "BBC news",
+        "start_char_doc": 63214,
+        "end_char_doc": 63222,
+        "prefix": "XSUM dataset is drawn from",
+        "suffix": ", and we identify the",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "datasource:wikisql",
+      "@type": "DataSource",
+      "mention": {
+        "start_char_doc": 61923,
+        "end_char_doc": 61930,
+        "prefix": "consists of 82K examples from",
+        "suffix": ", WikiTableQuestions, E2E, and WebNLG",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "WikiSQL",
+        "start_char_doc": 61923,
+        "end_char_doc": 61930,
+        "prefix": "consists of 82K examples from",
+        "suffix": ", WikiTableQuestions, E2E, and WebNLG",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "datasource:wikitablequestions",
+      "@type": "DataSource",
+      "mention": {
+        "start_char_doc": 61932,
+        "end_char_doc": 61950,
+        "prefix": "of 82K examples from WikiSQL,",
+        "suffix": ", E2E, and WebNLG and",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "WikiTableQuestions",
+        "start_char_doc": 61932,
+        "end_char_doc": 61950,
+        "prefix": "of 82K examples from WikiSQL,",
+        "suffix": ", E2E, and WebNLG and",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "method:prefix_tuning",
+      "@type": "Method",
+      "mention": {
+        "start_char_doc": 468,
+        "end_char_doc": 481,
+        "prefix": "In this paper, we propose",
+        "suffix": ", a lightweight alternative to",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "prefix-tuning",
+        "start_char_doc": 468,
+        "end_char_doc": 481,
+        "prefix": "In this paper, we propose",
+        "suffix": ", a lightweight alternative to",
+        "valueSource": "extracted"
+      },
+      "schema:description": {
+        "value": "a lightweight alternative to fine-tuning for natural language generation tasks",
+        "start_char_doc": 483,
+        "end_char_doc": 561,
+        "prefix": "this paper, we propose prefix-tuning,",
+        "suffix": ", which keeps language model",
+        "valueSource": "extracted"
+      },
+      "subMethod": [
+        {
+          "@id": "method:continuous_task_specific_prefix"
+        },
+        {
+          "@id": "method:prefix_mlp_reparameterization"
+        }
+      ]
+    },
+    {
+      "@id": "method:continuous_task_specific_prefix",
+      "@type": "Method",
+      "mention": {
+        "start_char_doc": 645,
+        "end_char_doc": 669,
+        "prefix": "optimizes a sequence of *",
+        "suffix": "* vectors, which we call",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "continuous task-specific",
+        "start_char_doc": 645,
+        "end_char_doc": 669,
+        "prefix": "optimizes a sequence of *",
+        "suffix": "* vectors, which we call",
+        "valueSource": "extracted"
+      },
+      "schema:description": {
+        "value": "continuous task-specific",
+        "start_char_doc": 645,
+        "end_char_doc": 669,
+        "prefix": "optimizes a sequence of *",
+        "suffix": "* vectors, which we call",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "method:prefix_mlp_reparameterization",
+      "@type": "Method",
+      "mention": {
+        "start_char_doc": 18790,
+        "end_char_doc": 18802,
+        "prefix": "large feedforward neural network (",
+        "suffix": "). Now, the trainable parameters",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "MLP$_\\theta$",
+        "start_char_doc": 18790,
+        "end_char_doc": 18802,
+        "prefix": "large feedforward neural network (",
+        "suffix": "). Now, the trainable parameters",
+        "valueSource": "extracted"
+      },
+      "schema:description": {
+        "value": "reparametrize the matrix $P_\\theta[i, :] = \\text{MLP}_\\theta(P'_\\theta[i, :])$",
+        "start_char_doc": 18627,
+        "end_char_doc": 18705,
+        "prefix": "drop in performance.$^3$ So we",
+        "suffix": "by a smaller matrix ($P'_\\theta$)",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "method:fine_tuning",
+      "@type": "Method",
+      "mention": {
+        "start_char_doc": 325,
+        "end_char_doc": 336,
+        "prefix": "models for downstream tasks. However,",
+        "suffix": "modifies all the language model",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "fine-tuning",
+        "start_char_doc": 325,
+        "end_char_doc": 336,
+        "prefix": "models for downstream tasks. However,",
+        "suffix": "modifies all the language model",
+        "valueSource": "extracted"
+      },
+      "schema:description": {
+        "value": "full fine-tuning framework",
+        "start_char_doc": 14803,
+        "end_char_doc": 14829,
+        "prefix": "## 3.3 Fine-tuning In the",
+        "suffix": ", we initialize with the",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "method:adapter_tuning",
+      "@type": "Method",
+      "mention": {
+        "start_char_doc": 1992,
+        "end_char_doc": 2006,
+        "prefix": "set of parameters. For example,",
+        "suffix": "(Rebuffi et al., 2017; Houlsby",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "adapter-tuning",
+        "start_char_doc": 1992,
+        "end_char_doc": 2006,
+        "prefix": "set of parameters. For example,",
+        "suffix": "(Rebuffi et al., 2017; Houlsby",
+        "valueSource": "extracted"
+      },
+      "schema:description": {
+        "value": "adapter-tuning inserts task-specific layers",
+        "start_char_doc": 7685,
+        "end_char_doc": 7728,
+        "prefix": "the pretrained model via summation;",
+        "suffix": "(adapters) between each layer of",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "method:ft_top2",
+      "@type": "Method",
+      "mention": {
+        "start_char_doc": 20052,
+        "end_char_doc": 20059,
+        "prefix": "the top 2 layers (",
+        "suffix": "), and adapter-tuning (ADAPTER).$^5$ We",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "FT-TOP2",
+        "start_char_doc": 20052,
+        "end_char_doc": 20059,
+        "prefix": "the top 2 layers (",
+        "suffix": "), and adapter-tuning (ADAPTER).$^5$ We",
+        "valueSource": "extracted"
+      },
+      "schema:description": {
+        "value": "fine-tuning only the top 2 layers (FT-TOP2)",
+        "start_char_doc": 20017,
+        "end_char_doc": 20060,
+        "prefix": "other methods: full fine-tuning (FT-FULL),",
+        "suffix": ", and adapter-tuning (ADAPTER).$^5$ We",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "method:embedding_only",
+      "@type": "Method",
+      "mention": {
+        "start_char_doc": 39024,
+        "end_char_doc": 39038,
+        "prefix": "idea and call it *",
+        "suffix": "*. The word embeddings are",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "embedding-only",
+        "start_char_doc": 39024,
+        "end_char_doc": 39038,
+        "prefix": "idea and call it *",
+        "suffix": "*. The word embeddings are",
+        "valueSource": "extracted"
+      },
+      "schema:description": {
+        "value": "The word embeddings are free parameters, and the remaining activation layers are computed by the Transformer",
+        "start_char_doc": 39041,
+        "end_char_doc": 39149,
+        "prefix": "idea and call it *embedding-only*.",
+        "suffix": ". Table 5 (top) shows",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "method:infix_tuning",
+      "@type": "Method",
+      "mention": {
+        "start_char_doc": 39907,
+        "end_char_doc": 39919,
+        "prefix": "INFIX; y]) and call this",
+        "suffix": ". Table 5 (bottom) shows",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "infix-tuning",
+        "start_char_doc": 39907,
+        "end_char_doc": 39919,
+        "prefix": "INFIX; y]) and call this",
+        "suffix": ". Table 5 (bottom) shows",
+        "valueSource": "extracted"
+      },
+      "schema:description": {
+        "value": "place the trainable activations between x and y",
+        "start_char_doc": 39824,
+        "end_char_doc": 39871,
+        "prefix": "x; y]. We can also",
+        "suffix": "(i.e. [x; INFIX; y]) and",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "method:prefix_initialization_with_real_words",
+      "@type": "Method",
+      "mention": {
+        "start_char_doc": 38442,
+        "end_char_doc": 38496,
+        "prefix": "two vertical axes).&lt;/img&gt; &lt;img&gt;Figure 5:",
+        "suffix": "significantly outperforms random initialization, in",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Initializing the prefix with activations of real words",
+        "start_char_doc": 38442,
+        "end_char_doc": 38496,
+        "prefix": "two vertical axes).&lt;/img&gt; &lt;img&gt;Figure 5:",
+        "suffix": "significantly outperforms random initialization, in",
+        "valueSource": "extracted"
+      },
+      "schema:description": {
+        "value": "Initializing the prefix with activations of real words significantly improves generation",
+        "start_char_doc": 40317,
+        "end_char_doc": 40405,
+        "prefix": "low performance with high variance.",
+        "suffix": ", as shown in Figure",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "method:table_linearization",
+      "@type": "Method",
+      "mention": {
+        "start_char_doc": 62576,
+        "end_char_doc": 62593,
+        "prefix": "Data pre-processing. For table-to-text, we",
+        "suffix": "$x$ in order to fit",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "linearize a table",
+        "start_char_doc": 62576,
+        "end_char_doc": 62593,
+        "prefix": "Data pre-processing. For table-to-text, we",
+        "suffix": "$x$ in order to fit",
+        "valueSource": "extracted"
+      },
+      "schema:description": {
+        "value": "linearize a table $x$ in order to fit into a language model context",
+        "start_char_doc": 62576,
+        "end_char_doc": 62643,
+        "prefix": "Data pre-processing. For table-to-text, we",
+        "suffix": ". In the E2E dataset,",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "method:article_truncation",
+      "@type": "Method",
+      "mention": {
+        "start_char_doc": 63008,
+        "end_char_doc": 63051,
+        "prefix": ": entity2.2”. For summarization, we",
+        "suffix": ". Extrapolation data splits. We",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "truncate the articles $x$ to 512 BPE tokens",
+        "start_char_doc": 63008,
+        "end_char_doc": 63051,
+        "prefix": ": entity2.2”. For summarization, we",
+        "suffix": ". Extrapolation data splits. We",
+        "valueSource": "extracted"
+      },
+      "schema:description": {
+        "value": "truncate the articles $x$ to 512 BPE tokens",
+        "start_char_doc": 63008,
+        "end_char_doc": 63051,
+        "prefix": ": entity2.2”. For summarization, we",
+        "suffix": ". Extrapolation data splits. We",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "model:gpt_2",
+      "@type": "MLS_Model",
+      "mention": {
+        "start_char_doc": 886,
+        "end_char_doc": 891,
+        "prefix": "tokens”. We apply prefix-tuning to",
+        "suffix": "for table-to-text generation and to",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "GPT-2",
+        "start_char_doc": 886,
+        "end_char_doc": 891,
+        "prefix": "tokens”. We apply prefix-tuning to",
+        "suffix": "for table-to-text generation and to",
+        "valueSource": "extracted"
+      },
+      "schema:parameters": {
+        "value": "774M parameters",
+        "start_char_doc": 1730,
+        "end_char_doc": 1745,
+        "prefix": "LMs; for example, GPT-2 has",
+        "suffix": "(Radford et al., 2019) and",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "model:gpt_3",
+      "@type": "MLS_Model",
+      "mention": {
+        "start_char_doc": 1773,
+        "end_char_doc": 1778,
+        "prefix": "(Radford et al., 2019) and",
+        "suffix": "has 175B parameters (Brown et",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "GPT-3",
+        "start_char_doc": 1773,
+        "end_char_doc": 1778,
+        "prefix": "(Radford et al., 2019) and",
+        "suffix": "has 175B parameters (Brown et",
+        "valueSource": "extracted"
+      },
+      "schema:parameters": {
+        "value": "175B parameters",
+        "start_char_doc": 1783,
+        "end_char_doc": 1798,
+        "prefix": "al., 2019) and GPT-3 has",
+        "suffix": "(Brown et al., 2020). A",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "model:gpt_2_medium",
+      "@type": "MLS_Model",
+      "mention": {
+        "start_char_doc": 20520,
+        "end_char_doc": 20536,
+        "prefix": "Hyperparameters For table-to-text, we use",
+        "suffix": "and GPT-2$_{LARGE}$. For summarization, we",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "GPT-2$_{MEDIUM}$",
+        "start_char_doc": 20520,
+        "end_char_doc": 20536,
+        "prefix": "Hyperparameters For table-to-text, we use",
+        "suffix": "and GPT-2$_{LARGE}$. For summarization, we",
+        "valueSource": "extracted"
+      },
+      "schema:architecture": {
+        "value": "autoregressive Transformer language model",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "prov-uses": {
+        "@id": "model:gpt_2"
+      }
+    },
+    {
+      "@id": "model:gpt_2_large",
+      "@type": "MLS_Model",
+      "mention": {
+        "start_char_doc": 20541,
+        "end_char_doc": 20556,
+        "prefix": "table-to-text, we use GPT-2$_{MEDIUM}$ and",
+        "suffix": ". For summarization, we use",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "GPT-2$_{LARGE}$",
+        "start_char_doc": 20541,
+        "end_char_doc": 20556,
+        "prefix": "table-to-text, we use GPT-2$_{MEDIUM}$ and",
+        "suffix": ". For summarization, we use",
+        "valueSource": "extracted"
+      },
+      "schema:architecture": {
+        "value": "autoregressive Transformer language model",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "prov-uses": {
+        "@id": "model:gpt_2"
+      }
+    },
+    {
+      "@id": "model:bart",
+      "@type": "MLS_Model",
+      "mention": {
+        "start_char_doc": 928,
+        "end_char_doc": 932,
+        "prefix": "for table-to-text generation and to",
+        "suffix": "for summarization. We show that",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "BART",
+        "start_char_doc": 928,
+        "end_char_doc": 932,
+        "prefix": "for table-to-text generation and to",
+        "suffix": "for summarization. We show that",
+        "valueSource": "extracted"
+      },
+      "schema:architecture": {
+        "value": "encoder-decoder architecture",
+        "start_char_doc": 12771,
+        "end_char_doc": 12799,
+        "prefix": "We can also use an",
+        "suffix": "(e.g., BART; Lewis et al.,",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "model:bart_large",
+      "@type": "MLS_Model",
+      "mention": {
+        "start_char_doc": 20584,
+        "end_char_doc": 20598,
+        "prefix": "GPT-2$_{LARGE}$. For summarization, we use",
+        "suffix": ". Our implementation is based",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "BART$_{LARGE}$",
+        "start_char_doc": 20584,
+        "end_char_doc": 20598,
+        "prefix": "GPT-2$_{LARGE}$. For summarization, we use",
+        "suffix": ". Our implementation is based",
+        "valueSource": "extracted"
+      },
+      "schema:architecture": {
+        "value": "Encoder-Decoder Architecture",
+        "start_char_doc": 12722,
+        "end_char_doc": 12750,
+        "prefix": "over the vocabulary. ### 3.2",
+        "suffix": "We can also use an",
+        "valueSource": "extracted"
+      },
+      "prov-uses": {
+        "@id": "model:bart"
+      }
+    },
+    {
+      "@id": "model:prefix_tuned_gpt_2",
+      "@type": "MLS_Model",
+      "mention": {
+        "start_char_doc": 869,
+        "end_char_doc": 882,
+        "prefix": "were “virtual tokens”. We apply",
+        "suffix": "to GPT-2 for table-to-text generation",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "prefix-tuning",
+        "start_char_doc": 869,
+        "end_char_doc": 882,
+        "prefix": "were “virtual tokens”. We apply",
+        "suffix": "to GPT-2 for table-to-text generation",
+        "valueSource": "extracted"
+      },
+      "schema:description": {
+        "value": "We apply prefix-tuning to GPT-2 for table-to-text generation",
+        "start_char_doc": 860,
+        "end_char_doc": 920,
+        "prefix": "if it were “virtual tokens”.",
+        "suffix": "and to BART for summarization.",
+        "valueSource": "extracted"
+      },
+      "prov-uses": [
+        {
+          "@id": "model:gpt_2"
+        },
+        {
+          "@id": "method:prefix_tuning"
+        }
+      ]
+    },
+    {
+      "@id": "model:prefix_tuned_bart",
+      "@type": "MLS_Model",
+      "mention": {
+        "start_char_doc": 1007,
+        "end_char_doc": 1020,
+        "prefix": "only 0.1% of the parameters,",
+        "suffix": "obtains comparable performance in the",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "prefix-tuning",
+        "start_char_doc": 1007,
+        "end_char_doc": 1020,
+        "prefix": "only 0.1% of the parameters,",
+        "suffix": "obtains comparable performance in the",
+        "valueSource": "extracted"
+      },
+      "schema:description": {
+        "value": "and to BART for summarization",
+        "start_char_doc": 921,
+        "end_char_doc": 950,
+        "prefix": "to GPT-2 for table-to-text generation",
+        "suffix": ". We show that by",
+        "valueSource": "extracted"
+      },
+      "prov-uses": [
+        {
+          "@id": "model:bart"
+        },
+        {
+          "@id": "method:prefix_tuning"
+        }
+      ]
+    },
+    {
+      "@id": "algo:adamw",
+      "@type": "MLS_Algorithm",
+      "mention": {
+        "start_char_doc": 20712,
+        "end_char_doc": 20717,
+        "prefix": "training time, we use the",
+        "suffix": "optimizer (Loshchilov and Hutter, 2019)",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "AdamW",
+        "start_char_doc": 20712,
+        "end_char_doc": 20717,
+        "prefix": "training time, we use the",
+        "suffix": "optimizer (Loshchilov and Hutter, 2019)",
+        "valueSource": "extracted"
+      },
+      "schema:description": {
+        "value": "AdamW",
+        "start_char_doc": 20712,
+        "end_char_doc": 20717,
+        "prefix": "training time, we use the",
+        "suffix": "optimizer (Loshchilov and Hutter, 2019)",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "algo:linear_learning_rate_scheduler",
+      "@type": "MLS_Algorithm",
+      "mention": {
+        "start_char_doc": 20764,
+        "end_char_doc": 20794,
+        "prefix": "and Hutter, 2019) and a",
+        "suffix": ", as suggested by the",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "linear learning rate scheduler",
+        "start_char_doc": 20764,
+        "end_char_doc": 20794,
+        "prefix": "and Hutter, 2019) and a",
+        "suffix": ", as suggested by the",
+        "valueSource": "extracted"
+      },
+      "schema:description": {
+        "value": "linear learning rate scheduler",
+        "start_char_doc": 20764,
+        "end_char_doc": 20794,
+        "prefix": "and Hutter, 2019) and a",
+        "suffix": ", as suggested by the",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "algo:beam_search",
+      "@type": "MLS_Algorithm",
+      "mention": {
+        "start_char_doc": 21653,
+        "end_char_doc": 21664,
+        "prefix": "time, for table-to-text, we use",
+        "suffix": "with beam size 5. For",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "beam search",
+        "start_char_doc": 21653,
+        "end_char_doc": 21664,
+        "prefix": "time, for table-to-text, we use",
+        "suffix": "with beam size 5. For",
+        "valueSource": "extracted"
+      },
+      "schema:description": {
+        "value": "beam search",
+        "start_char_doc": 21653,
+        "end_char_doc": 21664,
+        "prefix": "time, for table-to-text, we use",
+        "suffix": "with beam size 5. For",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "impl:hugging_face_transformers",
+      "@type": "MLS_Implementation",
+      "mention": {
+        "start_char_doc": 20635,
+        "end_char_doc": 20660,
+        "prefix": "implementation is based on the",
+        "suffix": "(Wolf et al., 2020). At",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Hugging Face Transformers",
+        "start_char_doc": 20635,
+        "end_char_doc": 20660,
+        "prefix": "implementation is based on the",
+        "suffix": "(Wolf et al., 2020). At",
+        "valueSource": "extracted"
+      },
+      "codeRepository": {
+        "@id": "repo:xiangli1999_prefixtuning"
+      },
+      "schema:description": {
+        "value": "Our implementation is based on the Hugging Face Transformers",
+        "start_char_doc": 20600,
+        "end_char_doc": 20660,
+        "prefix": "For summarization, we use BART$_{LARGE}$.",
+        "suffix": "(Wolf et al., 2020). At",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "repo:xiangli1999_prefixtuning",
+      "@type": "SoftwareRepository",
+      "mention": {
+        "start_char_doc": 47289,
+        "end_char_doc": 47332,
+        "prefix": "Our code is available at",
+        "suffix": ". Experiments and data are",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "https://github.com/XiangLi1999/PrefixTuning",
+        "start_char_doc": 47289,
+        "end_char_doc": 47332,
+        "prefix": "Our code is available at",
+        "suffix": ". Experiments and data are",
+        "valueSource": "extracted"
+      },
+      "codeRepository": {
+        "value": "https://github.com/XiangLi1999/PrefixTuning",
+        "start_char_doc": 47289,
+        "end_char_doc": 47332,
+        "prefix": "Our code is available at",
+        "suffix": ". Experiments and data are",
+        "valueSource": "extracted"
+      },
+      "documentationUrl": {
+        "value": "https://worksheets.codalab.org/worksheets/0x16e0c8e7ab1f4b22aaccddc8b586541f",
+        "start_char_doc": 47372,
+        "end_char_doc": 47448,
+        "prefix": "and data are available at",
+        "suffix": ". &lt;page_number&gt;4590&lt;/page_number&gt; --- ## Page",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "env:titan_xp",
+      "@type": "Environment",
+      "mention": {
+        "start_char_doc": 21134,
+        "end_char_doc": 21142,
+        "prefix": "table-to-text models are trained on",
+        "suffix": "or GeForce GTX TITAN X",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "TITAN Xp",
+        "start_char_doc": 21134,
+        "end_char_doc": 21142,
+        "prefix": "table-to-text models are trained on",
+        "suffix": "or GeForce GTX TITAN X",
+        "valueSource": "extracted"
+      },
+      "hardwareSpecs": {
+        "value": "TITAN Xp",
+        "start_char_doc": 21134,
+        "end_char_doc": 21142,
+        "prefix": "table-to-text models are trained on",
+        "suffix": "or GeForce GTX TITAN X",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "env:geforce_gtx_titan_x",
+      "@type": "Environment",
+      "mention": {
+        "start_char_doc": 21146,
+        "end_char_doc": 21165,
+        "prefix": "trained on TITAN Xp or",
+        "suffix": "machines. Prefix-tuning takes 0.2 hours",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "GeForce GTX TITAN X",
+        "start_char_doc": 21146,
+        "end_char_doc": 21165,
+        "prefix": "trained on TITAN Xp or",
+        "suffix": "machines. Prefix-tuning takes 0.2 hours",
+        "valueSource": "extracted"
+      },
+      "hardwareSpecs": {
+        "value": "GeForce GTX TITAN X",
+        "start_char_doc": 21146,
+        "end_char_doc": 21165,
+        "prefix": "trained on TITAN Xp or",
+        "suffix": "machines. Prefix-tuning takes 0.2 hours",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "env:tesla_v100",
+      "@type": "Environment",
+      "mention": {
+        "start_char_doc": 21336,
+        "end_char_doc": 21346,
+        "prefix": "summarization models are trained on",
+        "suffix": "machines, taking 1.25 hours per",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Tesla V100",
+        "start_char_doc": 21336,
+        "end_char_doc": 21346,
+        "prefix": "summarization models are trained on",
+        "suffix": "machines, taking 1.25 hours per",
+        "valueSource": "extracted"
+      },
+      "hardwareSpecs": {
+        "value": "Tesla V100",
+        "start_char_doc": 21336,
+        "end_char_doc": 21346,
+        "prefix": "summarization models are trained on",
+        "suffix": "machines, taking 1.25 hours per",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "prompt:table_to_text",
+      "@type": "Prompt",
+      "mention": {
+        "start_char_doc": 64529,
+        "end_char_doc": 64543,
+        "prefix": "initialize the prefix with “",
+        "suffix": "”, which contains 6 BPE",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "table-to-text:",
+        "start_char_doc": 64529,
+        "end_char_doc": 64543,
+        "prefix": "initialize the prefix with “",
+        "suffix": "”, which contains 6 BPE",
+        "valueSource": "extracted"
+      },
+      "schema:text": {
+        "value": "table-to-text:",
+        "start_char_doc": 64529,
+        "end_char_doc": 64543,
+        "prefix": "initialize the prefix with “",
+        "suffix": "”, which contains 6 BPE",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "prompt:summarize",
+      "@type": "Prompt",
+      "mention": {
+        "start_char_doc": 65029,
+        "end_char_doc": 65038,
+        "prefix": "and use the word “",
+        "suffix": "” to initialize ¹²https://github.com/tuetschek/e2e-metrics ¹³https://github.com/Yale-LILY/dart",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "summarize",
+        "start_char_doc": 65029,
+        "end_char_doc": 65038,
+        "prefix": "and use the word “",
+        "suffix": "” to initialize ¹²https://github.com/tuetschek/e2e-metrics ¹³https://github.com/Yale-LILY/dart",
+        "valueSource": "extracted"
+      },
+      "schema:text": {
+        "value": "summarize",
+        "start_char_doc": 65029,
+        "end_char_doc": 65038,
+        "prefix": "and use the word “",
+        "suffix": "” to initialize ¹²https://github.com/tuetschek/e2e-metrics ¹³https://github.com/Yale-LILY/dart",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "prompt:virtual_tokens",
+      "@type": "Prompt",
+      "mention": {
+        "start_char_doc": 843,
+        "end_char_doc": 857,
+        "prefix": "as if it were “",
+        "suffix": "”. We apply prefix-tuning to",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "virtual tokens",
+        "start_char_doc": 843,
+        "end_char_doc": 857,
+        "prefix": "as if it were “",
+        "suffix": "”. We apply prefix-tuning to",
+        "valueSource": "extracted"
+      },
+      "schema:text": {
+        "value": "virtual tokens",
+        "start_char_doc": 843,
+        "end_char_doc": 857,
+        "prefix": "as if it were “",
+        "suffix": "”. We apply prefix-tuning to",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "eval:bleu",
+      "@type": "MLS_Eval",
+      "mention": {
+        "start_char_doc": 60964,
+        "end_char_doc": 60968,
+        "prefix": "evaluation script, ¹² which reports",
+        "suffix": "(Papineni et al., 2002), NIST",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "BLEU",
+        "start_char_doc": 60964,
+        "end_char_doc": 60968,
+        "prefix": "evaluation script, ¹² which reports",
+        "suffix": "(Papineni et al., 2002), NIST",
+        "valueSource": "extracted"
+      },
+      "schema:metrics": {
+        "value": "BLEU",
+        "start_char_doc": 60964,
+        "end_char_doc": 60968,
+        "prefix": "evaluation script, ¹² which reports",
+        "suffix": "(Papineni et al., 2002), NIST",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "eval:nist",
+      "@type": "MLS_Eval",
+      "mention": {
+        "start_char_doc": 60994,
+        "end_char_doc": 60998,
+        "prefix": "BLEU (Papineni et al., 2002),",
+        "suffix": "(Belz and Reiter, 2006), METEOR",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "NIST",
+        "start_char_doc": 60994,
+        "end_char_doc": 60998,
+        "prefix": "BLEU (Papineni et al., 2002),",
+        "suffix": "(Belz and Reiter, 2006), METEOR",
+        "valueSource": "extracted"
+      },
+      "schema:metrics": {
+        "value": "NIST",
+        "start_char_doc": 60994,
+        "end_char_doc": 60998,
+        "prefix": "BLEU (Papineni et al., 2002),",
+        "suffix": "(Belz and Reiter, 2006), METEOR",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "eval:meteor",
+      "@type": "MLS_Eval",
+      "mention": {
+        "start_char_doc": 61024,
+        "end_char_doc": 61030,
+        "prefix": "NIST (Belz and Reiter, 2006),",
+        "suffix": "(Lavie and Agarwal, 2007), ROUGE-L",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "METEOR",
+        "start_char_doc": 61024,
+        "end_char_doc": 61030,
+        "prefix": "NIST (Belz and Reiter, 2006),",
+        "suffix": "(Lavie and Agarwal, 2007), ROUGE-L",
+        "valueSource": "extracted"
+      },
+      "schema:metrics": {
+        "value": "METEOR",
+        "start_char_doc": 61024,
+        "end_char_doc": 61030,
+        "prefix": "NIST (Belz and Reiter, 2006),",
+        "suffix": "(Lavie and Agarwal, 2007), ROUGE-L",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "eval:rouge_l",
+      "@type": "MLS_Eval",
+      "mention": {
+        "start_char_doc": 61058,
+        "end_char_doc": 61065,
+        "prefix": "METEOR (Lavie and Agarwal, 2007),",
+        "suffix": "(Lin, 2004), and CIDEr (Vedantam",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "ROUGE-L",
+        "start_char_doc": 61058,
+        "end_char_doc": 61065,
+        "prefix": "METEOR (Lavie and Agarwal, 2007),",
+        "suffix": "(Lin, 2004), and CIDEr (Vedantam",
+        "valueSource": "extracted"
+      },
+      "schema:metrics": {
+        "value": "ROUGE-L",
+        "start_char_doc": 61058,
+        "end_char_doc": 61065,
+        "prefix": "METEOR (Lavie and Agarwal, 2007),",
+        "suffix": "(Lin, 2004), and CIDEr (Vedantam",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "eval:cider",
+      "@type": "MLS_Eval",
+      "mention": {
+        "start_char_doc": 61083,
+        "end_char_doc": 61088,
+        "prefix": "2007), ROUGE-L (Lin, 2004), and",
+        "suffix": "(Vedantam et al., 2015). The",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "CIDEr",
+        "start_char_doc": 61083,
+        "end_char_doc": 61088,
+        "prefix": "2007), ROUGE-L (Lin, 2004), and",
+        "suffix": "(Vedantam et al., 2015). The",
+        "valueSource": "extracted"
+      },
+      "schema:metrics": {
+        "value": "CIDEr",
+        "start_char_doc": 61083,
+        "end_char_doc": 61088,
+        "prefix": "2007), ROUGE-L (Lin, 2004), and",
+        "suffix": "(Vedantam et al., 2015). The",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "eval:ter",
+      "@type": "MLS_Eval",
+      "mention": {
+        "start_char_doc": 61690,
+        "end_char_doc": 61693,
+        "prefix": "which reports BLEU, METEOR and",
+        "suffix": "(Snover et al., 2006). DART",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "TER",
+        "start_char_doc": 61690,
+        "end_char_doc": 61693,
+        "prefix": "which reports BLEU, METEOR and",
+        "suffix": "(Snover et al., 2006). DART",
+        "valueSource": "extracted"
+      },
+      "schema:metrics": {
+        "value": "TER",
+        "start_char_doc": 61690,
+        "end_char_doc": 61693,
+        "prefix": "which reports BLEU, METEOR and",
+        "suffix": "(Snover et al., 2006). DART",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "eval:moverscore",
+      "@type": "MLS_Eval",
+      "mention": {
+        "start_char_doc": 62087,
+        "end_char_doc": 62097,
+        "prefix": "and report BLEU, METEOR, TER,",
+        "suffix": "(Zhao et al., 2019), BERTScore",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "MoverScore",
+        "start_char_doc": 62087,
+        "end_char_doc": 62097,
+        "prefix": "and report BLEU, METEOR, TER,",
+        "suffix": "(Zhao et al., 2019), BERTScore",
+        "valueSource": "extracted"
+      },
+      "schema:metrics": {
+        "value": "MoverScore",
+        "start_char_doc": 62087,
+        "end_char_doc": 62097,
+        "prefix": "and report BLEU, METEOR, TER,",
+        "suffix": "(Zhao et al., 2019), BERTScore",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "eval:bertscore",
+      "@type": "MLS_Eval",
+      "mention": {
+        "start_char_doc": 62119,
+        "end_char_doc": 62128,
+        "prefix": "MoverScore (Zhao et al., 2019),",
+        "suffix": "(Zhang et al., 2020b) and",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "BERTScore",
+        "start_char_doc": 62119,
+        "end_char_doc": 62128,
+        "prefix": "MoverScore (Zhao et al., 2019),",
+        "suffix": "(Zhang et al., 2020b) and",
+        "valueSource": "extracted"
+      },
+      "schema:metrics": {
+        "value": "BERTScore",
+        "start_char_doc": 62119,
+        "end_char_doc": 62128,
+        "prefix": "MoverScore (Zhao et al., 2019),",
+        "suffix": "(Zhang et al., 2020b) and",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "eval:bleurt",
+      "@type": "MLS_Eval",
+      "mention": {
+        "start_char_doc": 62155,
+        "end_char_doc": 62161,
+        "prefix": "(Zhang et al., 2020b) and",
+        "suffix": "(Sellam et al., 2020). For",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "BLEURT",
+        "start_char_doc": 62155,
+        "end_char_doc": 62161,
+        "prefix": "(Zhang et al., 2020b) and",
+        "suffix": "(Sellam et al., 2020). For",
+        "valueSource": "extracted"
+      },
+      "schema:metrics": {
+        "value": "BLEURT",
+        "start_char_doc": 62155,
+        "end_char_doc": 62161,
+        "prefix": "(Zhang et al., 2020b) and",
+        "suffix": "(Sellam et al., 2020). For",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "eval:rouge_1",
+      "@type": "MLS_Eval",
+      "mention": {
+        "start_char_doc": 62458,
+        "end_char_doc": 62465,
+        "prefix": "summaries is 23.3. We report",
+        "suffix": ", ROUGE-2 and ROUGE-L, computed",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "ROUGE-1",
+        "start_char_doc": 62458,
+        "end_char_doc": 62465,
+        "prefix": "summaries is 23.3. We report",
+        "suffix": ", ROUGE-2 and ROUGE-L, computed",
+        "valueSource": "extracted"
+      },
+      "schema:metrics": {
+        "value": "ROUGE-1",
+        "start_char_doc": 62458,
+        "end_char_doc": 62465,
+        "prefix": "summaries is 23.3. We report",
+        "suffix": ", ROUGE-2 and ROUGE-L, computed",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "eval:rouge_2",
+      "@type": "MLS_Eval",
+      "mention": {
+        "start_char_doc": 62467,
+        "end_char_doc": 62474,
+        "prefix": "is 23.3. We report ROUGE-1,",
+        "suffix": "and ROUGE-L, computed by the",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "ROUGE-2",
+        "start_char_doc": 62467,
+        "end_char_doc": 62474,
+        "prefix": "is 23.3. We report ROUGE-1,",
+        "suffix": "and ROUGE-L, computed by the",
+        "valueSource": "extracted"
+      },
+      "schema:metrics": {
+        "value": "ROUGE-2",
+        "start_char_doc": 62467,
+        "end_char_doc": 62474,
+        "prefix": "is 23.3. We report ROUGE-1,",
+        "suffix": "and ROUGE-L, computed by the",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "eval:perplexity",
+      "@type": "MLS_Eval",
+      "mention": {
+        "start_char_doc": 64223,
+        "end_char_doc": 64233,
+        "prefix": "300} for summarization. We use",
+        "suffix": "and automatic generation metrics on",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "perplexity",
+        "start_char_doc": 64223,
+        "end_char_doc": 64233,
+        "prefix": "300} for summarization. We use",
+        "suffix": "and automatic generation metrics on",
+        "valueSource": "extracted"
+      },
+      "schema:metrics": {
+        "value": "perplexity",
+        "start_char_doc": 64223,
+        "end_char_doc": 64233,
+        "prefix": "300} for summarization. We use",
+        "suffix": "and automatic generation metrics on",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "hp:learning_rate_search_space",
+      "@type": "MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 63817,
+        "end_char_doc": 63831,
+        "prefix": "range of each hyperparameters: the",
+        "suffix": "are selected from {1e-5, 5e-05,",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "learning rates",
+        "start_char_doc": 63817,
+        "end_char_doc": 63831,
+        "prefix": "range of each hyperparameters: the",
+        "suffix": "are selected from {1e-5, 5e-05,",
+        "valueSource": "extracted"
+      },
+      "hpCategory": "HP_Optimization",
+      "hpType": "LearningRate",
+      "schema:identifier": {
+        "value": "learning rates",
+        "start_char_doc": 63817,
+        "end_char_doc": 63831,
+        "prefix": "range of each hyperparameters: the",
+        "suffix": "are selected from {1e-5, 5e-05,",
+        "valueSource": "extracted"
+      },
+      "schema:value": {
+        "value": "{1e-5, 5e-05, 8e-05}",
+        "start_char_doc": 63850,
+        "end_char_doc": 63870,
+        "prefix": "learning rates are selected from",
+        "suffix": "; the number of epochs",
+        "valueSource": "extracted"
+      },
+      "searchSpace": {
+        "value": "{1e-5, 5e-05, 8e-05}",
+        "start_char_doc": 63850,
+        "end_char_doc": 63870,
+        "prefix": "learning rates are selected from",
+        "suffix": "; the number of epochs",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "hp:num_epochs_table_to_text_search_space",
+      "@type": "MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 63876,
+        "end_char_doc": 63892,
+        "prefix": "from {1e-5, 5e-05, 8e-05}; the",
+        "suffix": "are selected from {5, 10}",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "number of epochs",
+        "start_char_doc": 63876,
+        "end_char_doc": 63892,
+        "prefix": "from {1e-5, 5e-05, 8e-05}; the",
+        "suffix": "are selected from {5, 10}",
+        "valueSource": "extracted"
+      },
+      "hpCategory": "HP_Training",
+      "hpType": "NumEpochs",
+      "schema:identifier": {
+        "value": "number of epochs",
+        "start_char_doc": 63876,
+        "end_char_doc": 63892,
+        "prefix": "from {1e-5, 5e-05, 8e-05}; the",
+        "suffix": "are selected from {5, 10}",
+        "valueSource": "extracted"
+      },
+      "schema:value": {
+        "value": "{5, 10}",
+        "start_char_doc": 63911,
+        "end_char_doc": 63918,
+        "prefix": "of epochs are selected from",
+        "suffix": "for table-to-text and {5, 25,",
+        "valueSource": "extracted"
+      },
+      "searchSpace": {
+        "value": "{5, 10}",
+        "start_char_doc": 63911,
+        "end_char_doc": 63918,
+        "prefix": "of epochs are selected from",
+        "suffix": "for table-to-text and {5, 25,",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "hp:num_epochs_summarization_search_space",
+      "@type": "MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 63876,
+        "end_char_doc": 63892,
+        "prefix": "from {1e-5, 5e-05, 8e-05}; the",
+        "suffix": "are selected from {5, 10}",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "number of epochs",
+        "start_char_doc": 63876,
+        "end_char_doc": 63892,
+        "prefix": "from {1e-5, 5e-05, 8e-05}; the",
+        "suffix": "are selected from {5, 10}",
+        "valueSource": "extracted"
+      },
+      "hpCategory": "HP_Training",
+      "hpType": "NumEpochs",
+      "schema:identifier": {
+        "value": "number of epochs",
+        "start_char_doc": 63876,
+        "end_char_doc": 63892,
+        "prefix": "from {1e-5, 5e-05, 8e-05}; the",
+        "suffix": "are selected from {5, 10}",
+        "valueSource": "extracted"
+      },
+      "schema:value": {
+        "value": "{5, 25, 30 }",
+        "start_char_doc": 63941,
+        "end_char_doc": 63953,
+        "prefix": "{5, 10} for table-to-text and",
+        "suffix": "for summarization; We select the",
+        "valueSource": "extracted"
+      },
+      "searchSpace": {
+        "value": "{5, 25, 30 }",
+        "start_char_doc": 63941,
+        "end_char_doc": 63953,
+        "prefix": "{5, 10} for table-to-text and",
+        "suffix": "for summarization; We select the",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "hp:prefix_length_table_to_text_search_space",
+      "@type": "MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 64089,
+        "end_char_doc": 64102,
+        "prefix": "for an optimal batch size.",
+        "suffix": "are selected from {1, 5,",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Prefix length",
+        "start_char_doc": 64089,
+        "end_char_doc": 64102,
+        "prefix": "for an optimal batch size.",
+        "suffix": "are selected from {1, 5,",
+        "valueSource": "extracted"
+      },
+      "hpCategory": "HP_Architecture",
+      "hpType": "HP_Architecture",
+      "schema:identifier": {
+        "value": "Prefix length",
+        "start_char_doc": 64089,
+        "end_char_doc": 64102,
+        "prefix": "for an optimal batch size.",
+        "suffix": "are selected from {1, 5,",
+        "valueSource": "extracted"
+      },
+      "schema:value": {
+        "value": "{1, 5, 10, 20, 40}",
+        "start_char_doc": 64121,
+        "end_char_doc": 64139,
+        "prefix": "Prefix length are selected from",
+        "suffix": "for table-to-text and {1, 10,",
+        "valueSource": "extracted"
+      },
+      "uncertain": {
+        "value": true,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "searchSpace": {
+        "value": "{1, 5, 10, 20, 40}",
+        "start_char_doc": 64121,
+        "end_char_doc": 64139,
+        "prefix": "Prefix length are selected from",
+        "suffix": "for table-to-text and {1, 10,",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "hp:prefix_length_summarization_search_space",
+      "@type": "MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 64089,
+        "end_char_doc": 64102,
+        "prefix": "for an optimal batch size.",
+        "suffix": "are selected from {1, 5,",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Prefix length",
+        "start_char_doc": 64089,
+        "end_char_doc": 64102,
+        "prefix": "for an optimal batch size.",
+        "suffix": "are selected from {1, 5,",
+        "valueSource": "extracted"
+      },
+      "hpCategory": "HP_Architecture",
+      "hpType": "HP_Architecture",
+      "schema:identifier": {
+        "value": "Prefix length",
+        "start_char_doc": 64089,
+        "end_char_doc": 64102,
+        "prefix": "for an optimal batch size.",
+        "suffix": "are selected from {1, 5,",
+        "valueSource": "extracted"
+      },
+      "schema:value": {
+        "value": "{1, 10, 20, 50, 80, 100, 200, 300}",
+        "start_char_doc": 64162,
+        "end_char_doc": 64196,
+        "prefix": "20, 40} for table-to-text and",
+        "suffix": "for summarization. We use perplexity",
+        "valueSource": "extracted"
+      },
+      "uncertain": {
+        "value": true,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "searchSpace": {
+        "value": "{1, 10, 20, 50, 80, 100, 200, 300}",
+        "start_char_doc": 64162,
+        "end_char_doc": 64196,
+        "prefix": "20, 40} for table-to-text and",
+        "suffix": "for summarization. We use perplexity",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "hp:default_num_epochs",
+      "@type": "MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 20894,
+        "end_char_doc": 20900,
+        "prefix": "tune include the number of",
+        "suffix": ", batch size, learning rate,",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "epochs",
+        "start_char_doc": 20894,
+        "end_char_doc": 20900,
+        "prefix": "tune include the number of",
+        "suffix": ", batch size, learning rate,",
+        "valueSource": "extracted"
+      },
+      "hpCategory": "HP_Training",
+      "hpType": "NumEpochs",
+      "schema:identifier": {
+        "value": "epochs",
+        "start_char_doc": 20894,
+        "end_char_doc": 20900,
+        "prefix": "tune include the number of",
+        "suffix": ", batch size, learning rate,",
+        "valueSource": "extracted"
+      },
+      "schema:value": {
+        "value": "10",
+        "start_char_doc": 21015,
+        "end_char_doc": 21017,
+        "prefix": "appendix. The default setting is",
+        "suffix": "epochs, batch size 5, learning",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "hp:default_batch_size",
+      "@type": "MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 20902,
+        "end_char_doc": 20912,
+        "prefix": "include the number of epochs,",
+        "suffix": ", learning rate, and prefix",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "batch size",
+        "start_char_doc": 20902,
+        "end_char_doc": 20912,
+        "prefix": "include the number of epochs,",
+        "suffix": ", learning rate, and prefix",
+        "valueSource": "extracted"
+      },
+      "hpCategory": "HP_Training",
+      "hpType": "BatchSize",
+      "schema:identifier": {
+        "value": "batch size",
+        "start_char_doc": 20902,
+        "end_char_doc": 20912,
+        "prefix": "include the number of epochs,",
+        "suffix": ", learning rate, and prefix",
+        "valueSource": "extracted"
+      },
+      "schema:value": {
+        "value": "5",
+        "start_char_doc": 21037,
+        "end_char_doc": 21038,
+        "prefix": "is 10 epochs, batch size",
+        "suffix": ", learning rate $5 \\cdot",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "hp:default_learning_rate",
+      "@type": "MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 20771,
+        "end_char_doc": 20784,
+        "prefix": "Hutter, 2019) and a linear",
+        "suffix": "scheduler, as suggested by the",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "learning rate",
+        "start_char_doc": 20771,
+        "end_char_doc": 20784,
+        "prefix": "Hutter, 2019) and a linear",
+        "suffix": "scheduler, as suggested by the",
+        "valueSource": "extracted"
+      },
+      "hpCategory": "HP_Optimization",
+      "hpType": "LearningRate",
+      "schema:identifier": {
+        "value": "learning rate",
+        "start_char_doc": 20771,
+        "end_char_doc": 20784,
+        "prefix": "Hutter, 2019) and a linear",
+        "suffix": "scheduler, as suggested by the",
+        "valueSource": "extracted"
+      },
+      "schema:value": {
+        "value": "$5 \\cdot 10^{-5}$",
+        "start_char_doc": 21054,
+        "end_char_doc": 21071,
+        "prefix": "batch size 5, learning rate",
+        "suffix": "and prefix length 10. The",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "hp:default_prefix_length",
+      "@type": "MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 20933,
+        "end_char_doc": 20946,
+        "prefix": "batch size, learning rate, and",
+        "suffix": ". Hyperparameter details are in",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "prefix length",
+        "start_char_doc": 20933,
+        "end_char_doc": 20946,
+        "prefix": "batch size, learning rate, and",
+        "suffix": ". Hyperparameter details are in",
+        "valueSource": "extracted"
+      },
+      "hpCategory": "HP_Architecture",
+      "hpType": "HP_Architecture",
+      "schema:identifier": {
+        "value": "prefix length",
+        "start_char_doc": 20933,
+        "end_char_doc": 20946,
+        "prefix": "batch size, learning rate, and",
+        "suffix": ". Hyperparameter details are in",
+        "valueSource": "extracted"
+      },
+      "schema:value": {
+        "value": "10",
+        "start_char_doc": 21015,
+        "end_char_doc": 21017,
+        "prefix": "appendix. The default setting is",
+        "suffix": "epochs, batch size 5, learning",
+        "valueSource": "extracted"
+      },
+      "uncertain": {
+        "value": true,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:projection_dim_table_to_text",
+      "@type": "MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 19289,
+        "end_char_doc": 19290,
+        "prefix": "datasets for the table-to-text tas",
+        "suffix": ": E2E (Novikova et al.,",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "k",
+        "start_char_doc": 19289,
+        "end_char_doc": 19290,
+        "prefix": "datasets for the table-to-text tas",
+        "suffix": ": E2E (Novikova et al.,",
+        "valueSource": "extracted"
+      },
+      "hpCategory": "HP_Architecture",
+      "hpType": "HiddenSize",
+      "schema:identifier": {
+        "value": "k",
+        "start_char_doc": 19289,
+        "end_char_doc": 19290,
+        "prefix": "datasets for the table-to-text tas",
+        "suffix": ": E2E (Novikova et al.,",
+        "valueSource": "extracted"
+      },
+      "schema:value": {
+        "value": "512",
+        "start_char_doc": 22841,
+        "end_char_doc": 22844,
+        "prefix": "k$. We choose $k =",
+        "suffix": "$ for table-to-text and 800",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "hp:projection_dim_summarization",
+      "@type": "MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 19289,
+        "end_char_doc": 19290,
+        "prefix": "datasets for the table-to-text tas",
+        "suffix": ": E2E (Novikova et al.,",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "k",
+        "start_char_doc": 19289,
+        "end_char_doc": 19290,
+        "prefix": "datasets for the table-to-text tas",
+        "suffix": ": E2E (Novikova et al.,",
+        "valueSource": "extracted"
+      },
+      "hpCategory": "HP_Architecture",
+      "hpType": "HiddenSize",
+      "schema:identifier": {
+        "value": "k",
+        "start_char_doc": 19289,
+        "end_char_doc": 19290,
+        "prefix": "datasets for the table-to-text tas",
+        "suffix": ": E2E (Novikova et al.,",
+        "valueSource": "extracted"
+      },
+      "schema:value": {
+        "value": "800",
+        "start_char_doc": 22868,
+        "end_char_doc": 22871,
+        "prefix": "= 512$ for table-to-text and",
+        "suffix": "for summarization. MLP$_\\theta$ maps from",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "hp:max_input_length_summarization",
+      "@type": "MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 63037,
+        "end_char_doc": 63051,
+        "prefix": "truncate the articles $x$ to",
+        "suffix": ". Extrapolation data splits. We",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "512 BPE tokens",
+        "start_char_doc": 63037,
+        "end_char_doc": 63051,
+        "prefix": "truncate the articles $x$ to",
+        "suffix": ". Extrapolation data splits. We",
+        "valueSource": "extracted"
+      },
+      "hpCategory": "HP_Data",
+      "hpType": "MaxSequenceLength",
+      "schema:identifier": {
+        "value": "512 BPE tokens",
+        "start_char_doc": 63037,
+        "end_char_doc": 63051,
+        "prefix": "truncate the articles $x$ to",
+        "suffix": ". Extrapolation data splits. We",
+        "valueSource": "extracted"
+      },
+      "schema:value": {
+        "value": "512 BPE tokens",
+        "start_char_doc": 63037,
+        "end_char_doc": 63051,
+        "prefix": "truncate the articles $x$ to",
+        "suffix": ". Extrapolation data splits. We",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "hp:beam_size_table_to_text",
+      "@type": "MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 21670,
+        "end_char_doc": 21679,
+        "prefix": "we use beam search with",
+        "suffix": "5. For summarization, we use",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "beam size",
+        "start_char_doc": 21670,
+        "end_char_doc": 21679,
+        "prefix": "we use beam search with",
+        "suffix": "5. For summarization, we use",
+        "valueSource": "extracted"
+      },
+      "hpCategory": "HP_Training",
+      "hpType": "HP_Training",
+      "schema:identifier": {
+        "value": "beam size",
+        "start_char_doc": 21670,
+        "end_char_doc": 21679,
+        "prefix": "we use beam search with",
+        "suffix": "5. For summarization, we use",
+        "valueSource": "extracted"
+      },
+      "schema:value": {
+        "value": "5",
+        "start_char_doc": 21680,
+        "end_char_doc": 21681,
+        "prefix": "beam search with beam size",
+        "suffix": ". For summarization, we use",
+        "valueSource": "extracted"
+      },
+      "uncertain": {
+        "value": true,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:beam_size_summarization",
+      "@type": "MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 21670,
+        "end_char_doc": 21679,
+        "prefix": "we use beam search with",
+        "suffix": "5. For summarization, we use",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "beam size",
+        "start_char_doc": 21670,
+        "end_char_doc": 21679,
+        "prefix": "we use beam search with",
+        "suffix": "5. For summarization, we use",
+        "valueSource": "extracted"
+      },
+      "hpCategory": "HP_Training",
+      "hpType": "HP_Training",
+      "schema:identifier": {
+        "value": "beam size",
+        "start_char_doc": 21670,
+        "end_char_doc": 21679,
+        "prefix": "we use beam search with",
+        "suffix": "5. For summarization, we use",
+        "valueSource": "extracted"
+      },
+      "schema:value": {
+        "value": "6",
+        "start_char_doc": 21719,
+        "end_char_doc": 21720,
+        "prefix": "summarization, we use beam size",
+        "suffix": "and length normalization 0.8. Decoding",
+        "valueSource": "extracted"
+      },
+      "uncertain": {
+        "value": true,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:length_normalization_summarization",
+      "@type": "MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 21725,
+        "end_char_doc": 21745,
+        "prefix": "use beam size 6 and",
+        "suffix": "0.8. Decoding takes 1.2 seconds",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "length normalization",
+        "start_char_doc": 21725,
+        "end_char_doc": 21745,
+        "prefix": "use beam size 6 and",
+        "suffix": "0.8. Decoding takes 1.2 seconds",
+        "valueSource": "extracted"
+      },
+      "hpCategory": "HP_Training",
+      "hpType": "HP_Training",
+      "schema:identifier": {
+        "value": "length normalization",
+        "start_char_doc": 21725,
+        "end_char_doc": 21745,
+        "prefix": "use beam size 6 and",
+        "suffix": "0.8. Decoding takes 1.2 seconds",
+        "valueSource": "extracted"
+      },
+      "schema:value": {
+        "value": "0.8",
+        "start_char_doc": 21746,
+        "end_char_doc": 21749,
+        "prefix": "size 6 and length normalization",
+        "suffix": ". Decoding takes 1.2 seconds",
+        "valueSource": "extracted"
+      },
+      "uncertain": {
+        "value": true,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:low_data_training_sizes",
+      "@type": "MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 26153,
+        "end_char_doc": 26175,
+        "prefix": "XSUM for summarization) to obtain",
+        "suffix": "{50, 100, 200, 500}. For",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "small datasets of size",
+        "start_char_doc": 26153,
+        "end_char_doc": 26175,
+        "prefix": "XSUM for summarization) to obtain",
+        "suffix": "{50, 100, 200, 500}. For",
+        "valueSource": "extracted"
+      },
+      "hpCategory": "HP_Data",
+      "hpType": "TrainValTestSplit",
+      "schema:identifier": {
+        "value": "small datasets of size",
+        "start_char_doc": 26153,
+        "end_char_doc": 26175,
+        "prefix": "XSUM for summarization) to obtain",
+        "suffix": "{50, 100, 200, 500}. For",
+        "valueSource": "extracted"
+      },
+      "schema:value": {
+        "value": "{50, 100, 200, 500}",
+        "start_char_doc": 26176,
+        "end_char_doc": 26195,
+        "prefix": "obtain small datasets of size",
+        "suffix": ". For each size, we",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "hp:low_data_dev_split",
+      "@type": "MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 27700,
+        "end_char_doc": 27708,
+        "prefix": "sample a dev split (with",
+        "suffix": "= 30% × training size)",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "dev size",
+        "start_char_doc": 27700,
+        "end_char_doc": 27708,
+        "prefix": "sample a dev split (with",
+        "suffix": "= 30% × training size)",
+        "valueSource": "extracted"
+      },
+      "hpCategory": "HP_Data",
+      "hpType": "TrainValTestSplit",
+      "schema:identifier": {
+        "value": "dev size",
+        "start_char_doc": 27700,
+        "end_char_doc": 27708,
+        "prefix": "sample a dev split (with",
+        "suffix": "= 30% × training size)",
+        "valueSource": "extracted"
+      },
+      "schema:value": {
+        "value": "30% × training size",
+        "start_char_doc": 27711,
+        "end_char_doc": 27730,
+        "prefix": "split (with dev size =",
+        "suffix": ") for each training set.",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "hp:low_data_table_learning_rate",
+      "@type": "MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 63817,
+        "end_char_doc": 63830,
+        "prefix": "range of each hyperparameters: the",
+        "suffix": "s are selected from {1e-5,",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "learning rate",
+        "start_char_doc": 63817,
+        "end_char_doc": 63830,
+        "prefix": "range of each hyperparameters: the",
+        "suffix": "s are selected from {1e-5,",
+        "valueSource": "extracted"
+      },
+      "hpCategory": "HP_Optimization",
+      "hpType": "LearningRate",
+      "schema:identifier": {
+        "value": "learning rate",
+        "start_char_doc": 63817,
+        "end_char_doc": 63830,
+        "prefix": "range of each hyperparameters: the",
+        "suffix": "s are selected from {1e-5,",
+        "valueSource": "extracted"
+      },
+      "schema:value": {
+        "value": "5e-5",
+        "start_char_doc": 64398,
+        "end_char_doc": 64402,
+        "prefix": "use a learning rate of",
+        "suffix": ", and a batch size",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "hp:low_data_table_batch_size",
+      "@type": "MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 63995,
+        "end_char_doc": 64005,
+        "prefix": "summarization; We select the largest",
+        "suffix": "that can fit into GPU",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "batch size",
+        "start_char_doc": 63995,
+        "end_char_doc": 64005,
+        "prefix": "summarization; We select the largest",
+        "suffix": "that can fit into GPU",
+        "valueSource": "extracted"
+      },
+      "hpCategory": "HP_Training",
+      "hpType": "BatchSize",
+      "schema:identifier": {
+        "value": "batch size",
+        "start_char_doc": 63995,
+        "end_char_doc": 64005,
+        "prefix": "summarization; We select the largest",
+        "suffix": "that can fit into GPU",
+        "valueSource": "extracted"
+      },
+      "schema:value": {
+        "value": "10",
+        "start_char_doc": 64424,
+        "end_char_doc": 64426,
+        "prefix": "and a batch size of",
+        "suffix": ". We use a prefix",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "hp:low_data_table_prefix_length",
+      "@type": "MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 64437,
+        "end_char_doc": 64450,
+        "prefix": "of 10. We use a",
+        "suffix": "of 6, since we apply",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "prefix length",
+        "start_char_doc": 64437,
+        "end_char_doc": 64450,
+        "prefix": "of 10. We use a",
+        "suffix": "of 6, since we apply",
+        "valueSource": "extracted"
+      },
+      "hpCategory": "HP_Architecture",
+      "hpType": "HP_Architecture",
+      "schema:identifier": {
+        "value": "prefix length",
+        "start_char_doc": 64437,
+        "end_char_doc": 64450,
+        "prefix": "of 10. We use a",
+        "suffix": "of 6, since we apply",
+        "valueSource": "extracted"
+      },
+      "schema:value": {
+        "value": "6",
+        "start_char_doc": 64454,
+        "end_char_doc": 64455,
+        "prefix": "use a prefix length of",
+        "suffix": ", since we apply the",
+        "valueSource": "extracted"
+      },
+      "uncertain": {
+        "value": true,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:low_data_table_max_steps",
+      "@type": "MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 64627,
+        "end_char_doc": 64636,
+        "prefix": "of epochs, we tune the",
+        "suffix": "of updates in {100, 200,",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "max steps",
+        "start_char_doc": 64627,
+        "end_char_doc": 64636,
+        "prefix": "of epochs, we tune the",
+        "suffix": "of updates in {100, 200,",
+        "valueSource": "extracted"
+      },
+      "hpCategory": "HP_Training",
+      "hpType": "MaxSteps",
+      "schema:identifier": {
+        "value": "max steps",
+        "start_char_doc": 64627,
+        "end_char_doc": 64636,
+        "prefix": "of epochs, we tune the",
+        "suffix": "of updates in {100, 200,",
+        "valueSource": "extracted"
+      },
+      "schema:value": {
+        "value": "{100, 200, 400, 600 }",
+        "start_char_doc": 64651,
+        "end_char_doc": 64672,
+        "prefix": "max steps of updates in",
+        "suffix": ", as shown in Table",
+        "valueSource": "extracted"
+      },
+      "searchSpace": {
+        "value": "{100, 200, 400, 600 }",
+        "start_char_doc": 64651,
+        "end_char_doc": 64672,
+        "prefix": "max steps of updates in",
+        "suffix": ", as shown in Table",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "hp:low_data_summarization_learning_rate",
+      "@type": "MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 63817,
+        "end_char_doc": 63830,
+        "prefix": "range of each hyperparameters: the",
+        "suffix": "s are selected from {1e-5,",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "learning rate",
+        "start_char_doc": 63817,
+        "end_char_doc": 63830,
+        "prefix": "range of each hyperparameters: the",
+        "suffix": "s are selected from {1e-5,",
+        "valueSource": "extracted"
+      },
+      "hpCategory": "HP_Optimization",
+      "hpType": "LearningRate",
+      "schema:identifier": {
+        "value": "learning rate",
+        "start_char_doc": 63817,
+        "end_char_doc": 63830,
+        "prefix": "range of each hyperparameters: the",
+        "suffix": "s are selected from {1e-5,",
+        "valueSource": "extracted"
+      },
+      "schema:value": {
+        "value": "5e-5",
+        "start_char_doc": 64880,
+        "end_char_doc": 64884,
+        "prefix": "use a learning rate of",
+        "suffix": "and a warmup step of",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "hp:low_data_summarization_warmup_step",
+      "@type": "MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 64891,
+        "end_char_doc": 64902,
+        "prefix": "rate of 5e-5 and a",
+        "suffix": "of 100. We use a",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "warmup step",
+        "start_char_doc": 64891,
+        "end_char_doc": 64902,
+        "prefix": "rate of 5e-5 and a",
+        "suffix": "of 100. We use a",
+        "valueSource": "extracted"
+      },
+      "hpCategory": "HP_Optimization",
+      "hpType": "WarmupSteps",
+      "schema:identifier": {
+        "value": "warmup step",
+        "start_char_doc": 64891,
+        "end_char_doc": 64902,
+        "prefix": "rate of 5e-5 and a",
+        "suffix": "of 100. We use a",
+        "valueSource": "extracted"
+      },
+      "schema:value": {
+        "value": "100",
+        "start_char_doc": 64906,
+        "end_char_doc": 64909,
+        "prefix": "and a warmup step of",
+        "suffix": ". We use a batch",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "hp:low_data_summarization_prefix_batch_size",
+      "@type": "MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 63995,
+        "end_char_doc": 64005,
+        "prefix": "summarization; We select the largest",
+        "suffix": "that can fit into GPU",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "batch size",
+        "start_char_doc": 63995,
+        "end_char_doc": 64005,
+        "prefix": "summarization; We select the largest",
+        "suffix": "that can fit into GPU",
+        "valueSource": "extracted"
+      },
+      "hpCategory": "HP_Training",
+      "hpType": "BatchSize",
+      "schema:identifier": {
+        "value": "batch size",
+        "start_char_doc": 63995,
+        "end_char_doc": 64005,
+        "prefix": "summarization; We select the largest",
+        "suffix": "that can fit into GPU",
+        "valueSource": "extracted"
+      },
+      "schema:value": {
+        "value": "5",
+        "start_char_doc": 64934,
+        "end_char_doc": 64935,
+        "prefix": "use a batch size of",
+        "suffix": "for prefix-tuning and 6 for",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "hp:low_data_summarization_finetune_batch_size",
+      "@type": "MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 63995,
+        "end_char_doc": 64005,
+        "prefix": "summarization; We select the largest",
+        "suffix": "that can fit into GPU",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "batch size",
+        "start_char_doc": 63995,
+        "end_char_doc": 64005,
+        "prefix": "summarization; We select the largest",
+        "suffix": "that can fit into GPU",
+        "valueSource": "extracted"
+      },
+      "hpCategory": "HP_Training",
+      "hpType": "BatchSize",
+      "schema:identifier": {
+        "value": "batch size",
+        "start_char_doc": 63995,
+        "end_char_doc": 64005,
+        "prefix": "summarization; We select the largest",
+        "suffix": "that can fit into GPU",
+        "valueSource": "extracted"
+      },
+      "schema:value": {
+        "value": "6",
+        "start_char_doc": 64958,
+        "end_char_doc": 64959,
+        "prefix": "of 5 for prefix-tuning and",
+        "suffix": "for fine-tuning. We apply the",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "hp:low_data_summarization_prefix_length",
+      "@type": "MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 64437,
+        "end_char_doc": 64450,
+        "prefix": "of 10. We use a",
+        "suffix": "of 6, since we apply",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "prefix length",
+        "start_char_doc": 64437,
+        "end_char_doc": 64450,
+        "prefix": "of 10. We use a",
+        "suffix": "of 6, since we apply",
+        "valueSource": "extracted"
+      },
+      "hpCategory": "HP_Architecture",
+      "hpType": "HP_Architecture",
+      "schema:identifier": {
+        "value": "prefix length",
+        "start_char_doc": 64437,
+        "end_char_doc": 64450,
+        "prefix": "of 10. We use a",
+        "suffix": "of 6, since we apply",
+        "valueSource": "extracted"
+      },
+      "schema:value": {
+        "value": "1",
+        "start_char_doc": 68895,
+        "end_char_doc": 68896,
+        "prefix": "in a prefix length of",
+        "suffix": ". We tune the number",
+        "valueSource": "extracted"
+      },
+      "uncertain": {
+        "value": true,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:low_data_summarization_epochs_search_space",
+      "@type": "MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 63876,
+        "end_char_doc": 63892,
+        "prefix": "from {1e-5, 5e-05, 8e-05}; the",
+        "suffix": "are selected from {5, 10}",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "number of epochs",
+        "start_char_doc": 63876,
+        "end_char_doc": 63892,
+        "prefix": "from {1e-5, 5e-05, 8e-05}; the",
+        "suffix": "are selected from {5, 10}",
+        "valueSource": "extracted"
+      },
+      "hpCategory": "HP_Training",
+      "hpType": "NumEpochs",
+      "schema:identifier": {
+        "value": "number of epochs",
+        "start_char_doc": 63876,
+        "end_char_doc": 63892,
+        "prefix": "from {1e-5, 5e-05, 8e-05}; the",
+        "suffix": "are selected from {5, 10}",
+        "valueSource": "extracted"
+      },
+      "schema:value": {
+        "value": "{3, 5, 10, 20, 30}",
+        "start_char_doc": 68930,
+        "end_char_doc": 68948,
+        "prefix": "the number of epochs in",
+        "suffix": ", shown in Table 8.",
+        "valueSource": "extracted"
+      },
+      "searchSpace": {
+        "value": "{3, 5, 10, 20, 30}",
+        "start_char_doc": 68930,
+        "end_char_doc": 68948,
+        "prefix": "the number of epochs in",
+        "suffix": ", shown in Table 8.",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "hp:prefix_e2e_learning_rate",
+      "@type": "MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 63817,
+        "end_char_doc": 63830,
+        "prefix": "range of each hyperparameters: the",
+        "suffix": "s are selected from {1e-5,",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "learning rate",
+        "start_char_doc": 63817,
+        "end_char_doc": 63830,
+        "prefix": "range of each hyperparameters: the",
+        "suffix": "s are selected from {1e-5,",
+        "valueSource": "extracted"
+      },
+      "hpCategory": "HP_Optimization",
+      "hpType": "LearningRate",
+      "schema:identifier": {
+        "value": "learning rate",
+        "start_char_doc": 63817,
+        "end_char_doc": 63830,
+        "prefix": "range of each hyperparameters: the",
+        "suffix": "s are selected from {1e-5,",
+        "valueSource": "extracted"
+      },
+      "schema:value": {
+        "value": "8e-05",
+        "start_char_doc": 65523,
+        "end_char_doc": 65528,
+        "prefix": "<td></td> </tr> <tr> <td>E2E</td> <td>",
+        "suffix": "</td> <td>5</td> <td>10</td> <td>5</td> </tr>",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "hp:prefix_e2e_num_epochs",
+      "@type": "MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 65280,
+        "end_char_doc": 65287,
+        "prefix": "<tr> <th></th> <th>learning rate</th> <th>",
+        "suffix": "</th> <th>batch size</th> <th>prefix length</th>",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "# epoch",
+        "start_char_doc": 65280,
+        "end_char_doc": 65287,
+        "prefix": "<tr> <th></th> <th>learning rate</th> <th>",
+        "suffix": "</th> <th>batch size</th> <th>prefix length</th>",
+        "valueSource": "extracted"
+      },
+      "hpCategory": "HP_Training",
+      "hpType": "NumEpochs",
+      "schema:identifier": {
+        "value": "# epoch",
+        "start_char_doc": 65280,
+        "end_char_doc": 65287,
+        "prefix": "<tr> <th></th> <th>learning rate</th> <th>",
+        "suffix": "</th> <th>batch size</th> <th>prefix length</th>",
+        "valueSource": "extracted"
+      },
+      "schema:value": {
+        "value": "5",
+        "start_char_doc": 65527,
+        "end_char_doc": 65528,
+        "prefix": "<td></td> </tr> <tr> <td>E2E</td> <td>8e-0",
+        "suffix": "</td> <td>5</td> <td>10</td> <td>5</td> </tr>",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "hp:prefix_e2e_batch_size",
+      "@type": "MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 63995,
+        "end_char_doc": 64005,
+        "prefix": "summarization; We select the largest",
+        "suffix": "that can fit into GPU",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "batch size",
+        "start_char_doc": 63995,
+        "end_char_doc": 64005,
+        "prefix": "summarization; We select the largest",
+        "suffix": "that can fit into GPU",
+        "valueSource": "extracted"
+      },
+      "hpCategory": "HP_Training",
+      "hpType": "BatchSize",
+      "schema:identifier": {
+        "value": "batch size",
+        "start_char_doc": 63995,
+        "end_char_doc": 64005,
+        "prefix": "summarization; We select the largest",
+        "suffix": "that can fit into GPU",
+        "valueSource": "extracted"
+      },
+      "schema:value": {
+        "value": "10",
+        "start_char_doc": 65561,
+        "end_char_doc": 65563,
+        "prefix": "<tr> <td>E2E</td> <td>8e-05</td> <td>5</td> <td>",
+        "suffix": "</td> <td>5</td> </tr> <tr> <td>WebNLG</td>",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "hp:prefix_e2e_prefix_length",
+      "@type": "MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 64437,
+        "end_char_doc": 64450,
+        "prefix": "of 10. We use a",
+        "suffix": "of 6, since we apply",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "prefix length",
+        "start_char_doc": 64437,
+        "end_char_doc": 64450,
+        "prefix": "of 10. We use a",
+        "suffix": "of 6, since we apply",
+        "valueSource": "extracted"
+      },
+      "hpCategory": "HP_Architecture",
+      "hpType": "HP_Architecture",
+      "schema:identifier": {
+        "value": "prefix length",
+        "start_char_doc": 64437,
+        "end_char_doc": 64450,
+        "prefix": "of 10. We use a",
+        "suffix": "of 6, since we apply",
+        "valueSource": "extracted"
+      },
+      "schema:value": {
+        "value": "5",
+        "start_char_doc": 65527,
+        "end_char_doc": 65528,
+        "prefix": "<td></td> </tr> <tr> <td>E2E</td> <td>8e-0",
+        "suffix": "</td> <td>5</td> <td>10</td> <td>5</td> </tr>",
+        "valueSource": "extracted"
+      },
+      "uncertain": {
+        "value": true,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:prefix_webnlg_learning_rate",
+      "@type": "MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 63817,
+        "end_char_doc": 63830,
+        "prefix": "range of each hyperparameters: the",
+        "suffix": "s are selected from {1e-5,",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "learning rate",
+        "start_char_doc": 63817,
+        "end_char_doc": 63830,
+        "prefix": "range of each hyperparameters: the",
+        "suffix": "s are selected from {1e-5,",
+        "valueSource": "extracted"
+      },
+      "hpCategory": "HP_Optimization",
+      "hpType": "LearningRate",
+      "schema:identifier": {
+        "value": "learning rate",
+        "start_char_doc": 63817,
+        "end_char_doc": 63830,
+        "prefix": "range of each hyperparameters: the",
+        "suffix": "s are selected from {1e-5,",
+        "valueSource": "extracted"
+      },
+      "schema:value": {
+        "value": "5e-05",
+        "start_char_doc": 65637,
+        "end_char_doc": 65642,
+        "prefix": "<td>5</td> </tr> <tr> <td>WebNLG</td> <td>",
+        "suffix": "</td> <td>5</td> <td>5</td> <td>5</td> </tr>",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "hp:prefix_webnlg_num_epochs",
+      "@type": "MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 65280,
+        "end_char_doc": 65287,
+        "prefix": "<tr> <th></th> <th>learning rate</th> <th>",
+        "suffix": "</th> <th>batch size</th> <th>prefix length</th>",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "# epoch",
+        "start_char_doc": 65280,
+        "end_char_doc": 65287,
+        "prefix": "<tr> <th></th> <th>learning rate</th> <th>",
+        "suffix": "</th> <th>batch size</th> <th>prefix length</th>",
+        "valueSource": "extracted"
+      },
+      "hpCategory": "HP_Training",
+      "hpType": "NumEpochs",
+      "schema:identifier": {
+        "value": "# epoch",
+        "start_char_doc": 65280,
+        "end_char_doc": 65287,
+        "prefix": "<tr> <th></th> <th>learning rate</th> <th>",
+        "suffix": "</th> <th>batch size</th> <th>prefix length</th>",
+        "valueSource": "extracted"
+      },
+      "schema:value": {
+        "value": "5",
+        "start_char_doc": 65637,
+        "end_char_doc": 65638,
+        "prefix": "<td>5</td> </tr> <tr> <td>WebNLG</td> <td>",
+        "suffix": "e-05</td> <td>5</td> <td>5</td> <td>5</td> </tr>",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "hp:prefix_webnlg_batch_size",
+      "@type": "MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 63995,
+        "end_char_doc": 64005,
+        "prefix": "summarization; We select the largest",
+        "suffix": "that can fit into GPU",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "batch size",
+        "start_char_doc": 63995,
+        "end_char_doc": 64005,
+        "prefix": "summarization; We select the largest",
+        "suffix": "that can fit into GPU",
+        "valueSource": "extracted"
+      },
+      "hpCategory": "HP_Training",
+      "hpType": "BatchSize",
+      "schema:identifier": {
+        "value": "batch size",
+        "start_char_doc": 63995,
+        "end_char_doc": 64005,
+        "prefix": "summarization; We select the largest",
+        "suffix": "that can fit into GPU",
+        "valueSource": "extracted"
+      },
+      "schema:value": {
+        "value": "5",
+        "start_char_doc": 65637,
+        "end_char_doc": 65638,
+        "prefix": "<td>5</td> </tr> <tr> <td>WebNLG</td> <td>",
+        "suffix": "e-05</td> <td>5</td> <td>5</td> <td>5</td> </tr>",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "hp:prefix_webnlg_prefix_length",
+      "@type": "MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 64437,
+        "end_char_doc": 64450,
+        "prefix": "of 10. We use a",
+        "suffix": "of 6, since we apply",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "prefix length",
+        "start_char_doc": 64437,
+        "end_char_doc": 64450,
+        "prefix": "of 10. We use a",
+        "suffix": "of 6, since we apply",
+        "valueSource": "extracted"
+      },
+      "hpCategory": "HP_Architecture",
+      "hpType": "HP_Architecture",
+      "schema:identifier": {
+        "value": "prefix length",
+        "start_char_doc": 64437,
+        "end_char_doc": 64450,
+        "prefix": "of 10. We use a",
+        "suffix": "of 6, since we apply",
+        "valueSource": "extracted"
+      },
+      "schema:value": {
+        "value": "5",
+        "start_char_doc": 65637,
+        "end_char_doc": 65638,
+        "prefix": "<td>5</td> </tr> <tr> <td>WebNLG</td> <td>",
+        "suffix": "e-05</td> <td>5</td> <td>5</td> <td>5</td> </tr>",
+        "valueSource": "extracted"
+      },
+      "uncertain": {
+        "value": true,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:prefix_dart_learning_rate",
+      "@type": "MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 63817,
+        "end_char_doc": 63830,
+        "prefix": "range of each hyperparameters: the",
+        "suffix": "s are selected from {1e-5,",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "learning rate",
+        "start_char_doc": 63817,
+        "end_char_doc": 63830,
+        "prefix": "range of each hyperparameters: the",
+        "suffix": "s are selected from {1e-5,",
+        "valueSource": "extracted"
+      },
+      "hpCategory": "HP_Optimization",
+      "hpType": "LearningRate",
+      "schema:identifier": {
+        "value": "learning rate",
+        "start_char_doc": 63817,
+        "end_char_doc": 63830,
+        "prefix": "range of each hyperparameters: the",
+        "suffix": "s are selected from {1e-5,",
+        "valueSource": "extracted"
+      },
+      "schema:value": {
+        "value": "5e-05",
+        "start_char_doc": 65748,
+        "end_char_doc": 65753,
+        "prefix": "<td>5</td> </tr> <tr> <td>DART</td> <td>",
+        "suffix": "</td> <td>10</td> <td>5</td> <td>10</td> </tr>",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "hp:prefix_dart_num_epochs",
+      "@type": "MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 65280,
+        "end_char_doc": 65287,
+        "prefix": "<tr> <th></th> <th>learning rate</th> <th>",
+        "suffix": "</th> <th>batch size</th> <th>prefix length</th>",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "# epoch",
+        "start_char_doc": 65280,
+        "end_char_doc": 65287,
+        "prefix": "<tr> <th></th> <th>learning rate</th> <th>",
+        "suffix": "</th> <th>batch size</th> <th>prefix length</th>",
+        "valueSource": "extracted"
+      },
+      "hpCategory": "HP_Training",
+      "hpType": "NumEpochs",
+      "schema:identifier": {
+        "value": "# epoch",
+        "start_char_doc": 65280,
+        "end_char_doc": 65287,
+        "prefix": "<tr> <th></th> <th>learning rate</th> <th>",
+        "suffix": "</th> <th>batch size</th> <th>prefix length</th>",
+        "valueSource": "extracted"
+      },
+      "schema:value": {
+        "value": "10",
+        "start_char_doc": 65769,
+        "end_char_doc": 65771,
+        "prefix": "</tr> <tr> <td>DART</td> <td>5e-05</td> <td>",
+        "suffix": "</td> <td>5</td> <td>10</td> </tr> <tr>",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "hp:prefix_dart_batch_size",
+      "@type": "MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 63995,
+        "end_char_doc": 64005,
+        "prefix": "summarization; We select the largest",
+        "suffix": "that can fit into GPU",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "batch size",
+        "start_char_doc": 63995,
+        "end_char_doc": 64005,
+        "prefix": "summarization; We select the largest",
+        "suffix": "that can fit into GPU",
+        "valueSource": "extracted"
+      },
+      "hpCategory": "HP_Training",
+      "hpType": "BatchSize",
+      "schema:identifier": {
+        "value": "batch size",
+        "start_char_doc": 63995,
+        "end_char_doc": 64005,
+        "prefix": "summarization; We select the largest",
+        "suffix": "that can fit into GPU",
+        "valueSource": "extracted"
+      },
+      "schema:value": {
+        "value": "5",
+        "start_char_doc": 65748,
+        "end_char_doc": 65749,
+        "prefix": "<td>5</td> </tr> <tr> <td>DART</td> <td>",
+        "suffix": "e-05</td> <td>10</td> <td>5</td> <td>10</td> </tr>",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "hp:prefix_dart_prefix_length",
+      "@type": "MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 64437,
+        "end_char_doc": 64450,
+        "prefix": "of 10. We use a",
+        "suffix": "of 6, since we apply",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "prefix length",
+        "start_char_doc": 64437,
+        "end_char_doc": 64450,
+        "prefix": "of 10. We use a",
+        "suffix": "of 6, since we apply",
+        "valueSource": "extracted"
+      },
+      "hpCategory": "HP_Architecture",
+      "hpType": "HP_Architecture",
+      "schema:identifier": {
+        "value": "prefix length",
+        "start_char_doc": 64437,
+        "end_char_doc": 64450,
+        "prefix": "of 10. We use a",
+        "suffix": "of 6, since we apply",
+        "valueSource": "extracted"
+      },
+      "schema:value": {
+        "value": "10",
+        "start_char_doc": 65769,
+        "end_char_doc": 65771,
+        "prefix": "</tr> <tr> <td>DART</td> <td>5e-05</td> <td>",
+        "suffix": "</td> <td>5</td> <td>10</td> </tr> <tr>",
+        "valueSource": "extracted"
+      },
+      "uncertain": {
+        "value": true,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:prefix_xsum_learning_rate",
+      "@type": "MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 63817,
+        "end_char_doc": 63830,
+        "prefix": "range of each hyperparameters: the",
+        "suffix": "s are selected from {1e-5,",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "learning rate",
+        "start_char_doc": 63817,
+        "end_char_doc": 63830,
+        "prefix": "range of each hyperparameters: the",
+        "suffix": "s are selected from {1e-5,",
+        "valueSource": "extracted"
+      },
+      "hpCategory": "HP_Optimization",
+      "hpType": "LearningRate",
+      "schema:identifier": {
+        "value": "learning rate",
+        "start_char_doc": 63817,
+        "end_char_doc": 63830,
+        "prefix": "range of each hyperparameters: the",
+        "suffix": "s are selected from {1e-5,",
+        "valueSource": "extracted"
+      },
+      "schema:value": {
+        "value": "5e-05",
+        "start_char_doc": 65861,
+        "end_char_doc": 65866,
+        "prefix": "<td>10</td> </tr> <tr> <td>XSUM</td> <td>",
+        "suffix": "</td> <td>30</td> <td>14</td> <td>100</td> </tr>",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "hp:prefix_xsum_num_epochs",
+      "@type": "MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 65280,
+        "end_char_doc": 65287,
+        "prefix": "<tr> <th></th> <th>learning rate</th> <th>",
+        "suffix": "</th> <th>batch size</th> <th>prefix length</th>",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "# epoch",
+        "start_char_doc": 65280,
+        "end_char_doc": 65287,
+        "prefix": "<tr> <th></th> <th>learning rate</th> <th>",
+        "suffix": "</th> <th>batch size</th> <th>prefix length</th>",
+        "valueSource": "extracted"
+      },
+      "hpCategory": "HP_Training",
+      "hpType": "NumEpochs",
+      "schema:identifier": {
+        "value": "# epoch",
+        "start_char_doc": 65280,
+        "end_char_doc": 65287,
+        "prefix": "<tr> <th></th> <th>learning rate</th> <th>",
+        "suffix": "</th> <th>batch size</th> <th>prefix length</th>",
+        "valueSource": "extracted"
+      },
+      "schema:value": {
+        "value": "30",
+        "start_char_doc": 65882,
+        "end_char_doc": 65884,
+        "prefix": "</tr> <tr> <td>XSUM</td> <td>5e-05</td> <td>",
+        "suffix": "</td> <td>14</td> <td>100</td> </tr> <tr>",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "hp:prefix_xsum_batch_size",
+      "@type": "MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 63995,
+        "end_char_doc": 64005,
+        "prefix": "summarization; We select the largest",
+        "suffix": "that can fit into GPU",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "batch size",
+        "start_char_doc": 63995,
+        "end_char_doc": 64005,
+        "prefix": "summarization; We select the largest",
+        "suffix": "that can fit into GPU",
+        "valueSource": "extracted"
+      },
+      "hpCategory": "HP_Training",
+      "hpType": "BatchSize",
+      "schema:identifier": {
+        "value": "batch size",
+        "start_char_doc": 63995,
+        "end_char_doc": 64005,
+        "prefix": "summarization; We select the largest",
+        "suffix": "that can fit into GPU",
+        "valueSource": "extracted"
+      },
+      "schema:value": {
+        "value": "14",
+        "start_char_doc": 65900,
+        "end_char_doc": 65902,
+        "prefix": "<tr> <td>XSUM</td> <td>5e-05</td> <td>30</td> <td>",
+        "suffix": "</td> <td>100</td> </tr> <tr> <td>Adapter:</td>",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "hp:prefix_xsum_prefix_length",
+      "@type": "MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 64437,
+        "end_char_doc": 64450,
+        "prefix": "of 10. We use a",
+        "suffix": "of 6, since we apply",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "prefix length",
+        "start_char_doc": 64437,
+        "end_char_doc": 64450,
+        "prefix": "of 10. We use a",
+        "suffix": "of 6, since we apply",
+        "valueSource": "extracted"
+      },
+      "hpCategory": "HP_Architecture",
+      "hpType": "HP_Architecture",
+      "schema:identifier": {
+        "value": "prefix length",
+        "start_char_doc": 64437,
+        "end_char_doc": 64450,
+        "prefix": "of 10. We use a",
+        "suffix": "of 6, since we apply",
+        "valueSource": "extracted"
+      },
+      "schema:value": {
+        "value": "100",
+        "start_char_doc": 65918,
+        "end_char_doc": 65921,
+        "prefix": "<td>XSUM</td> <td>5e-05</td> <td>30</td> <td>14</td> <td>",
+        "suffix": "</td> </tr> <tr> <td>Adapter:</td> <td></td>",
+        "valueSource": "extracted"
+      },
+      "uncertain": {
+        "value": true,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:prefix_within_news_learning_rate",
+      "@type": "MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 63817,
+        "end_char_doc": 63830,
+        "prefix": "range of each hyperparameters: the",
+        "suffix": "s are selected from {1e-5,",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "learning rate",
+        "start_char_doc": 63817,
+        "end_char_doc": 63830,
+        "prefix": "range of each hyperparameters: the",
+        "suffix": "s are selected from {1e-5,",
+        "valueSource": "extracted"
+      },
+      "hpCategory": "HP_Optimization",
+      "hpType": "LearningRate",
+      "schema:identifier": {
+        "value": "learning rate",
+        "start_char_doc": 63817,
+        "end_char_doc": 63830,
+        "prefix": "range of each hyperparameters: the",
+        "suffix": "s are selected from {1e-5,",
+        "valueSource": "extracted"
+      },
+      "schema:value": {
+        "value": "5e-5",
+        "start_char_doc": 67905,
+        "end_char_doc": 67909,
+        "prefix": "<td>-</td> </tr> <tr> <td>Prefix</td> <td>",
+        "suffix": "</td> <td>30</td> <td>36</td> <td>80</td> </tr>",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "hp:prefix_within_news_num_epochs",
+      "@type": "MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 65280,
+        "end_char_doc": 65287,
+        "prefix": "<tr> <th></th> <th>learning rate</th> <th>",
+        "suffix": "</th> <th>batch size</th> <th>prefix length</th>",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "# epoch",
+        "start_char_doc": 65280,
+        "end_char_doc": 65287,
+        "prefix": "<tr> <th></th> <th>learning rate</th> <th>",
+        "suffix": "</th> <th>batch size</th> <th>prefix length</th>",
+        "valueSource": "extracted"
+      },
+      "hpCategory": "HP_Training",
+      "hpType": "NumEpochs",
+      "schema:identifier": {
+        "value": "# epoch",
+        "start_char_doc": 65280,
+        "end_char_doc": 65287,
+        "prefix": "<tr> <th></th> <th>learning rate</th> <th>",
+        "suffix": "</th> <th>batch size</th> <th>prefix length</th>",
+        "valueSource": "extracted"
+      },
+      "schema:value": {
+        "value": "30",
+        "start_char_doc": 67925,
+        "end_char_doc": 67927,
+        "prefix": "</tr> <tr> <td>Prefix</td> <td>5e-5</td> <td>",
+        "suffix": "</td> <td>36</td> <td>80</td> </tr> <tr>",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "hp:prefix_within_news_batch_size",
+      "@type": "MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 63995,
+        "end_char_doc": 64005,
+        "prefix": "summarization; We select the largest",
+        "suffix": "that can fit into GPU",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "batch size",
+        "start_char_doc": 63995,
+        "end_char_doc": 64005,
+        "prefix": "summarization; We select the largest",
+        "suffix": "that can fit into GPU",
+        "valueSource": "extracted"
+      },
+      "hpCategory": "HP_Training",
+      "hpType": "BatchSize",
+      "schema:identifier": {
+        "value": "batch size",
+        "start_char_doc": 63995,
+        "end_char_doc": 64005,
+        "prefix": "summarization; We select the largest",
+        "suffix": "that can fit into GPU",
+        "valueSource": "extracted"
+      },
+      "schema:value": {
+        "value": "36",
+        "start_char_doc": 67943,
+        "end_char_doc": 67945,
+        "prefix": "<tr> <td>Prefix</td> <td>5e-5</td> <td>30</td> <td>",
+        "suffix": "</td> <td>80</td> </tr> <tr> <td>news-to-sports</td>",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "hp:prefix_within_news_prefix_length",
+      "@type": "MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 64437,
+        "end_char_doc": 64450,
+        "prefix": "of 10. We use a",
+        "suffix": "of 6, since we apply",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "prefix length",
+        "start_char_doc": 64437,
+        "end_char_doc": 64450,
+        "prefix": "of 10. We use a",
+        "suffix": "of 6, since we apply",
+        "valueSource": "extracted"
+      },
+      "hpCategory": "HP_Architecture",
+      "hpType": "HP_Architecture",
+      "schema:identifier": {
+        "value": "prefix length",
+        "start_char_doc": 64437,
+        "end_char_doc": 64450,
+        "prefix": "of 10. We use a",
+        "suffix": "of 6, since we apply",
+        "valueSource": "extracted"
+      },
+      "schema:value": {
+        "value": "80",
+        "start_char_doc": 67961,
+        "end_char_doc": 67963,
+        "prefix": "<td>Prefix</td> <td>5e-5</td> <td>30</td> <td>36</td> <td>",
+        "suffix": "</td> </tr> <tr> <td>news-to-sports</td> <td></td>",
+        "valueSource": "extracted"
+      },
+      "uncertain": {
+        "value": true,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:prefix_news_to_sports_learning_rate",
+      "@type": "MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 63817,
+        "end_char_doc": 63830,
+        "prefix": "range of each hyperparameters: the",
+        "suffix": "s are selected from {1e-5,",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "learning rate",
+        "start_char_doc": 63817,
+        "end_char_doc": 63830,
+        "prefix": "range of each hyperparameters: the",
+        "suffix": "s are selected from {1e-5,",
+        "valueSource": "extracted"
+      },
+      "hpCategory": "HP_Optimization",
+      "hpType": "LearningRate",
+      "schema:identifier": {
+        "value": "learning rate",
+        "start_char_doc": 63817,
+        "end_char_doc": 63830,
+        "prefix": "range of each hyperparameters: the",
+        "suffix": "s are selected from {1e-5,",
+        "valueSource": "extracted"
+      },
+      "schema:value": {
+        "value": "5e-5",
+        "start_char_doc": 68249,
+        "end_char_doc": 68253,
+        "prefix": "<td>-</td> </tr> <tr> <td>Prefix</td> <td>",
+        "suffix": "</td> <td>15</td> <td>36</td> <td>40</td> </tr>",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "hp:prefix_news_to_sports_num_epochs",
+      "@type": "MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 65280,
+        "end_char_doc": 65287,
+        "prefix": "<tr> <th></th> <th>learning rate</th> <th>",
+        "suffix": "</th> <th>batch size</th> <th>prefix length</th>",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "# epoch",
+        "start_char_doc": 65280,
+        "end_char_doc": 65287,
+        "prefix": "<tr> <th></th> <th>learning rate</th> <th>",
+        "suffix": "</th> <th>batch size</th> <th>prefix length</th>",
+        "valueSource": "extracted"
+      },
+      "hpCategory": "HP_Training",
+      "hpType": "NumEpochs",
+      "schema:identifier": {
+        "value": "# epoch",
+        "start_char_doc": 65280,
+        "end_char_doc": 65287,
+        "prefix": "<tr> <th></th> <th>learning rate</th> <th>",
+        "suffix": "</th> <th>batch size</th> <th>prefix length</th>",
+        "valueSource": "extracted"
+      },
+      "schema:value": {
+        "value": "15",
+        "start_char_doc": 68269,
+        "end_char_doc": 68271,
+        "prefix": "</tr> <tr> <td>Prefix</td> <td>5e-5</td> <td>",
+        "suffix": "</td> <td>36</td> <td>40</td> </tr> </tbody>",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "hp:prefix_news_to_sports_batch_size",
+      "@type": "MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 63995,
+        "end_char_doc": 64005,
+        "prefix": "summarization; We select the largest",
+        "suffix": "that can fit into GPU",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "batch size",
+        "start_char_doc": 63995,
+        "end_char_doc": 64005,
+        "prefix": "summarization; We select the largest",
+        "suffix": "that can fit into GPU",
+        "valueSource": "extracted"
+      },
+      "hpCategory": "HP_Training",
+      "hpType": "BatchSize",
+      "schema:identifier": {
+        "value": "batch size",
+        "start_char_doc": 63995,
+        "end_char_doc": 64005,
+        "prefix": "summarization; We select the largest",
+        "suffix": "that can fit into GPU",
+        "valueSource": "extracted"
+      },
+      "schema:value": {
+        "value": "36",
+        "start_char_doc": 68287,
+        "end_char_doc": 68289,
+        "prefix": "<tr> <td>Prefix</td> <td>5e-5</td> <td>15</td> <td>",
+        "suffix": "</td> <td>40</td> </tr> </tbody> </table>",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "hp:prefix_news_to_sports_prefix_length",
+      "@type": "MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 64437,
+        "end_char_doc": 64450,
+        "prefix": "of 10. We use a",
+        "suffix": "of 6, since we apply",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "prefix length",
+        "start_char_doc": 64437,
+        "end_char_doc": 64450,
+        "prefix": "of 10. We use a",
+        "suffix": "of 6, since we apply",
+        "valueSource": "extracted"
+      },
+      "hpCategory": "HP_Architecture",
+      "hpType": "HP_Architecture",
+      "schema:identifier": {
+        "value": "prefix length",
+        "start_char_doc": 64437,
+        "end_char_doc": 64450,
+        "prefix": "of 10. We use a",
+        "suffix": "of 6, since we apply",
+        "valueSource": "extracted"
+      },
+      "schema:value": {
+        "value": "40",
+        "start_char_doc": 68305,
+        "end_char_doc": 68307,
+        "prefix": "<td>Prefix</td> <td>5e-5</td> <td>15</td> <td>36</td> <td>",
+        "suffix": "</td> </tr> </tbody> </table> Table",
+        "valueSource": "extracted"
+      },
+      "uncertain": {
+        "value": true,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "exp:prefix_tuning_table_to_text_generation",
+      "@type": "Experiment",
+      "mention": {
+        "start_char_doc": 23387,
+        "end_char_doc": 23411,
+        "prefix": "7 prefix-tuning is effective in",
+        "suffix": ", outperforming other lightweight baselines",
+        "valueSource": "extracted"
+      },
+      "schema:identifier": {
+        "value": "Table-to-text Generation",
+        "start_char_doc": 23268,
+        "end_char_doc": 23292,
+        "prefix": "6 Main Results ## 6.1",
+        "suffix": "We find that by updating",
+        "valueSource": "extracted"
+      },
+      "schema:objective": {
+        "value": "adapt GPT-2 to table-to-text generation",
+        "start_char_doc": 24574,
+        "end_char_doc": 24613,
+        "prefix": "effective and space-efficient method to",
+        "suffix": ". It also maintains the",
+        "valueSource": "extracted"
+      },
+      "schema:hypothesis": {
+        "value": "prefix-tuning is an effective and space-efficient method to adapt GPT-2 to table-to-text generation",
+        "start_char_doc": 24514,
+        "end_char_doc": 24613,
+        "prefix": "topics) in §6.4. In summary,",
+        "suffix": ". It also maintains the",
+        "valueSource": "extracted"
+      },
+      "schema:description": {
+        "value": "With only 0.1% parameters, Prefix-tuning outperforms other lightweight baselines and achieves a comparable performance with fine-tuning.",
+        "start_char_doc": 32560,
+        "end_char_doc": 32696,
+        "prefix": "WebNLG (middle) and DART (right).",
+        "suffix": "The best score is boldfaced",
+        "valueSource": "extracted"
+      },
+      "realizes": [
+        {
+          "@id": "task:table_to_text_generation"
+        }
+      ],
+      "usesData": [
+        {
+          "@id": "dataset:e2e"
+        },
+        {
+          "@id": "dataset:webnlg"
+        },
+        {
+          "@id": "dataset:dart"
+        }
+      ],
+      "trainedOn": [
+        {
+          "@id": "dataset:e2e"
+        },
+        {
+          "@id": "dataset:webnlg"
+        },
+        {
+          "@id": "dataset:dart"
+        }
+      ],
+      "benchmarkedOn": [
+        {
+          "@id": "dataset:e2e"
+        },
+        {
+          "@id": "dataset:webnlg"
+        },
+        {
+          "@id": "dataset:dart"
+        }
+      ],
+      "uses": [
+        {
+          "@id": "method:prefix_tuning"
+        },
+        {
+          "@id": "method:table_linearization"
+        },
+        {
+          "@id": "model:gpt_2_medium"
+        },
+        {
+          "@id": "model:gpt_2_large"
+        },
+        {
+          "@id": "algo:adamw"
+        },
+        {
+          "@id": "algo:linear_learning_rate_scheduler"
+        },
+        {
+          "@id": "algo:beam_search"
+        }
+      ],
+      "achieves": [
+        {
+          "@id": "eval:bleu"
+        },
+        {
+          "@id": "eval:nist"
+        },
+        {
+          "@id": "eval:meteor"
+        },
+        {
+          "@id": "eval:rouge_l"
+        },
+        {
+          "@id": "eval:cider"
+        },
+        {
+          "@id": "eval:ter"
+        },
+        {
+          "@id": "eval:moverscore"
+        },
+        {
+          "@id": "eval:bertscore"
+        },
+        {
+          "@id": "eval:bleurt"
+        }
+      ],
+      "usesParameters": [
+        {
+          "@id": "hp:learning_rate_search_space"
+        },
+        {
+          "@id": "hp:num_epochs_table_to_text_search_space"
+        },
+        {
+          "@id": "hp:prefix_length_table_to_text_search_space"
+        },
+        {
+          "@id": "hp:default_num_epochs"
+        },
+        {
+          "@id": "hp:default_batch_size"
+        },
+        {
+          "@id": "hp:default_learning_rate"
+        },
+        {
+          "@id": "hp:default_prefix_length"
+        },
+        {
+          "@id": "hp:projection_dim_table_to_text"
+        },
+        {
+          "@id": "hp:beam_size_table_to_text"
+        },
+        {
+          "@id": "hp:prefix_e2e_learning_rate"
+        },
+        {
+          "@id": "hp:prefix_e2e_num_epochs"
+        },
+        {
+          "@id": "hp:prefix_e2e_batch_size"
+        },
+        {
+          "@id": "hp:prefix_e2e_prefix_length"
+        },
+        {
+          "@id": "hp:prefix_webnlg_learning_rate"
+        },
+        {
+          "@id": "hp:prefix_webnlg_num_epochs"
+        },
+        {
+          "@id": "hp:prefix_webnlg_batch_size"
+        },
+        {
+          "@id": "hp:prefix_webnlg_prefix_length"
+        },
+        {
+          "@id": "hp:prefix_dart_learning_rate"
+        },
+        {
+          "@id": "hp:prefix_dart_num_epochs"
+        },
+        {
+          "@id": "hp:prefix_dart_batch_size"
+        },
+        {
+          "@id": "hp:prefix_dart_prefix_length"
+        }
+      ],
+      "wasAssociatedWith": {
+        "@id": "study:prefix_tuning_optimizing_continuous_prompts_for_generation_2021"
+      },
+      "runsIn": [
+        {
+          "@id": "env:titan_xp"
+        },
+        {
+          "@id": "env:geforce_gtx_titan_x"
+        }
+      ]
+    },
+    {
+      "@id": "exp:prefix_tuning_xsum_summarization",
+      "@type": "Experiment",
+      "mention": {
+        "start_char_doc": 25694,
+        "end_char_doc": 25707,
+        "prefix": "table-to-text datasets on average; (3)",
+        "suffix": "is more complex than table-to-text",
+        "valueSource": "extracted"
+      },
+      "schema:identifier": {
+        "value": "Summarization",
+        "start_char_doc": 24803,
+        "end_char_doc": 24816,
+        "prefix": "architecture, like GPT-3. ## 6.2",
+        "suffix": "As shown in Table 3,",
+        "valueSource": "extracted"
+      },
+      "schema:objective": {
+        "value": "For summarization, we use BART$_{LARGE}$.",
+        "start_char_doc": 20558,
+        "end_char_doc": 20599,
+        "prefix": "we use GPT-2$_{MEDIUM}$ and GPT-2$_{LARGE}$.",
+        "suffix": "Our implementation is based on",
+        "valueSource": "extracted"
+      },
+      "schema:hypothesis": {
+        "value": "prefix-tuning obtains slightly lower performance than fine-tuning",
+        "start_char_doc": 24859,
+        "end_char_doc": 24924,
+        "prefix": "Table 3, with 2% parameters,",
+        "suffix": "(36.05 vs. 37.25 in ROUGE-L).",
+        "valueSource": "extracted"
+      },
+      "schema:description": {
+        "value": "Prefix-tuning slightly underperforms fine-tuning in the full-data regime.",
+        "start_char_doc": 35609,
+        "end_char_doc": 35682,
+        "prefix": "on the XSUM summarization dataset.",
+        "suffix": "<table> <thead> <tr> <th></th> <th",
+        "valueSource": "extracted"
+      },
+      "realizes": [
+        {
+          "@id": "task:abstractive_summarization"
+        }
+      ],
+      "usesData": [
+        {
+          "@id": "dataset:xsum"
+        }
+      ],
+      "trainedOn": [
+        {
+          "@id": "dataset:xsum"
+        }
+      ],
+      "benchmarkedOn": [
+        {
+          "@id": "dataset:xsum"
+        }
+      ],
+      "uses": [
+        {
+          "@id": "method:prefix_tuning"
+        },
+        {
+          "@id": "method:article_truncation"
+        },
+        {
+          "@id": "model:bart_large"
+        },
+        {
+          "@id": "algo:adamw"
+        },
+        {
+          "@id": "algo:linear_learning_rate_scheduler"
+        },
+        {
+          "@id": "algo:beam_search"
+        }
+      ],
+      "achieves": [
+        {
+          "@id": "eval:rouge_1"
+        },
+        {
+          "@id": "eval:rouge_2"
+        },
+        {
+          "@id": "eval:rouge_l"
+        }
+      ],
+      "usesParameters": [
+        {
+          "@id": "hp:learning_rate_search_space"
+        },
+        {
+          "@id": "hp:num_epochs_summarization_search_space"
+        },
+        {
+          "@id": "hp:prefix_length_summarization_search_space"
+        },
+        {
+          "@id": "hp:default_num_epochs"
+        },
+        {
+          "@id": "hp:default_batch_size"
+        },
+        {
+          "@id": "hp:default_learning_rate"
+        },
+        {
+          "@id": "hp:default_prefix_length"
+        },
+        {
+          "@id": "hp:projection_dim_summarization"
+        },
+        {
+          "@id": "hp:max_input_length_summarization"
+        },
+        {
+          "@id": "hp:beam_size_summarization"
+        },
+        {
+          "@id": "hp:length_normalization_summarization"
+        },
+        {
+          "@id": "hp:prefix_xsum_learning_rate"
+        },
+        {
+          "@id": "hp:prefix_xsum_num_epochs"
+        },
+        {
+          "@id": "hp:prefix_xsum_batch_size"
+        },
+        {
+          "@id": "hp:prefix_xsum_prefix_length"
+        }
+      ],
+      "wasAssociatedWith": {
+        "@id": "study:prefix_tuning_optimizing_continuous_prompts_for_generation_2021"
+      },
+      "runsIn": [
+        {
+          "@id": "env:tesla_v100"
+        }
+      ]
+    },
+    {
+      "@id": "exp:prefix_tuning_low_data_generation",
+      "@type": "Experiment",
+      "mention": {
+        "start_char_doc": 25811,
+        "end_char_doc": 25827,
+        "prefix": "from an article. ## 6.3",
+        "suffix": "Based on the results from",
+        "valueSource": "extracted"
+      },
+      "schema:identifier": {
+        "value": "Low-data Setting",
+        "start_char_doc": 25811,
+        "end_char_doc": 25827,
+        "prefix": "from an article. ## 6.3",
+        "suffix": "Based on the results from",
+        "valueSource": "extracted"
+      },
+      "schema:objective": {
+        "value": "explore the low-data setting more systematically",
+        "start_char_doc": 26012,
+        "end_char_doc": 26060,
+        "prefix": "training examples is smaller. To",
+        "suffix": ", we subsample the full",
+        "valueSource": "extracted"
+      },
+      "schema:hypothesis": {
+        "value": "prefix-tuning has a comparative advantage when the number of training examples is smaller",
+        "start_char_doc": 25918,
+        "end_char_doc": 26007,
+        "prefix": "summarization (§6.2), we observe that",
+        "suffix": ". To explore the low-data",
+        "valueSource": "extracted"
+      },
+      "schema:description": {
+        "value": "prefix-tuning outperforms fine-tuning in low-data regimes by 2.9 BLEU on average",
+        "start_char_doc": 26375,
+        "end_char_doc": 26455,
+        "prefix": "Figure 3 (right) shows that",
+        "suffix": ", in addition to requiring",
+        "valueSource": "extracted"
+      },
+      "realizes": [
+        {
+          "@id": "task:low_data_generation"
+        },
+        {
+          "@id": "task:table_to_text_generation"
+        },
+        {
+          "@id": "task:abstractive_summarization"
+        }
+      ],
+      "usesData": [
+        {
+          "@id": "dataset:e2e"
+        },
+        {
+          "@id": "dataset:xsum"
+        }
+      ],
+      "trainedOn": [
+        {
+          "@id": "dataset:e2e"
+        },
+        {
+          "@id": "dataset:xsum"
+        }
+      ],
+      "benchmarkedOn": [
+        {
+          "@id": "dataset:e2e"
+        },
+        {
+          "@id": "dataset:xsum"
+        }
+      ],
+      "uses": [
+        {
+          "@id": "method:prefix_tuning"
+        },
+        {
+          "@id": "method:fine_tuning"
+        },
+        {
+          "@id": "method:prefix_initialization_with_real_words"
+        },
+        {
+          "@id": "prompt:table_to_text"
+        },
+        {
+          "@id": "prompt:summarize"
+        }
+      ],
+      "achieves": [
+        {
+          "@id": "eval:bleu"
+        },
+        {
+          "@id": "eval:rouge_1"
+        },
+        {
+          "@id": "eval:rouge_2"
+        },
+        {
+          "@id": "eval:rouge_l"
+        }
+      ],
+      "usesParameters": [
+        {
+          "@id": "hp:low_data_training_sizes"
+        },
+        {
+          "@id": "hp:low_data_dev_split"
+        },
+        {
+          "@id": "hp:low_data_table_learning_rate"
+        },
+        {
+          "@id": "hp:low_data_table_batch_size"
+        },
+        {
+          "@id": "hp:low_data_table_prefix_length"
+        },
+        {
+          "@id": "hp:low_data_table_max_steps"
+        },
+        {
+          "@id": "hp:low_data_summarization_learning_rate"
+        },
+        {
+          "@id": "hp:low_data_summarization_warmup_step"
+        },
+        {
+          "@id": "hp:low_data_summarization_prefix_batch_size"
+        },
+        {
+          "@id": "hp:low_data_summarization_finetune_batch_size"
+        },
+        {
+          "@id": "hp:low_data_summarization_prefix_length"
+        },
+        {
+          "@id": "hp:low_data_summarization_epochs_search_space"
+        }
+      ],
+      "wasAssociatedWith": {
+        "@id": "study:prefix_tuning_optimizing_continuous_prompts_for_generation_2021"
+      }
+    },
+    {
+      "@id": "exp:prefix_tuning_extrapolation",
+      "@type": "Experiment",
+      "mention": {
+        "start_char_doc": 27079,
+        "end_char_doc": 27121,
+        "prefix": "6.4 Extrapolation We now investigate",
+        "suffix": "for both table-to-text and summarization.",
+        "valueSource": "extracted"
+      },
+      "schema:identifier": {
+        "value": "Extrapolation",
+        "start_char_doc": 27045,
+        "end_char_doc": 27058,
+        "prefix": "to the table. ## 6.4",
+        "suffix": "We now investigate extrapolation performance",
+        "valueSource": "extracted"
+      },
+      "schema:objective": {
+        "value": "investigate extrapolation performance to unseen topics",
+        "start_char_doc": 27067,
+        "end_char_doc": 27121,
+        "prefix": "## 6.4 Extrapolation We now",
+        "suffix": "for both table-to-text and summarization.",
+        "valueSource": "extracted"
+      },
+      "schema:hypothesis": {
+        "value": "prefix-tuning extrapolates better than fine-tuning",
+        "start_char_doc": 36721,
+        "end_char_doc": 36771,
+        "prefix": "On both table-to-text and summarization,",
+        "suffix": "under all metrics, as shown",
+        "valueSource": "extracted"
+      },
+      "schema:description": {
+        "value": "Prefix-tuning outperforms fine-tuning on both news-to-sports and within-news splits.",
+        "start_char_doc": 36400,
+        "end_char_doc": 36484,
+        "prefix": "4: Extrapolation performance on XSUM.",
+        "suffix": "In news-to-sports, we train on",
+        "valueSource": "extracted"
+      },
+      "realizes": [
+        {
+          "@id": "task:extrapolation_to_unseen_topics"
+        }
+      ],
+      "usesData": [
+        {
+          "@id": "dataset:webnlg_seen_unseen_split"
+        },
+        {
+          "@id": "dataset:xsum_news_to_sports"
+        },
+        {
+          "@id": "dataset:xsum_within_news"
+        }
+      ],
+      "trainedOn": [
+        {
+          "@id": "dataset:webnlg_seen_unseen_split"
+        },
+        {
+          "@id": "dataset:xsum_news_to_sports"
+        },
+        {
+          "@id": "dataset:xsum_within_news"
+        }
+      ],
+      "benchmarkedOn": [
+        {
+          "@id": "dataset:webnlg_seen_unseen_split"
+        },
+        {
+          "@id": "dataset:xsum_news_to_sports"
+        },
+        {
+          "@id": "dataset:xsum_within_news"
+        }
+      ],
+      "uses": [
+        {
+          "@id": "method:prefix_tuning"
+        },
+        {
+          "@id": "method:fine_tuning"
+        },
+        {
+          "@id": "model:gpt_2_medium"
+        },
+        {
+          "@id": "model:bart_large"
+        }
+      ],
+      "achieves": [
+        {
+          "@id": "eval:rouge_1"
+        },
+        {
+          "@id": "eval:rouge_2"
+        },
+        {
+          "@id": "eval:rouge_l"
+        },
+        {
+          "@id": "eval:bleu"
+        }
+      ],
+      "usesParameters": [
+        {
+          "@id": "hp:prefix_within_news_learning_rate"
+        },
+        {
+          "@id": "hp:prefix_within_news_num_epochs"
+        },
+        {
+          "@id": "hp:prefix_within_news_batch_size"
+        },
+        {
+          "@id": "hp:prefix_within_news_prefix_length"
+        },
+        {
+          "@id": "hp:prefix_news_to_sports_learning_rate"
+        },
+        {
+          "@id": "hp:prefix_news_to_sports_num_epochs"
+        },
+        {
+          "@id": "hp:prefix_news_to_sports_batch_size"
+        },
+        {
+          "@id": "hp:prefix_news_to_sports_prefix_length"
+        }
+      ],
+      "wasAssociatedWith": {
+        "@id": "study:prefix_tuning_optimizing_continuous_prompts_for_generation_2021"
+      }
+    },
+    {
+      "@id": "exp:prefix_tuning_intrinsic_evaluation",
+      "@type": "Experiment",
+      "mention": {
+        "start_char_doc": 37199,
+        "end_char_doc": 37219,
+        "prefix": "further in §8. ## 7",
+        "suffix": "We compare different variants of",
+        "valueSource": "extracted"
+      },
+      "schema:identifier": {
+        "value": "Intrinsic Evaluation",
+        "start_char_doc": 37199,
+        "end_char_doc": 37219,
+        "prefix": "further in §8. ## 7",
+        "suffix": "We compare different variants of",
+        "valueSource": "extracted"
+      },
+      "schema:objective": {
+        "value": "compare different variants of prefix-tuning to study the impact of various design decisions",
+        "start_char_doc": 37224,
+        "end_char_doc": 37315,
+        "prefix": "## 7 Intrinsic Evaluation We",
+        "suffix": ". §7.1 studies the impact",
+        "valueSource": "extracted"
+      },
+      "schema:hypothesis": {
+        "value": "Both Embedding-only ablation and Infix-tuning underperforms full prefix-tuning.",
+        "start_char_doc": 42966,
+        "end_char_doc": 43045,
+        "prefix": "Embedding-only (§7.2) and Infixing (§7.3).",
+        "suffix": "&lt;page_number&gt;4589&lt;/page_number&gt; --- ## Page 9",
+        "valueSource": "extracted"
+      },
+      "schema:description": {
+        "value": "length increases up to a threshold (200 for summarization, 10 for table-to-text)",
+        "start_char_doc": 38581,
+        "end_char_doc": 38661,
+        "prefix": "random initialization, in low-data settings.&lt;/img&gt;",
+        "suffix": "and then a slight performance",
+        "valueSource": "extracted"
+      },
+      "realizes": [
+        {
+          "@id": "task:table_to_text_generation"
+        },
+        {
+          "@id": "task:abstractive_summarization"
+        }
+      ],
+      "usesData": [
+        {
+          "@id": "dataset:e2e"
+        },
+        {
+          "@id": "dataset:xsum"
+        }
+      ],
+      "trainedOn": [
+        {
+          "@id": "dataset:e2e"
+        },
+        {
+          "@id": "dataset:xsum"
+        }
+      ],
+      "benchmarkedOn": [
+        {
+          "@id": "dataset:e2e"
+        },
+        {
+          "@id": "dataset:xsum"
+        }
+      ],
+      "uses": [
+        {
+          "@id": "method:prefix_tuning"
+        },
+        {
+          "@id": "method:embedding_only"
+        },
+        {
+          "@id": "method:infix_tuning"
+        },
+        {
+          "@id": "method:prefix_initialization_with_real_words"
+        }
+      ],
+      "achieves": [
+        {
+          "@id": "eval:bleu"
+        },
+        {
+          "@id": "eval:nist"
+        },
+        {
+          "@id": "eval:meteor"
+        },
+        {
+          "@id": "eval:rouge_l"
+        },
+        {
+          "@id": "eval:cider"
+        },
+        {
+          "@id": "eval:rouge_1"
+        },
+        {
+          "@id": "eval:rouge_2"
+        }
+      ],
+      "usesParameters": [
+        {
+          "@id": "hp:prefix_length_table_to_text_search_space"
+        },
+        {
+          "@id": "hp:prefix_length_summarization_search_space"
+        }
+      ],
+      "wasAssociatedWith": {
+        "@id": "study:prefix_tuning_optimizing_continuous_prompts_for_generation_2021"
+      }
+    }
+  ]
+}

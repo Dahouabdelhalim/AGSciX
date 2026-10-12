@@ -1,0 +1,6107 @@
+{
+  "@context": {
+    "mls": "http://www.w3.org/ns/mls#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "schema": "http://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "model": "https://w3id.org/mlskg/model/",
+    "algo": "https://w3id.org/mlskg/algorithm/",
+    "method": "https://w3id.org/mlskg/method/",
+    "dataset": "https://w3id.org/mlskg/dataset/",
+    "datasource": "https://w3id.org/mlskg/datasource/",
+    "task": "https://w3id.org/mlskg/task/",
+    "eval": "https://w3id.org/mlskg/eval/",
+    "hp": "https://w3id.org/mlskg/hp/",
+    "impl": "https://w3id.org/mlskg/implementation/",
+    "env": "https://w3id.org/mlskg/environment/",
+    "person": "https://w3id.org/mlskg/person/",
+    "org": "https://w3id.org/mlskg/organization/",
+    "study": "https://w3id.org/mlskg/study/",
+    "exp": "https://w3id.org/mlskg/experiment/",
+    "repo": "https://w3id.org/mlskg/repository/",
+    "dep": "https://w3id.org/mlskg/dependency/",
+    "run": "https://w3id.org/mlskg/run/",
+    "step": "https://w3id.org/mlskg/step/",
+    "valueSource": "https://w3id.org/mlskg/meta/valueSource",
+    "mention": "https://w3id.org/mlskg/meta/mention"
+  },
+  "@graph": [
+    {
+      "@id": "study:well_read_students_learn_better_2019",
+      "@type": "mls:Study",
+      "mention": {
+        "start_char_doc": 13,
+        "end_char_doc": 94,
+        "prefix": "## Page 1 #",
+        "suffix": "**Iulia Turc, Ming-Wei Chang, Kenton",
+        "valueSource": "extracted"
+      },
+      "mls:title": {
+        "value": "WELL-READ STUDENTS LEARN BETTER: ON THE IMPORTANCE OF PRE-TRAINING COMPACT MODELS",
+        "start_char_doc": 13,
+        "end_char_doc": 94,
+        "prefix": "## Page 1 #",
+        "suffix": "**Iulia Turc, Ming-Wei Chang, Kenton",
+        "valueSource": "extracted"
+      },
+      "mls:abstract": {
+        "value": "Recent developments in natural language representations have been accompanied by large and expensive models that leverage vast amounts of general-domain text through self-supervised pre-training. Due to the cost of applying such models to down-stream tasks, several model compression techniques on pre-trained language representations have been proposed (Sun et al., 2019a; Sanh, 2019). However, surprisingly, the simple baseline of just pre-training and fine-tuning compact models has been overlooked. In this paper, we first show that pre-training remains important in the context of smaller architectures, and fine-tuning pre-trained compact models can be competitive to more elaborate methods proposed in concurrent work. Starting with pre-trained compact models, we then explore transferring task knowledge from large fine-tuned models through standard knowledge distillation. The resulting simple, yet effective and general algorithm, *Pre-trained Distillation*, brings further improvements. Through extensive experiments, we more generally explore the interaction between pre-training and distillation under two variables that have been under-studied: model size and properties of unlabeled task data. One surprising observation is that they have a compound effect even when sequentially applied on the *same* data. To accelerate future research, we will make our 24 pre-trained miniature BERT models publicly available.",
+        "start_char_doc": 245,
+        "end_char_doc": 1672,
+        "prefix": "mingweichang, kentonl, kristout}@google.com ## ABSTRACT",
+        "suffix": "## 1 INTRODUCTION Self-supervised learning",
+        "valueSource": "extracted"
+      },
+      "mls:url": {
+        "value": "https://arxiv.org/abs/1908.08962",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:doi": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:citation": {
+        "value": "arXiv:1908.08962v2 [cs.CL] 25 Sep 2019",
+        "start_char_doc": 3963,
+        "end_char_doc": 4001,
+        "prefix": "and optional fine-tuning. &lt;page_number&gt;1&lt;/page_number&gt; &lt;watermark&gt;",
+        "suffix": "&lt;/watermark&gt; --- ## Page 2",
+        "valueSource": "extracted"
+      },
+      "mls:publicationVenue": {
+        "value": "arXiv",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:issued": {
+        "value": "2019-09-25",
+        "start_char_doc": 3990,
+        "end_char_doc": 4001,
+        "prefix": "optional fine-tuning. &lt;page_number&gt;1&lt;/page_number&gt; &lt;watermark&gt;arXiv:1908.08962v2 [cs.CL]",
+        "suffix": "&lt;/watermark&gt; --- ## Page 2",
+        "valueSource": "extracted"
+      },
+      "mls:hasAuthor": [
+        {
+          "@id": "person:turc_iulia"
+        },
+        {
+          "@id": "person:chang_ming_wei"
+        },
+        {
+          "@id": "person:lee_kenton"
+        },
+        {
+          "@id": "person:toutanova_kristina"
+        }
+      ],
+      "mls:contains": [
+        {
+          "@id": "exp:pre_trained_distillation_compact_models_2019"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "paper:4_1908_08962v2"
+      }
+    },
+    {
+      "@id": "org:google_research",
+      "@type": "mls:Organization",
+      "mention": {
+        "start_char_doc": 159,
+        "end_char_doc": 174,
+        "prefix": "Chang, Kenton Lee, Kristina Toutanova**",
+        "suffix": "{iuliaturc, mingweichang, kentonl, kristout}@google.com ##",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Google Research",
+        "start_char_doc": 159,
+        "end_char_doc": 174,
+        "prefix": "Chang, Kenton Lee, Kristina Toutanova**",
+        "suffix": "{iuliaturc, mingweichang, kentonl, kristout}@google.com ##",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "industrial research organization",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:url": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "person:turc_iulia",
+      "@type": "mls:Person",
+      "mention": {
+        "start_char_doc": 98,
+        "end_char_doc": 108,
+        "prefix": "OF PRE-TRAINING COMPACT MODELS **",
+        "suffix": ", Ming-Wei Chang, Kenton Lee,",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Iulia Turc",
+        "start_char_doc": 98,
+        "end_char_doc": 108,
+        "prefix": "OF PRE-TRAINING COMPACT MODELS **",
+        "suffix": ", Ming-Wei Chang, Kenton Lee,",
+        "valueSource": "extracted"
+      },
+      "mls:affiliation": {
+        "value": "Google Research",
+        "start_char_doc": 159,
+        "end_char_doc": 174,
+        "prefix": "Chang, Kenton Lee, Kristina Toutanova**",
+        "suffix": "{iuliaturc, mingweichang, kentonl, kristout}@google.com ##",
+        "valueSource": "extracted"
+      },
+      "mls:email": {
+        "value": "iuliaturc@google.com",
+        "start_char_doc": 176,
+        "end_char_doc": 185,
+        "prefix": "Kristina Toutanova** Google Research {",
+        "suffix": ", mingweichang, kentonl, kristout}@google.com ##",
+        "valueSource": "extracted"
+      },
+      "mls:orcid": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:prov-affiliatedWith": [
+        {
+          "@id": "org:google_research"
+        }
+      ]
+    },
+    {
+      "@id": "person:chang_ming_wei",
+      "@type": "mls:Person",
+      "mention": {
+        "start_char_doc": 110,
+        "end_char_doc": 124,
+        "prefix": "PRE-TRAINING COMPACT MODELS **Iulia Turc,",
+        "suffix": ", Kenton Lee, Kristina Toutanova**",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Ming-Wei Chang",
+        "start_char_doc": 110,
+        "end_char_doc": 124,
+        "prefix": "PRE-TRAINING COMPACT MODELS **Iulia Turc,",
+        "suffix": ", Kenton Lee, Kristina Toutanova**",
+        "valueSource": "extracted"
+      },
+      "mls:affiliation": {
+        "value": "Google Research",
+        "start_char_doc": 159,
+        "end_char_doc": 174,
+        "prefix": "Chang, Kenton Lee, Kristina Toutanova**",
+        "suffix": "{iuliaturc, mingweichang, kentonl, kristout}@google.com ##",
+        "valueSource": "extracted"
+      },
+      "mls:email": {
+        "value": "mingweichang@google.com",
+        "start_char_doc": 187,
+        "end_char_doc": 199,
+        "prefix": "Kristina Toutanova** Google Research {iuliaturc,",
+        "suffix": ", kentonl, kristout}@google.com ## ABSTRACT",
+        "valueSource": "extracted"
+      },
+      "mls:orcid": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:prov-affiliatedWith": [
+        {
+          "@id": "org:google_research"
+        }
+      ]
+    },
+    {
+      "@id": "person:lee_kenton",
+      "@type": "mls:Person",
+      "mention": {
+        "start_char_doc": 126,
+        "end_char_doc": 136,
+        "prefix": "MODELS **Iulia Turc, Ming-Wei Chang,",
+        "suffix": ", Kristina Toutanova** Google Research",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Kenton Lee",
+        "start_char_doc": 126,
+        "end_char_doc": 136,
+        "prefix": "MODELS **Iulia Turc, Ming-Wei Chang,",
+        "suffix": ", Kristina Toutanova** Google Research",
+        "valueSource": "extracted"
+      },
+      "mls:affiliation": {
+        "value": "Google Research",
+        "start_char_doc": 159,
+        "end_char_doc": 174,
+        "prefix": "Chang, Kenton Lee, Kristina Toutanova**",
+        "suffix": "{iuliaturc, mingweichang, kentonl, kristout}@google.com ##",
+        "valueSource": "extracted"
+      },
+      "mls:email": {
+        "value": "kentonl@google.com",
+        "start_char_doc": 201,
+        "end_char_doc": 208,
+        "prefix": "Toutanova** Google Research {iuliaturc, mingweichang,",
+        "suffix": ", kristout}@google.com ## ABSTRACT Recent",
+        "valueSource": "extracted"
+      },
+      "mls:orcid": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:prov-affiliatedWith": [
+        {
+          "@id": "org:google_research"
+        }
+      ]
+    },
+    {
+      "@id": "person:toutanova_kristina",
+      "@type": "mls:Person",
+      "mention": {
+        "start_char_doc": 138,
+        "end_char_doc": 156,
+        "prefix": "Turc, Ming-Wei Chang, Kenton Lee,",
+        "suffix": "** Google Research {iuliaturc, mingweichang,",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Kristina Toutanova",
+        "start_char_doc": 138,
+        "end_char_doc": 156,
+        "prefix": "Turc, Ming-Wei Chang, Kenton Lee,",
+        "suffix": "** Google Research {iuliaturc, mingweichang,",
+        "valueSource": "extracted"
+      },
+      "mls:affiliation": {
+        "value": "Google Research",
+        "start_char_doc": 159,
+        "end_char_doc": 174,
+        "prefix": "Chang, Kenton Lee, Kristina Toutanova**",
+        "suffix": "{iuliaturc, mingweichang, kentonl, kristout}@google.com ##",
+        "valueSource": "extracted"
+      },
+      "mls:email": {
+        "value": "kristout@google.com",
+        "start_char_doc": 210,
+        "end_char_doc": 218,
+        "prefix": "Google Research {iuliaturc, mingweichang, kentonl,",
+        "suffix": "}@google.com ## ABSTRACT Recent developments",
+        "valueSource": "extracted"
+      },
+      "mls:orcid": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:prov-affiliatedWith": [
+        {
+          "@id": "org:google_research"
+        }
+      ]
+    },
+    {
+      "@id": "exp:pre_trained_distillation_compact_models_2019",
+      "@type": "mls:Experiment",
+      "mention": {
+        "start_char_doc": 1251,
+        "end_char_doc": 1272,
+        "prefix": "Distillation*, brings further improvements. Through",
+        "suffix": ", we more generally explore",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "Pre-trained Distillation combines MLM+ pre-training, task-specific distillation from a fine-tuned BERT teacher, and optional fine-tuning to build compact models across GLUE and Amazon review tasks.",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:objective": {
+        "value": "explore the interaction between pre-training and distillation under two variables that have been under-studied: model size and properties of unlabeled task data",
+        "start_char_doc": 1292,
+        "end_char_doc": 1452,
+        "prefix": "extensive experiments, we more generally",
+        "suffix": ". One surprising observation is",
+        "valueSource": "extracted"
+      },
+      "mls:hypothesis": {
+        "value": "pre-training remains important in the context of smaller architectures, and fine-tuning pre-trained compact models can be competitive",
+        "start_char_doc": 782,
+        "end_char_doc": 915,
+        "prefix": "paper, we first show that",
+        "suffix": "to more elaborate methods proposed",
+        "valueSource": "extracted"
+      },
+      "mls:methodology": {
+        "value": "masked LM (MLM) pre-training, task-specific distillation, and optional fine-tuning",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:realizes": [
+        {
+          "@id": "task:model_compression"
+        },
+        {
+          "@id": "task:knowledge_distillation"
+        },
+        {
+          "@id": "task:masked_language_model_pretraining"
+        },
+        {
+          "@id": "task:sentiment_classification"
+        },
+        {
+          "@id": "task:natural_language_inference"
+        },
+        {
+          "@id": "task:textual_entailment"
+        }
+      ],
+      "mls:usesData": [
+        {
+          "@id": "dataset:mnli"
+        },
+        {
+          "@id": "dataset:rte"
+        },
+        {
+          "@id": "dataset:sst_2"
+        },
+        {
+          "@id": "dataset:book_reviews"
+        },
+        {
+          "@id": "dataset:nli_star"
+        },
+        {
+          "@id": "dataset:movie_reviews_transfer"
+        },
+        {
+          "@id": "dataset:book_reviews_transfer"
+        },
+        {
+          "@id": "dataset:snli"
+        },
+        {
+          "@id": "dataset:qqp"
+        },
+        {
+          "@id": "dataset:bookcorpus_english_wikipedia"
+        }
+      ],
+      "mls:produces": [
+        {
+          "@id": "algo:pre_trained_distillation"
+        },
+        {
+          "@id": "method:knowledge_distillation"
+        },
+        {
+          "@id": "method:pre_training_fine_tuning"
+        },
+        {
+          "@id": "method:masked_lm_plus_pretraining"
+        },
+        {
+          "@id": "method:task_specific_distillation"
+        },
+        {
+          "@id": "method:optional_fine_tuning"
+        },
+        {
+          "@id": "method:basic_training"
+        },
+        {
+          "@id": "method:pd_f"
+        },
+        {
+          "@id": "model:bert_base"
+        },
+        {
+          "@id": "model:bert_large"
+        },
+        {
+          "@id": "model:compact_transformer_students"
+        },
+        {
+          "@id": "model:transformer_tiny"
+        },
+        {
+          "@id": "model:transformer_mini"
+        },
+        {
+          "@id": "model:transformer_small"
+        },
+        {
+          "@id": "model:transformer_medium"
+        },
+        {
+          "@id": "model:transformer_base"
+        },
+        {
+          "@id": "eval:accuracy"
+        },
+        {
+          "@id": "eval:f1_accuracy"
+        },
+        {
+          "@id": "eval:meta_score"
+        },
+        {
+          "@id": "eval:spearman_correlation_coefficient"
+        },
+        {
+          "@id": "eval:pd_test_glue_results"
+        },
+        {
+          "@id": "eval:pd_dev_glue_results"
+        },
+        {
+          "@id": "eval:pd_model_size_speedup_book_reviews"
+        },
+        {
+          "@id": "eval:pd_transfer_size_book_reviews"
+        },
+        {
+          "@id": "eval:pd_domain_shift"
+        },
+        {
+          "@id": "eval:pd_same_data_mnli"
+        }
+      ],
+      "mls:usesParameters": [
+        {
+          "@id": "hp:num_model_sizes_24"
+        },
+        {
+          "@id": "hp:transformer_tiny_parameters"
+        },
+        {
+          "@id": "hp:transformer_base_parameters"
+        },
+        {
+          "@id": "hp:bert_large_layers_hidden_parameters"
+        },
+        {
+          "@id": "hp:student_layers_tiny"
+        },
+        {
+          "@id": "hp:student_hidden_tiny"
+        },
+        {
+          "@id": "hp:student_layers_mini"
+        },
+        {
+          "@id": "hp:student_hidden_mini"
+        },
+        {
+          "@id": "hp:student_layers_small"
+        },
+        {
+          "@id": "hp:student_hidden_small"
+        },
+        {
+          "@id": "hp:student_layers_medium"
+        },
+        {
+          "@id": "hp:student_hidden_medium"
+        },
+        {
+          "@id": "hp:student_layers_base"
+        },
+        {
+          "@id": "hp:student_hidden_base"
+        },
+        {
+          "@id": "hp:attention_heads_h_over_64"
+        },
+        {
+          "@id": "hp:feed_forward_filter_size_4h"
+        },
+        {
+          "@id": "hp:latency_batch_size_1"
+        },
+        {
+          "@id": "hp:latency_sequence_length_512"
+        },
+        {
+          "@id": "hp:distillation_temperature_1"
+        },
+        {
+          "@id": "hp:dev_runs_5"
+        },
+        {
+          "@id": "hp:mnli_labeled_size"
+        },
+        {
+          "@id": "hp:rte_labeled_size"
+        },
+        {
+          "@id": "hp:sst2_labeled_size"
+        },
+        {
+          "@id": "hp:book_reviews_labeled_size"
+        },
+        {
+          "@id": "hp:nli_transfer_size"
+        },
+        {
+          "@id": "hp:movie_reviews_transfer_size"
+        },
+        {
+          "@id": "hp:book_reviews_transfer_size"
+        },
+        {
+          "@id": "hp:book_reviews_transfer_size_5m"
+        },
+        {
+          "@id": "hp:book_reviews_transfer_size_1m"
+        },
+        {
+          "@id": "hp:domain_shift_transfer_size_1_7m"
+        },
+        {
+          "@id": "hp:spearman_common_words_100"
+        },
+        {
+          "@id": "hp:compression_ratio_31x"
+        },
+        {
+          "@id": "hp:speedup_16x"
+        },
+        {
+          "@id": "hp:compression_ratio_10x"
+        },
+        {
+          "@id": "hp:data_reduction_1_5x"
+        }
+      ],
+      "mls:executes": [
+        {
+          "@id": "impl:bert_pretraining_distillation"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "study:well_read_students_learn_better_2019"
+      },
+      "prov:wasAssociatedWith": [
+        {
+          "@id": "org:google_research"
+        }
+      ]
+    },
+    {
+      "@id": "task:model_compression",
+      "@type": "mls:MLS_Task",
+      "mention": {
+        "start_char_doc": 511,
+        "end_char_doc": 528,
+        "prefix": "models to down-stream tasks, several",
+        "suffix": "techniques on pre-trained language representations",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "model compression",
+        "start_char_doc": 511,
+        "end_char_doc": 528,
+        "prefix": "models to down-stream tasks, several",
+        "suffix": "techniques on pre-trained language representations",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "building compact models under resource constraints",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:category": {
+        "value": "model efficiency",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:metrics": {
+        "value": "accuracy; F1; meta score; model size; speed-up",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:benchmarkedOn": [
+        {
+          "@id": "dataset:mnli"
+        },
+        {
+          "@id": "dataset:rte"
+        },
+        {
+          "@id": "dataset:sst_2"
+        },
+        {
+          "@id": "dataset:book_reviews"
+        },
+        {
+          "@id": "dataset:nli_star"
+        },
+        {
+          "@id": "dataset:movie_reviews_transfer"
+        },
+        {
+          "@id": "dataset:book_reviews_transfer"
+        },
+        {
+          "@id": "dataset:snli"
+        },
+        {
+          "@id": "dataset:qqp"
+        },
+        {
+          "@id": "dataset:bookcorpus_english_wikipedia"
+        }
+      ]
+    },
+    {
+      "@id": "task:knowledge_distillation",
+      "@type": "mls:MLS_Task",
+      "mention": {
+        "start_char_doc": 1103,
+        "end_char_doc": 1125,
+        "prefix": "large fine-tuned models through standard",
+        "suffix": ". The resulting simple, yet",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "knowledge distillation",
+        "start_char_doc": 1103,
+        "end_char_doc": 1125,
+        "prefix": "large fine-tuned models through standard",
+        "suffix": ". The resulting simple, yet",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "transferring task knowledge from large fine-tuned teachers to compact students",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:category": {
+        "value": "training",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:metrics": {
+        "value": "accuracy; F1; meta score",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:benchmarkedOn": [
+        {
+          "@id": "dataset:mnli"
+        },
+        {
+          "@id": "dataset:rte"
+        },
+        {
+          "@id": "dataset:sst_2"
+        },
+        {
+          "@id": "dataset:book_reviews"
+        },
+        {
+          "@id": "dataset:nli_star"
+        },
+        {
+          "@id": "dataset:movie_reviews_transfer"
+        },
+        {
+          "@id": "dataset:book_reviews_transfer"
+        },
+        {
+          "@id": "dataset:snli"
+        },
+        {
+          "@id": "dataset:qqp"
+        },
+        {
+          "@id": "dataset:bookcorpus_english_wikipedia"
+        }
+      ]
+    },
+    {
+      "@id": "task:masked_language_model_pretraining",
+      "@type": "mls:MLS_Task",
+      "mention": {
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:name": {
+        "value": "masked LM pre-training",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:description": {
+        "value": "self-supervised pre-training with masked LM and next sentence objectives",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:category": {
+        "value": "pre-training",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:metrics": {
+        "value": "downstream task accuracy",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:benchmarkedOn": [
+        {
+          "@id": "dataset:mnli"
+        },
+        {
+          "@id": "dataset:rte"
+        },
+        {
+          "@id": "dataset:sst_2"
+        },
+        {
+          "@id": "dataset:book_reviews"
+        },
+        {
+          "@id": "dataset:nli_star"
+        },
+        {
+          "@id": "dataset:movie_reviews_transfer"
+        },
+        {
+          "@id": "dataset:book_reviews_transfer"
+        },
+        {
+          "@id": "dataset:snli"
+        },
+        {
+          "@id": "dataset:qqp"
+        },
+        {
+          "@id": "dataset:bookcorpus_english_wikipedia"
+        }
+      ]
+    },
+    {
+      "@id": "task:sentiment_classification",
+      "@type": "mls:MLS_Task",
+      "mention": {
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:name": {
+        "value": "sentiment classification",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:description": {
+        "value": "binary sentiment classification on SST-2 and Amazon review data",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:category": {
+        "value": "classification",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:metrics": {
+        "value": "accuracy",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:benchmarkedOn": [
+        {
+          "@id": "dataset:mnli"
+        },
+        {
+          "@id": "dataset:rte"
+        },
+        {
+          "@id": "dataset:sst_2"
+        },
+        {
+          "@id": "dataset:book_reviews"
+        },
+        {
+          "@id": "dataset:nli_star"
+        },
+        {
+          "@id": "dataset:movie_reviews_transfer"
+        },
+        {
+          "@id": "dataset:book_reviews_transfer"
+        },
+        {
+          "@id": "dataset:snli"
+        },
+        {
+          "@id": "dataset:qqp"
+        },
+        {
+          "@id": "dataset:bookcorpus_english_wikipedia"
+        }
+      ]
+    },
+    {
+      "@id": "task:natural_language_inference",
+      "@type": "mls:MLS_Task",
+      "mention": {
+        "start_char_doc": 25417,
+        "end_char_doc": 25443,
+        "prefix": "consists of single sentences). **",
+        "suffix": "** involves classifying pairs of",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Natural language inference",
+        "start_char_doc": 25417,
+        "end_char_doc": 25443,
+        "prefix": "consists of single sentences). **",
+        "suffix": "** involves classifying pairs of",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "classifying premise-hypothesis pairs as entailment, contradiction, or neutral",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:category": {
+        "value": "classification",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:metrics": {
+        "value": "accuracy",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:benchmarkedOn": [
+        {
+          "@id": "dataset:mnli"
+        },
+        {
+          "@id": "dataset:rte"
+        },
+        {
+          "@id": "dataset:sst_2"
+        },
+        {
+          "@id": "dataset:book_reviews"
+        },
+        {
+          "@id": "dataset:nli_star"
+        },
+        {
+          "@id": "dataset:movie_reviews_transfer"
+        },
+        {
+          "@id": "dataset:book_reviews_transfer"
+        },
+        {
+          "@id": "dataset:snli"
+        },
+        {
+          "@id": "dataset:qqp"
+        },
+        {
+          "@id": "dataset:bookcorpus_english_wikipedia"
+        }
+      ]
+    },
+    {
+      "@id": "task:textual_entailment",
+      "@type": "mls:MLS_Task",
+      "mention": {
+        "start_char_doc": 43228,
+        "end_char_doc": 43246,
+        "prefix": "Magnini. The fifth pascal recognizing",
+        "suffix": "challenge. In *Proc Text Analysis",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "textual entailment",
+        "start_char_doc": 43228,
+        "end_char_doc": 43246,
+        "prefix": "Magnini. The fifth pascal recognizing",
+        "suffix": "challenge. In *Proc Text Analysis",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "recognizing textual entailment on RTE",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:category": {
+        "value": "classification",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:metrics": {
+        "value": "accuracy",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:benchmarkedOn": [
+        {
+          "@id": "dataset:mnli"
+        },
+        {
+          "@id": "dataset:rte"
+        },
+        {
+          "@id": "dataset:sst_2"
+        },
+        {
+          "@id": "dataset:book_reviews"
+        },
+        {
+          "@id": "dataset:nli_star"
+        },
+        {
+          "@id": "dataset:movie_reviews_transfer"
+        },
+        {
+          "@id": "dataset:book_reviews_transfer"
+        },
+        {
+          "@id": "dataset:snli"
+        },
+        {
+          "@id": "dataset:qqp"
+        },
+        {
+          "@id": "dataset:bookcorpus_english_wikipedia"
+        }
+      ]
+    },
+    {
+      "@id": "datasource:amazon_product_data",
+      "@type": "mls:DataSource",
+      "mention": {
+        "start_char_doc": 26938,
+        "end_char_doc": 26957,
+        "prefix": "reviews datasets are part of",
+        "suffix": ". Unless otherwise stated, $\\mathcal{D}_{LM}$",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Amazon Product Data",
+        "start_char_doc": 26938,
+        "end_char_doc": 26957,
+        "prefix": "reviews datasets are part of",
+        "suffix": ". Unless otherwise stated, $\\mathcal{D}_{LM}$",
+        "valueSource": "extracted"
+      },
+      "mls:url": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "review corpus source",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:license": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "datasource:bookcorpus",
+      "@type": "mls:DataSource",
+      "mention": {
+        "start_char_doc": 27015,
+        "end_char_doc": 27025,
+        "prefix": "otherwise stated, $\\mathcal{D}_{LM}$ consists of",
+        "suffix": "& English Wikipedia. ## 6",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "BookCorpus",
+        "start_char_doc": 27015,
+        "end_char_doc": 27025,
+        "prefix": "otherwise stated, $\\mathcal{D}_{LM}$ consists of",
+        "suffix": "& English Wikipedia. ## 6",
+        "valueSource": "extracted"
+      },
+      "mls:url": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "unlabeled language-model pre-training corpus",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:license": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "datasource:english_wikipedia",
+      "@type": "mls:DataSource",
+      "mention": {
+        "start_char_doc": 27028,
+        "end_char_doc": 27045,
+        "prefix": "$\\mathcal{D}_{LM}$ consists of BookCorpus &",
+        "suffix": ". ## 6 Analysis In",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "English Wikipedia",
+        "start_char_doc": 27028,
+        "end_char_doc": 27045,
+        "prefix": "$\\mathcal{D}_{LM}$ consists of BookCorpus &",
+        "suffix": ". ## 6 Analysis In",
+        "valueSource": "extracted"
+      },
+      "mls:url": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "unlabeled language-model pre-training corpus",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:license": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "datasource:glue_server",
+      "@type": "mls:DataSource",
+      "mention": {
+        "start_char_doc": 17333,
+        "end_char_doc": 17344,
+        "prefix": "results are evaluated on the",
+        "suffix": ", using the model that",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "GLUE server",
+        "start_char_doc": 17333,
+        "end_char_doc": 17344,
+        "prefix": "results are evaluated on the",
+        "suffix": ", using the model that",
+        "valueSource": "extracted"
+      },
+      "mls:url": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "evaluation server",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:license": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "dataset:mnli",
+      "@type": "mls:MLS_Dataset",
+      "mention": {
+        "start_char_doc": 26392,
+        "end_char_doc": 26403,
+        "prefix": "</tr> </thead> <tbody> <tr> <td>",
+        "suffix": "</td> <td>NLI* (1.3m samples)</td> </tr>",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "MNLI",
+        "start_char_doc": 26392,
+        "end_char_doc": 26403,
+        "prefix": "</tr> </thead> <tbody> <tr> <td>",
+        "suffix": "</td> <td>NLI* (1.3m samples)</td> </tr>",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "MNLI (390k)",
+        "start_char_doc": 26392,
+        "end_char_doc": 26403,
+        "prefix": "</tr> </thead> <tbody> <tr> <td>",
+        "suffix": "</td> <td>NLI* (1.3m samples)</td> </tr>",
+        "valueSource": "extracted"
+      },
+      "mls:numInstances": {
+        "value": 390000,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:language": {
+        "value": "English",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:license": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:modality": {
+        "value": "text",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:numClasses": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "datasource:glue_server"
+        }
+      ]
+    },
+    {
+      "@id": "dataset:rte",
+      "@type": "mls:MLS_Dataset",
+      "mention": {
+        "start_char_doc": 26473,
+        "end_char_doc": 26483,
+        "prefix": "(1.3m samples)</td> </tr> <tr> <td>",
+        "suffix": "</td> <td>NLI* (1.3m samples)</td> </tr>",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "RTE",
+        "start_char_doc": 26473,
+        "end_char_doc": 26483,
+        "prefix": "(1.3m samples)</td> </tr> <tr> <td>",
+        "suffix": "</td> <td>NLI* (1.3m samples)</td> </tr>",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "RTE (2.5k)",
+        "start_char_doc": 26473,
+        "end_char_doc": 26483,
+        "prefix": "(1.3m samples)</td> </tr> <tr> <td>",
+        "suffix": "</td> <td>NLI* (1.3m samples)</td> </tr>",
+        "valueSource": "extracted"
+      },
+      "mls:numInstances": {
+        "value": 2500,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:language": {
+        "value": "English",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:license": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:modality": {
+        "value": "text",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:numClasses": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "datasource:glue_server"
+        }
+      ]
+    },
+    {
+      "@id": "dataset:sst_2",
+      "@type": "mls:MLS_Dataset",
+      "mention": {
+        "start_char_doc": 26553,
+        "end_char_doc": 26564,
+        "prefix": "(1.3m samples)</td> </tr> <tr> <td>",
+        "suffix": "</td> <td>Movie Reviews* (1.7m samples)</td>",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "SST-2",
+        "start_char_doc": 26553,
+        "end_char_doc": 26564,
+        "prefix": "(1.3m samples)</td> </tr> <tr> <td>",
+        "suffix": "</td> <td>Movie Reviews* (1.7m samples)</td>",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "SST-2 (68k)",
+        "start_char_doc": 26553,
+        "end_char_doc": 26564,
+        "prefix": "(1.3m samples)</td> </tr> <tr> <td>",
+        "suffix": "</td> <td>Movie Reviews* (1.7m samples)</td>",
+        "valueSource": "extracted"
+      },
+      "mls:numInstances": {
+        "value": 68000,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:language": {
+        "value": "English",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:license": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:modality": {
+        "value": "text",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:numClasses": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "datasource:glue_server"
+        }
+      ]
+    },
+    {
+      "@id": "dataset:book_reviews",
+      "@type": "mls:MLS_Dataset",
+      "mention": {
+        "start_char_doc": 26644,
+        "end_char_doc": 26662,
+        "prefix": "(1.7m samples)</td> </tr> <tr> <td>",
+        "suffix": "</td> <td>Book Reviews* (8m samples)</td>",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Book Reviews",
+        "start_char_doc": 26644,
+        "end_char_doc": 26662,
+        "prefix": "(1.7m samples)</td> </tr> <tr> <td>",
+        "suffix": "</td> <td>Book Reviews* (8m samples)</td>",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "Book Reviews (50k)",
+        "start_char_doc": 26644,
+        "end_char_doc": 26662,
+        "prefix": "(1.7m samples)</td> </tr> <tr> <td>",
+        "suffix": "</td> <td>Book Reviews* (8m samples)</td>",
+        "valueSource": "extracted"
+      },
+      "mls:numInstances": {
+        "value": 50000,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:language": {
+        "value": "English",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:license": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:modality": {
+        "value": "text",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:numClasses": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "datasource:amazon_product_data"
+        }
+      ]
+    },
+    {
+      "@id": "dataset:nli_star",
+      "@type": "mls:MLS_Dataset",
+      "mention": {
+        "start_char_doc": 26419,
+        "end_char_doc": 26438,
+        "prefix": "<tbody> <tr> <td>MNLI (390k)</td> <td>",
+        "suffix": "</td> </tr> <tr> <td>RTE (2.5k)</td>",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "NLI*",
+        "start_char_doc": 26419,
+        "end_char_doc": 26438,
+        "prefix": "<tbody> <tr> <td>MNLI (390k)</td> <td>",
+        "suffix": "</td> </tr> <tr> <td>RTE (2.5k)</td>",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "NLI* (1.3m samples)",
+        "start_char_doc": 26419,
+        "end_char_doc": 26438,
+        "prefix": "<tbody> <tr> <td>MNLI (390k)</td> <td>",
+        "suffix": "</td> </tr> <tr> <td>RTE (2.5k)</td>",
+        "valueSource": "extracted"
+      },
+      "mls:numInstances": {
+        "value": 1300000,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:language": {
+        "value": "English",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:license": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:modality": {
+        "value": "text",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:numClasses": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "datasource:glue_server"
+        }
+      ]
+    },
+    {
+      "@id": "dataset:movie_reviews_transfer",
+      "@type": "mls:MLS_Dataset",
+      "mention": {
+        "start_char_doc": 26580,
+        "end_char_doc": 26609,
+        "prefix": "</tr> <tr> <td>SST-2 (68k)</td> <td>",
+        "suffix": "</td> </tr> <tr> <td>Book Reviews",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Movie Reviews*",
+        "start_char_doc": 26580,
+        "end_char_doc": 26609,
+        "prefix": "</tr> <tr> <td>SST-2 (68k)</td> <td>",
+        "suffix": "</td> </tr> <tr> <td>Book Reviews",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "Movie Reviews* (1.7m samples)",
+        "start_char_doc": 26580,
+        "end_char_doc": 26609,
+        "prefix": "</tr> <tr> <td>SST-2 (68k)</td> <td>",
+        "suffix": "</td> </tr> <tr> <td>Book Reviews",
+        "valueSource": "extracted"
+      },
+      "mls:numInstances": {
+        "value": 1700000,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:language": {
+        "value": "English",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:license": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:modality": {
+        "value": "text",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:numClasses": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "datasource:amazon_product_data"
+        }
+      ]
+    },
+    {
+      "@id": "dataset:book_reviews_transfer",
+      "@type": "mls:MLS_Dataset",
+      "mention": {
+        "start_char_doc": 26678,
+        "end_char_doc": 26704,
+        "prefix": "<tr> <td>Book Reviews (50k)</td> <td>",
+        "suffix": "</td> </tr> </tbody> </table> Table",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Book Reviews*",
+        "start_char_doc": 26678,
+        "end_char_doc": 26704,
+        "prefix": "<tr> <td>Book Reviews (50k)</td> <td>",
+        "suffix": "</td> </tr> </tbody> </table> Table",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "Book Reviews* (8m samples)",
+        "start_char_doc": 26678,
+        "end_char_doc": 26704,
+        "prefix": "<tr> <td>Book Reviews (50k)</td> <td>",
+        "suffix": "</td> </tr> </tbody> </table> Table",
+        "valueSource": "extracted"
+      },
+      "mls:numInstances": {
+        "value": 8000000,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:language": {
+        "value": "English",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:license": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:modality": {
+        "value": "text",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:numClasses": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "datasource:amazon_product_data"
+        }
+      ]
+    },
+    {
+      "@id": "dataset:snli",
+      "@type": "mls:MLS_Dataset",
+      "mention": {
+        "start_char_doc": 26877,
+        "end_char_doc": 26888,
+        "prefix": "the collection of MNLI (390k),",
+        "suffix": "and QQP (400k). The reviews",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "SNLI",
+        "start_char_doc": 26877,
+        "end_char_doc": 26888,
+        "prefix": "the collection of MNLI (390k),",
+        "suffix": "and QQP (400k). The reviews",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "SNLI (570k)",
+        "start_char_doc": 26877,
+        "end_char_doc": 26888,
+        "prefix": "the collection of MNLI (390k),",
+        "suffix": "and QQP (400k). The reviews",
+        "valueSource": "extracted"
+      },
+      "mls:numInstances": {
+        "value": 570000,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:language": {
+        "value": "English",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:license": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:modality": {
+        "value": "text",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:numClasses": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "datasource:glue_server"
+        }
+      ]
+    },
+    {
+      "@id": "dataset:qqp",
+      "@type": "mls:MLS_Dataset",
+      "mention": {
+        "start_char_doc": 26893,
+        "end_char_doc": 26903,
+        "prefix": "MNLI (390k), SNLI (570k) and",
+        "suffix": ". The reviews datasets are",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "QQP",
+        "start_char_doc": 26893,
+        "end_char_doc": 26903,
+        "prefix": "MNLI (390k), SNLI (570k) and",
+        "suffix": ". The reviews datasets are",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "QQP (400k)",
+        "start_char_doc": 26893,
+        "end_char_doc": 26903,
+        "prefix": "MNLI (390k), SNLI (570k) and",
+        "suffix": ". The reviews datasets are",
+        "valueSource": "extracted"
+      },
+      "mls:numInstances": {
+        "value": 400000,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:language": {
+        "value": "English",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:license": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:modality": {
+        "value": "text",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:numClasses": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "datasource:glue_server"
+        }
+      ]
+    },
+    {
+      "@id": "dataset:bookcorpus_english_wikipedia",
+      "@type": "mls:MLS_Dataset",
+      "mention": {
+        "start_char_doc": 27015,
+        "end_char_doc": 27045,
+        "prefix": "otherwise stated, $\\mathcal{D}_{LM}$ consists of",
+        "suffix": ". ## 6 Analysis In",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "BookCorpus & English Wikipedia",
+        "start_char_doc": 27015,
+        "end_char_doc": 27045,
+        "prefix": "otherwise stated, $\\mathcal{D}_{LM}$ consists of",
+        "suffix": ". ## 6 Analysis In",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "BookCorpus & English Wikipedia",
+        "start_char_doc": 27015,
+        "end_char_doc": 27045,
+        "prefix": "otherwise stated, $\\mathcal{D}_{LM}$ consists of",
+        "suffix": ". ## 6 Analysis In",
+        "valueSource": "extracted"
+      },
+      "mls:numInstances": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:language": {
+        "value": "English",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:license": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:modality": {
+        "value": "text",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:numClasses": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "datasource:bookcorpus"
+        },
+        {
+          "@id": "datasource:english_wikipedia"
+        }
+      ]
+    },
+    {
+      "@id": "algo:pre_trained_distillation",
+      "@type": "mls:MLS_Algorithm",
+      "mention": {
+        "start_char_doc": 1187,
+        "end_char_doc": 1211,
+        "prefix": "effective and general algorithm, *",
+        "suffix": "*, brings further improvements. Through",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Pre-trained Distillation",
+        "start_char_doc": 1187,
+        "end_char_doc": 1211,
+        "prefix": "effective and general algorithm, *",
+        "suffix": "*, brings further improvements. Through",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "Pre-trained Distillation combines pre-training a compact student, distilling soft labels from a teacher on transfer data, and optional final fine-tuning.",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:version": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:bookcorpus_english_wikipedia"
+        },
+        {
+          "@id": "dataset:nli_star"
+        },
+        {
+          "@id": "dataset:movie_reviews_transfer"
+        },
+        {
+          "@id": "dataset:book_reviews_transfer"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:mnli"
+        },
+        {
+          "@id": "dataset:rte"
+        },
+        {
+          "@id": "dataset:sst_2"
+        },
+        {
+          "@id": "dataset:book_reviews"
+        }
+      ],
+      "mls:achieves": [
+        {
+          "@id": "eval:accuracy"
+        },
+        {
+          "@id": "eval:f1_accuracy"
+        },
+        {
+          "@id": "eval:meta_score"
+        },
+        {
+          "@id": "eval:spearman_correlation_coefficient"
+        },
+        {
+          "@id": "eval:pd_test_glue_results"
+        },
+        {
+          "@id": "eval:pd_dev_glue_results"
+        },
+        {
+          "@id": "eval:pd_model_size_speedup_book_reviews"
+        },
+        {
+          "@id": "eval:pd_transfer_size_book_reviews"
+        },
+        {
+          "@id": "eval:pd_domain_shift"
+        },
+        {
+          "@id": "eval:pd_same_data_mnli"
+        }
+      ],
+      "mls:complexity": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:pseudoCode": {
+        "value": "Algorithm 1",
+        "start_char_doc": 4040,
+        "end_char_doc": 4051,
+        "prefix": "--- ## Page 2 **",
+        "suffix": "** **Require:** student $\\theta$, teacher",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "method:knowledge_distillation",
+      "@type": "mls:Method",
+      "mention": {
+        "start_char_doc": 1103,
+        "end_char_doc": 1125,
+        "prefix": "large fine-tuned models through standard",
+        "suffix": ". The resulting simple, yet",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "knowledge distillation",
+        "start_char_doc": 1103,
+        "end_char_doc": 1125,
+        "prefix": "large fine-tuned models through standard",
+        "suffix": ". The resulting simple, yet",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "transferring task knowledge from large fine-tuned models through soft labels",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:version": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:bookcorpus_english_wikipedia"
+        },
+        {
+          "@id": "dataset:nli_star"
+        },
+        {
+          "@id": "dataset:movie_reviews_transfer"
+        },
+        {
+          "@id": "dataset:book_reviews_transfer"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:mnli"
+        },
+        {
+          "@id": "dataset:rte"
+        },
+        {
+          "@id": "dataset:sst_2"
+        },
+        {
+          "@id": "dataset:book_reviews"
+        }
+      ],
+      "mls:achieves": [
+        {
+          "@id": "eval:accuracy"
+        },
+        {
+          "@id": "eval:f1_accuracy"
+        },
+        {
+          "@id": "eval:meta_score"
+        },
+        {
+          "@id": "eval:spearman_correlation_coefficient"
+        },
+        {
+          "@id": "eval:pd_test_glue_results"
+        },
+        {
+          "@id": "eval:pd_dev_glue_results"
+        },
+        {
+          "@id": "eval:pd_model_size_speedup_book_reviews"
+        },
+        {
+          "@id": "eval:pd_transfer_size_book_reviews"
+        },
+        {
+          "@id": "eval:pd_domain_shift"
+        },
+        {
+          "@id": "eval:pd_same_data_mnli"
+        }
+      ]
+    },
+    {
+      "@id": "method:pre_training_fine_tuning",
+      "@type": "mls:Method",
+      "mention": {
+        "start_char_doc": 2963,
+        "end_char_doc": 2987,
+        "prefix": "proposes variations of the standard",
+        "suffix": "procedure, but with limited generality",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "pre-training+fine-tuning",
+        "start_char_doc": 2963,
+        "end_char_doc": 2987,
+        "prefix": "proposes variations of the standard",
+        "suffix": "procedure, but with limited generality",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "pre-train compact models on unlabeled text and fine-tune them on labeled end-task data",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:version": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:bookcorpus_english_wikipedia"
+        },
+        {
+          "@id": "dataset:nli_star"
+        },
+        {
+          "@id": "dataset:movie_reviews_transfer"
+        },
+        {
+          "@id": "dataset:book_reviews_transfer"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:mnli"
+        },
+        {
+          "@id": "dataset:rte"
+        },
+        {
+          "@id": "dataset:sst_2"
+        },
+        {
+          "@id": "dataset:book_reviews"
+        }
+      ],
+      "mls:achieves": [
+        {
+          "@id": "eval:accuracy"
+        },
+        {
+          "@id": "eval:f1_accuracy"
+        },
+        {
+          "@id": "eval:meta_score"
+        },
+        {
+          "@id": "eval:spearman_correlation_coefficient"
+        },
+        {
+          "@id": "eval:pd_test_glue_results"
+        },
+        {
+          "@id": "eval:pd_dev_glue_results"
+        },
+        {
+          "@id": "eval:pd_model_size_speedup_book_reviews"
+        },
+        {
+          "@id": "eval:pd_transfer_size_book_reviews"
+        },
+        {
+          "@id": "eval:pd_domain_shift"
+        },
+        {
+          "@id": "eval:pd_same_data_mnli"
+        }
+      ]
+    },
+    {
+      "@id": "method:masked_lm_plus_pretraining",
+      "@type": "mls:Method",
+      "mention": {
+        "start_char_doc": 4254,
+        "end_char_doc": 4260,
+        "prefix": "Initialize $\\theta$ by pre-training an",
+        "suffix": "$ on $\\mathcal{D}_{LM}$ 2: **for",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "MLM$^+",
+        "start_char_doc": 4254,
+        "end_char_doc": 4260,
+        "prefix": "Initialize $\\theta$ by pre-training an",
+        "suffix": "$ on $\\mathcal{D}_{LM}$ 2: **for",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "masked LM and next sentence objectives used for pre-training",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:version": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:bookcorpus_english_wikipedia"
+        },
+        {
+          "@id": "dataset:nli_star"
+        },
+        {
+          "@id": "dataset:movie_reviews_transfer"
+        },
+        {
+          "@id": "dataset:book_reviews_transfer"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:mnli"
+        },
+        {
+          "@id": "dataset:rte"
+        },
+        {
+          "@id": "dataset:sst_2"
+        },
+        {
+          "@id": "dataset:book_reviews"
+        }
+      ],
+      "mls:achieves": [
+        {
+          "@id": "eval:accuracy"
+        },
+        {
+          "@id": "eval:f1_accuracy"
+        },
+        {
+          "@id": "eval:meta_score"
+        },
+        {
+          "@id": "eval:spearman_correlation_coefficient"
+        },
+        {
+          "@id": "eval:pd_test_glue_results"
+        },
+        {
+          "@id": "eval:pd_dev_glue_results"
+        },
+        {
+          "@id": "eval:pd_model_size_speedup_book_reviews"
+        },
+        {
+          "@id": "eval:pd_transfer_size_book_reviews"
+        },
+        {
+          "@id": "eval:pd_domain_shift"
+        },
+        {
+          "@id": "eval:pd_same_data_mnli"
+        }
+      ]
+    },
+    {
+      "@id": "method:task_specific_distillation",
+      "@type": "mls:Method",
+      "mention": {
+        "start_char_doc": 3850,
+        "end_char_doc": 3876,
+        "prefix": "pre-training (Devlin et al., 2018),",
+        "suffix": ", and optional fine-tuning. &lt;page_number&gt;1&lt;/page_number&gt;",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "task-specific distillation",
+        "start_char_doc": 3850,
+        "end_char_doc": 3876,
+        "prefix": "pre-training (Devlin et al., 2018),",
+        "suffix": ", and optional fine-tuning. &lt;page_number&gt;1&lt;/page_number&gt;",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "distillation over unlabeled transfer data using teacher probabilities",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:version": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:bookcorpus_english_wikipedia"
+        },
+        {
+          "@id": "dataset:nli_star"
+        },
+        {
+          "@id": "dataset:movie_reviews_transfer"
+        },
+        {
+          "@id": "dataset:book_reviews_transfer"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:mnli"
+        },
+        {
+          "@id": "dataset:rte"
+        },
+        {
+          "@id": "dataset:sst_2"
+        },
+        {
+          "@id": "dataset:book_reviews"
+        }
+      ],
+      "mls:achieves": [
+        {
+          "@id": "eval:accuracy"
+        },
+        {
+          "@id": "eval:f1_accuracy"
+        },
+        {
+          "@id": "eval:meta_score"
+        },
+        {
+          "@id": "eval:spearman_correlation_coefficient"
+        },
+        {
+          "@id": "eval:pd_test_glue_results"
+        },
+        {
+          "@id": "eval:pd_dev_glue_results"
+        },
+        {
+          "@id": "eval:pd_model_size_speedup_book_reviews"
+        },
+        {
+          "@id": "eval:pd_transfer_size_book_reviews"
+        },
+        {
+          "@id": "eval:pd_domain_shift"
+        },
+        {
+          "@id": "eval:pd_same_data_mnli"
+        }
+      ]
+    },
+    {
+      "@id": "method:optional_fine_tuning",
+      "@type": "mls:Method",
+      "mention": {
+        "start_char_doc": 3882,
+        "end_char_doc": 3902,
+        "prefix": "al., 2018), task-specific distillation, and",
+        "suffix": ". &lt;page_number&gt;1&lt;/page_number&gt; &lt;watermark&gt;arXiv:1908.08962v2 [cs.CL] 25",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "optional fine-tuning",
+        "start_char_doc": 3882,
+        "end_char_doc": 3902,
+        "prefix": "al., 2018), task-specific distillation, and",
+        "suffix": ". &lt;page_number&gt;1&lt;/page_number&gt; &lt;watermark&gt;arXiv:1908.08962v2 [cs.CL] 25",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "final fine-tuning on labeled data after distillation",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:version": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:bookcorpus_english_wikipedia"
+        },
+        {
+          "@id": "dataset:nli_star"
+        },
+        {
+          "@id": "dataset:movie_reviews_transfer"
+        },
+        {
+          "@id": "dataset:book_reviews_transfer"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:mnli"
+        },
+        {
+          "@id": "dataset:rte"
+        },
+        {
+          "@id": "dataset:sst_2"
+        },
+        {
+          "@id": "dataset:book_reviews"
+        }
+      ],
+      "mls:achieves": [
+        {
+          "@id": "eval:accuracy"
+        },
+        {
+          "@id": "eval:f1_accuracy"
+        },
+        {
+          "@id": "eval:meta_score"
+        },
+        {
+          "@id": "eval:spearman_correlation_coefficient"
+        },
+        {
+          "@id": "eval:pd_test_glue_results"
+        },
+        {
+          "@id": "eval:pd_dev_glue_results"
+        },
+        {
+          "@id": "eval:pd_model_size_speedup_book_reviews"
+        },
+        {
+          "@id": "eval:pd_transfer_size_book_reviews"
+        },
+        {
+          "@id": "eval:pd_domain_shift"
+        },
+        {
+          "@id": "eval:pd_same_data_mnli"
+        }
+      ]
+    },
+    {
+      "@id": "method:basic_training",
+      "@type": "mls:Method",
+      "mention": {
+        "start_char_doc": 30732,
+        "end_char_doc": 30746,
+        "prefix": "of randomly initialized students (i.e.",
+        "suffix": "and distillation) is closely correlated",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "basic training",
+        "start_char_doc": 30732,
+        "end_char_doc": 30746,
+        "prefix": "of randomly initialized students (i.e.",
+        "suffix": "and distillation) is closely correlated",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "training on labeled task data without pre-training or distillation",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:version": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:bookcorpus_english_wikipedia"
+        },
+        {
+          "@id": "dataset:nli_star"
+        },
+        {
+          "@id": "dataset:movie_reviews_transfer"
+        },
+        {
+          "@id": "dataset:book_reviews_transfer"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:mnli"
+        },
+        {
+          "@id": "dataset:rte"
+        },
+        {
+          "@id": "dataset:sst_2"
+        },
+        {
+          "@id": "dataset:book_reviews"
+        }
+      ],
+      "mls:achieves": [
+        {
+          "@id": "eval:accuracy"
+        },
+        {
+          "@id": "eval:f1_accuracy"
+        },
+        {
+          "@id": "eval:meta_score"
+        },
+        {
+          "@id": "eval:spearman_correlation_coefficient"
+        },
+        {
+          "@id": "eval:pd_test_glue_results"
+        },
+        {
+          "@id": "eval:pd_dev_glue_results"
+        },
+        {
+          "@id": "eval:pd_model_size_speedup_book_reviews"
+        },
+        {
+          "@id": "eval:pd_transfer_size_book_reviews"
+        },
+        {
+          "@id": "eval:pd_domain_shift"
+        },
+        {
+          "@id": "eval:pd_same_data_mnli"
+        }
+      ]
+    },
+    {
+      "@id": "method:pd_f",
+      "@type": "mls:Method",
+      "mention": {
+        "start_char_doc": 37106,
+        "end_char_doc": 37110,
+        "prefix": "in-domain transfer set. PD and",
+        "suffix": "are more robust to transfer",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "PD-F",
+        "start_char_doc": 37106,
+        "end_char_doc": 37110,
+        "prefix": "in-domain transfer set. PD and",
+        "suffix": "are more robust to transfer",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "Pre-trained Distillation with final fine-tuning",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:version": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:bookcorpus_english_wikipedia"
+        },
+        {
+          "@id": "dataset:nli_star"
+        },
+        {
+          "@id": "dataset:movie_reviews_transfer"
+        },
+        {
+          "@id": "dataset:book_reviews_transfer"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:mnli"
+        },
+        {
+          "@id": "dataset:rte"
+        },
+        {
+          "@id": "dataset:sst_2"
+        },
+        {
+          "@id": "dataset:book_reviews"
+        }
+      ],
+      "mls:achieves": [
+        {
+          "@id": "eval:accuracy"
+        },
+        {
+          "@id": "eval:f1_accuracy"
+        },
+        {
+          "@id": "eval:meta_score"
+        },
+        {
+          "@id": "eval:spearman_correlation_coefficient"
+        },
+        {
+          "@id": "eval:pd_test_glue_results"
+        },
+        {
+          "@id": "eval:pd_dev_glue_results"
+        },
+        {
+          "@id": "eval:pd_model_size_speedup_book_reviews"
+        },
+        {
+          "@id": "eval:pd_transfer_size_book_reviews"
+        },
+        {
+          "@id": "eval:pd_domain_shift"
+        },
+        {
+          "@id": "eval:pd_same_data_mnli"
+        }
+      ]
+    },
+    {
+      "@id": "model:bert_base",
+      "@type": "mls:MLS_Model",
+      "mention": {
+        "start_char_doc": 7985,
+        "end_char_doc": 8005,
+        "prefix": "4, the teacher is pre-trained",
+        "suffix": "fine-tuned on labeled end-task data.",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "BERT$_{\\text{BASE}}$",
+        "start_char_doc": 7985,
+        "end_char_doc": 8005,
+        "prefix": "4, the teacher is pre-trained",
+        "suffix": "fine-tuned on labeled end-task data.",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "pre-trained BERT base teacher fine-tuned on labeled end-task data",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:architecture": {
+        "value": "pre-trained BERT base teacher fine-tuned on labeled end-task data",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:parameters": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:bookcorpus_english_wikipedia"
+        },
+        {
+          "@id": "dataset:nli_star"
+        },
+        {
+          "@id": "dataset:movie_reviews_transfer"
+        },
+        {
+          "@id": "dataset:book_reviews_transfer"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:mnli"
+        },
+        {
+          "@id": "dataset:rte"
+        },
+        {
+          "@id": "dataset:sst_2"
+        },
+        {
+          "@id": "dataset:book_reviews"
+        }
+      ],
+      "mls:achieves": [
+        {
+          "@id": "eval:accuracy"
+        },
+        {
+          "@id": "eval:f1_accuracy"
+        },
+        {
+          "@id": "eval:meta_score"
+        },
+        {
+          "@id": "eval:spearman_correlation_coefficient"
+        },
+        {
+          "@id": "eval:pd_test_glue_results"
+        },
+        {
+          "@id": "eval:pd_dev_glue_results"
+        },
+        {
+          "@id": "eval:pd_model_size_speedup_book_reviews"
+        },
+        {
+          "@id": "eval:pd_transfer_size_book_reviews"
+        },
+        {
+          "@id": "eval:pd_domain_shift"
+        },
+        {
+          "@id": "eval:pd_same_data_mnli"
+        }
+      ]
+    },
+    {
+      "@id": "model:bert_large",
+      "@type": "mls:MLS_Model",
+      "mention": {
+        "start_char_doc": 9914,
+        "end_char_doc": 9928,
+        "prefix": "</table> (b) Relative speedup wrt",
+        "suffix": "on TPU v2 Table 1:",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "BERT$_{LARGE}$",
+        "start_char_doc": 9914,
+        "end_char_doc": 9928,
+        "prefix": "</table> (b) Relative speedup wrt",
+        "suffix": "on TPU v2 Table 1:",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "teacher model used in analysis experiments",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:architecture": {
+        "value": "teacher model used in analysis experiments",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:parameters": {
+        "value": "24L/1024H and 340M parameters",
+        "start_char_doc": 21805,
+        "end_char_doc": 21834,
+        "prefix": "The teacher, BERT$_{LARGE}$, has dimensions",
+        "suffix": ". We experiment with 24",
+        "valueSource": "extracted"
+      },
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:bookcorpus_english_wikipedia"
+        },
+        {
+          "@id": "dataset:nli_star"
+        },
+        {
+          "@id": "dataset:movie_reviews_transfer"
+        },
+        {
+          "@id": "dataset:book_reviews_transfer"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:mnli"
+        },
+        {
+          "@id": "dataset:rte"
+        },
+        {
+          "@id": "dataset:sst_2"
+        },
+        {
+          "@id": "dataset:book_reviews"
+        }
+      ],
+      "mls:achieves": [
+        {
+          "@id": "eval:accuracy"
+        },
+        {
+          "@id": "eval:f1_accuracy"
+        },
+        {
+          "@id": "eval:meta_score"
+        },
+        {
+          "@id": "eval:spearman_correlation_coefficient"
+        },
+        {
+          "@id": "eval:pd_test_glue_results"
+        },
+        {
+          "@id": "eval:pd_dev_glue_results"
+        },
+        {
+          "@id": "eval:pd_model_size_speedup_book_reviews"
+        },
+        {
+          "@id": "eval:pd_transfer_size_book_reviews"
+        },
+        {
+          "@id": "eval:pd_domain_shift"
+        },
+        {
+          "@id": "eval:pd_same_data_mnli"
+        }
+      ]
+    },
+    {
+      "@id": "model:compact_transformer_students",
+      "@type": "mls:MLS_Model",
+      "mention": {
+        "start_char_doc": 21855,
+        "end_char_doc": 21872,
+        "prefix": "340M parameters. We experiment with",
+        "suffix": ", with sizes and relative",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "24 student models",
+        "start_char_doc": 21855,
+        "end_char_doc": 21872,
+        "prefix": "340M parameters. We experiment with",
+        "suffix": ", with sizes and relative",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "compact Transformer/BERT-like student model family",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:architecture": {
+        "value": "compact Transformer/BERT-like student model family",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:parameters": {
+        "value": "24 student models",
+        "start_char_doc": 21855,
+        "end_char_doc": 21872,
+        "prefix": "340M parameters. We experiment with",
+        "suffix": ", with sizes and relative",
+        "valueSource": "extracted"
+      },
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:bookcorpus_english_wikipedia"
+        },
+        {
+          "@id": "dataset:nli_star"
+        },
+        {
+          "@id": "dataset:movie_reviews_transfer"
+        },
+        {
+          "@id": "dataset:book_reviews_transfer"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:mnli"
+        },
+        {
+          "@id": "dataset:rte"
+        },
+        {
+          "@id": "dataset:sst_2"
+        },
+        {
+          "@id": "dataset:book_reviews"
+        }
+      ],
+      "mls:achieves": [
+        {
+          "@id": "eval:accuracy"
+        },
+        {
+          "@id": "eval:f1_accuracy"
+        },
+        {
+          "@id": "eval:meta_score"
+        },
+        {
+          "@id": "eval:spearman_correlation_coefficient"
+        },
+        {
+          "@id": "eval:pd_test_glue_results"
+        },
+        {
+          "@id": "eval:pd_dev_glue_results"
+        },
+        {
+          "@id": "eval:pd_model_size_speedup_book_reviews"
+        },
+        {
+          "@id": "eval:pd_transfer_size_book_reviews"
+        },
+        {
+          "@id": "eval:pd_domain_shift"
+        },
+        {
+          "@id": "eval:pd_same_data_mnli"
+        }
+      ]
+    },
+    {
+      "@id": "model:transformer_tiny",
+      "@type": "mls:MLS_Model",
+      "mention": {
+        "start_char_doc": 10348,
+        "end_char_doc": 10368,
+        "prefix": "24 model sizes, from our",
+        "suffix": "(4m parameters) all the way",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Transformer$_{TINY}$",
+        "start_char_doc": 10348,
+        "end_char_doc": 10368,
+        "prefix": "24 model sizes, from our",
+        "suffix": "(4m parameters) all the way",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "compact Transformer student",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:architecture": {
+        "value": "compact Transformer student",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:parameters": {
+        "value": "L=2, H=128; 4m parameters",
+        "start_char_doc": 10370,
+        "end_char_doc": 10383,
+        "prefix": "sizes, from our Transformer$_{TINY}$ (",
+        "suffix": ") all the way up",
+        "valueSource": "extracted"
+      },
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:bookcorpus_english_wikipedia"
+        },
+        {
+          "@id": "dataset:nli_star"
+        },
+        {
+          "@id": "dataset:movie_reviews_transfer"
+        },
+        {
+          "@id": "dataset:book_reviews_transfer"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:mnli"
+        },
+        {
+          "@id": "dataset:rte"
+        },
+        {
+          "@id": "dataset:sst_2"
+        },
+        {
+          "@id": "dataset:book_reviews"
+        }
+      ],
+      "mls:achieves": [
+        {
+          "@id": "eval:accuracy"
+        },
+        {
+          "@id": "eval:f1_accuracy"
+        },
+        {
+          "@id": "eval:meta_score"
+        },
+        {
+          "@id": "eval:spearman_correlation_coefficient"
+        },
+        {
+          "@id": "eval:pd_test_glue_results"
+        },
+        {
+          "@id": "eval:pd_dev_glue_results"
+        },
+        {
+          "@id": "eval:pd_model_size_speedup_book_reviews"
+        },
+        {
+          "@id": "eval:pd_transfer_size_book_reviews"
+        },
+        {
+          "@id": "eval:pd_domain_shift"
+        },
+        {
+          "@id": "eval:pd_same_data_mnli"
+        }
+      ]
+    },
+    {
+      "@id": "model:transformer_mini",
+      "@type": "mls:MLS_Model",
+      "mention": {
+        "start_char_doc": 32987,
+        "end_char_doc": 33013,
+        "prefix": "Amazon Book Reviews corpus, where",
+        "suffix": "recovers the accuracy of the",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Transformer<sub>MINI</sub>",
+        "start_char_doc": 32987,
+        "end_char_doc": 33013,
+        "prefix": "Amazon Book Reviews corpus, where",
+        "suffix": "recovers the accuracy of the",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "compact Transformer student",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:architecture": {
+        "value": "compact Transformer student",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:parameters": {
+        "value": "L=4, H=256",
+        "start_char_doc": 10217,
+        "end_char_doc": 10227,
+        "prefix": "Tiny (L=2, H=128), Mini (",
+        "suffix": "), Small (L=4, H=512), Medium",
+        "valueSource": "extracted"
+      },
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:bookcorpus_english_wikipedia"
+        },
+        {
+          "@id": "dataset:nli_star"
+        },
+        {
+          "@id": "dataset:movie_reviews_transfer"
+        },
+        {
+          "@id": "dataset:book_reviews_transfer"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:mnli"
+        },
+        {
+          "@id": "dataset:rte"
+        },
+        {
+          "@id": "dataset:sst_2"
+        },
+        {
+          "@id": "dataset:book_reviews"
+        }
+      ],
+      "mls:achieves": [
+        {
+          "@id": "eval:accuracy"
+        },
+        {
+          "@id": "eval:f1_accuracy"
+        },
+        {
+          "@id": "eval:meta_score"
+        },
+        {
+          "@id": "eval:spearman_correlation_coefficient"
+        },
+        {
+          "@id": "eval:pd_test_glue_results"
+        },
+        {
+          "@id": "eval:pd_dev_glue_results"
+        },
+        {
+          "@id": "eval:pd_model_size_speedup_book_reviews"
+        },
+        {
+          "@id": "eval:pd_transfer_size_book_reviews"
+        },
+        {
+          "@id": "eval:pd_domain_shift"
+        },
+        {
+          "@id": "eval:pd_same_data_mnli"
+        }
+      ]
+    },
+    {
+      "@id": "model:transformer_small",
+      "@type": "mls:MLS_Model",
+      "mention": {
+        "start_char_doc": 10230,
+        "end_char_doc": 10235,
+        "prefix": "(L=2, H=128), Mini (L=4, H=256),",
+        "suffix": "(L=4, H=512), Medium (L=8, H=512),",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Small",
+        "start_char_doc": 10230,
+        "end_char_doc": 10235,
+        "prefix": "(L=2, H=128), Mini (L=4, H=256),",
+        "suffix": "(L=4, H=512), Medium (L=8, H=512),",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "compact Transformer student",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:architecture": {
+        "value": "compact Transformer student",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:parameters": {
+        "value": "L=4, H=512",
+        "start_char_doc": 10237,
+        "end_char_doc": 10247,
+        "prefix": "Mini (L=4, H=256), Small (",
+        "suffix": "), Medium (L=8, H=512), and",
+        "valueSource": "extracted"
+      },
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:bookcorpus_english_wikipedia"
+        },
+        {
+          "@id": "dataset:nli_star"
+        },
+        {
+          "@id": "dataset:movie_reviews_transfer"
+        },
+        {
+          "@id": "dataset:book_reviews_transfer"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:mnli"
+        },
+        {
+          "@id": "dataset:rte"
+        },
+        {
+          "@id": "dataset:sst_2"
+        },
+        {
+          "@id": "dataset:book_reviews"
+        }
+      ],
+      "mls:achieves": [
+        {
+          "@id": "eval:accuracy"
+        },
+        {
+          "@id": "eval:f1_accuracy"
+        },
+        {
+          "@id": "eval:meta_score"
+        },
+        {
+          "@id": "eval:spearman_correlation_coefficient"
+        },
+        {
+          "@id": "eval:pd_test_glue_results"
+        },
+        {
+          "@id": "eval:pd_dev_glue_results"
+        },
+        {
+          "@id": "eval:pd_model_size_speedup_book_reviews"
+        },
+        {
+          "@id": "eval:pd_transfer_size_book_reviews"
+        },
+        {
+          "@id": "eval:pd_domain_shift"
+        },
+        {
+          "@id": "eval:pd_same_data_mnli"
+        }
+      ]
+    },
+    {
+      "@id": "model:transformer_medium",
+      "@type": "mls:MLS_Model",
+      "mention": {
+        "start_char_doc": 10250,
+        "end_char_doc": 10256,
+        "prefix": "(L=4, H=256), Small (L=4, H=512),",
+        "suffix": "(L=8, H=512), and Base (L=12,",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Medium",
+        "start_char_doc": 10250,
+        "end_char_doc": 10256,
+        "prefix": "(L=4, H=256), Small (L=4, H=512),",
+        "suffix": "(L=8, H=512), and Base (L=12,",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "compact Transformer student",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:architecture": {
+        "value": "compact Transformer student",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:parameters": {
+        "value": "L=8, H=512",
+        "start_char_doc": 10258,
+        "end_char_doc": 10268,
+        "prefix": "Small (L=4, H=512), Medium (",
+        "suffix": "), and Base (L=12, H=768).",
+        "valueSource": "extracted"
+      },
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:bookcorpus_english_wikipedia"
+        },
+        {
+          "@id": "dataset:nli_star"
+        },
+        {
+          "@id": "dataset:movie_reviews_transfer"
+        },
+        {
+          "@id": "dataset:book_reviews_transfer"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:mnli"
+        },
+        {
+          "@id": "dataset:rte"
+        },
+        {
+          "@id": "dataset:sst_2"
+        },
+        {
+          "@id": "dataset:book_reviews"
+        }
+      ],
+      "mls:achieves": [
+        {
+          "@id": "eval:accuracy"
+        },
+        {
+          "@id": "eval:f1_accuracy"
+        },
+        {
+          "@id": "eval:meta_score"
+        },
+        {
+          "@id": "eval:spearman_correlation_coefficient"
+        },
+        {
+          "@id": "eval:pd_test_glue_results"
+        },
+        {
+          "@id": "eval:pd_dev_glue_results"
+        },
+        {
+          "@id": "eval:pd_model_size_speedup_book_reviews"
+        },
+        {
+          "@id": "eval:pd_transfer_size_book_reviews"
+        },
+        {
+          "@id": "eval:pd_domain_shift"
+        },
+        {
+          "@id": "eval:pd_same_data_mnli"
+        }
+      ]
+    },
+    {
+      "@id": "model:transformer_base",
+      "@type": "mls:MLS_Model",
+      "mention": {
+        "start_char_doc": 10403,
+        "end_char_doc": 10423,
+        "prefix": "all the way up to",
+        "suffix": "(110m parameters)$^1$. The student model",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Transformer$_{BASE}$",
+        "start_char_doc": 10403,
+        "end_char_doc": 10423,
+        "prefix": "all the way up to",
+        "suffix": "(110m parameters)$^1$. The student model",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "largest compact Transformer student",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:architecture": {
+        "value": "largest compact Transformer student",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:parameters": {
+        "value": "L=12, H=768; 110m parameters",
+        "start_char_doc": 5826,
+        "end_char_doc": 5841,
+        "prefix": "of various sizes (4m to",
+        "suffix": ") and depth/width trade-offs, we",
+        "valueSource": "extracted"
+      },
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:bookcorpus_english_wikipedia"
+        },
+        {
+          "@id": "dataset:nli_star"
+        },
+        {
+          "@id": "dataset:movie_reviews_transfer"
+        },
+        {
+          "@id": "dataset:book_reviews_transfer"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:mnli"
+        },
+        {
+          "@id": "dataset:rte"
+        },
+        {
+          "@id": "dataset:sst_2"
+        },
+        {
+          "@id": "dataset:book_reviews"
+        }
+      ],
+      "mls:achieves": [
+        {
+          "@id": "eval:accuracy"
+        },
+        {
+          "@id": "eval:f1_accuracy"
+        },
+        {
+          "@id": "eval:meta_score"
+        },
+        {
+          "@id": "eval:spearman_correlation_coefficient"
+        },
+        {
+          "@id": "eval:pd_test_glue_results"
+        },
+        {
+          "@id": "eval:pd_dev_glue_results"
+        },
+        {
+          "@id": "eval:pd_model_size_speedup_book_reviews"
+        },
+        {
+          "@id": "eval:pd_transfer_size_book_reviews"
+        },
+        {
+          "@id": "eval:pd_domain_shift"
+        },
+        {
+          "@id": "eval:pd_same_data_mnli"
+        }
+      ]
+    },
+    {
+      "@id": "eval:accuracy",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:measure": {
+        "value": "Accuracy",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:stdDev": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:confidenceInterval": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:description": {
+        "value": "classification accuracy",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "eval:f1_accuracy",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:measure": {
+        "value": "F1/accuracy",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:stdDev": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:confidenceInterval": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:description": {
+        "value": "paired F1/accuracy scores for MRPC and QQP",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "eval:meta_score",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:measure": {
+        "value": "Meta Score",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hasValue": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:stdDev": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:confidenceInterval": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:description": {
+        "value": "meta score computed on 6 tasks",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "eval:spearman_correlation_coefficient",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 36802,
+        "end_char_doc": 36834,
+        "prefix": "Reviews graph showing performance vs",
+        "suffix": "&lt;/img&gt; Figure 9: **Robustness to",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "Spearman Correlation Coefficient",
+        "start_char_doc": 36802,
+        "end_char_doc": 36834,
+        "prefix": "Reviews graph showing performance vs",
+        "suffix": "&lt;/img&gt; Figure 9: **Robustness to",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:stdDev": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:confidenceInterval": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:description": {
+        "value": "domain-shift correlation statistic",
+        "start_char_doc": 36802,
+        "end_char_doc": 36834,
+        "prefix": "Reviews graph showing performance vs",
+        "suffix": "&lt;/img&gt; Figure 9: **Robustness to",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "eval:pd_test_glue_results",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 14319,
+        "end_char_doc": 14332,
+        "prefix": "</tr> </thead> <tbody> <tr> <td>",
+        "suffix": "</td> <td>LM pre-training</td> <td>KD</td> <td>☑</td>",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "PD test GLUE results",
+        "start_char_doc": 14319,
+        "end_char_doc": 14332,
+        "prefix": "</tr> </thead> <tbody> <tr> <td>",
+        "suffix": "</td> <td>LM pre-training</td> <td>KD</td> <td>☑</td>",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:stdDev": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:confidenceInterval": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:description": {
+        "value": "PD test results: SST-2 91.8; MRPC 86.8/81.7; QQP 70.4/88.9; MNLI 82.8/82.2; QNLI 88.9; RTE 65.3; Meta Score 82.1",
+        "start_char_doc": 14319,
+        "end_char_doc": 14332,
+        "prefix": "</tr> </thead> <tbody> <tr> <td>",
+        "suffix": "</td> <td>LM pre-training</td> <td>KD</td> <td>☑</td>",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "eval:pd_dev_glue_results",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 252,
+        "end_char_doc": 255,
+        "prefix": "kentonl, kristout}@google.com ## ABSTRACT Recent",
+        "suffix": "elopments in natural language representations",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "PD dev GLUE results",
+        "start_char_doc": 252,
+        "end_char_doc": 255,
+        "prefix": "kentonl, kristout}@google.com ## ABSTRACT Recent",
+        "suffix": "elopments in natural language representations",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:stdDev": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:confidenceInterval": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:description": {
+        "value": "PD dev results: SST-2 91.1; MRPC 89.4/84.9; QQP 87.4/90.7; MNLI 82.5/83.4; QNLI 89.4; RTE 66.7; Meta Score 84.4",
+        "start_char_doc": 252,
+        "end_char_doc": 255,
+        "prefix": "kentonl, kristout}@google.com ## ABSTRACT Recent",
+        "suffix": "elopments in natural language representations",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "eval:pd_model_size_speedup_book_reviews",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 33056,
+        "end_char_doc": 33099,
+        "prefix": "of the teacher at a",
+        "suffix": ". Distillation achieves the same",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "PD model size and speedup on Book Reviews",
+        "start_char_doc": 33056,
+        "end_char_doc": 33099,
+        "prefix": "of the teacher at a",
+        "suffix": ". Distillation achieves the same",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:stdDev": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:confidenceInterval": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:description": {
+        "value": "Transformer<sub>MINI</sub> recovers teacher accuracy at a 31x decrease in model size and 16x speed-up",
+        "start_char_doc": 33056,
+        "end_char_doc": 33099,
+        "prefix": "of the teacher at a",
+        "suffix": ". Distillation achieves the same",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "eval:pd_transfer_size_book_reviews",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 34986,
+        "end_char_doc": 34998,
+        "prefix": "same performance with Transformer<sub>MINI</sub> on",
+        "suffix": ". In other words, PD",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "PD transfer-set size robustness",
+        "start_char_doc": 34986,
+        "end_char_doc": 34998,
+        "prefix": "same performance with Transformer<sub>MINI</sub> on",
+        "suffix": ". In other words, PD",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:stdDev": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:confidenceInterval": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:description": {
+        "value": "PD matches the teacher with Transformer<sub>MINI</sub> on 5m instances, using a 10x smaller model and 1.5x less transfer data",
+        "start_char_doc": 34986,
+        "end_char_doc": 34998,
+        "prefix": "same performance with Transformer<sub>MINI</sub> on",
+        "suffix": ". In other words, PD",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "eval:pd_domain_shift",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 37099,
+        "end_char_doc": 37149,
+        "prefix": "requires an in-domain transfer set.",
+        "suffix": ". common $n = 100$",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "PD domain-shift robustness",
+        "start_char_doc": 37099,
+        "end_char_doc": 37149,
+        "prefix": "requires an in-domain transfer set.",
+        "suffix": ". common $n = 100$",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:stdDev": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:confidenceInterval": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:description": {
+        "value": "PD and PD-F are more robust to transfer set domain; Spearman settings include S=0.43, S=0.52, S=0.76, and S=1.0",
+        "start_char_doc": 37099,
+        "end_char_doc": 37149,
+        "prefix": "requires an in-domain transfer set.",
+        "suffix": ". common $n = 100$",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "eval:pd_same_data_mnli",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 39196,
+        "end_char_doc": 39224,
+        "prefix": "As shown in Figure 10,",
+        "suffix": "on average over all student",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "PD same-data complementarity",
+        "start_char_doc": 39196,
+        "end_char_doc": 39224,
+        "prefix": "As shown in Figure 10,",
+        "suffix": "on average over all student",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:stdDev": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:confidenceInterval": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:description": {
+        "value": "PD is better than PF by 2.2% on average over all student sizes when D_LM = D_T = NLI*",
+        "start_char_doc": 39196,
+        "end_char_doc": 39224,
+        "prefix": "As shown in Figure 10,",
+        "suffix": "on average over all student",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "impl:bert_pretraining_distillation",
+      "@type": "mls:MLS_Implementation",
+      "mention": {
+        "start_char_doc": 32795,
+        "end_char_doc": 32817,
+        "prefix": "LM set, following the same",
+        "suffix": "as Devlin et al. (2018).",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "BERT pre-training and distillation implementation",
+        "start_char_doc": 32795,
+        "end_char_doc": 32817,
+        "prefix": "LM set, following the same",
+        "suffix": "as Devlin et al. (2018).",
+        "valueSource": "extracted"
+      },
+      "mls:codeRepository": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:framework": {
+        "value": "BERT",
+        "start_char_doc": 1641,
+        "end_char_doc": 1645,
+        "prefix": "make our 24 pre-trained miniature",
+        "suffix": "models publicly available. ## 1",
+        "valueSource": "extracted"
+      },
+      "mls:executionCommand": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:entryPoint": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:branch": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:runsIn": {
+        "@id": "env:cloud_tpu_v2"
+      }
+    },
+    {
+      "@id": "env:cloud_tpu_v2",
+      "@type": "mls:Environment",
+      "mention": {
+        "start_char_doc": 10066,
+        "end_char_doc": 10076,
+        "prefix": "(H). Latency is computed on",
+        "suffix": "with batch size 1 and",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Cloud TPUs",
+        "start_char_doc": 10066,
+        "end_char_doc": 10076,
+        "prefix": "(H). Latency is computed on",
+        "suffix": "with batch size 1 and",
+        "valueSource": "extracted"
+      },
+      "mls:hardwareSpecs": {
+        "value": "TPU v2",
+        "start_char_doc": 9932,
+        "end_char_doc": 9938,
+        "prefix": "Relative speedup wrt BERT$_{LARGE}$ on",
+        "suffix": "Table 1: Student models with",
+        "valueSource": "extracted"
+      },
+      "mls:os": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:pythonVersion": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:requirementsFile": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:isDockerized": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "hp:num_model_sizes_24",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 10323,
+        "end_char_doc": 10337,
+        "prefix": "we investigate an array of",
+        "suffix": ", from our Transformer$_{TINY}$ (4m",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "number of student model sizes",
+        "start_char_doc": 10323,
+        "end_char_doc": 10337,
+        "prefix": "we investigate an array of",
+        "suffix": ", from our Transformer$_{TINY}$ (4m",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "24",
+        "start_char_doc": 10323,
+        "end_char_doc": 10337,
+        "prefix": "we investigate an array of",
+        "suffix": ", from our Transformer$_{TINY}$ (4m",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Architecture",
+      "hpType": "UnknownArchitectureHP",
+      "uncertain": false
+    },
+    {
+      "@id": "hp:transformer_tiny_parameters",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 10370,
+        "end_char_doc": 10383,
+        "prefix": "sizes, from our Transformer$_{TINY}$ (",
+        "suffix": ") all the way up",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Transformer TINY parameters",
+        "start_char_doc": 10370,
+        "end_char_doc": 10383,
+        "prefix": "sizes, from our Transformer$_{TINY}$ (",
+        "suffix": ") all the way up",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "4m parameters",
+        "start_char_doc": 10370,
+        "end_char_doc": 10383,
+        "prefix": "sizes, from our Transformer$_{TINY}$ (",
+        "suffix": ") all the way up",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Architecture",
+      "hpType": "UnknownArchitectureHP",
+      "uncertain": false
+    },
+    {
+      "@id": "hp:transformer_base_parameters",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 5826,
+        "end_char_doc": 5841,
+        "prefix": "of various sizes (4m to",
+        "suffix": ") and depth/width trade-offs, we",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Transformer BASE parameters",
+        "start_char_doc": 5826,
+        "end_char_doc": 5841,
+        "prefix": "of various sizes (4m to",
+        "suffix": ") and depth/width trade-offs, we",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "110m parameters",
+        "start_char_doc": 5826,
+        "end_char_doc": 5841,
+        "prefix": "of various sizes (4m to",
+        "suffix": ") and depth/width trade-offs, we",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Architecture",
+      "hpType": "UnknownArchitectureHP",
+      "uncertain": false
+    },
+    {
+      "@id": "hp:bert_large_layers_hidden_parameters",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 21805,
+        "end_char_doc": 21834,
+        "prefix": "The teacher, BERT$_{LARGE}$, has dimensions",
+        "suffix": ". We experiment with 24",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "BERT LARGE dimensions and parameters",
+        "start_char_doc": 21805,
+        "end_char_doc": 21834,
+        "prefix": "The teacher, BERT$_{LARGE}$, has dimensions",
+        "suffix": ". We experiment with 24",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "24L/1024H and 340M parameters",
+        "start_char_doc": 21805,
+        "end_char_doc": 21834,
+        "prefix": "The teacher, BERT$_{LARGE}$, has dimensions",
+        "suffix": ". We experiment with 24",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Architecture",
+      "hpType": "UnknownArchitectureHP",
+      "uncertain": false
+    },
+    {
+      "@id": "hp:student_layers_tiny",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 10192,
+        "end_char_doc": 10209,
+        "prefix": "models (underlined) for most figures:",
+        "suffix": ", Mini (L=4, H=256), Small",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Tiny layers",
+        "start_char_doc": 10192,
+        "end_char_doc": 10209,
+        "prefix": "models (underlined) for most figures:",
+        "suffix": ", Mini (L=4, H=256), Small",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "L=2",
+        "start_char_doc": 10192,
+        "end_char_doc": 10209,
+        "prefix": "models (underlined) for most figures:",
+        "suffix": ", Mini (L=4, H=256), Small",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Architecture",
+      "hpType": "NumLayers",
+      "uncertain": false
+    },
+    {
+      "@id": "hp:student_hidden_tiny",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 10192,
+        "end_char_doc": 10209,
+        "prefix": "models (underlined) for most figures:",
+        "suffix": ", Mini (L=4, H=256), Small",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Tiny hidden size",
+        "start_char_doc": 10192,
+        "end_char_doc": 10209,
+        "prefix": "models (underlined) for most figures:",
+        "suffix": ", Mini (L=4, H=256), Small",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "H=128",
+        "start_char_doc": 10192,
+        "end_char_doc": 10209,
+        "prefix": "models (underlined) for most figures:",
+        "suffix": ", Mini (L=4, H=256), Small",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Architecture",
+      "hpType": "HiddenSize",
+      "uncertain": false
+    },
+    {
+      "@id": "hp:student_layers_mini",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 10211,
+        "end_char_doc": 10228,
+        "prefix": "most figures: Tiny (L=2, H=128),",
+        "suffix": ", Small (L=4, H=512), Medium",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Mini layers",
+        "start_char_doc": 10211,
+        "end_char_doc": 10228,
+        "prefix": "most figures: Tiny (L=2, H=128),",
+        "suffix": ", Small (L=4, H=512), Medium",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "L=4",
+        "start_char_doc": 10211,
+        "end_char_doc": 10228,
+        "prefix": "most figures: Tiny (L=2, H=128),",
+        "suffix": ", Small (L=4, H=512), Medium",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Architecture",
+      "hpType": "NumLayers",
+      "uncertain": false
+    },
+    {
+      "@id": "hp:student_hidden_mini",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 10211,
+        "end_char_doc": 10228,
+        "prefix": "most figures: Tiny (L=2, H=128),",
+        "suffix": ", Small (L=4, H=512), Medium",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Mini hidden size",
+        "start_char_doc": 10211,
+        "end_char_doc": 10228,
+        "prefix": "most figures: Tiny (L=2, H=128),",
+        "suffix": ", Small (L=4, H=512), Medium",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "H=256",
+        "start_char_doc": 10211,
+        "end_char_doc": 10228,
+        "prefix": "most figures: Tiny (L=2, H=128),",
+        "suffix": ", Small (L=4, H=512), Medium",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Architecture",
+      "hpType": "HiddenSize",
+      "uncertain": false
+    },
+    {
+      "@id": "hp:student_layers_small",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 10230,
+        "end_char_doc": 10248,
+        "prefix": "(L=2, H=128), Mini (L=4, H=256),",
+        "suffix": ", Medium (L=8, H=512), and",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Small layers",
+        "start_char_doc": 10230,
+        "end_char_doc": 10248,
+        "prefix": "(L=2, H=128), Mini (L=4, H=256),",
+        "suffix": ", Medium (L=8, H=512), and",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "L=4",
+        "start_char_doc": 10230,
+        "end_char_doc": 10248,
+        "prefix": "(L=2, H=128), Mini (L=4, H=256),",
+        "suffix": ", Medium (L=8, H=512), and",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Architecture",
+      "hpType": "NumLayers",
+      "uncertain": false
+    },
+    {
+      "@id": "hp:student_hidden_small",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 10230,
+        "end_char_doc": 10248,
+        "prefix": "(L=2, H=128), Mini (L=4, H=256),",
+        "suffix": ", Medium (L=8, H=512), and",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Small hidden size",
+        "start_char_doc": 10230,
+        "end_char_doc": 10248,
+        "prefix": "(L=2, H=128), Mini (L=4, H=256),",
+        "suffix": ", Medium (L=8, H=512), and",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "H=512",
+        "start_char_doc": 10230,
+        "end_char_doc": 10248,
+        "prefix": "(L=2, H=128), Mini (L=4, H=256),",
+        "suffix": ", Medium (L=8, H=512), and",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Architecture",
+      "hpType": "HiddenSize",
+      "uncertain": false
+    },
+    {
+      "@id": "hp:student_layers_medium",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 10250,
+        "end_char_doc": 10269,
+        "prefix": "(L=4, H=256), Small (L=4, H=512),",
+        "suffix": ", and Base (L=12, H=768).",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Medium layers",
+        "start_char_doc": 10250,
+        "end_char_doc": 10269,
+        "prefix": "(L=4, H=256), Small (L=4, H=512),",
+        "suffix": ", and Base (L=12, H=768).",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "L=8",
+        "start_char_doc": 10250,
+        "end_char_doc": 10269,
+        "prefix": "(L=4, H=256), Small (L=4, H=512),",
+        "suffix": ", and Base (L=12, H=768).",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Architecture",
+      "hpType": "NumLayers",
+      "uncertain": false
+    },
+    {
+      "@id": "hp:student_hidden_medium",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 10250,
+        "end_char_doc": 10269,
+        "prefix": "(L=4, H=256), Small (L=4, H=512),",
+        "suffix": ", and Base (L=12, H=768).",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Medium hidden size",
+        "start_char_doc": 10250,
+        "end_char_doc": 10269,
+        "prefix": "(L=4, H=256), Small (L=4, H=512),",
+        "suffix": ", and Base (L=12, H=768).",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "H=512",
+        "start_char_doc": 10250,
+        "end_char_doc": 10269,
+        "prefix": "(L=4, H=256), Small (L=4, H=512),",
+        "suffix": ", and Base (L=12, H=768).",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Architecture",
+      "hpType": "HiddenSize",
+      "uncertain": false
+    },
+    {
+      "@id": "hp:student_layers_base",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 10275,
+        "end_char_doc": 10293,
+        "prefix": "H=512), Medium (L=8, H=512), and",
+        "suffix": ". we investigate an array",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Base layers",
+        "start_char_doc": 10275,
+        "end_char_doc": 10293,
+        "prefix": "H=512), Medium (L=8, H=512), and",
+        "suffix": ". we investigate an array",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "L=12",
+        "start_char_doc": 10275,
+        "end_char_doc": 10293,
+        "prefix": "H=512), Medium (L=8, H=512), and",
+        "suffix": ". we investigate an array",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Architecture",
+      "hpType": "NumLayers",
+      "uncertain": false
+    },
+    {
+      "@id": "hp:student_hidden_base",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 10275,
+        "end_char_doc": 10293,
+        "prefix": "H=512), Medium (L=8, H=512), and",
+        "suffix": ". we investigate an array",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Base hidden size",
+        "start_char_doc": 10275,
+        "end_char_doc": 10293,
+        "prefix": "H=512), Medium (L=8, H=512), and",
+        "suffix": ". we investigate an array",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "H=768",
+        "start_char_doc": 10275,
+        "end_char_doc": 10293,
+        "prefix": "H=512), Medium (L=8, H=512), and",
+        "suffix": ". we investigate an array",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Architecture",
+      "hpType": "HiddenSize",
+      "uncertain": false
+    },
+    {
+      "@id": "hp:attention_heads_h_over_64",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 21606,
+        "end_char_doc": 21610,
+        "prefix": "of self-attention heads to $",
+        "suffix": "$ and the feed-forward/filter size",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "number of self-attention heads",
+        "start_char_doc": 21606,
+        "end_char_doc": 21610,
+        "prefix": "of self-attention heads to $",
+        "suffix": "$ and the feed-forward/filter size",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "H/64",
+        "start_char_doc": 21606,
+        "end_char_doc": 21610,
+        "prefix": "of self-attention heads to $",
+        "suffix": "$ and the feed-forward/filter size",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Architecture",
+      "hpType": "AttentionHeads",
+      "uncertain": false
+    },
+    {
+      "@id": "hp:feed_forward_filter_size_4h",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 21649,
+        "end_char_doc": 21651,
+        "prefix": "the feed-forward/filter size to $",
+        "suffix": "$. The end-task models are",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "feed-forward/filter size",
+        "start_char_doc": 21649,
+        "end_char_doc": 21651,
+        "prefix": "the feed-forward/filter size to $",
+        "suffix": "$. The end-task models are",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "4H",
+        "start_char_doc": 21649,
+        "end_char_doc": 21651,
+        "prefix": "the feed-forward/filter size to $",
+        "suffix": "$. The end-task models are",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Architecture",
+      "hpType": "HiddenSize",
+      "uncertain": false
+    },
+    {
+      "@id": "hp:latency_batch_size_1",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 10082,
+        "end_char_doc": 10094,
+        "prefix": "computed on Cloud TPUs with",
+        "suffix": "and sequence length 512. For",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "latency batch size",
+        "start_char_doc": 10082,
+        "end_char_doc": 10094,
+        "prefix": "computed on Cloud TPUs with",
+        "suffix": "and sequence length 512. For",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "batch size 1",
+        "start_char_doc": 10082,
+        "end_char_doc": 10094,
+        "prefix": "computed on Cloud TPUs with",
+        "suffix": "and sequence length 512. For",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Training",
+      "hpType": "BatchSize",
+      "uncertain": false
+    },
+    {
+      "@id": "hp:latency_sequence_length_512",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 10099,
+        "end_char_doc": 10118,
+        "prefix": "with batch size 1 and",
+        "suffix": ". For readability, we focus",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "latency sequence length",
+        "start_char_doc": 10099,
+        "end_char_doc": 10118,
+        "prefix": "with batch size 1 and",
+        "suffix": ". For readability, we focus",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "sequence length 512",
+        "start_char_doc": 10099,
+        "end_char_doc": 10118,
+        "prefix": "with batch size 1 and",
+        "suffix": ". For readability, we focus",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Data",
+      "hpType": "MaxSequenceLength",
+      "uncertain": false
+    },
+    {
+      "@id": "hp:distillation_temperature_1",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 23535,
+        "end_char_doc": 23551,
+        "prefix": "by the teacher with a",
+        "suffix": "². **Pre-training+Fine-tuning** (Figure 4c) (Dai",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "distillation temperature",
+        "start_char_doc": 23535,
+        "end_char_doc": 23551,
+        "prefix": "by the teacher with a",
+        "suffix": "². **Pre-training+Fine-tuning** (Figure 4c) (Dai",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "1",
+        "start_char_doc": 23535,
+        "end_char_doc": 23551,
+        "prefix": "by the teacher with a",
+        "suffix": "². **Pre-training+Fine-tuning** (Figure 4c) (Dai",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Training",
+      "hpType": "HP_Training",
+      "uncertain": true
+    },
+    {
+      "@id": "hp:dev_runs_5",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 17287,
+        "end_char_doc": 17293,
+        "prefix": "dev results are averaged over",
+        "suffix": ". Our test results are",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "development result runs",
+        "start_char_doc": 17287,
+        "end_char_doc": 17293,
+        "prefix": "dev results are averaged over",
+        "suffix": ". Our test results are",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "5 runs",
+        "start_char_doc": 17287,
+        "end_char_doc": 17293,
+        "prefix": "dev results are averaged over",
+        "suffix": ". Our test results are",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Training",
+      "hpType": "RandomSeed",
+      "uncertain": false
+    },
+    {
+      "@id": "hp:mnli_labeled_size",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 26392,
+        "end_char_doc": 26403,
+        "prefix": "</tr> </thead> <tbody> <tr> <td>",
+        "suffix": "</td> <td>NLI* (1.3m samples)</td> </tr>",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "MNLI labeled data size",
+        "start_char_doc": 26392,
+        "end_char_doc": 26403,
+        "prefix": "</tr> </thead> <tbody> <tr> <td>",
+        "suffix": "</td> <td>NLI* (1.3m samples)</td> </tr>",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "390k",
+        "start_char_doc": 26392,
+        "end_char_doc": 26403,
+        "prefix": "</tr> </thead> <tbody> <tr> <td>",
+        "suffix": "</td> <td>NLI* (1.3m samples)</td> </tr>",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Data",
+      "hpType": "TrainValTestSplit",
+      "uncertain": false
+    },
+    {
+      "@id": "hp:rte_labeled_size",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 26473,
+        "end_char_doc": 26483,
+        "prefix": "(1.3m samples)</td> </tr> <tr> <td>",
+        "suffix": "</td> <td>NLI* (1.3m samples)</td> </tr>",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "RTE labeled data size",
+        "start_char_doc": 26473,
+        "end_char_doc": 26483,
+        "prefix": "(1.3m samples)</td> </tr> <tr> <td>",
+        "suffix": "</td> <td>NLI* (1.3m samples)</td> </tr>",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "2.5k",
+        "start_char_doc": 26473,
+        "end_char_doc": 26483,
+        "prefix": "(1.3m samples)</td> </tr> <tr> <td>",
+        "suffix": "</td> <td>NLI* (1.3m samples)</td> </tr>",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Data",
+      "hpType": "TrainValTestSplit",
+      "uncertain": false
+    },
+    {
+      "@id": "hp:sst2_labeled_size",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 26553,
+        "end_char_doc": 26564,
+        "prefix": "(1.3m samples)</td> </tr> <tr> <td>",
+        "suffix": "</td> <td>Movie Reviews* (1.7m samples)</td>",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "SST-2 labeled data size",
+        "start_char_doc": 26553,
+        "end_char_doc": 26564,
+        "prefix": "(1.3m samples)</td> </tr> <tr> <td>",
+        "suffix": "</td> <td>Movie Reviews* (1.7m samples)</td>",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "68k",
+        "start_char_doc": 26553,
+        "end_char_doc": 26564,
+        "prefix": "(1.3m samples)</td> </tr> <tr> <td>",
+        "suffix": "</td> <td>Movie Reviews* (1.7m samples)</td>",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Data",
+      "hpType": "TrainValTestSplit",
+      "uncertain": false
+    },
+    {
+      "@id": "hp:book_reviews_labeled_size",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 26644,
+        "end_char_doc": 26662,
+        "prefix": "(1.7m samples)</td> </tr> <tr> <td>",
+        "suffix": "</td> <td>Book Reviews* (8m samples)</td>",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Book Reviews labeled data size",
+        "start_char_doc": 26644,
+        "end_char_doc": 26662,
+        "prefix": "(1.7m samples)</td> </tr> <tr> <td>",
+        "suffix": "</td> <td>Book Reviews* (8m samples)</td>",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "50k",
+        "start_char_doc": 26644,
+        "end_char_doc": 26662,
+        "prefix": "(1.7m samples)</td> </tr> <tr> <td>",
+        "suffix": "</td> <td>Book Reviews* (8m samples)</td>",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Data",
+      "hpType": "TrainValTestSplit",
+      "uncertain": false
+    },
+    {
+      "@id": "hp:nli_transfer_size",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 26419,
+        "end_char_doc": 26438,
+        "prefix": "<tbody> <tr> <td>MNLI (390k)</td> <td>",
+        "suffix": "</td> </tr> <tr> <td>RTE (2.5k)</td>",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "NLI* transfer data size",
+        "start_char_doc": 26419,
+        "end_char_doc": 26438,
+        "prefix": "<tbody> <tr> <td>MNLI (390k)</td> <td>",
+        "suffix": "</td> </tr> <tr> <td>RTE (2.5k)</td>",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "1.3m samples",
+        "start_char_doc": 26419,
+        "end_char_doc": 26438,
+        "prefix": "<tbody> <tr> <td>MNLI (390k)</td> <td>",
+        "suffix": "</td> </tr> <tr> <td>RTE (2.5k)</td>",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Data",
+      "hpType": "TrainValTestSplit",
+      "uncertain": false
+    },
+    {
+      "@id": "hp:movie_reviews_transfer_size",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 26580,
+        "end_char_doc": 26609,
+        "prefix": "</tr> <tr> <td>SST-2 (68k)</td> <td>",
+        "suffix": "</td> </tr> <tr> <td>Book Reviews",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Movie Reviews transfer data size",
+        "start_char_doc": 26580,
+        "end_char_doc": 26609,
+        "prefix": "</tr> <tr> <td>SST-2 (68k)</td> <td>",
+        "suffix": "</td> </tr> <tr> <td>Book Reviews",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "1.7m samples",
+        "start_char_doc": 26580,
+        "end_char_doc": 26609,
+        "prefix": "</tr> <tr> <td>SST-2 (68k)</td> <td>",
+        "suffix": "</td> </tr> <tr> <td>Book Reviews",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Data",
+      "hpType": "TrainValTestSplit",
+      "uncertain": false
+    },
+    {
+      "@id": "hp:book_reviews_transfer_size",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 26678,
+        "end_char_doc": 26704,
+        "prefix": "<tr> <td>Book Reviews (50k)</td> <td>",
+        "suffix": "</td> </tr> </tbody> </table> Table",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Book Reviews transfer data size",
+        "start_char_doc": 26678,
+        "end_char_doc": 26704,
+        "prefix": "<tr> <td>Book Reviews (50k)</td> <td>",
+        "suffix": "</td> </tr> </tbody> </table> Table",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "8m samples",
+        "start_char_doc": 26678,
+        "end_char_doc": 26704,
+        "prefix": "<tr> <td>Book Reviews (50k)</td> <td>",
+        "suffix": "</td> </tr> </tbody> </table> Table",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Data",
+      "hpType": "TrainValTestSplit",
+      "uncertain": false
+    },
+    {
+      "@id": "hp:book_reviews_transfer_size_5m",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 34986,
+        "end_char_doc": 34998,
+        "prefix": "same performance with Transformer<sub>MINI</sub> on",
+        "suffix": ". In other words, PD",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Book Reviews transfer subset size",
+        "start_char_doc": 34986,
+        "end_char_doc": 34998,
+        "prefix": "same performance with Transformer<sub>MINI</sub> on",
+        "suffix": ". In other words, PD",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "5m instances",
+        "start_char_doc": 34986,
+        "end_char_doc": 34998,
+        "prefix": "same performance with Transformer<sub>MINI</sub> on",
+        "suffix": ". In other words, PD",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Data",
+      "hpType": "TrainValTestSplit",
+      "uncertain": false
+    },
+    {
+      "@id": "hp:book_reviews_transfer_size_1m",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 34840,
+        "end_char_doc": 34855,
+        "prefix": "set. When there is only",
+        "suffix": ", the performance is 4%",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Book Reviews transfer subset size",
+        "start_char_doc": 34840,
+        "end_char_doc": 34855,
+        "prefix": "set. When there is only",
+        "suffix": ", the performance is 4%",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "1m transfer set",
+        "start_char_doc": 34840,
+        "end_char_doc": 34855,
+        "prefix": "set. When there is only",
+        "suffix": ", the performance is 4%",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Data",
+      "hpType": "TrainValTestSplit",
+      "uncertain": false
+    },
+    {
+      "@id": "hp:domain_shift_transfer_size_1_7m",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 37542,
+        "end_char_doc": 37556,
+        "prefix": "we keep size fixed (to",
+        "suffix": ") and vary the source",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "domain-shift transfer-set size",
+        "start_char_doc": 37542,
+        "end_char_doc": 37556,
+        "prefix": "we keep size fixed (to",
+        "suffix": ") and vary the source",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "1.7m",
+        "start_char_doc": 37542,
+        "end_char_doc": 37556,
+        "prefix": "we keep size fixed (to",
+        "suffix": ") and vary the source",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Data",
+      "hpType": "TrainValTestSplit",
+      "uncertain": false
+    },
+    {
+      "@id": "hp:spearman_common_words_100",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 37160,
+        "end_char_doc": 37167,
+        "prefix": "transfer set domain. common $",
+        "suffix": "$ words. For each of",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Spearman common words",
+        "start_char_doc": 37160,
+        "end_char_doc": 37167,
+        "prefix": "transfer set domain. common $",
+        "suffix": "$ words. For each of",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "n = 100",
+        "start_char_doc": 37160,
+        "end_char_doc": 37167,
+        "prefix": "transfer set domain. common $",
+        "suffix": "$ words. For each of",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Data",
+      "hpType": "TrainValTestSplit",
+      "uncertain": false
+    },
+    {
+      "@id": "hp:compression_ratio_31x",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 33056,
+        "end_char_doc": 33082,
+        "prefix": "of the teacher at a",
+        "suffix": "and 16x speed-up. Distillation achieves",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "PD model-size reduction",
+        "start_char_doc": 33056,
+        "end_char_doc": 33082,
+        "prefix": "of the teacher at a",
+        "suffix": "and 16x speed-up. Distillation achieves",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "31x",
+        "start_char_doc": 33056,
+        "end_char_doc": 33082,
+        "prefix": "of the teacher at a",
+        "suffix": "and 16x speed-up. Distillation achieves",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Architecture",
+      "hpType": "UnknownArchitectureHP",
+      "uncertain": false
+    },
+    {
+      "@id": "hp:speedup_16x",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 33087,
+        "end_char_doc": 33099,
+        "prefix": "decrease in model size and",
+        "suffix": ". Distillation achieves the same",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "PD speed-up",
+        "start_char_doc": 33087,
+        "end_char_doc": 33099,
+        "prefix": "decrease in model size and",
+        "suffix": ". Distillation achieves the same",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "16x speed-up",
+        "start_char_doc": 33087,
+        "end_char_doc": 33099,
+        "prefix": "decrease in model size and",
+        "suffix": ". Distillation achieves the same",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Architecture",
+      "hpType": "UnknownArchitectureHP",
+      "uncertain": false
+    },
+    {
+      "@id": "hp:compression_ratio_10x",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 35052,
+        "end_char_doc": 35069,
+        "prefix": "match the teacher model with",
+        "suffix": "and 1.5x less transfer data,",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "PD smaller model comparison",
+        "start_char_doc": 35052,
+        "end_char_doc": 35069,
+        "prefix": "match the teacher model with",
+        "suffix": "and 1.5x less transfer data,",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "10x smaller model",
+        "start_char_doc": 35052,
+        "end_char_doc": 35069,
+        "prefix": "match the teacher model with",
+        "suffix": "and 1.5x less transfer data,",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Architecture",
+      "hpType": "UnknownArchitectureHP",
+      "uncertain": false
+    },
+    {
+      "@id": "hp:data_reduction_1_5x",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 35074,
+        "end_char_doc": 35097,
+        "prefix": "with 10x smaller model and",
+        "suffix": ", compared to distillation. **Robustness",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "PD transfer-data reduction",
+        "start_char_doc": 35074,
+        "end_char_doc": 35097,
+        "prefix": "with 10x smaller model and",
+        "suffix": ", compared to distillation. **Robustness",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "1.5x less transfer data",
+        "start_char_doc": 35074,
+        "end_char_doc": 35097,
+        "prefix": "with 10x smaller model and",
+        "suffix": ", compared to distillation. **Robustness",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Data",
+      "hpType": "TrainValTestSplit",
+      "uncertain": false
+    }
+  ]
+}

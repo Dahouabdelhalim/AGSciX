@@ -1,0 +1,3139 @@
+{
+  "@context": {
+    "mls": "http://www.w3.org/ns/mls#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "schema": "http://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "model": "https://w3id.org/mlskg/model/",
+    "algo": "https://w3id.org/mlskg/algorithm/",
+    "method": "https://w3id.org/mlskg/method/",
+    "dataset": "https://w3id.org/mlskg/dataset/",
+    "datasource": "https://w3id.org/mlskg/datasource/",
+    "task": "https://w3id.org/mlskg/task/",
+    "eval": "https://w3id.org/mlskg/eval/",
+    "hp": "https://w3id.org/mlskg/hp/",
+    "impl": "https://w3id.org/mlskg/implementation/",
+    "env": "https://w3id.org/mlskg/environment/",
+    "prompt": "https://w3id.org/mlskg/prompt/",
+    "person": "https://w3id.org/mlskg/person/",
+    "org": "https://w3id.org/mlskg/organization/",
+    "study": "https://w3id.org/mlskg/study/",
+    "exp": "https://w3id.org/mlskg/experiment/",
+    "repo": "https://w3id.org/mlskg/repository/",
+    "dep": "https://w3id.org/mlskg/dependency/",
+    "run": "https://w3id.org/mlskg/run/",
+    "step": "https://w3id.org/mlskg/step/",
+    "valueSource": "https://w3id.org/mlskg/meta/valueSource",
+    "mention": "https://w3id.org/mlskg/meta/mention"
+  },
+  "@graph": [
+    {
+      "@id": "study:recovering_graph_underlying_networked_dynamical_systems_2023",
+      "@type": "mls:Study",
+      "mention": {
+        "start_char_doc": 88,
+        "end_char_doc": 201,
+        "prefix": "[cs.LG] 12 Apr 2023&lt;/watermark&gt; #",
+        "suffix": "Sérgio Machado$^{2,5}$, Anirudh Sridhar$^{3}$, Paulo",
+        "valueSource": "extracted"
+      },
+      "mls:title": {
+        "value": "Recovering the Graph Underlying Networked Dynamical Systems under Partial Observability: A Deep Learning Approach",
+        "start_char_doc": 88,
+        "end_char_doc": 201,
+        "prefix": "[cs.LG] 12 Apr 2023&lt;/watermark&gt; #",
+        "suffix": "Sérgio Machado$^{2,5}$, Anirudh Sridhar$^{3}$, Paulo",
+        "valueSource": "extracted"
+      },
+      "mls:abstract": {
+        "value": "We study the problem of graph structure identification, i.e., of recovering the graph of dependencies among time series. We model these time series data as components of the state of linear stochastic *networked* dynamical systems. We assume partial observability, where the state evolution of only a subset of nodes comprising the network is observed. We propose a new feature-based paradigm: to each pair of nodes, we compute a feature vector from the observed time series. We prove that these features are linearly separable, i.e., there exists a hyperplane that separates the cluster of features associated with connected pairs of nodes from those of disconnected pairs. This renders the features amenable to train a variety of classifiers to perform causal inference. In particular, we use these features to train Convolutional Neural Networks (CNNs). The resulting causal inference mechanism outperforms state-of-the-art counterparts w.r.t. sample-complexity. The trained CNNs generalize well over structurally distinct networks (dense or sparse) and noise-level profiles. Remarkably, they also generalize well to real-world networks while trained over a synthetic network – namely, a particular realization of a random graph.",
+        "start_char_doc": 812,
+        "end_char_doc": 2044,
+        "prefix": "{psg,jh}@dei.uc.pt, moura@andrew.cmu.edu, augusto.pt@gmail.com ## Abstract",
+        "suffix": "## Introduction *Networked* dynamical systems",
+        "valueSource": "extracted"
+      },
+      "mls:url": {
+        "value": "https://arxiv.org/abs/2208.04405",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:doi": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:citation": {
+        "value": "arXiv:2208.04405v3 [cs.LG] 12 Apr 2023",
+        "start_char_doc": 28,
+        "end_char_doc": 66,
+        "prefix": "## Page 1 &lt;watermark&gt;",
+        "suffix": "&lt;/watermark&gt; # Recovering the Graph",
+        "valueSource": "extracted"
+      },
+      "mls:publicationVenue": {
+        "value": "arXiv",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:issued": {
+        "value": "2023-04-12",
+        "start_char_doc": 55,
+        "end_char_doc": 66,
+        "prefix": "## Page 1 &lt;watermark&gt;arXiv:2208.04405v3 [cs.LG]",
+        "suffix": "&lt;/watermark&gt; # Recovering the Graph",
+        "valueSource": "extracted"
+      },
+      "mls:hasAuthor": [
+        {
+          "@id": "person:machado_sergio"
+        },
+        {
+          "@id": "person:sridhar_anirudh"
+        },
+        {
+          "@id": "person:gil_paulo"
+        },
+        {
+          "@id": "person:henriques_jorge"
+        },
+        {
+          "@id": "person:moura_jose_m_f"
+        },
+        {
+          "@id": "person:santos_augusto"
+        }
+      ],
+      "mls:contains": [
+        {
+          "@id": "exp:cnn_feature_based_graph_recovery_partial_observability_2023"
+        }
+      ],
+      "mls:implements": {
+        "@id": "repo:structure_identification"
+      },
+      "prov:wasDerivedFrom": {
+        "@id": "paper:6_2208_04405v3"
+      }
+    },
+    {
+      "@id": "org:instituto_de_telecomunicacoes",
+      "@type": "mls:Organization",
+      "mention": {
+        "start_char_doc": 348,
+        "end_char_doc": 377,
+        "prefix": "F. Moura$^{5}$, Augusto Santos$^{1,2*}$ $^{1}$",
+        "suffix": ", Portugal $^{2}$ University of",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Instituto de Telecomunicações",
+        "start_char_doc": 348,
+        "end_char_doc": 377,
+        "prefix": "F. Moura$^{5}$, Augusto Santos$^{1,2*}$ $^{1}$",
+        "suffix": ", Portugal $^{2}$ University of",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "research institute",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:url": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "org:university_of_coimbra",
+      "@type": "mls:Organization",
+      "mention": {
+        "start_char_doc": 395,
+        "end_char_doc": 416,
+        "prefix": "Instituto de Telecomunicações, Portugal $^{2}$",
+        "suffix": ", Portugal $^{3}$ Department of",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "University of Coimbra",
+        "start_char_doc": 395,
+        "end_char_doc": 416,
+        "prefix": "Instituto de Telecomunicações, Portugal $^{2}$",
+        "suffix": ", Portugal $^{3}$ Department of",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "university",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:url": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "org:princeton_university",
+      "@type": "mls:Organization",
+      "mention": {
+        "start_char_doc": 487,
+        "end_char_doc": 507,
+        "prefix": "Electrical and Computer Engineering at",
+        "suffix": ", New Jersey, NJ, USA",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Princeton University",
+        "start_char_doc": 487,
+        "end_char_doc": 507,
+        "prefix": "Electrical and Computer Engineering at",
+        "suffix": ", New Jersey, NJ, USA",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "university",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:url": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "org:universidade_nova_de_lisboa",
+      "@type": "mls:Organization",
+      "mention": {
+        "start_char_doc": 536,
+        "end_char_doc": 563,
+        "prefix": "New Jersey, NJ, USA $^{4}$",
+        "suffix": ", Portugal $^{5}$ Department of",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Universidade Nova de Lisboa",
+        "start_char_doc": 536,
+        "end_char_doc": 563,
+        "prefix": "New Jersey, NJ, USA $^{4}$",
+        "suffix": ", Portugal $^{5}$ Department of",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "university",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:url": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "org:carnegie_mellon_university",
+      "@type": "mls:Organization",
+      "mention": {
+        "start_char_doc": 634,
+        "end_char_doc": 660,
+        "prefix": "Electrical and Computer Engineering at",
+        "suffix": ", Pittsburgh, PA, USA smachado@student.dei.uc.pt,",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Carnegie Mellon University",
+        "start_char_doc": 634,
+        "end_char_doc": 660,
+        "prefix": "Electrical and Computer Engineering at",
+        "suffix": ", Pittsburgh, PA, USA smachado@student.dei.uc.pt,",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "university",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:url": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "person:machado_sergio",
+      "@type": "mls:Person",
+      "mention": {
+        "start_char_doc": 203,
+        "end_char_doc": 217,
+        "prefix": "Observability: A Deep Learning Approach",
+        "suffix": "$^{2,5}$, Anirudh Sridhar$^{3}$, Paulo Gil$^{2,4}$,",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Sérgio Machado",
+        "start_char_doc": 203,
+        "end_char_doc": 217,
+        "prefix": "Observability: A Deep Learning Approach",
+        "suffix": "$^{2,5}$, Anirudh Sridhar$^{3}$, Paulo Gil$^{2,4}$,",
+        "valueSource": "extracted"
+      },
+      "mls:affiliation": {
+        "value": "instituto de telecomunicacoes; university of coimbra",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:email": {
+        "value": "smachado@student.dei.uc.pt",
+        "start_char_doc": 683,
+        "end_char_doc": 709,
+        "prefix": "Mellon University, Pittsburgh, PA, USA",
+        "suffix": ", asridhar@princeton.edu, {psg,jh}@dei.uc.pt, moura@andrew.cmu.edu, augusto.pt@gmail.com",
+        "valueSource": "extracted"
+      },
+      "mls:orcid": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:prov-affiliatedWith": [
+        {
+          "@id": "org:instituto_de_telecomunicacoes"
+        },
+        {
+          "@id": "org:university_of_coimbra"
+        }
+      ]
+    },
+    {
+      "@id": "person:sridhar_anirudh",
+      "@type": "mls:Person",
+      "mention": {
+        "start_char_doc": 227,
+        "end_char_doc": 242,
+        "prefix": "Deep Learning Approach Sérgio Machado$^{2,5}$,",
+        "suffix": "$^{3}$, Paulo Gil$^{2,4}$, Jorge Henriques$^{2}$,",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Anirudh Sridhar",
+        "start_char_doc": 227,
+        "end_char_doc": 242,
+        "prefix": "Deep Learning Approach Sérgio Machado$^{2,5}$,",
+        "suffix": "$^{3}$, Paulo Gil$^{2,4}$, Jorge Henriques$^{2}$,",
+        "valueSource": "extracted"
+      },
+      "mls:affiliation": {
+        "value": "princeton university",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:email": {
+        "value": "asridhar@princeton.edu",
+        "start_char_doc": 711,
+        "end_char_doc": 733,
+        "prefix": "University, Pittsburgh, PA, USA smachado@student.dei.uc.pt,",
+        "suffix": ", {psg,jh}@dei.uc.pt, moura@andrew.cmu.edu, augusto.pt@gmail.com ##",
+        "valueSource": "extracted"
+      },
+      "mls:orcid": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:prov-affiliatedWith": [
+        {
+          "@id": "org:princeton_university"
+        }
+      ]
+    },
+    {
+      "@id": "person:gil_paulo",
+      "@type": "mls:Person",
+      "mention": {
+        "start_char_doc": 250,
+        "end_char_doc": 259,
+        "prefix": "Approach Sérgio Machado$^{2,5}$, Anirudh Sridhar$^{3}$,",
+        "suffix": "$^{2,4}$, Jorge Henriques$^{2}$, José M.",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Paulo Gil",
+        "start_char_doc": 250,
+        "end_char_doc": 259,
+        "prefix": "Approach Sérgio Machado$^{2,5}$, Anirudh Sridhar$^{3}$,",
+        "suffix": "$^{2,4}$, Jorge Henriques$^{2}$, José M.",
+        "valueSource": "extracted"
+      },
+      "mls:affiliation": {
+        "value": "university of coimbra; universidade nova de lisboa",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:email": {
+        "value": "psg@dei.uc.pt",
+        "start_char_doc": 736,
+        "end_char_doc": 739,
+        "prefix": "PA, USA smachado@student.dei.uc.pt, asridhar@princeton.edu, {",
+        "suffix": ",jh}@dei.uc.pt, moura@andrew.cmu.edu, augusto.pt@gmail.com ## Abstract",
+        "valueSource": "extracted"
+      },
+      "mls:orcid": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:prov-affiliatedWith": [
+        {
+          "@id": "org:university_of_coimbra"
+        },
+        {
+          "@id": "org:universidade_nova_de_lisboa"
+        }
+      ]
+    },
+    {
+      "@id": "person:henriques_jorge",
+      "@type": "mls:Person",
+      "mention": {
+        "start_char_doc": 269,
+        "end_char_doc": 284,
+        "prefix": "Machado$^{2,5}$, Anirudh Sridhar$^{3}$, Paulo Gil$^{2,4}$,",
+        "suffix": "$^{2}$, José M. F. Moura$^{5}$,",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Jorge Henriques",
+        "start_char_doc": 269,
+        "end_char_doc": 284,
+        "prefix": "Machado$^{2,5}$, Anirudh Sridhar$^{3}$, Paulo Gil$^{2,4}$,",
+        "suffix": "$^{2}$, José M. F. Moura$^{5}$,",
+        "valueSource": "extracted"
+      },
+      "mls:affiliation": {
+        "value": "university of coimbra",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:email": {
+        "value": "jh@dei.uc.pt",
+        "start_char_doc": 740,
+        "end_char_doc": 742,
+        "prefix": "PA, USA smachado@student.dei.uc.pt, asridhar@princeton.edu, {psg,",
+        "suffix": "}@dei.uc.pt, moura@andrew.cmu.edu, augusto.pt@gmail.com ## Abstract",
+        "valueSource": "extracted"
+      },
+      "mls:orcid": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:prov-affiliatedWith": [
+        {
+          "@id": "org:university_of_coimbra"
+        }
+      ]
+    },
+    {
+      "@id": "person:moura_jose_m_f",
+      "@type": "mls:Person",
+      "mention": {
+        "start_char_doc": 292,
+        "end_char_doc": 308,
+        "prefix": "Sridhar$^{3}$, Paulo Gil$^{2,4}$, Jorge Henriques$^{2}$,",
+        "suffix": "$^{5}$, Augusto Santos$^{1,2*}$ $^{1}$ Instituto",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "José M. F. Moura",
+        "start_char_doc": 292,
+        "end_char_doc": 308,
+        "prefix": "Sridhar$^{3}$, Paulo Gil$^{2,4}$, Jorge Henriques$^{2}$,",
+        "suffix": "$^{5}$, Augusto Santos$^{1,2*}$ $^{1}$ Instituto",
+        "valueSource": "extracted"
+      },
+      "mls:affiliation": {
+        "value": "carnegie mellon university",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:email": {
+        "value": "moura@andrew.cmu.edu",
+        "start_char_doc": 755,
+        "end_char_doc": 775,
+        "prefix": "PA, USA smachado@student.dei.uc.pt, asridhar@princeton.edu, {psg,jh}@dei.uc.pt,",
+        "suffix": ", augusto.pt@gmail.com ## Abstract We",
+        "valueSource": "extracted"
+      },
+      "mls:orcid": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:prov-affiliatedWith": [
+        {
+          "@id": "org:carnegie_mellon_university"
+        }
+      ]
+    },
+    {
+      "@id": "person:santos_augusto",
+      "@type": "mls:Person",
+      "mention": {
+        "start_char_doc": 316,
+        "end_char_doc": 330,
+        "prefix": "Henriques$^{2}$, José M. F. Moura$^{5}$,",
+        "suffix": "$^{1,2*}$ $^{1}$ Instituto de Telecomunicações,",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Augusto Santos",
+        "start_char_doc": 316,
+        "end_char_doc": 330,
+        "prefix": "Henriques$^{2}$, José M. F. Moura$^{5}$,",
+        "suffix": "$^{1,2*}$ $^{1}$ Instituto de Telecomunicações,",
+        "valueSource": "extracted"
+      },
+      "mls:affiliation": {
+        "value": "instituto de telecomunicacoes; university of coimbra",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:email": {
+        "value": "augusto.pt@gmail.com",
+        "start_char_doc": 777,
+        "end_char_doc": 797,
+        "prefix": "USA smachado@student.dei.uc.pt, asridhar@princeton.edu, {psg,jh}@dei.uc.pt, moura@andrew.cmu.edu,",
+        "suffix": "## Abstract We study the",
+        "valueSource": "extracted"
+      },
+      "mls:orcid": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:prov-affiliatedWith": [
+        {
+          "@id": "org:instituto_de_telecomunicacoes"
+        },
+        {
+          "@id": "org:university_of_coimbra"
+        }
+      ]
+    },
+    {
+      "@id": "repo:structure_identification",
+      "@type": "SoftwareRepository",
+      "mention": {
+        "start_char_doc": 41940,
+        "end_char_doc": 41992,
+        "prefix": "experiments can be found at",
+        "suffix": ". # References Adams, J.;",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "ASanctvs/Structure-Identification",
+        "start_char_doc": 41940,
+        "end_char_doc": 41992,
+        "prefix": "experiments can be found at",
+        "suffix": ". # References Adams, J.;",
+        "valueSource": "extracted"
+      },
+      "mls:url": {
+        "value": "https://github.com/ASanctvs/Structure-Identification",
+        "start_char_doc": 41940,
+        "end_char_doc": 41992,
+        "prefix": "experiments can be found at",
+        "suffix": ". # References Adams, J.;",
+        "valueSource": "extracted"
+      },
+      "mls:version": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:programmingLanguage": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:dateModified": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:license": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:documentationUrl": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:contains": [
+        {
+          "@id": "impl:structure_identification_experiments"
+        }
+      ]
+    },
+    {
+      "@id": "impl:structure_identification_experiments",
+      "@type": "mls:MLS_Implementation",
+      "mention": {
+        "start_char_doc": 41882,
+        "end_char_doc": 41923,
+        "prefix": "C3.ai Digital Transformation Institute. The",
+        "suffix": "can be found at https://github.com/ASanctvs/Structure-Identification.",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "source code for the numerical experiments",
+        "start_char_doc": 41882,
+        "end_char_doc": 41923,
+        "prefix": "C3.ai Digital Transformation Institute. The",
+        "suffix": "can be found at https://github.com/ASanctvs/Structure-Identification.",
+        "valueSource": "extracted"
+      },
+      "mls:codeRepository": {
+        "value": "https://github.com/ASanctvs/Structure-Identification",
+        "start_char_doc": 41940,
+        "end_char_doc": 41992,
+        "prefix": "experiments can be found at",
+        "suffix": ". # References Adams, J.;",
+        "valueSource": "extracted"
+      },
+      "mls:framework": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:executionCommand": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:entryPoint": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:branch": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:runsIn": {
+        "@id": "env:unspecified_numerical_experiments"
+      }
+    },
+    {
+      "@id": "env:unspecified_numerical_experiments",
+      "@type": "mls:Environment",
+      "mention": {
+        "start_char_doc": 41902,
+        "end_char_doc": 41923,
+        "prefix": "The source code for the",
+        "suffix": "can be found at https://github.com/ASanctvs/Structure-Identification.",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "numerical experiments",
+        "start_char_doc": 41902,
+        "end_char_doc": 41923,
+        "prefix": "The source code for the",
+        "suffix": "can be found at https://github.com/ASanctvs/Structure-Identification.",
+        "valueSource": "extracted"
+      },
+      "mls:hardwareSpecs": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:os": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:pythonVersion": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:requirementsFile": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:isDockerized": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "exp:cnn_feature_based_graph_recovery_partial_observability_2023",
+      "@type": "mls:Experiment",
+      "mention": {
+        "start_char_doc": 38683,
+        "end_char_doc": 38700,
+        "prefix": "## Simulation Results In the",
+        "suffix": "considered, we define accuracy as",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "CNN and SVM classifiers are trained on covariance-based pairwise features from partially observed linear stochastic networked dynamical systems and evaluated on synthetic and real-world networks.",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:objective": {
+        "value": "recovering the support of the submatrix $A_S$",
+        "start_char_doc": 15753,
+        "end_char_doc": 15798,
+        "prefix": "deals with the problem of",
+        "suffix": ", i.e., the graph structure",
+        "valueSource": "extracted"
+      },
+      "mls:hypothesis": {
+        "value": "these features are linearly separable",
+        "start_char_doc": 1302,
+        "end_char_doc": 1339,
+        "prefix": "time series. We prove that",
+        "suffix": ", i.e., there exists a",
+        "valueSource": "extracted"
+      },
+      "mls:methodology": {
+        "value": "normalized feature vectors",
+        "start_char_doc": 33413,
+        "end_char_doc": 33439,
+        "prefix": "where we have introduced the",
+        "suffix": "$$ \\overline{\\mathcal{T}}_{ij}^{(n)} := \\frac{\\mathcal{T}_{ij}^{(n)}}{\\max_{i \\neq",
+        "valueSource": "extracted"
+      },
+      "mls:realizes": [
+        {
+          "@id": "task:graph_structure_identification"
+        },
+        {
+          "@id": "task:causal_inference"
+        },
+        {
+          "@id": "task:network_structure_estimation"
+        },
+        {
+          "@id": "task:partial_observability_graph_recovery"
+        }
+      ],
+      "mls:usesData": [
+        {
+          "@id": "dataset:erdos_renyi_random_graph"
+        },
+        {
+          "@id": "dataset:binomial_random_graph"
+        },
+        {
+          "@id": "dataset:brain_structural_connectivity_monkey"
+        },
+        {
+          "@id": "dataset:enzyme_biochemical_network"
+        }
+      ],
+      "mls:produces": [
+        {
+          "@id": "method:feature_vector_based_setting"
+        },
+        {
+          "@id": "method:covariance_based_lag_features"
+        },
+        {
+          "@id": "method:normalized_feature_vectors"
+        },
+        {
+          "@id": "method:granger_augmented_feature_vector"
+        },
+        {
+          "@id": "method:linear_svm_classifier"
+        },
+        {
+          "@id": "method:gaussian_mixture_classification"
+        },
+        {
+          "@id": "algo:cnn_causal_inference_classifier"
+        },
+        {
+          "@id": "model:convolutional_neural_network"
+        },
+        {
+          "@id": "model:linear_support_vector_machine"
+        },
+        {
+          "@id": "eval:accuracy"
+        },
+        {
+          "@id": "eval:sample_complexity_performance"
+        },
+        {
+          "@id": "eval:noise_variance_robustness"
+        },
+        {
+          "@id": "eval:real_world_network_generalization"
+        }
+      ],
+      "mls:usesParameters": [
+        {
+          "@id": "hp:training_graph_edge_probability"
+        },
+        {
+          "@id": "hp:training_graph_nodes"
+        },
+        {
+          "@id": "hp:observed_nodes_20"
+        },
+        {
+          "@id": "hp:observed_subset_s_1_to_20"
+        },
+        {
+          "@id": "hp:noise_variance_sigma_squared_0_5"
+        },
+        {
+          "@id": "hp:monte_carlo_runs_1000"
+        },
+        {
+          "@id": "hp:lag_feature_range_negative_100_to_100"
+        },
+        {
+          "@id": "hp:feature_vector_dimension_201"
+        },
+        {
+          "@id": "hp:theorem_lag_lower_bound_d"
+        },
+        {
+          "@id": "hp:theorem_lag_upper_bound_l"
+        },
+        {
+          "@id": "hp:interaction_matrix_stability"
+        },
+        {
+          "@id": "hp:interaction_matrix_alpha_constraint"
+        },
+        {
+          "@id": "hp:homogeneous_noise_covariance"
+        }
+      ],
+      "mls:executes": [
+        {
+          "@id": "impl:structure_identification_experiments"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "study:recovering_graph_underlying_networked_dynamical_systems_2023"
+      },
+      "prov:wasAssociatedWith": [
+        {
+          "@id": "org:university_of_coimbra"
+        }
+      ]
+    },
+    {
+      "@id": "task:graph_structure_identification",
+      "@type": "mls:MLS_Task",
+      "mention": {
+        "start_char_doc": 836,
+        "end_char_doc": 866,
+        "prefix": "We study the problem of",
+        "suffix": ", i.e., of recovering the",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "graph structure identification",
+        "start_char_doc": 836,
+        "end_char_doc": 866,
+        "prefix": "We study the problem of",
+        "suffix": ", i.e., of recovering the",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "recovering the graph of dependencies among time series",
+        "start_char_doc": 877,
+        "end_char_doc": 931,
+        "prefix": "graph structure identification, i.e., of",
+        "suffix": ". We model these time",
+        "valueSource": "extracted"
+      },
+      "mls:category": {
+        "value": "structure learning",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:metrics": {
+        "value": "accuracy; sample-complexity",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:benchmarkedOn": [
+        {
+          "@id": "dataset:erdos_renyi_random_graph"
+        },
+        {
+          "@id": "dataset:binomial_random_graph"
+        },
+        {
+          "@id": "dataset:brain_structural_connectivity_monkey"
+        },
+        {
+          "@id": "dataset:enzyme_biochemical_network"
+        }
+      ]
+    },
+    {
+      "@id": "task:causal_inference",
+      "@type": "mls:MLS_Task",
+      "mention": {
+        "start_char_doc": 1567,
+        "end_char_doc": 1583,
+        "prefix": "variety of classifiers to perform",
+        "suffix": ". In particular, we use",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "causal inference",
+        "start_char_doc": 1567,
+        "end_char_doc": 1583,
+        "prefix": "variety of classifiers to perform",
+        "suffix": ". In particular, we use",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "perform causal inference from pairwise features of observed time series",
+        "start_char_doc": 1567,
+        "end_char_doc": 1583,
+        "prefix": "variety of classifiers to perform",
+        "suffix": ". In particular, we use",
+        "valueSource": "extracted"
+      },
+      "mls:category": {
+        "value": "causal discovery",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:metrics": {
+        "value": "accuracy",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:benchmarkedOn": [
+        {
+          "@id": "dataset:erdos_renyi_random_graph"
+        },
+        {
+          "@id": "dataset:binomial_random_graph"
+        },
+        {
+          "@id": "dataset:brain_structural_connectivity_monkey"
+        },
+        {
+          "@id": "dataset:enzyme_biochemical_network"
+        }
+      ]
+    },
+    {
+      "@id": "task:network_structure_estimation",
+      "@type": "mls:MLS_Task",
+      "mention": {
+        "start_char_doc": 25476,
+        "end_char_doc": 25496,
+        "prefix": "Page 5 &lt;img&gt;Figure 3: (a)-(f)",
+        "suffix": "performance: we plot the estimators'",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Structure estimation",
+        "start_char_doc": 25476,
+        "end_char_doc": 25496,
+        "prefix": "Page 5 &lt;img&gt;Figure 3: (a)-(f)",
+        "suffix": "performance: we plot the estimators'",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "estimate directed or undirected connectivity patterns in networked dynamical systems",
+        "start_char_doc": 25476,
+        "end_char_doc": 25496,
+        "prefix": "Page 5 &lt;img&gt;Figure 3: (a)-(f)",
+        "suffix": "performance: we plot the estimators'",
+        "valueSource": "extracted"
+      },
+      "mls:category": {
+        "value": "network inference",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:metrics": {
+        "value": "accuracy as a function of the number of samples",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:benchmarkedOn": [
+        {
+          "@id": "dataset:erdos_renyi_random_graph"
+        },
+        {
+          "@id": "dataset:binomial_random_graph"
+        },
+        {
+          "@id": "dataset:brain_structural_connectivity_monkey"
+        },
+        {
+          "@id": "dataset:enzyme_biochemical_network"
+        }
+      ]
+    },
+    {
+      "@id": "task:partial_observability_graph_recovery",
+      "@type": "mls:MLS_Task",
+      "mention": {
+        "start_char_doc": 1054,
+        "end_char_doc": 1075,
+        "prefix": "*networked* dynamical systems. We assume",
+        "suffix": ", where the state evolution",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "partial observability",
+        "start_char_doc": 1054,
+        "end_char_doc": 1075,
+        "prefix": "*networked* dynamical systems. We assume",
+        "suffix": ", where the state evolution",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "reconstruct the corresponding subgraph using time series from a small subset of nodes",
+        "start_char_doc": 1054,
+        "end_char_doc": 1075,
+        "prefix": "*networked* dynamical systems. We assume",
+        "suffix": ", where the state evolution",
+        "valueSource": "extracted"
+      },
+      "mls:category": {
+        "value": "partial-observation learning",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:metrics": {
+        "value": "sample-complexity",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:benchmarkedOn": [
+        {
+          "@id": "dataset:erdos_renyi_random_graph"
+        },
+        {
+          "@id": "dataset:binomial_random_graph"
+        },
+        {
+          "@id": "dataset:brain_structural_connectivity_monkey"
+        },
+        {
+          "@id": "dataset:enzyme_biochemical_network"
+        }
+      ]
+    },
+    {
+      "@id": "datasource:rossi_ahmed_network_repository",
+      "@type": "mls:DataSource",
+      "mention": {
+        "start_char_doc": 36629,
+        "end_char_doc": 36660,
+        "prefix": "real-world networks obtained from the",
+        "suffix": ", with (a) for a",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "database (Rossi and Ahmed 2015)",
+        "start_char_doc": 36629,
+        "end_char_doc": 36660,
+        "prefix": "real-world networks obtained from the",
+        "suffix": ", with (a) for a",
+        "valueSource": "extracted"
+      },
+      "mls:url": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "real-world network database",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:license": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "datasource:synthetic_random_graph_models",
+      "@type": "mls:DataSource",
+      "mention": {
+        "start_char_doc": 35832,
+        "end_char_doc": 35851,
+        "prefix": "we considered the realization of",
+        "suffix": "as Erdős–Rényi for undirected graphs,",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "random graph models",
+        "start_char_doc": 35832,
+        "end_char_doc": 35851,
+        "prefix": "we considered the realization of",
+        "suffix": "as Erdős–Rényi for undirected graphs,",
+        "valueSource": "extracted"
+      },
+      "mls:url": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "synthetic graph generator",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:license": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "dataset:erdos_renyi_random_graph",
+      "@type": "mls:MLS_Dataset",
+      "mention": {
+        "start_char_doc": 25681,
+        "end_char_doc": 25692,
+        "prefix": "undirected graphs (realization of an",
+        "suffix": "model); and plots (e)-(f) refer",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Erdős–Rényi random graph",
+        "start_char_doc": 25681,
+        "end_char_doc": 25692,
+        "prefix": "undirected graphs (realization of an",
+        "suffix": "model); and plots (e)-(f) refer",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "undirected synthetic random graphs",
+        "start_char_doc": 25681,
+        "end_char_doc": 25692,
+        "prefix": "undirected graphs (realization of an",
+        "suffix": "model); and plots (e)-(f) refer",
+        "valueSource": "extracted"
+      },
+      "mls:numInstances": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:language": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:license": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:modality": {
+        "value": "graph/time series",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:numClasses": {
+        "value": 2,
+        "start_char_doc": 32848,
+        "end_char_doc": 32873,
+        "prefix": "the pairs of nodes into",
+        "suffix": "from the observed time series,",
+        "valueSource": "extracted"
+      },
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "datasource:synthetic_random_graph_models"
+        }
+      ]
+    },
+    {
+      "@id": "dataset:binomial_random_graph",
+      "@type": "mls:MLS_Dataset",
+      "mention": {
+        "start_char_doc": 25762,
+        "end_char_doc": 25783,
+        "prefix": "directed graphs (realization of a",
+        "suffix": "). We assume that we",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "binomial random graph",
+        "start_char_doc": 25762,
+        "end_char_doc": 25783,
+        "prefix": "directed graphs (realization of a",
+        "suffix": "). We assume that we",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "directed synthetic random graphs",
+        "start_char_doc": 25762,
+        "end_char_doc": 25783,
+        "prefix": "directed graphs (realization of a",
+        "suffix": "). We assume that we",
+        "valueSource": "extracted"
+      },
+      "mls:numInstances": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:language": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:license": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:modality": {
+        "value": "graph/time series",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:numClasses": {
+        "value": 2,
+        "start_char_doc": 32848,
+        "end_char_doc": 32873,
+        "prefix": "the pairs of nodes into",
+        "suffix": "from the observed time series,",
+        "valueSource": "extracted"
+      },
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "datasource:synthetic_random_graph_models"
+        }
+      ]
+    },
+    {
+      "@id": "dataset:brain_structural_connectivity_monkey",
+      "@type": "mls:MLS_Dataset",
+      "mention": {
+        "start_char_doc": 36677,
+        "end_char_doc": 36725,
+        "prefix": "2015), with (a) for a",
+        "suffix": "and (b) for an enzyme",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Brain structural connectivity matrix of a monkey",
+        "start_char_doc": 36677,
+        "end_char_doc": 36725,
+        "prefix": "2015), with (a) for a",
+        "suffix": "and (b) for an enzyme",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "real-world brain structural connectivity network",
+        "start_char_doc": 36677,
+        "end_char_doc": 36725,
+        "prefix": "2015), with (a) for a",
+        "suffix": "and (b) for an enzyme",
+        "valueSource": "extracted"
+      },
+      "mls:numInstances": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:language": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:license": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:modality": {
+        "value": "graph/time series",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:numClasses": {
+        "value": 2,
+        "start_char_doc": 32848,
+        "end_char_doc": 32873,
+        "prefix": "the pairs of nodes into",
+        "suffix": "from the observed time series,",
+        "valueSource": "extracted"
+      },
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "datasource:rossi_ahmed_network_repository"
+        }
+      ]
+    },
+    {
+      "@id": "dataset:enzyme_biochemical_network",
+      "@type": "mls:MLS_Dataset",
+      "mention": {
+        "start_char_doc": 36741,
+        "end_char_doc": 36767,
+        "prefix": "monkey and (b) for an",
+        "suffix": "; (c) – (d) refer",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "enzyme biochemical network",
+        "start_char_doc": 36741,
+        "end_char_doc": 36767,
+        "prefix": "monkey and (b) for an",
+        "suffix": "; (c) – (d) refer",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "real-world enzyme biochemical network",
+        "start_char_doc": 36741,
+        "end_char_doc": 36767,
+        "prefix": "monkey and (b) for an",
+        "suffix": "; (c) – (d) refer",
+        "valueSource": "extracted"
+      },
+      "mls:numInstances": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:language": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:license": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:modality": {
+        "value": "graph/time series",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:numClasses": {
+        "value": 2,
+        "start_char_doc": 32848,
+        "end_char_doc": 32873,
+        "prefix": "the pairs of nodes into",
+        "suffix": "from the observed time series,",
+        "valueSource": "extracted"
+      },
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "datasource:rossi_ahmed_network_repository"
+        }
+      ]
+    },
+    {
+      "@id": "method:feature_vector_based_setting",
+      "@type": "mls:Method",
+      "mention": {
+        "start_char_doc": 7122,
+        "end_char_doc": 7150,
+        "prefix": "We propose a novel *",
+        "suffix": "* constructed for each pair",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "feature vector based setting",
+        "start_char_doc": 7122,
+        "end_char_doc": 7150,
+        "prefix": "We propose a novel *",
+        "suffix": "* constructed for each pair",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "constructed for each pair of nodes from their time series",
+        "start_char_doc": 7152,
+        "end_char_doc": 7209,
+        "prefix": "novel *feature vector based setting*",
+        "suffix": ". In this novel setting,",
+        "valueSource": "extracted"
+      },
+      "mls:version": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:erdos_renyi_random_graph"
+        },
+        {
+          "@id": "dataset:binomial_random_graph"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:erdos_renyi_random_graph"
+        },
+        {
+          "@id": "dataset:binomial_random_graph"
+        },
+        {
+          "@id": "dataset:brain_structural_connectivity_monkey"
+        },
+        {
+          "@id": "dataset:enzyme_biochemical_network"
+        }
+      ],
+      "mls:achieves": [
+        {
+          "@id": "eval:accuracy"
+        },
+        {
+          "@id": "eval:sample_complexity_performance"
+        },
+        {
+          "@id": "eval:noise_variance_robustness"
+        },
+        {
+          "@id": "eval:real_world_network_generalization"
+        }
+      ]
+    },
+    {
+      "@id": "method:covariance_based_lag_features",
+      "@type": "mls:Method",
+      "mention": {
+        "start_char_doc": 32956,
+        "end_char_doc": 32981,
+        "prefix": "linear separability property of the",
+        "suffix": "$\\left\\{ \\mathcal{T}_{ij}^{(n)} \\right\\}_{ij}$ established in",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "covariance-based features",
+        "start_char_doc": 32956,
+        "end_char_doc": 32981,
+        "prefix": "linear separability property of the",
+        "suffix": "$\\left\\{ \\mathcal{T}_{ij}^{(n)} \\right\\}_{ij}$ established in",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "lag covariance entries from -100 to 100 used as feature vectors",
+        "start_char_doc": 32956,
+        "end_char_doc": 32981,
+        "prefix": "linear separability property of the",
+        "suffix": "$\\left\\{ \\mathcal{T}_{ij}^{(n)} \\right\\}_{ij}$ established in",
+        "valueSource": "extracted"
+      },
+      "mls:version": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:erdos_renyi_random_graph"
+        },
+        {
+          "@id": "dataset:binomial_random_graph"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:erdos_renyi_random_graph"
+        },
+        {
+          "@id": "dataset:binomial_random_graph"
+        },
+        {
+          "@id": "dataset:brain_structural_connectivity_monkey"
+        },
+        {
+          "@id": "dataset:enzyme_biochemical_network"
+        }
+      ],
+      "mls:achieves": [
+        {
+          "@id": "eval:accuracy"
+        },
+        {
+          "@id": "eval:sample_complexity_performance"
+        },
+        {
+          "@id": "eval:noise_variance_robustness"
+        },
+        {
+          "@id": "eval:real_world_network_generalization"
+        }
+      ]
+    },
+    {
+      "@id": "method:normalized_feature_vectors",
+      "@type": "mls:Method",
+      "mention": {
+        "start_char_doc": 33413,
+        "end_char_doc": 33439,
+        "prefix": "where we have introduced the",
+        "suffix": "$$ \\overline{\\mathcal{T}}_{ij}^{(n)} := \\frac{\\mathcal{T}_{ij}^{(n)}}{\\max_{i \\neq",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "normalized feature vectors",
+        "start_char_doc": 33413,
+        "end_char_doc": 33439,
+        "prefix": "where we have introduced the",
+        "suffix": "$$ \\overline{\\mathcal{T}}_{ij}^{(n)} := \\frac{\\mathcal{T}_{ij}^{(n)}}{\\max_{i \\neq",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "feature vectors normalized by the maximal infinity norm",
+        "start_char_doc": 33413,
+        "end_char_doc": 33439,
+        "prefix": "where we have introduced the",
+        "suffix": "$$ \\overline{\\mathcal{T}}_{ij}^{(n)} := \\frac{\\mathcal{T}_{ij}^{(n)}}{\\max_{i \\neq",
+        "valueSource": "extracted"
+      },
+      "mls:version": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:erdos_renyi_random_graph"
+        },
+        {
+          "@id": "dataset:binomial_random_graph"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:erdos_renyi_random_graph"
+        },
+        {
+          "@id": "dataset:binomial_random_graph"
+        },
+        {
+          "@id": "dataset:brain_structural_connectivity_monkey"
+        },
+        {
+          "@id": "dataset:enzyme_biochemical_network"
+        }
+      ],
+      "mls:achieves": [
+        {
+          "@id": "eval:accuracy"
+        },
+        {
+          "@id": "eval:sample_complexity_performance"
+        },
+        {
+          "@id": "eval:noise_variance_robustness"
+        },
+        {
+          "@id": "eval:real_world_network_generalization"
+        }
+      ]
+    },
+    {
+      "@id": "method:granger_augmented_feature_vector",
+      "@type": "mls:Method",
+      "mention": {
+        "start_char_doc": 9113,
+        "end_char_doc": 9130,
+        "prefix": "the covariance matrix; regression (e.g.,",
+        "suffix": ") (Geiger et al. 2015;",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Granger estimator",
+        "start_char_doc": 9113,
+        "end_char_doc": 9130,
+        "prefix": "the covariance matrix; regression (e.g.,",
+        "suffix": ") (Geiger et al. 2015;",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "feature vector augmented with the Granger estimator under partial observability",
+        "start_char_doc": 9113,
+        "end_char_doc": 9130,
+        "prefix": "the covariance matrix; regression (e.g.,",
+        "suffix": ") (Geiger et al. 2015;",
+        "valueSource": "extracted"
+      },
+      "mls:version": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:erdos_renyi_random_graph"
+        },
+        {
+          "@id": "dataset:binomial_random_graph"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:erdos_renyi_random_graph"
+        },
+        {
+          "@id": "dataset:binomial_random_graph"
+        },
+        {
+          "@id": "dataset:brain_structural_connectivity_monkey"
+        },
+        {
+          "@id": "dataset:enzyme_biochemical_network"
+        }
+      ],
+      "mls:achieves": [
+        {
+          "@id": "eval:accuracy"
+        },
+        {
+          "@id": "eval:sample_complexity_performance"
+        },
+        {
+          "@id": "eval:noise_variance_robustness"
+        },
+        {
+          "@id": "eval:real_world_network_generalization"
+        }
+      ]
+    },
+    {
+      "@id": "method:linear_svm_classifier",
+      "@type": "mls:Method",
+      "mention": {
+        "start_char_doc": 33122,
+        "end_char_doc": 33159,
+        "prefix": "of trained classifiers, in particular,",
+        "suffix": "and Convolutional Neural Networks (CNNs).",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "linear Support Vector Machines (SVMs)",
+        "start_char_doc": 33122,
+        "end_char_doc": 33159,
+        "prefix": "of trained classifiers, in particular,",
+        "suffix": "and Convolutional Neural Networks (CNNs).",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "linear SVM classifiers trained on the proposed features",
+        "start_char_doc": 33122,
+        "end_char_doc": 33159,
+        "prefix": "of trained classifiers, in particular,",
+        "suffix": "and Convolutional Neural Networks (CNNs).",
+        "valueSource": "extracted"
+      },
+      "mls:version": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:erdos_renyi_random_graph"
+        },
+        {
+          "@id": "dataset:binomial_random_graph"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:erdos_renyi_random_graph"
+        },
+        {
+          "@id": "dataset:binomial_random_graph"
+        },
+        {
+          "@id": "dataset:brain_structural_connectivity_monkey"
+        },
+        {
+          "@id": "dataset:enzyme_biochemical_network"
+        }
+      ],
+      "mls:achieves": [
+        {
+          "@id": "eval:accuracy"
+        },
+        {
+          "@id": "eval:sample_complexity_performance"
+        },
+        {
+          "@id": "eval:noise_variance_robustness"
+        },
+        {
+          "@id": "eval:real_world_network_generalization"
+        }
+      ]
+    },
+    {
+      "@id": "method:gaussian_mixture_classification",
+      "@type": "mls:Method",
+      "mention": {
+        "start_char_doc": 39637,
+        "end_char_doc": 39653,
+        "prefix": "CNNs. For classification, we apply",
+        "suffix": "over the sorted entries of",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Gaussian mixture",
+        "start_char_doc": 39637,
+        "end_char_doc": 39653,
+        "prefix": "CNNs. For classification, we apply",
+        "suffix": "over the sorted entries of",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "Gaussian mixture over sorted entries stratifies connected and disconnected pairs",
+        "start_char_doc": 39637,
+        "end_char_doc": 39653,
+        "prefix": "CNNs. For classification, we apply",
+        "suffix": "over the sorted entries of",
+        "valueSource": "extracted"
+      },
+      "mls:version": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:erdos_renyi_random_graph"
+        },
+        {
+          "@id": "dataset:binomial_random_graph"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:erdos_renyi_random_graph"
+        },
+        {
+          "@id": "dataset:binomial_random_graph"
+        },
+        {
+          "@id": "dataset:brain_structural_connectivity_monkey"
+        },
+        {
+          "@id": "dataset:enzyme_biochemical_network"
+        }
+      ],
+      "mls:achieves": [
+        {
+          "@id": "eval:accuracy"
+        },
+        {
+          "@id": "eval:sample_complexity_performance"
+        },
+        {
+          "@id": "eval:noise_variance_robustness"
+        },
+        {
+          "@id": "eval:real_world_network_generalization"
+        }
+      ]
+    },
+    {
+      "@id": "algo:cnn_causal_inference_classifier",
+      "@type": "mls:MLS_Algorithm",
+      "mention": {
+        "start_char_doc": 1631,
+        "end_char_doc": 1667,
+        "prefix": "use these features to train",
+        "suffix": ". The resulting causal inference",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Convolutional Neural Networks (CNNs)",
+        "start_char_doc": 1631,
+        "end_char_doc": 1667,
+        "prefix": "use these features to train",
+        "suffix": ". The resulting causal inference",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "CNN classifiers trained with the proposed features for causal inference",
+        "start_char_doc": 1631,
+        "end_char_doc": 1667,
+        "prefix": "use these features to train",
+        "suffix": ". The resulting causal inference",
+        "valueSource": "extracted"
+      },
+      "mls:version": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:erdos_renyi_random_graph"
+        },
+        {
+          "@id": "dataset:binomial_random_graph"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:erdos_renyi_random_graph"
+        },
+        {
+          "@id": "dataset:binomial_random_graph"
+        },
+        {
+          "@id": "dataset:brain_structural_connectivity_monkey"
+        },
+        {
+          "@id": "dataset:enzyme_biochemical_network"
+        }
+      ],
+      "mls:achieves": [
+        {
+          "@id": "eval:accuracy"
+        },
+        {
+          "@id": "eval:sample_complexity_performance"
+        },
+        {
+          "@id": "eval:noise_variance_robustness"
+        },
+        {
+          "@id": "eval:real_world_network_generalization"
+        }
+      ],
+      "mls:complexity": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:pseudoCode": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "model:convolutional_neural_network",
+      "@type": "mls:MLS_Model",
+      "mention": {
+        "start_char_doc": 1662,
+        "end_char_doc": 1666,
+        "prefix": "train Convolutional Neural Networks (",
+        "suffix": "). The resulting causal inference",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "CNNs",
+        "start_char_doc": 1662,
+        "end_char_doc": 1666,
+        "prefix": "train Convolutional Neural Networks (",
+        "suffix": "). The resulting causal inference",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "Convolutional Neural Network classifier over covariance-feature vectors",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:architecture": {
+        "value": "Convolutional Neural Network classifier over covariance-feature vectors",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:parameters": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:erdos_renyi_random_graph"
+        },
+        {
+          "@id": "dataset:binomial_random_graph"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:erdos_renyi_random_graph"
+        },
+        {
+          "@id": "dataset:binomial_random_graph"
+        },
+        {
+          "@id": "dataset:brain_structural_connectivity_monkey"
+        },
+        {
+          "@id": "dataset:enzyme_biochemical_network"
+        }
+      ],
+      "mls:achieves": [
+        {
+          "@id": "eval:accuracy"
+        },
+        {
+          "@id": "eval:sample_complexity_performance"
+        },
+        {
+          "@id": "eval:noise_variance_robustness"
+        },
+        {
+          "@id": "eval:real_world_network_generalization"
+        }
+      ]
+    },
+    {
+      "@id": "model:linear_support_vector_machine",
+      "@type": "mls:MLS_Model",
+      "mention": {
+        "start_char_doc": 37393,
+        "end_char_doc": 37404,
+        "prefix": "the trained CNNs and the",
+        "suffix": "against distinct noise-level regimes. The",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "linear SVMs",
+        "start_char_doc": 37393,
+        "end_char_doc": 37404,
+        "prefix": "the trained CNNs and the",
+        "suffix": "against distinct noise-level regimes. The",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "linear Support Vector Machine classifier over linearly separable feature vectors",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:architecture": {
+        "value": "linear Support Vector Machine classifier over linearly separable feature vectors",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:parameters": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:erdos_renyi_random_graph"
+        },
+        {
+          "@id": "dataset:binomial_random_graph"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:erdos_renyi_random_graph"
+        },
+        {
+          "@id": "dataset:binomial_random_graph"
+        },
+        {
+          "@id": "dataset:brain_structural_connectivity_monkey"
+        },
+        {
+          "@id": "dataset:enzyme_biochemical_network"
+        }
+      ],
+      "mls:achieves": [
+        {
+          "@id": "eval:accuracy"
+        },
+        {
+          "@id": "eval:sample_complexity_performance"
+        },
+        {
+          "@id": "eval:noise_variance_robustness"
+        },
+        {
+          "@id": "eval:real_world_network_generalization"
+        }
+      ]
+    },
+    {
+      "@id": "eval:accuracy",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 7782,
+        "end_char_doc": 7790,
+        "prefix": "state-of-the-art methods in terms of",
+        "suffix": "and sample complexity. ### Related",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "accuracy",
+        "start_char_doc": 7782,
+        "end_char_doc": 7790,
+        "prefix": "state-of-the-art methods in terms of",
+        "suffix": "and sample complexity. ### Related",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:stdDev": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:confidenceInterval": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:description": {
+        "value": "number of directed pairs correctly classified over the total number of directed pairs",
+        "start_char_doc": 38739,
+        "end_char_doc": 38824,
+        "prefix": "we define accuracy as the",
+        "suffix": "in the underlying graph. We",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "eval:sample_complexity_performance",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 38931,
+        "end_char_doc": 38960,
+        "prefix": "(a) – (f) depict the",
+        "suffix": "of the estimators across structurally",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "sample-complexity performance",
+        "start_char_doc": 38931,
+        "end_char_doc": 38960,
+        "prefix": "(a) – (f) depict the",
+        "suffix": "of the estimators across structurally",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:stdDev": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:confidenceInterval": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:description": {
+        "value": "accuracy as a function of the number of samples across structurally distinct networks",
+        "start_char_doc": 38931,
+        "end_char_doc": 38960,
+        "prefix": "(a) – (f) depict the",
+        "suffix": "of the estimators across structurally",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "eval:noise_variance_robustness",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 36427,
+        "end_char_doc": 36464,
+        "prefix": "&lt;img&gt;Figure 4: (a) depicts the",
+        "suffix": "for both the CNN and",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "robustness against the noise variance",
+        "start_char_doc": 36427,
+        "end_char_doc": 36464,
+        "prefix": "&lt;img&gt;Figure 4: (a) depicts the",
+        "suffix": "for both the CNN and",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:stdDev": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:confidenceInterval": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:description": {
+        "value": "CNNs and SVMs trained with σ² = 0.5 generalize over an extended range of noise variance",
+        "start_char_doc": 36427,
+        "end_char_doc": 36464,
+        "prefix": "&lt;img&gt;Figure 4: (a) depicts the",
+        "suffix": "for both the CNN and",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "eval:real_world_network_generalization",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 37244,
+        "end_char_doc": 37285,
+        "prefix": "and N = 100, it",
+        "suffix": "as demonstrated in Figs. 3",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "real-world network generalization",
+        "start_char_doc": 37244,
+        "end_char_doc": 37285,
+        "prefix": "and N = 100, it",
+        "suffix": "as demonstrated in Figs. 3",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:stdDev": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:confidenceInterval": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:description": {
+        "value": "CNN trained over a synthetic network generalizes to real-world networks",
+        "start_char_doc": 37244,
+        "end_char_doc": 37285,
+        "prefix": "and N = 100, it",
+        "suffix": "as demonstrated in Figs. 3",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "hp:training_graph_edge_probability",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 36036,
+        "end_char_doc": 36043,
+        "prefix": "random graph model with $",
+        "suffix": "$ and $N = 100$",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "random graph edge probability",
+        "start_char_doc": 36036,
+        "end_char_doc": 36043,
+        "prefix": "random graph model with $",
+        "suffix": "$ and $N = 100$",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "p = 0.5",
+        "start_char_doc": 36036,
+        "end_char_doc": 36043,
+        "prefix": "random graph model with $",
+        "suffix": "$ and $N = 100$",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Data",
+      "hpType": "TrainValTestSplit",
+      "uncertain": false
+    },
+    {
+      "@id": "hp:training_graph_nodes",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 36050,
+        "end_char_doc": 36057,
+        "prefix": "$p = 0.5$ and $",
+        "suffix": "$ and apply them to",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "number of nodes",
+        "start_char_doc": 36050,
+        "end_char_doc": 36057,
+        "prefix": "$p = 0.5$ and $",
+        "suffix": "$ and apply them to",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "N = 100",
+        "start_char_doc": 36050,
+        "end_char_doc": 36057,
+        "prefix": "$p = 0.5$ and $",
+        "suffix": "$ and apply them to",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Data",
+      "hpType": "TrainValTestSplit",
+      "uncertain": false
+    },
+    {
+      "@id": "hp:observed_nodes_20",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 25821,
+        "end_char_doc": 25829,
+        "prefix": "that we can only observe",
+        "suffix": "nodes.&lt;/img&gt; **Proof.** Define the vector",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "observed nodes",
+        "start_char_doc": 25821,
+        "end_char_doc": 25829,
+        "prefix": "that we can only observe",
+        "suffix": "nodes.&lt;/img&gt; **Proof.** Define the vector",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "|S| = 20",
+        "start_char_doc": 25821,
+        "end_char_doc": 25829,
+        "prefix": "that we can only observe",
+        "suffix": "nodes.&lt;/img&gt; **Proof.** Define the vector",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Data",
+      "hpType": "TrainValTestSplit",
+      "uncertain": false
+    },
+    {
+      "@id": "hp:observed_subset_s_1_to_20",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 36346,
+        "end_char_doc": 36369,
+        "prefix": "that is, we assume $",
+        "suffix": "$. --- ## Page 7",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "observed subset",
+        "start_char_doc": 36346,
+        "end_char_doc": 36369,
+        "prefix": "that is, we assume $",
+        "suffix": "$. --- ## Page 7",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "S = {1, 2, ..., 20}",
+        "start_char_doc": 36346,
+        "end_char_doc": 36369,
+        "prefix": "that is, we assume $",
+        "suffix": "$. --- ## Page 7",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Data",
+      "hpType": "TrainValTestSplit",
+      "uncertain": false
+    },
+    {
+      "@id": "hp:noise_variance_sigma_squared_0_5",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 37498,
+        "end_char_doc": 37506,
+        "prefix": "with a noise variance of",
+        "suffix": ", but generalize well over",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "noise variance",
+        "start_char_doc": 37498,
+        "end_char_doc": 37506,
+        "prefix": "with a noise variance of",
+        "suffix": ", but generalize well over",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "σ² = 0.5",
+        "start_char_doc": 37498,
+        "end_char_doc": 37506,
+        "prefix": "with a noise variance of",
+        "suffix": ", but generalize well over",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Data",
+      "hpType": "TrainValTestSplit",
+      "uncertain": false
+    },
+    {
+      "@id": "hp:monte_carlo_runs_1000",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 38862,
+        "end_char_doc": 38883,
+        "prefix": "the underlying graph. We consider",
+        "suffix": "across all plots. Fig. 3",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Monte Carlo runs",
+        "start_char_doc": 38862,
+        "end_char_doc": 38883,
+        "prefix": "the underlying graph. We consider",
+        "suffix": "across all plots. Fig. 3",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "1000",
+        "start_char_doc": 38862,
+        "end_char_doc": 38883,
+        "prefix": "the underlying graph. We consider",
+        "suffix": "across all plots. Fig. 3",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Training",
+      "hpType": "RandomSeed",
+      "uncertain": false
+    },
+    {
+      "@id": "hp:lag_feature_range_negative_100_to_100",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 33681,
+        "end_char_doc": 33702,
+        "prefix": "$$ \\mathcal{T}_{ij}^{(n)} \\triangleq \\left( \\left[",
+        "suffix": "\\right]_{ij}, \\left[ \\widehat{R}_{-99}(n) \\right]_{ij}, \\dots,",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "lag feature range",
+        "start_char_doc": 33681,
+        "end_char_doc": 33702,
+        "prefix": "$$ \\mathcal{T}_{ij}^{(n)} \\triangleq \\left( \\left[",
+        "suffix": "\\right]_{ij}, \\left[ \\widehat{R}_{-99}(n) \\right]_{ij}, \\dots,",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "-100 to 100",
+        "start_char_doc": 33681,
+        "end_char_doc": 33702,
+        "prefix": "$$ \\mathcal{T}_{ij}^{(n)} \\triangleq \\left( \\left[",
+        "suffix": "\\right]_{ij}, \\left[ \\widehat{R}_{-99}(n) \\right]_{ij}, \\dots,",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Data",
+      "hpType": "MaxSequenceLength",
+      "uncertain": false
+    },
+    {
+      "@id": "hp:feature_vector_dimension_201",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 33773,
+        "end_char_doc": 33793,
+        "prefix": "\\left[ \\widehat{R}_{-99}(n) \\right]_{ij}, \\dots, \\left[",
+        "suffix": "\\right]_{ij} \\right). $$ In other",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "feature vector dimension",
+        "start_char_doc": 33773,
+        "end_char_doc": 33793,
+        "prefix": "\\left[ \\widehat{R}_{-99}(n) \\right]_{ij}, \\dots, \\left[",
+        "suffix": "\\right]_{ij} \\right). $$ In other",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "201",
+        "start_char_doc": 33773,
+        "end_char_doc": 33793,
+        "prefix": "\\left[ \\widehat{R}_{-99}(n) \\right]_{ij}, \\dots, \\left[",
+        "suffix": "\\right]_{ij} \\right). $$ In other",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Architecture",
+      "hpType": "UnknownArchitectureHP",
+      "uncertain": true
+    },
+    {
+      "@id": "hp:theorem_lag_lower_bound_d",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 22439,
+        "end_char_doc": 22447,
+        "prefix": "the next section, if $",
+        "suffix": "$ and $L \\geq 3$,",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "lag lower bound D",
+        "start_char_doc": 22439,
+        "end_char_doc": 22447,
+        "prefix": "the next section, if $",
+        "suffix": "$ and $L \\geq 3$,",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "D ≤ 1",
+        "start_char_doc": 22439,
+        "end_char_doc": 22447,
+        "prefix": "the next section, if $",
+        "suffix": "$ and $L \\geq 3$,",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Data",
+      "hpType": "MaxSequenceLength",
+      "uncertain": false
+    },
+    {
+      "@id": "hp:theorem_lag_upper_bound_l",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 22454,
+        "end_char_doc": 22462,
+        "prefix": "$D \\leq 1$ and $",
+        "suffix": "$, then this estimator is",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "lag upper bound L",
+        "start_char_doc": 22454,
+        "end_char_doc": 22462,
+        "prefix": "$D \\leq 1$ and $",
+        "suffix": "$, then this estimator is",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "L ≥ 3",
+        "start_char_doc": 22454,
+        "end_char_doc": 22462,
+        "prefix": "$D \\leq 1$ and $",
+        "suffix": "$, then this estimator is",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Data",
+      "hpType": "MaxSequenceLength",
+      "uncertain": false
+    },
+    {
+      "@id": "hp:interaction_matrix_stability",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 15647,
+        "end_char_doc": 15658,
+        "prefix": "to be stable, i.e., $",
+        "suffix": "$, where $\\rho(A)$ stands for",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "spectral radius stability",
+        "start_char_doc": 15647,
+        "end_char_doc": 15658,
+        "prefix": "to be stable, i.e., $",
+        "suffix": "$, where $\\rho(A)$ stands for",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "ρ(A) < 1",
+        "start_char_doc": 15647,
+        "end_char_doc": 15658,
+        "prefix": "to be stable, i.e., $",
+        "suffix": "$, where $\\rho(A)$ stands for",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Architecture",
+      "hpType": "UnknownArchitectureHP",
+      "uncertain": false
+    },
+    {
+      "@id": "hp:interaction_matrix_alpha_constraint",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 35443,
+        "end_char_doc": 35471,
+        "prefix": "underlying graph $G$ and $",
+        "suffix": "$ are some constants. In",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "interaction matrix alpha constraint",
+        "start_char_doc": 35443,
+        "end_char_doc": 35471,
+        "prefix": "underlying graph $G$ and $",
+        "suffix": "$ are some constants. In",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "0 < α1 ≤ α < 1",
+        "start_char_doc": 35443,
+        "end_char_doc": 35471,
+        "prefix": "underlying graph $G$ and $",
+        "suffix": "$ are some constants. In",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Architecture",
+      "hpType": "UnknownArchitectureHP",
+      "uncertain": false
+    },
+    {
+      "@id": "hp:homogeneous_noise_covariance",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 15286,
+        "end_char_doc": 15298,
+        "prefix": "time $n$; $x(n) \\sim \\mathcal{N}(0,",
+        "suffix": ")$ represents the excitation noise",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "noise covariance",
+        "start_char_doc": 15286,
+        "end_char_doc": 15298,
+        "prefix": "time $n$; $x(n) \\sim \\mathcal{N}(0,",
+        "suffix": ")$ represents the excitation noise",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "σ² I_N",
+        "start_char_doc": 15286,
+        "end_char_doc": 15298,
+        "prefix": "time $n$; $x(n) \\sim \\mathcal{N}(0,",
+        "suffix": ")$ represents the excitation noise",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Data",
+      "hpType": "TrainValTestSplit",
+      "uncertain": false
+    }
+  ]
+}

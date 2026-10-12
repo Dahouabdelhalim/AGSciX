@@ -1,0 +1,3685 @@
+{
+  "@context": {
+    "mls": "http://www.w3.org/ns/mls#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "schema": "http://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "model": "https://w3id.org/mlskg/model/",
+    "algo": "https://w3id.org/mlskg/algorithm/",
+    "method": "https://w3id.org/mlskg/method/",
+    "dataset": "https://w3id.org/mlskg/dataset/",
+    "datasource": "https://w3id.org/mlskg/datasource/",
+    "task": "https://w3id.org/mlskg/task/",
+    "eval": "https://w3id.org/mlskg/eval/",
+    "hp": "https://w3id.org/mlskg/hp/",
+    "impl": "https://w3id.org/mlskg/implementation/",
+    "env": "https://w3id.org/mlskg/environment/",
+    "prompt": "https://w3id.org/mlskg/prompt/",
+    "person": "https://w3id.org/mlskg/person/",
+    "org": "https://w3id.org/mlskg/organization/",
+    "study": "https://w3id.org/mlskg/study/",
+    "exp": "https://w3id.org/mlskg/experiment/",
+    "repo": "https://w3id.org/mlskg/repository/",
+    "dep": "https://w3id.org/mlskg/dependency/",
+    "run": "https://w3id.org/mlskg/run/",
+    "step": "https://w3id.org/mlskg/step/",
+    "valueSource": "https://w3id.org/mlskg/meta/valueSource",
+    "mention": "https://w3id.org/mlskg/meta/mention"
+  },
+  "@graph": [
+    {
+      "@id": "study:mlsolv_a_solvation_free_energy_2020",
+      "@type": "mls:Study",
+      "mention": {
+        "start_char_doc": 11,
+        "end_char_doc": 126,
+        "prefix": "## Page 1",
+        "suffix": "Hyuntae Lim* and YounJoon Jung†",
+        "valueSource": "extracted"
+      },
+      "mls:title": {
+        "value": "MLSolv-A: A Novel Machine Learning-Based Prediction of Solvation Free Energies from Pairwise Atomistic Interactions",
+        "start_char_doc": 11,
+        "end_char_doc": 126,
+        "prefix": "## Page 1",
+        "suffix": "Hyuntae Lim* and YounJoon Jung†",
+        "valueSource": "extracted"
+      },
+      "mls:abstract": {
+        "value": "Recent advances in machine learning and their applications have lead to the development of diverse structure-property relationship models for crucial chemical properties, and the solvation free energy is one of them. Here, we introduce a novel ML-based solvation model, which calculates the solvation energy from pairwise atomistic interactions. The novelty of the proposed model consists of a simple architecture: two encoding functions extract atomic feature vectors from the given chemical structure, while the inner product between two atomistic features calculates their interactions. The results on 6,493 experimental measurements achieve outstanding performance and transferability for enlarging training data due to its solvent-non-specific nature. Analysis of the interaction map shows there is a great potential that our model reproduces group contributions on the solvation energy, which makes us believe that the model not only provides the predicted target property but also gives us more detailed physicochemical insights.",
+        "start_char_doc": 257,
+        "end_char_doc": 1293,
+        "prefix": "Korea July 3, 2020 Abstract",
+        "suffix": "*ht0620@snu.ac.kr †yjjung@snu.ac.kr &lt;page_number&gt;1&lt;/page_number&gt; &lt;watermark&gt;arXiv:2005.06182v2 [stat.ML]",
+        "valueSource": "extracted"
+      },
+      "mls:url": {
+        "value": "https://arxiv.org/abs/2005.06182",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:doi": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:citation": {
+        "value": "arXiv:2005.06182v2 [stat.ML] 2 Jul 2020",
+        "start_char_doc": 1390,
+        "end_char_doc": 1429,
+        "prefix": "insights. *ht0620@snu.ac.kr †yjjung@snu.ac.kr &lt;page_number&gt;1&lt;/page_number&gt; &lt;watermark&gt;",
+        "suffix": "&lt;/watermark&gt; --- ## Page 2",
+        "valueSource": "extracted"
+      },
+      "mls:publicationVenue": {
+        "value": "arXiv",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:issued": {
+        "value": "2020-07-03",
+        "start_char_doc": 233,
+        "end_char_doc": 245,
+        "prefix": "National University, Seoul 08826, Korea",
+        "suffix": "Abstract Recent advances in machine",
+        "valueSource": "extracted"
+      },
+      "mls:hasAuthor": [
+        {
+          "@id": "person:lim_hyuntae"
+        },
+        {
+          "@id": "person:jung_younjoon"
+        }
+      ],
+      "mls:contains": [
+        {
+          "@id": "exp:mlsolv_a_pairwise_atomistic_interaction_solvation_2020"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "paper:8_2005_06182v2"
+      }
+    },
+    {
+      "@id": "org:seoul_national_university",
+      "@type": "mls:Organization",
+      "mention": {
+        "start_char_doc": 186,
+        "end_char_doc": 211,
+        "prefix": "YounJoon Jung† Department of Chemistry,",
+        "suffix": ", Seoul 08826, Korea July",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Seoul National University",
+        "start_char_doc": 186,
+        "end_char_doc": 211,
+        "prefix": "YounJoon Jung† Department of Chemistry,",
+        "suffix": ", Seoul 08826, Korea July",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "university",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:url": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "person:lim_hyuntae",
+      "@type": "mls:Person",
+      "mention": {
+        "start_char_doc": 128,
+        "end_char_doc": 139,
+        "prefix": "Energies from Pairwise Atomistic Interactions",
+        "suffix": "* and YounJoon Jung† Department",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Hyuntae Lim",
+        "start_char_doc": 128,
+        "end_char_doc": 139,
+        "prefix": "Energies from Pairwise Atomistic Interactions",
+        "suffix": "* and YounJoon Jung† Department",
+        "valueSource": "extracted"
+      },
+      "mls:affiliation": {
+        "value": "Department of Chemistry, Seoul National University, Seoul 08826, Korea",
+        "start_char_doc": 161,
+        "end_char_doc": 231,
+        "prefix": "Hyuntae Lim* and YounJoon Jung†",
+        "suffix": "July 3, 2020 Abstract Recent",
+        "valueSource": "extracted"
+      },
+      "mls:email": {
+        "value": "ht0620@snu.ac.kr",
+        "start_char_doc": 1296,
+        "end_char_doc": 1312,
+        "prefix": "more detailed physicochemical insights. *",
+        "suffix": "†yjjung@snu.ac.kr &lt;page_number&gt;1&lt;/page_number&gt; &lt;watermark&gt;arXiv:2005.06182v2 [stat.ML] 2",
+        "valueSource": "extracted"
+      },
+      "mls:orcid": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:prov-affiliatedWith": [
+        {
+          "@id": "org:seoul_national_university"
+        }
+      ]
+    },
+    {
+      "@id": "person:jung_younjoon",
+      "@type": "mls:Person",
+      "mention": {
+        "start_char_doc": 145,
+        "end_char_doc": 158,
+        "prefix": "Atomistic Interactions Hyuntae Lim* and",
+        "suffix": "† Department of Chemistry, Seoul",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "YounJoon Jung",
+        "start_char_doc": 145,
+        "end_char_doc": 158,
+        "prefix": "Atomistic Interactions Hyuntae Lim* and",
+        "suffix": "† Department of Chemistry, Seoul",
+        "valueSource": "extracted"
+      },
+      "mls:affiliation": {
+        "value": "Department of Chemistry, Seoul National University, Seoul 08826, Korea",
+        "start_char_doc": 161,
+        "end_char_doc": 231,
+        "prefix": "Hyuntae Lim* and YounJoon Jung†",
+        "suffix": "July 3, 2020 Abstract Recent",
+        "valueSource": "extracted"
+      },
+      "mls:email": {
+        "value": "yjjung@snu.ac.kr",
+        "start_char_doc": 1314,
+        "end_char_doc": 1330,
+        "prefix": "detailed physicochemical insights. *ht0620@snu.ac.kr †",
+        "suffix": "&lt;page_number&gt;1&lt;/page_number&gt; &lt;watermark&gt;arXiv:2005.06182v2 [stat.ML] 2 Jul",
+        "valueSource": "extracted"
+      },
+      "mls:orcid": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:prov-affiliatedWith": [
+        {
+          "@id": "org:seoul_national_university"
+        }
+      ]
+    },
+    {
+      "@id": "impl:mlsolv_a_tensorflow_keras",
+      "@type": "mls:MLS_Implementation",
+      "mention": {
+        "start_char_doc": 11829,
+        "end_char_doc": 11859,
+        "prefix": "model, we mainly use the",
+        "suffix": "frameworks[59]. Each model has L2",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Tensorflow 2.0 and Keras 2.3.1",
+        "start_char_doc": 11829,
+        "end_char_doc": 11859,
+        "prefix": "model, we mainly use the",
+        "suffix": "frameworks[59]. Each model has L2",
+        "valueSource": "extracted"
+      },
+      "mls:codeRepository": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:framework": {
+        "value": "Tensorflow 2.0 and Keras 2.3.1",
+        "start_char_doc": 11829,
+        "end_char_doc": 11859,
+        "prefix": "model, we mainly use the",
+        "suffix": "frameworks[59]. Each model has L2",
+        "valueSource": "extracted"
+      },
+      "mls:executionCommand": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:entryPoint": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:branch": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:requires": [
+        {
+          "@id": "dep:tensorflow_2_0"
+        },
+        {
+          "@id": "dep:keras_2_3_1"
+        },
+        {
+          "@id": "dep:gensim_3_8_1"
+        }
+      ],
+      "mls:runsIn": {
+        "@id": "env:unspecified_ml_training"
+      }
+    },
+    {
+      "@id": "dep:tensorflow_2_0",
+      "@type": "Dependency",
+      "mention": {
+        "start_char_doc": 11829,
+        "end_char_doc": 11843,
+        "prefix": "model, we mainly use the",
+        "suffix": "and Keras 2.3.1 frameworks[59]. Each",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Tensorflow 2.0",
+        "start_char_doc": 11829,
+        "end_char_doc": 11843,
+        "prefix": "model, we mainly use the",
+        "suffix": "and Keras 2.3.1 frameworks[59]. Each",
+        "valueSource": "extracted"
+      },
+      "mls:version": {
+        "value": "2.0",
+        "start_char_doc": 11840,
+        "end_char_doc": 11843,
+        "prefix": "we mainly use the Tensorflow",
+        "suffix": "and Keras 2.3.1 frameworks[59]. Each",
+        "valueSource": "extracted"
+      },
+      "mls:packageName": {
+        "value": "Tensorflow 2.0",
+        "start_char_doc": 11829,
+        "end_char_doc": 11843,
+        "prefix": "model, we mainly use the",
+        "suffix": "and Keras 2.3.1 frameworks[59]. Each",
+        "valueSource": "extracted"
+      },
+      "mls:dependencyType": {
+        "value": "software library",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:isOptional": {
+        "value": false,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "dep:keras_2_3_1",
+      "@type": "Dependency",
+      "mention": {
+        "start_char_doc": 11848,
+        "end_char_doc": 11859,
+        "prefix": "use the Tensorflow 2.0 and",
+        "suffix": "frameworks[59]. Each model has L2",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Keras 2.3.1",
+        "start_char_doc": 11848,
+        "end_char_doc": 11859,
+        "prefix": "use the Tensorflow 2.0 and",
+        "suffix": "frameworks[59]. Each model has L2",
+        "valueSource": "extracted"
+      },
+      "mls:version": {
+        "value": "2.3.1",
+        "start_char_doc": 11854,
+        "end_char_doc": 11859,
+        "prefix": "the Tensorflow 2.0 and Keras",
+        "suffix": "frameworks[59]. Each model has L2",
+        "valueSource": "extracted"
+      },
+      "mls:packageName": {
+        "value": "Keras 2.3.1",
+        "start_char_doc": 11848,
+        "end_char_doc": 11859,
+        "prefix": "use the Tensorflow 2.0 and",
+        "suffix": "frameworks[59]. Each model has L2",
+        "valueSource": "extracted"
+      },
+      "mls:dependencyType": {
+        "value": "software library",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:isOptional": {
+        "value": false,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "dep:gensim_3_8_1",
+      "@type": "Dependency",
+      "mention": {
+        "start_char_doc": 11657,
+        "end_char_doc": 11669,
+        "prefix": "from the ZINC15 database[58], with",
+        "suffix": "and Mol2Vec skip-gram model to",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Gensim 3.8.1",
+        "start_char_doc": 11657,
+        "end_char_doc": 11669,
+        "prefix": "from the ZINC15 database[58], with",
+        "suffix": "and Mol2Vec skip-gram model to",
+        "valueSource": "extracted"
+      },
+      "mls:version": {
+        "value": "3.8.1",
+        "start_char_doc": 11664,
+        "end_char_doc": 11669,
+        "prefix": "the ZINC15 database[58], with Gensim",
+        "suffix": "and Mol2Vec skip-gram model to",
+        "valueSource": "extracted"
+      },
+      "mls:packageName": {
+        "value": "Gensim 3.8.1",
+        "start_char_doc": 11657,
+        "end_char_doc": 11669,
+        "prefix": "from the ZINC15 database[58], with",
+        "suffix": "and Mol2Vec skip-gram model to",
+        "valueSource": "extracted"
+      },
+      "mls:dependencyType": {
+        "value": "software library",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:isOptional": {
+        "value": false,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "env:unspecified_ml_training",
+      "@type": "mls:Environment",
+      "mention": {
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:name": {
+        "value": "machine learning training environment",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:hardwareSpecs": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:os": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:pythonVersion": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:requirementsFile": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:isDockerized": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "exp:mlsolv_a_pairwise_atomistic_interaction_solvation_2020",
+      "@type": "mls:Experiment",
+      "mention": {
+        "start_char_doc": 9428,
+        "end_char_doc": 9451,
+        "prefix": "Results and Discussions For the",
+        "suffix": "of the proposed neural network,",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "MLSolv-A predicts solvation free energies from solvent and solute molecular structures using encoder networks and pairwise atomistic interaction maps.",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:objective": {
+        "value": "ML-based solvation energy prediction",
+        "start_char_doc": 19711,
+        "end_char_doc": 19747,
+        "prefix": "a novel approach for the",
+        "suffix": ", which has a great",
+        "valueSource": "extracted"
+      },
+      "mls:hypothesis": {
+        "value": "the solvation free energy as the sum of decomposed inter-atomic interactions",
+        "start_char_doc": 17997,
+        "end_char_doc": 18073,
+        "prefix": "present study is to obtain",
+        "suffix": ", as we described in",
+        "valueSource": "extracted"
+      },
+      "mls:methodology": {
+        "value": "5-fold cross-validation",
+        "start_char_doc": 12274,
+        "end_char_doc": 12297,
+        "prefix": "tuning model hyperparameters. We employ",
+        "suffix": "to evaluate the prediction accuracy",
+        "valueSource": "extracted"
+      },
+      "mls:realizes": [
+        {
+          "@id": "task:solvation_free_energy_prediction"
+        },
+        {
+          "@id": "task:structure_property_relationship_modeling"
+        },
+        {
+          "@id": "task:atomistic_group_contribution_analysis"
+        }
+      ],
+      "mls:usesData": [
+        {
+          "@id": "dataset:combined_solvation_free_energy"
+        },
+        {
+          "@id": "dataset:freesolv"
+        },
+        {
+          "@id": "dataset:solv_at_tum_v1_0"
+        },
+        {
+          "@id": "dataset:zinc15_pretraining"
+        }
+      ],
+      "mls:produces": [
+        {
+          "@id": "method:mlsolv_a"
+        },
+        {
+          "@id": "method:pairwise_atomistic_interaction_map"
+        },
+        {
+          "@id": "method:luong_dot_product_attention"
+        },
+        {
+          "@id": "method:mol2vec_skip_gram_pretraining"
+        },
+        {
+          "@id": "method:five_fold_cross_validation"
+        },
+        {
+          "@id": "method:scaffold_based_split"
+        },
+        {
+          "@id": "method:t_sne_visualization"
+        },
+        {
+          "@id": "model:mlsolv_a"
+        },
+        {
+          "@id": "model:bilm_lstm_encoder"
+        },
+        {
+          "@id": "model:gcn_encoder"
+        },
+        {
+          "@id": "model:mol2vec_embedding"
+        },
+        {
+          "@id": "model:interaction_map"
+        },
+        {
+          "@id": "eval:mean_unsigned_prediction_error"
+        },
+        {
+          "@id": "eval:mse_loss"
+        },
+        {
+          "@id": "eval:bilm_lstm_mue"
+        },
+        {
+          "@id": "eval:gcn_mue"
+        },
+        {
+          "@id": "eval:scaffold_split_mue"
+        },
+        {
+          "@id": "eval:transferability_mue_improvement"
+        }
+      ],
+      "mls:usesParameters": [
+        {
+          "@id": "hp:pretraining_compounds_10229472"
+        },
+        {
+          "@id": "hp:embedding_dimension_128"
+        },
+        {
+          "@id": "hp:learning_rate_1e_3"
+        },
+        {
+          "@id": "hp:rmsprop_rho_0_9"
+        },
+        {
+          "@id": "hp:l2_regularization"
+        },
+        {
+          "@id": "hp:cross_validation_folds_5"
+        },
+        {
+          "@id": "hp:cv_training_test_split_8_2"
+        },
+        {
+          "@id": "hp:cv_random_repeats_9"
+        },
+        {
+          "@id": "hp:cv_runs_5"
+        },
+        {
+          "@id": "hp:combined_measurements_6594"
+        },
+        {
+          "@id": "hp:abstract_measurements_6493"
+        },
+        {
+          "@id": "hp:organic_solvents_952"
+        },
+        {
+          "@id": "hp:organic_solutes_147"
+        },
+        {
+          "@id": "hp:freesolv_points_642"
+        },
+        {
+          "@id": "hp:solv_at_tum_points_5952"
+        },
+        {
+          "@id": "hp:atom_types_10"
+        },
+        {
+          "@id": "hp:solute_max_heavy_atom_count_28"
+        },
+        {
+          "@id": "hp:solvent_max_heavy_atom_count_18"
+        },
+        {
+          "@id": "hp:tsne_points_15432"
+        }
+      ],
+      "mls:executes": [
+        {
+          "@id": "impl:mlsolv_a_tensorflow_keras"
+        }
+      ],
+      "prov:wasDerivedFrom": {
+        "@id": "study:mlsolv_a_solvation_free_energy_2020"
+      },
+      "prov:wasAssociatedWith": [
+        {
+          "@id": "org:seoul_national_university"
+        }
+      ]
+    },
+    {
+      "@id": "task:solvation_free_energy_prediction",
+      "@type": "mls:MLS_Task",
+      "mention": {
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:name": {
+        "value": "solvation free energy prediction",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:description": {
+        "value": "predict solvation free energies from solvent and solute chemical structures",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:category": {
+        "value": "regression",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:metrics": {
+        "value": "MUE; MSE",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:benchmarkedOn": [
+        {
+          "@id": "dataset:combined_solvation_free_energy"
+        },
+        {
+          "@id": "dataset:freesolv"
+        },
+        {
+          "@id": "dataset:solv_at_tum_v1_0"
+        },
+        {
+          "@id": "dataset:zinc15_pretraining"
+        }
+      ]
+    },
+    {
+      "@id": "task:structure_property_relationship_modeling",
+      "@type": "mls:MLS_Task",
+      "mention": {
+        "start_char_doc": 356,
+        "end_char_doc": 394,
+        "prefix": "to the development of diverse",
+        "suffix": "for crucial chemical properties, and",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "structure-property relationship models",
+        "start_char_doc": 356,
+        "end_char_doc": 394,
+        "prefix": "to the development of diverse",
+        "suffix": "for crucial chemical properties, and",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "learn structure-property relationships for chemical properties",
+        "start_char_doc": 356,
+        "end_char_doc": 394,
+        "prefix": "to the development of diverse",
+        "suffix": "for crucial chemical properties, and",
+        "valueSource": "extracted"
+      },
+      "mls:category": {
+        "value": "molecular property prediction",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:metrics": {
+        "value": "MUE",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:benchmarkedOn": [
+        {
+          "@id": "dataset:combined_solvation_free_energy"
+        },
+        {
+          "@id": "dataset:freesolv"
+        },
+        {
+          "@id": "dataset:solv_at_tum_v1_0"
+        },
+        {
+          "@id": "dataset:zinc15_pretraining"
+        }
+      ]
+    },
+    {
+      "@id": "task:atomistic_group_contribution_analysis",
+      "@type": "mls:MLS_Task",
+      "mention": {
+        "start_char_doc": 1105,
+        "end_char_doc": 1124,
+        "prefix": "potential that our model reproduces",
+        "suffix": "on the solvation energy, which",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "group contributions",
+        "start_char_doc": 1105,
+        "end_char_doc": 1124,
+        "prefix": "potential that our model reproduces",
+        "suffix": "on the solvation energy, which",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "decompose predicted solvation free energy into atomistic group contributions",
+        "start_char_doc": 1105,
+        "end_char_doc": 1124,
+        "prefix": "potential that our model reproduces",
+        "suffix": "on the solvation energy, which",
+        "valueSource": "extracted"
+      },
+      "mls:category": {
+        "value": "interpretability",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:metrics": {
+        "value": "interaction map; group contribution",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:benchmarkedOn": [
+        {
+          "@id": "dataset:combined_solvation_free_energy"
+        },
+        {
+          "@id": "dataset:freesolv"
+        },
+        {
+          "@id": "dataset:solv_at_tum_v1_0"
+        },
+        {
+          "@id": "dataset:zinc15_pretraining"
+        }
+      ]
+    },
+    {
+      "@id": "datasource:freesolv",
+      "@type": "mls:DataSource",
+      "mention": {
+        "start_char_doc": 9717,
+        "end_char_doc": 9734,
+        "prefix": "hydration are taken from the",
+        "suffix": "[14, 56], and 5,952 data",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "FreeSolv database",
+        "start_char_doc": 9717,
+        "end_char_doc": 9734,
+        "prefix": "hydration are taken from the",
+        "suffix": "[14, 56], and 5,952 data",
+        "valueSource": "extracted"
+      },
+      "mls:url": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "hydration free-energy database",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:license": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "datasource:solv_at_tum",
+      "@type": "mls:DataSource",
+      "mention": {
+        "start_char_doc": 9814,
+        "end_char_doc": 9843,
+        "prefix": "solvents are collected with the",
+        "suffix": "[24, 52, 53, 57], which",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Solv@TUM database version 1.0",
+        "start_char_doc": 9814,
+        "end_char_doc": 9843,
+        "prefix": "solvents are collected with the",
+        "suffix": "[24, 52, 53, 57], which",
+        "valueSource": "extracted"
+      },
+      "mls:url": {
+        "value": "https://mediatum.ub.tum.de/1452571",
+        "start_char_doc": 9883,
+        "end_char_doc": 9917,
+        "prefix": "57], which is available at",
+        "suffix": ". Compounds in the dataset",
+        "valueSource": "extracted"
+      },
+      "mls:type": {
+        "value": "non-aqueous solvation database",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:license": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "datasource:zinc15",
+      "@type": "mls:DataSource",
+      "mention": {
+        "start_char_doc": 11631,
+        "end_char_doc": 11646,
+        "prefix": "which are collected from the",
+        "suffix": "[58], with Gensim 3.8.1 and",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "ZINC15 database",
+        "start_char_doc": 11631,
+        "end_char_doc": 11646,
+        "prefix": "which are collected from the",
+        "suffix": "[58], with Gensim 3.8.1 and",
+        "valueSource": "extracted"
+      },
+      "mls:url": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "organic compound database",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:license": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      }
+    },
+    {
+      "@id": "dataset:combined_solvation_free_energy",
+      "@type": "mls:MLS_Dataset",
+      "mention": {
+        "start_char_doc": 9495,
+        "end_char_doc": 9522,
+        "prefix": "proposed neural network, we prepare",
+        "suffix": "of free energies of solvation",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "combined solvation free-energy dataset",
+        "start_char_doc": 9495,
+        "end_char_doc": 9522,
+        "prefix": "proposed neural network, we prepare",
+        "suffix": "of free energies of solvation",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "6,594 experimental measures of free energies of solvation for 952 organic solvents and 147 organic solutes",
+        "start_char_doc": 9495,
+        "end_char_doc": 9601,
+        "prefix": "proposed neural network, we prepare",
+        "suffix": ", including some inert gases.",
+        "valueSource": "extracted"
+      },
+      "mls:numInstances": {
+        "value": 6594,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:language": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:license": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:modality": {
+        "value": "molecular structure",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:numClasses": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "datasource:freesolv"
+        },
+        {
+          "@id": "datasource:solv_at_tum"
+        }
+      ]
+    },
+    {
+      "@id": "dataset:freesolv",
+      "@type": "mls:MLS_Dataset",
+      "mention": {
+        "start_char_doc": 9717,
+        "end_char_doc": 9734,
+        "prefix": "hydration are taken from the",
+        "suffix": "[14, 56], and 5,952 data",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "FreeSolv",
+        "start_char_doc": 9717,
+        "end_char_doc": 9734,
+        "prefix": "hydration are taken from the",
+        "suffix": "[14, 56], and 5,952 data",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "642 experimentally measured values of the free energy of hydration",
+        "start_char_doc": 9631,
+        "end_char_doc": 9697,
+        "prefix": "solutes, including some inert gases.",
+        "suffix": "are taken from the FreeSolv",
+        "valueSource": "extracted"
+      },
+      "mls:numInstances": {
+        "value": 642,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:language": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:license": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:modality": {
+        "value": "molecular structure",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:numClasses": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "datasource:freesolv"
+        }
+      ]
+    },
+    {
+      "@id": "dataset:solv_at_tum_v1_0",
+      "@type": "mls:MLS_Dataset",
+      "mention": {
+        "start_char_doc": 9814,
+        "end_char_doc": 9843,
+        "prefix": "solvents are collected with the",
+        "suffix": "[24, 52, 53, 57], which",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Solv@TUM database version 1.0",
+        "start_char_doc": 9814,
+        "end_char_doc": 9843,
+        "prefix": "solvents are collected with the",
+        "suffix": "[24, 52, 53, 57], which",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "5,952 data points for non-aqueous solvents",
+        "start_char_doc": 9748,
+        "end_char_doc": 9790,
+        "prefix": "the FreeSolv database[14, 56], and",
+        "suffix": "are collected with the Solv@TUM",
+        "valueSource": "extracted"
+      },
+      "mls:numInstances": {
+        "value": 5952,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:language": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:license": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:modality": {
+        "value": "molecular structure",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:numClasses": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "datasource:solv_at_tum"
+        }
+      ]
+    },
+    {
+      "@id": "dataset:zinc15_pretraining",
+      "@type": "mls:MLS_Dataset",
+      "mention": {
+        "start_char_doc": 11631,
+        "end_char_doc": 11646,
+        "prefix": "which are collected from the",
+        "suffix": "[58], with Gensim 3.8.1 and",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "ZINC15 pretraining compounds",
+        "start_char_doc": 11631,
+        "end_char_doc": 11646,
+        "prefix": "which are collected from the",
+        "suffix": "[58], with Gensim 3.8.1 and",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "10,229,472 organic compounds used for skip-gram pre-training",
+        "start_char_doc": 11631,
+        "end_char_doc": 11646,
+        "prefix": "which are collected from the",
+        "suffix": "[58], with Gensim 3.8.1 and",
+        "valueSource": "extracted"
+      },
+      "mls:numInstances": {
+        "value": 10229472,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:language": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:license": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:modality": {
+        "value": "molecular structure",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:numClasses": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "prov:wasDerivedFrom": [
+        {
+          "@id": "datasource:zinc15"
+        }
+      ]
+    },
+    {
+      "@id": "method:mlsolv_a",
+      "@type": "mls:Method",
+      "mention": {
+        "start_char_doc": 11,
+        "end_char_doc": 19,
+        "prefix": "## Page 1",
+        "suffix": ": A Novel Machine Learning-Based",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "MLSolv-A",
+        "start_char_doc": 11,
+        "end_char_doc": 19,
+        "prefix": "## Page 1",
+        "suffix": ": A Novel Machine Learning-Based",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "ML-based solvation model that calculates solvation energy from pairwise atomistic interactions",
+        "start_char_doc": 11,
+        "end_char_doc": 19,
+        "prefix": "## Page 1",
+        "suffix": ": A Novel Machine Learning-Based",
+        "valueSource": "extracted"
+      },
+      "mls:version": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:combined_solvation_free_energy"
+        },
+        {
+          "@id": "dataset:freesolv"
+        },
+        {
+          "@id": "dataset:solv_at_tum_v1_0"
+        },
+        {
+          "@id": "dataset:zinc15_pretraining"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:combined_solvation_free_energy"
+        },
+        {
+          "@id": "dataset:freesolv"
+        },
+        {
+          "@id": "dataset:solv_at_tum_v1_0"
+        },
+        {
+          "@id": "dataset:zinc15_pretraining"
+        }
+      ],
+      "mls:achieves": [
+        {
+          "@id": "eval:mean_unsigned_prediction_error"
+        },
+        {
+          "@id": "eval:mse_loss"
+        },
+        {
+          "@id": "eval:bilm_lstm_mue"
+        },
+        {
+          "@id": "eval:gcn_mue"
+        },
+        {
+          "@id": "eval:scaffold_split_mue"
+        },
+        {
+          "@id": "eval:transferability_mue_improvement"
+        }
+      ]
+    },
+    {
+      "@id": "method:pairwise_atomistic_interaction_map",
+      "@type": "mls:Method",
+      "mention": {
+        "start_char_doc": 1030,
+        "end_char_doc": 1045,
+        "prefix": "solvent-non-specific nature. Analysis of the",
+        "suffix": "shows there is a great",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "interaction map",
+        "start_char_doc": 1030,
+        "end_char_doc": 1045,
+        "prefix": "solvent-non-specific nature. Analysis of the",
+        "suffix": "shows there is a great",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "calculates pairwise atomistic interactions between solvent and solute atomistic features",
+        "start_char_doc": 1030,
+        "end_char_doc": 1045,
+        "prefix": "solvent-non-specific nature. Analysis of the",
+        "suffix": "shows there is a great",
+        "valueSource": "extracted"
+      },
+      "mls:version": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:combined_solvation_free_energy"
+        },
+        {
+          "@id": "dataset:freesolv"
+        },
+        {
+          "@id": "dataset:solv_at_tum_v1_0"
+        },
+        {
+          "@id": "dataset:zinc15_pretraining"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:combined_solvation_free_energy"
+        },
+        {
+          "@id": "dataset:freesolv"
+        },
+        {
+          "@id": "dataset:solv_at_tum_v1_0"
+        },
+        {
+          "@id": "dataset:zinc15_pretraining"
+        }
+      ],
+      "mls:achieves": [
+        {
+          "@id": "eval:mean_unsigned_prediction_error"
+        },
+        {
+          "@id": "eval:mse_loss"
+        },
+        {
+          "@id": "eval:bilm_lstm_mue"
+        },
+        {
+          "@id": "eval:gcn_mue"
+        },
+        {
+          "@id": "eval:scaffold_split_mue"
+        },
+        {
+          "@id": "eval:transferability_mue_improvement"
+        }
+      ]
+    },
+    {
+      "@id": "method:luong_dot_product_attention",
+      "@type": "mls:Method",
+      "mention": {
+        "start_char_doc": 11083,
+        "end_char_doc": 11112,
+        "prefix": "calculates pairwise atomistic interactions from",
+        "suffix": "[51]. &lt;page_number&gt;6&lt;/page_number&gt; --- ## Page",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Luong’s dot-product attention",
+        "start_char_doc": 11083,
+        "end_char_doc": 11112,
+        "prefix": "calculates pairwise atomistic interactions from",
+        "suffix": "[51]. &lt;page_number&gt;6&lt;/page_number&gt; --- ## Page",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "inner-product attention used to calculate un-normalized atomistic interaction scores",
+        "start_char_doc": 11083,
+        "end_char_doc": 11112,
+        "prefix": "calculates pairwise atomistic interactions from",
+        "suffix": "[51]. &lt;page_number&gt;6&lt;/page_number&gt; --- ## Page",
+        "valueSource": "extracted"
+      },
+      "mls:version": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:combined_solvation_free_energy"
+        },
+        {
+          "@id": "dataset:freesolv"
+        },
+        {
+          "@id": "dataset:solv_at_tum_v1_0"
+        },
+        {
+          "@id": "dataset:zinc15_pretraining"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:combined_solvation_free_energy"
+        },
+        {
+          "@id": "dataset:freesolv"
+        },
+        {
+          "@id": "dataset:solv_at_tum_v1_0"
+        },
+        {
+          "@id": "dataset:zinc15_pretraining"
+        }
+      ],
+      "mls:achieves": [
+        {
+          "@id": "eval:mean_unsigned_prediction_error"
+        },
+        {
+          "@id": "eval:mse_loss"
+        },
+        {
+          "@id": "eval:bilm_lstm_mue"
+        },
+        {
+          "@id": "eval:gcn_mue"
+        },
+        {
+          "@id": "eval:scaffold_split_mue"
+        },
+        {
+          "@id": "eval:transferability_mue_improvement"
+        }
+      ]
+    },
+    {
+      "@id": "method:mol2vec_skip_gram_pretraining",
+      "@type": "mls:Method",
+      "mention": {
+        "start_char_doc": 11674,
+        "end_char_doc": 11691,
+        "prefix": "database[58], with Gensim 3.8.1 and",
+        "suffix": "model to construct the 128-dimensional",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Mol2Vec skip-gram",
+        "start_char_doc": 11674,
+        "end_char_doc": 11691,
+        "prefix": "database[58], with Gensim 3.8.1 and",
+        "suffix": "model to construct the 128-dimensional",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "skip-gram pre-training on ZINC15 molecules for atomistic embeddings",
+        "start_char_doc": 11674,
+        "end_char_doc": 11691,
+        "prefix": "database[58], with Gensim 3.8.1 and",
+        "suffix": "model to construct the 128-dimensional",
+        "valueSource": "extracted"
+      },
+      "mls:version": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:combined_solvation_free_energy"
+        },
+        {
+          "@id": "dataset:freesolv"
+        },
+        {
+          "@id": "dataset:solv_at_tum_v1_0"
+        },
+        {
+          "@id": "dataset:zinc15_pretraining"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:combined_solvation_free_energy"
+        },
+        {
+          "@id": "dataset:freesolv"
+        },
+        {
+          "@id": "dataset:solv_at_tum_v1_0"
+        },
+        {
+          "@id": "dataset:zinc15_pretraining"
+        }
+      ],
+      "mls:achieves": [
+        {
+          "@id": "eval:mean_unsigned_prediction_error"
+        },
+        {
+          "@id": "eval:mse_loss"
+        },
+        {
+          "@id": "eval:bilm_lstm_mue"
+        },
+        {
+          "@id": "eval:gcn_mue"
+        },
+        {
+          "@id": "eval:scaffold_split_mue"
+        },
+        {
+          "@id": "eval:transferability_mue_improvement"
+        }
+      ]
+    },
+    {
+      "@id": "method:five_fold_cross_validation",
+      "@type": "mls:Method",
+      "mention": {
+        "start_char_doc": 12274,
+        "end_char_doc": 12297,
+        "prefix": "tuning model hyperparameters. We employ",
+        "suffix": "to evaluate the prediction accuracy",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "5-fold cross-validation",
+        "start_char_doc": 12274,
+        "end_char_doc": 12297,
+        "prefix": "tuning model hyperparameters. We employ",
+        "suffix": "to evaluate the prediction accuracy",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "5-fold CV with 8:2 training/test split over 9 random states",
+        "start_char_doc": 12274,
+        "end_char_doc": 12297,
+        "prefix": "tuning model hyperparameters. We employ",
+        "suffix": "to evaluate the prediction accuracy",
+        "valueSource": "extracted"
+      },
+      "mls:version": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:combined_solvation_free_energy"
+        },
+        {
+          "@id": "dataset:freesolv"
+        },
+        {
+          "@id": "dataset:solv_at_tum_v1_0"
+        },
+        {
+          "@id": "dataset:zinc15_pretraining"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:combined_solvation_free_energy"
+        },
+        {
+          "@id": "dataset:freesolv"
+        },
+        {
+          "@id": "dataset:solv_at_tum_v1_0"
+        },
+        {
+          "@id": "dataset:zinc15_pretraining"
+        }
+      ],
+      "mls:achieves": [
+        {
+          "@id": "eval:mean_unsigned_prediction_error"
+        },
+        {
+          "@id": "eval:mse_loss"
+        },
+        {
+          "@id": "eval:bilm_lstm_mue"
+        },
+        {
+          "@id": "eval:gcn_mue"
+        },
+        {
+          "@id": "eval:scaffold_split_mue"
+        },
+        {
+          "@id": "eval:transferability_mue_improvement"
+        }
+      ]
+    },
+    {
+      "@id": "method:scaffold_based_split",
+      "@type": "mls:Method",
+      "mention": {
+        "start_char_doc": 16639,
+        "end_char_doc": 16659,
+        "prefix": "for extrapolation situations with the",
+        "suffix": "[10, 39, 48]. Instead of",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "scaffold-based split",
+        "start_char_doc": 16639,
+        "end_char_doc": 16659,
+        "prefix": "for extrapolation situations with the",
+        "suffix": "[10, 39, 48]. Instead of",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "K-means clustering over MACCS substructural fingerprints for extrapolation evaluation",
+        "start_char_doc": 16639,
+        "end_char_doc": 16659,
+        "prefix": "for extrapolation situations with the",
+        "suffix": "[10, 39, 48]. Instead of",
+        "valueSource": "extracted"
+      },
+      "mls:version": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:combined_solvation_free_energy"
+        },
+        {
+          "@id": "dataset:freesolv"
+        },
+        {
+          "@id": "dataset:solv_at_tum_v1_0"
+        },
+        {
+          "@id": "dataset:zinc15_pretraining"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:combined_solvation_free_energy"
+        },
+        {
+          "@id": "dataset:freesolv"
+        },
+        {
+          "@id": "dataset:solv_at_tum_v1_0"
+        },
+        {
+          "@id": "dataset:zinc15_pretraining"
+        }
+      ],
+      "mls:achieves": [
+        {
+          "@id": "eval:mean_unsigned_prediction_error"
+        },
+        {
+          "@id": "eval:mse_loss"
+        },
+        {
+          "@id": "eval:bilm_lstm_mue"
+        },
+        {
+          "@id": "eval:gcn_mue"
+        },
+        {
+          "@id": "eval:scaffold_split_mue"
+        },
+        {
+          "@id": "eval:transferability_mue_improvement"
+        }
+      ]
+    },
+    {
+      "@id": "method:t_sne_visualization",
+      "@type": "mls:Method",
+      "mention": {
+        "start_char_doc": 13848,
+        "end_char_doc": 13853,
+        "prefix": "so on. Figure 3 presents",
+        "suffix": "visualizations for pre-trained solute vectors",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "t-SNE",
+        "start_char_doc": 13848,
+        "end_char_doc": 13853,
+        "prefix": "so on. Figure 3 presents",
+        "suffix": "visualizations for pre-trained solute vectors",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "2-dimensional visualization of pre-trained and encoded molecular vectors",
+        "start_char_doc": 13848,
+        "end_char_doc": 13853,
+        "prefix": "so on. Figure 3 presents",
+        "suffix": "visualizations for pre-trained solute vectors",
+        "valueSource": "extracted"
+      },
+      "mls:version": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:combined_solvation_free_energy"
+        },
+        {
+          "@id": "dataset:freesolv"
+        },
+        {
+          "@id": "dataset:solv_at_tum_v1_0"
+        },
+        {
+          "@id": "dataset:zinc15_pretraining"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:combined_solvation_free_energy"
+        },
+        {
+          "@id": "dataset:freesolv"
+        },
+        {
+          "@id": "dataset:solv_at_tum_v1_0"
+        },
+        {
+          "@id": "dataset:zinc15_pretraining"
+        }
+      ],
+      "mls:achieves": [
+        {
+          "@id": "eval:mean_unsigned_prediction_error"
+        },
+        {
+          "@id": "eval:mse_loss"
+        },
+        {
+          "@id": "eval:bilm_lstm_mue"
+        },
+        {
+          "@id": "eval:gcn_mue"
+        },
+        {
+          "@id": "eval:scaffold_split_mue"
+        },
+        {
+          "@id": "eval:transferability_mue_improvement"
+        }
+      ]
+    },
+    {
+      "@id": "model:mlsolv_a",
+      "@type": "mls:MLS_Model",
+      "mention": {
+        "start_char_doc": 11,
+        "end_char_doc": 19,
+        "prefix": "## Page 1",
+        "suffix": ": A Novel Machine Learning-Based",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "MLSolv-A",
+        "start_char_doc": 11,
+        "end_char_doc": 19,
+        "prefix": "## Page 1",
+        "suffix": ": A Novel Machine Learning-Based",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "two encoder networks for solvent and solute plus interaction map summation",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:architecture": {
+        "value": "two encoder networks for solvent and solute plus interaction map summation",
+        "start_char_doc": 11,
+        "end_char_doc": 19,
+        "prefix": "## Page 1",
+        "suffix": ": A Novel Machine Learning-Based",
+        "valueSource": "extracted"
+      },
+      "mls:parameters": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:combined_solvation_free_energy"
+        },
+        {
+          "@id": "dataset:freesolv"
+        },
+        {
+          "@id": "dataset:solv_at_tum_v1_0"
+        },
+        {
+          "@id": "dataset:zinc15_pretraining"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:combined_solvation_free_energy"
+        },
+        {
+          "@id": "dataset:freesolv"
+        },
+        {
+          "@id": "dataset:solv_at_tum_v1_0"
+        },
+        {
+          "@id": "dataset:zinc15_pretraining"
+        }
+      ],
+      "mls:achieves": [
+        {
+          "@id": "eval:mean_unsigned_prediction_error"
+        },
+        {
+          "@id": "eval:mse_loss"
+        },
+        {
+          "@id": "eval:bilm_lstm_mue"
+        },
+        {
+          "@id": "eval:gcn_mue"
+        },
+        {
+          "@id": "eval:scaffold_split_mue"
+        },
+        {
+          "@id": "eval:transferability_mue_improvement"
+        }
+      ]
+    },
+    {
+      "@id": "model:bilm_lstm_encoder",
+      "@type": "mls:MLS_Model",
+      "mention": {
+        "start_char_doc": 13002,
+        "end_char_doc": 13034,
+        "prefix": "## Page 8 that the",
+        "suffix": "performs slightly better than the",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "BiLM/LSTM encoder",
+        "start_char_doc": 13002,
+        "end_char_doc": 13034,
+        "prefix": "## Page 8 that the",
+        "suffix": "performs slightly better than the",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "bidirectional language model encoder with LSTM layer",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:architecture": {
+        "value": "bidirectional language model encoder with LSTM layer",
+        "start_char_doc": 13002,
+        "end_char_doc": 13034,
+        "prefix": "## Page 8 that the",
+        "suffix": "performs slightly better than the",
+        "valueSource": "extracted"
+      },
+      "mls:parameters": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:combined_solvation_free_energy"
+        },
+        {
+          "@id": "dataset:freesolv"
+        },
+        {
+          "@id": "dataset:solv_at_tum_v1_0"
+        },
+        {
+          "@id": "dataset:zinc15_pretraining"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:combined_solvation_free_energy"
+        },
+        {
+          "@id": "dataset:freesolv"
+        },
+        {
+          "@id": "dataset:solv_at_tum_v1_0"
+        },
+        {
+          "@id": "dataset:zinc15_pretraining"
+        }
+      ],
+      "mls:achieves": [
+        {
+          "@id": "eval:mean_unsigned_prediction_error"
+        },
+        {
+          "@id": "eval:mse_loss"
+        },
+        {
+          "@id": "eval:bilm_lstm_mue"
+        },
+        {
+          "@id": "eval:gcn_mue"
+        },
+        {
+          "@id": "eval:scaffold_split_mue"
+        },
+        {
+          "@id": "eval:transferability_mue_improvement"
+        }
+      ]
+    },
+    {
+      "@id": "model:gcn_encoder",
+      "@type": "mls:MLS_Model",
+      "mention": {
+        "start_char_doc": 9090,
+        "end_char_doc": 9130,
+        "prefix": "(RNN), the other is the",
+        "suffix": "[55] which explicitly handles the",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "GCN encoder",
+        "start_char_doc": 9090,
+        "end_char_doc": 9130,
+        "prefix": "(RNN), the other is the",
+        "suffix": "[55] which explicitly handles the",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "graph convolutional neural network encoder with adjacency matrix connectivity",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:architecture": {
+        "value": "graph convolutional neural network encoder with adjacency matrix connectivity",
+        "start_char_doc": 9090,
+        "end_char_doc": 9130,
+        "prefix": "(RNN), the other is the",
+        "suffix": "[55] which explicitly handles the",
+        "valueSource": "extracted"
+      },
+      "mls:parameters": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:combined_solvation_free_energy"
+        },
+        {
+          "@id": "dataset:freesolv"
+        },
+        {
+          "@id": "dataset:solv_at_tum_v1_0"
+        },
+        {
+          "@id": "dataset:zinc15_pretraining"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:combined_solvation_free_energy"
+        },
+        {
+          "@id": "dataset:freesolv"
+        },
+        {
+          "@id": "dataset:solv_at_tum_v1_0"
+        },
+        {
+          "@id": "dataset:zinc15_pretraining"
+        }
+      ],
+      "mls:achieves": [
+        {
+          "@id": "eval:mean_unsigned_prediction_error"
+        },
+        {
+          "@id": "eval:mse_loss"
+        },
+        {
+          "@id": "eval:bilm_lstm_mue"
+        },
+        {
+          "@id": "eval:gcn_mue"
+        },
+        {
+          "@id": "eval:scaffold_split_mue"
+        },
+        {
+          "@id": "eval:transferability_mue_improvement"
+        }
+      ]
+    },
+    {
+      "@id": "model:mol2vec_embedding",
+      "@type": "mls:MLS_Model",
+      "mention": {
+        "start_char_doc": 11715,
+        "end_char_doc": 11753,
+        "prefix": "skip-gram model to construct the",
+        "suffix": "[50]. For the implementation of",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Mol2Vec embedding",
+        "start_char_doc": 11715,
+        "end_char_doc": 11753,
+        "prefix": "skip-gram model to construct the",
+        "suffix": "[50]. For the implementation of",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "128-dimensional embedding lookup table from Mol2Vec skip-gram pretraining",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:architecture": {
+        "value": "128-dimensional embedding lookup table from Mol2Vec skip-gram pretraining",
+        "start_char_doc": 11715,
+        "end_char_doc": 11753,
+        "prefix": "skip-gram model to construct the",
+        "suffix": "[50]. For the implementation of",
+        "valueSource": "extracted"
+      },
+      "mls:parameters": {
+        "value": "128-dimensional",
+        "start_char_doc": 11715,
+        "end_char_doc": 11730,
+        "prefix": "skip-gram model to construct the",
+        "suffix": "embedding lookup table[50]. For the",
+        "valueSource": "extracted"
+      },
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:combined_solvation_free_energy"
+        },
+        {
+          "@id": "dataset:freesolv"
+        },
+        {
+          "@id": "dataset:solv_at_tum_v1_0"
+        },
+        {
+          "@id": "dataset:zinc15_pretraining"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:combined_solvation_free_energy"
+        },
+        {
+          "@id": "dataset:freesolv"
+        },
+        {
+          "@id": "dataset:solv_at_tum_v1_0"
+        },
+        {
+          "@id": "dataset:zinc15_pretraining"
+        }
+      ],
+      "mls:achieves": [
+        {
+          "@id": "eval:mean_unsigned_prediction_error"
+        },
+        {
+          "@id": "eval:mse_loss"
+        },
+        {
+          "@id": "eval:bilm_lstm_mue"
+        },
+        {
+          "@id": "eval:gcn_mue"
+        },
+        {
+          "@id": "eval:scaffold_split_mue"
+        },
+        {
+          "@id": "eval:transferability_mue_improvement"
+        }
+      ]
+    },
+    {
+      "@id": "model:interaction_map",
+      "@type": "mls:MLS_Model",
+      "mention": {
+        "start_char_doc": 1030,
+        "end_char_doc": 1045,
+        "prefix": "solvent-non-specific nature. Analysis of the",
+        "suffix": "shows there is a great",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "interaction map",
+        "start_char_doc": 1030,
+        "end_char_doc": 1045,
+        "prefix": "solvent-non-specific nature. Analysis of the",
+        "suffix": "shows there is a great",
+        "valueSource": "extracted"
+      },
+      "mls:description": {
+        "value": "pairwise atomistic interaction map from solvent and solute feature vectors",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:architecture": {
+        "value": "pairwise atomistic interaction map from solvent and solute feature vectors",
+        "start_char_doc": 1030,
+        "end_char_doc": 1045,
+        "prefix": "solvent-non-specific nature. Analysis of the",
+        "suffix": "shows there is a great",
+        "valueSource": "extracted"
+      },
+      "mls:parameters": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:trainedOn": [
+        {
+          "@id": "dataset:combined_solvation_free_energy"
+        },
+        {
+          "@id": "dataset:freesolv"
+        },
+        {
+          "@id": "dataset:solv_at_tum_v1_0"
+        },
+        {
+          "@id": "dataset:zinc15_pretraining"
+        }
+      ],
+      "mls:evaluatedOn": [
+        {
+          "@id": "dataset:combined_solvation_free_energy"
+        },
+        {
+          "@id": "dataset:freesolv"
+        },
+        {
+          "@id": "dataset:solv_at_tum_v1_0"
+        },
+        {
+          "@id": "dataset:zinc15_pretraining"
+        }
+      ],
+      "mls:achieves": [
+        {
+          "@id": "eval:mean_unsigned_prediction_error"
+        },
+        {
+          "@id": "eval:mse_loss"
+        },
+        {
+          "@id": "eval:bilm_lstm_mue"
+        },
+        {
+          "@id": "eval:gcn_mue"
+        },
+        {
+          "@id": "eval:scaffold_split_mue"
+        },
+        {
+          "@id": "eval:transferability_mue_improvement"
+        }
+      ]
+    },
+    {
+      "@id": "eval:mean_unsigned_prediction_error",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 13133,
+        "end_char_doc": 13169,
+        "prefix": "differences are not pronounced: the",
+        "suffix": "for the BiLM/LSTM encoder model",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "mean unsigned prediction error (MUE)",
+        "start_char_doc": 13133,
+        "end_char_doc": 13169,
+        "prefix": "differences are not pronounced: the",
+        "suffix": "for the BiLM/LSTM encoder model",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:stdDev": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:confidenceInterval": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:description": {
+        "value": "prediction error metric in kcal/mol",
+        "start_char_doc": 13133,
+        "end_char_doc": 13169,
+        "prefix": "differences are not pronounced: the",
+        "suffix": "for the BiLM/LSTM encoder model",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "eval:mse_loss",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 12097,
+        "end_char_doc": 12121,
+        "prefix": "optimizing its loss function, the",
+        "suffix": ". The selection of the",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "mean squared error (MSE)",
+        "start_char_doc": 12097,
+        "end_char_doc": 12121,
+        "prefix": "optimizing its loss function, the",
+        "suffix": ". The selection of the",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:stdDev": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:confidenceInterval": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:description": {
+        "value": "loss function optimized during training",
+        "start_char_doc": 12097,
+        "end_char_doc": 12121,
+        "prefix": "optimizing its loss function, the",
+        "suffix": ". The selection of the",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "eval:bilm_lstm_mue",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 13205,
+        "end_char_doc": 13218,
+        "prefix": "the BiLM/LSTM encoder model is",
+        "suffix": ", while the GCN model",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "MUE",
+        "start_char_doc": 13205,
+        "end_char_doc": 13218,
+        "prefix": "the BiLM/LSTM encoder model is",
+        "suffix": ", while the GCN model",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "0.19",
+        "start_char_doc": 13205,
+        "end_char_doc": 13218,
+        "prefix": "the BiLM/LSTM encoder model is",
+        "suffix": ", while the GCN model",
+        "valueSource": "extracted"
+      },
+      "mls:stdDev": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:confidenceInterval": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:description": {
+        "value": "BiLM/LSTM encoder mean unsigned prediction error is 0.19 kcal/mol",
+        "start_char_doc": 13205,
+        "end_char_doc": 13218,
+        "prefix": "the BiLM/LSTM encoder model is",
+        "suffix": ", while the GCN model",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "eval:gcn_mue",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 13251,
+        "end_char_doc": 13264,
+        "prefix": "the GCN model results in",
+        "suffix": ". Both MUE values show",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "MUE",
+        "start_char_doc": 13251,
+        "end_char_doc": 13264,
+        "prefix": "the GCN model results in",
+        "suffix": ". Both MUE values show",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "0.23",
+        "start_char_doc": 13251,
+        "end_char_doc": 13264,
+        "prefix": "the GCN model results in",
+        "suffix": ". Both MUE values show",
+        "valueSource": "extracted"
+      },
+      "mls:stdDev": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:confidenceInterval": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:description": {
+        "value": "GCN model mean unsigned prediction error is 0.23 kcal/mol",
+        "start_char_doc": 13251,
+        "end_char_doc": 13264,
+        "prefix": "the GCN model results in",
+        "suffix": ". Both MUE values show",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "eval:scaffold_split_mue",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 21486,
+        "end_char_doc": 21499,
+        "prefix": "exhibit moderate performances, which were",
+        "suffix": ". Moreover, we found that",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "MUE",
+        "start_char_doc": 21486,
+        "end_char_doc": 21499,
+        "prefix": "exhibit moderate performances, which were",
+        "suffix": ". Moreover, we found that",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "0.60",
+        "start_char_doc": 21486,
+        "end_char_doc": 21499,
+        "prefix": "exhibit moderate performances, which were",
+        "suffix": ". Moreover, we found that",
+        "valueSource": "extracted"
+      },
+      "mls:stdDev": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:confidenceInterval": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:description": {
+        "value": "scaffold-based split results remain around 0.60 kcal/mol",
+        "start_char_doc": 21486,
+        "end_char_doc": 21499,
+        "prefix": "exhibit moderate performances, which were",
+        "suffix": ". Moreover, we found that",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "eval:transferability_mue_improvement",
+      "@type": "mls:MLS_Eval",
+      "mention": {
+        "start_char_doc": 16073,
+        "end_char_doc": 16096,
+        "prefix": "each model’s accuracy by about",
+        "suffix": "in terms of MUE. Those",
+        "valueSource": "extracted"
+      },
+      "mls:measure": {
+        "value": "MUE improvement",
+        "start_char_doc": 16073,
+        "end_char_doc": 16096,
+        "prefix": "each model’s accuracy by about",
+        "suffix": "in terms of MUE. Those",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "20% to 30%",
+        "start_char_doc": 16073,
+        "end_char_doc": 16096,
+        "prefix": "each model’s accuracy by about",
+        "suffix": "in terms of MUE. Those",
+        "valueSource": "extracted"
+      },
+      "mls:stdDev": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:confidenceInterval": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:description": {
+        "value": "Solv@TUM augmentation improves FreeSolv hydration MUE by about 20% for BiLM and 30% for GCN",
+        "start_char_doc": 16073,
+        "end_char_doc": 16096,
+        "prefix": "each model’s accuracy by about",
+        "suffix": "in terms of MUE. Those",
+        "valueSource": "extracted"
+      }
+    },
+    {
+      "@id": "hp:pretraining_compounds_10229472",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 11572,
+        "end_char_doc": 11600,
+        "prefix": "the skip-gram pre-training process for",
+        "suffix": ", which are collected from",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "skip-gram pretraining compounds",
+        "start_char_doc": 11572,
+        "end_char_doc": 11600,
+        "prefix": "the skip-gram pre-training process for",
+        "suffix": ", which are collected from",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "10,229,472 organic compounds",
+        "start_char_doc": 11572,
+        "end_char_doc": 11600,
+        "prefix": "the skip-gram pre-training process for",
+        "suffix": ", which are collected from",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Data",
+      "hpType": "TrainValTestSplit",
+      "uncertain": false
+    },
+    {
+      "@id": "hp:embedding_dimension_128",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 11715,
+        "end_char_doc": 11753,
+        "prefix": "skip-gram model to construct the",
+        "suffix": "[50]. For the implementation of",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "embedding dimension",
+        "start_char_doc": 11715,
+        "end_char_doc": 11753,
+        "prefix": "skip-gram model to construct the",
+        "suffix": "[50]. For the implementation of",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "128-dimensional",
+        "start_char_doc": 11715,
+        "end_char_doc": 11753,
+        "prefix": "skip-gram model to construct the",
+        "suffix": "[50]. For the implementation of",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Architecture",
+      "hpType": "EmbeddingDim",
+      "uncertain": false
+    },
+    {
+      "@id": "hp:learning_rate_1e_3",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 12015,
+        "end_char_doc": 12041,
+        "prefix": "uses the RMSprop algorithm with",
+        "suffix": "and $\\rho = 0.9$ for",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "learning rate",
+        "start_char_doc": 12015,
+        "end_char_doc": 12041,
+        "prefix": "uses the RMSprop algorithm with",
+        "suffix": "and $\\rho = 0.9$ for",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "10^-3",
+        "start_char_doc": 12015,
+        "end_char_doc": 12041,
+        "prefix": "uses the RMSprop algorithm with",
+        "suffix": "and $\\rho = 0.9$ for",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Optimization",
+      "hpType": "LearningRate",
+      "uncertain": false
+    },
+    {
+      "@id": "hp:rmsprop_rho_0_9",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 12046,
+        "end_char_doc": 12058,
+        "prefix": "$10^{-3}$ of learning rate and",
+        "suffix": "for optimizing its loss function,",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "RMSprop rho",
+        "start_char_doc": 12046,
+        "end_char_doc": 12058,
+        "prefix": "$10^{-3}$ of learning rate and",
+        "suffix": "for optimizing its loss function,",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "ρ = 0.9",
+        "start_char_doc": 12046,
+        "end_char_doc": 12058,
+        "prefix": "$10^{-3}$ of learning rate and",
+        "suffix": "for optimizing its loss function,",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Optimization",
+      "hpType": "Momentum",
+      "uncertain": false
+    },
+    {
+      "@id": "hp:l2_regularization",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 11891,
+        "end_char_doc": 11908,
+        "prefix": "2.3.1 frameworks[59]. Each model has",
+        "suffix": "to prevent excessive changes on",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "L2 regularization",
+        "start_char_doc": 11891,
+        "end_char_doc": 11908,
+        "prefix": "2.3.1 frameworks[59]. Each model has",
+        "suffix": "to prevent excessive changes on",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "L2 regularization",
+        "start_char_doc": 11891,
+        "end_char_doc": 11908,
+        "prefix": "2.3.1 frameworks[59]. Each model has",
+        "suffix": "to prevent excessive changes on",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Optimization",
+      "hpType": "WeightDecay",
+      "uncertain": false
+    },
+    {
+      "@id": "hp:cross_validation_folds_5",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 12274,
+        "end_char_doc": 12297,
+        "prefix": "tuning model hyperparameters. We employ",
+        "suffix": "to evaluate the prediction accuracy",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "cross-validation folds",
+        "start_char_doc": 12274,
+        "end_char_doc": 12297,
+        "prefix": "tuning model hyperparameters. We employ",
+        "suffix": "to evaluate the prediction accuracy",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "5-fold",
+        "start_char_doc": 12274,
+        "end_char_doc": 12297,
+        "prefix": "tuning model hyperparameters. We employ",
+        "suffix": "to evaluate the prediction accuracy",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Data",
+      "hpType": "TrainValTestSplit",
+      "uncertain": false
+    },
+    {
+      "@id": "hp:cv_training_test_split_8_2",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 12671,
+        "end_char_doc": 12677,
+        "prefix": "training and test sets are",
+        "suffix": ". To minimize the variation",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "training/test split",
+        "start_char_doc": 12671,
+        "end_char_doc": 12677,
+        "prefix": "training and test sets are",
+        "suffix": ". To minimize the variation",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "8 to 2",
+        "start_char_doc": 12671,
+        "end_char_doc": 12677,
+        "prefix": "training and test sets are",
+        "suffix": ". To minimize the variation",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Data",
+      "hpType": "TrainValTestSplit",
+      "uncertain": false
+    },
+    {
+      "@id": "hp:cv_random_repeats_9",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 12769,
+        "end_char_doc": 12793,
+        "prefix": "averages for all results over",
+        "suffix": ", split from different random",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "random CV repeats",
+        "start_char_doc": 12769,
+        "end_char_doc": 12793,
+        "prefix": "averages for all results over",
+        "suffix": ", split from different random",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "9 independent random CVs",
+        "start_char_doc": 12769,
+        "end_char_doc": 12793,
+        "prefix": "averages for all results over",
+        "suffix": ", split from different random",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Training",
+      "hpType": "RandomSeed",
+      "uncertain": false
+    },
+    {
+      "@id": "hp:cv_runs_5",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 12580,
+        "end_char_doc": 12616,
+        "prefix": "a 5-fold CV task performs",
+        "suffix": ", and relative sizes of",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "independent training and test runs",
+        "start_char_doc": 12580,
+        "end_char_doc": 12616,
+        "prefix": "a 5-fold CV task performs",
+        "suffix": ", and relative sizes of",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "5 independent training and test runs",
+        "start_char_doc": 12580,
+        "end_char_doc": 12616,
+        "prefix": "a 5-fold CV task performs",
+        "suffix": ", and relative sizes of",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Training",
+      "hpType": "NumEpochs",
+      "uncertain": false
+    },
+    {
+      "@id": "hp:combined_measurements_6594",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 9495,
+        "end_char_doc": 9522,
+        "prefix": "proposed neural network, we prepare",
+        "suffix": "of free energies of solvation",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "experimental solvation measurements",
+        "start_char_doc": 9495,
+        "end_char_doc": 9522,
+        "prefix": "proposed neural network, we prepare",
+        "suffix": "of free energies of solvation",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "6,594",
+        "start_char_doc": 9495,
+        "end_char_doc": 9522,
+        "prefix": "proposed neural network, we prepare",
+        "suffix": "of free energies of solvation",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Data",
+      "hpType": "TrainValTestSplit",
+      "uncertain": false
+    },
+    {
+      "@id": "hp:abstract_measurements_6493",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 862,
+        "end_char_doc": 893,
+        "prefix": "their interactions. The results on",
+        "suffix": "achieve outstanding performance and transferability",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "reported experimental measurements",
+        "start_char_doc": 862,
+        "end_char_doc": 893,
+        "prefix": "their interactions. The results on",
+        "suffix": "achieve outstanding performance and transferability",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "6,493",
+        "start_char_doc": 862,
+        "end_char_doc": 893,
+        "prefix": "their interactions. The results on",
+        "suffix": "achieve outstanding performance and transferability",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Data",
+      "hpType": "TrainValTestSplit",
+      "uncertain": false
+    },
+    {
+      "@id": "hp:organic_solvents_952",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 9557,
+        "end_char_doc": 9577,
+        "prefix": "free energies of solvation for",
+        "suffix": "and 147 organic solutes, including",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "organic solvents",
+        "start_char_doc": 9557,
+        "end_char_doc": 9577,
+        "prefix": "free energies of solvation for",
+        "suffix": "and 147 organic solutes, including",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "952 organic solvents",
+        "start_char_doc": 9557,
+        "end_char_doc": 9577,
+        "prefix": "free energies of solvation for",
+        "suffix": "and 147 organic solutes, including",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Data",
+      "hpType": "TrainValTestSplit",
+      "uncertain": false
+    },
+    {
+      "@id": "hp:organic_solutes_147",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 9582,
+        "end_char_doc": 9601,
+        "prefix": "for 952 organic solvents and",
+        "suffix": ", including some inert gases.",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "organic solutes",
+        "start_char_doc": 9582,
+        "end_char_doc": 9601,
+        "prefix": "for 952 organic solvents and",
+        "suffix": ", including some inert gases.",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "147 organic solutes",
+        "start_char_doc": 9582,
+        "end_char_doc": 9601,
+        "prefix": "for 952 organic solvents and",
+        "suffix": ", including some inert gases.",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Data",
+      "hpType": "TrainValTestSplit",
+      "uncertain": false
+    },
+    {
+      "@id": "hp:freesolv_points_642",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 9631,
+        "end_char_doc": 9665,
+        "prefix": "solutes, including some inert gases.",
+        "suffix": "of the free energy of",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "FreeSolv points",
+        "start_char_doc": 9631,
+        "end_char_doc": 9665,
+        "prefix": "solutes, including some inert gases.",
+        "suffix": "of the free energy of",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "642",
+        "start_char_doc": 9631,
+        "end_char_doc": 9665,
+        "prefix": "solutes, including some inert gases.",
+        "suffix": "of the free energy of",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Data",
+      "hpType": "TrainValTestSplit",
+      "uncertain": false
+    },
+    {
+      "@id": "hp:solv_at_tum_points_5952",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 9748,
+        "end_char_doc": 9765,
+        "prefix": "the FreeSolv database[14, 56], and",
+        "suffix": "for non-aqueous solvents are collected",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "Solv@TUM points",
+        "start_char_doc": 9748,
+        "end_char_doc": 9765,
+        "prefix": "the FreeSolv database[14, 56], and",
+        "suffix": "for non-aqueous solvents are collected",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "5,952",
+        "start_char_doc": 9748,
+        "end_char_doc": 9765,
+        "prefix": "the FreeSolv database[14, 56], and",
+        "suffix": "for non-aqueous solvents are collected",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Data",
+      "hpType": "TrainValTestSplit",
+      "uncertain": false
+    },
+    {
+      "@id": "hp:atom_types_10",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 9953,
+        "end_char_doc": 9970,
+        "prefix": "Compounds in the dataset involves",
+        "suffix": ", which are commonly used",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "atom types",
+        "start_char_doc": 9953,
+        "end_char_doc": 9970,
+        "prefix": "Compounds in the dataset involves",
+        "suffix": ", which are commonly used",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "10 kinds of atoms",
+        "start_char_doc": 9953,
+        "end_char_doc": 9970,
+        "prefix": "Compounds in the dataset involves",
+        "suffix": ", which are commonly used",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Data",
+      "hpType": "TrainValTestSplit",
+      "uncertain": false
+    },
+    {
+      "@id": "hp:solute_max_heavy_atom_count_28",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 10189,
+        "end_char_doc": 10216,
+        "prefix": "The maximum heavy-atom count is",
+        "suffix": "and 18 for the solvent",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "solute maximum heavy-atom count",
+        "start_char_doc": 10189,
+        "end_char_doc": 10216,
+        "prefix": "The maximum heavy-atom count is",
+        "suffix": "and 18 for the solvent",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "28",
+        "start_char_doc": 10189,
+        "end_char_doc": 10216,
+        "prefix": "The maximum heavy-atom count is",
+        "suffix": "and 18 for the solvent",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Data",
+      "hpType": "MaxSequenceLength",
+      "uncertain": false
+    },
+    {
+      "@id": "hp:solvent_max_heavy_atom_count_18",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 10221,
+        "end_char_doc": 10249,
+        "prefix": "for the solute molecules and",
+        "suffix": ". &lt;page_number&gt;5&lt;/page_number&gt; --- ## Page",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "solvent maximum heavy-atom count",
+        "start_char_doc": 10221,
+        "end_char_doc": 10249,
+        "prefix": "for the solute molecules and",
+        "suffix": ". &lt;page_number&gt;5&lt;/page_number&gt; --- ## Page",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "18",
+        "start_char_doc": 10221,
+        "end_char_doc": 10249,
+        "prefix": "for the solute molecules and",
+        "suffix": ". &lt;page_number&gt;5&lt;/page_number&gt; --- ## Page",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Data",
+      "hpType": "MaxSequenceLength",
+      "uncertain": false
+    },
+    {
+      "@id": "hp:tsne_points_15432",
+      "@type": "mls:MLS_HyperParameter",
+      "mention": {
+        "start_char_doc": 14089,
+        "end_char_doc": 14102,
+        "prefix": "predicted hydration free energies for",
+        "suffix": ", whose structures are randomly",
+        "valueSource": "extracted"
+      },
+      "mls:name": {
+        "value": "t-SNE visualization points",
+        "start_char_doc": 14089,
+        "end_char_doc": 14102,
+        "prefix": "predicted hydration free energies for",
+        "suffix": ", whose structures are randomly",
+        "valueSource": "extracted"
+      },
+      "mls:hasValue": {
+        "value": "15,432 points",
+        "start_char_doc": 14089,
+        "end_char_doc": 14102,
+        "prefix": "predicted hydration free energies for",
+        "suffix": ", whose structures are randomly",
+        "valueSource": "extracted"
+      },
+      "mls:wasDerivedFrom": {
+        "value": "paper",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:type": {
+        "value": "string",
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "mls:searchSpace": {
+        "value": null,
+        "start_char_doc": null,
+        "end_char_doc": null,
+        "prefix": null,
+        "suffix": null,
+        "valueSource": "inferred"
+      },
+      "hpCategory": "HP_Data",
+      "hpType": "TrainValTestSplit",
+      "uncertain": false
+    }
+  ]
+}
