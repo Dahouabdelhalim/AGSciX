@@ -1,0 +1,2522 @@
+{
+  "@context": {
+    "mls": "http://example.org/ontology/mls#",
+    "schema": "http://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "SoftwareRepository": "mls:SoftwareRepository",
+    "MLS_Implementation": "mls:MLS_Implementation",
+    "Environment": "mls:Environment",
+    "Dependency": "mls:Dependency",
+    "DataProcessingStep": "mls:DataProcessingStep",
+    "TrainingRun": "mls:TrainingRun",
+    "EvaluationRun": "mls:EvaluationRun",
+    "PredictionSet": "mls:PredictionSet",
+    "MLS_HyperParameter": "mls:MLS_HyperParameter",
+    "MLS_Dataset": "mls:MLS_Dataset",
+    "DataSource": "mls:DataSource",
+    "Method": "mls:Method",
+    "MLS_Model": "mls:MLS_Model",
+    "MLS_Algorithm": "mls:MLS_Algorithm",
+    "MLS_Eval": "mls:MLS_Eval",
+    "name": "schema:name",
+    "identifier": "schema:identifier",
+    "description": "schema:description",
+    "url": {
+      "@id": "schema:url",
+      "@type": "xsd:anyURI"
+    },
+    "version": "schema:version",
+    "license": "schema:license",
+    "programmingLanguage": "schema:programmingLanguage",
+    "dateModified": {
+      "@id": "schema:dateModified",
+      "@type": "xsd:dateTime"
+    },
+    "documentationUrl": {
+      "@id": "mls:documentationUrl",
+      "@type": "xsd:anyURI"
+    },
+    "owner": "mls:owner",
+    "platform": "mls:platform",
+    "codeRepository": {
+      "@id": "mls:codeRepository",
+      "@type": "xsd:anyURI"
+    },
+    "framework": "mls:framework",
+    "entryPoint": "mls:entryPoint",
+    "entryPointCommand": "mls:entryPointCommand",
+    "executionCommand": "mls:executionCommand",
+    "commitHash": "mls:commitHash",
+    "branch": "mls:branch",
+    "packageName": "mls:packageName",
+    "dependencyType": "mls:dependencyType",
+    "isOptional": {
+      "@id": "mls:isOptional",
+      "@type": "xsd:boolean"
+    },
+    "hardwareSpecs": "mls:hardwareSpecs",
+    "os": "mls:os",
+    "pythonVersion": "mls:pythonVersion",
+    "requirementsFile": "mls:requirementsFile",
+    "isDockerized": {
+      "@id": "mls:isDockerized",
+      "@type": "xsd:boolean"
+    },
+    "hasValue": {
+      "@id": "mls:hasValue",
+      "@type": "xsd:string"
+    },
+    "hpCategory": "mls:hpCategory",
+    "hpType": "mls:hpType",
+    "sourceFile": "mls:sourceFile",
+    "sourceLine": {
+      "@id": "mls:sourceLine",
+      "@type": "xsd:integer"
+    },
+    "uncertain": {
+      "@id": "mls:uncertain",
+      "@type": "xsd:boolean"
+    },
+    "transformationType": "mls:transformationType",
+    "codeReference": "mls:codeReference",
+    "runId": "mls:runId",
+    "logFile": "mls:logFile",
+    "artifactsLocation": "mls:artifactsLocation",
+    "split": "mls:split",
+    "evaluationScript": "mls:evaluationScript",
+    "metricsFile": "mls:metricsFile",
+    "predictionFormat": "mls:predictionFormat",
+    "storageLocation": "mls:storageLocation",
+    "numInstances": {
+      "@id": "mls:numInstances",
+      "@type": "xsd:integer"
+    },
+    "onDatasetSplit": "mls:onDatasetSplit",
+    "language": "mls:language",
+    "modality": "mls:modality",
+    "numClasses": "mls:numClasses",
+    "architecture": "mls:architecture",
+    "parameters": "mls:parameters",
+    "complexity": "mls:complexity",
+    "pseudoCode": "mls:pseudoCode",
+    "measure": "mls:measure",
+    "hasValueFloat": {
+      "@id": "mls:hasValueFloat",
+      "@type": "xsd:float"
+    },
+    "stdDev": {
+      "@id": "mls:stdDev",
+      "@type": "xsd:float"
+    },
+    "confidenceInterval": "mls:confidenceInterval",
+    "contains": {
+      "@id": "mls:contains",
+      "@type": "@id"
+    },
+    "supports": {
+      "@id": "mls:supports",
+      "@type": "@id"
+    },
+    "runsIn": {
+      "@id": "mls:runsIn",
+      "@type": "@id"
+    },
+    "requires": {
+      "@id": "mls:requires",
+      "@type": "@id"
+    },
+    "processedThrough": {
+      "@id": "mls:processedThrough",
+      "@type": "@id"
+    },
+    "trainedOn": {
+      "@id": "mls:trainedOn",
+      "@type": "@id"
+    },
+    "evaluatedOn": {
+      "@id": "mls:evaluatedOn",
+      "@type": "@id"
+    },
+    "achieves": {
+      "@id": "mls:achieves",
+      "@type": "@id"
+    },
+    "subMethod": {
+      "@id": "mls:subMethod",
+      "@type": "@id"
+    },
+    "trains": {
+      "@id": "mls:trains",
+      "@type": "@id"
+    },
+    "evaluates": {
+      "@id": "mls:evaluates",
+      "@type": "@id"
+    },
+    "generates": {
+      "@id": "mls:generates",
+      "@type": "@id"
+    },
+    "usesMethod": {
+      "@id": "mls:usesMethod",
+      "@type": "@id"
+    },
+    "usesAlgorithm": {
+      "@id": "mls:usesAlgorithm",
+      "@type": "@id"
+    },
+    "hasHyperParameter": {
+      "@id": "mls:hasHyperParameter",
+      "@type": "@id"
+    },
+    "implements": {
+      "@id": "mls:implements",
+      "@type": "@id"
+    },
+    "path": "mls:path",
+    "start_char_doc": {
+      "@id": "mls:start_char_doc",
+      "@type": "xsd:integer"
+    },
+    "end_char_doc": {
+      "@id": "mls:end_char_doc",
+      "@type": "xsd:integer"
+    },
+    "context": "mls:context",
+    "prefix": "mls:prefix",
+    "suffix": "mls:suffix",
+    "wasDerivedFrom": "prov:wasDerivedFrom"
+  },
+  "@graph": [
+    {
+      "@id": "repo_sharath_girish_lilnetx",
+      "@type": "SoftwareRepository",
+      "name": "LilNetX",
+      "url": "https://github.com/Sharath-girish/LilNetX",
+      "owner": "Sharath-girish",
+      "platform": "GitHub",
+      "programmingLanguage": "Python",
+      "version": "76d1cbc63b7af94d87a8a1e42a4dc00141bd4af0",
+      "license": "MIT",
+      "dateModified": "2022-05-30T11:43:02-04:00",
+      "documentationUrl": "https://github.com/Sharath-girish/LilNetX#readme",
+      "contains": [
+        {
+          "@id": "impl_lilnetx_pytorch_training"
+        }
+      ],
+      "supports": [
+        {
+          "@id": "env_lilnetx_python_pytorch_cuda"
+        }
+      ],
+      "codeReference": "README.md:1",
+      "path": "README.md",
+      "start_char_doc": 0,
+      "end_char_doc": 9,
+      "context": {
+        "prefix": "",
+        "suffix": " Official PyTorch implementation of [LilNetX:"
+      },
+      "wasDerivedFrom": "code",
+      "sourceFile": "README.md",
+      "sourceLine": 1
+    },
+    {
+      "@id": "impl_lilnetx_pytorch_training",
+      "@type": "MLS_Implementation",
+      "identifier": "LilNetX PyTorch training implementation",
+      "codeRepository": "https://github.com/Sharath-girish/LilNetX",
+      "framework": "PyTorch; torchvision; YAML; optional FFCV; optional Weights & Biases",
+      "entryPoint": "main.py",
+      "entryPointCommand": "python main.py --config configs/cifar10_resnet20.yaml",
+      "executionCommand": "python main.py --config <yaml> [--section.key value]",
+      "commitHash": "76d1cbc63b7af94d87a8a1e42a4dc00141bd4af0",
+      "branch": "main",
+      "runsIn": {
+        "@id": "env_lilnetx_python_pytorch_cuda"
+      },
+      "requires": [
+        {
+          "@id": "dep_torch"
+        },
+        {
+          "@id": "dep_torchvision"
+        },
+        {
+          "@id": "dep_pyyaml"
+        },
+        {
+          "@id": "dep_numpy"
+        },
+        {
+          "@id": "dep_ffcv_optional"
+        },
+        {
+          "@id": "dep_wandb_optional"
+        },
+        {
+          "@id": "dep_torchac_optional"
+        }
+      ],
+      "implements": [
+        {
+          "@id": "method_lilnetx_compression"
+        },
+        {
+          "@id": "method_entropy_regularization"
+        },
+        {
+          "@id": "method_structured_sparsification"
+        },
+        {
+          "@id": "algo_straight_through_rounding"
+        },
+        {
+          "@id": "algo_arithmetic_coding"
+        }
+      ],
+      "codeReference": "README.md:2",
+      "path": "README.md",
+      "start_char_doc": 10,
+      "end_char_doc": 41,
+      "context": {
+        "prefix": "# LilNetX ",
+        "suffix": " of [LilNetX: Lightweight Networks with EXtre"
+      },
+      "wasDerivedFrom": "code",
+      "contains": [
+        {
+          "@id": "model_conv2d_compressed"
+        },
+        {
+          "@id": "model_linear_compressed"
+        },
+        {
+          "@id": "model_bit_estimator"
+        },
+        {
+          "@id": "model_resnet_cifar"
+        },
+        {
+          "@id": "model_resnet_imagenet"
+        },
+        {
+          "@id": "model_vgg"
+        }
+      ],
+      "sourceFile": "README.md",
+      "sourceLine": 2
+    },
+    {
+      "@id": "env_lilnetx_python_pytorch_cuda",
+      "@type": "Environment",
+      "name": "Python PyTorch CUDA training environment",
+      "framework": "PyTorch 1.10.2; torchvision 0.11.3",
+      "pythonVersion": null,
+      "os": null,
+      "hardwareSpecs": "CUDA GPU required by DistUtils/gpu_wrapper; optional distributed NCCL execution",
+      "requirementsFile": "requirements.txt",
+      "isDockerized": false,
+      "requires": [
+        {
+          "@id": "dep_torch"
+        },
+        {
+          "@id": "dep_torchvision"
+        },
+        {
+          "@id": "dep_psutil"
+        },
+        {
+          "@id": "dep_pyyaml"
+        }
+      ],
+      "codeReference": "requirements.txt:1",
+      "path": "requirements.txt",
+      "start_char_doc": 0,
+      "end_char_doc": 13,
+      "context": {
+        "prefix": "",
+        "suffix": " torchvision==0.11.3 psutil pyparsing pyyaml "
+      },
+      "wasDerivedFrom": "code",
+      "sourceFile": "requirements.txt",
+      "sourceLine": 1
+    },
+    {
+      "@id": "dep_torch",
+      "@type": "Dependency",
+      "packageName": "torch",
+      "version": "1.10.2",
+      "dependencyType": "runtime",
+      "isOptional": false,
+      "codeReference": "requirements.txt:1",
+      "path": "requirements.txt",
+      "start_char_doc": 0,
+      "end_char_doc": 13,
+      "context": {
+        "prefix": "",
+        "suffix": " torchvision==0.11.3 psutil pyparsing pyyaml "
+      },
+      "wasDerivedFrom": "code",
+      "sourceFile": "requirements.txt",
+      "sourceLine": 1
+    },
+    {
+      "@id": "dep_torchvision",
+      "@type": "Dependency",
+      "packageName": "torchvision",
+      "version": "0.11.3",
+      "dependencyType": "runtime",
+      "isOptional": false,
+      "codeReference": "requirements.txt:2",
+      "path": "requirements.txt",
+      "start_char_doc": 14,
+      "end_char_doc": 33,
+      "context": {
+        "prefix": "torch==1.10.2 ",
+        "suffix": " psutil pyparsing pyyaml terminaltables pytor"
+      },
+      "wasDerivedFrom": "code",
+      "sourceFile": "requirements.txt",
+      "sourceLine": 2
+    },
+    {
+      "@id": "dep_psutil",
+      "@type": "Dependency",
+      "packageName": "psutil",
+      "version": null,
+      "dependencyType": "runtime",
+      "isOptional": false,
+      "codeReference": "requirements.txt:3",
+      "path": "requirements.txt",
+      "start_char_doc": 34,
+      "end_char_doc": 40,
+      "context": {
+        "prefix": "torch==1.10.2 torchvision==0.11.3 ",
+        "suffix": " pyparsing pyyaml terminaltables pytorch_pfn_"
+      },
+      "wasDerivedFrom": "code",
+      "sourceFile": "requirements.txt",
+      "sourceLine": 3
+    },
+    {
+      "@id": "dep_pyparsing",
+      "@type": "Dependency",
+      "packageName": "pyparsing",
+      "version": null,
+      "dependencyType": "runtime",
+      "isOptional": false,
+      "codeReference": "requirements.txt:4",
+      "path": "requirements.txt",
+      "start_char_doc": 41,
+      "end_char_doc": 50,
+      "context": {
+        "prefix": "torch==1.10.2 torchvision==0.11.3 psutil ",
+        "suffix": " pyyaml terminaltables pytorch_pfn_extras fas"
+      },
+      "wasDerivedFrom": "code",
+      "sourceFile": "requirements.txt",
+      "sourceLine": 4
+    },
+    {
+      "@id": "dep_pyyaml",
+      "@type": "Dependency",
+      "packageName": "pyyaml",
+      "version": null,
+      "dependencyType": "runtime",
+      "isOptional": false,
+      "codeReference": "requirements.txt:5",
+      "path": "requirements.txt",
+      "start_char_doc": 51,
+      "end_char_doc": 57,
+      "context": {
+        "prefix": "=1.10.2 torchvision==0.11.3 psutil pyparsing ",
+        "suffix": " terminaltables pytorch_pfn_extras fastargs m"
+      },
+      "wasDerivedFrom": "code",
+      "sourceFile": "requirements.txt",
+      "sourceLine": 5
+    },
+    {
+      "@id": "dep_terminaltables",
+      "@type": "Dependency",
+      "packageName": "terminaltables",
+      "version": null,
+      "dependencyType": "runtime",
+      "isOptional": false,
+      "codeReference": "requirements.txt:6",
+      "path": "requirements.txt",
+      "start_char_doc": 58,
+      "end_char_doc": 72,
+      "context": {
+        "prefix": " torchvision==0.11.3 psutil pyparsing pyyaml ",
+        "suffix": " pytorch_pfn_extras fastargs matplotlib sklea"
+      },
+      "wasDerivedFrom": "code",
+      "sourceFile": "requirements.txt",
+      "sourceLine": 6
+    },
+    {
+      "@id": "dep_pytorch_pfn_extras",
+      "@type": "Dependency",
+      "packageName": "pytorch_pfn_extras",
+      "version": null,
+      "dependencyType": "runtime",
+      "isOptional": false,
+      "codeReference": "requirements.txt:7",
+      "path": "requirements.txt",
+      "start_char_doc": 73,
+      "end_char_doc": 91,
+      "context": {
+        "prefix": ".11.3 psutil pyparsing pyyaml terminaltables ",
+        "suffix": " fastargs matplotlib sklearn imgcat pandas as"
+      },
+      "wasDerivedFrom": "code",
+      "sourceFile": "requirements.txt",
+      "sourceLine": 7
+    },
+    {
+      "@id": "dep_fastargs",
+      "@type": "Dependency",
+      "packageName": "fastargs",
+      "version": null,
+      "dependencyType": "runtime",
+      "isOptional": false,
+      "codeReference": "requirements.txt:8",
+      "path": "requirements.txt",
+      "start_char_doc": 92,
+      "end_char_doc": 100,
+      "context": {
+        "prefix": "ing pyyaml terminaltables pytorch_pfn_extras ",
+        "suffix": " matplotlib sklearn imgcat pandas assertpy tq"
+      },
+      "wasDerivedFrom": "code",
+      "sourceFile": "requirements.txt",
+      "sourceLine": 8
+    },
+    {
+      "@id": "dep_matplotlib",
+      "@type": "Dependency",
+      "packageName": "matplotlib",
+      "version": null,
+      "dependencyType": "analysis",
+      "isOptional": false,
+      "codeReference": "requirements.txt:9",
+      "path": "requirements.txt",
+      "start_char_doc": 101,
+      "end_char_doc": 111,
+      "context": {
+        "prefix": "l terminaltables pytorch_pfn_extras fastargs ",
+        "suffix": " sklearn imgcat pandas assertpy tqdm webdatas"
+      },
+      "wasDerivedFrom": "code",
+      "sourceFile": "requirements.txt",
+      "sourceLine": 9
+    },
+    {
+      "@id": "dep_sklearn",
+      "@type": "Dependency",
+      "packageName": "sklearn",
+      "version": null,
+      "dependencyType": "analysis",
+      "isOptional": false,
+      "codeReference": "requirements.txt:10",
+      "path": "requirements.txt",
+      "start_char_doc": 112,
+      "end_char_doc": 119,
+      "context": {
+        "prefix": "ables pytorch_pfn_extras fastargs matplotlib ",
+        "suffix": " imgcat pandas assertpy tqdm webdataset torch"
+      },
+      "wasDerivedFrom": "code",
+      "sourceFile": "requirements.txt",
+      "sourceLine": 10
+    },
+    {
+      "@id": "dep_imgcat",
+      "@type": "Dependency",
+      "packageName": "imgcat",
+      "version": null,
+      "dependencyType": "utility",
+      "isOptional": false,
+      "codeReference": "requirements.txt:11",
+      "path": "requirements.txt",
+      "start_char_doc": 120,
+      "end_char_doc": 126,
+      "context": {
+        "prefix": "torch_pfn_extras fastargs matplotlib sklearn ",
+        "suffix": " pandas assertpy tqdm webdataset torchmetrics"
+      },
+      "wasDerivedFrom": "code",
+      "sourceFile": "requirements.txt",
+      "sourceLine": 11
+    },
+    {
+      "@id": "dep_pandas",
+      "@type": "Dependency",
+      "packageName": "pandas",
+      "version": null,
+      "dependencyType": "analysis",
+      "isOptional": false,
+      "codeReference": "requirements.txt:12",
+      "path": "requirements.txt",
+      "start_char_doc": 127,
+      "end_char_doc": 133,
+      "context": {
+        "prefix": "fn_extras fastargs matplotlib sklearn imgcat ",
+        "suffix": " assertpy tqdm webdataset torchmetrics opencv"
+      },
+      "wasDerivedFrom": "code",
+      "sourceFile": "requirements.txt",
+      "sourceLine": 12
+    },
+    {
+      "@id": "dep_assertpy",
+      "@type": "Dependency",
+      "packageName": "assertpy",
+      "version": null,
+      "dependencyType": "test/utility",
+      "isOptional": false,
+      "codeReference": "requirements.txt:13",
+      "path": "requirements.txt",
+      "start_char_doc": 134,
+      "end_char_doc": 142,
+      "context": {
+        "prefix": "as fastargs matplotlib sklearn imgcat pandas ",
+        "suffix": " tqdm webdataset torchmetrics opencv-python n"
+      },
+      "wasDerivedFrom": "code",
+      "sourceFile": "requirements.txt",
+      "sourceLine": 13
+    },
+    {
+      "@id": "dep_tqdm",
+      "@type": "Dependency",
+      "packageName": "tqdm",
+      "version": null,
+      "dependencyType": "utility",
+      "isOptional": false,
+      "codeReference": "requirements.txt:14",
+      "path": "requirements.txt",
+      "start_char_doc": 143,
+      "end_char_doc": 147,
+      "context": {
+        "prefix": "gs matplotlib sklearn imgcat pandas assertpy ",
+        "suffix": " webdataset torchmetrics opencv-python numba "
+      },
+      "wasDerivedFrom": "code",
+      "sourceFile": "requirements.txt",
+      "sourceLine": 14
+    },
+    {
+      "@id": "dep_webdataset",
+      "@type": "Dependency",
+      "packageName": "webdataset",
+      "version": null,
+      "dependencyType": "data",
+      "isOptional": false,
+      "codeReference": "requirements.txt:15",
+      "path": "requirements.txt",
+      "start_char_doc": 148,
+      "end_char_doc": 158,
+      "context": {
+        "prefix": "tplotlib sklearn imgcat pandas assertpy tqdm ",
+        "suffix": " torchmetrics opencv-python numba "
+      },
+      "wasDerivedFrom": "code",
+      "sourceFile": "requirements.txt",
+      "sourceLine": 15
+    },
+    {
+      "@id": "dep_torchmetrics",
+      "@type": "Dependency",
+      "packageName": "torchmetrics",
+      "version": null,
+      "dependencyType": "metrics",
+      "isOptional": false,
+      "codeReference": "requirements.txt:16",
+      "path": "requirements.txt",
+      "start_char_doc": 159,
+      "end_char_doc": 171,
+      "context": {
+        "prefix": "learn imgcat pandas assertpy tqdm webdataset ",
+        "suffix": " opencv-python numba "
+      },
+      "wasDerivedFrom": "code",
+      "sourceFile": "requirements.txt",
+      "sourceLine": 16
+    },
+    {
+      "@id": "dep_opencv_python",
+      "@type": "Dependency",
+      "packageName": "opencv-python",
+      "version": null,
+      "dependencyType": "data",
+      "isOptional": false,
+      "codeReference": "requirements.txt:17",
+      "path": "requirements.txt",
+      "start_char_doc": 172,
+      "end_char_doc": 185,
+      "context": {
+        "prefix": "pandas assertpy tqdm webdataset torchmetrics ",
+        "suffix": " numba "
+      },
+      "wasDerivedFrom": "code",
+      "sourceFile": "requirements.txt",
+      "sourceLine": 17
+    },
+    {
+      "@id": "dep_numba",
+      "@type": "Dependency",
+      "packageName": "numba",
+      "version": null,
+      "dependencyType": "performance",
+      "isOptional": false,
+      "codeReference": "requirements.txt:18",
+      "path": "requirements.txt",
+      "start_char_doc": 186,
+      "end_char_doc": 191,
+      "context": {
+        "prefix": "y tqdm webdataset torchmetrics opencv-python ",
+        "suffix": " "
+      },
+      "wasDerivedFrom": "code",
+      "sourceFile": "requirements.txt",
+      "sourceLine": 18
+    },
+    {
+      "@id": "dep_numpy",
+      "@type": "Dependency",
+      "packageName": "numpy",
+      "version": null,
+      "dependencyType": "runtime",
+      "isOptional": false,
+      "codeReference": "trainer.py:9",
+      "path": "trainer.py",
+      "start_char_doc": 204,
+      "end_char_doc": 222,
+      "context": {
+        "prefix": "ional as F import torch.distributed as dist  ",
+        "suffix": " from layers import Conv2d, Linear  import os"
+      },
+      "wasDerivedFrom": "code",
+      "sourceFile": "trainer.py",
+      "sourceLine": 9
+    },
+    {
+      "@id": "dep_ffcv_optional",
+      "@type": "Dependency",
+      "packageName": "ffcv",
+      "version": null,
+      "dependencyType": "data loading/performance",
+      "isOptional": true,
+      "codeReference": "README.md:10",
+      "path": "README.md",
+      "start_char_doc": 435,
+      "end_char_doc": 447,
+      "context": {
+        "prefix": "tps://github.com/libffcv/ffcv to install the ",
+        "suffix": ".  ## Example commands Hyperparameters are de"
+      },
+      "wasDerivedFrom": "code",
+      "sourceFile": "README.md",
+      "sourceLine": 10
+    },
+    {
+      "@id": "dep_wandb_optional",
+      "@type": "Dependency",
+      "packageName": "wandb",
+      "version": null,
+      "dependencyType": "experiment logging",
+      "isOptional": true,
+      "codeReference": "main.py:76",
+      "path": "main.py",
+      "start_char_doc": 2934,
+      "end_char_doc": 2946,
+      "context": {
+        "prefix": "(conf)     if conf_wandb['enabled']:         ",
+        "suffix": "         import hashlib         id = hashlib."
+      },
+      "wasDerivedFrom": "code",
+      "sourceFile": "main.py",
+      "sourceLine": 76
+    },
+    {
+      "@id": "dep_torchac_optional",
+      "@type": "Dependency",
+      "packageName": "torchac",
+      "version": null,
+      "dependencyType": "arithmetic coding metrics",
+      "isOptional": true,
+      "codeReference": "trainer.py:516",
+      "path": "trainer.py",
+      "start_char_doc": 22548,
+      "end_char_doc": 22562,
+      "context": {
+        "prefix": "       if conf_logger['use_ac']:             ",
+        "suffix": "             self.torchac = torchac         i"
+      },
+      "wasDerivedFrom": "code",
+      "sourceFile": "trainer.py",
+      "sourceLine": 516
+    },
+    {
+      "@id": "dataset_cifar10",
+      "@type": "MLS_Dataset",
+      "name": "CIFAR-10",
+      "description": "torchvision CIFAR10 image classification dataset branch",
+      "split": "train/test",
+      "numClasses": "10",
+      "modality": "image",
+      "language": null,
+      "processedThrough": [
+        {
+          "@id": "data_process_cifar_train"
+        },
+        {
+          "@id": "data_process_cifar_eval"
+        }
+      ],
+      "codeReference": "trainer.py:231",
+      "path": "trainer.py",
+      "start_char_doc": 8990,
+      "end_char_doc": 9018,
+      "context": {
+        "prefix": "t['num_classes'] = 10             trainset = ",
+        "suffix": "(                 root=conf_dataset['trainroo"
+      },
+      "wasDerivedFrom": "code",
+      "sourceFile": "trainer.py",
+      "sourceLine": 231
+    },
+    {
+      "@id": "dataset_cifar100",
+      "@type": "MLS_Dataset",
+      "name": "CIFAR-100",
+      "description": "torchvision CIFAR100 image classification dataset branch",
+      "split": "train/test",
+      "numClasses": "100",
+      "modality": "image",
+      "language": null,
+      "processedThrough": [
+        {
+          "@id": "data_process_cifar_train"
+        },
+        {
+          "@id": "data_process_cifar_eval"
+        }
+      ],
+      "codeReference": "trainer.py:235",
+      "path": "trainer.py",
+      "start_char_doc": 9239,
+      "end_char_doc": 9268,
+      "context": {
+        "prefix": "['num_classes'] = 100             trainset = ",
+        "suffix": "(                 root=conf_dataset['trainroo"
+      },
+      "wasDerivedFrom": "code",
+      "sourceFile": "trainer.py",
+      "sourceLine": 235
+    },
+    {
+      "@id": "dataset_imagenet",
+      "@type": "MLS_Dataset",
+      "name": "ImageNet",
+      "description": "ImageNet directory or FFCV file input for ResNet experiments",
+      "split": "train/val",
+      "numClasses": "1000",
+      "modality": "image",
+      "language": null,
+      "processedThrough": [
+        {
+          "@id": "data_process_imagenet_train"
+        },
+        {
+          "@id": "data_process_imagenet_eval"
+        },
+        {
+          "@id": "data_process_ffcv_imagenet"
+        }
+      ],
+      "codeReference": "configs/imagenet_resnet18.yaml:71",
+      "path": "configs/imagenet_resnet18.yaml",
+      "start_char_doc": 3368,
+      "end_char_doc": 3384,
+      "context": {
+        "prefix": "int frequency    # Dataset params dataset:   ",
+        "suffix": "   # Dataset name, choose from ['cifar10', 'c"
+      },
+      "wasDerivedFrom": "code",
+      "sourceFile": "configs/imagenet_resnet18.yaml",
+      "sourceLine": 71
+    },
+    {
+      "@id": "datasource_torchvision_cifar",
+      "@type": "DataSource",
+      "name": "torchvision CIFAR loaders",
+      "url": null,
+      "description": "CIFAR10 and CIFAR100 downloaded through torchvision.datasets",
+      "contains": [
+        {
+          "@id": "dataset_cifar10"
+        },
+        {
+          "@id": "dataset_cifar100"
+        }
+      ],
+      "codeReference": "trainer.py:232",
+      "path": "trainer.py",
+      "start_char_doc": 9080,
+      "end_char_doc": 9093,
+      "context": {
+        "prefix": " root=conf_dataset['trainroot'], train=True, ",
+        "suffix": ", transform=transform_train)         elif con"
+      },
+      "wasDerivedFrom": "code",
+      "sourceFile": "trainer.py",
+      "sourceLine": 232
+    },
+    {
+      "@id": "datasource_imagenet_filesystem",
+      "@type": "DataSource",
+      "name": "ImageNet filesystem/FFCV data roots",
+      "url": null,
+      "description": "ImageNet root directories or .ffcv files configured in YAML",
+      "contains": [
+        {
+          "@id": "dataset_imagenet"
+        }
+      ],
+      "codeReference": "configs/imagenet_resnet18_ffcv.yaml:71",
+      "path": "configs/imagenet_resnet18_ffcv.yaml",
+      "start_char_doc": 3450,
+      "end_char_doc": 3498,
+      "context": {
+        "prefix": "e from ['cifar10', 'cifar100', 'imagenet']   ",
+        "suffix": "   # Root directory containing train data (or"
+      },
+      "wasDerivedFrom": "code",
+      "sourceFile": "configs/imagenet_resnet18_ffcv.yaml",
+      "sourceLine": 71
+    },
+    {
+      "@id": "data_process_cifar_train",
+      "@type": "DataProcessingStep",
+      "name": "CIFAR train augmentation",
+      "description": "Random crop, horizontal flip, tensor conversion, and CIFAR normalization for training",
+      "transformationType": "augmentation",
+      "codeReference": "trainer.py:215",
+      "path": "trainer.py",
+      "start_char_doc": 8089,
+      "end_char_doc": 8125,
+      "context": {
+        "prefix": "train = transforms.Compose([                 ",
+        "suffix": ",                 transforms.RandomHorizontal"
+      },
+      "wasDerivedFrom": "code",
+      "sourceFile": "trainer.py",
+      "sourceLine": 215
+    },
+    {
+      "@id": "data_process_cifar_eval",
+      "@type": "DataProcessingStep",
+      "name": "CIFAR evaluation preprocessing",
+      "description": "Tensor conversion and CIFAR normalization for evaluation",
+      "transformationType": "normalization",
+      "codeReference": "trainer.py:267",
+      "path": "trainer.py",
+      "start_char_doc": 10571,
+      "end_char_doc": 10608,
+      "context": {
+        "prefix": "'cifar' in conf_dataset['name']:             ",
+        "suffix": "                 transforms.ToTensor(),      "
+      },
+      "wasDerivedFrom": "code",
+      "sourceFile": "trainer.py",
+      "sourceLine": 267
+    },
+    {
+      "@id": "data_process_imagenet_train",
+      "@type": "DataProcessingStep",
+      "name": "ImageNet train augmentation",
+      "description": "Random resized crop, horizontal flip, tensor conversion, and ImageNet normalization",
+      "transformationType": "augmentation",
+      "codeReference": "trainer.py:223",
+      "path": "trainer.py",
+      "start_char_doc": 8565,
+      "end_char_doc": 8598,
+      "context": {
+        "prefix": "       transform_train = transforms.Compose([",
+        "suffix": ",                                            "
+      },
+      "wasDerivedFrom": "code",
+      "sourceFile": "trainer.py",
+      "sourceLine": 223
+    },
+    {
+      "@id": "data_process_imagenet_eval",
+      "@type": "DataProcessingStep",
+      "name": "ImageNet evaluation preprocessing",
+      "description": "Resize to 256, center crop to 224, tensor conversion, and ImageNet normalization",
+      "transformationType": "normalization",
+      "codeReference": "trainer.py:275",
+      "path": "trainer.py",
+      "start_char_doc": 11041,
+      "end_char_doc": 11063,
+      "context": {
+        "prefix": "                                             ",
+        "suffix": ",                                            "
+      },
+      "wasDerivedFrom": "code",
+      "sourceFile": "trainer.py",
+      "sourceLine": 275
+    },
+    {
+      "@id": "data_process_ffcv_imagenet",
+      "@type": "DataProcessingStep",
+      "name": "FFCV ImageNet pipeline",
+      "description": "FFCV RGB decoding, device transfer, torch image conversion, and NormalizeImage pipeline",
+      "transformationType": "ffcv pipeline",
+      "codeReference": "trainer.py:331",
+      "path": "trainer.py",
+      "start_char_doc": 13554,
+      "end_char_doc": 13598,
+      "context": {
+        "prefix": "t_resolution(epoch=0)         self.decoder = ",
+        "suffix": "         image_pipeline: List[Operation] = [ "
+      },
+      "wasDerivedFrom": "code",
+      "sourceFile": "trainer.py",
+      "sourceLine": 331
+    },
+    {
+      "@id": "data_process_dynamic_resolution",
+      "@type": "DataProcessingStep",
+      "name": "FFCV dynamic resolution schedule",
+      "description": "Interpolates image resolution between min_res and max_res over configured epoch ramp",
+      "transformationType": "dynamic resolution",
+      "codeReference": "trainer.py:146",
+      "path": "trainer.py",
+      "start_char_doc": 5097,
+      "end_char_doc": 5129,
+      "context": {
+        "prefix": "n lr_schedules[lr_schedule_type](epoch)      ",
+        "suffix": "         conf_ffcv = config.get_conf_ffcv(sel"
+      },
+      "wasDerivedFrom": "code",
+      "sourceFile": "trainer.py",
+      "sourceLine": 146
+    },
+    {
+      "@id": "method_lilnetx_compression",
+      "@type": "Method",
+      "name": "LilNetX extreme model compression",
+      "description": "Official PyTorch implementation of LilNetX with quantization, decoding, entropy regularization, and structured sparsity support",
+      "codeReference": "README.md:2",
+      "path": "README.md",
+      "start_char_doc": 46,
+      "end_char_doc": 136,
+      "context": {
+        "prefix": " LilNetX Official PyTorch implementation of [",
+        "suffix": "](https://arxiv.org/abs/2204.02965)   ## Inst"
+      },
+      "wasDerivedFrom": "code",
+      "sourceFile": "README.md",
+      "sourceLine": 2
+    },
+    {
+      "@id": "method_entropy_regularization",
+      "@type": "Method",
+      "name": "Entropy regularization",
+      "description": "Adds an entropy/self-information loss over quantized weights using BitEstimator probability models",
+      "subMethod": [
+        {
+          "@id": "algo_self_information_bits"
+        }
+      ],
+      "codeReference": "trainer.py:703",
+      "path": "trainer.py",
+      "start_char_doc": 31742,
+      "end_char_doc": 31778,
+      "context": {
+        "prefix": "um_elems += prob.size(0)                     ",
+        "suffix": "                     losses_reg.update(loss_r"
+      },
+      "wasDerivedFrom": "code",
+      "sourceFile": "trainer.py",
+      "sourceLine": 703
+    },
+    {
+      "@id": "method_structured_sparsification",
+      "@type": "Method",
+      "name": "Structured sparsification",
+      "description": "Applies group decay over convolutional/linear weight groups and reports sparsity statistics",
+      "codeReference": "trainer.py:715",
+      "path": "trainer.py",
+      "start_char_doc": 32466,
+      "end_char_doc": 32498,
+      "context": {
+        "prefix": "['modules']:                                 ",
+        "suffix": "(ch.linalg.norm(p.reshape(p.size(0),p.size(1)"
+      },
+      "wasDerivedFrom": "code",
+      "sourceFile": "trainer.py",
+      "sourceLine": 715
+    },
+    {
+      "@id": "algo_self_information_bits",
+      "@type": "MLS_Algorithm",
+      "name": "Self-information bit estimation",
+      "description": "Computes total bits from probability mass between rounded weight bin edges",
+      "codeReference": "trainer.py:947",
+      "path": "trainer.py",
+      "start_char_doc": 42514,
+      "end_char_doc": 42600,
+      "context": {
+        "prefix": " fmt + '/' + fmt.format(num_batches) + ']'   ",
+        "suffix": "     weight = (weight + ch.rand(weight.shape,"
+      },
+      "wasDerivedFrom": "code",
+      "sourceFile": "trainer.py",
+      "sourceLine": 947
+    },
+    {
+      "@id": "algo_straight_through_rounding",
+      "@type": "MLS_Algorithm",
+      "name": "Straight-through rounding estimator",
+      "description": "Rounds weights in the forward pass and passes gradients through unchanged in backward",
+      "codeReference": "layers.py:311",
+      "path": "layers.py",
+      "start_char_doc": 12750,
+      "end_char_doc": 12797,
+      "context": {
+        "prefix": "     return self.scale*(input+self.shift)    ",
+        "suffix": "      @staticmethod     def forward(ctx, x): "
+      },
+      "wasDerivedFrom": "code",
+      "sourceFile": "layers.py",
+      "sourceLine": 311
+    },
+    {
+      "@id": "algo_cosine_lr",
+      "@type": "MLS_Algorithm",
+      "name": "Cosine learning-rate schedule",
+      "description": "Computes cosine learning-rate decay with warmup and plateau epochs",
+      "codeReference": "trainer.py:51",
+      "path": "trainer.py",
+      "start_char_doc": 1391,
+      "end_char_doc": 1461,
+      "context": {
+        "prefix": "r*(step_ratio)**num_decay     return cur_lr  ",
+        "suffix": "     xs = [0, lr_peak_epoch]     ys = [1e-4 *"
+      },
+      "wasDerivedFrom": "code",
+      "sourceFile": "trainer.py",
+      "sourceLine": 51
+    },
+    {
+      "@id": "algo_cyclic_lr",
+      "@type": "MLS_Algorithm",
+      "name": "Cyclic learning-rate schedule",
+      "description": "Interpolates from small learning rate to peak and back to zero",
+      "codeReference": "trainer.py:72",
+      "path": "trainer.py",
+      "start_char_doc": 2026,
+      "end_char_doc": 2096,
+      "context": {
+        "prefix": " * T_cur / T_total))         return cur_lr   ",
+        "suffix": "     xs = [0, lr_peak_epoch, epochs]     ys ="
+      },
+      "wasDerivedFrom": "code",
+      "sourceFile": "trainer.py",
+      "sourceLine": 72
+    },
+    {
+      "@id": "algo_step_lr",
+      "@type": "MLS_Algorithm",
+      "name": "Step learning-rate schedule",
+      "description": "Decays learning rate by gamma at configured decay steps",
+      "codeReference": "trainer.py:43",
+      "path": "trainer.py",
+      "start_char_doc": 1185,
+      "end_char_doc": 1245,
+      "context": {
+        "prefix": "r_weight_warmup)+1)/(prior_weight_warmup+1)  ",
+        "suffix": "     if epoch >= epochs:         return 0    "
+      },
+      "wasDerivedFrom": "code",
+      "sourceFile": "trainer.py",
+      "sourceLine": 43
+    },
+    {
+      "@id": "algo_arithmetic_coding",
+      "@type": "MLS_Algorithm",
+      "name": "Arithmetic coding byte estimate",
+      "description": "Uses torchac CDF encoding to count bytes for quantized weights when enabled",
+      "codeReference": "trainer.py:836",
+      "path": "trainer.py",
+      "start_char_doc": 38323,
+      "end_char_doc": 38347,
+      "context": {
+        "prefix": "                        ac_bytes += len(self.",
+        "suffix": "(cdf.detach().cpu(), weight_pos.detach().cpu("
+      },
+      "wasDerivedFrom": "code",
+      "sourceFile": "trainer.py",
+      "sourceLine": 836
+    },
+    {
+      "@id": "model_conv2d_compressed",
+      "@type": "MLS_Model",
+      "name": "Compressed Conv2d",
+      "description": "Custom Conv2d applies weight and bias decoders, optional straight-through rounding, and optional bias compression",
+      "architecture": "custom compressed convolution",
+      "codeReference": "layers.py:148",
+      "path": "layers.py",
+      "start_char_doc": 6142,
+      "end_char_doc": 6164,
+      "context": {
+        "prefix": ":             self.padding_mode = 'zeros'    ",
+        "suffix": "      def __init__(         self,         in_"
+      },
+      "wasDerivedFrom": "code",
+      "sourceFile": "layers.py",
+      "sourceLine": 148
+    },
+    {
+      "@id": "model_linear_compressed",
+      "@type": "MLS_Model",
+      "name": "Compressed Linear",
+      "description": "Custom Linear applies decoder modules and optional straight-through rounding to dense weights",
+      "architecture": "custom compressed dense layer",
+      "codeReference": "layers.py:200",
+      "path": "layers.py",
+      "start_char_doc": 8330,
+      "end_char_doc": 8351,
+      "context": {
+        "prefix": " is not None else None)          return out  ",
+        "suffix": "     __constants__ = ['in_features', 'out_fea"
+      },
+      "wasDerivedFrom": "code",
+      "sourceFile": "layers.py",
+      "sourceLine": 200
+    },
+    {
+      "@id": "model_conv_decoder",
+      "@type": "MLS_Model",
+      "name": "ConvDecoder",
+      "description": "Decoder maps compressed convolutional weights through learnable scale/shift matrices",
+      "architecture": "decoder",
+      "codeReference": "layers.py:245",
+      "path": "layers.py",
+      "start_char_doc": 10564,
+      "end_char_doc": 10590,
+      "context": {
+        "prefix": "t_features, self.bias is not None         )  ",
+        "suffix": "     def __init__(         self,         chan"
+      },
+      "wasDerivedFrom": "code",
+      "sourceFile": "layers.py",
+      "sourceLine": 245
+    },
+    {
+      "@id": "model_dense_decoder",
+      "@type": "MLS_Model",
+      "name": "DenseDecoder",
+      "description": "Decoder applies learnable scale and optional shift to dense weights",
+      "architecture": "decoder",
+      "codeReference": "layers.py:280",
+      "path": "layers.py",
+      "start_char_doc": 11793,
+      "end_char_doc": 11820,
+      "context": {
+        "prefix": "        return w_out.reshape(input.size())   ",
+        "suffix": "     def __init__(         self,         init"
+      },
+      "wasDerivedFrom": "code",
+      "sourceFile": "layers.py",
+      "sourceLine": 280
+    },
+    {
+      "@id": "model_bit_estimator",
+      "@type": "MLS_Model",
+      "name": "BitEstimator",
+      "description": "Probability model composed of Bitparm layers for bit estimation",
+      "architecture": "probability model",
+      "codeReference": "bitEstimator.py:39",
+      "path": "bitEstimator.py",
+      "start_char_doc": 1226,
+      "end_char_doc": 1256,
+      "context": {
+        "prefix": "   return x + torch.tanh(x) * torch.tanh(a)  ",
+        "suffix": "     '''     Estimate bit     '''     def __i"
+      },
+      "wasDerivedFrom": "code",
+      "sourceFile": "bitEstimator.py",
+      "sourceLine": 39
+    },
+    {
+      "@id": "model_resnet_cifar",
+      "@type": "MLS_Model",
+      "name": "ResNetCifar",
+      "description": "CIFAR ResNet implementation with compressed Conv2d/Linear layers and decoder groups",
+      "architecture": "ResNet",
+      "codeReference": "resnet_cifar.py:75",
+      "path": "resnet_cifar.py",
+      "start_char_doc": 2928,
+      "end_char_doc": 2957,
+      "context": {
+        "prefix": "   out = self.relu(out)         return out   ",
+        "suffix": "     def __init__(self, block, num_blocks, wi"
+      },
+      "wasDerivedFrom": "code",
+      "sourceFile": "resnet_cifar.py",
+      "sourceLine": 75
+    },
+    {
+      "@id": "model_resnet_imagenet",
+      "@type": "MLS_Model",
+      "name": "ResNet",
+      "description": "ImageNet ResNet implementation with compressed ResNet blocks and decoder groups",
+      "architecture": "ResNet",
+      "codeReference": "resnet.py:157",
+      "path": "resnet.py",
+      "start_char_doc": 5572,
+      "end_char_doc": 5596,
+      "context": {
+        "prefix": "  out = self.relu(out)          return out   ",
+        "suffix": "      def __init__(         self,         blo"
+      },
+      "wasDerivedFrom": "code",
+      "sourceFile": "resnet.py",
+      "sourceLine": 157
+    },
+    {
+      "@id": "model_vgg",
+      "@type": "MLS_Model",
+      "name": "VGG",
+      "description": "VGG implementation with compressed convolutional features and dense classifiers",
+      "architecture": "VGG",
+      "codeReference": "vgg.py:11",
+      "path": "vgg.py",
+      "start_char_doc": 272,
+      "end_char_doc": 293,
+      "context": {
+        "prefix": "t Conv2d, Linear, ConvDecoder, DenseDecoder  ",
+        "suffix": "     def __init__(         self, features: nn"
+      },
+      "wasDerivedFrom": "code",
+      "sourceFile": "vgg.py",
+      "sourceLine": 11
+    },
+    {
+      "@id": "model_blurpool_conv2d",
+      "@type": "MLS_Model",
+      "name": "BlurPoolConv2d",
+      "description": "Optional blurpool wrapper for downsampling convolutions in FFCV/ImageNet mode",
+      "architecture": "blurpool convolution",
+      "codeReference": "resnet.py:16",
+      "path": "resnet.py",
+      "start_char_doc": 431,
+      "end_char_doc": 469,
+      "context": {
+        "prefix": "    'wide_resnet50_2', 'wide_resnet101_2']   ",
+        "suffix": "     def __init__(self, conv):         super("
+      },
+      "wasDerivedFrom": "code",
+      "sourceFile": "resnet.py",
+      "sourceLine": 16
+    },
+    {
+      "@id": "training_run_main",
+      "@type": "TrainingRun",
+      "runId": "main.py training loop",
+      "entryPoint": "main.py",
+      "executionCommand": "python main.py --config configs/cifar10_resnet20.yaml",
+      "artifactsLocation": "checkpoint.save_dir",
+      "trains": [
+        {
+          "@id": "model_resnet_cifar"
+        },
+        {
+          "@id": "model_resnet_imagenet"
+        },
+        {
+          "@id": "model_vgg"
+        }
+      ],
+      "trainedOn": [
+        {
+          "@id": "dataset_cifar10"
+        },
+        {
+          "@id": "dataset_cifar100"
+        },
+        {
+          "@id": "dataset_imagenet"
+        }
+      ],
+      "usesMethod": [
+        {
+          "@id": "method_lilnetx_compression"
+        },
+        {
+          "@id": "method_entropy_regularization"
+        },
+        {
+          "@id": "method_structured_sparsification"
+        }
+      ],
+      "usesAlgorithm": [
+        {
+          "@id": "algo_cosine_lr"
+        },
+        {
+          "@id": "algo_cyclic_lr"
+        },
+        {
+          "@id": "algo_step_lr"
+        },
+        {
+          "@id": "algo_self_information_bits"
+        }
+      ],
+      "hasHyperParameter": [
+        {
+          "@id": "hp_epochs_cifar10"
+        },
+        {
+          "@id": "hp_train_batch_cifar10"
+        },
+        {
+          "@id": "hp_test_batch_cifar10"
+        },
+        {
+          "@id": "hp_max_batches_cifar10"
+        },
+        {
+          "@id": "hp_seed"
+        },
+        {
+          "@id": "hp_arch_lr"
+        },
+        {
+          "@id": "hp_prob_lr"
+        },
+        {
+          "@id": "hp_lr_schedule_type"
+        },
+        {
+          "@id": "hp_decay_steps"
+        },
+        {
+          "@id": "hp_gamma"
+        },
+        {
+          "@id": "hp_warmup_epochs"
+        },
+        {
+          "@id": "hp_optimizer"
+        },
+        {
+          "@id": "hp_momentum"
+        },
+        {
+          "@id": "hp_grad_clip"
+        },
+        {
+          "@id": "hp_weight_decay_weights"
+        },
+        {
+          "@id": "hp_group_decay_weights"
+        },
+        {
+          "@id": "hp_reg_weight"
+        },
+        {
+          "@id": "hp_reg_weight_warmup"
+        },
+        {
+          "@id": "hp_network_width_cifar"
+        },
+        {
+          "@id": "hp_boundary_cifar"
+        },
+        {
+          "@id": "hp_init_type"
+        },
+        {
+          "@id": "hp_no_shift"
+        },
+        {
+          "@id": "hp_single_prob_model"
+        },
+        {
+          "@id": "hp_compress_bias"
+        },
+        {
+          "@id": "hp_num_workers"
+        },
+        {
+          "@id": "hp_cifar_crop_size"
+        },
+        {
+          "@id": "hp_cifar_crop_padding"
+        },
+        {
+          "@id": "hp_imagenet_train_crop"
+        },
+        {
+          "@id": "hp_imagenet_eval_resize"
+        },
+        {
+          "@id": "hp_imagenet_eval_crop"
+        },
+        {
+          "@id": "hp_ffcv_min_res"
+        },
+        {
+          "@id": "hp_ffcv_max_res"
+        },
+        {
+          "@id": "hp_ffcv_test_res"
+        },
+        {
+          "@id": "hp_ffcv_start_ramp"
+        },
+        {
+          "@id": "hp_ffcv_end_ramp"
+        },
+        {
+          "@id": "hp_imagenet_train_batch"
+        },
+        {
+          "@id": "hp_imagenet_width"
+        },
+        {
+          "@id": "hp_imagenet_boundary"
+        },
+        {
+          "@id": "hp_vgg_dropout"
+        },
+        {
+          "@id": "hp_resnet18_layers"
+        },
+        {
+          "@id": "hp_resnet50_layers"
+        },
+        {
+          "@id": "hp_resnet_cifar_layers"
+        }
+      ],
+      "codeReference": "trainer.py:501",
+      "path": "trainer.py",
+      "start_char_doc": 21899,
+      "end_char_doc": 21918,
+      "context": {
+        "prefix": "     return model, prob_models, scaler       ",
+        "suffix": "          conf_wandb = config.get_conf_wandb("
+      },
+      "wasDerivedFrom": "code",
+      "sourceFile": "trainer.py",
+      "sourceLine": 501
+    },
+    {
+      "@id": "evaluation_run_validate",
+      "@type": "EvaluationRun",
+      "runId": "Trainer.validate",
+      "evaluationScript": "trainer.py",
+      "metricsFile": null,
+      "evaluates": [
+        {
+          "@id": "model_resnet_cifar"
+        },
+        {
+          "@id": "model_resnet_imagenet"
+        },
+        {
+          "@id": "model_vgg"
+        }
+      ],
+      "evaluatedOn": [
+        {
+          "@id": "dataset_cifar10"
+        },
+        {
+          "@id": "dataset_cifar100"
+        },
+        {
+          "@id": "dataset_imagenet"
+        }
+      ],
+      "achieves": [
+        {
+          "@id": "eval_top1_accuracy"
+        },
+        {
+          "@id": "eval_top5_accuracy"
+        },
+        {
+          "@id": "eval_net_bytes"
+        },
+        {
+          "@id": "eval_ac_bytes"
+        }
+      ],
+      "codeReference": "trainer.py:756",
+      "path": "trainer.py",
+      "start_char_doc": 34317,
+      "end_char_doc": 34336,
+      "context": {
+        "prefix": "net_bytes.avg/1000}, commit=False)           ",
+        "suffix": "         conf_network = config.get_conf_netwo"
+      },
+      "wasDerivedFrom": "code",
+      "sourceFile": "trainer.py",
+      "sourceLine": 756
+    },
+    {
+      "@id": "eval_top1_accuracy",
+      "@type": "MLS_Eval",
+      "name": "Top-1 accuracy",
+      "measure": "Acc@1",
+      "hasValueFloat": null,
+      "stdDev": null,
+      "confidenceInterval": null,
+      "codeReference": "trainer.py:640",
+      "path": "trainer.py",
+      "start_char_doc": 28979,
+      "end_char_doc": 28999,
+      "context": {
+        "prefix": "rageMeter('Loss_reg', ':.3e')         top1 = ",
+        "suffix": ", ':6.2f')         top5 = AverageMeter('Acc@5"
+      },
+      "wasDerivedFrom": "code",
+      "sourceFile": "trainer.py",
+      "sourceLine": 640
+    },
+    {
+      "@id": "eval_top5_accuracy",
+      "@type": "MLS_Eval",
+      "name": "Top-5 accuracy",
+      "measure": "Acc@5",
+      "hasValueFloat": null,
+      "stdDev": null,
+      "confidenceInterval": null,
+      "codeReference": "trainer.py:641",
+      "path": "trainer.py",
+      "start_char_doc": 29025,
+      "end_char_doc": 29045,
+      "context": {
+        "prefix": "verageMeter('Acc@1', ':6.2f')         top5 = ",
+        "suffix": ", ':6.2f')         net_bytes = AverageMeter('"
+      },
+      "wasDerivedFrom": "code",
+      "sourceFile": "trainer.py",
+      "sourceLine": 641
+    },
+    {
+      "@id": "eval_net_bytes",
+      "@type": "MLS_Eval",
+      "name": "Estimated network bytes",
+      "measure": "bits//8000 / net_bytes",
+      "hasValueFloat": null,
+      "stdDev": null,
+      "confidenceInterval": null,
+      "codeReference": "trainer.py:532",
+      "path": "trainer.py",
+      "start_char_doc": 23418,
+      "end_char_doc": 23431,
+      "context": {
+        "prefix": "ic=\"epoch\")             wandb.define_metric(\"",
+        "suffix": "\", step_metric=\"epoch\")             wandb.def"
+      },
+      "wasDerivedFrom": "code",
+      "sourceFile": "trainer.py",
+      "sourceLine": 532
+    },
+    {
+      "@id": "eval_ac_bytes",
+      "@type": "MLS_Eval",
+      "name": "Arithmetic-coded bytes",
+      "measure": "ac_bytes",
+      "hasValueFloat": null,
+      "stdDev": null,
+      "confidenceInterval": null,
+      "codeReference": "trainer.py:533",
+      "path": "trainer.py",
+      "start_char_doc": 23488,
+      "end_char_doc": 23496,
+      "context": {
+        "prefix": "ic=\"epoch\")             wandb.define_metric(\"",
+        "suffix": "\", step_metric=\"epoch\")             if conf_l"
+      },
+      "wasDerivedFrom": "code",
+      "sourceFile": "trainer.py",
+      "sourceLine": 533
+    },
+    {
+      "@id": "prediction_logits",
+      "@type": "PredictionSet",
+      "name": "Model logits",
+      "predictionFormat": "torch Tensor logits returned by model(images)",
+      "storageLocation": null,
+      "numInstances": null,
+      "onDatasetSplit": "train/validation batches",
+      "codeReference": "trainer.py:683",
+      "path": "trainer.py",
+      "start_char_doc": 30685,
+      "end_char_doc": 30707,
+      "context": {
+        "prefix": "bled=conf_ffcv['enabled']):                  ",
+        "suffix": "                 loss = self.criterion(output"
+      },
+      "wasDerivedFrom": "code",
+      "sourceFile": "trainer.py",
+      "sourceLine": 683
+    },
+    {
+      "@id": "hp_epochs_cifar10",
+      "@type": "MLS_HyperParameter",
+      "name": "epochs",
+      "hasValue": "10",
+      "hpCategory": "HP_Training",
+      "hpType": "NumEpochs",
+      "sourceFile": "configs/cifar10_resnet20.yaml",
+      "uncertain": false,
+      "codeReference": "configs/cifar10_resnet20.yaml:21",
+      "path": "configs/cifar10_resnet20.yaml",
+      "start_char_doc": 991,
+      "end_char_doc": 1003,
+      "context": {
+        "prefix": "y if exists  # Training hyperparams trainer: ",
+        "suffix": "   # Number of epochs of training   train_bat"
+      },
+      "wasDerivedFrom": "code",
+      "sourceLine": 21
+    },
+    {
+      "@id": "hp_train_batch_cifar10",
+      "@type": "MLS_HyperParameter",
+      "name": "train_batch",
+      "hasValue": "256",
+      "hpCategory": "HP_Training",
+      "hpType": "BatchSize",
+      "sourceFile": "configs/cifar10_resnet20.yaml",
+      "uncertain": false,
+      "codeReference": "configs/cifar10_resnet20.yaml:22",
+      "path": "configs/cifar10_resnet20.yaml",
+      "start_char_doc": 1037,
+      "end_char_doc": 1055,
+      "context": {
+        "prefix": " epochs: 10   # Number of epochs of training ",
+        "suffix": "   # Train batch size   test_batch: 256   # T"
+      },
+      "wasDerivedFrom": "code",
+      "sourceLine": 22
+    },
+    {
+      "@id": "hp_test_batch_cifar10",
+      "@type": "MLS_HyperParameter",
+      "name": "test_batch",
+      "hasValue": "256",
+      "hpCategory": "HP_Training",
+      "hpType": "BatchSize",
+      "sourceFile": "configs/cifar10_resnet20.yaml",
+      "uncertain": false,
+      "codeReference": "configs/cifar10_resnet20.yaml:23",
+      "path": "configs/cifar10_resnet20.yaml",
+      "start_char_doc": 1077,
+      "end_char_doc": 1094,
+      "context": {
+        "prefix": "ning   train_batch: 256   # Train batch size ",
+        "suffix": "   # Test batch size   max_batches: -1   # Nu"
+      },
+      "wasDerivedFrom": "code",
+      "sourceLine": 23
+    },
+    {
+      "@id": "hp_max_batches_cifar10",
+      "@type": "MLS_HyperParameter",
+      "name": "max_batches",
+      "hasValue": "-1",
+      "hpCategory": "HP_Training",
+      "hpType": "MaxSteps",
+      "sourceFile": "configs/cifar10_resnet20.yaml",
+      "uncertain": false,
+      "codeReference": "configs/cifar10_resnet20.yaml:24",
+      "path": "configs/cifar10_resnet20.yaml",
+      "start_char_doc": 1115,
+      "end_char_doc": 1132,
+      "context": {
+        "prefix": "h size   test_batch: 256   # Test batch size ",
+        "suffix": "   # Number of batches per training epoch, us"
+      },
+      "wasDerivedFrom": "code",
+      "sourceLine": 24
+    },
+    {
+      "@id": "hp_seed",
+      "@type": "MLS_HyperParameter",
+      "name": "seed",
+      "hasValue": "420",
+      "hpCategory": "HP_Training",
+      "hpType": "RandomSeed",
+      "sourceFile": "configs/cifar10_resnet20.yaml",
+      "uncertain": false,
+      "codeReference": "configs/cifar10_resnet20.yaml:49",
+      "path": "configs/cifar10_resnet20.yaml",
+      "start_char_doc": 2416,
+      "end_char_doc": 2427,
+      "context": {
+        "prefix": "ining  # Miscellaneous common params common: ",
+        "suffix": "   # Random seed for training (TODO: exact re"
+      },
+      "wasDerivedFrom": "code",
+      "sourceLine": 49
+    },
+    {
+      "@id": "hp_arch_lr",
+      "@type": "MLS_HyperParameter",
+      "name": "arch_lr",
+      "hasValue": "0.01",
+      "hpCategory": "HP_Optimization",
+      "hpType": "LearningRate",
+      "sourceFile": "configs/cifar10_resnet20.yaml",
+      "uncertain": false,
+      "codeReference": "configs/cifar10_resnet20.yaml:39",
+      "path": "configs/cifar10_resnet20.yaml",
+      "start_char_doc": 1837,
+      "end_char_doc": 1852,
+      "context": {
+        "prefix": "AM  # LR Scheduling hyperparams lr_schedule: ",
+        "suffix": "   # LR for architecture as well as weight de"
+      },
+      "wasDerivedFrom": "code",
+      "sourceLine": 39
+    },
+    {
+      "@id": "hp_prob_lr",
+      "@type": "MLS_HyperParameter",
+      "name": "prob_lr",
+      "hasValue": "1.0e-4",
+      "hpCategory": "HP_Optimization",
+      "hpType": "LearningRate",
+      "sourceFile": "configs/cifar10_resnet20.yaml",
+      "uncertain": false,
+      "codeReference": "configs/cifar10_resnet20.yaml:44",
+      "path": "configs/cifar10_resnet20.yaml",
+      "start_char_doc": 2201,
+      "end_char_doc": 2218,
+      "context": {
+        "prefix": " Number of epochs for linearly warming up LR ",
+        "suffix": "   # LR for probability model parameters   pl"
+      },
+      "wasDerivedFrom": "code",
+      "sourceLine": 44
+    },
+    {
+      "@id": "hp_lr_schedule_type",
+      "@type": "MLS_HyperParameter",
+      "name": "type",
+      "hasValue": "cosine",
+      "hpCategory": "HP_Optimization",
+      "hpType": "DecayRate",
+      "sourceFile": "configs/cifar10_resnet20.yaml",
+      "uncertain": false,
+      "codeReference": "configs/cifar10_resnet20.yaml:40",
+      "path": "configs/cifar10_resnet20.yaml",
+      "start_char_doc": 1915,
+      "end_char_doc": 1931,
+      "context": {
+        "prefix": "ecture as well as weight decoders parameters ",
+        "suffix": "   # Type of LR schedule, choose from ['nstep"
+      },
+      "wasDerivedFrom": "code",
+      "sourceLine": 40
+    },
+    {
+      "@id": "hp_decay_steps",
+      "@type": "MLS_HyperParameter",
+      "name": "decay_steps",
+      "hasValue": "[75, 125]",
+      "hpCategory": "HP_Optimization",
+      "hpType": "DecayRate",
+      "sourceFile": "configs/cifar10_resnet20.yaml",
+      "uncertain": false,
+      "codeReference": "configs/cifar10_resnet20.yaml:41",
+      "path": "configs/cifar10_resnet20.yaml",
+      "start_char_doc": 1999,
+      "end_char_doc": 2023,
+      "context": {
+        "prefix": "e, choose from ['nstep', 'cosine', 'cyclic'] ",
+        "suffix": "   # Epochs to decay LR if schedule is nstep "
+      },
+      "wasDerivedFrom": "code",
+      "sourceLine": 41
+    },
+    {
+      "@id": "hp_gamma",
+      "@type": "MLS_HyperParameter",
+      "name": "gamma",
+      "hasValue": "0.1",
+      "hpCategory": "HP_Optimization",
+      "hpType": "DecayRate",
+      "sourceFile": "configs/cifar10_resnet20.yaml",
+      "uncertain": false,
+      "codeReference": "configs/cifar10_resnet20.yaml:42",
+      "path": "configs/cifar10_resnet20.yaml",
+      "start_char_doc": 2068,
+      "end_char_doc": 2080,
+      "context": {
+        "prefix": "   # Epochs to decay LR if schedule is nstep ",
+        "suffix": "   # Decay step parameter for LR if schedule "
+      },
+      "wasDerivedFrom": "code",
+      "sourceLine": 42
+    },
+    {
+      "@id": "hp_warmup_epochs",
+      "@type": "MLS_HyperParameter",
+      "name": "warmup_epochs",
+      "hasValue": "5",
+      "hpCategory": "HP_Optimization",
+      "hpType": "WarmupSteps",
+      "sourceFile": "configs/cifar10_resnet20.yaml",
+      "uncertain": false,
+      "codeReference": "configs/cifar10_resnet20.yaml:43",
+      "path": "configs/cifar10_resnet20.yaml",
+      "start_char_doc": 2134,
+      "end_char_doc": 2152,
+      "context": {
+        "prefix": "y step parameter for LR if schedule is nstep ",
+        "suffix": "   # Number of epochs for linearly warming up"
+      },
+      "wasDerivedFrom": "code",
+      "sourceLine": 43
+    },
+    {
+      "@id": "hp_optimizer",
+      "@type": "MLS_HyperParameter",
+      "name": "optimizer.name",
+      "hasValue": "adam",
+      "hpCategory": "HP_Optimization",
+      "hpType": "HP_Optimization",
+      "sourceFile": "configs/cifar10_resnet20.yaml",
+      "uncertain": true,
+      "codeReference": "configs/cifar10_resnet20.yaml:110",
+      "path": "configs/cifar10_resnet20.yaml",
+      "start_char_doc": 5764,
+      "end_char_doc": 5778,
+      "context": {
+        "prefix": "ity-norm  # Optimizer hyperparams optimizer: ",
+        "suffix": "   # Type of optimizer   momentum: 0.9   # Mo"
+      },
+      "wasDerivedFrom": "code",
+      "sourceLine": 110
+    },
+    {
+      "@id": "hp_momentum",
+      "@type": "MLS_HyperParameter",
+      "name": "momentum",
+      "hasValue": "0.9",
+      "hpCategory": "HP_Optimization",
+      "hpType": "Momentum",
+      "sourceFile": "configs/cifar10_resnet20.yaml",
+      "uncertain": false,
+      "codeReference": "configs/cifar10_resnet20.yaml:111",
+      "path": "configs/cifar10_resnet20.yaml",
+      "start_char_doc": 5801,
+      "end_char_doc": 5816,
+      "context": {
+        "prefix": "imizer:   name: 'adam'   # Type of optimizer ",
+        "suffix": "   # Momentum parameter for SGD   use_nestero"
+      },
+      "wasDerivedFrom": "code",
+      "sourceLine": 111
+    },
+    {
+      "@id": "hp_grad_clip",
+      "@type": "MLS_HyperParameter",
+      "name": "grad_clip",
+      "hasValue": "0.0",
+      "hpCategory": "HP_Optimization",
+      "hpType": "HP_Optimization",
+      "sourceFile": "configs/cifar10_resnet20.yaml",
+      "uncertain": true,
+      "codeReference": "configs/cifar10_resnet20.yaml:113",
+      "path": "configs/cifar10_resnet20.yaml",
+      "start_char_doc": 5907,
+      "end_char_doc": 5923,
+      "context": {
+        "prefix": ": False   # Enable Nesterov momentum for SGD ",
+        "suffix": "   # Clip gradient based on L2-norm of weight"
+      },
+      "wasDerivedFrom": "code",
+      "sourceLine": 113
+    },
+    {
+      "@id": "hp_weight_decay_weights",
+      "@type": "MLS_HyperParameter",
+      "name": "losses.wd.weights",
+      "hasValue": "1.0e-6",
+      "hpCategory": "HP_Optimization",
+      "hpType": "WeightDecay",
+      "sourceFile": "configs/cifar10_resnet20.yaml",
+      "uncertain": false,
+      "codeReference": "configs/cifar10_resnet20.yaml:97",
+      "path": "configs/cifar10_resnet20.yaml",
+      "start_char_doc": 5134,
+      "end_char_doc": 5153,
+      "context": {
+        "prefix": "loss weight   wd:   # L2 weight decay values ",
+        "suffix": "   # Conv/FC weight params     bn: 0.0   # Ba"
+      },
+      "wasDerivedFrom": "code",
+      "sourceLine": 97
+    },
+    {
+      "@id": "hp_group_decay_weights",
+      "@type": "MLS_HyperParameter",
+      "name": "losses.gd.weights",
+      "hasValue": "1.0e-6",
+      "hpCategory": "HP_Optimization",
+      "hpType": "WeightDecay",
+      "sourceFile": "configs/cifar10_resnet20.yaml",
+      "uncertain": false,
+      "codeReference": "configs/cifar10_resnet20.yaml:103",
+      "path": "configs/cifar10_resnet20.yaml",
+      "start_char_doc": 5398,
+      "end_char_doc": 5417,
+      "context": {
+        "prefix": "to apply L2 reg   gd:   # Group decay values ",
+        "suffix": "   # Conv/FC weight params     modules: ['con"
+      },
+      "wasDerivedFrom": "code",
+      "sourceLine": 103
+    },
+    {
+      "@id": "hp_reg_weight",
+      "@type": "MLS_HyperParameter",
+      "name": "reg_weight",
+      "hasValue": "1.0e-4",
+      "hpCategory": "HP_Optimization",
+      "hpType": "HP_Optimization",
+      "sourceFile": "configs/cifar10_resnet20.yaml",
+      "uncertain": true,
+      "codeReference": "configs/cifar10_resnet20.yaml:94",
+      "path": "configs/cifar10_resnet20.yaml",
+      "start_char_doc": 4953,
+      "end_char_doc": 4973,
+      "context": {
+        "prefix": "r if FFCV  # Loss weights and params losses: ",
+        "suffix": "    # Entropy regularization loss weight   re"
+      },
+      "wasDerivedFrom": "code",
+      "sourceLine": 94
+    },
+    {
+      "@id": "hp_reg_weight_warmup",
+      "@type": "MLS_HyperParameter",
+      "name": "reg_weight_warmup",
+      "hasValue": "0",
+      "hpCategory": "HP_Optimization",
+      "hpType": "WarmupSteps",
+      "sourceFile": "configs/cifar10_resnet20.yaml",
+      "uncertain": false,
+      "codeReference": "configs/cifar10_resnet20.yaml:95",
+      "path": "configs/cifar10_resnet20.yaml",
+      "start_char_doc": 5014,
+      "end_char_doc": 5036,
+      "context": {
+        "prefix": "0e-4    # Entropy regularization loss weight ",
+        "suffix": "   # Linear warmup epochs for entropy regular"
+      },
+      "wasDerivedFrom": "code",
+      "sourceLine": 95
+    },
+    {
+      "@id": "hp_network_width_cifar",
+      "@type": "MLS_HyperParameter",
+      "name": "network.width",
+      "hasValue": "4",
+      "hpCategory": "HP_Architecture",
+      "hpType": "HiddenSize",
+      "sourceFile": "configs/cifar10_resnet20.yaml",
+      "uncertain": false,
+      "codeReference": "configs/cifar10_resnet20.yaml:79",
+      "path": "configs/cifar10_resnet20.yaml",
+      "start_char_doc": 3959,
+      "end_char_doc": 3969,
+      "context": {
+        "prefix": "raining with no weight quantization/decoding ",
+        "suffix": "    # Width hyperparameter for resnets   # In"
+      },
+      "wasDerivedFrom": "code",
+      "sourceLine": 79
+    },
+    {
+      "@id": "hp_boundary_cifar",
+      "@type": "MLS_HyperParameter",
+      "name": "network.boundary",
+      "hasValue": "3",
+      "hpCategory": "HP_Architecture",
+      "hpType": "UnknownArchitectureHP",
+      "sourceFile": "configs/cifar10_resnet20.yaml",
+      "uncertain": false,
+      "codeReference": "configs/cifar10_resnet20.yaml:86",
+      "path": "configs/cifar10_resnet20.yaml",
+      "start_char_doc": 4445,
+      "end_char_doc": 4458,
+      "context": {
+        "prefix": "fan_out'   # Initialization mode for weights ",
+        "suffix": "   # Boundary value used for controlling weig"
+      },
+      "wasDerivedFrom": "code",
+      "sourceLine": 86
+    },
+    {
+      "@id": "hp_init_type",
+      "@type": "MLS_HyperParameter",
+      "name": "network.init_type",
+      "hasValue": "random",
+      "hpCategory": "HP_Architecture",
+      "hpType": "UnknownArchitectureHP",
+      "sourceFile": "configs/cifar10_resnet20.yaml",
+      "uncertain": false,
+      "codeReference": "configs/cifar10_resnet20.yaml:83",
+      "path": "configs/cifar10_resnet20.yaml",
+      "start_char_doc": 4304,
+      "end_char_doc": 4325,
+      "context": {
+        "prefix": "nd corresponding layer weight based on paper ",
+        "suffix": "      compress_bias: False   # Quantize and d"
+      },
+      "wasDerivedFrom": "code",
+      "sourceLine": 83
+    },
+    {
+      "@id": "hp_no_shift",
+      "@type": "MLS_HyperParameter",
+      "name": "network.no_shift",
+      "hasValue": "True",
+      "hpCategory": "HP_Architecture",
+      "hpType": "UnknownArchitectureHP",
+      "sourceFile": "configs/cifar10_resnet20.yaml",
+      "uncertain": false,
+      "codeReference": "configs/cifar10_resnet20.yaml:87",
+      "path": "configs/cifar10_resnet20.yaml",
+      "start_char_doc": 4557,
+      "end_char_doc": 4573,
+      "context": {
+        "prefix": "ce, refer to paper supplementary for details ",
+        "suffix": "   # Disable shift parameter if true. Necessa"
+      },
+      "wasDerivedFrom": "code",
+      "sourceLine": 87
+    },
+    {
+      "@id": "hp_single_prob_model",
+      "@type": "MLS_HyperParameter",
+      "name": "network.single_prob_model",
+      "hasValue": "False",
+      "hpCategory": "HP_Architecture",
+      "hpType": "UnknownArchitectureHP",
+      "sourceFile": "configs/cifar10_resnet20.yaml",
+      "uncertain": false,
+      "codeReference": "configs/cifar10_resnet20.yaml:88",
+      "path": "configs/cifar10_resnet20.yaml",
+      "start_char_doc": 4695,
+      "end_char_doc": 4721,
+      "context": {
+        "prefix": " terms of slice sparsity for decoded weights ",
+        "suffix": "   # Use single probability model for every d"
+      },
+      "wasDerivedFrom": "code",
+      "sourceLine": 88
+    },
+    {
+      "@id": "hp_compress_bias",
+      "@type": "MLS_HyperParameter",
+      "name": "network.compress_bias",
+      "hasValue": "False",
+      "hpCategory": "HP_Architecture",
+      "hpType": "UnknownArchitectureHP",
+      "sourceFile": "configs/cifar10_resnet20.yaml",
+      "uncertain": false,
+      "codeReference": "configs/cifar10_resnet20.yaml:84",
+      "path": "configs/cifar10_resnet20.yaml",
+      "start_char_doc": 4329,
+      "end_char_doc": 4351,
+      "context": {
+        "prefix": "ight based on paper   init_type: 'random'    ",
+        "suffix": "   # Quantize and decode biases as well   mod"
+      },
+      "wasDerivedFrom": "code",
+      "sourceLine": 84
+    },
+    {
+      "@id": "hp_num_workers",
+      "@type": "MLS_HyperParameter",
+      "name": "dataset.num_workers",
+      "hasValue": "4",
+      "hpCategory": "HP_Training",
+      "hpType": "NumWorkers",
+      "sourceFile": "configs/cifar10_resnet20.yaml",
+      "uncertain": false,
+      "codeReference": "configs/cifar10_resnet20.yaml:73",
+      "path": "configs/cifar10_resnet20.yaml",
+      "start_char_doc": 3641,
+      "end_char_doc": 3657,
+      "context": {
+        "prefix": "taining test data (or root filename if FFCV) ",
+        "suffix": "   # Number of workers for dataloading  # Net"
+      },
+      "wasDerivedFrom": "code",
+      "sourceLine": 73
+    },
+    {
+      "@id": "hp_cifar_crop_size",
+      "@type": "MLS_HyperParameter",
+      "name": "RandomCrop size",
+      "hasValue": "32",
+      "hpCategory": "HP_Data",
+      "hpType": "MaxSequenceLength",
+      "sourceFile": "trainer.py",
+      "uncertain": false,
+      "codeReference": "trainer.py:215",
+      "path": "trainer.py",
+      "start_char_doc": 8089,
+      "end_char_doc": 8125,
+      "context": {
+        "prefix": "train = transforms.Compose([                 ",
+        "suffix": ",                 transforms.RandomHorizontal"
+      },
+      "wasDerivedFrom": "code",
+      "sourceLine": 215
+    },
+    {
+      "@id": "hp_cifar_crop_padding",
+      "@type": "MLS_HyperParameter",
+      "name": "RandomCrop padding",
+      "hasValue": "4",
+      "hpCategory": "HP_Data",
+      "hpType": "HP_Data",
+      "sourceFile": "trainer.py",
+      "uncertain": true,
+      "codeReference": "trainer.py:215",
+      "path": "trainer.py",
+      "start_char_doc": 8089,
+      "end_char_doc": 8125,
+      "context": {
+        "prefix": "train = transforms.Compose([                 ",
+        "suffix": ",                 transforms.RandomHorizontal"
+      },
+      "wasDerivedFrom": "code",
+      "sourceLine": 215
+    },
+    {
+      "@id": "hp_imagenet_train_crop",
+      "@type": "MLS_HyperParameter",
+      "name": "RandomResizedCrop size",
+      "hasValue": "224",
+      "hpCategory": "HP_Data",
+      "hpType": "MaxSequenceLength",
+      "sourceFile": "trainer.py",
+      "uncertain": false,
+      "codeReference": "trainer.py:223",
+      "path": "trainer.py",
+      "start_char_doc": 8565,
+      "end_char_doc": 8598,
+      "context": {
+        "prefix": "       transform_train = transforms.Compose([",
+        "suffix": ",                                            "
+      },
+      "wasDerivedFrom": "code",
+      "sourceLine": 223
+    },
+    {
+      "@id": "hp_imagenet_eval_resize",
+      "@type": "MLS_HyperParameter",
+      "name": "Resize size",
+      "hasValue": "256",
+      "hpCategory": "HP_Data",
+      "hpType": "MaxSequenceLength",
+      "sourceFile": "trainer.py",
+      "uncertain": false,
+      "codeReference": "trainer.py:275",
+      "path": "trainer.py",
+      "start_char_doc": 11041,
+      "end_char_doc": 11063,
+      "context": {
+        "prefix": "                                             ",
+        "suffix": ",                                            "
+      },
+      "wasDerivedFrom": "code",
+      "sourceLine": 275
+    },
+    {
+      "@id": "hp_imagenet_eval_crop",
+      "@type": "MLS_HyperParameter",
+      "name": "CenterCrop size",
+      "hasValue": "224",
+      "hpCategory": "HP_Data",
+      "hpType": "MaxSequenceLength",
+      "sourceFile": "trainer.py",
+      "uncertain": false,
+      "codeReference": "trainer.py:276",
+      "path": "trainer.py",
+      "start_char_doc": 11110,
+      "end_char_doc": 11136,
+      "context": {
+        "prefix": "                                             ",
+        "suffix": ",                                            "
+      },
+      "wasDerivedFrom": "code",
+      "sourceLine": 276
+    },
+    {
+      "@id": "hp_ffcv_min_res",
+      "@type": "MLS_HyperParameter",
+      "name": "ffcv.min_res",
+      "hasValue": "168",
+      "hpCategory": "HP_Data",
+      "hpType": "MaxSequenceLength",
+      "sourceFile": "configs/imagenet_resnet18_ffcv.yaml",
+      "uncertain": false,
+      "codeReference": "configs/imagenet_resnet18_ffcv.yaml:29",
+      "path": "configs/imagenet_resnet18_ffcv.yaml",
+      "start_char_doc": 1316,
+      "end_char_doc": 1330,
+      "context": {
+        "prefix": "nable FFCV training for ImageNet experiments ",
+        "suffix": "   # Minimum starting resolution of images   "
+      },
+      "wasDerivedFrom": "code",
+      "sourceLine": 29
+    },
+    {
+      "@id": "hp_ffcv_max_res",
+      "@type": "MLS_HyperParameter",
+      "name": "ffcv.max_res",
+      "hasValue": "192",
+      "hpCategory": "HP_Data",
+      "hpType": "MaxSequenceLength",
+      "sourceFile": "configs/imagenet_resnet18_ffcv.yaml",
+      "uncertain": false,
+      "codeReference": "configs/imagenet_resnet18_ffcv.yaml:30",
+      "path": "configs/imagenet_resnet18_ffcv.yaml",
+      "start_char_doc": 1373,
+      "end_char_doc": 1387,
+      "context": {
+        "prefix": "68   # Minimum starting resolution of images ",
+        "suffix": "   # Maximum resolution of images    test_res"
+      },
+      "wasDerivedFrom": "code",
+      "sourceLine": 30
+    },
+    {
+      "@id": "hp_ffcv_test_res",
+      "@type": "MLS_HyperParameter",
+      "name": "ffcv.test_res",
+      "hasValue": "256",
+      "hpCategory": "HP_Data",
+      "hpType": "MaxSequenceLength",
+      "sourceFile": "configs/imagenet_resnet18_ffcv.yaml",
+      "uncertain": false,
+      "codeReference": "configs/imagenet_resnet18_ffcv.yaml:31",
+      "path": "configs/imagenet_resnet18_ffcv.yaml",
+      "start_char_doc": 1422,
+      "end_char_doc": 1437,
+      "context": {
+        "prefix": "x_res: 192   # Maximum resolution of images  ",
+        "suffix": "   # Test-time resolution of images   start_r"
+      },
+      "wasDerivedFrom": "code",
+      "sourceLine": 31
+    },
+    {
+      "@id": "hp_ffcv_start_ramp",
+      "@type": "MLS_HyperParameter",
+      "name": "ffcv.start_ramp",
+      "hasValue": "23",
+      "hpCategory": "HP_Data",
+      "hpType": "HP_Data",
+      "sourceFile": "configs/imagenet_resnet18_ffcv.yaml",
+      "uncertain": true,
+      "codeReference": "configs/imagenet_resnet18_ffcv.yaml:32",
+      "path": "configs/imagenet_resnet18_ffcv.yaml",
+      "start_char_doc": 1473,
+      "end_char_doc": 1489,
+      "context": {
+        "prefix": "_res: 256   # Test-time resolution of images ",
+        "suffix": "   # When to start interpolating resolution b"
+      },
+      "wasDerivedFrom": "code",
+      "sourceLine": 32
+    },
+    {
+      "@id": "hp_ffcv_end_ramp",
+      "@type": "MLS_HyperParameter",
+      "name": "ffcv.end_ramp",
+      "hasValue": "32",
+      "hpCategory": "HP_Data",
+      "hpType": "HP_Data",
+      "sourceFile": "configs/imagenet_resnet18_ffcv.yaml",
+      "uncertain": true,
+      "codeReference": "configs/imagenet_resnet18_ffcv.yaml:33",
+      "path": "configs/imagenet_resnet18_ffcv.yaml",
+      "start_char_doc": 1561,
+      "end_char_doc": 1575,
+      "context": {
+        "prefix": "ating resolution between min_res and max_res ",
+        "suffix": "   # When to stop interpolating resolution be"
+      },
+      "wasDerivedFrom": "code",
+      "sourceLine": 33
+    },
+    {
+      "@id": "hp_imagenet_train_batch",
+      "@type": "MLS_HyperParameter",
+      "name": "imagenet train_batch",
+      "hasValue": "128",
+      "hpCategory": "HP_Training",
+      "hpType": "BatchSize",
+      "sourceFile": "configs/imagenet_resnet18.yaml",
+      "uncertain": false,
+      "codeReference": "configs/imagenet_resnet18.yaml:22",
+      "path": "configs/imagenet_resnet18.yaml",
+      "start_char_doc": 1039,
+      "end_char_doc": 1057,
+      "context": {
+        "prefix": " epochs: 10   # Number of epochs of training ",
+        "suffix": "   # Train batch size   test_batch: 256   # T"
+      },
+      "wasDerivedFrom": "code",
+      "sourceLine": 22
+    },
+    {
+      "@id": "hp_imagenet_width",
+      "@type": "MLS_HyperParameter",
+      "name": "imagenet network.width",
+      "hasValue": "1",
+      "hpCategory": "HP_Architecture",
+      "hpType": "HiddenSize",
+      "sourceFile": "configs/imagenet_resnet18.yaml",
+      "uncertain": false,
+      "codeReference": "configs/imagenet_resnet18.yaml:80",
+      "path": "configs/imagenet_resnet18.yaml",
+      "start_char_doc": 3970,
+      "end_char_doc": 3980,
+      "context": {
+        "prefix": "raining with no weight quantization/decoding ",
+        "suffix": "    # Width hyperparameter for resnets   # In"
+      },
+      "wasDerivedFrom": "code",
+      "sourceLine": 80
+    },
+    {
+      "@id": "hp_imagenet_boundary",
+      "@type": "MLS_HyperParameter",
+      "name": "imagenet network.boundary",
+      "hasValue": "1",
+      "hpCategory": "HP_Architecture",
+      "hpType": "UnknownArchitectureHP",
+      "sourceFile": "configs/imagenet_resnet18.yaml",
+      "uncertain": false,
+      "codeReference": "configs/imagenet_resnet18.yaml:87",
+      "path": "configs/imagenet_resnet18.yaml",
+      "start_char_doc": 4463,
+      "end_char_doc": 4476,
+      "context": {
+        "prefix": "fan_out'   # Initialization mode for weights ",
+        "suffix": "   # Boundary value used for controlling weig"
+      },
+      "wasDerivedFrom": "code",
+      "sourceLine": 87
+    },
+    {
+      "@id": "hp_vgg_dropout",
+      "@type": "MLS_HyperParameter",
+      "name": "VGG dropout",
+      "hasValue": "0.5",
+      "hpCategory": "HP_Architecture",
+      "hpType": "Dropout",
+      "sourceFile": "vgg.py",
+      "uncertain": false,
+      "codeReference": "vgg.py:14",
+      "path": "vgg.py",
+      "start_char_doc": 495,
+      "end_char_doc": 515,
+      "context": {
+        "prefix": " = 1000,          init_weights: bool = True, ",
+        "suffix": ", mode: str = 'fan_out', vanilla: bool = Fals"
+      },
+      "wasDerivedFrom": "code",
+      "sourceLine": 14
+    },
+    {
+      "@id": "hp_resnet18_layers",
+      "@type": "MLS_HyperParameter",
+      "name": "ResNet18 layers",
+      "hasValue": "[2, 2, 2, 2]",
+      "hpCategory": "HP_Architecture",
+      "hpType": "NumLayers",
+      "sourceFile": "trainer.py",
+      "uncertain": false,
+      "codeReference": "trainer.py:430",
+      "path": "trainer.py",
+      "start_char_doc": 18057,
+      "end_char_doc": 18078,
+      "context": {
+        "prefix": "twork['name'] == 'resnet18':                 ",
+        "suffix": "                 block = BasicBlock          "
+      },
+      "wasDerivedFrom": "code",
+      "sourceLine": 430
+    },
+    {
+      "@id": "hp_resnet50_layers",
+      "@type": "MLS_HyperParameter",
+      "name": "ResNet50 layers",
+      "hasValue": "[3, 4, 6, 3]",
+      "hpCategory": "HP_Architecture",
+      "hpType": "NumLayers",
+      "sourceFile": "trainer.py",
+      "uncertain": false,
+      "codeReference": "trainer.py:433",
+      "path": "trainer.py",
+      "start_char_doc": 18183,
+      "end_char_doc": 18204,
+      "context": {
+        "prefix": "twork['name'] == 'resnet50':                 ",
+        "suffix": "                 block = Bottleneck          "
+      },
+      "wasDerivedFrom": "code",
+      "sourceLine": 433
+    },
+    {
+      "@id": "hp_resnet_cifar_layers",
+      "@type": "MLS_HyperParameter",
+      "name": "CIFAR ResNet layer blocks",
+      "hasValue": "[3,3,3]",
+      "hpCategory": "HP_Architecture",
+      "hpType": "NumLayers",
+      "sourceFile": "trainer.py",
+      "uncertain": false,
+      "codeReference": "trainer.py:420",
+      "path": "trainer.py",
+      "start_char_doc": 17082,
+      "end_char_doc": 17120,
+      "context": {
+        "prefix": "onf_network['name']:                 model = ",
+        "suffix": ", width=conf_network['width'], init_type = co"
+      },
+      "wasDerivedFrom": "code",
+      "sourceLine": 420
+    }
+  ]
+}

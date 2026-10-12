@@ -1,0 +1,2782 @@
+{
+  "@context": {
+    "mls": "http://example.org/ontology/mls#",
+    "schema": "http://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "SoftwareRepository": "mls:SoftwareRepository",
+    "MLS_Implementation": "mls:MLS_Implementation",
+    "Dependency": "mls:Dependency",
+    "Environment": "mls:Environment",
+    "DataProcessingStep": "mls:DataProcessingStep",
+    "TrainingRun": "mls:TrainingRun",
+    "EvaluationRun": "mls:EvaluationRun",
+    "PredictionSet": "mls:PredictionSet",
+    "MLS_HyperParameter": "mls:MLS_HyperParameter",
+    "MLS_Dataset": "mls:MLS_Dataset",
+    "DataSource": "mls:DataSource",
+    "Method": "mls:Method",
+    "MLS_Model": "mls:MLS_Model",
+    "MLS_Algorithm": "mls:MLS_Algorithm",
+    "Prompt": "mls:Prompt",
+    "MLS_Eval": "mls:MLS_Eval",
+    "Person": "schema:Person",
+    "Study": "schema:ScholarlyArticle",
+    "name": "schema:name",
+    "identifier": "schema:identifier",
+    "description": "schema:description",
+    "url": {
+      "@id": "schema:url",
+      "@type": "xsd:anyURI"
+    },
+    "version": "schema:version",
+    "license": "schema:license",
+    "programmingLanguage": "schema:programmingLanguage",
+    "dateModified": {
+      "@id": "schema:dateModified",
+      "@type": "xsd:dateTime"
+    },
+    "documentationUrl": {
+      "@id": "mls:documentationUrl",
+      "@type": "xsd:anyURI"
+    },
+    "owner": "mls:owner",
+    "platform": "mls:platform",
+    "codeRepository": {
+      "@id": "mls:codeRepository",
+      "@type": "xsd:anyURI"
+    },
+    "framework": "mls:framework",
+    "entryPoint": "mls:entryPoint",
+    "entryPointCommand": "mls:entryPointCommand",
+    "executionCommand": "mls:executionCommand",
+    "commitHash": "mls:commitHash",
+    "branch": "mls:branch",
+    "packageName": "mls:packageName",
+    "dependencyType": "mls:dependencyType",
+    "isOptional": {
+      "@id": "mls:isOptional",
+      "@type": "xsd:boolean"
+    },
+    "pythonVersion": "mls:pythonVersion",
+    "requirementsFile": "mls:requirementsFile",
+    "isDockerized": {
+      "@id": "mls:isDockerized",
+      "@type": "xsd:boolean"
+    },
+    "hasValue": {
+      "@id": "mls:hasValue",
+      "@type": "xsd:string"
+    },
+    "hpCategory": "mls:hpCategory",
+    "hpType": "mls:hpType",
+    "sourceFile": "mls:sourceFile",
+    "sourceLine": {
+      "@id": "mls:sourceLine",
+      "@type": "xsd:integer"
+    },
+    "uncertain": {
+      "@id": "mls:uncertain",
+      "@type": "xsd:boolean"
+    },
+    "transformationType": "mls:transformationType",
+    "codeReference": "mls:codeReference",
+    "runId": "mls:runId",
+    "logFile": "mls:logFile",
+    "artifactsLocation": "mls:artifactsLocation",
+    "split": "mls:split",
+    "evaluationScript": "mls:evaluationScript",
+    "metricsFile": "mls:metricsFile",
+    "predictionFormat": "mls:predictionFormat",
+    "storageLocation": "mls:storageLocation",
+    "numInstances": {
+      "@id": "mls:numInstances",
+      "@type": "xsd:integer"
+    },
+    "onDatasetSplit": "mls:onDatasetSplit",
+    "contains": {
+      "@id": "mls:contains",
+      "@type": "@id"
+    },
+    "supports": {
+      "@id": "mls:supports",
+      "@type": "@id"
+    },
+    "runsIn": {
+      "@id": "mls:runsIn",
+      "@type": "@id"
+    },
+    "requires": {
+      "@id": "mls:requires",
+      "@type": "@id"
+    },
+    "trainedOn": {
+      "@id": "mls:trainedOn",
+      "@type": "@id"
+    },
+    "evaluatedOn": {
+      "@id": "mls:evaluatedOn",
+      "@type": "@id"
+    },
+    "achieves": {
+      "@id": "mls:achieves",
+      "@type": "@id"
+    },
+    "subMethod": {
+      "@id": "mls:subMethod",
+      "@type": "@id"
+    },
+    "inputDataset": {
+      "@id": "mls:inputDataset",
+      "@type": "@id"
+    },
+    "outputDataset": {
+      "@id": "mls:outputDataset",
+      "@type": "@id"
+    },
+    "trains": {
+      "@id": "mls:trains",
+      "@type": "@id"
+    },
+    "evaluates": {
+      "@id": "mls:evaluates",
+      "@type": "@id"
+    },
+    "appliedTo": {
+      "@id": "mls:appliedTo",
+      "@type": "@id"
+    },
+    "producedBy": {
+      "@id": "mls:producedBy",
+      "@type": "@id"
+    },
+    "prov-executedBy": {
+      "@id": "mls:prov-executedBy",
+      "@type": "@id"
+    },
+    "prov-generated": {
+      "@id": "mls:prov-generated",
+      "@type": "@id"
+    },
+    "used": {
+      "@id": "prov:used",
+      "@type": "@id"
+    },
+    "wasGeneratedBy": {
+      "@id": "prov:wasGeneratedBy",
+      "@type": "@id"
+    },
+    "wasDerivedFrom": "prov:wasDerivedFrom",
+    "wasAssociatedWith": {
+      "@id": "prov:wasAssociatedWith",
+      "@type": "@id"
+    }
+  },
+  "@graph": [
+    {
+      "@id": "repo_xiangli1999_prefixtuning",
+      "@type": "SoftwareRepository",
+      "name": "PrefixTuning",
+      "url": "https://github.com/XiangLi1999/PrefixTuning",
+      "owner": "XiangLi1999",
+      "platform": "GitHub",
+      "programmingLanguage": "Python",
+      "version": "6519d30e69b15a180f23e2cd41b766d3f62b8e82",
+      "license": "Apache-2.0 for vendored transformers; repository-level license not declared in README",
+      "dateModified": "2021-05-27T12:54:40-07:00",
+      "documentationUrl": "https://github.com/XiangLi1999/PrefixTuning#readme",
+      "contains": [
+        {
+          "@id": "impl_gpt2_prefix_tuning"
+        },
+        {
+          "@id": "impl_seq2seq_prefix_tuning"
+        }
+      ],
+      "supports": [
+        {
+          "@id": "env_prefixtuning_python"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:1",
+      "path": "README.md",
+      "start_char_doc": 2,
+      "end_char_doc": 15,
+      "context": {
+        "prefix": "#",
+        "suffix": "## Files: . ├── gpt2"
+      }
+    },
+    {
+      "@id": "study_prefix_tuning_optimizing_continuous_prompts_for_generation",
+      "@type": "Study",
+      "name": "Prefix-Tuning: Optimizing Continuous Prompts for Generation",
+      "description": "Repository implementation associated with the Prefix-Tuning paper.",
+      "authors": [
+        {
+          "@id": "person_xiang_lisa_li"
+        },
+        {
+          "@id": "person_percy_liang"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:87",
+      "path": "README.md",
+      "start_char_doc": 2957,
+      "end_char_doc": 3016,
+      "context": {
+        "prefix": "our paper. ```bibtex @misc{li2021prefixtuning, title={",
+        "suffix": "}, author={Xiang Lisa Li and"
+      }
+    },
+    {
+      "@id": "person_xiang_lisa_li",
+      "@type": "Person",
+      "name": "Xiang Lisa Li",
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:88",
+      "path": "README.md",
+      "start_char_doc": 3034,
+      "end_char_doc": 3047,
+      "context": {
+        "prefix": "Continuous Prompts for Generation}, author={",
+        "suffix": "and Percy Liang}, year={2021}, eprint={2101.00190},"
+      }
+    },
+    {
+      "@id": "person_percy_liang",
+      "@type": "Person",
+      "name": "Percy Liang",
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:88",
+      "path": "README.md",
+      "start_char_doc": 3052,
+      "end_char_doc": 3063,
+      "context": {
+        "prefix": "Generation}, author={Xiang Lisa Li and",
+        "suffix": "}, year={2021}, eprint={2101.00190}, archivePrefix={arXiv}, primaryClass={cs.CL}"
+      }
+    },
+    {
+      "@id": "impl_gpt2_prefix_tuning",
+      "@type": "MLS_Implementation",
+      "identifier": "GPT-2 style autoregressive LM prefix-tuning implementation",
+      "codeRepository": "https://github.com/XiangLi1999/PrefixTuning",
+      "framework": "PyTorch; Hugging Face Transformers; PyTorch Lightning",
+      "entryPoint": "gpt2/train_e2e.py",
+      "entryPointCommand": "cd gpt2; python train_e2e.py --optim_prefix yes --preseqlen 5 --epoch 5 --learning_rate 0.00005 --mode webnlg --bsz 5 --seed 101",
+      "executionCommand": "cd gpt2; python train_e2e.py --optim_prefix yes --preseqlen 5 --epoch 5 --learning_rate 0.00005 --mode webnlg --bsz 5 --seed 101",
+      "commitHash": "6519d30e69b15a180f23e2cd41b766d3f62b8e82",
+      "branch": "cleaned",
+      "runsIn": {
+        "@id": "env_prefixtuning_python"
+      },
+      "requires": [
+        {
+          "@id": "dep_torch"
+        },
+        {
+          "@id": "dep_transformers"
+        },
+        {
+          "@id": "dep_numpy"
+        },
+        {
+          "@id": "dep_pytorch_lightning"
+        },
+        {
+          "@id": "dep_rouge_score"
+        },
+        {
+          "@id": "dep_sacrebleu"
+        },
+        {
+          "@id": "dep_gitpython"
+        },
+        {
+          "@id": "dep_nltk"
+        },
+        {
+          "@id": "dep_packaging"
+        },
+        {
+          "@id": "dep_tqdm"
+        },
+        {
+          "@id": "dep_tokenizers"
+        },
+        {
+          "@id": "dep_filelock"
+        },
+        {
+          "@id": "dep_requests"
+        },
+        {
+          "@id": "dep_regex"
+        },
+        {
+          "@id": "dep_sentencepiece"
+        },
+        {
+          "@id": "dep_sacremoses"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:26",
+      "path": "README.md",
+      "start_char_doc": 1436,
+      "end_char_doc": 1453,
+      "context": {
+        "prefix": "run my codes are ``",
+        "suffix": "`` (for table-to-text) and ``seq2seq/train_bart.py``(for"
+      }
+    },
+    {
+      "@id": "impl_seq2seq_prefix_tuning",
+      "@type": "MLS_Implementation",
+      "identifier": "Encoder-decoder BART prefix-tuning implementation",
+      "codeRepository": "https://github.com/XiangLi1999/PrefixTuning",
+      "framework": "PyTorch; Hugging Face Transformers; PyTorch Lightning",
+      "entryPoint": "seq2seq/train_bart.py",
+      "entryPointCommand": "cd seq2seq; python train_bart.py --mode xsum --preseqlen 200 --do_train yes --fp16 yes --bsz 16 --epoch 30 --gradient_accumulation_step 3 --learning_rate 0.00005 --mid_dim 800",
+      "executionCommand": "cd seq2seq; python train_bart.py --mode xsum --preseqlen 200 --do_train yes --fp16 yes --bsz 16 --epoch 30 --gradient_accumulation_step 3 --learning_rate 0.00005 --mid_dim 800",
+      "commitHash": "6519d30e69b15a180f23e2cd41b766d3f62b8e82",
+      "branch": "cleaned",
+      "runsIn": {
+        "@id": "env_prefixtuning_python"
+      },
+      "requires": [
+        {
+          "@id": "dep_torch"
+        },
+        {
+          "@id": "dep_transformers"
+        },
+        {
+          "@id": "dep_numpy"
+        },
+        {
+          "@id": "dep_pytorch_lightning"
+        },
+        {
+          "@id": "dep_rouge_score"
+        },
+        {
+          "@id": "dep_sacrebleu"
+        },
+        {
+          "@id": "dep_gitpython"
+        },
+        {
+          "@id": "dep_nltk"
+        },
+        {
+          "@id": "dep_packaging"
+        },
+        {
+          "@id": "dep_tqdm"
+        },
+        {
+          "@id": "dep_tokenizers"
+        },
+        {
+          "@id": "dep_filelock"
+        },
+        {
+          "@id": "dep_requests"
+        },
+        {
+          "@id": "dep_regex"
+        },
+        {
+          "@id": "dep_sentencepiece"
+        },
+        {
+          "@id": "dep_sacremoses"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:26",
+      "path": "README.md",
+      "start_char_doc": 1482,
+      "end_char_doc": 1503,
+      "context": {
+        "prefix": "gpt2/train_e2e.py`` (for table-to-text) and ``",
+        "suffix": "``(for summarization). they are set"
+      }
+    },
+    {
+      "@id": "env_prefixtuning_python",
+      "@type": "Environment",
+      "name": "PrefixTuning Python environment",
+      "framework": "PyTorch; Hugging Face Transformers 3.2.0; PyTorch Lightning",
+      "pythonVersion": ">=3.6.0",
+      "os": null,
+      "hardwareSpecs": "single GPU is requested by training scripts when submitting jobs",
+      "requirementsFile": "transformers/setup.py",
+      "isDockerized": false,
+      "wasDerivedFrom": "code",
+      "codeReference": "transformers/setup.py:136",
+      "path": "transformers/setup.py",
+      "start_char_doc": 5835,
+      "end_char_doc": 5860,
+      "context": {
+        "prefix": "extras_require=extras, entry_points={ \"console_scripts\": [\"transformers-cli=transformers.commands.transformers_cli:main\"] },",
+        "suffix": ", classifiers=[ \"Development Status ::"
+      }
+    },
+    {
+      "@id": "dep_torch",
+      "@type": "Dependency",
+      "packageName": "torch",
+      "version": ">=1.0",
+      "dependencyType": "runtime",
+      "isOptional": false,
+      "wasDerivedFrom": "code",
+      "codeReference": "transformers/setup.py:86",
+      "path": "transformers/setup.py",
+      "start_char_doc": 3505,
+      "end_char_doc": 3517,
+      "context": {
+        "prefix": "git+git://github.com/onnx/keras-onnx.git@cbdc75cb950b16db7f0a67be96a278f8d2953b48#egg=keras2onnx\", ] extras[\"torch\"] = [",
+        "suffix": "] extras[\"onnxruntime\"] = [\"onnxruntime>=1.4.0\", \"onnxruntime-tools>=1.4.2\"]"
+      }
+    },
+    {
+      "@id": "dep_transformers",
+      "@type": "Dependency",
+      "packageName": "transformers",
+      "version": "3.2.0",
+      "dependencyType": "vendored/runtime",
+      "isOptional": false,
+      "wasDerivedFrom": "code",
+      "codeReference": "transformers/setup.py:101",
+      "path": "transformers/setup.py",
+      "start_char_doc": 4291,
+      "end_char_doc": 4306,
+      "context": {
+        "prefix": "[\"scikit-learn\", \"tensorflow\", \"torch\"] setup( name=\"transformers\",",
+        "suffix": ", author=\"Thomas Wolf, Lysandre Debut,"
+      }
+    },
+    {
+      "@id": "dep_numpy",
+      "@type": "Dependency",
+      "packageName": "numpy",
+      "version": null,
+      "dependencyType": "runtime",
+      "isOptional": false,
+      "wasDerivedFrom": "code",
+      "codeReference": "transformers/setup.py:113",
+      "path": "transformers/setup.py",
+      "start_char_doc": 5070,
+      "end_char_doc": 5077,
+      "context": {
+        "prefix": "url=\"https://github.com/huggingface/transformers\", package_dir={\"\": \"src\"}, packages=find_packages(\"src\"), install_requires=[",
+        "suffix": ", \"tokenizers == 0.8.1.rc2\", #"
+      }
+    },
+    {
+      "@id": "dep_pytorch_lightning",
+      "@type": "Dependency",
+      "packageName": "pytorch_lightning",
+      "version": null,
+      "dependencyType": "inferred",
+      "isOptional": true,
+      "wasDerivedFrom": "code",
+      "codeReference": "seq2seq/lightning_base.py:7",
+      "path": "seq2seq/lightning_base.py",
+      "start_char_doc": 96,
+      "end_char_doc": 126,
+      "context": {
+        "prefix": "from typing import Any, Dict",
+        "suffix": "from pytorch_lightning.utilities import rank_zero_info from"
+      }
+    },
+    {
+      "@id": "dep_rouge_score",
+      "@type": "Dependency",
+      "packageName": "rouge_score",
+      "version": null,
+      "dependencyType": "inferred",
+      "isOptional": true,
+      "wasDerivedFrom": "code",
+      "codeReference": "seq2seq/utils.py:16",
+      "path": "seq2seq/utils.py",
+      "start_char_doc": 285,
+      "end_char_doc": 330,
+      "context": {
+        "prefix": "torch import torch.distributed as dist",
+        "suffix": "from sacrebleu import corpus_bleu from"
+      }
+    },
+    {
+      "@id": "dep_sacrebleu",
+      "@type": "Dependency",
+      "packageName": "sacrebleu",
+      "version": null,
+      "dependencyType": "inferred",
+      "isOptional": true,
+      "wasDerivedFrom": "code",
+      "codeReference": "seq2seq/utils.py:17",
+      "path": "seq2seq/utils.py",
+      "start_char_doc": 331,
+      "end_char_doc": 364,
+      "context": {
+        "prefix": "from rouge_score import rouge_scorer, scoring",
+        "suffix": "from torch import nn from"
+      }
+    },
+    {
+      "@id": "dep_gitpython",
+      "@type": "Dependency",
+      "packageName": "gitpython",
+      "version": null,
+      "dependencyType": "inferred",
+      "isOptional": true,
+      "wasDerivedFrom": "code",
+      "codeReference": "seq2seq/utils.py:12",
+      "path": "seq2seq/utils.py",
+      "start_char_doc": 209,
+      "end_char_doc": 219,
+      "context": {
+        "prefix": "Callable, Dict, Iterable, List, Union",
+        "suffix": "import numpy as np import"
+      }
+    },
+    {
+      "@id": "dep_nltk",
+      "@type": "Dependency",
+      "packageName": "nltk",
+      "version": null,
+      "dependencyType": "inferred",
+      "isOptional": true,
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/trainer_prefix.py:12",
+      "path": "gpt2/trainer_prefix.py",
+      "start_char_doc": 222,
+      "end_char_doc": 252,
+      "context": {
+        "prefix": "Dict, List, Optional, Tuple, Union",
+        "suffix": "import numpy as np import"
+      }
+    },
+    {
+      "@id": "dep_packaging",
+      "@type": "Dependency",
+      "packageName": "packaging",
+      "version": null,
+      "dependencyType": "runtime",
+      "isOptional": false,
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/trainer_prefix.py:15",
+      "path": "gpt2/trainer_prefix.py",
+      "start_char_doc": 285,
+      "end_char_doc": 314,
+      "context": {
+        "prefix": "numpy as np import torch",
+        "suffix": "from torch import nn from"
+      }
+    },
+    {
+      "@id": "dep_tqdm",
+      "@type": "Dependency",
+      "packageName": "tqdm",
+      "version": ">=4.27",
+      "dependencyType": "runtime",
+      "isOptional": false,
+      "wasDerivedFrom": "code",
+      "codeReference": "transformers/setup.py:124",
+      "path": "transformers/setup.py",
+      "start_char_doc": 5512,
+      "end_char_doc": 5526,
+      "context": {
+        "prefix": "model download and training scripts",
+        "suffix": ", # for OpenAI GPT"
+      }
+    },
+    {
+      "@id": "dep_tokenizers",
+      "@type": "Dependency",
+      "packageName": "tokenizers",
+      "version": "==0.8.1.rc2",
+      "dependencyType": "runtime",
+      "isOptional": false,
+      "wasDerivedFrom": "code",
+      "codeReference": "transformers/setup.py:114",
+      "path": "transformers/setup.py",
+      "start_char_doc": 5087,
+      "end_char_doc": 5112,
+      "context": {
+        "prefix": "package_dir={\"\": \"src\"}, packages=find_packages(\"src\"), install_requires=[ \"numpy\",",
+        "suffix": ", # dataclasses for Python"
+      }
+    },
+    {
+      "@id": "dep_filelock",
+      "@type": "Dependency",
+      "packageName": "filelock",
+      "version": null,
+      "dependencyType": "runtime",
+      "isOptional": false,
+      "wasDerivedFrom": "code",
+      "codeReference": "transformers/setup.py:120",
+      "path": "transformers/setup.py",
+      "start_char_doc": 5365,
+      "end_char_doc": 5375,
+      "context": {
+        "prefix": "e.g. to prevent parallel downloads",
+        "suffix": ", # for downloading models"
+      }
+    },
+    {
+      "@id": "dep_requests",
+      "@type": "Dependency",
+      "packageName": "requests",
+      "version": null,
+      "dependencyType": "runtime",
+      "isOptional": false,
+      "wasDerivedFrom": "code",
+      "codeReference": "transformers/setup.py:122",
+      "path": "transformers/setup.py",
+      "start_char_doc": 5429,
+      "end_char_doc": 5439,
+      "context": {
+        "prefix": "for downloading models over HTTPS",
+        "suffix": ", # progress bars in"
+      }
+    },
+    {
+      "@id": "dep_regex",
+      "@type": "Dependency",
+      "packageName": "regex",
+      "version": "!=2019.12.17",
+      "dependencyType": "runtime",
+      "isOptional": false,
+      "wasDerivedFrom": "code",
+      "codeReference": "transformers/setup.py:126",
+      "path": "transformers/setup.py",
+      "start_char_doc": 5561,
+      "end_char_doc": 5582,
+      "context": {
+        "prefix": "4.27\", # for OpenAI GPT",
+        "suffix": ", # for XLNet \"sentencepiece"
+      }
+    },
+    {
+      "@id": "dep_sentencepiece",
+      "@type": "Dependency",
+      "packageName": "sentencepiece",
+      "version": "!=0.1.92",
+      "dependencyType": "runtime",
+      "isOptional": false,
+      "wasDerivedFrom": "code",
+      "codeReference": "transformers/setup.py:128",
+      "path": "transformers/setup.py",
+      "start_char_doc": 5612,
+      "end_char_doc": 5637,
+      "context": {
+        "prefix": "!= 2019.12.17\", # for XLNet",
+        "suffix": ", # for XLM \"sacremoses\","
+      }
+    },
+    {
+      "@id": "dep_sacremoses",
+      "@type": "Dependency",
+      "packageName": "sacremoses",
+      "version": null,
+      "dependencyType": "runtime",
+      "isOptional": false,
+      "wasDerivedFrom": "code",
+      "codeReference": "transformers/setup.py:130",
+      "path": "transformers/setup.py",
+      "start_char_doc": 5665,
+      "end_char_doc": 5677,
+      "context": {
+        "prefix": "!= 0.1.92\", # for XLM",
+        "suffix": ", ], extras_require=extras, entry_points={ \"console_scripts\":"
+      }
+    },
+    {
+      "@id": "dataset_e2e",
+      "@type": "MLS_Dataset",
+      "name": "E2E table-to-text data",
+      "description": "table-to-text data in data/e2e_data/src1_train.txt and src1_valid.txt",
+      "language": "English",
+      "license": null,
+      "modality": "text",
+      "numInstances": null,
+      "numClasses": null,
+      "prov-derivedFrom": [
+        {
+          "@id": "datasource_repository_files"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "data/e2e_data/src1_train.txt:1",
+      "path": "data/e2e_data/src1_train.txt",
+      "start_char_doc": 0,
+      "end_char_doc": 0,
+      "context": {
+        "prefix": "",
+        "suffix": ""
+      }
+    },
+    {
+      "@id": "dataset_webnlg",
+      "@type": "MLS_Dataset",
+      "name": "WebNLG",
+      "description": "WebNLG 2017 challenge data for table-to-text generation",
+      "language": "English",
+      "license": null,
+      "modality": "text",
+      "numInstances": null,
+      "numClasses": null,
+      "prov-derivedFrom": [
+        {
+          "@id": "datasource_repository_files"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/train_e2e.py:62",
+      "path": "gpt2/train_e2e.py",
+      "start_char_doc": 3054,
+      "end_char_doc": 3060,
+      "context": {
+        "prefix": "default='no', help='') parser.add_argument('--finetuned_model_path', type=str, default='/u/scr/xlisali/contrast_LM/transformers/examples/full/full/",
+        "suffix": "finetune_n_20_act_ca' 't_b=6-e=10_d=0.0_u=no_lr=1e-05_w=0.0_s=101_r=n_m=512_earlystop', help='') parser.add_argument('--matching_objective', type=str,"
+      }
+    },
+    {
+      "@id": "dataset_dart",
+      "@type": "MLS_Dataset",
+      "name": "DART",
+      "description": "DART v1.1.1 triples data",
+      "language": "English",
+      "license": null,
+      "modality": "text",
+      "numInstances": null,
+      "numClasses": null,
+      "prov-derivedFrom": [
+        {
+          "@id": "datasource_repository_files"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/train_e2e.py:181",
+      "path": "gpt2/train_e2e.py",
+      "start_char_doc": 8537,
+      "end_char_doc": 8541,
+      "context": {
+        "prefix": "== 'triples': TRAIN_FILE = \"/u/scr/xlisali/",
+        "suffix": "/dart/data/v1.1.1/dart-v1.1.1-full-train.json\" TEST_FILE = \"/u/scr/xlisali/DART/dart/data/v1.1.1/dart-v1.1.1-full-dev.json\" folder_name"
+      }
+    },
+    {
+      "@id": "dataset_xsum",
+      "@type": "MLS_Dataset",
+      "name": "XSum",
+      "description": "XSum summarization data selected by --mode xsum",
+      "language": "English",
+      "license": null,
+      "modality": "text",
+      "numInstances": null,
+      "numClasses": null,
+      "prov-derivedFrom": [
+        {
+          "@id": "datasource_repository_files"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "seq2seq/train_bart.py:71",
+      "path": "seq2seq/train_bart.py",
+      "start_char_doc": 3408,
+      "end_char_doc": 3412,
+      "context": {
+        "prefix": "['e2e', 'cnn_dm', 'webnlg', 'triples', '",
+        "suffix": "', 'xsum_news', 'xsum_news_sport'] if args.mode"
+      }
+    },
+    {
+      "@id": "dataset_cnndm",
+      "@type": "MLS_Dataset",
+      "name": "CNN/DailyMail",
+      "description": "CNN/DailyMail summarization data selected by --mode cnn_dm",
+      "language": "English",
+      "license": null,
+      "modality": "text",
+      "numInstances": null,
+      "numClasses": null,
+      "prov-derivedFrom": [
+        {
+          "@id": "datasource_repository_files"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "seq2seq/train_bart.py:71",
+      "path": "seq2seq/train_bart.py",
+      "start_char_doc": 3377,
+      "end_char_doc": 3383,
+      "context": {
+        "prefix": "assert args.mode in ['e2e', '",
+        "suffix": "', 'webnlg', 'triples', 'xsum', 'xsum_news',"
+      }
+    },
+    {
+      "@id": "datasource_repository_files",
+      "@type": "DataSource",
+      "name": "Repository data files and configured external dataset paths",
+      "url": "https://github.com/XiangLi1999/PrefixTuning/tree/master/data",
+      "type": "repository and local filesystem paths",
+      "license": null,
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:1",
+      "path": "README.md",
+      "start_char_doc": 0,
+      "end_char_doc": 0,
+      "context": {
+        "prefix": "",
+        "suffix": ""
+      }
+    },
+    {
+      "@id": "method_prefix_tuning",
+      "@type": "Method",
+      "name": "Prefix-Tuning",
+      "description": "Optimizes continuous prefix prompts while keeping the main language model largely fixed.",
+      "version": null,
+      "trainedOn": [
+        {
+          "@id": "dataset_e2e"
+        },
+        {
+          "@id": "dataset_webnlg"
+        },
+        {
+          "@id": "dataset_xsum"
+        },
+        {
+          "@id": "dataset_cnndm"
+        }
+      ],
+      "evaluatedOn": [
+        {
+          "@id": "dataset_e2e"
+        },
+        {
+          "@id": "dataset_webnlg"
+        },
+        {
+          "@id": "dataset_xsum"
+        },
+        {
+          "@id": "dataset_cnndm"
+        }
+      ],
+      "achieves": [
+        {
+          "@id": "eval_perplexity"
+        },
+        {
+          "@id": "eval_rouge2"
+        },
+        {
+          "@id": "eval_bleu"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:35",
+      "path": "README.md",
+      "start_char_doc": 1779,
+      "end_char_doc": 1802,
+      "context": {
+        "prefix": "install -e .`` ----------------------------------------------------- ##",
+        "suffix": ": ```python cd gpt2; python"
+      }
+    },
+    {
+      "@id": "method_finetune",
+      "@type": "Method",
+      "name": "finetune",
+      "description": "Full fine-tuning baseline mode exposed by --tuning_mode.",
+      "version": null,
+      "trainedOn": [
+        {
+          "@id": "dataset_e2e"
+        },
+        {
+          "@id": "dataset_webnlg"
+        }
+      ],
+      "evaluatedOn": [
+        {
+          "@id": "dataset_e2e"
+        },
+        {
+          "@id": "dataset_webnlg"
+        }
+      ],
+      "achieves": [
+        {
+          "@id": "eval_perplexity"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:56",
+      "path": "README.md",
+      "start_char_doc": 2225,
+      "end_char_doc": 2245,
+      "context": {
+        "prefix": "gpt2; python train_e2e.py --tuning_mode {",
+        "suffix": "} --epoch 5 --learning_rate 0.00005"
+      }
+    },
+    {
+      "@id": "method_adaptertune",
+      "@type": "Method",
+      "name": "adaptertune",
+      "description": "Adapter tuning baseline mode exposed by --tuning_mode.",
+      "version": null,
+      "trainedOn": [
+        {
+          "@id": "dataset_e2e"
+        },
+        {
+          "@id": "dataset_webnlg"
+        }
+      ],
+      "evaluatedOn": [
+        {
+          "@id": "dataset_e2e"
+        },
+        {
+          "@id": "dataset_webnlg"
+        }
+      ],
+      "achieves": [
+        {
+          "@id": "eval_perplexity"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:56",
+      "path": "README.md",
+      "start_char_doc": 2234,
+      "end_char_doc": 2245,
+      "context": {
+        "prefix": "gpt2; python train_e2e.py --tuning_mode {finetune/",
+        "suffix": "} --epoch 5 --learning_rate 0.00005"
+      }
+    },
+    {
+      "@id": "model_gpt2_medium",
+      "@type": "MLS_Model",
+      "name": "GPT-2 medium",
+      "description": null,
+      "version": null,
+      "architecture": "gpt2-medium",
+      "parameters": null,
+      "subMethod": [
+        {
+          "@id": "method_prefix_tuning"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/train_e2e.py:286",
+      "path": "gpt2/train_e2e.py",
+      "start_char_doc": 12946,
+      "end_char_doc": 12957,
+      "context": {
+        "prefix": "\"gpt2-large\" else: OLD_MODEL = \"",
+        "suffix": "\" app = \"--optim_prefix {}"
+      }
+    },
+    {
+      "@id": "model_gpt2_large",
+      "@type": "MLS_Model",
+      "name": "GPT-2 large",
+      "description": null,
+      "version": null,
+      "architecture": "gpt2-large",
+      "parameters": null,
+      "subMethod": [
+        {
+          "@id": "method_prefix_tuning"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/train_e2e.py:284",
+      "path": "gpt2/train_e2e.py",
+      "start_char_doc": 12903,
+      "end_char_doc": 12913,
+      "context": {
+        "prefix": "in args.notes: OLD_MODEL = \"",
+        "suffix": "\" else: OLD_MODEL = \"gpt2-medium\""
+      }
+    },
+    {
+      "@id": "model_bart_large",
+      "@type": "MLS_Model",
+      "name": "facebook/bart-large",
+      "description": null,
+      "version": null,
+      "architecture": "BART encoder-decoder",
+      "parameters": null,
+      "subMethod": [
+        {
+          "@id": "method_prefix_tuning"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "seq2seq/train_bart.py:215",
+      "path": "seq2seq/train_bart.py",
+      "start_char_doc": 9321,
+      "end_char_doc": 9340,
+      "context": {
+        "prefix": "Model_FILE) print(Model_FILE) OLD_MODEL = '",
+        "suffix": "' app = \"--optim_prefix {}"
+      }
+    },
+    {
+      "@id": "model_prefix_tuning_module",
+      "@type": "MLS_Model",
+      "name": "PrefixTuning",
+      "description": null,
+      "version": null,
+      "architecture": "Prefix tuning module",
+      "parameters": "continuous prefix parameters",
+      "subMethod": [
+        {
+          "@id": "method_prefix_tuning"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/train_control.py:7",
+      "path": "gpt2/train_control.py",
+      "start_char_doc": 149,
+      "end_char_doc": 167,
+      "context": {
+        "prefix": "GPT2Tokenizer from torch import nn",
+        "suffix": "(GPT2PreTrainedModel): \"\"\"Classification Head for transformer"
+      }
+    },
+    {
+      "@id": "algo_adamw",
+      "@type": "MLS_Algorithm",
+      "name": "AdamW",
+      "description": "Optimizer used by trainer_prefix and seq2seq optimization setup.",
+      "version": null,
+      "complexity": null,
+      "pseudoCode": null,
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/trainer_prefix.py:39",
+      "path": "gpt2/trainer_prefix.py",
+      "start_char_doc": 1269,
+      "end_char_doc": 1274,
+      "context": {
+        "prefix": "import PreTrainedModel from transformers.optimization import",
+        "suffix": ", get_linear_schedule_with_warmup, get_constant_schedule_with_warmup from transformers.tokenization_utils_base"
+      }
+    },
+    {
+      "@id": "algo_linear_schedule_with_warmup",
+      "@type": "MLS_Algorithm",
+      "name": "get_linear_schedule_with_warmup",
+      "description": "Learning-rate scheduler with warmup steps.",
+      "version": null,
+      "complexity": null,
+      "pseudoCode": null,
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/trainer_prefix.py:39",
+      "path": "gpt2/trainer_prefix.py",
+      "start_char_doc": 1276,
+      "end_char_doc": 1307,
+      "context": {
+        "prefix": "PreTrainedModel from transformers.optimization import AdamW,",
+        "suffix": ", get_constant_schedule_with_warmup from transformers.tokenization_utils_base import"
+      }
+    },
+    {
+      "@id": "algo_label_smoothed_nll_loss",
+      "@type": "MLS_Algorithm",
+      "name": "label_smoothed_nll_loss",
+      "description": "Label-smoothed negative log-likelihood loss used for seq2seq training.",
+      "version": null,
+      "complexity": null,
+      "pseudoCode": null,
+      "wasDerivedFrom": "code",
+      "codeReference": "seq2seq/utils.py:33",
+      "path": "seq2seq/utils.py",
+      "start_char_doc": 690,
+      "end_char_doc": 717,
+      "context": {
+        "prefix": "(ImportError, ModuleNotFoundError): FAIRSEQ_AVAILABLE = False",
+        "suffix": "(lprobs, target, epsilon, ignore_index=-100): \"\"\"From"
+      }
+    },
+    {
+      "@id": "eval_perplexity",
+      "@type": "MLS_Eval",
+      "measure": "perplexity",
+      "hasValue": null,
+      "stdDev": null,
+      "confidenceInterval": null,
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/run_language_modeling.py:294",
+      "path": "gpt2/run_language_modeling.py",
+      "start_char_doc": 8748,
+      "end_char_doc": 8758,
+      "context": {
+        "prefix": "data file to evaluate the",
+        "suffix": "on (a text file).\"}, )"
+      }
+    },
+    {
+      "@id": "eval_rouge2",
+      "@type": "MLS_Eval",
+      "measure": "rouge2",
+      "hasValue": null,
+      "stdDev": null,
+      "confidenceInterval": null,
+      "wasDerivedFrom": "code",
+      "codeReference": "seq2seq/finetune.py:52",
+      "path": "seq2seq/finetune.py",
+      "start_char_doc": 1226,
+      "end_char_doc": 1255,
+      "context": {
+        "prefix": "= [\"loss\"] metric_names = ROUGE_KEYS",
+        "suffix": "def __init__(self, hparams, **kwargs): if"
+      }
+    },
+    {
+      "@id": "eval_bleu",
+      "@type": "MLS_Eval",
+      "measure": "bleu",
+      "hasValue": null,
+      "stdDev": null,
+      "confidenceInterval": null,
+      "wasDerivedFrom": "code",
+      "codeReference": "seq2seq/utils.py:72",
+      "path": "seq2seq/utils.py",
+      "start_char_doc": 2009,
+      "end_char_doc": 2023,
+      "context": {
+        "prefix": "x))\"\"\" return list(map(f, x)) def",
+        "suffix": "(output_lns, refs_lns, **kwargs) -> dict:"
+      }
+    },
+    {
+      "@id": "eval_loss",
+      "@type": "MLS_Eval",
+      "measure": "loss",
+      "hasValue": null,
+      "stdDev": null,
+      "confidenceInterval": null,
+      "wasDerivedFrom": "code",
+      "codeReference": "seq2seq/finetune.py:50",
+      "path": "seq2seq/finetune.py",
+      "start_char_doc": 1170,
+      "end_char_doc": 1191,
+      "context": {
+        "prefix": "class PrefixSummarizationModule(PrefixTransformer): mode = \"summarization\"",
+        "suffix": "metric_names = ROUGE_KEYS default_val_metric ="
+      }
+    },
+    {
+      "@id": "prompt_lowdata_summarize",
+      "@type": "Prompt",
+      "text": "summarize",
+      "role": "low-data prefix initialization token",
+      "templateId": "lowdata_token",
+      "usesContext": true,
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/train_e2e.py:22",
+      "path": "gpt2/train_e2e.py",
+      "start_char_doc": 927,
+      "end_char_doc": 940,
+      "context": {
+        "prefix": "parser.add_argument('--notes', type=str, default=None, help='') parser.add_argument('--",
+        "suffix": "', type=str, default='summarize', help='') parser.add_argument('--use_lowdata_token',"
+      }
+    },
+    {
+      "@id": "training_gpt2_prefix_tuning",
+      "@type": "TrainingRun",
+      "runId": "training_gpt2_prefix_tuning",
+      "description": "GPT-2 table-to-text prefix tuning training run",
+      "logFile": null,
+      "artifactsLocation": null,
+      "startedAtTime": null,
+      "endedAtTime": null,
+      "prov-executedBy": {
+        "@id": "impl_gpt2_prefix_tuning"
+      },
+      "used": [
+        {
+          "@id": "dataset_e2e"
+        },
+        {
+          "@id": "dataset_webnlg"
+        },
+        {
+          "@id": "dataset_dart"
+        }
+      ],
+      "trains": {
+        "@id": "model_prefix_tuning_module"
+      },
+      "wasAssociatedWith": [
+        {
+          "@id": "method_prefix_tuning"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/train_e2e.py:338",
+      "path": "gpt2/train_e2e.py",
+      "start_char_doc": 15133,
+      "end_char_doc": 15164,
+      "context": {
+        "prefix": "== 'prefixtune' else 'no') COMMANDLINE=\"",
+        "suffix": "\\ --output_dir={} \\ --model_type=gpt2 \\"
+      }
+    },
+    {
+      "@id": "training_seq2seq_prefix_tuning",
+      "@type": "TrainingRun",
+      "runId": "training_seq2seq_prefix_tuning",
+      "description": "BART/XSum summarization prefix tuning training run",
+      "logFile": null,
+      "artifactsLocation": null,
+      "startedAtTime": null,
+      "endedAtTime": null,
+      "prov-executedBy": {
+        "@id": "impl_seq2seq_prefix_tuning"
+      },
+      "used": [
+        {
+          "@id": "dataset_xsum"
+        },
+        {
+          "@id": "dataset_cnndm"
+        }
+      ],
+      "trains": {
+        "@id": "model_bart_large"
+      },
+      "wasAssociatedWith": [
+        {
+          "@id": "method_prefix_tuning"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "seq2seq/train_bart.py:250",
+      "path": "seq2seq/train_bart.py",
+      "start_char_doc": 10598,
+      "end_char_doc": 10616,
+      "context": {
+        "prefix": "== 'yes': COMMANDLINE = '",
+        "suffix": "' \\ '--model_name_or_path {} '"
+      }
+    },
+    {
+      "@id": "evaluation_gpt2_language_modeling",
+      "@type": "EvaluationRun",
+      "runId": "evaluation_gpt2_language_modeling",
+      "description": "GPT-2 evaluation on validation data with eval_loss/perplexity.",
+      "split": "validation",
+      "evaluationScript": "gpt2/run_language_modeling.py",
+      "metricsFile": "eval_results_lm.txt",
+      "startedAtTime": null,
+      "endedAtTime": null,
+      "prov-executedBy": {
+        "@id": "impl_gpt2_prefix_tuning"
+      },
+      "evaluates": {
+        "@id": "method_prefix_tuning"
+      },
+      "prov-generated": [
+        {
+          "@id": "prediction_gpt2_generation"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/run_language_modeling.py:1019",
+      "path": "gpt2/run_language_modeling.py",
+      "start_char_doc": 42031,
+      "end_char_doc": 42050,
+      "context": {
+        "prefix": "perplexity} output_eval_file = os.path.join(training_args.output_dir, \"",
+        "suffix": "\") if trainer.is_world_master(): with open(output_eval_file,"
+      }
+    },
+    {
+      "@id": "evaluation_seq2seq_validation",
+      "@type": "EvaluationRun",
+      "runId": "evaluation_seq2seq_validation",
+      "description": "Seq2seq validation using ROUGE/loss metrics.",
+      "split": "val",
+      "evaluationScript": "seq2seq/finetune.py",
+      "metricsFile": "metrics.json",
+      "startedAtTime": null,
+      "endedAtTime": null,
+      "prov-executedBy": {
+        "@id": "impl_seq2seq_prefix_tuning"
+      },
+      "evaluates": {
+        "@id": "method_prefix_tuning"
+      },
+      "prov-generated": [
+        {
+          "@id": "prediction_seq2seq_generation"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "seq2seq/finetune.py:212",
+      "path": "seq2seq/finetune.py",
+      "start_char_doc": 8985,
+      "end_char_doc": 9005,
+      "context": {
+        "prefix": "-> Dict: return self._generative_step(batch) def",
+        "suffix": "(self, outputs, prefix=\"val\") -> Dict:"
+      }
+    },
+    {
+      "@id": "evaluation_gpt2_generation_metrics",
+      "@type": "EvaluationRun",
+      "runId": "evaluation_gpt2_generation_metrics",
+      "description": "Generated text evaluation for E2E/WebNLG outputs.",
+      "split": "test",
+      "evaluationScript": "gpt2/run_generation.py",
+      "metricsFile": "eval_results_lm.txt",
+      "startedAtTime": null,
+      "endedAtTime": null,
+      "prov-executedBy": {
+        "@id": "impl_gpt2_prefix_tuning"
+      },
+      "evaluates": {
+        "@id": "method_prefix_tuning"
+      },
+      "prov-generated": [
+        {
+          "@id": "prediction_gpt2_generation"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/run_generation.py:1327",
+      "path": "gpt2/run_generation.py",
+      "start_char_doc": 55730,
+      "end_char_doc": 55747,
+      "context": {
+        "prefix": "gold_dir, '\\n', curr_dir) os.system(\"python /u/scr/xlisali/e2e-metrics/",
+        "suffix": "\" \"{} {} -p -t"
+      }
+    },
+    {
+      "@id": "prediction_gpt2_generation",
+      "@type": "PredictionSet",
+      "identifier": "GPT-2 generated text outputs",
+      "description": "Generated outputs written by run_generation/gen scripts.",
+      "predictionFormat": "text",
+      "storageLocation": null,
+      "numInstances": null,
+      "onDatasetSplit": "test",
+      "appliedTo": {
+        "@id": "method_prefix_tuning"
+      },
+      "wasGeneratedBy": {
+        "@id": "evaluation_gpt2_generation_metrics"
+      },
+      "producedBy": {
+        "@id": "impl_gpt2_prefix_tuning"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/gen.py:18",
+      "path": "gpt2/gen.py",
+      "start_char_doc": 365,
+      "end_char_doc": 372,
+      "context": {
+        "prefix": "=='data2text': Token_FILE = MODEL_FILE #",
+        "suffix": "= 'e2e_results_conv' gen_dir = 'e2e_results_conv2'"
+      }
+    },
+    {
+      "@id": "prediction_seq2seq_generation",
+      "@type": "PredictionSet",
+      "identifier": "Seq2seq generated summaries",
+      "description": "Generated summaries/predictions from finetune.py do_predict.",
+      "predictionFormat": "text",
+      "storageLocation": null,
+      "numInstances": null,
+      "onDatasetSplit": "test",
+      "appliedTo": {
+        "@id": "method_prefix_tuning"
+      },
+      "wasGeneratedBy": {
+        "@id": "evaluation_seq2seq_validation"
+      },
+      "producedBy": {
+        "@id": "impl_seq2seq_prefix_tuning"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "seq2seq/train_bart.py:277",
+      "path": "seq2seq/train_bart.py",
+      "start_char_doc": 12101,
+      "end_char_doc": 12113,
+      "context": {
+        "prefix": "'--preseqlen {} ' \\ '",
+        "suffix": "' \\ '--use_deep {} '"
+      }
+    },
+    {
+      "@id": "preprocess_gpt2_data_loading",
+      "@type": "DataProcessingStep",
+      "identifier": "GPT-2 data loading and tokenization",
+      "description": "Loads task-specific text/table data and tokenizes examples for language modeling.",
+      "transformationType": "tokenization",
+      "startedAtTime": null,
+      "endedAtTime": null,
+      "inputDataset": null,
+      "outputDataset": null,
+      "prov-executedBy": {
+        "@id": "impl_gpt2_prefix_tuning"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/run_language_modeling.py:66",
+      "path": "gpt2/run_language_modeling.py",
+      "start_char_doc": 2614,
+      "end_char_doc": 2641,
+      "context": {
+        "prefix": "# modified LineByLineTriplesTextDataset, # modified",
+        "suffix": ",# modified LineByLineWritingPromptsTextDataset,# modified LineByLineSentimentTextDataset,#"
+      }
+    },
+    {
+      "@id": "preprocess_gpt2_generation_inputs",
+      "@type": "DataProcessingStep",
+      "identifier": "GPT-2 generation input preparation",
+      "description": "Reads E2E/WebNLG/WritingPrompts/classification files and formats prompts before generation.",
+      "transformationType": "tokenization",
+      "startedAtTime": null,
+      "endedAtTime": null,
+      "inputDataset": null,
+      "outputDataset": null,
+      "prov-executedBy": {
+        "@id": "impl_gpt2_prefix_tuning"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/run_generation.py:150",
+      "path": "gpt2/run_generation.py",
+      "start_char_doc": 5409,
+      "end_char_doc": 5427,
+      "context": {
+        "prefix": "\"xlnet\": prepare_xlnet_input, \"transfo-xl\": prepare_transfoxl_input, }",
+        "suffix": "(path, tokenizer, lowdata_token=None): file_dict ="
+      }
+    },
+    {
+      "@id": "preprocess_seq2seq_dataset",
+      "@type": "DataProcessingStep",
+      "identifier": "Seq2seq dataset tokenization",
+      "description": "Builds seq2seq dataloaders with source and target max lengths.",
+      "transformationType": "tokenization",
+      "startedAtTime": null,
+      "endedAtTime": null,
+      "inputDataset": null,
+      "outputDataset": null,
+      "prov-executedBy": {
+        "@id": "impl_seq2seq_prefix_tuning"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "seq2seq/finetune.py:23",
+      "path": "seq2seq/finetune.py",
+      "start_char_doc": 573,
+      "end_char_doc": 587,
+      "context": {
+        "prefix": "utils import ( ROUGE_KEYS, Legacy",
+        "suffix": ", Seq2SeqDataset, assert_all_frozen, calculate_bleu, calculate_rouge,"
+      }
+    },
+    {
+      "@id": "hp_preseqlen",
+      "@type": "MLS_HyperParameter",
+      "name": "preseqlen",
+      "hasValue": "10",
+      "hpCategory": "HP_Architecture",
+      "hpType": "UnknownArchitectureHP",
+      "uncertain": true,
+      "sourceFile": "gpt2/train_e2e.py",
+      "sourceLine": 16,
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/train_e2e.py:16",
+      "path": "gpt2/train_e2e.py",
+      "start_char_doc": 558,
+      "end_char_doc": 569,
+      "context": {
+        "prefix": "parser.add_argument('--optim_prefix', type=str, default='yes', help='') parser.add_argument('",
+        "suffix": "', type=int, default=10, help='') parser.add_argument('--prefix_mode',"
+      }
+    },
+    {
+      "@id": "hp_seed",
+      "@type": "MLS_HyperParameter",
+      "name": "seed",
+      "hasValue": "101",
+      "hpCategory": "HP_Training",
+      "hpType": "RandomSeed",
+      "uncertain": false,
+      "sourceFile": "gpt2/train_e2e.py",
+      "sourceLine": 41,
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/train_e2e.py:41",
+      "path": "gpt2/train_e2e.py",
+      "start_char_doc": 1737,
+      "end_char_doc": 1743,
+      "context": {
+        "prefix": "parser.add_argument('--use_dropout', type=str, default='no', help='') parser.add_argument('",
+        "suffix": "', type=int, default=101, help='') #"
+      }
+    },
+    {
+      "@id": "hp_bsz",
+      "@type": "MLS_HyperParameter",
+      "name": "bsz",
+      "hasValue": "10",
+      "hpCategory": "HP_Training",
+      "hpType": "BatchSize",
+      "uncertain": false,
+      "sourceFile": "gpt2/train_e2e.py",
+      "sourceLine": 42,
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/train_e2e.py:42",
+      "path": "gpt2/train_e2e.py",
+      "start_char_doc": 1815,
+      "end_char_doc": 1820,
+      "context": {
+        "prefix": "# old is 42 parser.add_argument('",
+        "suffix": "', type=int, default=10, help='') parser.add_argument('--use_big',"
+      }
+    },
+    {
+      "@id": "hp_epoch",
+      "@type": "MLS_HyperParameter",
+      "name": "epoch",
+      "hasValue": "5",
+      "hpCategory": "HP_Training",
+      "hpType": "NumEpochs",
+      "uncertain": false,
+      "sourceFile": "gpt2/train_e2e.py",
+      "sourceLine": 44,
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/train_e2e.py:44",
+      "path": "gpt2/train_e2e.py",
+      "start_char_doc": 1949,
+      "end_char_doc": 1956,
+      "context": {
+        "prefix": "parser.add_argument('--use_big', type=str, default='no', help='') parser.add_argument('",
+        "suffix": "', type=int, default=5, help='') parser.add_argument('--max_steps',"
+      }
+    },
+    {
+      "@id": "hp_max_steps",
+      "@type": "MLS_HyperParameter",
+      "name": "max_steps",
+      "hasValue": "400",
+      "hpCategory": "HP_Training",
+      "hpType": "MaxSteps",
+      "uncertain": false,
+      "sourceFile": "gpt2/train_e2e.py",
+      "sourceLine": 45,
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/train_e2e.py:45",
+      "path": "gpt2/train_e2e.py",
+      "start_char_doc": 2014,
+      "end_char_doc": 2025,
+      "context": {
+        "prefix": "parser.add_argument('--epoch', type=int, default=5, help='') parser.add_argument('",
+        "suffix": "', type=int, default=400, help='') parser.add_argument('--eval_steps',"
+      }
+    },
+    {
+      "@id": "hp_eval_steps",
+      "@type": "MLS_HyperParameter",
+      "name": "eval_steps",
+      "hasValue": "50",
+      "hpCategory": "HP_Training",
+      "hpType": "HP_Training",
+      "uncertain": true,
+      "sourceFile": "gpt2/train_e2e.py",
+      "sourceLine": 46,
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/train_e2e.py:46",
+      "path": "gpt2/train_e2e.py",
+      "start_char_doc": 2085,
+      "end_char_doc": 2097,
+      "context": {
+        "prefix": "parser.add_argument('--max_steps', type=int, default=400, help='') parser.add_argument('",
+        "suffix": "', type=int, default=50, help='') parser.add_argument('--warmup_steps',"
+      }
+    },
+    {
+      "@id": "hp_warmup_steps",
+      "@type": "MLS_HyperParameter",
+      "name": "warmup_steps",
+      "hasValue": "100",
+      "hpCategory": "HP_Optimization",
+      "hpType": "WarmupSteps",
+      "uncertain": false,
+      "sourceFile": "gpt2/train_e2e.py",
+      "sourceLine": 47,
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/train_e2e.py:47",
+      "path": "gpt2/train_e2e.py",
+      "start_char_doc": 2156,
+      "end_char_doc": 2170,
+      "context": {
+        "prefix": "parser.add_argument('--eval_steps', type=int, default=50, help='') parser.add_argument('",
+        "suffix": "', type=int, default=100, help='') parser.add_argument('--gradient_accumulation_steps',"
+      }
+    },
+    {
+      "@id": "hp_gradient_accumulation_steps",
+      "@type": "MLS_HyperParameter",
+      "name": "gradient_accumulation_steps",
+      "hasValue": "1",
+      "hpCategory": "HP_Training",
+      "hpType": "GradientAccumulationSteps",
+      "uncertain": false,
+      "sourceFile": "gpt2/train_e2e.py",
+      "sourceLine": 48,
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/train_e2e.py:48",
+      "path": "gpt2/train_e2e.py",
+      "start_char_doc": 2230,
+      "end_char_doc": 2259,
+      "context": {
+        "prefix": "parser.add_argument('--warmup_steps', type=int, default=100, help='') parser.add_argument('",
+        "suffix": "', type=int, default=1, help='') parser.add_argument('--learning_rate',"
+      }
+    },
+    {
+      "@id": "hp_learning_rate",
+      "@type": "MLS_HyperParameter",
+      "name": "learning_rate",
+      "hasValue": "5e-05",
+      "hpCategory": "HP_Optimization",
+      "hpType": "LearningRate",
+      "uncertain": false,
+      "sourceFile": "gpt2/train_e2e.py",
+      "sourceLine": 49,
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/train_e2e.py:49",
+      "path": "gpt2/train_e2e.py",
+      "start_char_doc": 2317,
+      "end_char_doc": 2332,
+      "context": {
+        "prefix": "parser.add_argument('--gradient_accumulation_steps', type=int, default=1, help='') parser.add_argument('",
+        "suffix": "', type=float, default=5e-05, help='') parser.add_argument('--weight_decay',"
+      }
+    },
+    {
+      "@id": "hp_weight_decay",
+      "@type": "MLS_HyperParameter",
+      "name": "weight_decay",
+      "hasValue": "0.0",
+      "hpCategory": "HP_Optimization",
+      "hpType": "WeightDecay",
+      "uncertain": false,
+      "sourceFile": "gpt2/train_e2e.py",
+      "sourceLine": 50,
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/train_e2e.py:50",
+      "path": "gpt2/train_e2e.py",
+      "start_char_doc": 2396,
+      "end_char_doc": 2410,
+      "context": {
+        "prefix": "parser.add_argument('--learning_rate', type=float, default=5e-05, help='') parser.add_argument('",
+        "suffix": "', type=float, default=0.0, help='') parser.add_argument('--dropout',"
+      }
+    },
+    {
+      "@id": "hp_dropout",
+      "@type": "MLS_HyperParameter",
+      "name": "dropout",
+      "hasValue": "0.0",
+      "hpCategory": "HP_Architecture",
+      "hpType": "Dropout",
+      "uncertain": false,
+      "sourceFile": "gpt2/train_e2e.py",
+      "sourceLine": 51,
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/train_e2e.py:51",
+      "path": "gpt2/train_e2e.py",
+      "start_char_doc": 2472,
+      "end_char_doc": 2481,
+      "context": {
+        "prefix": "parser.add_argument('--weight_decay', type=float, default=0.0, help='') parser.add_argument('",
+        "suffix": "', type=float, default=0.0, help='') parser.add_argument('--mid_dim',"
+      }
+    },
+    {
+      "@id": "hp_mid_dim",
+      "@type": "MLS_HyperParameter",
+      "name": "mid_dim",
+      "hasValue": "512",
+      "hpCategory": "HP_Architecture",
+      "hpType": "HiddenSize",
+      "uncertain": false,
+      "sourceFile": "gpt2/train_e2e.py",
+      "sourceLine": 52,
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/train_e2e.py:52",
+      "path": "gpt2/train_e2e.py",
+      "start_char_doc": 2543,
+      "end_char_doc": 2552,
+      "context": {
+        "prefix": "parser.add_argument('--dropout', type=float, default=0.0, help='') parser.add_argument('",
+        "suffix": "', type=int, default=512, help='') parser.add_argument('--init_random',"
+      }
+    },
+    {
+      "@id": "hp_adapter_bottleneck",
+      "@type": "MLS_HyperParameter",
+      "name": "adapter_bottleneck",
+      "hasValue": "100",
+      "hpCategory": "HP_Architecture",
+      "hpType": "HiddenSize",
+      "uncertain": false,
+      "sourceFile": "gpt2/train_e2e.py",
+      "sourceLine": 28,
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/train_e2e.py:28",
+      "path": "gpt2/train_e2e.py",
+      "start_char_doc": 1244,
+      "end_char_doc": 1264,
+      "context": {
+        "prefix": "parser.add_argument('--adapter_design', type=int, default=1, help='') parser.add_argument('",
+        "suffix": "', type=int, default=100, help='') parser.add_argument('--top_layers',"
+      }
+    },
+    {
+      "@id": "hp_top_layers",
+      "@type": "MLS_HyperParameter",
+      "name": "top_layers",
+      "hasValue": "1",
+      "hpCategory": "HP_Architecture",
+      "hpType": "NumLayers",
+      "uncertain": false,
+      "sourceFile": "gpt2/train_e2e.py",
+      "sourceLine": 30,
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/train_e2e.py:30",
+      "path": "gpt2/train_e2e.py",
+      "start_char_doc": 1325,
+      "end_char_doc": 1337,
+      "context": {
+        "prefix": "parser.add_argument('--adapter_bottleneck', type=int, default=100, help='') parser.add_argument('",
+        "suffix": "', type=int, default=1, help='') parser.add_argument('--objective_mode',"
+      }
+    },
+    {
+      "@id": "hp_objective_mode",
+      "@type": "MLS_HyperParameter",
+      "name": "objective_mode",
+      "hasValue": "1",
+      "hpCategory": "HP_Architecture",
+      "hpType": "UnknownArchitectureHP",
+      "uncertain": true,
+      "sourceFile": "gpt2/train_e2e.py",
+      "sourceLine": 32,
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/train_e2e.py:32",
+      "path": "gpt2/train_e2e.py",
+      "start_char_doc": 1396,
+      "end_char_doc": 1412,
+      "context": {
+        "prefix": "parser.add_argument('--top_layers', type=int, default=1, help='') parser.add_argument('",
+        "suffix": "', type=int, default=1, help='') parser.add_argument('--init_shallow',"
+      }
+    },
+    {
+      "@id": "hp_use_dropout",
+      "@type": "MLS_HyperParameter",
+      "name": "use_dropout",
+      "hasValue": "no",
+      "hpCategory": "HP_Architecture",
+      "hpType": "Dropout",
+      "uncertain": true,
+      "sourceFile": "gpt2/train_e2e.py",
+      "sourceLine": 40,
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/train_e2e.py:40",
+      "path": "gpt2/train_e2e.py",
+      "start_char_doc": 1663,
+      "end_char_doc": 1676,
+      "context": {
+        "prefix": "help='') # training parameters. parser.add_argument('",
+        "suffix": "', type=str, default='no', help='') parser.add_argument('--seed',"
+      }
+    },
+    {
+      "@id": "hp_preseqlen",
+      "@type": "MLS_HyperParameter",
+      "name": "preseqlen",
+      "hasValue": "5",
+      "hpCategory": "HP_Architecture",
+      "hpType": "UnknownArchitectureHP",
+      "uncertain": true,
+      "sourceFile": "seq2seq/train_bart.py",
+      "sourceLine": 15,
+      "wasDerivedFrom": "code",
+      "codeReference": "seq2seq/train_bart.py:15",
+      "path": "seq2seq/train_bart.py",
+      "start_char_doc": 533,
+      "end_char_doc": 544,
+      "context": {
+        "prefix": "parser.add_argument('--optim_prefix', type=str, default='yes', help='') parser.add_argument('",
+        "suffix": "', type=int, default=5, help='') parser.add_argument('--prefix_mode',"
+      }
+    },
+    {
+      "@id": "hp_seed",
+      "@type": "MLS_HyperParameter",
+      "name": "seed",
+      "hasValue": "101",
+      "hpCategory": "HP_Training",
+      "hpType": "RandomSeed",
+      "uncertain": false,
+      "sourceFile": "seq2seq/train_bart.py",
+      "sourceLine": 36,
+      "wasDerivedFrom": "code",
+      "codeReference": "seq2seq/train_bart.py:36",
+      "path": "seq2seq/train_bart.py",
+      "start_char_doc": 1532,
+      "end_char_doc": 1538,
+      "context": {
+        "prefix": "parser.add_argument('--use_dropout', type=str, default='no', help='') parser.add_argument('",
+        "suffix": "', type=int, default=101, help='') #"
+      }
+    },
+    {
+      "@id": "hp_bsz",
+      "@type": "MLS_HyperParameter",
+      "name": "bsz",
+      "hasValue": "10",
+      "hpCategory": "HP_Training",
+      "hpType": "BatchSize",
+      "uncertain": false,
+      "sourceFile": "seq2seq/train_bart.py",
+      "sourceLine": 37,
+      "wasDerivedFrom": "code",
+      "codeReference": "seq2seq/train_bart.py:37",
+      "path": "seq2seq/train_bart.py",
+      "start_char_doc": 1610,
+      "end_char_doc": 1615,
+      "context": {
+        "prefix": "# old is 42 parser.add_argument('",
+        "suffix": "', type=int, default=10, help='') parser.add_argument('--use_big',"
+      }
+    },
+    {
+      "@id": "hp_epoch",
+      "@type": "MLS_HyperParameter",
+      "name": "epoch",
+      "hasValue": "5",
+      "hpCategory": "HP_Training",
+      "hpType": "NumEpochs",
+      "uncertain": false,
+      "sourceFile": "seq2seq/train_bart.py",
+      "sourceLine": 39,
+      "wasDerivedFrom": "code",
+      "codeReference": "seq2seq/train_bart.py:39",
+      "path": "seq2seq/train_bart.py",
+      "start_char_doc": 1744,
+      "end_char_doc": 1751,
+      "context": {
+        "prefix": "parser.add_argument('--use_big', type=str, default='no', help='') parser.add_argument('",
+        "suffix": "', type=int, default=5, help='') parser.add_argument('--max_steps',"
+      }
+    },
+    {
+      "@id": "hp_max_steps",
+      "@type": "MLS_HyperParameter",
+      "name": "max_steps",
+      "hasValue": "400",
+      "hpCategory": "HP_Training",
+      "hpType": "MaxSteps",
+      "uncertain": false,
+      "sourceFile": "seq2seq/train_bart.py",
+      "sourceLine": 40,
+      "wasDerivedFrom": "code",
+      "codeReference": "seq2seq/train_bart.py:40",
+      "path": "seq2seq/train_bart.py",
+      "start_char_doc": 1809,
+      "end_char_doc": 1820,
+      "context": {
+        "prefix": "parser.add_argument('--epoch', type=int, default=5, help='') parser.add_argument('",
+        "suffix": "', type=int, default=400, help='') parser.add_argument('--eval_steps',"
+      }
+    },
+    {
+      "@id": "hp_eval_steps",
+      "@type": "MLS_HyperParameter",
+      "name": "eval_steps",
+      "hasValue": "50",
+      "hpCategory": "HP_Training",
+      "hpType": "HP_Training",
+      "uncertain": true,
+      "sourceFile": "seq2seq/train_bart.py",
+      "sourceLine": 41,
+      "wasDerivedFrom": "code",
+      "codeReference": "seq2seq/train_bart.py:41",
+      "path": "seq2seq/train_bart.py",
+      "start_char_doc": 1880,
+      "end_char_doc": 1892,
+      "context": {
+        "prefix": "parser.add_argument('--max_steps', type=int, default=400, help='') parser.add_argument('",
+        "suffix": "', type=int, default=50, help='') parser.add_argument('--warmup_steps',"
+      }
+    },
+    {
+      "@id": "hp_warmup_steps",
+      "@type": "MLS_HyperParameter",
+      "name": "warmup_steps",
+      "hasValue": "100",
+      "hpCategory": "HP_Optimization",
+      "hpType": "WarmupSteps",
+      "uncertain": false,
+      "sourceFile": "seq2seq/train_bart.py",
+      "sourceLine": 42,
+      "wasDerivedFrom": "code",
+      "codeReference": "seq2seq/train_bart.py:42",
+      "path": "seq2seq/train_bart.py",
+      "start_char_doc": 1951,
+      "end_char_doc": 1965,
+      "context": {
+        "prefix": "parser.add_argument('--eval_steps', type=int, default=50, help='') parser.add_argument('",
+        "suffix": "', type=int, default=100, help='') parser.add_argument('--gradient_accumulation_steps',"
+      }
+    },
+    {
+      "@id": "hp_gradient_accumulation_steps",
+      "@type": "MLS_HyperParameter",
+      "name": "gradient_accumulation_steps",
+      "hasValue": "1",
+      "hpCategory": "HP_Training",
+      "hpType": "GradientAccumulationSteps",
+      "uncertain": false,
+      "sourceFile": "seq2seq/train_bart.py",
+      "sourceLine": 43,
+      "wasDerivedFrom": "code",
+      "codeReference": "seq2seq/train_bart.py:43",
+      "path": "seq2seq/train_bart.py",
+      "start_char_doc": 2025,
+      "end_char_doc": 2054,
+      "context": {
+        "prefix": "parser.add_argument('--warmup_steps', type=int, default=100, help='') parser.add_argument('",
+        "suffix": "', type=int, default=1, help='') parser.add_argument('--learning_rate',"
+      }
+    },
+    {
+      "@id": "hp_learning_rate",
+      "@type": "MLS_HyperParameter",
+      "name": "learning_rate",
+      "hasValue": "5e-05",
+      "hpCategory": "HP_Optimization",
+      "hpType": "LearningRate",
+      "uncertain": false,
+      "sourceFile": "seq2seq/train_bart.py",
+      "sourceLine": 44,
+      "wasDerivedFrom": "code",
+      "codeReference": "seq2seq/train_bart.py:44",
+      "path": "seq2seq/train_bart.py",
+      "start_char_doc": 2112,
+      "end_char_doc": 2127,
+      "context": {
+        "prefix": "parser.add_argument('--gradient_accumulation_steps', type=int, default=1, help='') parser.add_argument('",
+        "suffix": "', type=float, default=5e-05, help='') parser.add_argument('--weight_decay',"
+      }
+    },
+    {
+      "@id": "hp_weight_decay",
+      "@type": "MLS_HyperParameter",
+      "name": "weight_decay",
+      "hasValue": "0.0",
+      "hpCategory": "HP_Optimization",
+      "hpType": "WeightDecay",
+      "uncertain": false,
+      "sourceFile": "seq2seq/train_bart.py",
+      "sourceLine": 45,
+      "wasDerivedFrom": "code",
+      "codeReference": "seq2seq/train_bart.py:45",
+      "path": "seq2seq/train_bart.py",
+      "start_char_doc": 2191,
+      "end_char_doc": 2205,
+      "context": {
+        "prefix": "parser.add_argument('--learning_rate', type=float, default=5e-05, help='') parser.add_argument('",
+        "suffix": "', type=float, default=0.0, help='') parser.add_argument('--dropout',"
+      }
+    },
+    {
+      "@id": "hp_dropout",
+      "@type": "MLS_HyperParameter",
+      "name": "dropout",
+      "hasValue": "0.0",
+      "hpCategory": "HP_Architecture",
+      "hpType": "Dropout",
+      "uncertain": false,
+      "sourceFile": "seq2seq/train_bart.py",
+      "sourceLine": 46,
+      "wasDerivedFrom": "code",
+      "codeReference": "seq2seq/train_bart.py:46",
+      "path": "seq2seq/train_bart.py",
+      "start_char_doc": 2267,
+      "end_char_doc": 2276,
+      "context": {
+        "prefix": "parser.add_argument('--weight_decay', type=float, default=0.0, help='') parser.add_argument('",
+        "suffix": "', type=float, default=0.0, help='') parser.add_argument('--label_smoothing',"
+      }
+    },
+    {
+      "@id": "hp_label_smoothing",
+      "@type": "MLS_HyperParameter",
+      "name": "label_smoothing",
+      "hasValue": "0.0",
+      "hpCategory": "HP_Training",
+      "hpType": "HP_Training",
+      "uncertain": true,
+      "sourceFile": "seq2seq/train_bart.py",
+      "sourceLine": 49,
+      "wasDerivedFrom": "code",
+      "codeReference": "seq2seq/train_bart.py:49",
+      "path": "seq2seq/train_bart.py",
+      "start_char_doc": 2340,
+      "end_char_doc": 2357,
+      "context": {
+        "prefix": "parser.add_argument('--dropout', type=float, default=0.0, help='') parser.add_argument('",
+        "suffix": "', type=float, default=0.0, help='') parser.add_argument('--length_pen',"
+      }
+    },
+    {
+      "@id": "hp_length_pen",
+      "@type": "MLS_HyperParameter",
+      "name": "length_pen",
+      "hasValue": "1.0",
+      "hpCategory": "HP_Data",
+      "hpType": "MaxSequenceLength",
+      "uncertain": true,
+      "sourceFile": "seq2seq/train_bart.py",
+      "sourceLine": 50,
+      "wasDerivedFrom": "code",
+      "codeReference": "seq2seq/train_bart.py:50",
+      "path": "seq2seq/train_bart.py",
+      "start_char_doc": 2419,
+      "end_char_doc": 2431,
+      "context": {
+        "prefix": "parser.add_argument('--label_smoothing', type=float, default=0.0, help='') parser.add_argument('",
+        "suffix": "', type=float, default=1.0, help='') parser.add_argument('--mid_dim',"
+      }
+    },
+    {
+      "@id": "hp_mid_dim",
+      "@type": "MLS_HyperParameter",
+      "name": "mid_dim",
+      "hasValue": "512",
+      "hpCategory": "HP_Architecture",
+      "hpType": "HiddenSize",
+      "uncertain": false,
+      "sourceFile": "seq2seq/train_bart.py",
+      "sourceLine": 51,
+      "wasDerivedFrom": "code",
+      "codeReference": "seq2seq/train_bart.py:51",
+      "path": "seq2seq/train_bart.py",
+      "start_char_doc": 2493,
+      "end_char_doc": 2502,
+      "context": {
+        "prefix": "parser.add_argument('--length_pen', type=float, default=1.0, help='') parser.add_argument('",
+        "suffix": "', type=int, default=512, help='') parser.add_argument('--use_deep',"
+      }
+    },
+    {
+      "@id": "hp_prefix_dropout",
+      "@type": "MLS_HyperParameter",
+      "name": "prefix_dropout",
+      "hasValue": "0.0",
+      "hpCategory": "HP_Architecture",
+      "hpType": "Dropout",
+      "uncertain": false,
+      "sourceFile": "gpt2/run_language_modeling.py",
+      "sourceLine": 1,
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/run_language_modeling.py:1",
+      "path": "gpt2/run_language_modeling.py",
+      "start_char_doc": 0,
+      "end_char_doc": 0,
+      "context": {
+        "prefix": "",
+        "suffix": ""
+      }
+    },
+    {
+      "@id": "hp_teacher_dropout",
+      "@type": "MLS_HyperParameter",
+      "name": "teacher_dropout",
+      "hasValue": "0.1",
+      "hpCategory": "HP_Architecture",
+      "hpType": "Dropout",
+      "uncertain": false,
+      "sourceFile": "gpt2/run_language_modeling.py",
+      "sourceLine": 1,
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/run_language_modeling.py:1",
+      "path": "gpt2/run_language_modeling.py",
+      "start_char_doc": 0,
+      "end_char_doc": 0,
+      "context": {
+        "prefix": "",
+        "suffix": ""
+      }
+    },
+    {
+      "@id": "hp_max_span_length",
+      "@type": "MLS_HyperParameter",
+      "name": "max_span_length",
+      "hasValue": "5",
+      "hpCategory": "HP_Data",
+      "hpType": "MaxSequenceLength",
+      "uncertain": false,
+      "sourceFile": "gpt2/run_language_modeling.py",
+      "sourceLine": 1,
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/run_language_modeling.py:1",
+      "path": "gpt2/run_language_modeling.py",
+      "start_char_doc": 0,
+      "end_char_doc": 0,
+      "context": {
+        "prefix": "",
+        "suffix": ""
+      }
+    },
+    {
+      "@id": "hp_mlm_probability",
+      "@type": "MLS_HyperParameter",
+      "name": "mlm_probability",
+      "hasValue": "0.15",
+      "hpCategory": "HP_Training",
+      "hpType": "HP_Training",
+      "uncertain": true,
+      "sourceFile": "gpt2/run_language_modeling.py",
+      "sourceLine": 1,
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/run_language_modeling.py:1",
+      "path": "gpt2/run_language_modeling.py",
+      "start_char_doc": 0,
+      "end_char_doc": 0,
+      "context": {
+        "prefix": "",
+        "suffix": ""
+      }
+    },
+    {
+      "@id": "hp_plm_probability",
+      "@type": "MLS_HyperParameter",
+      "name": "plm_probability",
+      "hasValue": "1/6",
+      "hpCategory": "HP_Training",
+      "hpType": "HP_Training",
+      "uncertain": true,
+      "sourceFile": "gpt2/run_language_modeling.py",
+      "sourceLine": 1,
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/run_language_modeling.py:1",
+      "path": "gpt2/run_language_modeling.py",
+      "start_char_doc": 0,
+      "end_char_doc": 0,
+      "context": {
+        "prefix": "",
+        "suffix": ""
+      }
+    },
+    {
+      "@id": "hp_max_source_length",
+      "@type": "MLS_HyperParameter",
+      "name": "max_source_length",
+      "hasValue": "512",
+      "hpCategory": "HP_Data",
+      "hpType": "MaxSequenceLength",
+      "uncertain": false,
+      "sourceFile": "gpt2/run_language_modeling.py",
+      "sourceLine": 1,
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/run_language_modeling.py:1",
+      "path": "gpt2/run_language_modeling.py",
+      "start_char_doc": 0,
+      "end_char_doc": 0,
+      "context": {
+        "prefix": "",
+        "suffix": ""
+      }
+    },
+    {
+      "@id": "hp_train_max_target_length",
+      "@type": "MLS_HyperParameter",
+      "name": "train_max_target_length",
+      "hasValue": "100",
+      "hpCategory": "HP_Data",
+      "hpType": "MaxSequenceLength",
+      "uncertain": false,
+      "sourceFile": "gpt2/run_language_modeling.py",
+      "sourceLine": 1,
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/run_language_modeling.py:1",
+      "path": "gpt2/run_language_modeling.py",
+      "start_char_doc": 0,
+      "end_char_doc": 0,
+      "context": {
+        "prefix": "",
+        "suffix": ""
+      }
+    },
+    {
+      "@id": "hp_val_max_target_length",
+      "@type": "MLS_HyperParameter",
+      "name": "val_max_target_length",
+      "hasValue": "100",
+      "hpCategory": "HP_Data",
+      "hpType": "MaxSequenceLength",
+      "uncertain": false,
+      "sourceFile": "gpt2/run_language_modeling.py",
+      "sourceLine": 1,
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/run_language_modeling.py:1",
+      "path": "gpt2/run_language_modeling.py",
+      "start_char_doc": 0,
+      "end_char_doc": 0,
+      "context": {
+        "prefix": "",
+        "suffix": ""
+      }
+    },
+    {
+      "@id": "hp_block_size",
+      "@type": "MLS_HyperParameter",
+      "name": "block_size",
+      "hasValue": "-1",
+      "hpCategory": "HP_Data",
+      "hpType": "MaxSequenceLength",
+      "uncertain": false,
+      "sourceFile": "gpt2/run_language_modeling.py",
+      "sourceLine": 1,
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/run_language_modeling.py:1",
+      "path": "gpt2/run_language_modeling.py",
+      "start_char_doc": 0,
+      "end_char_doc": 0,
+      "context": {
+        "prefix": "",
+        "suffix": ""
+      }
+    },
+    {
+      "@id": "hp_max_source_length",
+      "@type": "MLS_HyperParameter",
+      "name": "max_source_length",
+      "hasValue": "512",
+      "hpCategory": "HP_Data",
+      "hpType": "MaxSequenceLength",
+      "uncertain": false,
+      "sourceFile": "seq2seq/finetune.py",
+      "sourceLine": 343,
+      "wasDerivedFrom": "code",
+      "codeReference": "seq2seq/finetune.py:343",
+      "path": "seq2seq/finetune.py",
+      "start_char_doc": 14591,
+      "end_char_doc": 14610,
+      "context": {
+        "prefix": "root_dir) add_generic_args(parser, root_dir) parser.add_argument( \"",
+        "suffix": "\", default=512, #1024 type=int, help=\"The"
+      }
+    },
+    {
+      "@id": "hp_max_target_length",
+      "@type": "MLS_HyperParameter",
+      "name": "max_target_length",
+      "hasValue": "56",
+      "hpCategory": "HP_Data",
+      "hpType": "MaxSequenceLength",
+      "uncertain": false,
+      "sourceFile": "seq2seq/finetune.py",
+      "sourceLine": 350,
+      "wasDerivedFrom": "code",
+      "codeReference": "seq2seq/finetune.py:350",
+      "path": "seq2seq/finetune.py",
+      "start_char_doc": 14893,
+      "end_char_doc": 14912,
+      "context": {
+        "prefix": "be padded.\", ) parser.add_argument( \"",
+        "suffix": "\", default=56, #56 type=int, help=\"The"
+      }
+    },
+    {
+      "@id": "hp_val_max_target_length",
+      "@type": "MLS_HyperParameter",
+      "name": "val_max_target_length",
+      "hasValue": "142",
+      "hpCategory": "HP_Data",
+      "hpType": "MaxSequenceLength",
+      "uncertain": false,
+      "sourceFile": "seq2seq/finetune.py",
+      "sourceLine": 357,
+      "wasDerivedFrom": "code",
+      "codeReference": "seq2seq/finetune.py:357",
+      "path": "seq2seq/finetune.py",
+      "start_char_doc": 15192,
+      "end_char_doc": 15215,
+      "context": {
+        "prefix": "be padded.\", ) parser.add_argument( \"",
+        "suffix": "\", default=142, #142 # these"
+      }
+    },
+    {
+      "@id": "hp_test_max_target_length",
+      "@type": "MLS_HyperParameter",
+      "name": "test_max_target_length",
+      "hasValue": "142",
+      "hpCategory": "HP_Data",
+      "hpType": "MaxSequenceLength",
+      "uncertain": false,
+      "sourceFile": "seq2seq/finetune.py",
+      "sourceLine": 364,
+      "wasDerivedFrom": "code",
+      "codeReference": "seq2seq/finetune.py:364",
+      "path": "seq2seq/finetune.py",
+      "start_char_doc": 15565,
+      "end_char_doc": 15589,
+      "context": {
+        "prefix": "be padded.\", ) parser.add_argument( \"",
+        "suffix": "\", default=142, #142 type=int, help=\"The"
+      }
+    },
+    {
+      "@id": "hp_max_tokens_per_batch",
+      "@type": "MLS_HyperParameter",
+      "name": "max_tokens_per_batch",
+      "hasValue": null,
+      "hpCategory": "HP_Data",
+      "hpType": "MaxSequenceLength",
+      "uncertain": false,
+      "sourceFile": "seq2seq/finetune.py",
+      "sourceLine": 61,
+      "wasDerivedFrom": "code",
+      "codeReference": "seq2seq/finetune.py:61",
+      "path": "seq2seq/finetune.py",
+      "start_char_doc": 1690,
+      "end_char_doc": 1712,
+      "context": {
+        "prefix": "if hparams.sortish_sampler: raise ValueError(\"--sortish_sampler and",
+        "suffix": "may not be used simultaneously\")"
+      }
+    },
+    {
+      "@id": "hp_n_train",
+      "@type": "MLS_HyperParameter",
+      "name": "n_train",
+      "hasValue": "-1",
+      "hpCategory": "HP_Training",
+      "hpType": "HP_Training",
+      "uncertain": true,
+      "sourceFile": "seq2seq/finetune.py",
+      "sourceLine": 375,
+      "wasDerivedFrom": "code",
+      "codeReference": "seq2seq/finetune.py:375",
+      "path": "seq2seq/finetune.py",
+      "start_char_doc": 16278,
+      "end_char_doc": 16287,
+      "context": {
+        "prefix": "choices=[\"default\", \"wandb\", \"wandb_shared\"], default=\"default\") parser.add_argument(\"",
+        "suffix": "\", type=int, default=-1, required=False, help=\"#"
+      }
+    },
+    {
+      "@id": "hp_n_val",
+      "@type": "MLS_HyperParameter",
+      "name": "n_val",
+      "hasValue": "500",
+      "hpCategory": "HP_Training",
+      "hpType": "HP_Training",
+      "uncertain": true,
+      "sourceFile": "seq2seq/finetune.py",
+      "sourceLine": 376,
+      "wasDerivedFrom": "code",
+      "codeReference": "seq2seq/finetune.py:376",
+      "path": "seq2seq/finetune.py",
+      "start_char_doc": 16395,
+      "end_char_doc": 16402,
+      "context": {
+        "prefix": "-1 means use all.\") parser.add_argument(\"",
+        "suffix": "\", type=int, default=500, required=False, help=\"#"
+      }
+    },
+    {
+      "@id": "hp_n_test",
+      "@type": "MLS_HyperParameter",
+      "name": "n_test",
+      "hasValue": "-1",
+      "hpCategory": "HP_Training",
+      "hpType": "HP_Training",
+      "uncertain": true,
+      "sourceFile": "seq2seq/finetune.py",
+      "sourceLine": 377,
+      "wasDerivedFrom": "code",
+      "codeReference": "seq2seq/finetune.py:377",
+      "path": "seq2seq/finetune.py",
+      "start_char_doc": 16511,
+      "end_char_doc": 16519,
+      "context": {
+        "prefix": "-1 means use all.\") parser.add_argument(\"",
+        "suffix": "\", type=int, default=-1, required=False, help=\"#"
+      }
+    },
+    {
+      "@id": "hp_eval_beams",
+      "@type": "MLS_HyperParameter",
+      "name": "eval_beams",
+      "hasValue": null,
+      "hpCategory": "HP_Training",
+      "hpType": "HP_Training",
+      "uncertain": true,
+      "sourceFile": "seq2seq/finetune.py",
+      "sourceLine": 384,
+      "wasDerivedFrom": "code",
+      "codeReference": "seq2seq/finetune.py:384",
+      "path": "seq2seq/finetune.py",
+      "start_char_doc": 17031,
+      "end_char_doc": 17043,
+      "context": {
+        "prefix": "parser.add_argument(\"--tgt_lang\", type=str, default=\"\", required=False) parser.add_argument(\"",
+        "suffix": "\", type=int, default=None, required=False) parser.add_argument("
+      }
+    },
+    {
+      "@id": "hp_eval_max_gen_length",
+      "@type": "MLS_HyperParameter",
+      "name": "eval_max_gen_length",
+      "hasValue": null,
+      "hpCategory": "HP_Data",
+      "hpType": "MaxSequenceLength",
+      "uncertain": true,
+      "sourceFile": "seq2seq/finetune.py",
+      "sourceLine": 245,
+      "wasDerivedFrom": "code",
+      "codeReference": "seq2seq/finetune.py:245",
+      "path": "seq2seq/finetune.py",
+      "start_char_doc": 10523,
+      "end_char_doc": 10544,
+      "context": {
+        "prefix": "generation from self.model. # parser.add_argument('",
+        "suffix": "', type=int, default=None, help='never generate"
+      }
+    },
+    {
+      "@id": "hp_save_top_k",
+      "@type": "MLS_HyperParameter",
+      "name": "save_top_k",
+      "hasValue": "1",
+      "hpCategory": "HP_Training",
+      "hpType": "HP_Training",
+      "uncertain": true,
+      "sourceFile": "seq2seq/finetune.py",
+      "sourceLine": 390,
+      "wasDerivedFrom": "code",
+      "codeReference": "seq2seq/finetune.py:390",
+      "path": "seq2seq/finetune.py",
+      "start_char_doc": 17497,
+      "end_char_doc": 17509,
+      "context": {
+        "prefix": "more than n tokens\") parser.add_argument(\"",
+        "suffix": "\", type=int, default=1, required=False, help=\"How"
+      }
+    },
+    {
+      "@id": "hp_early_stopping_patience",
+      "@type": "MLS_HyperParameter",
+      "name": "early_stopping_patience",
+      "hasValue": "-1",
+      "hpCategory": "HP_Training",
+      "hpType": "HP_Training",
+      "uncertain": true,
+      "sourceFile": "seq2seq/finetune.py",
+      "sourceLine": 392,
+      "wasDerivedFrom": "code",
+      "codeReference": "seq2seq/finetune.py:392",
+      "path": "seq2seq/finetune.py",
+      "start_char_doc": 17628,
+      "end_char_doc": 17653,
+      "context": {
+        "prefix": "checkpoints to save\") parser.add_argument( \"",
+        "suffix": "\", type=int, default=-1, required=False, help=\"-1"
+      }
+    },
+    {
+      "@id": "hp_max_grad_norm",
+      "@type": "MLS_HyperParameter",
+      "name": "max_grad_norm",
+      "hasValue": "1.0",
+      "hpCategory": "HP_Training",
+      "hpType": "HP_Training",
+      "uncertain": true,
+      "sourceFile": "seq2seq/lightning_base.py",
+      "sourceLine": 701,
+      "wasDerivedFrom": "code",
+      "codeReference": "seq2seq/lightning_base.py:701",
+      "path": "seq2seq/lightning_base.py",
+      "start_char_doc": 26551,
+      "end_char_doc": 26566,
+      "context": {
+        "prefix": ") parser.add_argument(\"--n_tpu_cores\", dest=\"tpu_cores\", type=int) parser.add_argument(\"",
+        "suffix": "\", dest=\"gradient_clip_val\", default=1.0, type=float, help=\"Max"
+      }
+    },
+    {
+      "@id": "hp_gradient_accumulation_steps",
+      "@type": "MLS_HyperParameter",
+      "name": "gradient_accumulation_steps",
+      "hasValue": "1",
+      "hpCategory": "HP_Training",
+      "hpType": "GradientAccumulationSteps",
+      "uncertain": false,
+      "sourceFile": "seq2seq/lightning_base.py",
+      "sourceLine": 705,
+      "wasDerivedFrom": "code",
+      "codeReference": "seq2seq/lightning_base.py:705",
+      "path": "seq2seq/lightning_base.py",
+      "start_char_doc": 26885,
+      "end_char_doc": 26914,
+      "context": {
+        "prefix": "the test set.\") parser.add_argument( \"",
+        "suffix": "\", dest=\"accumulate_grad_batches\", type=int, default=1, help=\"Number"
+      }
+    },
+    {
+      "@id": "hp_preseqlen_gpt2_readme_example",
+      "@type": "MLS_HyperParameter",
+      "name": "preseqlen (gpt2_readme_example)",
+      "hasValue": "5",
+      "hpCategory": "HP_Architecture",
+      "hpType": "UnknownArchitectureHP",
+      "uncertain": true,
+      "sourceFile": "README.md",
+      "sourceLine": 40,
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:40",
+      "path": "README.md",
+      "start_char_doc": 1864,
+      "end_char_doc": 1877,
+      "context": {
+        "prefix": "gpt2; python train_e2e.py --optim_prefix yes",
+        "suffix": "--epoch 5 --learning_rate 0.00005 --mode"
+      }
+    },
+    {
+      "@id": "hp_epoch_gpt2_readme_example",
+      "@type": "MLS_HyperParameter",
+      "name": "epoch (gpt2_readme_example)",
+      "hasValue": "5",
+      "hpCategory": "HP_Training",
+      "hpType": "NumEpochs",
+      "uncertain": false,
+      "sourceFile": "README.md",
+      "sourceLine": 40,
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:40",
+      "path": "README.md",
+      "start_char_doc": 1878,
+      "end_char_doc": 1887,
+      "context": {
+        "prefix": "train_e2e.py --optim_prefix yes --preseqlen 5",
+        "suffix": "--learning_rate 0.00005 --mode webnlg --bsz"
+      }
+    },
+    {
+      "@id": "hp_learning_rate_gpt2_readme_example",
+      "@type": "MLS_HyperParameter",
+      "name": "learning_rate (gpt2_readme_example)",
+      "hasValue": "0.00005",
+      "hpCategory": "HP_Optimization",
+      "hpType": "LearningRate",
+      "uncertain": false,
+      "sourceFile": "README.md",
+      "sourceLine": 40,
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:40",
+      "path": "README.md",
+      "start_char_doc": 1888,
+      "end_char_doc": 1911,
+      "context": {
+        "prefix": "yes --preseqlen 5 --epoch 5",
+        "suffix": "--mode webnlg --bsz 5 --seed"
+      }
+    },
+    {
+      "@id": "hp_bsz_gpt2_readme_example",
+      "@type": "MLS_HyperParameter",
+      "name": "bsz (gpt2_readme_example)",
+      "hasValue": "5",
+      "hpCategory": "HP_Training",
+      "hpType": "BatchSize",
+      "uncertain": false,
+      "sourceFile": "README.md",
+      "sourceLine": 40,
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:40",
+      "path": "README.md",
+      "start_char_doc": 1926,
+      "end_char_doc": 1933,
+      "context": {
+        "prefix": "5 --learning_rate 0.00005 --mode webnlg",
+        "suffix": "--seed 101 ``` ```python cd"
+      }
+    },
+    {
+      "@id": "hp_seed_gpt2_readme_example",
+      "@type": "MLS_HyperParameter",
+      "name": "seed (gpt2_readme_example)",
+      "hasValue": "101",
+      "hpCategory": "HP_Training",
+      "hpType": "RandomSeed",
+      "uncertain": false,
+      "sourceFile": "README.md",
+      "sourceLine": 40,
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:40",
+      "path": "README.md",
+      "start_char_doc": 1934,
+      "end_char_doc": 1944,
+      "context": {
+        "prefix": "0.00005 --mode webnlg --bsz 5",
+        "suffix": "``` ```python cd seq2seq; python"
+      }
+    },
+    {
+      "@id": "hp_preseqlen_seq2seq_readme_example",
+      "@type": "MLS_HyperParameter",
+      "name": "preseqlen (seq2seq_readme_example)",
+      "hasValue": "200",
+      "hpCategory": "HP_Architecture",
+      "hpType": "UnknownArchitectureHP",
+      "uncertain": true,
+      "sourceFile": "README.md",
+      "sourceLine": 47,
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:47",
+      "path": "README.md",
+      "start_char_doc": 2008,
+      "end_char_doc": 2023,
+      "context": {
+        "prefix": "seq2seq; python train_bart.py --mode xsum",
+        "suffix": "--do_train yes --fp16 yes --bsz"
+      }
+    },
+    {
+      "@id": "hp_bsz_seq2seq_readme_example",
+      "@type": "MLS_HyperParameter",
+      "name": "bsz (seq2seq_readme_example)",
+      "hasValue": "16",
+      "hpCategory": "HP_Training",
+      "hpType": "BatchSize",
+      "uncertain": false,
+      "sourceFile": "README.md",
+      "sourceLine": 47,
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:47",
+      "path": "README.md",
+      "start_char_doc": 2050,
+      "end_char_doc": 2058,
+      "context": {
+        "prefix": "200 --do_train yes --fp16 yes",
+        "suffix": "--epoch 30 --gradient_accumulation_step 3 --learning_rate"
+      }
+    },
+    {
+      "@id": "hp_epoch_seq2seq_readme_example",
+      "@type": "MLS_HyperParameter",
+      "name": "epoch (seq2seq_readme_example)",
+      "hasValue": "30",
+      "hpCategory": "HP_Training",
+      "hpType": "NumEpochs",
+      "uncertain": false,
+      "sourceFile": "README.md",
+      "sourceLine": 47,
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:47",
+      "path": "README.md",
+      "start_char_doc": 2060,
+      "end_char_doc": 2070,
+      "context": {
+        "prefix": "yes --fp16 yes --bsz 16",
+        "suffix": "--gradient_accumulation_step 3 --learning_rate 0.00005 --mid_dim"
+      }
+    },
+    {
+      "@id": "hp_gradient_accumulation_step_seq2seq_readme_example",
+      "@type": "MLS_HyperParameter",
+      "name": "gradient_accumulation_step (seq2seq_readme_example)",
+      "hasValue": "3",
+      "hpCategory": "HP_Training",
+      "hpType": "HP_Training",
+      "uncertain": true,
+      "sourceFile": "README.md",
+      "sourceLine": 47,
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:47",
+      "path": "README.md",
+      "start_char_doc": 2072,
+      "end_char_doc": 2102,
+      "context": {
+        "prefix": "yes --bsz 16 --epoch 30",
+        "suffix": "--learning_rate 0.00005 --mid_dim 800 ```"
+      }
+    },
+    {
+      "@id": "hp_learning_rate_seq2seq_readme_example",
+      "@type": "MLS_HyperParameter",
+      "name": "learning_rate (seq2seq_readme_example)",
+      "hasValue": "0.00005",
+      "hpCategory": "HP_Optimization",
+      "hpType": "LearningRate",
+      "uncertain": false,
+      "sourceFile": "README.md",
+      "sourceLine": 40,
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:40",
+      "path": "README.md",
+      "start_char_doc": 1888,
+      "end_char_doc": 1911,
+      "context": {
+        "prefix": "yes --preseqlen 5 --epoch 5",
+        "suffix": "--mode webnlg --bsz 5 --seed"
+      }
+    },
+    {
+      "@id": "hp_mid_dim_seq2seq_readme_example",
+      "@type": "MLS_HyperParameter",
+      "name": "mid_dim (seq2seq_readme_example)",
+      "hasValue": "800",
+      "hpCategory": "HP_Architecture",
+      "hpType": "HiddenSize",
+      "uncertain": false,
+      "sourceFile": "README.md",
+      "sourceLine": 47,
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:47",
+      "path": "README.md",
+      "start_char_doc": 2128,
+      "end_char_doc": 2141,
+      "context": {
+        "prefix": "30 --gradient_accumulation_step 3 --learning_rate 0.00005",
+        "suffix": "``` Other baseline approaches ```"
+      }
+    }
+  ]
+}

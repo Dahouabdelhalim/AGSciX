@@ -1,0 +1,2177 @@
+{
+  "@context": {
+    "mls": "http://example.org/ontology/mls#",
+    "schema": "http://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "Study": "mls:Study",
+    "Experiment": "mls:Experiment",
+    "Person": "schema:Person",
+    "Organization": "schema:Organization",
+    "SoftwareRepository": "mls:SoftwareRepository",
+    "MLS_Implementation": "mls:MLS_Implementation",
+    "MLS_Task": "mls:Task",
+    "MLS_Dataset": "mls:Dataset",
+    "DataSource": "mls:DataSource",
+    "Method": "mls:Method",
+    "MLS_Model": "mls:Model",
+    "MLS_Algorithm": "mls:Algorithm",
+    "MLS_Eval": "mls:Eval",
+    "Environment": "mls:Environment",
+    "Dependency": "mls:Dependency",
+    "DataProcessingStep": "mls:DataProcessingStep",
+    "TrainingRun": "mls:TrainingRun",
+    "EvaluationRun": "mls:EvaluationRun",
+    "PredictionSet": "mls:PredictionSet",
+    "MLS_HyperParameter": "mls:MLS_HyperParameter",
+    "name": "schema:name",
+    "identifier": "schema:identifier",
+    "description": "schema:description",
+    "url": {
+      "@id": "schema:url",
+      "@type": "xsd:anyURI"
+    },
+    "version": "schema:version",
+    "license": "schema:license",
+    "programmingLanguage": "schema:programmingLanguage",
+    "dateModified": {
+      "@id": "schema:dateModified",
+      "@type": "xsd:dateTime"
+    },
+    "documentationUrl": {
+      "@id": "mls:documentationUrl",
+      "@type": "xsd:anyURI"
+    },
+    "owner": "mls:owner",
+    "platform": "mls:platform",
+    "framework": "mls:framework",
+    "entryPoint": "mls:entryPoint",
+    "entryPointCommand": "mls:entryPointCommand",
+    "executionCommand": "mls:executionCommand",
+    "codeRepository": {
+      "@id": "mls:codeRepository",
+      "@type": "xsd:anyURI"
+    },
+    "commitHash": "mls:commitHash",
+    "branch": "mls:branch",
+    "packageName": "mls:packageName",
+    "dependencyType": "mls:dependencyType",
+    "isOptional": {
+      "@id": "mls:isOptional",
+      "@type": "xsd:boolean"
+    },
+    "hardwareSpecs": "mls:hardwareSpecs",
+    "os": "mls:os",
+    "pythonVersion": "mls:pythonVersion",
+    "requirementsFile": "mls:requirementsFile",
+    "isDockerized": {
+      "@id": "mls:isDockerized",
+      "@type": "xsd:boolean"
+    },
+    "architecture": "mls:architecture",
+    "parameters": "mls:parameters",
+    "measure": "mls:measure",
+    "hasValue": {
+      "@id": "mls:hasValue",
+      "@type": "xsd:string"
+    },
+    "stdDev": "mls:stdDev",
+    "confidenceInterval": "mls:confidenceInterval",
+    "hpCategory": "mls:hpCategory",
+    "hpType": "mls:hpType",
+    "sourceFile": "mls:sourceFile",
+    "sourceLine": {
+      "@id": "mls:sourceLine",
+      "@type": "xsd:integer"
+    },
+    "uncertain": {
+      "@id": "mls:uncertain",
+      "@type": "xsd:boolean"
+    },
+    "transformationType": "mls:transformationType",
+    "codeReference": {
+      "@id": "mls:codeReference",
+      "@type": "xsd:anyURI"
+    },
+    "artifactsLocation": {
+      "@id": "mls:artifactsLocation",
+      "@type": "xsd:anyURI"
+    },
+    "split": "mls:split",
+    "evaluationScript": "mls:evaluationScript",
+    "evaluationSplit": "mls:evaluationSplit",
+    "format": "mls:format",
+    "predictionFormat": "mls:predictionFormat",
+    "storageLocation": "mls:storageLocation",
+    "numInstances": {
+      "@id": "mls:numInstances",
+      "@type": "xsd:integer"
+    },
+    "onDatasetSplit": "mls:onDatasetSplit",
+    "contains": {
+      "@id": "mls:contains",
+      "@type": "@id"
+    },
+    "supports": {
+      "@id": "mls:supports",
+      "@type": "@id"
+    },
+    "runsIn": {
+      "@id": "mls:runsIn",
+      "@type": "@id"
+    },
+    "requires": {
+      "@id": "mls:requires",
+      "@type": "@id"
+    },
+    "trainedOn": {
+      "@id": "mls:trainedOn",
+      "@type": "@id"
+    },
+    "evaluatedOn": {
+      "@id": "mls:evaluatedOn",
+      "@type": "@id"
+    },
+    "achieves": {
+      "@id": "mls:achieves",
+      "@type": "@id"
+    },
+    "subMethod": {
+      "@id": "mls:subMethod",
+      "@type": "@id"
+    },
+    "subDatasetOf": {
+      "@id": "mls:subDatasetOf",
+      "@type": "@id"
+    },
+    "processedThrough": {
+      "@id": "mls:processedThrough",
+      "@type": "@id"
+    },
+    "inputDataset": {
+      "@id": "mls:inputDataset",
+      "@type": "@id"
+    },
+    "outputDataset": {
+      "@id": "mls:outputDataset",
+      "@type": "@id"
+    },
+    "trains": {
+      "@id": "mls:trains",
+      "@type": "@id"
+    },
+    "evaluates": {
+      "@id": "mls:evaluates",
+      "@type": "@id"
+    },
+    "appliedTo": {
+      "@id": "mls:appliedTo",
+      "@type": "@id"
+    },
+    "producedBy": {
+      "@id": "mls:producedBy",
+      "@type": "@id"
+    },
+    "prov-executedBy": {
+      "@id": "mls:prov-executedBy",
+      "@type": "@id"
+    },
+    "prov-generated": {
+      "@id": "mls:prov-generated",
+      "@type": "@id"
+    },
+    "used": {
+      "@id": "prov:used",
+      "@type": "@id"
+    },
+    "wasGeneratedBy": {
+      "@id": "prov:wasGeneratedBy",
+      "@type": "@id"
+    },
+    "wasDerivedFrom": "prov:wasDerivedFrom",
+    "wasAssociatedWith": {
+      "@id": "prov:wasAssociatedWith",
+      "@type": "@id"
+    },
+    "path": "mls:path",
+    "start_char_doc": {
+      "@id": "mls:start_char_doc",
+      "@type": "xsd:integer"
+    },
+    "end_char_doc": {
+      "@id": "mls:end_char_doc",
+      "@type": "xsd:integer"
+    },
+    "context": "mls:context",
+    "prefix": "mls:prefix",
+    "suffix": "mls:suffix"
+  },
+  "@graph": [
+    {
+      "@id": "repo_allenai_gooaq",
+      "@type": "SoftwareRepository",
+      "name": "gooaq",
+      "url": "https://github.com/allenai/gooaq/",
+      "owner": "allenai",
+      "platform": "GitHub",
+      "programmingLanguage": "Python/Shell",
+      "version": null,
+      "license": "custom non-commercial dataset/software terms in LICENSE",
+      "dateModified": null,
+      "documentationUrl": "https://github.com/allenai/gooaq/blob/main/README.md",
+      "commitHash": "4a7f181422a96221370044cacf53981083c7b7dd",
+      "branch": "main",
+      "contains": [
+        {
+          "@id": "impl_gooaq_t5"
+        },
+        {
+          "@id": "impl_gooaq_extraction"
+        }
+      ],
+      "supports": [
+        {
+          "@id": "env_gooaq_python"
+        },
+        {
+          "@id": "env_gooaq_gcp_tpu"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:1",
+      "path": "README.md",
+      "start_char_doc": 2,
+      "end_char_doc": 7,
+      "context": {
+        "prefix": "#",
+        "suffix": "🥑: Google Answers to Google"
+      }
+    },
+    {
+      "@id": "study_gooaq_2021",
+      "@type": "Study",
+      "name": "GooAQ: Open Question Answering with Diverse Answer Types",
+      "description": "Scientific study accompanying the GooAQ dataset and code for open/long-form question answering with diverse answer types.",
+      "url": null,
+      "wasAssociatedWith": [
+        {
+          "@id": "person_khashabi"
+        },
+        {
+          "@id": "person_ng"
+        },
+        {
+          "@id": "person_khot"
+        },
+        {
+          "@id": "person_sabharwal"
+        },
+        {
+          "@id": "person_hajishirzi"
+        },
+        {
+          "@id": "person_callison_burch"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:123",
+      "path": "README.md",
+      "start_char_doc": 5189,
+      "end_char_doc": 5245,
+      "context": {
+        "prefix": "following paper: ```bibtex @article{gooaq2021, title={",
+        "suffix": "}, author={Khashabi, Daniel and Ng,"
+      }
+    },
+    {
+      "@id": "person_khashabi",
+      "@type": "Person",
+      "name": "Khashabi, Daniel",
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:124",
+      "path": "README.md",
+      "start_char_doc": 5258,
+      "end_char_doc": 5274,
+      "context": {
+        "prefix": "with Diverse Answer Types}, author={",
+        "suffix": "and Ng, Amos and Khot,"
+      }
+    },
+    {
+      "@id": "person_ng",
+      "@type": "Person",
+      "name": "Ng, Amos",
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:124",
+      "path": "README.md",
+      "start_char_doc": 5279,
+      "end_char_doc": 5287,
+      "context": {
+        "prefix": "Answer Types}, author={Khashabi, Daniel and",
+        "suffix": "and Khot, Tushar and Sabharwal,"
+      }
+    },
+    {
+      "@id": "person_khot",
+      "@type": "Person",
+      "name": "Khot, Tushar",
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:124",
+      "path": "README.md",
+      "start_char_doc": 5292,
+      "end_char_doc": 5304,
+      "context": {
+        "prefix": "Daniel and Ng, Amos and",
+        "suffix": "and Sabharwal, Ashish and Hajishirzi,"
+      }
+    },
+    {
+      "@id": "person_sabharwal",
+      "@type": "Person",
+      "name": "Sabharwal, Ashish",
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:124",
+      "path": "README.md",
+      "start_char_doc": 5309,
+      "end_char_doc": 5326,
+      "context": {
+        "prefix": "Amos and Khot, Tushar and",
+        "suffix": "and Hajishirzi, Hannaneh and Callison-Burch,"
+      }
+    },
+    {
+      "@id": "person_hajishirzi",
+      "@type": "Person",
+      "name": "Hajishirzi, Hannaneh",
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:124",
+      "path": "README.md",
+      "start_char_doc": 5331,
+      "end_char_doc": 5351,
+      "context": {
+        "prefix": "Tushar and Sabharwal, Ashish and",
+        "suffix": "and Callison-Burch, Chris}, journal={arXiv preprint},"
+      }
+    },
+    {
+      "@id": "person_callison_burch",
+      "@type": "Person",
+      "name": "Callison-Burch, Chris",
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:124",
+      "path": "README.md",
+      "start_char_doc": 5356,
+      "end_char_doc": 5377,
+      "context": {
+        "prefix": "Ashish and Hajishirzi, Hannaneh and",
+        "suffix": "}, journal={arXiv preprint}, year={2021} }"
+      }
+    },
+    {
+      "@id": "org_allenai",
+      "@type": "Organization",
+      "name": "allenai",
+      "url": "https://github.com/allenai",
+      "description": "GitHub owner namespace for the GooAQ repository.",
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:1",
+      "path": "README.md",
+      "start_char_doc": 2,
+      "end_char_doc": 7,
+      "context": {
+        "prefix": "#",
+        "suffix": "🥑: Google Answers to Google"
+      }
+    },
+    {
+      "@id": "task_long_form_qa",
+      "@type": "MLS_Task",
+      "name": "long-form question answering",
+      "description": "Question answering task addressed by GooAQ and its T5 baselines.",
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:3",
+      "path": "README.md",
+      "start_char_doc": 119,
+      "end_char_doc": 147,
+      "context": {
+        "prefix": "accompanying our recent work on",
+        "suffix": ". **NOTE** This dataset should"
+      }
+    },
+    {
+      "@id": "task_open_qa_diverse_answers",
+      "@type": "MLS_Task",
+      "name": "Open Question Answering with Diverse Answer Types",
+      "description": "Open QA over diverse answer types, including explanatory, list, knowledge, unit, time, and currency answers.",
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:123",
+      "path": "README.md",
+      "start_char_doc": 5196,
+      "end_char_doc": 5245,
+      "context": {
+        "prefix": "following paper: ```bibtex @article{gooaq2021, title={GooAQ:",
+        "suffix": "}, author={Khashabi, Daniel and Ng,"
+      }
+    },
+    {
+      "@id": "dataset_gooaq",
+      "@type": "MLS_Dataset",
+      "name": "GooAQ",
+      "description": "Google autocomplete questions paired with answers collected from Google's answer boxes.",
+      "numInstances": null,
+      "language": null,
+      "license": "non-commercial use only per README/LICENSE",
+      "modality": "text",
+      "numClasses": null,
+      "processedThrough": [
+        {
+          "@id": "process_google_suggest_questions"
+        },
+        {
+          "@id": "process_google_answer_extraction"
+        },
+        {
+          "@id": "process_create_splits"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:1",
+      "path": "README.md",
+      "start_char_doc": 11,
+      "end_char_doc": 45,
+      "context": {
+        "prefix": "# GooAQ 🥑:",
+        "suffix": "! This repository contains the"
+      }
+    },
+    {
+      "@id": "dataset_gooaq_jsonl",
+      "@type": "MLS_Dataset",
+      "name": "data/gooaq.jsonl",
+      "description": "Git LFS-stored GooAQ JSONL data file containing id, question, short_answer, answer, answer_type, and answer_url fields.",
+      "format": "jsonl",
+      "subDatasetOf": {
+        "@id": "dataset_gooaq"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:1",
+      "path": "README.md",
+      "start_char_doc": 0,
+      "end_char_doc": 0,
+      "context": {
+        "prefix": "",
+        "suffix": ""
+      }
+    },
+    {
+      "@id": "dataset_split_json",
+      "@type": "MLS_Dataset",
+      "name": "data/split.json",
+      "description": "Split metadata containing test, train, and dev IDs and training similarity scores used for smaller training samples.",
+      "format": "json",
+      "subDatasetOf": {
+        "@id": "dataset_gooaq"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:104",
+      "path": "README.md",
+      "start_char_doc": 4349,
+      "end_char_doc": 4359,
+      "context": {
+        "prefix": "Reproducing the splits The [`",
+        "suffix": "`](data/split.json) file which contains the"
+      }
+    },
+    {
+      "@id": "dataset_short_answers",
+      "@type": "MLS_Dataset",
+      "name": "google_answers_short_answers_v6_size_2000",
+      "description": "Short-answer GooAQ T5 task variants with train/test/dev TSV files.",
+      "subDatasetOf": {
+        "@id": "dataset_gooaq"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "experiments/qoogle_tasks.py:69",
+      "path": "experiments/qoogle_tasks.py",
+      "start_char_doc": 2499,
+      "end_char_doc": 2540,
+      "context": {
+        "prefix": "'google_answers_long_answers_v6_size_200000', 'google_answers_long_answers_v6_size_2000000', 'google_answers_long_answers_v6_size_2000', 'google_answers_long_answers_v6_size_20000', '",
+        "suffix": "', 'google_answers_short_answers_v6_size_20000', 'google_answers_short_answers_v6_size_200000' ]: t5.data.TaskRegistry.add("
+      }
+    },
+    {
+      "@id": "dataset_long_answers",
+      "@type": "MLS_Dataset",
+      "name": "google_answers_long_answers_v6_size_200000",
+      "description": "Long-answer GooAQ T5 task variants with train/test/dev TSV files.",
+      "subDatasetOf": {
+        "@id": "dataset_gooaq"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "experiments/qoogle_tasks.py:65",
+      "path": "experiments/qoogle_tasks.py",
+      "start_char_doc": 2301,
+      "end_char_doc": 2343,
+      "context": {
+        "prefix": "[ 'google_answers_collection_answers_v6_size_20000', 'google_answers_collection_answers_v6_size_200000', 'google_answers_collection_answers_v6_size_2000', '",
+        "suffix": "', 'google_answers_long_answers_v6_size_2000000', 'google_answers_long_answers_v6_size_2000', 'google_answers_long_answers_v6_size_20000', 'google_answers_short_answers_v6_size_2000',"
+      }
+    },
+    {
+      "@id": "dataset_collection_answers",
+      "@type": "MLS_Dataset",
+      "name": "google_answers_collection_answers_v6_size_20000",
+      "description": "Collection-answer GooAQ T5 task variants with train/test/dev TSV files.",
+      "subDatasetOf": {
+        "@id": "dataset_gooaq"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "experiments/qoogle_tasks.py:62",
+      "path": "experiments/qoogle_tasks.py",
+      "start_char_doc": 2136,
+      "end_char_doc": 2183,
+      "context": {
+        "prefix": "for task in [ '",
+        "suffix": "', 'google_answers_collection_answers_v6_size_200000', 'google_answers_collection_answers_v6_size_2000', 'google_answers_long_answers_v6_size_200000', 'google_answers_long_answers_v6_size_2000000',"
+      }
+    },
+    {
+      "@id": "dataset_eli5",
+      "@type": "MLS_Dataset",
+      "name": "eli5",
+      "description": "External ELI5 task used for evaluation/training and GooAQ mixture experiments.",
+      "subDatasetOf": null,
+      "wasDerivedFrom": "code",
+      "codeReference": "experiments/qoogle_tasks.py:98",
+      "path": "experiments/qoogle_tasks.py",
+      "start_char_doc": 3433,
+      "end_char_doc": 3437,
+      "context": {
+        "prefix": "'ropes_test', 'quoref', 'narrativeqa', 'summarization_xsum_dev', '",
+        "suffix": "' ]: t5.data.TaskRegistry.add( task, #"
+      }
+    },
+    {
+      "@id": "datasource_google_autocomplete",
+      "@type": "DataSource",
+      "name": "Google auto-complete",
+      "url": null,
+      "type": "autocomplete API",
+      "license": null,
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:23",
+      "path": "README.md",
+      "start_char_doc": 1318,
+      "end_char_doc": 1338,
+      "context": {
+        "prefix": "questions `question` are collected via",
+        "suffix": ". The answers responses (`short_answer`"
+      }
+    },
+    {
+      "@id": "datasource_google_answer_boxes",
+      "@type": "DataSource",
+      "name": "Google answer boxes",
+      "url": null,
+      "type": "search answer boxes",
+      "license": null,
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:24",
+      "path": "README.md",
+      "start_char_doc": 1414,
+      "end_char_doc": 1435,
+      "context": {
+        "prefix": "and `answer`) were collected from",
+        "suffix": ". The answer types (`answer_type`)"
+      }
+    },
+    {
+      "@id": "datasource_answer_url",
+      "@type": "DataSource",
+      "name": "answer_url source web pages",
+      "url": null,
+      "type": "web pages",
+      "license": null,
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:20",
+      "path": "README.md",
+      "start_char_doc": 1018,
+      "end_char_doc": 1028,
+      "context": {
+        "prefix": "from milk.\", \"answer_type\": \"feat_snip\", \"",
+        "suffix": "\": \"https://frogfuel.com/blogs/news/collagen-protein-vs-whey-protein#:~:text=The%20main%20differences%20between%20the,while%20collagen%20only%20has%208.&text=Collagen%20is%20a%20fibrous%20protein,whereas%20whey%20comes%20from%20milk.\" } ``` where"
+      }
+    },
+    {
+      "@id": "datasource_google_search_html",
+      "@type": "DataSource",
+      "name": "Google search result HTML",
+      "url": null,
+      "type": "HTML crawl",
+      "license": null,
+      "wasDerivedFrom": "code",
+      "codeReference": "extraction/answer_extraction/crawl_only.py:43",
+      "path": "extraction/answer_extraction/crawl_only.py",
+      "start_char_doc": 1289,
+      "end_char_doc": 1320,
+      "context": {
+        "prefix": "query query = urllib.parse.quote(query) self.driver.get('",
+        "suffix": "' + query) # Get"
+      }
+    },
+    {
+      "@id": "datasource_gcs_tsv",
+      "@type": "DataSource",
+      "name": "Google Cloud Storage TSV data",
+      "url": "gs://danielk-files/data/",
+      "type": "cloud storage",
+      "license": null,
+      "wasDerivedFrom": "code",
+      "codeReference": "experiments/qoogle_tasks.py:9",
+      "path": "experiments/qoogle_tasks.py",
+      "start_char_doc": 167,
+      "end_char_doc": 191,
+      "context": {
+        "prefix": "import metrics DATA_DIR = \"",
+        "suffix": "\" def get_downloaded_data_path(data_dir1, split, extension):"
+      }
+    },
+    {
+      "@id": "method_t5_finetuning",
+      "@type": "Method",
+      "name": "T5 fine-tuning",
+      "description": "Fine-tuning pretrained T5 checkpoints on GooAQ answer-type task mixtures using t5.models.mesh_transformer_main.",
+      "version": null,
+      "trainedOn": [
+        {
+          "@id": "dataset_short_answers"
+        },
+        {
+          "@id": "dataset_long_answers"
+        },
+        {
+          "@id": "dataset_collection_answers"
+        }
+      ],
+      "evaluatedOn": [
+        {
+          "@id": "dataset_short_answers"
+        },
+        {
+          "@id": "dataset_long_answers"
+        },
+        {
+          "@id": "dataset_collection_answers"
+        },
+        {
+          "@id": "dataset_eli5"
+        }
+      ],
+      "achieves": [
+        {
+          "@id": "eval_squad_metric"
+        },
+        {
+          "@id": "eval_f1"
+        },
+        {
+          "@id": "eval_exact_match"
+        },
+        {
+          "@id": "eval_rouge_l"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "experiments/run_pretraining.sh:18",
+      "path": "experiments/run_pretraining.sh",
+      "start_char_doc": 574,
+      "end_char_doc": 589,
+      "context": {
+        "prefix": "\"${tasks[@]}\"; do PRETRAINED_DIR=\"gs://t5-data/pretrained_models/${SIZE}\" MODEL_DIR=\"${BUCKET}/${TASK}/${SIZE}\" #",
+        "suffix": "python -m t5.models.mesh_transformer_main \\ --module_import=\"qoogle_tasks\""
+      }
+    },
+    {
+      "@id": "method_question_extraction",
+      "@type": "Method",
+      "name": "Google autocomplete question extraction",
+      "description": "Iteratively queries Google autocomplete with question-pattern prefixes and alphabetic expansions to collect candidate questions.",
+      "version": null,
+      "wasDerivedFrom": "code",
+      "codeReference": "extraction/question_extraction/google_suggest.py:9",
+      "path": "extraction/question_extraction/google_suggest.py",
+      "start_char_doc": 106,
+      "end_char_doc": 120,
+      "context": {
+        "prefix": "tqdm import tqdm import re",
+        "suffix": "= [ \" who \","
+      }
+    },
+    {
+      "@id": "method_answer_extraction",
+      "@type": "Method",
+      "name": "Google answer-box extraction",
+      "description": "Parses crawled Google result HTML into typed answers such as featured snippets, converters, knowledge answers, rich lists, and time conversions.",
+      "version": "12",
+      "wasDerivedFrom": "code",
+      "codeReference": "extraction/answer_extraction/extract_answers.py:6",
+      "path": "extraction/answer_extraction/extract_answers.py",
+      "start_char_doc": 66,
+      "end_char_doc": 78,
+      "context": {
+        "prefix": "gcp from bs4 import BeautifulSoup",
+        "suffix": "# increment version to go"
+      }
+    },
+    {
+      "@id": "method_split_sampling",
+      "@type": "Method",
+      "name": "similarity-based split sampling",
+      "description": "Sorts training IDs by stored similarity scores so more dissimilar instances appear first when sampling smaller training data.",
+      "version": null,
+      "wasDerivedFrom": "code",
+      "codeReference": "experiments/create_splits.py:36",
+      "path": "experiments/create_splits.py",
+      "start_char_doc": 1128,
+      "end_char_doc": 1167,
+      "context": {
+        "prefix": "for x in ids] #",
+        "suffix": "elif split == 'test' or"
+      }
+    },
+    {
+      "@id": "model_t5_small",
+      "@type": "MLS_Model",
+      "name": "T5 small",
+      "architecture": "Text-to-Text Transfer Transformer",
+      "parameters": "small",
+      "subMethod": {
+        "@id": "method_t5_finetuning"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "experiments/run_pretraining.sh:9",
+      "path": "experiments/run_pretraining.sh",
+      "start_char_doc": 243,
+      "end_char_doc": 248,
+      "context": {
+        "prefix": "FINETUNE_STEPS=20000 declare -a sizes=(\"11B\" \"",
+        "suffix": "\") declare -a tasks=(\"google_answers_short_answers_v6_size_2000\" \"google_answers_short_answers_v6_size_20000\""
+      }
+    },
+    {
+      "@id": "model_t5_11b",
+      "@type": "MLS_Model",
+      "name": "T5 11B",
+      "architecture": "Text-to-Text Transfer Transformer",
+      "parameters": "11B",
+      "subMethod": {
+        "@id": "method_t5_finetuning"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "experiments/run_pretraining.sh:9",
+      "path": "experiments/run_pretraining.sh",
+      "start_char_doc": 237,
+      "end_char_doc": 240,
+      "context": {
+        "prefix": "PRETRAINED_STEPS=1000000 FINETUNE_STEPS=20000 declare -a sizes=(\"",
+        "suffix": "\" \"small\") declare -a tasks=(\"google_answers_short_answers_v6_size_2000\""
+      }
+    },
+    {
+      "@id": "algo_metric_max_over_ground_truths",
+      "@type": "MLS_Algorithm",
+      "name": "metric_max_over_ground_truths",
+      "description": "Selects the maximum metric score over all acceptable ground-truth answers.",
+      "complexity": null,
+      "pseudoCode": null,
+      "wasDerivedFrom": "code",
+      "codeReference": "experiments/squad11_eval_utils.py:45",
+      "path": "experiments/squad11_eval_utils.py",
+      "start_char_doc": 1294,
+      "end_char_doc": 1323,
+      "context": {
+        "prefix": "return (normalize_answer(prediction) == normalize_answer(ground_truth)) def",
+        "suffix": "(metric_fn, prediction, ground_truths): scores_for_ground_truths ="
+      }
+    },
+    {
+      "@id": "eval_squad_metric",
+      "@type": "MLS_Eval",
+      "measure": "SQuAD",
+      "hasValue": null,
+      "stdDev": null,
+      "confidenceInterval": null,
+      "description": "T5 task metric function configured for GooAQ task registrations.",
+      "wasDerivedFrom": "code",
+      "codeReference": "experiments/qoogle_tasks.py:83",
+      "path": "experiments/qoogle_tasks.py",
+      "start_char_doc": 3145,
+      "end_char_doc": 3158,
+      "context": {
+        "prefix": "metrics. postprocess_fn=postprocessor, # sentencepiece_model_path=t5.data.DEFAULT_SPM_PATH, metric_fns=[",
+        "suffix": "] ) for task in"
+      }
+    },
+    {
+      "@id": "eval_f1",
+      "@type": "MLS_Eval",
+      "measure": "f1",
+      "hasValue": null,
+      "stdDev": null,
+      "confidenceInterval": null,
+      "description": "Token-level F1 over normalized answers.",
+      "wasDerivedFrom": "code",
+      "codeReference": "experiments/evaluate_predictions.py:52",
+      "path": "experiments/evaluate_predictions.py",
+      "start_char_doc": 2223,
+      "end_char_doc": 2242,
+      "context": {
+        "prefix": "0 num_examples += 1 if",
+        "suffix": ": curr_score = metric_max_over_ground_truths( f1_score,"
+      }
+    },
+    {
+      "@id": "eval_exact_match",
+      "@type": "MLS_Eval",
+      "measure": "exact_match",
+      "hasValue": null,
+      "stdDev": null,
+      "confidenceInterval": null,
+      "description": "Normalized exact-match score.",
+      "wasDerivedFrom": "code",
+      "codeReference": "experiments/squad11_eval_utils.py:41",
+      "path": "experiments/squad11_eval_utils.py",
+      "start_char_doc": 1167,
+      "end_char_doc": 1184,
+      "context": {
+        "prefix": "+ recall) return f1 def",
+        "suffix": "(prediction, ground_truth): return (normalize_answer(prediction) =="
+      }
+    },
+    {
+      "@id": "eval_rouge_l",
+      "@type": "MLS_Eval",
+      "measure": "rouge-l",
+      "hasValue": null,
+      "stdDev": null,
+      "confidenceInterval": null,
+      "description": "ROUGE-L F-measure for long-form targets.",
+      "wasDerivedFrom": "code",
+      "codeReference": "experiments/narrativeqa_eval_utils.py:10",
+      "path": "experiments/narrativeqa_eval_utils.py",
+      "start_char_doc": 182,
+      "end_char_doc": 189,
+      "context": {
+        "prefix": "rouge rouge_l_evaluator = rouge.Rouge( metrics=[\"",
+        "suffix": "\"], max_n=4, limit_length=True, length_limit=100, length_limit_type=\"words\","
+      }
+    },
+    {
+      "@id": "impl_gooaq_t5",
+      "@type": "MLS_Implementation",
+      "identifier": "GooAQ T5 baseline implementation",
+      "codeRepository": "https://github.com/allenai/gooaq/",
+      "framework": "T5 0.7.0 / TensorFlow",
+      "entryPoint": "experiments/run_pretraining.sh",
+      "entryPointCommand": "bash experiments/run_pretraining.sh",
+      "executionCommand": "python -m t5.models.mesh_transformer_main --module_import=qoogle_tasks ...",
+      "commitHash": "4a7f181422a96221370044cacf53981083c7b7dd",
+      "branch": "main",
+      "runsIn": {
+        "@id": "env_gooaq_gcp_tpu"
+      },
+      "requires": [
+        {
+          "@id": "dep_t5"
+        },
+        {
+          "@id": "dep_sacrebleu"
+        },
+        {
+          "@id": "dep_rouge_score"
+        },
+        {
+          "@id": "dep_tensorflow"
+        },
+        {
+          "@id": "dep_google_cloud_storage"
+        },
+        {
+          "@id": "dep_docopt"
+        },
+        {
+          "@id": "dep_rouge"
+        },
+        {
+          "@id": "dep_requests"
+        },
+        {
+          "@id": "dep_numpy"
+        },
+        {
+          "@id": "dep_tqdm"
+        },
+        {
+          "@id": "dep_bs4"
+        },
+        {
+          "@id": "dep_selenium"
+        },
+        {
+          "@id": "dep_psycopg2"
+        },
+        {
+          "@id": "dep_fake_useragent"
+        }
+      ],
+      "trains": [
+        {
+          "@id": "model_t5_small"
+        },
+        {
+          "@id": "model_t5_11b"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "experiments/run_pretraining.sh:19",
+      "path": "experiments/run_pretraining.sh",
+      "start_char_doc": 594,
+      "end_char_doc": 635,
+      "context": {
+        "prefix": "PRETRAINED_DIR=\"gs://t5-data/pretrained_models/${SIZE}\" MODEL_DIR=\"${BUCKET}/${TASK}/${SIZE}\" # Run fine-tuning",
+        "suffix": "\\ --module_import=\"qoogle_tasks\" \\ --tpu=\"${TPU_NAME}\" \\"
+      }
+    },
+    {
+      "@id": "impl_gooaq_extraction",
+      "@type": "MLS_Implementation",
+      "identifier": "GooAQ question and answer extraction implementation",
+      "codeRepository": "https://github.com/allenai/gooaq/",
+      "framework": "Python requests / Selenium / BeautifulSoup / PostgreSQL",
+      "entryPoint": "extraction/question_extraction/google_suggest.py; extraction/answer_extraction/crawl_only.py; extraction/answer_extraction/extract_answers.py",
+      "entryPointCommand": "python google_suggest.py; python crawl_only.py; python extract_answers.py",
+      "executionCommand": null,
+      "commitHash": "4a7f181422a96221370044cacf53981083c7b7dd",
+      "branch": "main",
+      "runsIn": {
+        "@id": "env_gooaq_python"
+      },
+      "requires": [
+        {
+          "@id": "dep_t5"
+        },
+        {
+          "@id": "dep_sacrebleu"
+        },
+        {
+          "@id": "dep_rouge_score"
+        },
+        {
+          "@id": "dep_tensorflow"
+        },
+        {
+          "@id": "dep_google_cloud_storage"
+        },
+        {
+          "@id": "dep_docopt"
+        },
+        {
+          "@id": "dep_rouge"
+        },
+        {
+          "@id": "dep_requests"
+        },
+        {
+          "@id": "dep_numpy"
+        },
+        {
+          "@id": "dep_tqdm"
+        },
+        {
+          "@id": "dep_bs4"
+        },
+        {
+          "@id": "dep_selenium"
+        },
+        {
+          "@id": "dep_psycopg2"
+        },
+        {
+          "@id": "dep_fake_useragent"
+        }
+      ],
+      "used": [
+        {
+          "@id": "datasource_google_autocomplete"
+        },
+        {
+          "@id": "datasource_google_search_html"
+        },
+        {
+          "@id": "datasource_google_answer_boxes"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "extraction/answer_extraction/extract_answers.py:4",
+      "path": "extraction/answer_extraction/extract_answers.py",
+      "start_char_doc": 51,
+      "end_char_doc": 64,
+      "context": {
+        "prefix": "import gcp from bs4 import",
+        "suffix": "version = 12 # increment"
+      }
+    },
+    {
+      "@id": "env_gooaq_python",
+      "@type": "Environment",
+      "name": "GooAQ Python runtime",
+      "description": "Python environment inferred from requirements.txt and Python scripts.",
+      "framework": "T5 0.7.0 / TensorFlow / Selenium / BeautifulSoup",
+      "hardwareSpecs": null,
+      "os": null,
+      "pythonVersion": "Python 3 for answer extraction scripts; unspecified for experiments",
+      "requirementsFile": "requirements.txt",
+      "isDockerized": false,
+      "wasDerivedFrom": "code",
+      "codeReference": "requirements.txt:1",
+      "path": "requirements.txt",
+      "start_char_doc": 0,
+      "end_char_doc": 9,
+      "context": {
+        "prefix": "",
+        "suffix": "sacrebleu rouge_score"
+      }
+    },
+    {
+      "@id": "env_gooaq_gcp_tpu",
+      "@type": "Environment",
+      "name": "Google Cloud TPU environment",
+      "description": "Training and evaluation shell script uses TPU_NAME, PROJECT, ZONE, BUCKET, GCS paths, and TPU topologies v3-128 and v3-8.",
+      "framework": "T5 mesh_transformer_main on TensorFlow",
+      "hardwareSpecs": "Google Cloud TPU v3-128 / v3-8",
+      "os": null,
+      "pythonVersion": null,
+      "requirementsFile": "requirements.txt",
+      "isDockerized": false,
+      "wasDerivedFrom": "code",
+      "codeReference": "experiments/run_pretraining.sh:28",
+      "path": "experiments/run_pretraining.sh",
+      "start_char_doc": 976,
+      "end_char_doc": 1020,
+      "context": {
+        "prefix": "--gin_file=\"${PRETRAINED_DIR}/operative_config.gin\" \\ --gin_param=\"utils.run.save_checkpoints_steps=1000\" \\ --gin_param=\"",
+        "suffix": "\" \\ --gin_param=\"MIXTURE_NAME = '${TASK}'\""
+      }
+    },
+    {
+      "@id": "dep_t5",
+      "@type": "Dependency",
+      "packageName": "t5",
+      "version": "0.7.0",
+      "dependencyType": "runtime",
+      "isOptional": false,
+      "wasDerivedFrom": "code",
+      "codeReference": "requirements.txt:1",
+      "path": "requirements.txt",
+      "start_char_doc": 0,
+      "end_char_doc": 9,
+      "context": {
+        "prefix": "",
+        "suffix": "sacrebleu rouge_score"
+      }
+    },
+    {
+      "@id": "dep_sacrebleu",
+      "@type": "Dependency",
+      "packageName": "sacrebleu",
+      "version": null,
+      "dependencyType": "runtime",
+      "isOptional": false,
+      "wasDerivedFrom": "code",
+      "codeReference": "requirements.txt:2",
+      "path": "requirements.txt",
+      "start_char_doc": 10,
+      "end_char_doc": 19,
+      "context": {
+        "prefix": "t5==0.7.0",
+        "suffix": "rouge_score"
+      }
+    },
+    {
+      "@id": "dep_rouge_score",
+      "@type": "Dependency",
+      "packageName": "rouge_score",
+      "version": null,
+      "dependencyType": "runtime",
+      "isOptional": false,
+      "wasDerivedFrom": "code",
+      "codeReference": "requirements.txt:3",
+      "path": "requirements.txt",
+      "start_char_doc": 20,
+      "end_char_doc": 31,
+      "context": {
+        "prefix": "t5==0.7.0 sacrebleu",
+        "suffix": ""
+      }
+    },
+    {
+      "@id": "dep_tensorflow",
+      "@type": "Dependency",
+      "packageName": "tensorflow",
+      "version": null,
+      "dependencyType": "runtime",
+      "isOptional": false,
+      "wasDerivedFrom": "code",
+      "codeReference": "experiments/qoogle_tasks.py:5",
+      "path": "experiments/qoogle_tasks.py",
+      "start_char_doc": 51,
+      "end_char_doc": 74,
+      "context": {
+        "prefix": "t5 import os import functools",
+        "suffix": "from t5.data import sentencepiece_vocabulary from"
+      }
+    },
+    {
+      "@id": "dep_google_cloud_storage",
+      "@type": "Dependency",
+      "packageName": "google-cloud-storage",
+      "version": null,
+      "dependencyType": "runtime",
+      "isOptional": false,
+      "wasDerivedFrom": "code",
+      "codeReference": "experiments/evaluate_predictions.py:28",
+      "path": "experiments/evaluate_predictions.py",
+      "start_char_doc": 1566,
+      "end_char_doc": 1598,
+      "context": {
+        "prefix": "tf from docopt import docopt",
+        "suffix": "all_questions = {} with open(\".../data/gooaq.json\")"
+      }
+    },
+    {
+      "@id": "dep_docopt",
+      "@type": "Dependency",
+      "packageName": "docopt",
+      "version": null,
+      "dependencyType": "runtime",
+      "isOptional": false,
+      "wasDerivedFrom": "code",
+      "codeReference": "experiments/evaluate_predictions.py:27",
+      "path": "experiments/evaluate_predictions.py",
+      "start_char_doc": 1540,
+      "end_char_doc": 1565,
+      "context": {
+        "prefix": "re import tensorflow.compat.v1 as tf",
+        "suffix": "from google.cloud import storage all_questions"
+      }
+    },
+    {
+      "@id": "dep_rouge",
+      "@type": "Dependency",
+      "packageName": "rouge",
+      "version": null,
+      "dependencyType": "runtime",
+      "isOptional": false,
+      "wasDerivedFrom": "code",
+      "codeReference": "experiments/narrativeqa_eval_utils.py:3",
+      "path": "experiments/narrativeqa_eval_utils.py",
+      "start_char_doc": 24,
+      "end_char_doc": 36,
+      "context": {
+        "prefix": "import copy import json",
+        "suffix": "from os import listdir from"
+      }
+    },
+    {
+      "@id": "dep_requests",
+      "@type": "Dependency",
+      "packageName": "requests",
+      "version": null,
+      "dependencyType": "runtime",
+      "isOptional": false,
+      "wasDerivedFrom": "code",
+      "codeReference": "extraction/question_extraction/google_suggest.py:3",
+      "path": "extraction/question_extraction/google_suggest.py",
+      "start_char_doc": 26,
+      "end_char_doc": 41,
+      "context": {
+        "prefix": "import json import random",
+        "suffix": "import numpy as np import"
+      }
+    },
+    {
+      "@id": "dep_numpy",
+      "@type": "Dependency",
+      "packageName": "numpy",
+      "version": null,
+      "dependencyType": "runtime",
+      "isOptional": false,
+      "wasDerivedFrom": "code",
+      "codeReference": "extraction/question_extraction/google_suggest.py:4",
+      "path": "extraction/question_extraction/google_suggest.py",
+      "start_char_doc": 42,
+      "end_char_doc": 60,
+      "context": {
+        "prefix": "json import random import requests",
+        "suffix": "import time from tqdm import"
+      }
+    },
+    {
+      "@id": "dep_tqdm",
+      "@type": "Dependency",
+      "packageName": "tqdm",
+      "version": null,
+      "dependencyType": "runtime",
+      "isOptional": false,
+      "wasDerivedFrom": "code",
+      "codeReference": "experiments/create_splits.py:5",
+      "path": "experiments/create_splits.py",
+      "start_char_doc": 37,
+      "end_char_doc": 58,
+      "context": {
+        "prefix": "json import os import random",
+        "suffix": "with open(\"split.json\") as f: split_ids"
+      }
+    },
+    {
+      "@id": "dep_bs4",
+      "@type": "Dependency",
+      "packageName": "beautifulsoup4",
+      "version": null,
+      "dependencyType": "runtime",
+      "isOptional": false,
+      "wasDerivedFrom": "code",
+      "codeReference": "extraction/answer_extraction/extract_answers.py:4",
+      "path": "extraction/answer_extraction/extract_answers.py",
+      "start_char_doc": 35,
+      "end_char_doc": 64,
+      "context": {
+        "prefix": "#!/usr/bin/env python3 import gcp",
+        "suffix": "version = 12 # increment"
+      }
+    },
+    {
+      "@id": "dep_selenium",
+      "@type": "Dependency",
+      "packageName": "selenium",
+      "version": null,
+      "dependencyType": "runtime",
+      "isOptional": false,
+      "wasDerivedFrom": "code",
+      "codeReference": "extraction/answer_extraction/crawl_only.py:3",
+      "path": "extraction/answer_extraction/crawl_only.py",
+      "start_char_doc": 24,
+      "end_char_doc": 54,
+      "context": {
+        "prefix": "#!/usr/bin/env python3",
+        "suffix": "from selenium.webdriver.common.keys import Keys from"
+      }
+    },
+    {
+      "@id": "dep_psycopg2",
+      "@type": "Dependency",
+      "packageName": "psycopg2",
+      "version": null,
+      "dependencyType": "runtime",
+      "isOptional": false,
+      "wasDerivedFrom": "code",
+      "codeReference": "extraction/answer_extraction/gcp.py:1",
+      "path": "extraction/answer_extraction/gcp.py",
+      "start_char_doc": 0,
+      "end_char_doc": 15,
+      "context": {
+        "prefix": "",
+        "suffix": "import os def connect_to_gcp(): host"
+      }
+    },
+    {
+      "@id": "dep_fake_useragent",
+      "@type": "Dependency",
+      "packageName": "fake_useragent",
+      "version": null,
+      "dependencyType": "runtime",
+      "isOptional": false,
+      "wasDerivedFrom": "code",
+      "codeReference": "extraction/answer_extraction/crawl_only.py:7",
+      "path": "extraction/answer_extraction/crawl_only.py",
+      "start_char_doc": 188,
+      "end_char_doc": 224,
+      "context": {
+        "prefix": "Options from gcp import connect_to_gcp",
+        "suffix": "import psycopg2 import sys import"
+      }
+    },
+    {
+      "@id": "process_google_suggest_questions",
+      "@type": "DataProcessingStep",
+      "description": "Crawl Google autocomplete suggestions from question-pattern prefixes and write unique questions to questions.txt.",
+      "transformationType": "collection",
+      "parameters": "query_patterns; alphabetic prefix expansion; sleep 0.3 seconds",
+      "codeReference": "extraction/question_extraction/google_suggest.py:80",
+      "inputDataset": null,
+      "outputDataset": {
+        "@id": "dataset_gooaq"
+      },
+      "prov-executedBy": {
+        "@id": "impl_gooaq_extraction"
+      },
+      "wasDerivedFrom": "code",
+      "path": "extraction/question_extraction/google_suggest.py",
+      "start_char_doc": 1477,
+      "end_char_doc": 1496,
+      "context": {
+        "prefix": "return content[1] else: return []",
+        "suffix": "(): # then, augment the"
+      }
+    },
+    {
+      "@id": "process_google_search_crawl",
+      "@type": "DataProcessingStep",
+      "description": "Use Selenium Chrome sessions to retrieve Google search-result HTML for queued questions and store it in the queries table.",
+      "transformationType": "crawling",
+      "parameters": "task_batch_size=10; concurrent_sessions default 3; random sleep 2-10 seconds",
+      "inputDataset": {
+        "@id": "dataset_gooaq"
+      },
+      "outputDataset": {
+        "@id": "datasource_google_search_html"
+      },
+      "prov-executedBy": {
+        "@id": "impl_gooaq_extraction"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "extraction/answer_extraction/crawl_only.py:15",
+      "path": "extraction/answer_extraction/crawl_only.py",
+      "start_char_doc": 316,
+      "end_char_doc": 336,
+      "context": {
+        "prefix": "random import threading import urllib.parse",
+        "suffix": "concurrent_sessions = 3 if len(sys.argv)"
+      }
+    },
+    {
+      "@id": "process_google_answer_extraction",
+      "@type": "DataProcessingStep",
+      "description": "Parse crawled HTML with BeautifulSoup and classify/extract short answers, long answers, answer URLs, and answer types.",
+      "transformationType": "html parsing / information extraction",
+      "parameters": "version=12; batch_size=20",
+      "inputDataset": {
+        "@id": "datasource_google_search_html"
+      },
+      "outputDataset": {
+        "@id": "dataset_gooaq"
+      },
+      "prov-executedBy": {
+        "@id": "impl_gooaq_extraction"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "extraction/answer_extraction/extract_answers.py:13",
+      "path": "extraction/answer_extraction/extract_answers.py",
+      "start_char_doc": 225,
+      "end_char_doc": 252,
+      "context": {
+        "prefix": "= gcp.connect_to_gcp() print('Connected to DB')",
+        "suffix": "(snippet): short_answer_div = snippet.find('div', attrs={'data-tts':"
+      }
+    },
+    {
+      "@id": "process_create_splits",
+      "@type": "DataProcessingStep",
+      "description": "Create train/test/dev TSV files for short-answer, long-answer, and collection-answer GooAQ tasks at multiple target sizes.",
+      "transformationType": "splitting",
+      "parameters": "sizes=[2000,20000,200000,2000000]; answer_type filtering; random.shuffle for dev/test",
+      "inputDataset": {
+        "@id": "dataset_gooaq"
+      },
+      "outputDataset": [
+        {
+          "@id": "dataset_short_answers"
+        },
+        {
+          "@id": "dataset_long_answers"
+        },
+        {
+          "@id": "dataset_collection_answers"
+        }
+      ],
+      "prov-executedBy": {
+        "@id": "impl_gooaq_t5"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "experiments/create_splits.py:22",
+      "path": "experiments/create_splits.py",
+      "start_char_doc": 467,
+      "end_char_doc": 509,
+      "context": {
+        "prefix": "training instances with different sizes",
+        "suffix": ": for split in ['train',"
+      }
+    },
+    {
+      "@id": "process_t5_tsv_loading",
+      "@type": "DataProcessingStep",
+      "description": "Load TSV files from GCS using tf.data.TextLineDataset, decode tab-separated fields, and map examples to inputs/targets/id dictionaries.",
+      "transformationType": "loading / TSV decoding",
+      "parameters": "field_delim='\\t'; AUTOTUNE parallel calls",
+      "inputDataset": [
+        {
+          "@id": "dataset_short_answers"
+        },
+        {
+          "@id": "dataset_long_answers"
+        },
+        {
+          "@id": "dataset_collection_answers"
+        }
+      ],
+      "outputDataset": null,
+      "prov-executedBy": {
+        "@id": "impl_gooaq_t5"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "experiments/qoogle_tasks.py:26",
+      "path": "experiments/qoogle_tasks.py",
+      "start_char_doc": 609,
+      "end_char_doc": 632,
+      "context": {
+        "prefix": "file as examples. ds =",
+        "suffix": "(get_downloaded_data_path(DATA_DIR + dataset, split, \".tsv\"))"
+      }
+    },
+    {
+      "@id": "train_t5_gooaq",
+      "@type": "TrainingRun",
+      "description": "Fine-tune T5 small and 11B checkpoints on GooAQ short, long, and collection answer tasks.",
+      "codeReference": "experiments/run_pretraining.sh:18",
+      "logFile": null,
+      "prov-executedBy": {
+        "@id": "impl_gooaq_t5"
+      },
+      "used": [
+        {
+          "@id": "dataset_short_answers"
+        },
+        {
+          "@id": "dataset_long_answers"
+        },
+        {
+          "@id": "dataset_collection_answers"
+        },
+        {
+          "@id": "model_t5_small"
+        },
+        {
+          "@id": "model_t5_11b"
+        }
+      ],
+      "wasAssociatedWith": [
+        {
+          "@id": "hp_batch_size_tokens_196608"
+        },
+        {
+          "@id": "hp_pretrained_steps_1000000"
+        },
+        {
+          "@id": "hp_finetune_steps_20000"
+        },
+        {
+          "@id": "hp_finetune_steps_2000000"
+        },
+        {
+          "@id": "hp_tpu_topology_v3_128"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "path": "experiments/run_pretraining.sh",
+      "start_char_doc": 574,
+      "end_char_doc": 589,
+      "context": {
+        "prefix": "\"${tasks[@]}\"; do PRETRAINED_DIR=\"gs://t5-data/pretrained_models/${SIZE}\" MODEL_DIR=\"${BUCKET}/${TASK}/${SIZE}\" #",
+        "suffix": "python -m t5.models.mesh_transformer_main \\ --module_import=\"qoogle_tasks\""
+      }
+    },
+    {
+      "@id": "train_t5_eli5",
+      "@type": "TrainingRun",
+      "description": "Fine-tune T5 small and 11B checkpoints on ELI5 and ELI5 plus GooAQ long-answer mixture tasks.",
+      "codeReference": "experiments/run_pretraining.sh:303",
+      "logFile": null,
+      "prov-executedBy": {
+        "@id": "impl_gooaq_t5"
+      },
+      "used": [
+        {
+          "@id": "dataset_eli5"
+        },
+        {
+          "@id": "dataset_long_answers"
+        },
+        {
+          "@id": "model_t5_small"
+        },
+        {
+          "@id": "model_t5_11b"
+        }
+      ],
+      "wasAssociatedWith": [
+        {
+          "@id": "hp_batch_size_tokens_4096"
+        },
+        {
+          "@id": "hp_finetune_steps_200000"
+        },
+        {
+          "@id": "hp_tpu_topology_v3_8"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "path": "experiments/run_pretraining.sh",
+      "start_char_doc": 11719,
+      "end_char_doc": 11735,
+      "context": {
+        "prefix": "\\ --t5_tfds_data_dir=\"${BUCKET}/t5-tfds\" done done #########",
+        "suffix": "PRETRAINED_STEPS=1000000 FINETUNE_STEPS=200000 declare -a sizes=(\"small\""
+      }
+    },
+    {
+      "@id": "eval_t5_gooaq",
+      "@type": "EvaluationRun",
+      "description": "Evaluate all or selected T5 checkpoints on GooAQ dev/test splits using T5 eval.gin and GooAQ task mixtures.",
+      "split": "dev/test",
+      "evaluationScript": "experiments/run_pretraining.sh; experiments/evaluate_predictions.py",
+      "evaluationSplit": "dev/test",
+      "prov-executedBy": {
+        "@id": "impl_gooaq_t5"
+      },
+      "evaluates": {
+        "@id": "method_t5_finetuning"
+      },
+      "used": [
+        {
+          "@id": "eval_squad_metric"
+        },
+        {
+          "@id": "eval_f1"
+        },
+        {
+          "@id": "eval_exact_match"
+        },
+        {
+          "@id": "eval_rouge_l"
+        }
+      ],
+      "prov-generated": [
+        {
+          "@id": "pred_t5_gcs_predictions"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "experiments/run_pretraining.sh:35",
+      "path": "experiments/run_pretraining.sh",
+      "start_char_doc": 1377,
+      "end_char_doc": 1385,
+      "context": {
+        "prefix": "\\ --gin_param=\"utils.run.init_checkpoint='${PRETRAINED_DIR}/model.ckpt-${PRETRAINED_STEPS}'\" \\ --t5_tfds_data_dir=\"${BUCKET}/t5-tfds\" #",
+        "suffix": "python -m t5.models.mesh_transformer_main \\ --module_import=\"qoogle_tasks\""
+      }
+    },
+    {
+      "@id": "eval_external_eli5",
+      "@type": "EvaluationRun",
+      "description": "Evaluate GooAQ-trained T5 models on the ELI5 dev/test task with TPU v3-8 and model parallelism 8.",
+      "split": "dev/test",
+      "evaluationScript": "experiments/run_pretraining.sh",
+      "evaluationSplit": "dev/test",
+      "prov-executedBy": {
+        "@id": "impl_gooaq_t5"
+      },
+      "evaluates": {
+        "@id": "method_t5_finetuning"
+      },
+      "used": [
+        {
+          "@id": "dataset_eli5"
+        }
+      ],
+      "prov-generated": [
+        {
+          "@id": "pred_t5_gcs_predictions"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "experiments/run_pretraining.sh:265",
+      "path": "experiments/run_pretraining.sh",
+      "start_char_doc": 10257,
+      "end_char_doc": 10273,
+      "context": {
+        "prefix": "in \"${sizes[@]}\"; do MODEL_DIR=\"${BUCKET}/${TASK}/${SIZE}\" #",
+        "suffix": "TASK=eli5 python -m t5.models.mesh_transformer_main \\"
+      }
+    },
+    {
+      "@id": "pred_t5_gcs_predictions",
+      "@type": "PredictionSet",
+      "description": "T5 evaluation prediction files in Google Cloud Storage, selected by suffix _predictions and evaluated checkpoint-by-checkpoint.",
+      "numInstances": null,
+      "onDatasetSplit": "dev/test",
+      "format": "text lines",
+      "artifactsLocation": "gs://<bucket>/<path>/*_predictions",
+      "predictionFormat": "one prediction per input line",
+      "storageLocation": "Google Cloud Storage",
+      "wasGeneratedBy": {
+        "@id": "eval_t5_gooaq"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "experiments/evaluate_predictions.py:5",
+      "path": "experiments/evaluate_predictions.py",
+      "start_char_doc": 87,
+      "end_char_doc": 99,
+      "context": {
+        "prefix": "predictions against target. Usage: evaluate",
+        "suffix": ".py --model_mixture_name=NAME --dataset_mixture_name=NAME --bucket_name=GOOGLE_CLOUD_BUCKET_NAME --eval_metric=METRIC_NAME"
+      }
+    },
+    {
+      "@id": "hp_pretrained_steps_1000000",
+      "@type": "MLS_HyperParameter",
+      "name": "PRETRAINED_STEPS",
+      "hasValue": "1000000",
+      "hpCategory": "HP_Training",
+      "hpType": "MaxSteps",
+      "uncertain": false,
+      "sourceFile": "experiments/run_pretraining.sh",
+      "sourceLine": 7,
+      "wasDerivedFrom": "code",
+      "codeReference": "experiments/run_pretraining.sh:7",
+      "path": "experiments/run_pretraining.sh",
+      "start_char_doc": 172,
+      "end_char_doc": 196,
+      "context": {
+        "prefix": "PROJECT=... export ZONE=... export BUCKET=...",
+        "suffix": "FINETUNE_STEPS=20000 declare -a sizes=(\"11B\" \"small\")"
+      }
+    },
+    {
+      "@id": "hp_finetune_steps_20000",
+      "@type": "MLS_HyperParameter",
+      "name": "FINETUNE_STEPS",
+      "hasValue": "20000",
+      "hpCategory": "HP_Training",
+      "hpType": "MaxSteps",
+      "uncertain": false,
+      "sourceFile": "experiments/run_pretraining.sh",
+      "sourceLine": 8,
+      "wasDerivedFrom": "code",
+      "codeReference": "experiments/run_pretraining.sh:8",
+      "path": "experiments/run_pretraining.sh",
+      "start_char_doc": 197,
+      "end_char_doc": 217,
+      "context": {
+        "prefix": "export ZONE=... export BUCKET=... PRETRAINED_STEPS=1000000",
+        "suffix": "declare -a sizes=(\"11B\" \"small\") declare"
+      }
+    },
+    {
+      "@id": "hp_finetune_steps_2000000",
+      "@type": "MLS_HyperParameter",
+      "name": "FINETUNE_STEPS",
+      "hasValue": "2000000",
+      "hpCategory": "HP_Training",
+      "hpType": "MaxSteps",
+      "uncertain": false,
+      "sourceFile": "experiments/run_pretraining.sh",
+      "sourceLine": 71,
+      "wasDerivedFrom": "code",
+      "codeReference": "experiments/run_pretraining.sh:71",
+      "path": "experiments/run_pretraining.sh",
+      "start_char_doc": 2702,
+      "end_char_doc": 2724,
+      "context": {
+        "prefix": "########################## Qoogle: google_answers_long_answers ################################# PRETRAINED_STEPS=1000000",
+        "suffix": "declare -a sizes=(\"11B\" \"small\") declare"
+      }
+    },
+    {
+      "@id": "hp_finetune_steps_200000",
+      "@type": "MLS_HyperParameter",
+      "name": "FINETUNE_STEPS",
+      "hasValue": "200000",
+      "hpCategory": "HP_Training",
+      "hpType": "MaxSteps",
+      "uncertain": false,
+      "sourceFile": "experiments/run_pretraining.sh",
+      "sourceLine": 71,
+      "wasDerivedFrom": "code",
+      "codeReference": "experiments/run_pretraining.sh:71",
+      "path": "experiments/run_pretraining.sh",
+      "start_char_doc": 2702,
+      "end_char_doc": 2723,
+      "context": {
+        "prefix": "########################## Qoogle: google_answers_long_answers ################################# PRETRAINED_STEPS=1000000",
+        "suffix": "0 declare -a sizes=(\"11B\" \"small\")"
+      }
+    },
+    {
+      "@id": "hp_batch_size_tokens_196608",
+      "@type": "MLS_HyperParameter",
+      "name": "utils.run.batch_size",
+      "hasValue": "('tokens_per_batch', 196608)",
+      "hpCategory": "HP_Training",
+      "hpType": "BatchSize",
+      "uncertain": false,
+      "sourceFile": "experiments/run_pretraining.sh",
+      "sourceLine": 30,
+      "wasDerivedFrom": "code",
+      "codeReference": "experiments/run_pretraining.sh:30",
+      "path": "experiments/run_pretraining.sh",
+      "start_char_doc": 1090,
+      "end_char_doc": 1139,
+      "context": {
+        "prefix": "--gin_param=\"MIXTURE_NAME = '${TASK}'\" \\ --gin_param=\"",
+        "suffix": "\" \\ --gin_param=\"utils.run.train_steps=$((PRETRAINED_STEPS + FINETUNE_STEPS))\""
+      }
+    },
+    {
+      "@id": "hp_batch_size_tokens_4096",
+      "@type": "MLS_HyperParameter",
+      "name": "utils.run.batch_size",
+      "hasValue": "('tokens_per_batch', 4096)",
+      "hpCategory": "HP_Training",
+      "hpType": "BatchSize",
+      "uncertain": false,
+      "sourceFile": "experiments/run_pretraining.sh",
+      "sourceLine": 277,
+      "wasDerivedFrom": "code",
+      "codeReference": "experiments/run_pretraining.sh:277",
+      "path": "experiments/run_pretraining.sh",
+      "start_char_doc": 10680,
+      "end_char_doc": 10727,
+      "context": {
+        "prefix": "--gin_param=\"utils.tpu_mesh_shape.tpu_topology = 'v3-8'\" \\ --gin_param=\"",
+        "suffix": "\" \\ --gin_param=\"MIXTURE_NAME = '${TASK}'\""
+      }
+    },
+    {
+      "@id": "hp_save_checkpoints_1000",
+      "@type": "MLS_HyperParameter",
+      "name": "utils.run.save_checkpoints_steps",
+      "hasValue": "1000",
+      "hpCategory": "HP_Training",
+      "hpType": "MaxSteps",
+      "uncertain": false,
+      "sourceFile": "experiments/run_pretraining.sh",
+      "sourceLine": 27,
+      "wasDerivedFrom": "code",
+      "codeReference": "experiments/run_pretraining.sh:27",
+      "path": "experiments/run_pretraining.sh",
+      "start_char_doc": 916,
+      "end_char_doc": 953,
+      "context": {
+        "prefix": "--gin_file=\"dataset.gin\" \\ --gin_file=\"${PRETRAINED_DIR}/operative_config.gin\" \\ --gin_param=\"",
+        "suffix": "\" \\ --gin_param=\"utils.tpu_mesh_shape.tpu_topology = 'v3-128'\""
+      }
+    },
+    {
+      "@id": "hp_save_checkpoints_5000",
+      "@type": "MLS_HyperParameter",
+      "name": "utils.run.save_checkpoints_steps",
+      "hasValue": "5000",
+      "hpCategory": "HP_Training",
+      "hpType": "MaxSteps",
+      "uncertain": false,
+      "sourceFile": "experiments/run_pretraining.sh",
+      "sourceLine": 324,
+      "wasDerivedFrom": "code",
+      "codeReference": "experiments/run_pretraining.sh:324",
+      "path": "experiments/run_pretraining.sh",
+      "start_char_doc": 12331,
+      "end_char_doc": 12368,
+      "context": {
+        "prefix": "--gin_file=\"dataset.gin\" \\ --gin_file=\"${PRETRAINED_DIR}/operative_config.gin\" \\ --gin_param=\"",
+        "suffix": "\" \\ --gin_param=\"utils.tpu_mesh_shape.tpu_topology = 'v3-8'\""
+      }
+    },
+    {
+      "@id": "hp_eval_checkpoint_all",
+      "@type": "MLS_HyperParameter",
+      "name": "utils.run.eval_checkpoint_step",
+      "hasValue": "all",
+      "hpCategory": "HP_Training",
+      "hpType": "MaxSteps",
+      "uncertain": true,
+      "sourceFile": "experiments/run_pretraining.sh",
+      "sourceLine": 48,
+      "wasDerivedFrom": "code",
+      "codeReference": "experiments/run_pretraining.sh:48",
+      "path": "experiments/run_pretraining.sh",
+      "start_char_doc": 1905,
+      "end_char_doc": 1941,
+      "context": {
+        "prefix": "--gin_param=\"utils.run.dataset_split = 'dev'\" \\ --gin_param=\"",
+        "suffix": "\" \\ --t5_tfds_data_dir=\"${BUCKET}/t5-tfds\" python -m"
+      }
+    },
+    {
+      "@id": "hp_eval_checkpoint_1004400",
+      "@type": "MLS_HyperParameter",
+      "name": "utils.run.eval_checkpoint_step",
+      "hasValue": "1004400",
+      "hpCategory": "HP_Training",
+      "hpType": "MaxSteps",
+      "uncertain": false,
+      "sourceFile": "experiments/run_pretraining.sh",
+      "sourceLine": 111,
+      "wasDerivedFrom": "code",
+      "codeReference": "experiments/run_pretraining.sh:111",
+      "path": "experiments/run_pretraining.sh",
+      "start_char_doc": 4348,
+      "end_char_doc": 4386,
+      "context": {
+        "prefix": "--gin_param=\"utils.run.dataset_split = 'dev'\" \\ --gin_param=\"",
+        "suffix": "\" \\ --t5_tfds_data_dir=\"${BUCKET}/t5-tfds\" python -m"
+      }
+    },
+    {
+      "@id": "hp_model_parallelism_8",
+      "@type": "MLS_HyperParameter",
+      "name": "utils.tpu_mesh_shape.model_parallelism",
+      "hasValue": "8",
+      "hpCategory": "HP_Architecture",
+      "hpType": "UnknownArchitectureHP",
+      "uncertain": true,
+      "sourceFile": "experiments/run_pretraining.sh",
+      "sourceLine": 281,
+      "wasDerivedFrom": "code",
+      "codeReference": "experiments/run_pretraining.sh:281",
+      "path": "experiments/run_pretraining.sh",
+      "start_char_doc": 10902,
+      "end_char_doc": 10944,
+      "context": {
+        "prefix": "'dev'\" \\ --gin_param=\"utils.run.eval_checkpoint_step='all'\" \\ --gin_param=\"",
+        "suffix": "\" \\ --t5_tfds_data_dir=\"${BUCKET}/t5-tfds\" python -m"
+      }
+    },
+    {
+      "@id": "hp_tpu_topology_v3_128",
+      "@type": "MLS_HyperParameter",
+      "name": "utils.tpu_mesh_shape.tpu_topology",
+      "hasValue": "v3-128",
+      "hpCategory": "HP_Architecture",
+      "hpType": "UnknownArchitectureHP",
+      "uncertain": true,
+      "sourceFile": "experiments/run_pretraining.sh",
+      "sourceLine": 28,
+      "wasDerivedFrom": "code",
+      "codeReference": "experiments/run_pretraining.sh:28",
+      "path": "experiments/run_pretraining.sh",
+      "start_char_doc": 976,
+      "end_char_doc": 1020,
+      "context": {
+        "prefix": "--gin_file=\"${PRETRAINED_DIR}/operative_config.gin\" \\ --gin_param=\"utils.run.save_checkpoints_steps=1000\" \\ --gin_param=\"",
+        "suffix": "\" \\ --gin_param=\"MIXTURE_NAME = '${TASK}'\""
+      }
+    },
+    {
+      "@id": "hp_tpu_topology_v3_8",
+      "@type": "MLS_HyperParameter",
+      "name": "utils.tpu_mesh_shape.tpu_topology",
+      "hasValue": "v3-8",
+      "hpCategory": "HP_Architecture",
+      "hpType": "UnknownArchitectureHP",
+      "uncertain": true,
+      "sourceFile": "experiments/run_pretraining.sh",
+      "sourceLine": 276,
+      "wasDerivedFrom": "code",
+      "codeReference": "experiments/run_pretraining.sh:276",
+      "path": "experiments/run_pretraining.sh",
+      "start_char_doc": 10617,
+      "end_char_doc": 10659,
+      "context": {
+        "prefix": "--gin_file=\"${MODEL_DIR}/operative_config.gin\" \\ --gin_file=\"eval.gin\" \\ --gin_param=\"",
+        "suffix": "\" \\ --gin_param=\"utils.run.batch_size=('tokens_per_batch', 4096)\" \\"
+      }
+    },
+    {
+      "@id": "hp_train_size_2000",
+      "@type": "MLS_HyperParameter",
+      "name": "size",
+      "hasValue": "2000",
+      "hpCategory": "HP_Data",
+      "hpType": "TrainValTestSplit",
+      "uncertain": true,
+      "sourceFile": "experiments/create_splits.py",
+      "sourceLine": 22,
+      "wasDerivedFrom": "code",
+      "codeReference": "experiments/create_splits.py:22",
+      "path": "experiments/create_splits.py",
+      "start_char_doc": 480,
+      "end_char_doc": 484,
+      "context": {
+        "prefix": "sizes for size in [",
+        "suffix": ", 20000, 200000, 2000000]: for"
+      }
+    },
+    {
+      "@id": "hp_train_size_20000",
+      "@type": "MLS_HyperParameter",
+      "name": "size",
+      "hasValue": "20000",
+      "hpCategory": "HP_Data",
+      "hpType": "TrainValTestSplit",
+      "uncertain": true,
+      "sourceFile": "experiments/create_splits.py",
+      "sourceLine": 22,
+      "wasDerivedFrom": "code",
+      "codeReference": "experiments/create_splits.py:22",
+      "path": "experiments/create_splits.py",
+      "start_char_doc": 486,
+      "end_char_doc": 491,
+      "context": {
+        "prefix": "sizes for size in [2000,",
+        "suffix": ", 200000, 2000000]: for split"
+      }
+    },
+    {
+      "@id": "hp_train_size_200000",
+      "@type": "MLS_HyperParameter",
+      "name": "size",
+      "hasValue": "200000",
+      "hpCategory": "HP_Data",
+      "hpType": "TrainValTestSplit",
+      "uncertain": true,
+      "sourceFile": "experiments/create_splits.py",
+      "sourceLine": 22,
+      "wasDerivedFrom": "code",
+      "codeReference": "experiments/create_splits.py:22",
+      "path": "experiments/create_splits.py",
+      "start_char_doc": 493,
+      "end_char_doc": 499,
+      "context": {
+        "prefix": "for size in [2000, 20000,",
+        "suffix": ", 2000000]: for split in"
+      }
+    },
+    {
+      "@id": "hp_train_size_2000000",
+      "@type": "MLS_HyperParameter",
+      "name": "size",
+      "hasValue": "2000000",
+      "hpCategory": "HP_Data",
+      "hpType": "TrainValTestSplit",
+      "uncertain": true,
+      "sourceFile": "experiments/create_splits.py",
+      "sourceLine": 22,
+      "wasDerivedFrom": "code",
+      "codeReference": "experiments/create_splits.py:22",
+      "path": "experiments/create_splits.py",
+      "start_char_doc": 501,
+      "end_char_doc": 508,
+      "context": {
+        "prefix": "size in [2000, 20000, 200000,",
+        "suffix": "]: for split in ['train',"
+      }
+    },
+    {
+      "@id": "hp_input_sequence_length_default",
+      "@type": "MLS_HyperParameter",
+      "name": "input_sequence_length",
+      "hasValue": "512",
+      "hpCategory": "HP_Data",
+      "hpType": "MaxSequenceLength",
+      "uncertain": false,
+      "sourceFile": "experiments/evaluate_predictions.py",
+      "sourceLine": 119,
+      "wasDerivedFrom": "code",
+      "codeReference": "experiments/evaluate_predictions.py:119",
+      "path": "experiments/evaluate_predictions.py",
+      "start_char_doc": 4945,
+      "end_char_doc": 5044,
+      "context": {
+        "prefix": "else \"small\" path = f't5-evaluations/model:{model_mixture_name}_eval:{dataset_mixture_name}/{model_size}/'",
+        "suffix": "output_sequence_length = args[\"--output_sequence_length\"] if args['--output_sequence_length']"
+      }
+    },
+    {
+      "@id": "hp_output_sequence_length_default",
+      "@type": "MLS_HyperParameter",
+      "name": "output_sequence_length",
+      "hasValue": "100",
+      "hpCategory": "HP_Data",
+      "hpType": "MaxSequenceLength",
+      "uncertain": false,
+      "sourceFile": "experiments/evaluate_predictions.py",
+      "sourceLine": 120,
+      "wasDerivedFrom": "code",
+      "codeReference": "experiments/evaluate_predictions.py:120",
+      "path": "experiments/evaluate_predictions.py",
+      "start_char_doc": 5053,
+      "end_char_doc": 5155,
+      "context": {
+        "prefix": "args[\"--input_sequence_length\"] if args['--input_sequence_length'] else 512",
+        "suffix": "sequence_length = {\"inputs\": input_sequence_length, \"targets\":"
+      }
+    },
+    {
+      "@id": "hp_eval_sample_questions",
+      "@type": "MLS_HyperParameter",
+      "name": "len(questions)",
+      "hasValue": "1000",
+      "hpCategory": "HP_Data",
+      "hpType": "TrainValTestSplit",
+      "uncertain": true,
+      "sourceFile": "experiments/evaluate_predictions.py",
+      "sourceLine": 46,
+      "wasDerivedFrom": "code",
+      "codeReference": "experiments/evaluate_predictions.py:46",
+      "path": "experiments/evaluate_predictions.py",
+      "start_char_doc": 2007,
+      "end_char_doc": 2031,
+      "context": {
+        "prefix": "[] } questions = targets.keys()",
+        "suffix": ": questions = random.sample(questions, 1000)"
+      }
+    },
+    {
+      "@id": "hp_google_suggest_sleep",
+      "@type": "MLS_HyperParameter",
+      "name": "time.sleep",
+      "hasValue": "0.3",
+      "hpCategory": "HP_Training",
+      "hpType": "HP_Training",
+      "uncertain": true,
+      "sourceFile": "extraction/question_extraction/google_suggest.py",
+      "sourceLine": 69,
+      "wasDerivedFrom": "code",
+      "codeReference": "extraction/question_extraction/google_suggest.py:69",
+      "path": "extraction/question_extraction/google_suggest.py",
+      "start_char_doc": 1174,
+      "end_char_doc": 1189,
+      "context": {
+        "prefix": "= re.compile(r'^may \\d\\d') def query_and_return(prefix):",
+        "suffix": "r = requests.get(f\"http://google.com/complete/search?client=chrome&q={prefix}\") if r.status_code"
+      }
+    },
+    {
+      "@id": "hp_google_suggest_iterations",
+      "@type": "MLS_HyperParameter",
+      "name": "range",
+      "hasValue": "30",
+      "hpCategory": "HP_Training",
+      "hpType": "MaxSteps",
+      "uncertain": true,
+      "sourceFile": "extraction/question_extraction/google_suggest.py",
+      "sourceLine": 93,
+      "wasDerivedFrom": "code",
+      "codeReference": "extraction/question_extraction/google_suggest.py:93",
+      "path": "extraction/question_extraction/google_suggest.py",
+      "start_char_doc": 1842,
+      "end_char_doc": 1854,
+      "context": {
+        "prefix": "[] for idx in tqdm(",
+        "suffix": "): random.shuffle(all_results) for result in"
+      }
+    },
+    {
+      "@id": "hp_answer_extract_version",
+      "@type": "MLS_HyperParameter",
+      "name": "version",
+      "hasValue": "12",
+      "hpCategory": "HP_Training",
+      "hpType": "HP_Training",
+      "uncertain": true,
+      "sourceFile": "extraction/answer_extraction/extract_answers.py",
+      "sourceLine": 6,
+      "wasDerivedFrom": "code",
+      "codeReference": "extraction/answer_extraction/extract_answers.py:6",
+      "path": "extraction/answer_extraction/extract_answers.py",
+      "start_char_doc": 66,
+      "end_char_doc": 78,
+      "context": {
+        "prefix": "gcp from bs4 import BeautifulSoup",
+        "suffix": "# increment version to go"
+      }
+    },
+    {
+      "@id": "hp_answer_extract_batch_size",
+      "@type": "MLS_HyperParameter",
+      "name": "batch_size",
+      "hasValue": "20",
+      "hpCategory": "HP_Training",
+      "hpType": "BatchSize",
+      "uncertain": false,
+      "sourceFile": "extraction/answer_extraction/extract_answers.py",
+      "sourceLine": 7,
+      "wasDerivedFrom": "code",
+      "codeReference": "extraction/answer_extraction/extract_answers.py:7",
+      "path": "extraction/answer_extraction/extract_answers.py",
+      "start_char_doc": 148,
+      "end_char_doc": 163,
+      "context": {
+        "prefix": "we are uncertain about again",
+        "suffix": "conn, cur = gcp.connect_to_gcp() print('Connected"
+      }
+    },
+    {
+      "@id": "hp_crawl_task_batch_size",
+      "@type": "MLS_HyperParameter",
+      "name": "task_batch_size",
+      "hasValue": "10",
+      "hpCategory": "HP_Training",
+      "hpType": "BatchSize",
+      "uncertain": false,
+      "sourceFile": "extraction/answer_extraction/crawl_only.py",
+      "sourceLine": 15,
+      "wasDerivedFrom": "code",
+      "codeReference": "extraction/answer_extraction/crawl_only.py:15",
+      "path": "extraction/answer_extraction/crawl_only.py",
+      "start_char_doc": 316,
+      "end_char_doc": 336,
+      "context": {
+        "prefix": "random import threading import urllib.parse",
+        "suffix": "concurrent_sessions = 3 if len(sys.argv)"
+      }
+    },
+    {
+      "@id": "hp_crawl_concurrent_sessions",
+      "@type": "MLS_HyperParameter",
+      "name": "concurrent_sessions",
+      "hasValue": "3",
+      "hpCategory": "HP_Training",
+      "hpType": "NumWorkers",
+      "uncertain": false,
+      "sourceFile": "extraction/answer_extraction/crawl_only.py",
+      "sourceLine": 16,
+      "wasDerivedFrom": "code",
+      "codeReference": "extraction/answer_extraction/crawl_only.py:16",
+      "path": "extraction/answer_extraction/crawl_only.py",
+      "start_char_doc": 337,
+      "end_char_doc": 360,
+      "context": {
+        "prefix": "import urllib.parse task_batch_size = 10",
+        "suffix": "if len(sys.argv) < 2 else"
+      }
+    },
+    {
+      "@id": "hp_rouge_length_limit",
+      "@type": "MLS_HyperParameter",
+      "name": "length_limit",
+      "hasValue": "100",
+      "hpCategory": "HP_Data",
+      "hpType": "MaxSequenceLength",
+      "uncertain": false,
+      "sourceFile": "experiments/narrativeqa_eval_utils.py",
+      "sourceLine": 13,
+      "wasDerivedFrom": "code",
+      "codeReference": "experiments/narrativeqa_eval_utils.py:13",
+      "path": "experiments/narrativeqa_eval_utils.py",
+      "start_char_doc": 233,
+      "end_char_doc": 249,
+      "context": {
+        "prefix": "= rouge.Rouge( metrics=[\"rouge-l\"], max_n=4, limit_length=True,",
+        "suffix": ", length_limit_type=\"words\", apply_avg=True, apply_best=True, alpha=0.5,"
+      }
+    }
+  ]
+}

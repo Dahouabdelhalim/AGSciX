@@ -1,0 +1,2845 @@
+{
+  "@context": {
+    "mls": "http://example.org/ontology/mls#",
+    "schema": "http://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "Study": "mls:Study",
+    "Experiment": "mls:Experiment",
+    "Person": "schema:Person",
+    "Organization": "schema:Organization",
+    "MLS_Task": "mls:MLS_Task",
+    "MLS_Dataset": "mls:MLS_Dataset",
+    "DataSource": "mls:DataSource",
+    "Method": "mls:Method",
+    "MLS_Model": "mls:MLS_Model",
+    "MLS_Algorithm": "mls:MLS_Algorithm",
+    "Prompt": "mls:Prompt",
+    "MLS_Eval": "mls:MLS_Eval",
+    "SoftwareRepository": "mls:SoftwareRepository",
+    "MLS_Implementation": "mls:MLS_Implementation",
+    "MLS_HyperParameter": "mls:MLS_HyperParameter",
+    "Dependency": "mls:Dependency",
+    "Environment": "mls:Environment",
+    "DataProcessingStep": "mls:DataProcessingStep",
+    "TrainingRun": "mls:TrainingRun",
+    "EvaluationRun": "mls:EvaluationRun",
+    "PredictionSet": "mls:PredictionSet",
+    "name": "schema:name",
+    "identifier": "schema:identifier",
+    "description": "schema:description",
+    "url": "schema:url",
+    "version": "schema:version",
+    "license": "schema:license",
+    "programmingLanguage": "schema:programmingLanguage",
+    "dateModified": {
+      "@id": "schema:dateModified",
+      "@type": "xsd:dateTime"
+    },
+    "documentationUrl": {
+      "@id": "mls:documentationUrl",
+      "@type": "xsd:anyURI"
+    },
+    "owner": "mls:owner",
+    "platform": "mls:platform",
+    "codeRepository": {
+      "@id": "mls:codeRepository",
+      "@type": "xsd:anyURI"
+    },
+    "framework": "mls:framework",
+    "entryPoint": "mls:entryPoint",
+    "entryPointCommand": "mls:entryPointCommand",
+    "executionCommand": "mls:executionCommand",
+    "commitHash": "mls:commitHash",
+    "branch": "mls:branch",
+    "packageName": "mls:packageName",
+    "dependencyType": "mls:dependencyType",
+    "isOptional": {
+      "@id": "mls:isOptional",
+      "@type": "xsd:boolean"
+    },
+    "hardwareSpecs": "mls:hardwareSpecs",
+    "os": "mls:os",
+    "pythonVersion": "mls:pythonVersion",
+    "requirementsFile": "mls:requirementsFile",
+    "isDockerized": {
+      "@id": "mls:isDockerized",
+      "@type": "xsd:boolean"
+    },
+    "hasValue": {
+      "@id": "mls:hasValue",
+      "@type": "xsd:string"
+    },
+    "hpCategory": "mls:hpCategory",
+    "hpType": "mls:hpType",
+    "sourceFile": "mls:sourceFile",
+    "sourceLine": {
+      "@id": "mls:sourceLine",
+      "@type": "xsd:integer"
+    },
+    "uncertain": {
+      "@id": "mls:uncertain",
+      "@type": "xsd:boolean"
+    },
+    "transformationType": "mls:transformationType",
+    "codeReference": {
+      "@id": "mls:codeReference",
+      "@type": "xsd:anyURI"
+    },
+    "runId": "mls:runId",
+    "logFile": {
+      "@id": "mls:logFile",
+      "@type": "xsd:anyURI"
+    },
+    "artifactsLocation": {
+      "@id": "mls:artifactsLocation",
+      "@type": "xsd:anyURI"
+    },
+    "split": "mls:split",
+    "evaluationScript": "mls:evaluationScript",
+    "evaluationSplit": "mls:evaluationSplit",
+    "metricsFile": "mls:metricsFile",
+    "format": "mls:format",
+    "predictionFormat": "mls:predictionFormat",
+    "storageLocation": "mls:storageLocation",
+    "numInstances": {
+      "@id": "mls:numInstances",
+      "@type": "xsd:integer"
+    },
+    "onDatasetSplit": "mls:onDatasetSplit",
+    "startedAtTime": {
+      "@id": "prov:startedAtTime",
+      "@type": "xsd:dateTime"
+    },
+    "endedAtTime": {
+      "@id": "prov:endedAtTime",
+      "@type": "xsd:dateTime"
+    },
+    "contains": {
+      "@id": "mls:contains",
+      "@type": "@id"
+    },
+    "supports": {
+      "@id": "mls:supports",
+      "@type": "@id"
+    },
+    "runsIn": {
+      "@id": "mls:runsIn",
+      "@type": "@id"
+    },
+    "requires": {
+      "@id": "mls:requires",
+      "@type": "@id"
+    },
+    "trainedOn": {
+      "@id": "mls:trainedOn",
+      "@type": "@id"
+    },
+    "evaluatedOn": {
+      "@id": "mls:evaluatedOn",
+      "@type": "@id"
+    },
+    "achieves": {
+      "@id": "mls:achieves",
+      "@type": "@id"
+    },
+    "subMethod": {
+      "@id": "mls:subMethod",
+      "@type": "@id"
+    },
+    "subDatasetOf": {
+      "@id": "mls:subDatasetOf",
+      "@type": "@id"
+    },
+    "processedThrough": {
+      "@id": "mls:processedThrough",
+      "@type": "@id"
+    },
+    "inputDataset": {
+      "@id": "mls:inputDataset",
+      "@type": "@id"
+    },
+    "outputDataset": {
+      "@id": "mls:outputDataset",
+      "@type": "@id"
+    },
+    "trains": {
+      "@id": "mls:trains",
+      "@type": "@id"
+    },
+    "evaluates": {
+      "@id": "mls:evaluates",
+      "@type": "@id"
+    },
+    "appliedTo": {
+      "@id": "mls:appliedTo",
+      "@type": "@id"
+    },
+    "producedBy": {
+      "@id": "mls:producedBy",
+      "@type": "@id"
+    },
+    "prov-executedBy": {
+      "@id": "mls:prov-executedBy",
+      "@type": "@id"
+    },
+    "prov-generated": {
+      "@id": "mls:prov-generated",
+      "@type": "@id"
+    },
+    "used": {
+      "@id": "prov:used",
+      "@type": "@id"
+    },
+    "wasGeneratedBy": {
+      "@id": "prov:wasGeneratedBy",
+      "@type": "@id"
+    },
+    "wasDerivedFrom": {
+      "@id": "prov:wasDerivedFrom",
+      "@type": "@id"
+    },
+    "wasAssociatedWith": {
+      "@id": "prov:wasAssociatedWith",
+      "@type": "@id"
+    }
+  },
+  "@graph": [
+    {
+      "@id": "repo_facebookresearch_xlm",
+      "@type": "SoftwareRepository",
+      "name": "XLM",
+      "url": "https://github.com/facebookresearch/xlm",
+      "owner": "facebookresearch",
+      "platform": "GitHub",
+      "programmingLanguage": "Python",
+      "version": "1.0",
+      "license": "Creative Commons Attribution-NonCommercial 4.0 International",
+      "documentationUrl": "https://github.com/facebookresearch/xlm/blob/main/README.md",
+      "commitHash": "cd281d32612d145c6742b4d3f048f80df8669c30",
+      "branch": "main",
+      "contains": [
+        {
+          "@id": "impl_xlm_pytorch"
+        }
+      ],
+      "supports": [
+        {
+          "@id": "env_xlm_python_pytorch"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:1",
+      "path": "README.md",
+      "start_char_doc": 0,
+      "end_char_doc": 5,
+      "context": {
+        "prefix": "",
+        "suffix": "**NEW:** Added [XLM-R](https://arxiv.org/abs/1911.02116) model. PyTorch"
+      }
+    },
+    {
+      "@id": "study_xlmr_1911_02116",
+      "@type": "Study",
+      "name": "Unsupervised Cross-lingual Representation Learning at Scale",
+      "description": "XLM-R study referenced by the repository as the added XLM-R model.",
+      "url": "https://arxiv.org/abs/1911.02116",
+      "wasAssociatedWith": [
+        {
+          "@id": "org_facebook_ai"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:731",
+      "path": "README.md",
+      "start_char_doc": 38575,
+      "end_char_doc": 38634,
+      "context": {
+        "prefix": "(NeurIPS)}, year={2019} } ``` ###",
+        "suffix": "[5] A. Conneau *, K."
+      }
+    },
+    {
+      "@id": "study_xlm_1901_07291",
+      "@type": "Study",
+      "name": "Cross-lingual Language Model Pretraining",
+      "description": "Primary paper for the XLM PyTorch implementation.",
+      "url": "https://arxiv.org/abs/1901.07291",
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:5",
+      "path": "README.md",
+      "start_char_doc": 108,
+      "end_char_doc": 148,
+      "context": {
+        "prefix": "PyTorch original implementation of [",
+        "suffix": "](https://arxiv.org/abs/1901.07291). Includes: - [Monolingual language"
+      }
+    },
+    {
+      "@id": "person_alexis_conneau",
+      "@type": "Person",
+      "name": "Alexis Conneau",
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:686",
+      "path": "README.md",
+      "start_char_doc": 36781,
+      "end_char_doc": 36796,
+      "context": {
+        "prefix": "Model Pretraining}, author={Lample, Guillaume and",
+        "suffix": "}, journal={Advances in Neural Information"
+      }
+    },
+    {
+      "@id": "person_kartikay_khandelwal",
+      "@type": "Person",
+      "name": "Kartikay Khandelwal",
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:740",
+      "path": "README.md",
+      "start_char_doc": 39024,
+      "end_char_doc": 39044,
+      "context": {
+        "prefix": "at Scale}, author={Conneau, Alexis and",
+        "suffix": "and Goyal, Naman and Chaudhary,"
+      }
+    },
+    {
+      "@id": "person_naman_goyal",
+      "@type": "Person",
+      "name": "Naman Goyal",
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:740",
+      "path": "README.md",
+      "start_char_doc": 39049,
+      "end_char_doc": 39061,
+      "context": {
+        "prefix": "Alexis and Khandelwal, Kartikay and",
+        "suffix": "and Chaudhary, Vishrav and Wenzek,"
+      }
+    },
+    {
+      "@id": "person_vishrav_chaudhary",
+      "@type": "Person",
+      "name": "Vishrav Chaudhary",
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:740",
+      "path": "README.md",
+      "start_char_doc": 39066,
+      "end_char_doc": 39084,
+      "context": {
+        "prefix": "Kartikay and Goyal, Naman and",
+        "suffix": "and Wenzek, Guillaume and Guzm{\\'a}n,"
+      }
+    },
+    {
+      "@id": "person_guillaume_wenzek",
+      "@type": "Person",
+      "name": "Guillaume Wenzek",
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:740",
+      "path": "README.md",
+      "start_char_doc": 39089,
+      "end_char_doc": 39106,
+      "context": {
+        "prefix": "Naman and Chaudhary, Vishrav and",
+        "suffix": "and Guzm{\\'a}n, Francisco and Grave,"
+      }
+    },
+    {
+      "@id": "person_francisco_guzman",
+      "@type": "Person",
+      "name": "Francisco Guzmán",
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:733",
+      "path": "README.md",
+      "start_char_doc": 38709,
+      "end_char_doc": 38713,
+      "context": {
+        "prefix": "V. Chaudhary, G. Wenzek, F.",
+        "suffix": "an, E. Grave, M. Ott,"
+      }
+    },
+    {
+      "@id": "person_edouard_grave",
+      "@type": "Person",
+      "name": "Edouard Grave",
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:740",
+      "path": "README.md",
+      "start_char_doc": 39137,
+      "end_char_doc": 39151,
+      "context": {
+        "prefix": "Guillaume and Guzm{\\'a}n, Francisco and",
+        "suffix": "and Ott, Myle and Zettlemoyer,"
+      }
+    },
+    {
+      "@id": "person_myle_ott",
+      "@type": "Person",
+      "name": "Myle Ott",
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:712",
+      "path": "README.md",
+      "start_char_doc": 37872,
+      "end_char_doc": 37881,
+      "context": {
+        "prefix": "Machine Translation}, author={Lample, Guillaume and",
+        "suffix": "and Conneau, Alexis and Denoyer,"
+      }
+    },
+    {
+      "@id": "person_luke_zettlemoyer",
+      "@type": "Person",
+      "name": "Luke Zettlemoyer",
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:740",
+      "path": "README.md",
+      "start_char_doc": 39170,
+      "end_char_doc": 39187,
+      "context": {
+        "prefix": "Edouard and Ott, Myle and",
+        "suffix": "and Stoyanov, Veselin}, journal={arXiv preprint"
+      }
+    },
+    {
+      "@id": "person_veselin_stoyanov",
+      "@type": "Person",
+      "name": "Veselin Stoyanov",
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:699",
+      "path": "README.md",
+      "start_char_doc": 37371,
+      "end_char_doc": 37388,
+      "context": {
+        "prefix": "R and Schwenk, Holger and",
+        "suffix": "}, booktitle={Proceedings of the 2018"
+      }
+    },
+    {
+      "@id": "person_guillaume_lample",
+      "@type": "Person",
+      "name": "Guillaume Lample",
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:686",
+      "path": "README.md",
+      "start_char_doc": 36759,
+      "end_char_doc": 36776,
+      "context": {
+        "prefix": "title={Cross-lingual Language Model Pretraining}, author={",
+        "suffix": "and Conneau, Alexis}, journal={Advances in"
+      }
+    },
+    {
+      "@id": "org_facebook_ai",
+      "@type": "Organization",
+      "name": "Facebook AI Research",
+      "url": "https://github.com/facebookresearch",
+      "wasDerivedFrom": "code",
+      "codeReference": "setup.py:9",
+      "path": "setup.py",
+      "start_char_doc": 153,
+      "end_char_doc": 194,
+      "context": {
+        "prefix": "setup( name='xlm', version='1.0', description='Text simplification',",
+        "suffix": ", author_email='glample@fb.com, aconneau@fb.com', packages=find_packages(), )"
+      }
+    },
+    {
+      "@id": "task_clm",
+      "@type": "MLS_Task",
+      "name": "Causal Language Model",
+      "description": "Causal language-model pretraining objective.",
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:23",
+      "path": "README.md",
+      "start_char_doc": 885,
+      "end_char_doc": 906,
+      "context": {
+        "prefix": "**Language model pretraining**: - **",
+        "suffix": "** (CLM) - **Masked Language"
+      }
+    },
+    {
+      "@id": "task_mlm",
+      "@type": "MLS_Task",
+      "name": "Masked Language Model",
+      "description": "Masked language-model pretraining objective.",
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:24",
+      "path": "README.md",
+      "start_char_doc": 923,
+      "end_char_doc": 944,
+      "context": {
+        "prefix": "Language Model** (CLM) - **",
+        "suffix": "** (MLM) - **Translation Language"
+      }
+    },
+    {
+      "@id": "task_tlm",
+      "@type": "MLS_Task",
+      "name": "Translation Language Model",
+      "description": "Translation language-model objective over parallel data.",
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:25",
+      "path": "README.md",
+      "start_char_doc": 961,
+      "end_char_doc": 987,
+      "context": {
+        "prefix": "Language Model** (MLM) - **",
+        "suffix": "** (TLM) - **GLUE** fine-tuning"
+      }
+    },
+    {
+      "@id": "task_mt",
+      "@type": "MLS_Task",
+      "name": "Supervised / Unsupervised MT",
+      "description": "Machine translation training with denoising auto-encoding, parallel data, and back-translation.",
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:8",
+      "path": "README.md",
+      "start_char_doc": 411,
+      "end_char_doc": 439,
+      "context": {
+        "prefix": "model pretraining (XLM)](#ii-cross-lingual-language-model-pretraining-xlm) - [Applications:",
+        "suffix": "(NMT / UNMT)](#iii-applications-supervised--unsupervised-mt) - [Applications:"
+      }
+    },
+    {
+      "@id": "task_glue",
+      "@type": "MLS_Task",
+      "name": "GLUE fine-tuning",
+      "description": "Fine-tuning on English GLUE tasks.",
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:26",
+      "path": "README.md",
+      "start_char_doc": 998,
+      "end_char_doc": 1018,
+      "context": {
+        "prefix": "**Translation Language Model** (TLM) -",
+        "suffix": "- **XNLI** fine-tuning - **Supervised"
+      }
+    },
+    {
+      "@id": "task_xnli",
+      "@type": "MLS_Task",
+      "name": "XNLI fine-tuning",
+      "description": "Cross-lingual natural language inference fine-tuning/evaluation.",
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:27",
+      "path": "README.md",
+      "start_char_doc": 1021,
+      "end_char_doc": 1041,
+      "context": {
+        "prefix": "(TLM) - **GLUE** fine-tuning -",
+        "suffix": "- **Supervised / Unsupervised MT**"
+      }
+    },
+    {
+      "@id": "task_zero_shot_xlingual",
+      "@type": "MLS_Task",
+      "name": "zero-shot cross-lingual classification",
+      "description": "Predicting in other languages after English fine-tuning.",
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:538",
+      "path": "README.md",
+      "start_char_doc": 30306,
+      "end_char_doc": 30344,
+      "context": {
+        "prefix": "usually referred to as \"",
+        "suffix": "\". ### Get the right"
+      }
+    },
+    {
+      "@id": "dataset_wikipedia",
+      "@type": "MLS_Dataset",
+      "name": "Wikipedia",
+      "description": "Monolingual Wikipedia corpora used for language-model pretraining.",
+      "prov-derivedFrom": [
+        {
+          "@id": "datasource_wikimedia_dumps"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:75",
+      "path": "README.md",
+      "start_char_doc": 4279,
+      "end_char_doc": 4296,
+      "context": {
+        "prefix": "get the monolingual data (",
+        "suffix": ", the [TBC corpus](https://yknzhu.wixsite.com/mbweb) is"
+      }
+    },
+    {
+      "@id": "dataset_tbc",
+      "@type": "MLS_Dataset",
+      "name": "Toronto Book Corpus",
+      "description": "English book corpus mentioned as BERT/XLM_en training data.",
+      "prov-derivedFrom": [
+        {
+          "@id": "datasource_tbc"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:69",
+      "path": "README.md",
+      "start_char_doc": 3813,
+      "end_char_doc": 3832,
+      "context": {
+        "prefix": "**BERT** [TensorFlow](https://github.com/google-research/bert) model (Wikipedia +",
+        "suffix": "). Our implementation does not"
+      }
+    },
+    {
+      "@id": "dataset_glue",
+      "@type": "MLS_Dataset",
+      "name": "GLUE",
+      "description": "English transfer benchmark tasks.",
+      "prov-derivedFrom": [
+        {
+          "@id": "datasource_glue"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:51",
+      "path": "README.md",
+      "start_char_doc": 1994,
+      "end_char_doc": 2004,
+      "context": {
+        "prefix": "can fine-tune it on the",
+        "suffix": ". ### Pretrained English model"
+      }
+    },
+    {
+      "@id": "dataset_xnli",
+      "@type": "MLS_Dataset",
+      "name": "XNLI",
+      "description": "Cross-lingual natural-language-inference benchmark/corpus.",
+      "prov-derivedFrom": [
+        {
+          "@id": "datasource_xnli"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:617",
+      "path": "README.md",
+      "start_char_doc": 33630,
+      "end_char_doc": 33641,
+      "context": {
+        "prefix": "will download and tokenize the",
+        "suffix": ": ``` ./get-data-xnli.sh ``` ###"
+      }
+    },
+    {
+      "@id": "dataset_commoncrawl",
+      "@type": "MLS_Dataset",
+      "name": "CommonCrawl",
+      "description": "2.5 TB multilingual pretraining data for XLM-R.",
+      "prov-derivedFrom": [
+        {
+          "@id": "datasource_commoncrawl"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:208",
+      "path": "README.md",
+      "start_char_doc": 10579,
+      "end_char_doc": 10605,
+      "context": {
+        "prefix": "performance. It is trained on",
+        "suffix": ", in 100 languages. You"
+      }
+    },
+    {
+      "@id": "dataset_newscrawl",
+      "@type": "MLS_Dataset",
+      "name": "NewsCrawl",
+      "description": "Monolingual corpora for machine-translation experiments.",
+      "prov-derivedFrom": [
+        {
+          "@id": "datasource_newscrawl"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:420",
+      "path": "README.md",
+      "start_char_doc": 23873,
+      "end_char_doc": 23887,
+      "context": {
+        "prefix": "MT are trained on all",
+        "suffix": "available, i.e. about 260M, 200M"
+      }
+    },
+    {
+      "@id": "dataset_opus",
+      "@type": "MLS_Dataset",
+      "name": "OPUS",
+      "description": "Parallel data source suggested for additional language pairs.",
+      "prov-derivedFrom": [
+        {
+          "@id": "datasource_opus"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:295",
+      "path": "README.md",
+      "start_char_doc": 16730,
+      "end_char_doc": 16745,
+      "context": {
+        "prefix": "pairs, look at the [",
+        "suffix": "](http://opus.nlpl.eu/), and modify the get-data-para.sh"
+      }
+    },
+    {
+      "@id": "datasource_wikimedia_dumps",
+      "@type": "DataSource",
+      "name": "Wikimedia dumps",
+      "url": "https://dumps.wikimedia.org/",
+      "type": "web archive",
+      "license": null,
+      "wasDerivedFrom": "code",
+      "codeReference": "get-data-wiki.sh:27",
+      "path": "get-data-wiki.sh",
+      "start_char_doc": 531,
+      "end_char_doc": 558,
+      "context": {
+        "prefix": "# Wiki data WIKI_DUMP_NAME=${lg}wiki-latest-pages-articles.xml.bz2 WIKI_DUMP_LINK=",
+        "suffix": "/${lg}wiki/latest/$WIKI_DUMP_NAME # install tools ./install-tools.sh"
+      }
+    },
+    {
+      "@id": "datasource_xlm_public_files",
+      "@type": "DataSource",
+      "name": "XLM public files",
+      "url": "https://dl.fbaipublicfiles.com/XLM/",
+      "type": "model and vocabulary hosting",
+      "license": null,
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:16",
+      "path": "README.md",
+      "start_char_doc": 717,
+      "end_char_doc": 743,
+      "context": {
+        "prefix": "Layers (PKM)](#v-product-key-memory-layers-pkm) <br> <br> ![Model](https://",
+        "suffix": "/xlm_figure.jpg) <br> <br> XLM supports"
+      }
+    },
+    {
+      "@id": "datasource_glue",
+      "@type": "DataSource",
+      "name": "GLUE benchmark",
+      "url": "https://gluebenchmark.com/",
+      "type": "benchmark",
+      "license": null,
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:60",
+      "path": "README.md",
+      "start_char_doc": 2875,
+      "end_char_doc": 2889,
+      "context": {
+        "prefix": "than BERT (see the [",
+        "suffix": "](https://gluebenchmark.com/leaderboard)) while trained on the"
+      }
+    },
+    {
+      "@id": "datasource_xnli",
+      "@type": "DataSource",
+      "name": "facebookresearch/XNLI",
+      "url": "https://github.com/facebookresearch/XNLI",
+      "type": "benchmark repository",
+      "license": null,
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:249",
+      "path": "README.md",
+      "start_char_doc": 12850,
+      "end_char_doc": 12882,
+      "context": {
+        "prefix": "the 15 languages of [XNLI](https://",
+        "suffix": "), and two other models"
+      }
+    },
+    {
+      "@id": "datasource_commoncrawl",
+      "@type": "DataSource",
+      "name": "CommonCrawl",
+      "url": null,
+      "type": "web crawl",
+      "license": null,
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:208",
+      "path": "README.md",
+      "start_char_doc": 10589,
+      "end_char_doc": 10600,
+      "context": {
+        "prefix": "trained on 2.5 TB of",
+        "suffix": "data, in 100 languages. You"
+      }
+    },
+    {
+      "@id": "datasource_newscrawl",
+      "@type": "DataSource",
+      "name": "NewsCrawl",
+      "url": null,
+      "type": "news corpus",
+      "license": null,
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:420",
+      "path": "README.md",
+      "start_char_doc": 23873,
+      "end_char_doc": 23882,
+      "context": {
+        "prefix": "MT are trained on all",
+        "suffix": "data available, i.e. about 260M,"
+      }
+    },
+    {
+      "@id": "datasource_opus",
+      "@type": "DataSource",
+      "name": "OPUS",
+      "url": "http://opus.nlpl.eu/",
+      "type": "parallel corpus collection",
+      "license": null,
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:295",
+      "path": "README.md",
+      "start_char_doc": 16730,
+      "end_char_doc": 16745,
+      "context": {
+        "prefix": "pairs, look at the [",
+        "suffix": "](http://opus.nlpl.eu/), and modify the get-data-para.sh"
+      }
+    },
+    {
+      "@id": "datasource_tbc",
+      "@type": "DataSource",
+      "name": "Toronto Book Corpus",
+      "url": "http://yknzhu.wixsite.com/mbweb",
+      "type": "text corpus",
+      "license": null,
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:69",
+      "path": "README.md",
+      "start_char_doc": 3813,
+      "end_char_doc": 3832,
+      "context": {
+        "prefix": "**BERT** [TensorFlow](https://github.com/google-research/bert) model (Wikipedia +",
+        "suffix": "). Our implementation does not"
+      }
+    },
+    {
+      "@id": "method_xlm_pretraining",
+      "@type": "Method",
+      "name": "Cross-lingual Language Model Pretraining",
+      "description": "Pretraining framework combining CLM, MLM and TLM objectives.",
+      "version": null,
+      "trainedOn": [
+        {
+          "@id": "dataset_wikipedia"
+        },
+        {
+          "@id": "dataset_tbc"
+        }
+      ],
+      "evaluatedOn": [
+        {
+          "@id": "dataset_glue"
+        },
+        {
+          "@id": "dataset_xnli"
+        }
+      ],
+      "achieves": [
+        {
+          "@id": "eval_xnli_accuracy"
+        },
+        {
+          "@id": "eval_glue_score"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:5",
+      "path": "README.md",
+      "start_char_doc": 108,
+      "end_char_doc": 148,
+      "context": {
+        "prefix": "PyTorch original implementation of [",
+        "suffix": "](https://arxiv.org/abs/1901.07291). Includes: - [Monolingual language"
+      }
+    },
+    {
+      "@id": "method_xlmr",
+      "@type": "Method",
+      "name": "XLM-R",
+      "description": "Cross-lingual model trained on CommonCrawl in 100 languages.",
+      "version": null,
+      "trainedOn": [
+        {
+          "@id": "dataset_commoncrawl"
+        }
+      ],
+      "evaluatedOn": [
+        {
+          "@id": "dataset_xnli"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:208",
+      "path": "README.md",
+      "start_char_doc": 10445,
+      "end_char_doc": 10513,
+      "context": {
+        "prefix": "the new state-of-the-art XLM model.",
+        "suffix": "while not sacrificing per-language performance."
+      }
+    },
+    {
+      "@id": "model_xlm_en",
+      "@type": "MLS_Model",
+      "name": "XLM_en",
+      "architecture": "Transformer encoder / BERT-style MLM",
+      "parameters": "665M parameters",
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:54",
+      "path": "README.md",
+      "start_char_doc": 2064,
+      "end_char_doc": 2070,
+      "context": {
+        "prefix": "We provide our pretrained **",
+        "suffix": "** English model, trained with"
+      }
+    },
+    {
+      "@id": "model_xlmr_large",
+      "@type": "MLS_Model",
+      "name": "XLM-R",
+      "architecture": "XLM-R large loaded through torch.hub fairseq",
+      "parameters": null,
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:213",
+      "path": "README.md",
+      "start_char_doc": 10757,
+      "end_char_doc": 10767,
+      "context": {
+        "prefix": "torch xlmr = torch.hub.load('pytorch/fairseq', '",
+        "suffix": "') xlmr.eval() ``` Apply sentence-piece-model"
+      }
+    },
+    {
+      "@id": "model_xlm_17",
+      "@type": "MLS_Model",
+      "name": "XLM-17",
+      "architecture": "Multilingual MLM model",
+      "parameters": null,
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:272",
+      "path": "README.md",
+      "start_char_doc": 15421,
+      "end_char_doc": 15427,
+      "context": {
+        "prefix": "17 and 100 Languages The",
+        "suffix": "model includes these languages: en-fr-es-de-it-pt-nl-sv-pl-ru-ar-tr-zh-ja-ko-hi-vi"
+      }
+    },
+    {
+      "@id": "model_xlm_100",
+      "@type": "MLS_Model",
+      "name": "XLM-100",
+      "architecture": "100-language MLM model",
+      "parameters": null,
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:274",
+      "path": "README.md",
+      "start_char_doc": 15516,
+      "end_char_doc": 15523,
+      "context": {
+        "prefix": "includes these languages: en-fr-es-de-it-pt-nl-sv-pl-ru-ar-tr-zh-ja-ko-hi-vi The",
+        "suffix": "model includes these languages: en-es-fr-de-zh-ru-pt-it-ar-ja-id-tr-nl-pl-simple-fa-vi-sv-ko-he-ro-no-hi-uk-cs-fi-hu-th-da-ca-el-bg-sr-ms-bn-hr-sl-zh_yue-az-sk-eo-ta-sh-lt-et-ml-la-bs-sq-arz-af-ka-mr-eu-tl-ang-gl-nn-ur-kk-be-hy-te-lv-mk-zh_classical-als-is-wuu-my-sco-mn-ceb-ast-cy-kn-br-an-gu-bar-uz-lb-ne-si-war-jv-ga-zh_min_nan-oc-ku-sw-nds-ckb-ia-yi-fy-scn-gan-tt-am"
+      }
+    },
+    {
+      "@id": "model_mlm_tlm_xnli15",
+      "@type": "MLS_Model",
+      "name": "mlm_tlm_xnli15_1024.pth",
+      "architecture": "15-language MLM+TLM model",
+      "parameters": null,
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:254",
+      "path": "README.md",
+      "start_char_doc": 13895,
+      "end_char_doc": 13918,
+      "context": {
+        "prefix": "no accent + BPE| [Model](https://dl.fbaipublicfiles.com/XLM/",
+        "suffix": ") | [BPE codes](https://dl.fbaipublicfiles.com/XLM/codes_xnli_15) (80k)"
+      }
+    },
+    {
+      "@id": "alg_adam",
+      "@type": "MLS_Algorithm",
+      "name": "Adam",
+      "description": "Adam optimizer implementation used by XLM.",
+      "complexity": null,
+      "pseudoCode": null,
+      "wasDerivedFrom": "code",
+      "codeReference": "xlm/optim.py:16",
+      "path": "xlm/optim.py",
+      "start_char_doc": 270,
+      "end_char_doc": 280,
+      "context": {
+        "prefix": "torch from torch import optim",
+        "suffix": "(optim.Optimizer): \"\"\" Same as https://github.com/pytorch/pytorch/blob/master/torch/optim/adam.py,"
+      }
+    },
+    {
+      "@id": "alg_adam_inverse_sqrt",
+      "@type": "MLS_Algorithm",
+      "name": "AdamInverseSqrtWithWarmup",
+      "description": "Adam optimizer with warmup and inverse-square-root decay.",
+      "complexity": null,
+      "pseudoCode": null,
+      "wasDerivedFrom": "code",
+      "codeReference": "xlm/optim.py:89",
+      "path": "xlm/optim.py",
+      "start_char_doc": 3141,
+      "end_char_doc": 3172,
+      "context": {
+        "prefix": "p.data.addcdiv_(-step_size, exp_avg, denom) return loss",
+        "suffix": "(Adam): \"\"\" Decay the LR"
+      }
+    },
+    {
+      "@id": "alg_adam_cosine",
+      "@type": "MLS_Algorithm",
+      "name": "AdamCosineWithWarmup",
+      "description": "Adam optimizer with warmup and cosine schedule.",
+      "complexity": null,
+      "pseudoCode": null,
+      "wasDerivedFrom": "code",
+      "codeReference": "xlm/optim.py:142",
+      "path": "xlm/optim.py",
+      "start_char_doc": 5213,
+      "end_char_doc": 5239,
+      "context": {
+        "prefix": "+= 1 param_group['lr'] = self.get_lr_for_step(param_group['num_updates'])",
+        "suffix": "(Adam): \"\"\" Assign LR based"
+      }
+    },
+    {
+      "@id": "alg_multi_head_attention",
+      "@type": "MLS_Algorithm",
+      "name": "MultiHeadAttention",
+      "description": "Transformer multi-head attention module.",
+      "complexity": null,
+      "pseudoCode": null,
+      "wasDerivedFrom": "code",
+      "codeReference": "xlm/model/transformer.py:149",
+      "path": "xlm/model/transformer.py",
+      "start_char_doc": 4652,
+      "end_char_doc": 4676,
+      "context": {
+        "prefix": "self.proj.log_prob(x) if self.asm else self.proj(x)",
+        "suffix": "(nn.Module): NEW_ID = itertools.count() def"
+      }
+    },
+    {
+      "@id": "alg_hashing_memory",
+      "@type": "MLS_Algorithm",
+      "name": "HashingMemory",
+      "description": "Product-key memory layer implementation.",
+      "complexity": null,
+      "pseudoCode": null,
+      "wasDerivedFrom": "code",
+      "codeReference": "xlm/model/memory/memory.py:18",
+      "path": "xlm/model/memory/memory.py",
+      "start_char_doc": 367,
+      "end_char_doc": 386,
+      "context": {
+        "prefix": "QueryMLP, QueryConv logger = getLogger()",
+        "suffix": "(nn.Module): MEM_VALUES_PARAMS = '.values.weight' VALUES"
+      }
+    },
+    {
+      "@id": "eval_xnli_accuracy",
+      "@type": "MLS_Eval",
+      "measure": "XNLI accuracy",
+      "hasValue": null,
+      "stdDev": null,
+      "confidenceInterval": null,
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:258",
+      "path": "README.md",
+      "start_char_doc": 14670,
+      "end_char_doc": 14708,
+      "context": {
+        "prefix": "than mBERT on the [",
+        "suffix": "](https://arxiv.org/abs/1809.05053): Model | lg |"
+      }
+    },
+    {
+      "@id": "eval_glue_score",
+      "@type": "MLS_Eval",
+      "measure": "GLUE score",
+      "hasValue": "82.8",
+      "stdDev": null,
+      "confidenceInterval": null,
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:65",
+      "path": "README.md",
+      "start_char_doc": 3276,
+      "end_char_doc": 3284,
+      "context": {
+        "prefix": "65.1 | 39.6 `XLM_en` |",
+        "suffix": "| **62.9** | **95.6** |"
+      }
+    },
+    {
+      "@id": "eval_bleu",
+      "@type": "MLS_Eval",
+      "measure": "BLEU",
+      "hasValue": null,
+      "stdDev": null,
+      "confidenceInterval": null,
+      "wasDerivedFrom": "code",
+      "codeReference": "xlm/evaluation/evaluator.py:19",
+      "path": "xlm/evaluation/evaluator.py",
+      "start_char_doc": 429,
+      "end_char_doc": 445,
+      "context": {
+        "prefix": "concat_batches from ..model.memory import HashingMemory",
+        "suffix": "= os.path.join(os.path.abspath(os.path.dirname(__file__)), 'multi-bleu.perl') assert os.path.isfile(BLEU_SCRIPT_PATH)"
+      }
+    },
+    {
+      "@id": "eval_perplexity",
+      "@type": "MLS_Eval",
+      "measure": "perplexity",
+      "hasValue": null,
+      "stdDev": null,
+      "confidenceInterval": null,
+      "wasDerivedFrom": "code",
+      "codeReference": "xlm/evaluation/evaluator.py:230",
+      "path": "xlm/evaluation/evaluator.py",
+      "start_char_doc": 8399,
+      "end_char_doc": 8418,
+      "context": {
+        "prefix": "# causal prediction task (",
+        "suffix": "and accuracy) for lang1, lang2"
+      }
+    },
+    {
+      "@id": "eval_accuracy",
+      "@type": "MLS_Eval",
+      "measure": "accuracy",
+      "hasValue": null,
+      "stdDev": null,
+      "confidenceInterval": null,
+      "wasDerivedFrom": "code",
+      "codeReference": "xlm/evaluation/evaluator.py:257",
+      "path": "xlm/evaluation/evaluator.py",
+      "start_char_doc": 10035,
+      "end_char_doc": 10054,
+      "context": {
+        "prefix": "Evaluate perplexity and next word",
+        "suffix": ". \"\"\" params = self.params"
+      }
+    },
+    {
+      "@id": "impl_xlm_pytorch",
+      "@type": "MLS_Implementation",
+      "identifier": "XLM PyTorch training and evaluation implementation",
+      "codeRepository": "https://github.com/facebookresearch/xlm",
+      "framework": "PyTorch",
+      "entryPoint": "train.py",
+      "entryPointCommand": "python train.py",
+      "executionCommand": "python train.py",
+      "commitHash": "cd281d32612d145c6742b4d3f048f80df8669c30",
+      "branch": "main",
+      "runsIn": {
+        "@id": "env_xlm_python_pytorch"
+      },
+      "requires": [
+        {
+          "@id": "dep_numpy"
+        },
+        {
+          "@id": "dep_torch"
+        },
+        {
+          "@id": "dep_fastbpe"
+        },
+        {
+          "@id": "dep_moses"
+        },
+        {
+          "@id": "dep_apex"
+        },
+        {
+          "@id": "dep_scipy"
+        },
+        {
+          "@id": "dep_sklearn"
+        },
+        {
+          "@id": "dep_faiss"
+        },
+        {
+          "@id": "dep_pythainlp"
+        },
+        {
+          "@id": "dep_six"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "train.py:312",
+      "path": "train.py",
+      "start_char_doc": 14565,
+      "end_char_doc": 14586,
+      "context": {
+        "prefix": "generate parser / parse parameters",
+        "suffix": "params = parser.parse_args() # debug"
+      }
+    },
+    {
+      "@id": "impl_glue_xnli",
+      "@type": "MLS_Implementation",
+      "identifier": "GLUE/XNLI fine-tuning implementation",
+      "codeRepository": "https://github.com/facebookresearch/xlm",
+      "framework": "PyTorch",
+      "entryPoint": "glue-xnli.py",
+      "entryPointCommand": "python glue-xnli.py",
+      "executionCommand": "python glue-xnli.py",
+      "branch": "main",
+      "runsIn": {
+        "@id": "env_xlm_python_pytorch"
+      },
+      "requires": [
+        {
+          "@id": "dep_numpy"
+        },
+        {
+          "@id": "dep_torch"
+        },
+        {
+          "@id": "dep_fastbpe"
+        },
+        {
+          "@id": "dep_moses"
+        },
+        {
+          "@id": "dep_apex"
+        },
+        {
+          "@id": "dep_scipy"
+        },
+        {
+          "@id": "dep_sklearn"
+        },
+        {
+          "@id": "dep_faiss"
+        },
+        {
+          "@id": "dep_pythainlp"
+        },
+        {
+          "@id": "dep_six"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "glue-xnli.py:23",
+      "path": "glue-xnli.py",
+      "start_char_doc": 625,
+      "end_char_doc": 646,
+      "context": {
+        "prefix": "parse parameters parser = argparse.ArgumentParser(description='",
+        "suffix": "') # main parameters parser.add_argument(\"--exp_name\","
+      }
+    },
+    {
+      "@id": "env_xlm_python_pytorch",
+      "@type": "Environment",
+      "name": "XLM Python/PyTorch runtime",
+      "description": "Python 3 environment with PyTorch, NumPy, fastBPE, Moses and Apex for fp16 training.",
+      "hardwareSpecs": "GPU; multi-GPU and multi-node training supported; tested up to 128 GPUs",
+      "os": null,
+      "pythonVersion": "Python 3",
+      "requirementsFile": "setup.py",
+      "isDockerized": false,
+      "framework": "PyTorch 0.4/1.0",
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:42",
+      "path": "README.md",
+      "start_char_doc": 1291,
+      "end_char_doc": 1299,
+      "context": {
+        "prefix": ". ``` ## Dependencies -",
+        "suffix": "- [NumPy](http://www.numpy.org/) - [PyTorch](http://pytorch.org/) (currently"
+      }
+    },
+    {
+      "@id": "dep_python3",
+      "@type": "Dependency",
+      "packageName": "Python",
+      "version": "3",
+      "dependencyType": "runtime",
+      "isOptional": false,
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:42",
+      "path": "README.md",
+      "start_char_doc": 1291,
+      "end_char_doc": 1299,
+      "context": {
+        "prefix": ". ``` ## Dependencies -",
+        "suffix": "- [NumPy](http://www.numpy.org/) - [PyTorch](http://pytorch.org/) (currently"
+      }
+    },
+    {
+      "@id": "dep_numpy",
+      "@type": "Dependency",
+      "packageName": "NumPy",
+      "version": null,
+      "dependencyType": "runtime",
+      "isOptional": false,
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:43",
+      "path": "README.md",
+      "start_char_doc": 1303,
+      "end_char_doc": 1308,
+      "context": {
+        "prefix": "- Python 3 - [",
+        "suffix": "](http://www.numpy.org/) - [PyTorch](http://pytorch.org/) (currently tested"
+      }
+    },
+    {
+      "@id": "dep_torch",
+      "@type": "Dependency",
+      "packageName": "PyTorch",
+      "version": "0.4 and 1.0",
+      "dependencyType": "runtime",
+      "isOptional": false,
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:5",
+      "path": "README.md",
+      "start_char_doc": 72,
+      "end_char_doc": 79,
+      "context": {
+        "prefix": "XLM **NEW:** Added [XLM-R](https://arxiv.org/abs/1911.02116) model.",
+        "suffix": "original implementation of [Cross-lingual Language"
+      }
+    },
+    {
+      "@id": "dep_fastbpe",
+      "@type": "Dependency",
+      "packageName": "fastBPE",
+      "version": null,
+      "dependencyType": "runtime",
+      "isOptional": false,
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:45",
+      "path": "README.md",
+      "start_char_doc": 1411,
+      "end_char_doc": 1418,
+      "context": {
+        "prefix": "0.4 and 1.0) - [",
+        "suffix": "](https://github.com/facebookresearch/XLM/tree/master/tools#fastbpe) (generate and apply BPE"
+      }
+    },
+    {
+      "@id": "dep_moses",
+      "@type": "Dependency",
+      "packageName": "Moses",
+      "version": null,
+      "dependencyType": "runtime",
+      "isOptional": false,
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:46",
+      "path": "README.md",
+      "start_char_doc": 1521,
+      "end_char_doc": 1526,
+      "context": {
+        "prefix": "apply BPE codes) - [",
+        "suffix": "](https://github.com/facebookresearch/XLM/tree/master/tools#tokenizers) (scripts to clean and"
+      }
+    },
+    {
+      "@id": "dep_apex",
+      "@type": "Dependency",
+      "packageName": "Apex",
+      "version": null,
+      "dependencyType": "runtime",
+      "isOptional": true,
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:47",
+      "path": "README.md",
+      "start_char_doc": 1670,
+      "end_char_doc": 1674,
+      "context": {
+        "prefix": "no installation required) - [",
+        "suffix": "](https://github.com/nvidia/apex#quick-start) (for fp16 training) ##"
+      }
+    },
+    {
+      "@id": "dep_scipy",
+      "@type": "Dependency",
+      "packageName": "scipy",
+      "version": null,
+      "dependencyType": "runtime",
+      "isOptional": false,
+      "wasDerivedFrom": "code",
+      "codeReference": "xlm/evaluation/glue.py:20",
+      "path": "xlm/evaluation/glue.py",
+      "start_char_doc": 397,
+      "end_char_doc": 402,
+      "context": {
+        "prefix": "import torch.nn.functional as F from",
+        "suffix": ".stats import spearmanr, pearsonr from"
+      }
+    },
+    {
+      "@id": "dep_sklearn",
+      "@type": "Dependency",
+      "packageName": "sklearn",
+      "version": null,
+      "dependencyType": "runtime",
+      "isOptional": false,
+      "wasDerivedFrom": "code",
+      "codeReference": "xlm/evaluation/glue.py:21",
+      "path": "xlm/evaluation/glue.py",
+      "start_char_doc": 441,
+      "end_char_doc": 448,
+      "context": {
+        "prefix": "scipy.stats import spearmanr, pearsonr from",
+        "suffix": ".metrics import f1_score, matthews_corrcoef from"
+      }
+    },
+    {
+      "@id": "dep_faiss",
+      "@type": "Dependency",
+      "packageName": "faiss",
+      "version": null,
+      "dependencyType": "runtime",
+      "isOptional": true,
+      "wasDerivedFrom": "code",
+      "codeReference": "xlm/model/memory/utils.py:9",
+      "path": "xlm/model/memory/utils.py",
+      "start_char_doc": 159,
+      "end_char_doc": 171,
+      "context": {
+        "prefix": "the nearest neighbor search) try:",
+        "suffix": "FAISS_AVAILABLE = hasattr(faiss, 'StandardGpuResources') except"
+      }
+    },
+    {
+      "@id": "dep_pythainlp",
+      "@type": "Dependency",
+      "packageName": "pythainlp",
+      "version": null,
+      "dependencyType": "runtime",
+      "isOptional": true,
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:558",
+      "path": "README.md",
+      "start_char_doc": 31318,
+      "end_char_doc": 31327,
+      "context": {
+        "prefix": "``` # Thai - https://github.com/PyThaiNLP/",
+        "suffix": "pip install pythainlp # Chinese"
+      }
+    },
+    {
+      "@id": "dep_six",
+      "@type": "Dependency",
+      "packageName": "six",
+      "version": null,
+      "dependencyType": "runtime",
+      "isOptional": false,
+      "wasDerivedFrom": "code",
+      "codeReference": "tools/lowercase_and_remove_accent.py:10",
+      "path": "tools/lowercase_and_remove_accent.py",
+      "start_char_doc": 223,
+      "end_char_doc": 233,
+      "context": {
+        "prefix": "# import sys import unicodedata",
+        "suffix": "def convert_to_unicode(text): \"\"\" Converts `text`"
+      }
+    },
+    {
+      "@id": "step_wiki_download_tokenize",
+      "@type": "DataProcessingStep",
+      "name": "Wikipedia download, cleaning and tokenization",
+      "description": "Wikipedia download, cleaning and tokenization",
+      "transformationType": "cleaning/tokenization/splitting",
+      "parameters": null,
+      "codeReference": "get-data-wiki.sh:36",
+      "prov-uses": {
+        "@id": "datasource_wikimedia_dumps"
+      },
+      "wasDerivedFrom": "code",
+      "path": "get-data-wiki.sh",
+      "start_char_doc": 700,
+      "end_char_doc": 723,
+      "context": {
+        "prefix": "$WIKI_PATH/bz2 mkdir -p $WIKI_PATH/txt #",
+        "suffix": "echo \"Downloading $lg Wikipedia dump"
+      }
+    },
+    {
+      "@id": "step_bpe_binarize",
+      "@type": "DataProcessingStep",
+      "name": "BPE application and binarization",
+      "description": "BPE application and binarization",
+      "transformationType": "tokenization/binarization",
+      "parameters": null,
+      "codeReference": "preprocess.py:37",
+      "prov-uses": null,
+      "wasDerivedFrom": "code",
+      "path": "preprocess.py",
+      "start_char_doc": 742,
+      "end_char_doc": 763,
+      "context": {
+        "prefix": "= Dictionary.read_vocab(voc_path) logger.info(\"\") data =",
+        "suffix": "(txt_path, bin_path, dico) logger.info(\"%i words"
+      }
+    },
+    {
+      "@id": "step_prepare_glue",
+      "@type": "DataProcessingStep",
+      "name": "Prepare GLUE data",
+      "description": "Prepare GLUE data",
+      "transformationType": "tokenization/binarization",
+      "parameters": null,
+      "codeReference": "prepare-glue.sh:28",
+      "prov-uses": null,
+      "wasDerivedFrom": "code",
+      "path": "prepare-glue.sh",
+      "start_char_doc": 625,
+      "end_char_doc": 670,
+      "context": {
+        "prefix": "-c https://dl.fbaipublicfiles.com/XLM/vocab_en -P $MAIN_PATH #",
+        "suffix": "glue_tasks=\"MNLI-m QNLI QQP SST-2 STS-B\""
+      }
+    },
+    {
+      "@id": "step_prepare_xnli",
+      "@type": "DataProcessingStep",
+      "name": "Prepare XNLI data",
+      "description": "Prepare XNLI data",
+      "transformationType": "tokenization/binarization",
+      "parameters": null,
+      "codeReference": "prepare-xnli.sh:54",
+      "prov-uses": null,
+      "wasDerivedFrom": "code",
+      "path": "prepare-xnli.sh",
+      "start_char_doc": 1649,
+      "end_char_doc": 1666,
+      "context": {
+        "prefix": "$PROCESSED_PATH/$pair.$lg.$split done done done ##",
+        "suffix": "rm -rf $PROCESSED_PATH/eval/XNLI mkdir -p"
+      }
+    },
+    {
+      "@id": "step_nmt_download_preprocess",
+      "@type": "DataProcessingStep",
+      "name": "NMT download and preprocessing",
+      "description": "NMT download and preprocessing",
+      "transformationType": "download/tokenization/BPE/binarization",
+      "parameters": null,
+      "codeReference": "get-data-nmt.sh:12",
+      "prov-uses": null,
+      "wasDerivedFrom": "code",
+      "path": "get-data-nmt.sh",
+      "start_char_doc": 206,
+      "end_char_doc": 238,
+      "context": {
+        "prefix": "# set -e # #",
+        "suffix": "# N_MONO=5000000 # number of"
+      }
+    },
+    {
+      "@id": "step_mask_words",
+      "@type": "DataProcessingStep",
+      "name": "Masked-word corruption",
+      "description": "Masked-word corruption",
+      "transformationType": "masking",
+      "parameters": null,
+      "codeReference": "xlm/evaluation/evaluator.py:190",
+      "prov-uses": null,
+      "wasDerivedFrom": "code",
+      "path": "xlm/evaluation/evaluator.py",
+      "start_char_doc": 7028,
+      "end_char_doc": 7036,
+      "context": {
+        "prefix": "original segmentation restore_segmentation(lang1_path) restore_segmentation(lang2_path) def",
+        "suffix": "(self, x, lengths, rng): \"\"\""
+      }
+    },
+    {
+      "@id": "train_xlm_main",
+      "@type": "TrainingRun",
+      "runId": "train.py main loop",
+      "codeReference": "train.py:258",
+      "logFile": null,
+      "trains": {
+        "@id": "model_xlm_en"
+      },
+      "used": [
+        {
+          "@id": "dataset_wikipedia"
+        },
+        {
+          "@id": "dataset_tbc"
+        },
+        {
+          "@id": "impl_xlm_pytorch"
+        }
+      ],
+      "prov-executedBy": {
+        "@id": "impl_xlm_pytorch"
+      },
+      "wasDerivedFrom": "code",
+      "path": "train.py",
+      "start_char_doc": 12707,
+      "end_char_doc": 12740,
+      "context": {
+        "prefix": "params) # language model training",
+        "suffix": "logger.info(\"============ Starting epoch %i ..."
+      }
+    },
+    {
+      "@id": "train_glue_xnli",
+      "@type": "TrainingRun",
+      "runId": "glue-xnli fine-tuning",
+      "codeReference": "glue-xnli.py:112",
+      "logFile": null,
+      "trains": {
+        "@id": "model_mlm_tlm_xnli15"
+      },
+      "used": [
+        {
+          "@id": "dataset_glue"
+        },
+        {
+          "@id": "dataset_xnli"
+        },
+        {
+          "@id": "impl_glue_xnli"
+        }
+      ],
+      "prov-executedBy": {
+        "@id": "impl_glue_xnli"
+      },
+      "wasDerivedFrom": "code",
+      "path": "glue-xnli.py",
+      "start_char_doc": 4400,
+      "end_char_doc": 4434,
+      "context": {
+        "prefix": "XNLI(embedder, scores, params) # run",
+        "suffix": "if task in GLUE_TASKS: glue.run(task)"
+      }
+    },
+    {
+      "@id": "eval_xlm_all",
+      "@type": "EvaluationRun",
+      "runId": "run_all_evals",
+      "split": "valid/test",
+      "codeReference": "xlm/evaluation/evaluator.py:219",
+      "evaluates": {
+        "@id": "method_xlm_pretraining"
+      },
+      "evaluationScript": "xlm/evaluation/evaluator.py",
+      "evaluationSplit": "valid,test",
+      "metricsFile": null,
+      "prov-executedBy": {
+        "@id": "impl_xlm_pytorch"
+      },
+      "prov-generated": [
+        {
+          "@id": "pred_bleu_hypotheses"
+        },
+        {
+          "@id": "pred_json_logs"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "path": "xlm/evaluation/evaluator.py",
+      "start_char_doc": 8106,
+      "end_char_doc": 8123,
+      "context": {
+        "prefix": "bs) return x, _x_real, pred_mask",
+        "suffix": "(self, trainer): \"\"\" Run all"
+      }
+    },
+    {
+      "@id": "eval_glue_xnli",
+      "@type": "EvaluationRun",
+      "runId": "GLUE/XNLI evaluation",
+      "split": "transfer_tasks",
+      "codeReference": "glue-xnli.py:114",
+      "evaluates": {
+        "@id": "model_mlm_tlm_xnli15"
+      },
+      "evaluationScript": "glue-xnli.py",
+      "evaluationSplit": "GLUE/XNLI",
+      "metricsFile": null,
+      "prov-executedBy": {
+        "@id": "impl_glue_xnli"
+      },
+      "wasDerivedFrom": "code",
+      "path": "glue-xnli.py",
+      "start_char_doc": 4470,
+      "end_char_doc": 4484,
+      "context": {
+        "prefix": "params.transfer_tasks: if task in GLUE_TASKS:",
+        "suffix": "if task in XNLI_TASKS: xnli.run()"
+      }
+    },
+    {
+      "@id": "pred_binarized_pth",
+      "@type": "PredictionSet",
+      "name": "Binarized dataset files",
+      "format": "pth",
+      "predictionFormat": "pth",
+      "storageLocation": "$OUTPATH/{train,valid,test}.en.pth",
+      "artifactsLocation": "$OUTPATH/{train,valid,test}.en.pth",
+      "onDatasetSplit": null,
+      "wasGeneratedBy": {
+        "@id": "step_bpe_binarize"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:108",
+      "path": "README.md",
+      "start_char_doc": 5515,
+      "end_char_doc": 5540,
+      "context": {
+        "prefix": "will create three files: $OUTPATH/",
+        "suffix": "# After that we're all"
+      }
+    },
+    {
+      "@id": "pred_checkpoints",
+      "@type": "PredictionSet",
+      "name": "Training checkpoints",
+      "format": "pth",
+      "predictionFormat": "pth",
+      "storageLocation": "dumped experiment directory",
+      "artifactsLocation": "dumped experiment directory",
+      "onDatasetSplit": null,
+      "wasGeneratedBy": {
+        "@id": "train_xlm_main"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "xlm/trainer.py:493",
+      "path": "xlm/trainer.py",
+      "start_char_doc": 19459,
+      "end_char_doc": 19474,
+      "context": {
+        "prefix": "None else (len1, len2) def",
+        "suffix": "(self, name, include_optimizers=True): \"\"\" Save"
+      }
+    },
+    {
+      "@id": "pred_best_model",
+      "@type": "PredictionSet",
+      "name": "Best model checkpoint",
+      "format": "pth",
+      "predictionFormat": "pth",
+      "storageLocation": "dumped experiment directory",
+      "artifactsLocation": "dumped experiment directory",
+      "onDatasetSplit": null,
+      "wasGeneratedBy": {
+        "@id": "train_xlm_main"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "xlm/trainer.py:575",
+      "path": "xlm/trainer.py",
+      "start_char_doc": 23143,
+      "end_char_doc": 23158,
+      "context": {
+        "prefix": "self.save_checkpoint('periodic-%i' % self.epoch, include_optimizers=False) def",
+        "suffix": "(self, scores): \"\"\" Save best"
+      }
+    },
+    {
+      "@id": "pred_bleu_hypotheses",
+      "@type": "PredictionSet",
+      "name": "BLEU hypotheses",
+      "format": "txt",
+      "predictionFormat": "txt",
+      "storageLocation": "hypotheses",
+      "artifactsLocation": "hypotheses",
+      "onDatasetSplit": null,
+      "wasGeneratedBy": {
+        "@id": "eval_xlm_all"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "xlm/evaluation/evaluator.py:98",
+      "path": "xlm/evaluation/evaluator.py",
+      "start_char_doc": 2915,
+      "end_char_doc": 2923,
+      "context": {
+        "prefix": "BLEU evaluation if self.params.is_master: params.",
+        "suffix": "= os.path.join(params.dump_path, 'hypotheses') subprocess.Popen('mkdir -p"
+      }
+    },
+    {
+      "@id": "pred_json_logs",
+      "@type": "PredictionSet",
+      "name": "JSON score logs",
+      "format": "json",
+      "predictionFormat": "json",
+      "storageLocation": "logger output",
+      "artifactsLocation": "logger output",
+      "onDatasetSplit": null,
+      "wasGeneratedBy": {
+        "@id": "eval_xlm_all"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "train.py:251",
+      "path": "train.py",
+      "start_char_doc": 12539,
+      "end_char_doc": 12546,
+      "context": {
+        "prefix": "%.6f\" % (k, v)) logger.info(\"",
+        "suffix": ":%s\" % json.dumps(scores)) exit() #"
+      }
+    },
+    {
+      "@id": "hp_emb_dim_default",
+      "@type": "MLS_HyperParameter",
+      "name": "emb_dim",
+      "hasValue": "512",
+      "hpCategory": "HP_Architecture",
+      "hpType": "EmbeddingDim",
+      "uncertain": false,
+      "sourceFile": "train.py",
+      "sourceLine": 49,
+      "wasDerivedFrom": "code",
+      "codeReference": "train.py:49",
+      "path": "train.py",
+      "start_char_doc": 1904,
+      "end_char_doc": 1913,
+      "context": {
+        "prefix": "encoder\") # model parameters parser.add_argument(\"",
+        "suffix": "\", type=int, default=512, help=\"Embedding layer"
+      }
+    },
+    {
+      "@id": "hp_n_layers_default",
+      "@type": "MLS_HyperParameter",
+      "name": "n_layers",
+      "hasValue": "4",
+      "hpCategory": "HP_Architecture",
+      "hpType": "NumLayers",
+      "uncertain": false,
+      "sourceFile": "train.py",
+      "sourceLine": 51,
+      "wasDerivedFrom": "code",
+      "codeReference": "train.py:51",
+      "path": "train.py",
+      "start_char_doc": 2017,
+      "end_char_doc": 2027,
+      "context": {
+        "prefix": "default=512, help=\"Embedding layer size\") parser.add_argument(\"",
+        "suffix": "\", type=int, default=4, help=\"Number of"
+      }
+    },
+    {
+      "@id": "hp_n_heads_default",
+      "@type": "MLS_HyperParameter",
+      "name": "n_heads",
+      "hasValue": "8",
+      "hpCategory": "HP_Architecture",
+      "hpType": "AttentionHeads",
+      "uncertain": false,
+      "sourceFile": "train.py",
+      "sourceLine": 53,
+      "wasDerivedFrom": "code",
+      "codeReference": "train.py:53",
+      "path": "train.py",
+      "start_char_doc": 2137,
+      "end_char_doc": 2146,
+      "context": {
+        "prefix": "help=\"Number of Transformer layers\") parser.add_argument(\"",
+        "suffix": "\", type=int, default=8, help=\"Number of"
+      }
+    },
+    {
+      "@id": "hp_dropout_default",
+      "@type": "MLS_HyperParameter",
+      "name": "dropout",
+      "hasValue": "0",
+      "hpCategory": "HP_Architecture",
+      "hpType": "Dropout",
+      "uncertain": false,
+      "sourceFile": "train.py",
+      "sourceLine": 55,
+      "wasDerivedFrom": "code",
+      "codeReference": "train.py:55",
+      "path": "train.py",
+      "start_char_doc": 2255,
+      "end_char_doc": 2264,
+      "context": {
+        "prefix": "help=\"Number of Transformer heads\") parser.add_argument(\"",
+        "suffix": "\", type=float, default=0, help=\"Dropout\") parser.add_argument(\"--attention_dropout\","
+      }
+    },
+    {
+      "@id": "hp_attention_dropout_default",
+      "@type": "MLS_HyperParameter",
+      "name": "attention_dropout",
+      "hasValue": "0",
+      "hpCategory": "HP_Architecture",
+      "hpType": "Dropout",
+      "uncertain": false,
+      "sourceFile": "train.py",
+      "sourceLine": 57,
+      "wasDerivedFrom": "code",
+      "codeReference": "train.py:57",
+      "path": "train.py",
+      "start_char_doc": 2355,
+      "end_char_doc": 2374,
+      "context": {
+        "prefix": "parser.add_argument(\"--dropout\", type=float, default=0, help=\"Dropout\") parser.add_argument(\"",
+        "suffix": "\", type=float, default=0, help=\"Dropout in"
+      }
+    },
+    {
+      "@id": "hp_word_pred",
+      "@type": "MLS_HyperParameter",
+      "name": "word_pred",
+      "hasValue": "0.15",
+      "hpCategory": "HP_Data",
+      "hpType": "HP_Data",
+      "uncertain": true,
+      "sourceFile": "train.py",
+      "sourceLine": 92,
+      "wasDerivedFrom": "code",
+      "codeReference": "train.py:92",
+      "path": "train.py",
+      "start_char_doc": 4413,
+      "end_char_doc": 4424,
+      "context": {
+        "prefix": "language modeling task parameters parser.add_argument(\"",
+        "suffix": "\", type=float, default=0.15, help=\"Fraction of"
+      }
+    },
+    {
+      "@id": "hp_word_mask_keep_rand",
+      "@type": "MLS_HyperParameter",
+      "name": "word_mask_keep_rand",
+      "hasValue": "0.8,0.1,0.1",
+      "hpCategory": "HP_Data",
+      "hpType": "HP_Data",
+      "uncertain": true,
+      "sourceFile": "train.py",
+      "sourceLine": 96,
+      "wasDerivedFrom": "code",
+      "codeReference": "train.py:96",
+      "path": "train.py",
+      "start_char_doc": 4740,
+      "end_char_doc": 4761,
+      "context": {
+        "prefix": "to probabilities (~word2vec sampling)\") parser.add_argument(\"",
+        "suffix": "\", type=str, default=\"0.8,0.1,0.1\", help=\"Fraction of"
+      }
+    },
+    {
+      "@id": "hp_word_dropout",
+      "@type": "MLS_HyperParameter",
+      "name": "word_dropout",
+      "hasValue": "0",
+      "hpCategory": "HP_Architecture",
+      "hpType": "Dropout",
+      "uncertain": false,
+      "sourceFile": "train.py",
+      "sourceLine": 102,
+      "wasDerivedFrom": "code",
+      "codeReference": "train.py:102",
+      "path": "train.py",
+      "start_char_doc": 5100,
+      "end_char_doc": 5114,
+      "context": {
+        "prefix": "words (0 to disable)\") parser.add_argument(\"",
+        "suffix": "\", type=float, default=0, help=\"Randomly dropout"
+      }
+    },
+    {
+      "@id": "hp_max_vocab",
+      "@type": "MLS_HyperParameter",
+      "name": "max_vocab",
+      "hasValue": "-1",
+      "hpCategory": "HP_Data",
+      "hpType": "HP_Data",
+      "uncertain": true,
+      "sourceFile": "train.py",
+      "sourceLine": 112,
+      "wasDerivedFrom": "code",
+      "codeReference": "train.py:112",
+      "path": "train.py",
+      "start_char_doc": 5623,
+      "end_char_doc": 5634,
+      "context": {
+        "prefix": "(lg1-lg2-lg3 .. ex: en-fr-es-de)\") parser.add_argument(\"",
+        "suffix": "\", type=int, default=-1, help=\"Maximum vocabulary"
+      }
+    },
+    {
+      "@id": "hp_bptt",
+      "@type": "MLS_HyperParameter",
+      "name": "bptt",
+      "hasValue": "256",
+      "hpCategory": "HP_Data",
+      "hpType": "MaxSequenceLength",
+      "uncertain": false,
+      "sourceFile": "train.py",
+      "sourceLine": 120,
+      "wasDerivedFrom": "code",
+      "codeReference": "train.py:120",
+      "path": "train.py",
+      "start_char_doc": 6026,
+      "end_char_doc": 6032,
+      "context": {
+        "prefix": "factor\") # batch parameters parser.add_argument(\"",
+        "suffix": "\", type=int, default=256, help=\"Sequence length\")"
+      }
+    },
+    {
+      "@id": "hp_max_len",
+      "@type": "MLS_HyperParameter",
+      "name": "max_len",
+      "hasValue": "100",
+      "hpCategory": "HP_Data",
+      "hpType": "MaxSequenceLength",
+      "uncertain": false,
+      "sourceFile": "train.py",
+      "sourceLine": 122,
+      "wasDerivedFrom": "code",
+      "codeReference": "train.py:122",
+      "path": "train.py",
+      "start_char_doc": 6131,
+      "end_char_doc": 6140,
+      "context": {
+        "prefix": "type=int, default=256, help=\"Sequence length\") parser.add_argument(\"",
+        "suffix": "\", type=int, default=100, help=\"Maximum length"
+      }
+    },
+    {
+      "@id": "hp_batch_size",
+      "@type": "MLS_HyperParameter",
+      "name": "batch_size",
+      "hasValue": "32",
+      "hpCategory": "HP_Training",
+      "hpType": "BatchSize",
+      "uncertain": false,
+      "sourceFile": "train.py",
+      "sourceLine": 126,
+      "wasDerivedFrom": "code",
+      "codeReference": "train.py:126",
+      "path": "train.py",
+      "start_char_doc": 6411,
+      "end_char_doc": 6423,
+      "context": {
+        "prefix": "size during the training\") parser.add_argument(\"",
+        "suffix": "\", type=int, default=32, help=\"Number of"
+      }
+    },
+    {
+      "@id": "hp_max_batch_size",
+      "@type": "MLS_HyperParameter",
+      "name": "max_batch_size",
+      "hasValue": "0",
+      "hpCategory": "HP_Training",
+      "hpType": "BatchSize",
+      "uncertain": false,
+      "sourceFile": "train.py",
+      "sourceLine": 128,
+      "wasDerivedFrom": "code",
+      "codeReference": "train.py:128",
+      "path": "train.py",
+      "start_char_doc": 6535,
+      "end_char_doc": 6551,
+      "context": {
+        "prefix": "of sentences per batch\") parser.add_argument(\"",
+        "suffix": "\", type=int, default=0, help=\"Maximum number"
+      }
+    },
+    {
+      "@id": "hp_tokens_per_batch",
+      "@type": "MLS_HyperParameter",
+      "name": "tokens_per_batch",
+      "hasValue": "-1",
+      "hpCategory": "HP_Training",
+      "hpType": "BatchSize",
+      "uncertain": false,
+      "sourceFile": "train.py",
+      "sourceLine": 130,
+      "wasDerivedFrom": "code",
+      "codeReference": "train.py:130",
+      "path": "train.py",
+      "start_char_doc": 6728,
+      "end_char_doc": 6746,
+      "context": {
+        "prefix": "tokens_per_batch, 0 to disable)\") parser.add_argument(\"",
+        "suffix": "\", type=int, default=-1, help=\"Number of"
+      }
+    },
+    {
+      "@id": "hp_optimizer_default",
+      "@type": "MLS_HyperParameter",
+      "name": "optimizer",
+      "hasValue": "adam,lr=0.0001",
+      "hpCategory": "HP_Optimization",
+      "hpType": "HP_Optimization",
+      "uncertain": true,
+      "sourceFile": "train.py",
+      "sourceLine": 136,
+      "wasDerivedFrom": "code",
+      "codeReference": "train.py:136",
+      "path": "train.py",
+      "start_char_doc": 7026,
+      "end_char_doc": 7037,
+      "context": {
+        "prefix": "of a same node\") parser.add_argument(\"",
+        "suffix": "\", type=str, default=\"adam,lr=0.0001\", help=\"Optimizer (SGD"
+      }
+    },
+    {
+      "@id": "hp_lr_default",
+      "@type": "MLS_HyperParameter",
+      "name": "lr",
+      "hasValue": "0.0001",
+      "hpCategory": "HP_Optimization",
+      "hpType": "LearningRate",
+      "uncertain": false,
+      "sourceFile": "train.py",
+      "sourceLine": 136,
+      "wasDerivedFrom": "code",
+      "codeReference": "train.py:136",
+      "path": "train.py",
+      "start_char_doc": 7059,
+      "end_char_doc": 7073,
+      "context": {
+        "prefix": "same node\") parser.add_argument(\"--optimizer\", type=str, default=\"",
+        "suffix": "\", help=\"Optimizer (SGD / RMSprop"
+      }
+    },
+    {
+      "@id": "hp_clip_grad_norm",
+      "@type": "MLS_HyperParameter",
+      "name": "clip_grad_norm",
+      "hasValue": "5",
+      "hpCategory": "HP_Optimization",
+      "hpType": "HP_Optimization",
+      "uncertain": true,
+      "sourceFile": "train.py",
+      "sourceLine": 138,
+      "wasDerivedFrom": "code",
+      "codeReference": "train.py:138",
+      "path": "train.py",
+      "start_char_doc": 7172,
+      "end_char_doc": 7188,
+      "context": {
+        "prefix": "RMSprop / Adam, etc.)\") parser.add_argument(\"",
+        "suffix": "\", type=float, default=5, help=\"Clip gradients"
+      }
+    },
+    {
+      "@id": "hp_epoch_size",
+      "@type": "MLS_HyperParameter",
+      "name": "epoch_size",
+      "hasValue": "100000",
+      "hpCategory": "HP_Training",
+      "hpType": "MaxSteps",
+      "uncertain": true,
+      "sourceFile": "train.py",
+      "sourceLine": 140,
+      "wasDerivedFrom": "code",
+      "codeReference": "train.py:140",
+      "path": "train.py",
+      "start_char_doc": 7306,
+      "end_char_doc": 7318,
+      "context": {
+        "prefix": "norm (0 to disable)\") parser.add_argument(\"",
+        "suffix": "\", type=int, default=100000, help=\"Epoch size"
+      }
+    },
+    {
+      "@id": "hp_max_epoch",
+      "@type": "MLS_HyperParameter",
+      "name": "max_epoch",
+      "hasValue": "100000",
+      "hpCategory": "HP_Training",
+      "hpType": "NumEpochs",
+      "uncertain": false,
+      "sourceFile": "train.py",
+      "sourceLine": 142,
+      "wasDerivedFrom": "code",
+      "codeReference": "train.py:142",
+      "path": "train.py",
+      "start_char_doc": 7466,
+      "end_char_doc": 7477,
+      "context": {
+        "prefix": "for parallel data size)\") parser.add_argument(\"",
+        "suffix": "\", type=int, default=100000, help=\"Maximum epoch"
+      }
+    },
+    {
+      "@id": "hp_accumulate_gradients",
+      "@type": "MLS_HyperParameter",
+      "name": "accumulate_gradients",
+      "hasValue": "1",
+      "hpCategory": "HP_Training",
+      "hpType": "GradientAccumulationSteps",
+      "uncertain": false,
+      "sourceFile": "train.py",
+      "sourceLine": 148,
+      "wasDerivedFrom": "code",
+      "codeReference": "train.py:148",
+      "path": "train.py",
+      "start_char_doc": 7883,
+      "end_char_doc": 7905,
+      "context": {
+        "prefix": "type=str, default=\"\", help=\"Validation metrics\") parser.add_argument(\"",
+        "suffix": "\", type=int, default=1, help=\"Accumulate model"
+      }
+    },
+    {
+      "@id": "hp_fp16",
+      "@type": "MLS_HyperParameter",
+      "name": "fp16",
+      "hasValue": "False",
+      "hpCategory": "HP_Training",
+      "hpType": "HP_Training",
+      "uncertain": true,
+      "sourceFile": "train.py",
+      "sourceLine": 39,
+      "wasDerivedFrom": "code",
+      "codeReference": "train.py:39",
+      "path": "train.py",
+      "start_char_doc": 1368,
+      "end_char_doc": 1374,
+      "context": {
+        "prefix": "float16 / AMP API parser.add_argument(\"",
+        "suffix": "\", type=bool_flag, default=False, help=\"Run model"
+      }
+    },
+    {
+      "@id": "hp_beam_size",
+      "@type": "MLS_HyperParameter",
+      "name": "beam_size",
+      "hasValue": "1",
+      "hpCategory": "HP_Training",
+      "hpType": "HP_Training",
+      "uncertain": true,
+      "sourceFile": "train.py",
+      "sourceLine": 188,
+      "wasDerivedFrom": "code",
+      "codeReference": "train.py:188",
+      "path": "train.py",
+      "start_char_doc": 9990,
+      "end_char_doc": 10001,
+      "context": {
+        "prefix": "search (for MT only) parser.add_argument(\"",
+        "suffix": "\", type=int, default=1, help=\"Beam size,"
+      }
+    },
+    {
+      "@id": "hp_transformer_n_max_positions",
+      "@type": "MLS_HyperParameter",
+      "name": "N_MAX_POSITIONS",
+      "hasValue": "512",
+      "hpCategory": "HP_Data",
+      "hpType": "MaxSequenceLength",
+      "uncertain": false,
+      "sourceFile": "xlm/model/transformer.py",
+      "sourceLine": 19,
+      "wasDerivedFrom": "code",
+      "codeReference": "xlm/model/transformer.py:19",
+      "path": "xlm/model/transformer.py",
+      "start_char_doc": 375,
+      "end_char_doc": 390,
+      "context": {
+        "prefix": "F from .memory import HashingMemory",
+        "suffix": "= 512 # maximum input"
+      }
+    },
+    {
+      "@id": "hp_hidden_dim_formula",
+      "@type": "MLS_HyperParameter",
+      "name": "hidden_dim",
+      "hasValue": "4 * emb_dim",
+      "hpCategory": "HP_Architecture",
+      "hpType": "HiddenSize",
+      "uncertain": false,
+      "sourceFile": "xlm/model/transformer.py",
+      "sourceLine": 241,
+      "wasDerivedFrom": "code",
+      "codeReference": "xlm/model/transformer.py:241",
+      "path": "xlm/model/transformer.py",
+      "start_char_doc": 8855,
+      "end_char_doc": 8865,
+      "context": {
+        "prefix": "'n_words', 'dim', 'n_layers', 'n_heads', '",
+        "suffix": "', 'dropout', 'attention_dropout', 'asm', 'asm_cutoffs',"
+      }
+    },
+    {
+      "@id": "hp_glue_max_len",
+      "@type": "MLS_HyperParameter",
+      "name": "max_len",
+      "hasValue": "256",
+      "hpCategory": "HP_Data",
+      "hpType": "MaxSequenceLength",
+      "uncertain": false,
+      "sourceFile": "glue-xnli.py",
+      "sourceLine": 48,
+      "wasDerivedFrom": "code",
+      "codeReference": "glue-xnli.py:48",
+      "path": "glue-xnli.py",
+      "start_char_doc": 1621,
+      "end_char_doc": 1630,
+      "context": {
+        "prefix": "count\") # batch parameters parser.add_argument(\"",
+        "suffix": "\", type=int, default=256, help=\"Maximum length"
+      }
+    },
+    {
+      "@id": "hp_glue_batch_size",
+      "@type": "MLS_HyperParameter",
+      "name": "batch_size",
+      "hasValue": "32",
+      "hpCategory": "HP_Training",
+      "hpType": "BatchSize",
+      "uncertain": false,
+      "sourceFile": "glue-xnli.py",
+      "sourceLine": 52,
+      "wasDerivedFrom": "code",
+      "codeReference": "glue-xnli.py:52",
+      "path": "glue-xnli.py",
+      "start_char_doc": 1886,
+      "end_char_doc": 1898,
+      "context": {
+        "prefix": "size during the training\") parser.add_argument(\"",
+        "suffix": "\", type=int, default=32, help=\"Number of"
+      }
+    },
+    {
+      "@id": "hp_glue_dropout",
+      "@type": "MLS_HyperParameter",
+      "name": "dropout",
+      "hasValue": "0",
+      "hpCategory": "HP_Architecture",
+      "hpType": "Dropout",
+      "uncertain": false,
+      "sourceFile": "glue-xnli.py",
+      "sourceLine": 64,
+      "wasDerivedFrom": "code",
+      "codeReference": "glue-xnli.py:64",
+      "path": "glue-xnli.py",
+      "start_char_doc": 2623,
+      "end_char_doc": 2632,
+      "context": {
+        "prefix": "weighted loss during training\") parser.add_argument(\"",
+        "suffix": "\", type=float, default=0, help=\"Fine-tuning dropout\")"
+      }
+    },
+    {
+      "@id": "hp_optimizer_e",
+      "@type": "MLS_HyperParameter",
+      "name": "optimizer_e",
+      "hasValue": "adam,lr=0.0001",
+      "hpCategory": "HP_Optimization",
+      "hpType": "HP_Optimization",
+      "uncertain": true,
+      "sourceFile": "glue-xnli.py",
+      "sourceLine": 66,
+      "wasDerivedFrom": "code",
+      "codeReference": "glue-xnli.py:66",
+      "path": "glue-xnli.py",
+      "start_char_doc": 2727,
+      "end_char_doc": 2740,
+      "context": {
+        "prefix": "type=float, default=0, help=\"Fine-tuning dropout\") parser.add_argument(\"",
+        "suffix": "\", type=str, default=\"adam,lr=0.0001\", help=\"Embedder (pretrained"
+      }
+    },
+    {
+      "@id": "hp_optimizer_p",
+      "@type": "MLS_HyperParameter",
+      "name": "optimizer_p",
+      "hasValue": "adam,lr=0.0001",
+      "hpCategory": "HP_Optimization",
+      "hpType": "HP_Optimization",
+      "uncertain": true,
+      "sourceFile": "glue-xnli.py",
+      "sourceLine": 68,
+      "wasDerivedFrom": "code",
+      "codeReference": "glue-xnli.py:68",
+      "path": "glue-xnli.py",
+      "start_char_doc": 2866,
+      "end_char_doc": 2879,
+      "context": {
+        "prefix": "help=\"Embedder (pretrained model) optimizer\") parser.add_argument(\"",
+        "suffix": "\", type=str, default=\"adam,lr=0.0001\", help=\"Projection (classifier)"
+      }
+    },
+    {
+      "@id": "hp_n_epochs_glue",
+      "@type": "MLS_HyperParameter",
+      "name": "n_epochs",
+      "hasValue": "100",
+      "hpCategory": "HP_Training",
+      "hpType": "NumEpochs",
+      "uncertain": false,
+      "sourceFile": "glue-xnli.py",
+      "sourceLine": 70,
+      "wasDerivedFrom": "code",
+      "codeReference": "glue-xnli.py:70",
+      "path": "glue-xnli.py",
+      "start_char_doc": 3001,
+      "end_char_doc": 3011,
+      "context": {
+        "prefix": "default=\"adam,lr=0.0001\", help=\"Projection (classifier) optimizer\") parser.add_argument(\"",
+        "suffix": "\", type=int, default=100, help=\"Maximum number"
+      }
+    },
+    {
+      "@id": "hp_adam_lr",
+      "@type": "MLS_HyperParameter",
+      "name": "lr",
+      "hasValue": "1e-3",
+      "hpCategory": "HP_Optimization",
+      "hpType": "LearningRate",
+      "uncertain": false,
+      "sourceFile": "xlm/optim.py",
+      "sourceLine": 23,
+      "wasDerivedFrom": "code",
+      "codeReference": "xlm/optim.py:23",
+      "path": "xlm/optim.py",
+      "start_char_doc": 575,
+      "end_char_doc": 582,
+      "context": {
+        "prefix": "`state['step'].item()`. \"\"\" def __init__(self, params,",
+        "suffix": ", betas=(0.9, 0.999), eps=1e-8, weight_decay=0):"
+      }
+    },
+    {
+      "@id": "hp_adam_beta1",
+      "@type": "MLS_HyperParameter",
+      "name": "beta1",
+      "hasValue": "0.9",
+      "hpCategory": "HP_Optimization",
+      "hpType": "Momentum",
+      "uncertain": false,
+      "sourceFile": "xlm/optim.py",
+      "sourceLine": 23,
+      "wasDerivedFrom": "code",
+      "codeReference": "xlm/optim.py:23",
+      "path": "xlm/optim.py",
+      "start_char_doc": 584,
+      "end_char_doc": 602,
+      "context": {
+        "prefix": "\"\"\" def __init__(self, params, lr=1e-3,",
+        "suffix": ", eps=1e-8, weight_decay=0): if not"
+      }
+    },
+    {
+      "@id": "hp_adam_beta2",
+      "@type": "MLS_HyperParameter",
+      "name": "beta2",
+      "hasValue": "0.999",
+      "hpCategory": "HP_Optimization",
+      "hpType": "Momentum",
+      "uncertain": false,
+      "sourceFile": "xlm/optim.py",
+      "sourceLine": 23,
+      "wasDerivedFrom": "code",
+      "codeReference": "xlm/optim.py:23",
+      "path": "xlm/optim.py",
+      "start_char_doc": 584,
+      "end_char_doc": 602,
+      "context": {
+        "prefix": "\"\"\" def __init__(self, params, lr=1e-3,",
+        "suffix": ", eps=1e-8, weight_decay=0): if not"
+      }
+    },
+    {
+      "@id": "hp_adam_weight_decay",
+      "@type": "MLS_HyperParameter",
+      "name": "weight_decay",
+      "hasValue": "0",
+      "hpCategory": "HP_Optimization",
+      "hpType": "WeightDecay",
+      "uncertain": false,
+      "sourceFile": "xlm/optim.py",
+      "sourceLine": 23,
+      "wasDerivedFrom": "code",
+      "codeReference": "xlm/optim.py:23",
+      "path": "xlm/optim.py",
+      "start_char_doc": 614,
+      "end_char_doc": 628,
+      "context": {
+        "prefix": "params, lr=1e-3, betas=(0.9, 0.999), eps=1e-8,",
+        "suffix": "): if not 0.0 <="
+      }
+    },
+    {
+      "@id": "hp_warmup_updates",
+      "@type": "MLS_HyperParameter",
+      "name": "warmup_updates",
+      "hasValue": "4000",
+      "hpCategory": "HP_Optimization",
+      "hpType": "WarmupSteps",
+      "uncertain": false,
+      "sourceFile": "xlm/optim.py",
+      "sourceLine": 105,
+      "wasDerivedFrom": "code",
+      "codeReference": "xlm/optim.py:105",
+      "path": "xlm/optim.py",
+      "start_char_doc": 3919,
+      "end_char_doc": 3938,
+      "context": {
+        "prefix": "lr=1e-3, betas=(0.9, 0.999), eps=1e-8, weight_decay=0,",
+        "suffix": ", warmup_init_lr=1e-7, exp_factor=0.5): super().__init__( params,"
+      }
+    },
+    {
+      "@id": "hp_warmup_init_lr",
+      "@type": "MLS_HyperParameter",
+      "name": "warmup_init_lr",
+      "hasValue": "1e-7",
+      "hpCategory": "HP_Optimization",
+      "hpType": "LearningRate",
+      "uncertain": false,
+      "sourceFile": "xlm/optim.py",
+      "sourceLine": 105,
+      "wasDerivedFrom": "code",
+      "codeReference": "xlm/optim.py:105",
+      "path": "xlm/optim.py",
+      "start_char_doc": 3940,
+      "end_char_doc": 3959,
+      "context": {
+        "prefix": "betas=(0.9, 0.999), eps=1e-8, weight_decay=0, warmup_updates=4000,",
+        "suffix": ", exp_factor=0.5): super().__init__( params, lr=warmup_init_lr,"
+      }
+    },
+    {
+      "@id": "hp_lr_shrink",
+      "@type": "MLS_HyperParameter",
+      "name": "lr_shrink",
+      "hasValue": "0.75",
+      "hpCategory": "HP_Optimization",
+      "hpType": "DecayRate",
+      "uncertain": false,
+      "sourceFile": "xlm/optim.py",
+      "sourceLine": 160,
+      "wasDerivedFrom": "code",
+      "codeReference": "xlm/optim.py:160",
+      "path": "xlm/optim.py",
+      "start_char_doc": 6196,
+      "end_char_doc": 6210,
+      "context": {
+        "prefix": "warmup_updates=4000, warmup_init_lr=1e-7, min_lr=1e-9, init_period=1000000, period_mult=1,",
+        "suffix": "): super().__init__( params, lr=warmup_init_lr, betas=betas,"
+      }
+    },
+    {
+      "@id": "hp_readme_emb_dim_2048",
+      "@type": "MLS_HyperParameter",
+      "name": "emb_dim",
+      "hasValue": "2048",
+      "hpCategory": "HP_Architecture",
+      "hpType": "EmbeddingDim",
+      "uncertain": false,
+      "sourceFile": "README.md",
+      "sourceLine": 133,
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:133",
+      "path": "README.md",
+      "start_char_doc": 6375,
+      "end_char_doc": 6389,
+      "context": {
+        "prefix": "MLM objective ## transformer parameters",
+        "suffix": "# embeddings / model dimension"
+      }
+    },
+    {
+      "@id": "hp_readme_n_layers_12",
+      "@type": "MLS_HyperParameter",
+      "name": "n_layers",
+      "hasValue": "12",
+      "hpCategory": "HP_Architecture",
+      "hpType": "NumLayers",
+      "uncertain": false,
+      "sourceFile": "README.md",
+      "sourceLine": 134,
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:134",
+      "path": "README.md",
+      "start_char_doc": 6498,
+      "end_char_doc": 6511,
+      "context": {
+        "prefix": "only 16Gb of GPU memory)",
+        "suffix": "# number of layers --n_heads"
+      }
+    },
+    {
+      "@id": "hp_readme_n_heads_16",
+      "@type": "MLS_HyperParameter",
+      "name": "n_heads",
+      "hasValue": "16",
+      "hpCategory": "HP_Architecture",
+      "hpType": "AttentionHeads",
+      "uncertain": false,
+      "sourceFile": "README.md",
+      "sourceLine": 135,
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:135",
+      "path": "README.md",
+      "start_char_doc": 6560,
+      "end_char_doc": 6572,
+      "context": {
+        "prefix": "12 # number of layers",
+        "suffix": "# number of heads --dropout"
+      }
+    },
+    {
+      "@id": "hp_readme_dropout_01",
+      "@type": "MLS_HyperParameter",
+      "name": "dropout",
+      "hasValue": "0.1",
+      "hpCategory": "HP_Architecture",
+      "hpType": "Dropout",
+      "uncertain": false,
+      "sourceFile": "README.md",
+      "sourceLine": 136,
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:136",
+      "path": "README.md",
+      "start_char_doc": 6621,
+      "end_char_doc": 6634,
+      "context": {
+        "prefix": "16 # number of heads",
+        "suffix": "# dropout --attention_dropout 0.1 #"
+      }
+    },
+    {
+      "@id": "hp_readme_attention_dropout_01",
+      "@type": "MLS_HyperParameter",
+      "name": "attention_dropout",
+      "hasValue": "0.1",
+      "hpCategory": "HP_Architecture",
+      "hpType": "Dropout",
+      "uncertain": false,
+      "sourceFile": "README.md",
+      "sourceLine": 137,
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:137",
+      "path": "README.md",
+      "start_char_doc": 6674,
+      "end_char_doc": 6697,
+      "context": {
+        "prefix": "heads --dropout 0.1 # dropout",
+        "suffix": "# attention dropout --gelu_activation true"
+      }
+    },
+    {
+      "@id": "hp_readme_batch_size_32",
+      "@type": "MLS_HyperParameter",
+      "name": "batch_size",
+      "hasValue": "32",
+      "hpCategory": "HP_Training",
+      "hpType": "BatchSize",
+      "uncertain": false,
+      "sourceFile": "README.md",
+      "sourceLine": 141,
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:141",
+      "path": "README.md",
+      "start_char_doc": 6820,
+      "end_char_doc": 6835,
+      "context": {
+        "prefix": "instead of ReLU ## optimization",
+        "suffix": "# sequences per batch --bptt"
+      }
+    },
+    {
+      "@id": "hp_readme_bptt_256",
+      "@type": "MLS_HyperParameter",
+      "name": "bptt",
+      "hasValue": "256",
+      "hpCategory": "HP_Data",
+      "hpType": "MaxSequenceLength",
+      "uncertain": false,
+      "sourceFile": "README.md",
+      "sourceLine": 142,
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:142",
+      "path": "README.md",
+      "start_char_doc": 6885,
+      "end_char_doc": 6895,
+      "context": {
+        "prefix": "32 # sequences per batch",
+        "suffix": "# sequences length (streams of"
+      }
+    },
+    {
+      "@id": "hp_readme_warmup_30000",
+      "@type": "MLS_HyperParameter",
+      "name": "warmup_updates",
+      "hasValue": "30000",
+      "hpCategory": "HP_Optimization",
+      "hpType": "WarmupSteps",
+      "uncertain": false,
+      "sourceFile": "README.md",
+      "sourceLine": 143,
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:143",
+      "path": "README.md",
+      "start_char_doc": 7013,
+      "end_char_doc": 7033,
+      "context": {
+        "prefix": "of 256 tokens) --optimizer adam_inverse_sqrt,lr=0.00010,",
+        "suffix": ",beta1=0.9,beta2=0.999,weight_decay=0.01,eps=0.000001 # optimizer (training is"
+      }
+    },
+    {
+      "@id": "hp_readme_weight_decay",
+      "@type": "MLS_HyperParameter",
+      "name": "weight_decay",
+      "hasValue": "0.01",
+      "hpCategory": "HP_Optimization",
+      "hpType": "WeightDecay",
+      "uncertain": false,
+      "sourceFile": "README.md",
+      "sourceLine": 143,
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:143",
+      "path": "README.md",
+      "start_char_doc": 7056,
+      "end_char_doc": 7073,
+      "context": {
+        "prefix": "of 256 tokens) --optimizer adam_inverse_sqrt,lr=0.00010,warmup_updates=30000,beta1=0.9,beta2=0.999,",
+        "suffix": ",eps=0.000001 # optimizer (training is"
+      }
+    },
+    {
+      "@id": "hp_readme_stopping_patience",
+      "@type": "MLS_HyperParameter",
+      "name": "stopping_criterion patience",
+      "hasValue": "25",
+      "hpCategory": "HP_Training",
+      "hpType": "Patience",
+      "uncertain": false,
+      "sourceFile": "README.md",
+      "sourceLine": 147,
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:147",
+      "path": "README.md",
+      "start_char_doc": 7420,
+      "end_char_doc": 7440,
+      "context": {
+        "prefix": "save the best model) --stopping_criterion",
+        "suffix": "# stopping criterion (if criterion"
+      }
+    },
+    {
+      "@id": "hp_mem_k_dim",
+      "@type": "MLS_HyperParameter",
+      "name": "mem_k_dim",
+      "hasValue": "256",
+      "hpCategory": "HP_Architecture",
+      "hpType": "EmbeddingDim",
+      "uncertain": false,
+      "sourceFile": "xlm/model/memory/memory.py",
+      "sourceLine": 248,
+      "wasDerivedFrom": "code",
+      "codeReference": "xlm/model/memory/memory.py:248",
+      "path": "xlm/model/memory/memory.py",
+      "start_char_doc": 11223,
+      "end_char_doc": 11234,
+      "context": {
+        "prefix": "default=False, help=\"Convolutional query network\") parser.add_argument(\"",
+        "suffix": "\", type=int, default=256, help=\"Memory keys"
+      }
+    },
+    {
+      "@id": "hp_mem_heads",
+      "@type": "MLS_HyperParameter",
+      "name": "mem_heads",
+      "hasValue": "4",
+      "hpCategory": "HP_Architecture",
+      "hpType": "AttentionHeads",
+      "uncertain": false,
+      "sourceFile": "xlm/model/memory/memory.py",
+      "sourceLine": 252,
+      "wasDerivedFrom": "code",
+      "codeReference": "xlm/model/memory/memory.py:252",
+      "path": "xlm/model/memory/memory.py",
+      "start_char_doc": 11508,
+      "end_char_doc": 11519,
+      "context": {
+        "prefix": "for automatic output dimension)\") parser.add_argument(\"",
+        "suffix": "\", type=int, default=4, help=\"Number of"
+      }
+    },
+    {
+      "@id": "hp_mem_n_keys",
+      "@type": "MLS_HyperParameter",
+      "name": "mem_n_keys",
+      "hasValue": "512",
+      "hpCategory": "HP_Architecture",
+      "hpType": "UnknownArchitectureHP",
+      "uncertain": true,
+      "sourceFile": "xlm/model/memory/memory.py",
+      "sourceLine": 268,
+      "wasDerivedFrom": "code",
+      "codeReference": "xlm/model/memory/memory.py:268",
+      "path": "xlm/model/memory/memory.py",
+      "start_char_doc": 12670,
+      "end_char_doc": 12682,
+      "context": {
+        "prefix": "help=\"Memory keys type (binary,gaussian,uniform)\") parser.add_argument(\"",
+        "suffix": "\", type=int, default=512, help=\"Number of"
+      }
+    },
+    {
+      "@id": "hp_mem_temperature",
+      "@type": "MLS_HyperParameter",
+      "name": "mem_temperature",
+      "hasValue": "1",
+      "hpCategory": "HP_Optimization",
+      "hpType": "HP_Optimization",
+      "uncertain": true,
+      "sourceFile": "xlm/model/memory/memory.py",
+      "sourceLine": 302,
+      "wasDerivedFrom": "code",
+      "codeReference": "xlm/model/memory/memory.py:302",
+      "path": "xlm/model/memory/memory.py",
+      "start_char_doc": 14801,
+      "end_char_doc": 14818,
+      "context": {
+        "prefix": "type=bool_flag, default=False, help=\"Normalize queries\") parser.add_argument(\"",
+        "suffix": "\", type=float, default=1, help=\"Divide scores"
+      }
+    },
+    {
+      "@id": "hp_mem_input_dropout",
+      "@type": "MLS_HyperParameter",
+      "name": "mem_input_dropout",
+      "hasValue": "0",
+      "hpCategory": "HP_Architecture",
+      "hpType": "Dropout",
+      "uncertain": false,
+      "sourceFile": "xlm/model/memory/memory.py",
+      "sourceLine": 312,
+      "wasDerivedFrom": "code",
+      "codeReference": "xlm/model/memory/memory.py:312",
+      "path": "xlm/model/memory/memory.py",
+      "start_char_doc": 15401,
+      "end_char_doc": 15420,
+      "context": {
+        "prefix": "the scores\") # dropout parser.add_argument(\"",
+        "suffix": "\", type=float, default=0, help=\"Input dropout\")"
+      }
+    }
+  ]
+}
