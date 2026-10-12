@@ -1,0 +1,3809 @@
+{
+  "@context": {
+    "mls": "http://example.org/ontology/mls#",
+    "schema": "http://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "Study": "mls:Study",
+    "Experiment": "mls:Experiment",
+    "Person": "schema:Person",
+    "Organization": "schema:Organization",
+    "MLS_Task": "mls:MLS_Task",
+    "MLS_Dataset": "mls:MLS_Dataset",
+    "DataSource": "mls:DataSource",
+    "Method": "mls:Method",
+    "MLS_Model": "mls:MLS_Model",
+    "MLS_Algorithm": "mls:MLS_Algorithm",
+    "MLS_Eval": "mls:MLS_Eval",
+    "SoftwareRepository": "mls:SoftwareRepository",
+    "MLS_Implementation": "mls:MLS_Implementation",
+    "MLS_HyperParameter": "mls:MLS_HyperParameter",
+    "Dependency": "mls:Dependency",
+    "Environment": "mls:Environment",
+    "DataProcessingStep": "mls:DataProcessingStep",
+    "TrainingRun": "mls:TrainingRun",
+    "EvaluationRun": "mls:EvaluationRun",
+    "PredictionSet": "mls:PredictionSet",
+    "name": "schema:name",
+    "description": "schema:description",
+    "url": "schema:url",
+    "identifier": "schema:identifier",
+    "contains": {
+      "@id": "mls:contains",
+      "@type": "@id"
+    },
+    "supports": {
+      "@id": "mls:supports",
+      "@type": "@id"
+    },
+    "requires": {
+      "@id": "mls:requires",
+      "@type": "@id"
+    },
+    "runsIn": {
+      "@id": "mls:runsIn",
+      "@type": "@id"
+    },
+    "hasAuthor": {
+      "@id": "schema:author",
+      "@type": "@id"
+    },
+    "implements": {
+      "@id": "mls:implements",
+      "@type": "@id"
+    },
+    "realizes": {
+      "@id": "mls:realizes",
+      "@type": "@id"
+    },
+    "usesData": {
+      "@id": "mls:usesData",
+      "@type": "@id"
+    },
+    "produces": {
+      "@id": "mls:produces",
+      "@type": "@id"
+    },
+    "executes": {
+      "@id": "mls:executes",
+      "@type": "@id"
+    },
+    "usesParameters": {
+      "@id": "mls:usesParameters",
+      "@type": "@id"
+    },
+    "trainedOn": {
+      "@id": "mls:trainedOn",
+      "@type": "@id"
+    },
+    "evaluatedOn": {
+      "@id": "mls:evaluatedOn",
+      "@type": "@id"
+    },
+    "subMethod": {
+      "@id": "mls:subMethod",
+      "@type": "@id"
+    },
+    "prov-affiliatedWith": {
+      "@id": "prov:wasAssociatedWith",
+      "@type": "@id"
+    },
+    "prov-derivedFrom": {
+      "@id": "prov:wasDerivedFrom",
+      "@type": "@id"
+    },
+    "prov-producedBy": {
+      "@id": "prov:wasGeneratedBy",
+      "@type": "@id"
+    },
+    "prov-executedBy": {
+      "@id": "mls:prov-executedBy",
+      "@type": "@id"
+    },
+    "prov-generated": {
+      "@id": "mls:prov-generated",
+      "@type": "@id"
+    },
+    "used": {
+      "@id": "prov:used",
+      "@type": "@id"
+    },
+    "trains": {
+      "@id": "mls:trains",
+      "@type": "@id"
+    },
+    "evaluates": {
+      "@id": "mls:evaluates",
+      "@type": "@id"
+    },
+    "wasGeneratedBy": {
+      "@id": "prov:wasGeneratedBy",
+      "@type": "@id"
+    },
+    "producedBy": {
+      "@id": "mls:producedBy",
+      "@type": "@id"
+    },
+    "wasAssociatedWith": {
+      "@id": "prov:wasAssociatedWith",
+      "@type": "@id"
+    },
+    "wasDerivedFrom": {
+      "@id": "prov:wasDerivedFrom",
+      "@type": "@id"
+    }
+  },
+  "@graph": [
+    {
+      "@id": "repo_asanctvs_structure_identification",
+      "@type": "SoftwareRepository",
+      "name": "Structure-Identification",
+      "url": "https://github.com/ASanctvs/Structure-Identification",
+      "owner": "ASanctvs",
+      "platform": "GitHub",
+      "programmingLanguage": "Python/Jupyter Notebook",
+      "version": "7f9d685f490a068d0ec5012592b2b18c620019b3",
+      "license": null,
+      "documentationUrl": null,
+      "contains": [
+        {
+          "@id": "impl_models_training_notebook"
+        },
+        {
+          "@id": "impl_estimators_comparison_notebook"
+        },
+        {
+          "@id": "impl_real_net_enzyme_notebook"
+        },
+        {
+          "@id": "impl_real_net_macaque_notebook"
+        },
+        {
+          "@id": "impl_noise_variance_notebook"
+        },
+        {
+          "@id": "model_saved_cnn"
+        },
+        {
+          "@id": "model_saved_linear_svm"
+        }
+      ],
+      "supports": [
+        {
+          "@id": "env_python_notebook"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "src/models_training.ipynb:7",
+      "path": "src/models_training.ipynb",
+      "start_char_doc": 85,
+      "end_char_doc": 105,
+      "start_line": 7,
+      "end_line": 7,
+      "context": {
+        "prefix": "ells\": [   {    \"cell_type\": \"markdown\",    \"metadata\": {},    \"source\": [     \"",
+        "suffix": "\\n\"    ]   },   {    \"cell_type\": \"code\",    \"execution_count\": 2,    \"metadata\""
+      }
+    },
+    {
+      "@id": "study_2208_04405v3",
+      "@type": "Study",
+      "name": "Recovering graph structure in partially observed networked dynamical systems",
+      "identifier": "2208.04405v3",
+      "description": "Repository implementation for graph structure identification from time-series features under partial observability.",
+      "repository": {
+        "@id": "repo_asanctvs_structure_identification"
+      },
+      "hasExperiment": [
+        {
+          "@id": "exp_synthetic_erdos_renyi"
+        },
+        {
+          "@id": "exp_real_enzyme"
+        },
+        {
+          "@id": "exp_real_macaque"
+        },
+        {
+          "@id": "exp_noise_variance"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "src/models_training.ipynb:48",
+      "path": "src/models_training.ipynb",
+      "start_char_doc": 1024,
+      "end_char_doc": 1037,
+      "start_line": 48,
+      "end_line": 48,
+      "context": {
+        "prefix": "80-61ec-4608-c95f-4cd2d7437c45\"    },    \"outputs\": [],    \"source\": [     \"def ",
+        "suffix": "(sz,p,undirected):\\n\",     \"    '''\\n\",     \"    Generates a realization of an E"
+      }
+    },
+    {
+      "@id": "exp_synthetic_erdos_renyi",
+      "@type": "Experiment",
+      "name": "Synthetic Erdős-Rényi estimator comparison",
+      "description": "Compares CNN, SVM, Granger, R1, and R1-R3 estimators on generated Erdős-Rényi network time series.",
+      "partOf": {
+        "@id": "study_2208_04405v3"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "src/estimators_comparison.ipynb:7",
+      "path": "src/estimators_comparison.ipynb",
+      "start_char_doc": 85,
+      "end_char_doc": 105,
+      "start_line": 7,
+      "end_line": 7,
+      "context": {
+        "prefix": "ells\": [   {    \"cell_type\": \"markdown\",    \"metadata\": {},    \"source\": [     \"",
+        "suffix": "\\n\"    ]   },   {    \"cell_type\": \"code\",    \"execution_count\": 26,    \"metadata"
+      }
+    },
+    {
+      "@id": "exp_real_enzyme",
+      "@type": "Experiment",
+      "name": "ENZYMES real network comparison",
+      "description": "Evaluates estimators on an ENZYMES graph loaded from an edge-list file.",
+      "partOf": {
+        "@id": "study_2208_04405v3"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "src/estimators_comparison_real_net_enzyme.ipynb:552",
+      "path": "src/estimators_comparison_real_net_enzyme.ipynb",
+      "start_char_doc": 19543,
+      "end_char_doc": 19561,
+      "start_line": 552,
+      "end_line": 552,
+      "context": {
+        "prefix": "dj[edge1,edge2] = 1\\n\",     \"    return adj\\n\",     \"  \\n\",     \"enzyme_net = \\\"",
+        "suffix": "\\\"\\n\",     \"sz_main=121\\n\",     \"adj = load_from_edges(\\\"../data/\\\"+enzyme_net,s"
+      }
+    },
+    {
+      "@id": "exp_real_macaque",
+      "@type": "Experiment",
+      "name": "Macaque cortical network comparison",
+      "description": "Evaluates estimators on a macaque-rhesus interareal cortical network edge list.",
+      "partOf": {
+        "@id": "study_2208_04405v3"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "src/estimators_comparison_real_net_macaque.ipynb:552",
+      "path": "src/estimators_comparison_real_net_macaque.ipynb",
+      "start_char_doc": 19541,
+      "end_char_doc": 19589,
+      "start_line": 552,
+      "end_line": 552,
+      "context": {
+        "prefix": "j[edge1,edge2] = 1\\n\",     \"    return adj\\n\",     \"  \\n\",     \"macaque_net = \\\"",
+        "suffix": "\\\"\\n\",     \"\\n\",     \"sz_main=93\\n\",     \"adj = load_from_edges(\\\"../data/\\\"+mac"
+      }
+    },
+    {
+      "@id": "exp_noise_variance",
+      "@type": "Experiment",
+      "name": "Noise variance robustness comparison",
+      "description": "Compares saved SVM and CNN accuracy traces under multiple noise variance settings.",
+      "partOf": {
+        "@id": "study_2208_04405v3"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "src/different_noise_variance.ipynb:44",
+      "path": "src/different_noise_variance.ipynb",
+      "start_char_doc": 41192,
+      "end_char_doc": 41206,
+      "start_line": 44,
+      "end_line": 44,
+      "context": {
+        "prefix": "ing the same Erdős–Rényi Model parameters (N=50, p=0.6) \\n\",     \"but different ",
+        "suffix": " values\\n\",     \"'''     \\n\",     \"data1 = load_pickles('../saved_perf/erdos_50_"
+      }
+    },
+    {
+      "@id": "impl_models_training_notebook",
+      "@type": "MLS_Implementation",
+      "name": "Model training notebook",
+      "description": "Trains CNN and linear SVM models from synthetic cross-correlation features.",
+      "repository": {
+        "@id": "repo_asanctvs_structure_identification"
+      },
+      "programmingLanguage": "Python",
+      "wasDerivedFrom": "code",
+      "codeReference": "src/models_training.ipynb:298",
+      "path": "src/models_training.ipynb",
+      "start_char_doc": 12158,
+      "end_char_doc": 12167,
+      "start_line": 298,
+      "end_line": 298,
+      "context": {
+        "prefix": ",     \"    #Save the rmsesparse_categorical_crossentropy\\n\",     \"    history = ",
+        "suffix": "(X_train, y_train, epochs=1000, validation_split=0.2, verbose=1,callbacks=[cb])\\"
+      }
+    },
+    {
+      "@id": "impl_estimators_comparison_notebook",
+      "@type": "MLS_Implementation",
+      "name": "Estimator comparison notebook",
+      "description": "Runs Monte Carlo synthetic estimator comparisons and saves performance arrays.",
+      "repository": {
+        "@id": "repo_asanctvs_structure_identification"
+      },
+      "programmingLanguage": "Python",
+      "wasDerivedFrom": "code",
+      "codeReference": "src/estimators_comparison.ipynb:7",
+      "path": "src/estimators_comparison.ipynb",
+      "start_char_doc": 85,
+      "end_char_doc": 105,
+      "start_line": 7,
+      "end_line": 7,
+      "context": {
+        "prefix": "ells\": [   {    \"cell_type\": \"markdown\",    \"metadata\": {},    \"source\": [     \"",
+        "suffix": "\\n\"    ]   },   {    \"cell_type\": \"code\",    \"execution_count\": 26,    \"metadata"
+      }
+    },
+    {
+      "@id": "impl_real_net_enzyme_notebook",
+      "@type": "MLS_Implementation",
+      "name": "ENZYMES comparison notebook",
+      "description": "Loads the ENZYMES graph and benchmarks structure identification estimators.",
+      "repository": {
+        "@id": "repo_asanctvs_structure_identification"
+      },
+      "programmingLanguage": "Python",
+      "wasDerivedFrom": "code",
+      "codeReference": "src/estimators_comparison_real_net_enzyme.ipynb:1708",
+      "path": "src/estimators_comparison_real_net_enzyme.ipynb",
+      "start_char_doc": 98364,
+      "end_char_doc": 98390,
+      "start_line": 1708,
+      "end_line": 1708,
+      "context": {
+        "prefix": "    \"    \\n\",     \"    print(\\\"Run:\\\", i)\\n\",     \"    save_name='../saved_perf/",
+        "suffix": "'\\n\",     \"    save_pickles(save_name,comparison_data)\"    ]   },   {    \"cell_t"
+      }
+    },
+    {
+      "@id": "impl_real_net_macaque_notebook",
+      "@type": "MLS_Implementation",
+      "name": "Macaque comparison notebook",
+      "description": "Loads the macaque cortical network and benchmarks structure identification estimators.",
+      "repository": {
+        "@id": "repo_asanctvs_structure_identification"
+      },
+      "programmingLanguage": "Python",
+      "wasDerivedFrom": "code",
+      "codeReference": "src/estimators_comparison_real_net_macaque.ipynb:1710",
+      "path": "src/estimators_comparison_real_net_macaque.ipynb",
+      "start_char_doc": 155310,
+      "end_char_doc": 155337,
+      "start_line": 1710,
+      "end_line": 1710,
+      "context": {
+        "prefix": "    \"    \\n\",     \"    print(\\\"Run:\\\", i)\\n\",     \"    save_name='../saved_perf/",
+        "suffix": "'\\n\",     \"    save_pickles(save_name,comparison_data)\"    ]   },   {    \"cell_t"
+      }
+    },
+    {
+      "@id": "impl_noise_variance_notebook",
+      "@type": "MLS_Implementation",
+      "name": "Noise variance analysis notebook",
+      "description": "Loads precomputed performance files and plots CNN/SVM robustness by variance setting.",
+      "repository": {
+        "@id": "repo_asanctvs_structure_identification"
+      },
+      "programmingLanguage": "Python",
+      "wasDerivedFrom": "code",
+      "codeReference": "src/different_noise_variance.ipynb:88",
+      "path": "src/different_noise_variance.ipynb",
+      "start_char_doc": 43290,
+      "end_char_doc": 43335,
+      "start_line": 88,
+      "end_line": 88,
+      "context": {
+        "prefix": " (SVM)\\\",\\\"1000 (CNN)\\\"], title=r'$\\\\sigma$',loc='best')\\n\",     \"fig.savefig(\\\"",
+        "suffix": "\\\")\"    ]   }  ],  \"metadata\": {   \"kernelspec\": {    \"display_name\": \"Python 3 "
+      }
+    },
+    {
+      "@id": "impl_saved_cnn_tensorflow",
+      "@type": "MLS_Implementation",
+      "name": "Saved TensorFlow CNN artifact",
+      "description": "Serialized Keras/TensorFlow saved model for the nonlinear CNN estimator.",
+      "repository": {
+        "@id": "repo_asanctvs_structure_identification"
+      },
+      "programmingLanguage": "Python",
+      "wasDerivedFrom": "code",
+      "codeReference": "models/cnn/keras_metadata.pb:2",
+      "path": "models/cnn/keras_metadata.pb",
+      "start_char_doc": 471,
+      "end_char_doc": 477,
+      "start_line": 2,
+      "end_line": 2,
+      "context": {
+        "prefix": "2\", \"sparse\": false, \"ragged\": false, \"name\": \"conv1d_input\"}}, {\"class_name\": \"",
+        "suffix": "\", \"config\": {\"name\": \"conv1d\", \"trainable\": true, \"batch_input_shape\": {\"class_"
+      }
+    },
+    {
+      "@id": "impl_saved_svm_pickle",
+      "@type": "MLS_Implementation",
+      "name": "Saved SVM pickle artifact",
+      "description": "Serialized scikit-learn SVM model loaded by evaluation notebooks.",
+      "repository": {
+        "@id": "repo_asanctvs_structure_identification"
+      },
+      "programmingLanguage": "Python",
+      "wasDerivedFrom": "code",
+      "codeReference": "src/estimators_comparison.ipynb:7",
+      "path": "src/estimators_comparison.ipynb",
+      "start_char_doc": 85,
+      "end_char_doc": 105,
+      "start_line": 7,
+      "end_line": 7,
+      "context": {
+        "prefix": "ells\": [   {    \"cell_type\": \"markdown\",    \"metadata\": {},    \"source\": [     \"",
+        "suffix": "\\n\"    ]   },   {    \"cell_type\": \"code\",    \"execution_count\": 26,    \"metadata"
+      }
+    },
+    {
+      "@id": "env_python_notebook",
+      "@type": "Environment",
+      "name": "Python scientific notebook environment",
+      "description": "Jupyter notebook environment using NumPy, SciPy, scikit-learn, Keras, Matplotlib, NetworkX, and pickle serialization.",
+      "dependencies": [
+        {
+          "@id": "dep_numpy"
+        },
+        {
+          "@id": "dep_scipy"
+        },
+        {
+          "@id": "dep_sklearn"
+        },
+        {
+          "@id": "dep_keras"
+        },
+        {
+          "@id": "dep_matplotlib"
+        },
+        {
+          "@id": "dep_networkx"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "src/models_training.ipynb:17",
+      "path": "src/models_training.ipynb",
+      "start_char_doc": 273,
+      "end_char_doc": 291,
+      "start_line": 17,
+      "end_line": 17,
+      "context": {
+        "prefix": " \"outputs\": [],    \"source\": [     \"#Required packages to run the code\\n\",     \"",
+        "suffix": "\\n\",     \"import matplotlib.pyplot as plt\\n\",     \"from scipy import signal\\n\", "
+      }
+    },
+    {
+      "@id": "dep_numpy",
+      "@type": "Dependency",
+      "name": "numpy",
+      "dependencyType": "python-package",
+      "wasDerivedFrom": "code",
+      "codeReference": "src/models_training.ipynb:17",
+      "path": "src/models_training.ipynb",
+      "start_char_doc": 273,
+      "end_char_doc": 291,
+      "start_line": 17,
+      "end_line": 17,
+      "context": {
+        "prefix": " \"outputs\": [],    \"source\": [     \"#Required packages to run the code\\n\",     \"",
+        "suffix": "\\n\",     \"import matplotlib.pyplot as plt\\n\",     \"from scipy import signal\\n\", "
+      }
+    },
+    {
+      "@id": "dep_matplotlib",
+      "@type": "Dependency",
+      "name": "matplotlib",
+      "dependencyType": "python-package",
+      "wasDerivedFrom": "code",
+      "codeReference": "src/models_training.ipynb:18",
+      "path": "src/models_training.ipynb",
+      "start_char_doc": 301,
+      "end_char_doc": 332,
+      "start_line": 18,
+      "end_line": 18,
+      "context": {
+        "prefix": " [     \"#Required packages to run the code\\n\",     \"import numpy as np\\n\",     \"",
+        "suffix": "\\n\",     \"from scipy import signal\\n\",     \"from sklearn import preprocessing as"
+      }
+    },
+    {
+      "@id": "dep_scipy",
+      "@type": "Dependency",
+      "name": "scipy",
+      "dependencyType": "python-package",
+      "wasDerivedFrom": "code",
+      "codeReference": "src/models_training.ipynb:19",
+      "path": "src/models_training.ipynb",
+      "start_char_doc": 342,
+      "end_char_doc": 366,
+      "start_line": 19,
+      "end_line": 19,
+      "context": {
+        "prefix": "e\\n\",     \"import numpy as np\\n\",     \"import matplotlib.pyplot as plt\\n\",     \"",
+        "suffix": "\\n\",     \"from sklearn import preprocessing as pp\\n\",     \"from sklearn.model_se"
+      }
+    },
+    {
+      "@id": "dep_sklearn",
+      "@type": "Dependency",
+      "name": "scikit-learn",
+      "dependencyType": "python-package",
+      "wasDerivedFrom": "code",
+      "codeReference": "src/models_training.ipynb:20",
+      "path": "src/models_training.ipynb",
+      "start_char_doc": 376,
+      "end_char_doc": 409,
+      "start_line": 20,
+      "end_line": 20,
+      "context": {
+        "prefix": "    \"import matplotlib.pyplot as plt\\n\",     \"from scipy import signal\\n\",     \"",
+        "suffix": " as pp\\n\",     \"from sklearn.model_selection import train_test_split\\n\",     \"im"
+      }
+    },
+    {
+      "@id": "dep_keras",
+      "@type": "Dependency",
+      "name": "keras",
+      "dependencyType": "python-package",
+      "wasDerivedFrom": "code",
+      "codeReference": "src/models_training.ipynb:22",
+      "path": "src/models_training.ipynb",
+      "start_char_doc": 487,
+      "end_char_doc": 499,
+      "start_line": 22,
+      "end_line": 22,
+      "context": {
+        "prefix": "ng as pp\\n\",     \"from sklearn.model_selection import train_test_split\\n\",     \"",
+        "suffix": "\\n\",     \"from keras.callbacks import EarlyStopping\\n\",     \"from keras.models i"
+      }
+    },
+    {
+      "@id": "dep_networkx",
+      "@type": "Dependency",
+      "name": "networkx",
+      "dependencyType": "python-package",
+      "wasDerivedFrom": "code",
+      "codeReference": "src/estimators_comparison_real_net_enzyme.ipynb:29",
+      "path": "src/estimators_comparison_real_net_enzyme.ipynb",
+      "start_char_doc": 712,
+      "end_char_doc": 733,
+      "start_line": 29,
+      "end_line": 29,
+      "context": {
+        "prefix": "rom scipy import signal\\n\",     \"import pickle\\n\",     \"import sklearn\\n\",     \"",
+        "suffix": "\"    ]   },   {    \"cell_type\": \"markdown\",    \"metadata\": {},    \"source\": [   "
+      }
+    },
+    {
+      "@id": "task_graph_structure_identification",
+      "@type": "MLS_Task",
+      "name": "Graph structure identification",
+      "description": "Infer graph edges/dependencies from multivariate time-series observations.",
+      "wasDerivedFrom": "code",
+      "codeReference": "src/models_training.ipynb:113",
+      "path": "src/models_training.ipynb",
+      "start_char_doc": 3681,
+      "end_char_doc": 3695,
+      "start_line": 113,
+      "end_line": 113,
+      "context": {
+        "prefix": "x[i-1,:]) + qsi*np.random.randn(1)\\n\",     \"    return x\\n\",     \"\\n\",     \"def ",
+        "suffix": "(sz,p,c,rho,tsize,x0,qsi,undirected):\\n\",     \"    '''\\n\",     \"    Generates th"
+      }
+    },
+    {
+      "@id": "task_edge_presence_classification",
+      "@type": "MLS_Task",
+      "name": "Edge presence classification",
+      "description": "Classify connected and disconnected node pairs from cross-correlation feature vectors.",
+      "wasDerivedFrom": "code",
+      "codeReference": "src/models_training.ipynb:7",
+      "path": "src/models_training.ipynb",
+      "start_char_doc": 85,
+      "end_char_doc": 105,
+      "start_line": 7,
+      "end_line": 7,
+      "context": {
+        "prefix": "ells\": [   {    \"cell_type\": \"markdown\",    \"metadata\": {},    \"source\": [     \"",
+        "suffix": "\\n\"    ]   },   {    \"cell_type\": \"code\",    \"execution_count\": 2,    \"metadata\""
+      }
+    },
+    {
+      "@id": "task_partial_observability",
+      "@type": "MLS_Task",
+      "name": "Partial observability evaluation",
+      "description": "Evaluate graph recovery when only a subset of nodes is observed.",
+      "wasDerivedFrom": "code",
+      "codeReference": "src/estimators_comparison.ipynb:7",
+      "path": "src/estimators_comparison.ipynb",
+      "start_char_doc": 85,
+      "end_char_doc": 105,
+      "start_line": 7,
+      "end_line": 7,
+      "context": {
+        "prefix": "ells\": [   {    \"cell_type\": \"markdown\",    \"metadata\": {},    \"source\": [     \"",
+        "suffix": "\\n\"    ]   },   {    \"cell_type\": \"code\",    \"execution_count\": 26,    \"metadata"
+      }
+    },
+    {
+      "@id": "task_causal_inference",
+      "@type": "MLS_Task",
+      "name": "Causal inference from time series",
+      "description": "Use classifiers and algebraic estimators to infer network causal structure.",
+      "wasDerivedFrom": "code",
+      "codeReference": "src/estimators_comparison.ipynb:132",
+      "path": "src/estimators_comparison.ipynb",
+      "start_char_doc": 4026,
+      "end_char_doc": 4033,
+      "start_line": 132,
+      "end_line": 132,
+      "context": {
+        "prefix": "outputs\": [],    \"source\": [     \"def granger(z):\\n\",     \"    '''\\n\",     \"    ",
+        "suffix": " Estimator - R1*((R0)^1)\\n\",     \"\\n\",     \"        Parameters:\\n\",     \"       "
+      }
+    },
+    {
+      "@id": "task_estimator_benchmarking",
+      "@type": "MLS_Task",
+      "name": "Estimator benchmarking",
+      "description": "Compare CNN, SVM, Granger, R1, and R1-R3 estimators over Monte Carlo runs.",
+      "wasDerivedFrom": "code",
+      "codeReference": "src/estimators_comparison.ipynb:7",
+      "path": "src/estimators_comparison.ipynb",
+      "start_char_doc": 85,
+      "end_char_doc": 105,
+      "start_line": 7,
+      "end_line": 7,
+      "context": {
+        "prefix": "ells\": [   {    \"cell_type\": \"markdown\",    \"metadata\": {},    \"source\": [     \"",
+        "suffix": "\\n\"    ]   },   {    \"cell_type\": \"code\",    \"execution_count\": 26,    \"metadata"
+      }
+    },
+    {
+      "@id": "datasource_erdos_renyi_generator",
+      "@type": "DataSource",
+      "name": "Erdős-Rényi graph generator",
+      "description": "Random graph generator based on edge probability p with optional undirected symmetrization.",
+      "wasDerivedFrom": "code",
+      "codeReference": "src/models_training.ipynb:48",
+      "path": "src/models_training.ipynb",
+      "start_char_doc": 1020,
+      "end_char_doc": 1037,
+      "start_line": 48,
+      "end_line": 48,
+      "context": {
+        "prefix": "30ae80-61ec-4608-c95f-4cd2d7437c45\"    },    \"outputs\": [],    \"source\": [     \"",
+        "suffix": "(sz,p,undirected):\\n\",     \"    '''\\n\",     \"    Generates a realization of an E"
+      }
+    },
+    {
+      "@id": "datasource_enzyme_edges",
+      "@type": "DataSource",
+      "name": "ENZYMES_g297.edges",
+      "pathInRepository": "data/ENZYMES_g297.edges",
+      "format": "edge-list",
+      "wasDerivedFrom": "code",
+      "codeReference": "data/ENZYMES_g297.edges:1",
+      "path": "data/ENZYMES_g297.edges",
+      "start_char_doc": 0,
+      "end_char_doc": 3,
+      "start_line": 1,
+      "end_line": 1,
+      "context": {
+        "prefix": "",
+        "suffix": " 5 0 10 0 27 0 31 0 0 1 10 1 27 1 36 1 23 2 24 2 50 2 18 3 22 3 26 3 55 4 56 4 0"
+      }
+    },
+    {
+      "@id": "datasource_macaque_edges",
+      "@type": "DataSource",
+      "name": "macaque-rhesus_interareal-cortical-network.edges",
+      "pathInRepository": "data/macaque-rhesus_interareal-cortical-network.edges",
+      "format": "edge-list",
+      "wasDerivedFrom": "code",
+      "codeReference": "data/macaque-rhesus_interareal-cortical-network.edges:1",
+      "path": "data/macaque-rhesus_interareal-cortical-network.edges",
+      "start_char_doc": 0,
+      "end_char_doc": 3,
+      "start_line": 1,
+      "end_line": 1,
+      "context": {
+        "prefix": "",
+        "suffix": " 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0 10 0 11 0 12 0 13 0 14 0 15 0 16 0 17 0 18 0 "
+      }
+    },
+    {
+      "@id": "datasource_saved_perf",
+      "@type": "DataSource",
+      "name": "saved_perf pickle artifacts",
+      "pathInRepository": "saved_perf/",
+      "format": "pickle arrays",
+      "wasDerivedFrom": "code",
+      "codeReference": "src/different_noise_variance.ipynb:46",
+      "path": "src/different_noise_variance.ipynb",
+      "start_char_doc": 41266,
+      "end_char_doc": 41276,
+      "start_line": 46,
+      "end_line": 46,
+      "context": {
+        "prefix": "erent noise variance values\\n\",     \"'''     \\n\",     \"data1 = load_pickles('../",
+        "suffix": "/erdos_50_0.6_1_perf.pkl')\\n\",     \"data2 = load_pickles('../saved_perf/erdos_50"
+      }
+    },
+    {
+      "@id": "dataset_synthetic_erdos_renyi_graphs",
+      "@type": "MLS_Dataset",
+      "name": "Synthetic Erdős-Rényi graphs",
+      "description": "Synthetic random graph structures generated with node count, edge probability, and undirected settings.",
+      "source": {
+        "@id": "datasource_erdos_renyi_generator"
+      },
+      "usedFor": [
+        {
+          "@id": "task_graph_structure_identification"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "src/models_training.ipynb:48",
+      "path": "src/models_training.ipynb",
+      "start_char_doc": 1024,
+      "end_char_doc": 1054,
+      "start_line": 48,
+      "end_line": 48,
+      "context": {
+        "prefix": "80-61ec-4608-c95f-4cd2d7437c45\"    },    \"outputs\": [],    \"source\": [     \"def ",
+        "suffix": ":\\n\",     \"    '''\\n\",     \"    Generates a realization of an Erdős–Rényi Graph "
+      }
+    },
+    {
+      "@id": "dataset_synthetic_timeseries",
+      "@type": "MLS_Dataset",
+      "name": "Synthetic linear stochastic network time series",
+      "description": "Time series generated from y(n+1)=Ay(n)+x(n+1) with Gaussian noise.",
+      "source": {
+        "@id": "datasource_erdos_renyi_generator"
+      },
+      "usedFor": [
+        {
+          "@id": "task_edge_presence_classification"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "src/models_training.ipynb:90",
+      "path": "src/models_training.ipynb",
+      "start_char_doc": 2705,
+      "end_char_doc": 2724,
+      "start_line": 90,
+      "end_line": 90,
+      "context": {
+        "prefix": " - ccc*L\\n\",     \"    A = rho * Ap\\n\",     \"    return A\\n\",     \"\\n\",     \"def ",
+        "suffix": ":\\n\",     \"    '''\\n\",     \"    Generates the syntetic time series data given th"
+      }
+    },
+    {
+      "@id": "dataset_cross_correlation_features",
+      "@type": "MLS_Dataset",
+      "name": "Time-lagged cross-correlation feature matrix",
+      "description": "Pairwise cross-correlation windows used as features for edge prediction.",
+      "source": {
+        "@id": "dataset_synthetic_timeseries"
+      },
+      "usedFor": [
+        {
+          "@id": "task_edge_presence_classification"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "src/models_training.ipynb:150",
+      "path": "src/models_training.ipynb",
+      "start_char_doc": 5672,
+      "end_char_doc": 5696,
+      "start_line": 150,
+      "end_line": 150,
+      "context": {
+        "prefix": "the first negative and positive lags\\n\",     \"                data[:,counter] = ",
+        "suffix": "\\n\",     \"                #Saves the data\\n\",     \"                target[0,coun"
+      }
+    },
+    {
+      "@id": "dataset_enzyme_graph",
+      "@type": "MLS_Dataset",
+      "name": "ENZYMES_g297 graph",
+      "description": "Real-world ENZYMES edge-list graph used for estimator benchmarking.",
+      "source": {
+        "@id": "datasource_enzyme_edges"
+      },
+      "usedFor": [
+        {
+          "@id": "task_graph_structure_identification"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "src/estimators_comparison_real_net_enzyme.ipynb:552",
+      "path": "src/estimators_comparison_real_net_enzyme.ipynb",
+      "start_char_doc": 19528,
+      "end_char_doc": 19563,
+      "start_line": 552,
+      "end_line": 552,
+      "context": {
+        "prefix": "     \"        adj[edge1,edge2] = 1\\n\",     \"    return adj\\n\",     \"  \\n\",     \"",
+        "suffix": "\\n\",     \"sz_main=121\\n\",     \"adj = load_from_edges(\\\"../data/\\\"+enzyme_net,sz_"
+      }
+    },
+    {
+      "@id": "dataset_macaque_graph",
+      "@type": "MLS_Dataset",
+      "name": "Macaque-rhesus interareal cortical network",
+      "description": "Real-world macaque cortical network edge list used for estimator benchmarking.",
+      "source": {
+        "@id": "datasource_macaque_edges"
+      },
+      "usedFor": [
+        {
+          "@id": "task_graph_structure_identification"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "src/estimators_comparison_real_net_macaque.ipynb:552",
+      "path": "src/estimators_comparison_real_net_macaque.ipynb",
+      "start_char_doc": 19525,
+      "end_char_doc": 19591,
+      "start_line": 552,
+      "end_line": 552,
+      "context": {
+        "prefix": "     \"        adj[edge1,edge2] = 1\\n\",     \"    return adj\\n\",     \"  \\n\",     \"",
+        "suffix": "\\n\",     \"\\n\",     \"sz_main=93\\n\",     \"adj = load_from_edges(\\\"../data/\\\"+macaq"
+      }
+    },
+    {
+      "@id": "dataset_noise_variance_performance",
+      "@type": "MLS_Dataset",
+      "name": "Saved noise-variance performance traces",
+      "description": "Precomputed CNN and SVM accuracy traces for Erdős-Rényi N=50, p=0.6 under noise variances 1, 10, 100, and 1000.",
+      "source": {
+        "@id": "datasource_saved_perf"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "src/different_noise_variance.ipynb:49",
+      "path": "src/different_noise_variance.ipynb",
+      "start_char_doc": 41493,
+      "end_char_doc": 41519,
+      "start_line": 49,
+      "end_line": 49,
+      "context": {
+        "prefix": "d_perf/erdos_50_0.6_100_perf.pkl')\\n\",     \"data4 = load_pickles('../saved_perf/",
+        "suffix": "')\\n\",     \"\\n\",     \"x =np.arange(1,100,step=5)\\n\",     \"\\n\",     \"data_plot1 ="
+      }
+    },
+    {
+      "@id": "method_cross_correlation_features",
+      "@type": "Method",
+      "name": "Cross-correlation feature extraction",
+      "description": "Extracts fixed lag windows from pairwise correlations as model input.",
+      "wasDerivedFrom": "code",
+      "codeReference": "src/models_training.ipynb:148",
+      "path": "src/models_training.ipynb",
+      "start_char_doc": 5510,
+      "end_char_doc": 5526,
+      "start_line": 148,
+      "end_line": 148,
+      "context": {
+        "prefix": " \"                #Compute the cross correlation\\n\",     \"                aux = ",
+        "suffix": "(x[:,j],x[:,k], mode=\\\"full\\\")\\n\",     \"                #Extracts the first nega"
+      }
+    },
+    {
+      "@id": "method_laplacian_connectivity",
+      "@type": "Method",
+      "name": "Laplacian connectivity matrix construction",
+      "description": "Builds the system matrix A from graph Laplacian, coupling c, and spectral radius rho.",
+      "wasDerivedFrom": "code",
+      "codeReference": "src/models_training.ipynb:85",
+      "path": "src/models_training.ipynb",
+      "start_char_doc": 2585,
+      "end_char_doc": 2596,
+      "start_line": 85,
+      "end_line": 85,
+      "context": {
+        "prefix": "x(Dvec)\\n\",     \"    ccc = c*1/Dmax\\n\",     \"    D = np.diag(Dvec)\\n\",     \"    ",
+        "suffix": "\\n\",     \"    Ap = np.eye(sz) - ccc*L\\n\",     \"    A = rho * Ap\\n\",     \"    ret"
+      }
+    },
+    {
+      "@id": "method_cnn_classifier",
+      "@type": "Method",
+      "name": "NonLinear CNN estimator",
+      "description": "A Conv1D Keras sequential neural classifier/regressor for edge prediction.",
+      "wasDerivedFrom": "code",
+      "codeReference": "src/models_training.ipynb:281",
+      "path": "src/models_training.ipynb",
+      "start_char_doc": 11152,
+      "end_char_doc": 11164,
+      "start_line": 281,
+      "end_line": 281,
+      "context": {
+        "prefix": "'min',patience=7)\\n\",     \"\\n\",     \"    #CNN architecture\\n\",     \"    model = ",
+        "suffix": "\\n\",     \"    model.add(Conv1D(filters=64, kernel_size=2, strides=2,activation='"
+      }
+    },
+    {
+      "@id": "method_linear_svm",
+      "@type": "Method",
+      "name": "Linear SVM estimator",
+      "description": "A linear-kernel support vector classifier trained on cross-correlation features.",
+      "wasDerivedFrom": "code",
+      "codeReference": "src/models_training.ipynb:412",
+      "path": "src/models_training.ipynb",
+      "start_char_doc": 26397,
+      "end_char_doc": 26404,
+      "start_line": 412,
+      "end_line": 412,
+      "context": {
+        "prefix": "r kernel\\n\",     \"from sklearn import svm\\n\",     \"import pickle\\n\",     \"clf = ",
+        "suffix": "(kernel=\\\"linear\\\")\\n\",     \"clf.fit(data_scaled[:,:].T, y.flatten())\\n\",     \"p"
+      }
+    },
+    {
+      "@id": "method_granger_estimator",
+      "@type": "Method",
+      "name": "Granger estimator",
+      "description": "Computes R1 times inverse R0 as an algebraic baseline estimator.",
+      "wasDerivedFrom": "code",
+      "codeReference": "src/estimators_comparison.ipynb:130",
+      "path": "src/estimators_comparison.ipynb",
+      "start_char_doc": 3980,
+      "end_char_doc": 3991,
+      "start_line": 130,
+      "end_line": 130,
+      "context": {
+        "prefix": "\"execution_count\": 28,    \"metadata\": {},    \"outputs\": [],    \"source\": [     \"",
+        "suffix": "(z):\\n\",     \"    '''\\n\",     \"    Granger Estimator - R1*((R0)^1)\\n\",     \"\\n\","
+      }
+    },
+    {
+      "@id": "method_r1_estimator",
+      "@type": "Method",
+      "name": "R1 estimator",
+      "description": "Uses the first lag covariance/correlation matrix as an estimator.",
+      "wasDerivedFrom": "code",
+      "codeReference": "src/estimators_comparison.ipynb:153",
+      "path": "src/estimators_comparison.ipynb",
+      "start_char_doc": 4689,
+      "end_char_doc": 4695,
+      "start_line": 153,
+      "end_line": 153,
+      "context": {
+        "prefix": "*inv(R0)\\n\",     \"    return np.matmul(R1,np.linalg.inv(R0))\\n\",     \"\\n\",     \"",
+        "suffix": "_minus_r3(z):\\n\",     \"    '''\\n\",     \"    NIB Estimator - R1-R3\\n\",     \"\\n\", "
+      }
+    },
+    {
+      "@id": "method_r1_minus_r3_estimator",
+      "@type": "Method",
+      "name": "R1-R3 / NIB estimator",
+      "description": "Uses the difference between first- and third-lag matrices as a network inference estimator.",
+      "wasDerivedFrom": "code",
+      "codeReference": "src/estimators_comparison.ipynb:153",
+      "path": "src/estimators_comparison.ipynb",
+      "start_char_doc": 4689,
+      "end_char_doc": 4704,
+      "start_line": 153,
+      "end_line": 153,
+      "context": {
+        "prefix": "*inv(R0)\\n\",     \"    return np.matmul(R1,np.linalg.inv(R0))\\n\",     \"\\n\",     \"",
+        "suffix": "(z):\\n\",     \"    '''\\n\",     \"    NIB Estimator - R1-R3\\n\",     \"\\n\",     \"    "
+      }
+    },
+    {
+      "@id": "method_gaussian_mixture_clustering",
+      "@type": "Method",
+      "name": "Gaussian mixture clustering",
+      "description": "Clusters estimator scores into two groups for binary edge predictions.",
+      "wasDerivedFrom": "code",
+      "codeReference": "src/estimators_comparison.ipynb:294",
+      "path": "src/estimators_comparison.ipynb",
+      "start_char_doc": 9793,
+      "end_char_doc": 9824,
+      "start_line": 294,
+      "end_line": 294,
+      "context": {
+        "prefix": " \"    #Clustering data with Gaussian Mixture Model or kmeans\\n\",     \"    gmm = ",
+        "suffix": "\\n\",     \"    labels = gmm.fit_predict(features)\\n\",     \"\\n\",     \"    #Unsort "
+      }
+    },
+    {
+      "@id": "method_monte_carlo_evaluation",
+      "@type": "Method",
+      "name": "Monte Carlo estimator evaluation",
+      "description": "Repeats random simulations and records accuracy-style performance metrics.",
+      "wasDerivedFrom": "code",
+      "codeReference": "src/estimators_comparison.ipynb:7",
+      "path": "src/estimators_comparison.ipynb",
+      "start_char_doc": 85,
+      "end_char_doc": 105,
+      "start_line": 7,
+      "end_line": 7,
+      "context": {
+        "prefix": "ells\": [   {    \"cell_type\": \"markdown\",    \"metadata\": {},    \"source\": [     \"",
+        "suffix": "\\n\"    ]   },   {    \"cell_type\": \"code\",    \"execution_count\": 26,    \"metadata"
+      }
+    },
+    {
+      "@id": "algo_get_adjacency",
+      "@type": "MLS_Algorithm",
+      "name": "get_adjacency",
+      "description": "Generates adjacency matrices from random draws and edge probability p.",
+      "implements": [],
+      "wasDerivedFrom": "code",
+      "codeReference": "src/models_training.ipynb:48",
+      "path": "src/models_training.ipynb",
+      "start_char_doc": 1020,
+      "end_char_doc": 1037,
+      "start_line": 48,
+      "end_line": 48,
+      "context": {
+        "prefix": "30ae80-61ec-4608-c95f-4cd2d7437c45\"    },    \"outputs\": [],    \"source\": [     \"",
+        "suffix": "(sz,p,undirected):\\n\",     \"    '''\\n\",     \"    Generates a realization of an E"
+      }
+    },
+    {
+      "@id": "algo_get_A",
+      "@type": "MLS_Algorithm",
+      "name": "get_A",
+      "description": "Converts an adjacency matrix to a stable weighted connectivity matrix.",
+      "implements": [],
+      "wasDerivedFrom": "code",
+      "codeReference": "src/models_training.ipynb:69",
+      "path": "src/models_training.ipynb",
+      "start_char_doc": 1937,
+      "end_char_doc": 1946,
+      "start_line": 69,
+      "end_line": 69,
+      "context": {
+        "prefix": ":\\n\",     \"        adj = adj + adj.T\\n\",     \"    return adj\\n\",     \"\\n\",     \"",
+        "suffix": "(adj,c,rho):\\n\",     \"    '''\\n\",     \"    Generates the connectivity matrix (in"
+      }
+    },
+    {
+      "@id": "algo_tsg",
+      "@type": "MLS_Algorithm",
+      "name": "tsg",
+      "description": "Simulates time series dynamics using A, initial value, length, and noise scale.",
+      "implements": [],
+      "wasDerivedFrom": "code",
+      "codeReference": "src/models_training.ipynb:90",
+      "path": "src/models_training.ipynb",
+      "start_char_doc": 2701,
+      "end_char_doc": 2708,
+      "start_line": 90,
+      "end_line": 90,
+      "context": {
+        "prefix": "(sz) - ccc*L\\n\",     \"    A = rho * Ap\\n\",     \"    return A\\n\",     \"\\n\",     \"",
+        "suffix": "(A,tsize,x0,qsi):\\n\",     \"    '''\\n\",     \"    Generates the syntetic time seri"
+      }
+    },
+    {
+      "@id": "algo_create_dataset",
+      "@type": "MLS_Algorithm",
+      "name": "create_dataset",
+      "description": "Creates labeled pairwise feature vectors from simulated time series.",
+      "implements": [
+        {
+          "@id": "method_cross_correlation_features"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "src/models_training.ipynb:113",
+      "path": "src/models_training.ipynb",
+      "start_char_doc": 3677,
+      "end_char_doc": 3695,
+      "start_line": 113,
+      "end_line": 113,
+      "context": {
+        "prefix": ",:],x[i-1,:]) + qsi*np.random.randn(1)\\n\",     \"    return x\\n\",     \"\\n\",     \"",
+        "suffix": "(sz,p,c,rho,tsize,x0,qsi,undirected):\\n\",     \"    '''\\n\",     \"    Generates th"
+      }
+    },
+    {
+      "@id": "algo_train_model",
+      "@type": "MLS_Algorithm",
+      "name": "train_model",
+      "description": "Defines, compiles, trains, and evaluates the Keras Conv1D model.",
+      "implements": [],
+      "wasDerivedFrom": "code",
+      "codeReference": "src/models_training.ipynb:277",
+      "path": "src/models_training.ipynb",
+      "start_char_doc": 10967,
+      "end_char_doc": 10982,
+      "start_line": 277,
+      "end_line": 277,
+      "context": {
+        "prefix": "- loss: 3.9312e-04 - val_loss: 0.0011\\n\"      ]     }    ],    \"source\": [     \"",
+        "suffix": "(X_train,X_test,y_train,y_test):\\n\",     \"    cb = EarlyStopping(monitor='val_lo"
+      }
+    },
+    {
+      "@id": "algo_granger",
+      "@type": "MLS_Algorithm",
+      "name": "granger",
+      "description": "Computes the Granger-style estimator matrix R1 inv(R0).",
+      "implements": [],
+      "wasDerivedFrom": "code",
+      "codeReference": "src/estimators_comparison.ipynb:130",
+      "path": "src/estimators_comparison.ipynb",
+      "start_char_doc": 3980,
+      "end_char_doc": 3991,
+      "start_line": 130,
+      "end_line": 130,
+      "context": {
+        "prefix": "\"execution_count\": 28,    \"metadata\": {},    \"outputs\": [],    \"source\": [     \"",
+        "suffix": "(z):\\n\",     \"    '''\\n\",     \"    Granger Estimator - R1*((R0)^1)\\n\",     \"\\n\","
+      }
+    },
+    {
+      "@id": "algo_r1_minus_r3",
+      "@type": "MLS_Algorithm",
+      "name": "r1_minus_r3",
+      "description": "Computes the R1 minus R3 estimator matrix.",
+      "implements": [],
+      "wasDerivedFrom": "code",
+      "codeReference": "src/estimators_comparison.ipynb:153",
+      "path": "src/estimators_comparison.ipynb",
+      "start_char_doc": 4689,
+      "end_char_doc": 4704,
+      "start_line": 153,
+      "end_line": 153,
+      "context": {
+        "prefix": "*inv(R0)\\n\",     \"    return np.matmul(R1,np.linalg.inv(R0))\\n\",     \"\\n\",     \"",
+        "suffix": "(z):\\n\",     \"    '''\\n\",     \"    NIB Estimator - R1-R3\\n\",     \"\\n\",     \"    "
+      }
+    },
+    {
+      "@id": "algo_r1",
+      "@type": "MLS_Algorithm",
+      "name": "r1",
+      "description": "Computes the first-lag estimator matrix.",
+      "implements": [],
+      "wasDerivedFrom": "code",
+      "codeReference": "src/estimators_comparison.ipynb:153",
+      "path": "src/estimators_comparison.ipynb",
+      "start_char_doc": 4689,
+      "end_char_doc": 4695,
+      "start_line": 153,
+      "end_line": 153,
+      "context": {
+        "prefix": "*inv(R0)\\n\",     \"    return np.matmul(R1,np.linalg.inv(R0))\\n\",     \"\\n\",     \"",
+        "suffix": "_minus_r3(z):\\n\",     \"    '''\\n\",     \"    NIB Estimator - R1-R3\\n\",     \"\\n\", "
+      }
+    },
+    {
+      "@id": "algo_cluster_pred",
+      "@type": "MLS_Algorithm",
+      "name": "cluster_pred",
+      "description": "Fits a two-component Gaussian mixture and maps clusters to edge predictions.",
+      "implements": [],
+      "wasDerivedFrom": "code",
+      "codeReference": "src/estimators_comparison.ipynb:272",
+      "path": "src/estimators_comparison.ipynb",
+      "start_char_doc": 8874,
+      "end_char_doc": 8890,
+      "start_line": 272,
+      "end_line": 272,
+      "context": {
+        "prefix": ",     \"    return np.array([accuracy,clvar,idgap])\\n\",     \"\\n\",     \"\\n\",     \"",
+        "suffix": "(true,pred,estimator):\\n\",     \"    '''\\n\",     \"    Clusters the estimators res"
+      }
+    },
+    {
+      "@id": "algo_load_from_edges",
+      "@type": "MLS_Algorithm",
+      "name": "load_from_edges",
+      "description": "Loads graph adjacency matrices from repository edge-list files.",
+      "implements": [],
+      "wasDerivedFrom": "code",
+      "codeReference": "src/estimators_comparison_real_net_enzyme.ipynb:541",
+      "path": "src/estimators_comparison_real_net_enzyme.ipynb",
+      "start_char_doc": 19136,
+      "end_char_doc": 19155,
+      "start_line": 541,
+      "end_line": 541,
+      "context": {
+        "prefix": "\"execution_count\": 30,    \"metadata\": {},    \"outputs\": [],    \"source\": [     \"",
+        "suffix": "(path,nnodes):\\n\",     \"    adj = np.zeros((nnodes,nnodes))\\n\",     \"    f = ope"
+      }
+    },
+    {
+      "@id": "algo_train_test_split",
+      "@type": "MLS_Algorithm",
+      "name": "train_test_split",
+      "description": "Splits feature data into train and test partitions.",
+      "implements": [],
+      "wasDerivedFrom": "code",
+      "codeReference": "src/models_training.ipynb:21",
+      "path": "src/models_training.ipynb",
+      "start_char_doc": 461,
+      "end_char_doc": 477,
+      "start_line": 21,
+      "end_line": 21,
+      "context": {
+        "prefix": "sklearn import preprocessing as pp\\n\",     \"from sklearn.model_selection import ",
+        "suffix": "\\n\",     \"import keras\\n\",     \"from keras.callbacks import EarlyStopping\\n\",   "
+      }
+    },
+    {
+      "@id": "algo_early_stopping",
+      "@type": "MLS_Algorithm",
+      "name": "EarlyStopping",
+      "description": "Stops Keras training based on validation loss patience.",
+      "implements": [],
+      "wasDerivedFrom": "code",
+      "codeReference": "src/models_training.ipynb:23",
+      "path": "src/models_training.ipynb",
+      "start_char_doc": 537,
+      "end_char_doc": 550,
+      "start_line": 23,
+      "end_line": 23,
+      "context": {
+        "prefix": "ort train_test_split\\n\",     \"import keras\\n\",     \"from keras.callbacks import ",
+        "suffix": "\\n\",     \"from keras.models import *\\n\",     \"from keras.layers import *\"    ]  "
+      }
+    },
+    {
+      "@id": "model_cnn_architecture",
+      "@type": "MLS_Model",
+      "name": "Conv1D sequential CNN",
+      "modelType": "neural-network",
+      "architecture": "Conv1D stack with pooling, dropout, dense tanh layers, and linear output",
+      "implements": {
+        "@id": "method_cnn_classifier"
+      },
+      "trainedBy": {
+        "@id": "training_cnn_synthetic"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "src/models_training.ipynb:282",
+      "path": "src/models_training.ipynb",
+      "start_char_doc": 11188,
+      "end_char_doc": 11205,
+      "start_line": 282,
+      "end_line": 282,
+      "context": {
+        "prefix": "\"    #CNN architecture\\n\",     \"    model = Sequential()\\n\",     \"    model.add(",
+        "suffix": ", kernel_size=2, strides=2,activation='relu', input_shape=(200,1)))\\n\",     \"   "
+      }
+    },
+    {
+      "@id": "model_saved_cnn",
+      "@type": "MLS_Model",
+      "name": "Saved CNN estimator",
+      "modelType": "saved-keras-model",
+      "pathInRepository": "models/cnn",
+      "implements": {
+        "@id": "method_cnn_classifier"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "src/estimators_comparison.ipynb:541",
+      "path": "src/estimators_comparison.ipynb",
+      "start_char_doc": 19148,
+      "end_char_doc": 19177,
+      "start_line": 541,
+      "end_line": 541,
+      "context": {
+        "prefix": "},    \"outputs\": [],    \"source\": [     \"#Loads the models\\n\",     \"cnn_model = ",
+        "suffix": "\\n\",     \"svm_model =     loaded_model = pickle.load(open(\\\"../models/svm.sav\\\","
+      }
+    },
+    {
+      "@id": "model_linear_svm",
+      "@type": "MLS_Model",
+      "name": "Linear SVM classifier",
+      "modelType": "support-vector-machine",
+      "implements": {
+        "@id": "method_linear_svm"
+      },
+      "trainedBy": {
+        "@id": "training_svm_synthetic"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "src/models_training.ipynb:412",
+      "path": "src/models_training.ipynb",
+      "start_char_doc": 26397,
+      "end_char_doc": 26404,
+      "start_line": 412,
+      "end_line": 412,
+      "context": {
+        "prefix": "r kernel\\n\",     \"from sklearn import svm\\n\",     \"import pickle\\n\",     \"clf = ",
+        "suffix": "(kernel=\\\"linear\\\")\\n\",     \"clf.fit(data_scaled[:,:].T, y.flatten())\\n\",     \"p"
+      }
+    },
+    {
+      "@id": "model_saved_linear_svm",
+      "@type": "MLS_Model",
+      "name": "Saved linear SVM estimator",
+      "modelType": "serialized-scikit-learn-model",
+      "pathInRepository": "models/svm.sav",
+      "implements": {
+        "@id": "method_linear_svm"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "src/estimators_comparison.ipynb:7",
+      "path": "src/estimators_comparison.ipynb",
+      "start_char_doc": 85,
+      "end_char_doc": 105,
+      "start_line": 7,
+      "end_line": 7,
+      "context": {
+        "prefix": "ells\": [   {    \"cell_type\": \"markdown\",    \"metadata\": {},    \"source\": [     \"",
+        "suffix": "\\n\"    ]   },   {    \"cell_type\": \"code\",    \"execution_count\": 26,    \"metadata"
+      }
+    },
+    {
+      "@id": "process_generate_adjacency",
+      "@type": "DataProcessingStep",
+      "name": "Generate random adjacency matrix",
+      "description": "Generates random graph edges and optionally symmetrizes them.",
+      "wasDerivedFrom": "code",
+      "codeReference": "src/models_training.ipynb:7",
+      "path": "src/models_training.ipynb",
+      "start_char_doc": 85,
+      "end_char_doc": 105,
+      "start_line": 7,
+      "end_line": 7,
+      "context": {
+        "prefix": "ells\": [   {    \"cell_type\": \"markdown\",    \"metadata\": {},    \"source\": [     \"",
+        "suffix": "\\n\"    ]   },   {    \"cell_type\": \"code\",    \"execution_count\": 2,    \"metadata\""
+      }
+    },
+    {
+      "@id": "process_construct_A",
+      "@type": "DataProcessingStep",
+      "name": "Construct connectivity matrix A",
+      "description": "Builds a stable dynamics matrix from graph Laplacian degree information.",
+      "wasDerivedFrom": "code",
+      "codeReference": "src/models_training.ipynb:7",
+      "path": "src/models_training.ipynb",
+      "start_char_doc": 85,
+      "end_char_doc": 105,
+      "start_line": 7,
+      "end_line": 7,
+      "context": {
+        "prefix": "ells\": [   {    \"cell_type\": \"markdown\",    \"metadata\": {},    \"source\": [     \"",
+        "suffix": "\\n\"    ]   },   {    \"cell_type\": \"code\",    \"execution_count\": 2,    \"metadata\""
+      }
+    },
+    {
+      "@id": "process_simulate_timeseries",
+      "@type": "DataProcessingStep",
+      "name": "Simulate stochastic network dynamics",
+      "description": "Generates node time series with Gaussian innovations.",
+      "wasDerivedFrom": "code",
+      "codeReference": "src/models_training.ipynb:7",
+      "path": "src/models_training.ipynb",
+      "start_char_doc": 85,
+      "end_char_doc": 105,
+      "start_line": 7,
+      "end_line": 7,
+      "context": {
+        "prefix": "ells\": [   {    \"cell_type\": \"markdown\",    \"metadata\": {},    \"source\": [     \"",
+        "suffix": "\\n\"    ]   },   {    \"cell_type\": \"code\",    \"execution_count\": 2,    \"metadata\""
+      }
+    },
+    {
+      "@id": "process_extract_correlations",
+      "@type": "DataProcessingStep",
+      "name": "Extract lagged correlations",
+      "description": "Computes pairwise signal correlations and keeps a 200-step central window.",
+      "wasDerivedFrom": "code",
+      "codeReference": "src/models_training.ipynb:150",
+      "path": "src/models_training.ipynb",
+      "start_char_doc": 5672,
+      "end_char_doc": 5696,
+      "start_line": 150,
+      "end_line": 150,
+      "context": {
+        "prefix": "the first negative and positive lags\\n\",     \"                data[:,counter] = ",
+        "suffix": "\\n\",     \"                #Saves the data\\n\",     \"                target[0,coun"
+      }
+    },
+    {
+      "@id": "process_scale_features",
+      "@type": "DataProcessingStep",
+      "name": "Scale feature matrix",
+      "description": "Divides feature values by the maximum observed value before training.",
+      "wasDerivedFrom": "code",
+      "codeReference": "src/models_training.ipynb:210",
+      "path": "src/models_training.ipynb",
+      "start_char_doc": 7840,
+      "end_char_doc": 7871,
+      "start_line": 210,
+      "end_line": 210,
+      "context": {
+        "prefix": ",    \"metadata\": {},    \"outputs\": [],    \"source\": [     \"#Scale data\\n\",     \"",
+        "suffix": "\"    ]   },   {    \"cell_type\": \"markdown\",    \"metadata\": {},    \"source\": [   "
+      }
+    },
+    {
+      "@id": "process_load_enzyme_edges",
+      "@type": "DataProcessingStep",
+      "name": "Load ENZYMES edges",
+      "description": "Loads ENZYMES edge list and maps file indices into adjacency matrix entries.",
+      "wasDerivedFrom": "code",
+      "codeReference": "src/estimators_comparison_real_net_enzyme.ipynb:7",
+      "path": "src/estimators_comparison_real_net_enzyme.ipynb",
+      "start_char_doc": 85,
+      "end_char_doc": 105,
+      "start_line": 7,
+      "end_line": 7,
+      "context": {
+        "prefix": "ells\": [   {    \"cell_type\": \"markdown\",    \"metadata\": {},    \"source\": [     \"",
+        "suffix": "\\n\"    ]   },   {    \"cell_type\": \"code\",    \"execution_count\": 3,    \"metadata\""
+      }
+    },
+    {
+      "@id": "process_load_macaque_edges",
+      "@type": "DataProcessingStep",
+      "name": "Load macaque edges",
+      "description": "Loads macaque cortical network edge list into an adjacency matrix.",
+      "wasDerivedFrom": "code",
+      "codeReference": "src/estimators_comparison_real_net_macaque.ipynb:7",
+      "path": "src/estimators_comparison_real_net_macaque.ipynb",
+      "start_char_doc": 85,
+      "end_char_doc": 105,
+      "start_line": 7,
+      "end_line": 7,
+      "context": {
+        "prefix": "ells\": [   {    \"cell_type\": \"markdown\",    \"metadata\": {},    \"source\": [     \"",
+        "suffix": "\\n\"    ]   },   {    \"cell_type\": \"code\",    \"execution_count\": 29,    \"metadata"
+      }
+    },
+    {
+      "@id": "process_plot_noise_variance",
+      "@type": "DataProcessingStep",
+      "name": "Plot noise-variance comparison",
+      "description": "Plots saved CNN/SVM accuracy traces across sample counts and variance settings.",
+      "wasDerivedFrom": "code",
+      "codeReference": "src/different_noise_variance.ipynb:1",
+      "path": "src/different_noise_variance.ipynb",
+      "start_char_doc": 0,
+      "end_char_doc": 80,
+      "start_line": 1,
+      "end_line": 6,
+      "context": {
+        "prefix": "",
+        "suffix": "b9312\",    \"metadata\": {},    \"outputs\": [],    \"source\": [     \"import pprint, "
+      }
+    },
+    {
+      "@id": "training_cnn_synthetic",
+      "@type": "TrainingRun",
+      "name": "CNN synthetic feature training",
+      "description": "Trains the Conv1D model on scaled synthetic cross-correlation features with validation split and early stopping.",
+      "usesDataset": {
+        "@id": "dataset_cross_correlation_features"
+      },
+      "producesModel": {
+        "@id": "model_cnn_architecture"
+      },
+      "usesMethod": {
+        "@id": "method_cnn_classifier"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "src/models_training.ipynb:298",
+      "path": "src/models_training.ipynb",
+      "start_char_doc": 12158,
+      "end_char_doc": 12167,
+      "start_line": 298,
+      "end_line": 298,
+      "context": {
+        "prefix": ",     \"    #Save the rmsesparse_categorical_crossentropy\\n\",     \"    history = ",
+        "suffix": "(X_train, y_train, epochs=1000, validation_split=0.2, verbose=1,callbacks=[cb])\\"
+      }
+    },
+    {
+      "@id": "training_svm_synthetic",
+      "@type": "TrainingRun",
+      "name": "Linear SVM synthetic feature training",
+      "description": "Trains a linear SVM on transposed scaled cross-correlation feature vectors.",
+      "usesDataset": {
+        "@id": "dataset_cross_correlation_features"
+      },
+      "producesModel": {
+        "@id": "model_linear_svm"
+      },
+      "usesMethod": {
+        "@id": "method_linear_svm"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "src/models_training.ipynb:413",
+      "path": "src/models_training.ipynb",
+      "start_char_doc": 26433,
+      "end_char_doc": 26440,
+      "start_line": 413,
+      "end_line": 413,
+      "context": {
+        "prefix": "t svm\\n\",     \"import pickle\\n\",     \"clf = svm.SVC(kernel=\\\"linear\\\")\\n\",     \"",
+        "suffix": "(data_scaled[:,:].T, y.flatten())\\n\",     \"pred = clf.predict(data_scaled.T)\\n\","
+      }
+    },
+    {
+      "@id": "training_cnn_model_selection",
+      "@type": "TrainingRun",
+      "name": "CNN repeated model selection",
+      "description": "Runs five CNN training attempts and selects the model with the largest identifiability gap.",
+      "usesDataset": {
+        "@id": "dataset_cross_correlation_features"
+      },
+      "producesModel": {
+        "@id": "model_saved_cnn"
+      },
+      "usesMethod": {
+        "@id": "method_cnn_classifier"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "src/models_training.ipynb:722",
+      "path": "src/models_training.ipynb",
+      "start_char_doc": 43936,
+      "end_char_doc": 43943,
+      "start_line": 722,
+      "end_line": 722,
+      "context": {
+        "prefix": "=====================] - 0s 10ms/step\\n\"      ]     }    ],    \"source\": [     \"",
+        "suffix": "\\n\",     \"models_list = []\\n\",     \"performance_list = []\\n\",     \"\\n\",     \"#Tr"
+      }
+    },
+    {
+      "@id": "eval_synthetic_erdos_renyi",
+      "@type": "EvaluationRun",
+      "name": "Synthetic Erdős-Rényi estimator comparison",
+      "description": "Evaluation run comparing structure-identification estimators and recording accuracy-style metrics.",
+      "partOf": {
+        "@id": "exp_synthetic_erdos_renyi"
+      },
+      "usesDataset": {
+        "@id": "dataset_synthetic_timeseries"
+      },
+      "evaluates": [
+        {
+          "@id": "model_saved_cnn"
+        },
+        {
+          "@id": "model_saved_linear_svm"
+        },
+        {
+          "@id": "method_granger_estimator"
+        },
+        {
+          "@id": "method_r1_estimator"
+        },
+        {
+          "@id": "method_r1_minus_r3_estimator"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "src/estimators_comparison.ipynb:7",
+      "path": "src/estimators_comparison.ipynb",
+      "start_char_doc": 85,
+      "end_char_doc": 105,
+      "start_line": 7,
+      "end_line": 7,
+      "context": {
+        "prefix": "ells\": [   {    \"cell_type\": \"markdown\",    \"metadata\": {},    \"source\": [     \"",
+        "suffix": "\\n\"    ]   },   {    \"cell_type\": \"code\",    \"execution_count\": 26,    \"metadata"
+      }
+    },
+    {
+      "@id": "eval_real_enzyme",
+      "@type": "EvaluationRun",
+      "name": "ENZYMES real network estimator comparison",
+      "description": "Evaluation run comparing structure-identification estimators and recording accuracy-style metrics.",
+      "partOf": {
+        "@id": "exp_real_enzyme"
+      },
+      "usesDataset": {
+        "@id": "dataset_enzyme_graph"
+      },
+      "evaluates": [
+        {
+          "@id": "model_saved_cnn"
+        },
+        {
+          "@id": "model_saved_linear_svm"
+        },
+        {
+          "@id": "method_granger_estimator"
+        },
+        {
+          "@id": "method_r1_estimator"
+        },
+        {
+          "@id": "method_r1_minus_r3_estimator"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "src/estimators_comparison_real_net_enzyme.ipynb:7",
+      "path": "src/estimators_comparison_real_net_enzyme.ipynb",
+      "start_char_doc": 85,
+      "end_char_doc": 105,
+      "start_line": 7,
+      "end_line": 7,
+      "context": {
+        "prefix": "ells\": [   {    \"cell_type\": \"markdown\",    \"metadata\": {},    \"source\": [     \"",
+        "suffix": "\\n\"    ]   },   {    \"cell_type\": \"code\",    \"execution_count\": 3,    \"metadata\""
+      }
+    },
+    {
+      "@id": "eval_real_macaque",
+      "@type": "EvaluationRun",
+      "name": "Macaque real network estimator comparison",
+      "description": "Evaluation run comparing structure-identification estimators and recording accuracy-style metrics.",
+      "partOf": {
+        "@id": "exp_real_macaque"
+      },
+      "usesDataset": {
+        "@id": "dataset_macaque_graph"
+      },
+      "evaluates": [
+        {
+          "@id": "model_saved_cnn"
+        },
+        {
+          "@id": "model_saved_linear_svm"
+        },
+        {
+          "@id": "method_granger_estimator"
+        },
+        {
+          "@id": "method_r1_estimator"
+        },
+        {
+          "@id": "method_r1_minus_r3_estimator"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "src/estimators_comparison_real_net_macaque.ipynb:7",
+      "path": "src/estimators_comparison_real_net_macaque.ipynb",
+      "start_char_doc": 85,
+      "end_char_doc": 105,
+      "start_line": 7,
+      "end_line": 7,
+      "context": {
+        "prefix": "ells\": [   {    \"cell_type\": \"markdown\",    \"metadata\": {},    \"source\": [     \"",
+        "suffix": "\\n\"    ]   },   {    \"cell_type\": \"code\",    \"execution_count\": 29,    \"metadata"
+      }
+    },
+    {
+      "@id": "eval_noise_variance",
+      "@type": "EvaluationRun",
+      "name": "Noise variance accuracy comparison",
+      "description": "Evaluation run comparing structure-identification estimators and recording accuracy-style metrics.",
+      "partOf": {
+        "@id": "exp_noise_variance"
+      },
+      "usesDataset": {
+        "@id": "dataset_noise_variance_performance"
+      },
+      "evaluates": [
+        {
+          "@id": "model_saved_cnn"
+        },
+        {
+          "@id": "model_saved_linear_svm"
+        },
+        {
+          "@id": "method_granger_estimator"
+        },
+        {
+          "@id": "method_r1_estimator"
+        },
+        {
+          "@id": "method_r1_minus_r3_estimator"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "src/different_noise_variance.ipynb:74",
+      "path": "src/different_noise_variance.ipynb",
+      "start_char_doc": 42357,
+      "end_char_doc": 42365,
+      "start_line": 74,
+      "end_line": 74,
+      "context": {
+        "prefix": ",     \"plt.grid(alpha=0.5,linestyle='--')\\n\",     \"ni=1\\n\",     \"nx=15\\n\",     \"",
+        "suffix": "(x[ni:nx],data_plot1[ni:nx,0],linewidth=2)\\n\",     \"plt.plot(x[ni:nx],data_plot1"
+      }
+    },
+    {
+      "@id": "metric_accuracy",
+      "@type": "MLS_Eval",
+      "name": "Accuracy (%)",
+      "description": "Percentage of correctly predicted edge/non-edge decisions.",
+      "wasDerivedFrom": "code",
+      "codeReference": "src/estimators_comparison.ipynb:1247",
+      "path": "src/estimators_comparison.ipynb",
+      "start_char_doc": 76607,
+      "end_char_doc": 76619,
+      "start_line": 1247,
+      "end_line": 1247,
+      "context": {
+        "prefix": "n\",     \"plt.title(r'$N='+str(sz_main)+', p='+str(p)+'$')\\n\",     \"plt.ylabel(\\\"",
+        "suffix": "\\\")\\n\",     \"plt.xlabel(\\\"Number of samples (n)\\\")\\n\",     \"plt.legend([\\\"NonLin"
+      }
+    },
+    {
+      "@id": "metric_identifiability_gap",
+      "@type": "MLS_Eval",
+      "name": "Identifiability gap",
+      "description": "Minimum connected score minus maximum disconnected score.",
+      "wasDerivedFrom": "code",
+      "codeReference": "src/models_training.ipynb:759",
+      "path": "src/models_training.ipynb",
+      "start_char_doc": 45289,
+      "end_char_doc": 45295,
+      "start_line": 759,
+      "end_line": 759,
+      "context": {
+        "prefix": ")\\n\",     \"    cpred =model.predict(X_test[idc,:,:])\\n\",     \"    \\n\",     \"    ",
+        "suffix": " = min(cpred)-max(dpred)\\n\",     \"    \\n\",     \"    #Add to performance list\\n\","
+      }
+    },
+    {
+      "@id": "metric_clustering_variance",
+      "@type": "MLS_Eval",
+      "name": "Clustering variance",
+      "description": "Variance-based score over estimator predictions and ground-truth edge labels.",
+      "wasDerivedFrom": "code",
+      "codeReference": "src/estimators_comparison.ipynb:268",
+      "path": "src/estimators_comparison.ipynb",
+      "start_char_doc": 8718,
+      "end_char_doc": 8723,
+      "start_line": 268,
+      "end_line": 268,
+      "context": {
+        "prefix": "racy=cluster_pred(np.copy(comp[0,:]),np.copy(comp[1,:]),estimator)\\n\",     \"    ",
+        "suffix": ",idgap=get_metrics(np.copy(comp[0,:]), np.copy(comp[1,:]), alln, nc)\\n\",     \"  "
+      }
+    },
+    {
+      "@id": "metric_mse_loss",
+      "@type": "MLS_Eval",
+      "name": "Mean squared error loss",
+      "description": "Keras training loss used for CNN optimization.",
+      "wasDerivedFrom": "code",
+      "codeReference": "src/models_training.ipynb:295",
+      "path": "src/models_training.ipynb",
+      "start_char_doc": 12050,
+      "end_char_doc": 12060,
+      "start_line": 295,
+      "end_line": 295,
+      "context": {
+        "prefix": ".add(Dense(1,activation='linear'))\\n\",     \"    model.compile(optimizer='adam', ",
+        "suffix": ")\\n\",     \"    \\n\",     \"    #Save the rmsesparse_categorical_crossentropy\\n\",  "
+      }
+    },
+    {
+      "@id": "metric_validation_loss",
+      "@type": "MLS_Eval",
+      "name": "Validation loss",
+      "description": "Validation loss monitored by early stopping.",
+      "wasDerivedFrom": "code",
+      "codeReference": "src/models_training.ipynb:230",
+      "path": "src/models_training.ipynb",
+      "start_char_doc": 8264,
+      "end_char_doc": 8272,
+      "start_line": 230,
+      "end_line": 230,
+      "context": {
+        "prefix": ",       \"99/99 [==============================] - 4s 32ms/step - loss: 0.1565 - ",
+        "suffix": ": 0.0135\\n\",       \"Epoch 2/1000\\n\",       \"99/99 [============================="
+      }
+    },
+    {
+      "@id": "pred_erdos_50_04",
+      "@type": "PredictionSet",
+      "name": "erdos_50_0.4_perf.pkl",
+      "description": "Synthetic N=50 p=0.4 performance array",
+      "pathInRepository": "saved_perf/erdos_50_0.4_perf.pkl",
+      "format": "pickle",
+      "shape": [
+        13,
+        500,
+        5
+      ],
+      "minValue": 36.8421052631579,
+      "maxValue": 100.0,
+      "meanValue": 93.47540080971658,
+      "wasDerivedFrom": "code",
+      "codeReference": "src/estimators_comparison.ipynb:7",
+      "path": "src/estimators_comparison.ipynb",
+      "start_char_doc": 85,
+      "end_char_doc": 105,
+      "start_line": 7,
+      "end_line": 7,
+      "context": {
+        "prefix": "ells\": [   {    \"cell_type\": \"markdown\",    \"metadata\": {},    \"source\": [     \"",
+        "suffix": "\\n\"    ]   },   {    \"cell_type\": \"code\",    \"execution_count\": 26,    \"metadata"
+      }
+    },
+    {
+      "@id": "pred_erdos_50_06_var1",
+      "@type": "PredictionSet",
+      "name": "erdos_50_0.6_1_perf.pkl",
+      "description": "Noise variance 1 performance array",
+      "pathInRepository": "saved_perf/erdos_50_0.6_1_perf.pkl",
+      "format": "pickle",
+      "shape": [
+        20,
+        1000,
+        2
+      ],
+      "minValue": 31.578947368421055,
+      "maxValue": 100.0,
+      "meanValue": 92.87813157894738,
+      "wasDerivedFrom": "code",
+      "codeReference": "src/different_noise_variance.ipynb:46",
+      "path": "src/different_noise_variance.ipynb",
+      "start_char_doc": 41277,
+      "end_char_doc": 41300,
+      "start_line": 46,
+      "end_line": 46,
+      "context": {
+        "prefix": " variance values\\n\",     \"'''     \\n\",     \"data1 = load_pickles('../saved_perf/",
+        "suffix": "')\\n\",     \"data2 = load_pickles('../saved_perf/erdos_50_0.6_10_perf.pkl')\\n\",  "
+      }
+    },
+    {
+      "@id": "pred_erdos_50_06_var10",
+      "@type": "PredictionSet",
+      "name": "erdos_50_0.6_10_perf.pkl",
+      "description": "Noise variance 10 performance array",
+      "pathInRepository": "saved_perf/erdos_50_0.6_10_perf.pkl",
+      "format": "pickle",
+      "shape": [
+        20,
+        1000,
+        2
+      ],
+      "minValue": 30.526315789473685,
+      "maxValue": 100.0,
+      "meanValue": 92.77177631578947,
+      "wasDerivedFrom": "code",
+      "codeReference": "src/different_noise_variance.ipynb:47",
+      "path": "src/different_noise_variance.ipynb",
+      "start_char_doc": 41348,
+      "end_char_doc": 41372,
+      "start_line": 47,
+      "end_line": 47,
+      "context": {
+        "prefix": "ved_perf/erdos_50_0.6_1_perf.pkl')\\n\",     \"data2 = load_pickles('../saved_perf/",
+        "suffix": "')\\n\",     \"data3 = load_pickles('../saved_perf/erdos_50_0.6_100_perf.pkl')\\n\", "
+      }
+    },
+    {
+      "@id": "pred_erdos_50_06_var100",
+      "@type": "PredictionSet",
+      "name": "erdos_50_0.6_100_perf.pkl",
+      "description": "Noise variance 100 performance array",
+      "pathInRepository": "saved_perf/erdos_50_0.6_100_perf.pkl",
+      "format": "pickle",
+      "shape": [
+        20,
+        1000,
+        2
+      ],
+      "minValue": 32.10526315789474,
+      "maxValue": 100.0,
+      "meanValue": 92.78494736842106,
+      "wasDerivedFrom": "code",
+      "codeReference": "src/different_noise_variance.ipynb:48",
+      "path": "src/different_noise_variance.ipynb",
+      "start_char_doc": 41420,
+      "end_char_doc": 41445,
+      "start_line": 48,
+      "end_line": 48,
+      "context": {
+        "prefix": "ed_perf/erdos_50_0.6_10_perf.pkl')\\n\",     \"data3 = load_pickles('../saved_perf/",
+        "suffix": "')\\n\",     \"data4 = load_pickles('../saved_perf/erdos_50_0.6_1000_perf.pkl')\\n\","
+      }
+    },
+    {
+      "@id": "pred_erdos_50_06_var1000",
+      "@type": "PredictionSet",
+      "name": "erdos_50_0.6_1000_perf.pkl",
+      "description": "Noise variance 1000 performance array",
+      "pathInRepository": "saved_perf/erdos_50_0.6_1000_perf.pkl",
+      "format": "pickle",
+      "shape": [
+        20,
+        1000,
+        2
+      ],
+      "minValue": 32.10526315789474,
+      "maxValue": 100.0,
+      "meanValue": 92.8742894736842,
+      "wasDerivedFrom": "code",
+      "codeReference": "src/different_noise_variance.ipynb:49",
+      "path": "src/different_noise_variance.ipynb",
+      "start_char_doc": 41493,
+      "end_char_doc": 41519,
+      "start_line": 49,
+      "end_line": 49,
+      "context": {
+        "prefix": "d_perf/erdos_50_0.6_100_perf.pkl')\\n\",     \"data4 = load_pickles('../saved_perf/",
+        "suffix": "')\\n\",     \"\\n\",     \"x =np.arange(1,100,step=5)\\n\",     \"\\n\",     \"data_plot1 ="
+      }
+    },
+    {
+      "@id": "pred_real_enzyme",
+      "@type": "PredictionSet",
+      "name": "real_world_enzyme_perf.pkl",
+      "description": "ENZYMES real-world performance array",
+      "pathInRepository": "saved_perf/real_world_enzyme_perf.pkl",
+      "format": "pickle",
+      "shape": [
+        24,
+        1000,
+        18
+      ],
+      "minValue": 0.0,
+      "maxValue": 100.0,
+      "meanValue": 25.449952485380127,
+      "wasDerivedFrom": "code",
+      "codeReference": "src/estimators_comparison_real_net_enzyme.ipynb:1708",
+      "path": "src/estimators_comparison_real_net_enzyme.ipynb",
+      "start_char_doc": 98364,
+      "end_char_doc": 98390,
+      "start_line": 1708,
+      "end_line": 1708,
+      "context": {
+        "prefix": "    \"    \\n\",     \"    print(\\\"Run:\\\", i)\\n\",     \"    save_name='../saved_perf/",
+        "suffix": "'\\n\",     \"    save_pickles(save_name,comparison_data)\"    ]   },   {    \"cell_t"
+      }
+    },
+    {
+      "@id": "pred_real_macaque",
+      "@type": "PredictionSet",
+      "name": "real_world_macaque_perf.pkl",
+      "description": "Macaque real-world performance array",
+      "pathInRepository": "saved_perf/real_world_macaque_perf.pkl",
+      "format": "pickle",
+      "shape": [
+        16,
+        1000,
+        18
+      ],
+      "minValue": 0.0,
+      "maxValue": 100.0,
+      "meanValue": 19.81382492690059,
+      "wasDerivedFrom": "code",
+      "codeReference": "src/estimators_comparison_real_net_macaque.ipynb:1710",
+      "path": "src/estimators_comparison_real_net_macaque.ipynb",
+      "start_char_doc": 155310,
+      "end_char_doc": 155337,
+      "start_line": 1710,
+      "end_line": 1710,
+      "context": {
+        "prefix": "    \"    \\n\",     \"    print(\\\"Run:\\\", i)\\n\",     \"    save_name='../saved_perf/",
+        "suffix": "'\\n\",     \"    save_pickles(save_name,comparison_data)\"    ]   },   {    \"cell_t"
+      }
+    },
+    {
+      "@id": "pred_noise_variance_svg",
+      "@type": "PredictionSet",
+      "name": "cnn+svm_accuracy_comparison_erdos_n50_p06.svg",
+      "description": "Generated SVG comparison plot for SVM and CNN accuracy at N=50, p=0.6.",
+      "pathInRepository": "src/cnn+svm_accuracy_comparison_erdos_n50_p06.svg",
+      "format": "svg",
+      "wasDerivedFrom": "code",
+      "codeReference": "src/different_noise_variance.ipynb:88",
+      "path": "src/different_noise_variance.ipynb",
+      "start_char_doc": 43290,
+      "end_char_doc": 43335,
+      "start_line": 88,
+      "end_line": 88,
+      "context": {
+        "prefix": " (SVM)\\\",\\\"1000 (CNN)\\\"], title=r'$\\\\sigma$',loc='best')\\n\",     \"fig.savefig(\\\"",
+        "suffix": "\\\")\"    ]   }  ],  \"metadata\": {   \"kernelspec\": {    \"display_name\": \"Python 3 "
+      }
+    },
+    {
+      "@id": "hp_train_nodes_100",
+      "@type": "MLS_HyperParameter",
+      "name": "training node count sz",
+      "value": 100,
+      "hpCategory": "HP_Data",
+      "hpType": "DatasetSize",
+      "uncertain": false,
+      "description": "Synthetic graph node count for model training.",
+      "appliesTo": {
+        "@id": "dataset_synthetic_erdos_renyi_graphs"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "src/models_training.ipynb:185",
+      "path": "src/models_training.ipynb",
+      "start_char_doc": 7063,
+      "end_char_doc": 7071,
+      "start_line": 185,
+      "end_line": 185,
+      "context": {
+        "prefix": ",    \"metadata\": {},    \"outputs\": [],    \"source\": [     \"#Parameters\\n\",     \"",
+        "suffix": "     #Number of nodes\\n\",     \"p = 0.5      #Probability of nodes being connecte"
+      }
+    },
+    {
+      "@id": "hp_train_edge_probability_05",
+      "@type": "MLS_HyperParameter",
+      "name": "edge probability p",
+      "value": 0.5,
+      "hpCategory": "HP_Data",
+      "hpType": "SamplingProbability",
+      "uncertain": false,
+      "description": "Erdős-Rényi edge probability for model training data.",
+      "appliesTo": {
+        "@id": "dataset_synthetic_erdos_renyi_graphs"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "src/models_training.ipynb:186",
+      "path": "src/models_training.ipynb",
+      "start_char_doc": 7102,
+      "end_char_doc": 7109,
+      "start_line": 186,
+      "end_line": 186,
+      "context": {
+        "prefix": "   \"source\": [     \"#Parameters\\n\",     \"sz = 100     #Number of nodes\\n\",     \"",
+        "suffix": "      #Probability of nodes being connected (Erdős–Rényi)\\n\",     \"c = 0.9\\n\",  "
+      }
+    },
+    {
+      "@id": "hp_train_coupling_c",
+      "@type": "MLS_HyperParameter",
+      "name": "coupling c",
+      "value": 0.9,
+      "hpCategory": "HP_Data",
+      "hpType": "FeatureExtractionParameter",
+      "uncertain": true,
+      "description": "Coupling value used in Laplacian connectivity construction.",
+      "appliesTo": {
+        "@id": "algo_get_A"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "src/models_training.ipynb:187",
+      "path": "src/models_training.ipynb",
+      "start_char_doc": 7176,
+      "end_char_doc": 7183,
+      "start_line": 187,
+      "end_line": 187,
+      "context": {
+        "prefix": "     \"p = 0.5      #Probability of nodes being connected (Erdős–Rényi)\\n\",     \"",
+        "suffix": "\\n\",     \"rho = 0.75\\n\",     \"\\n\",     \"#Define the range of noise variance\\n\", "
+      }
+    },
+    {
+      "@id": "hp_train_spectral_radius_rho",
+      "@type": "MLS_HyperParameter",
+      "name": "spectral radius rho",
+      "value": 0.75,
+      "hpCategory": "HP_Data",
+      "hpType": "FeatureExtractionParameter",
+      "uncertain": true,
+      "description": "Spectral radius scaling value for generated dynamics.",
+      "appliesTo": {
+        "@id": "algo_get_A"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "src/models_training.ipynb:188",
+      "path": "src/models_training.ipynb",
+      "start_char_doc": 7193,
+      "end_char_doc": 7203,
+      "start_line": 188,
+      "end_line": 188,
+      "context": {
+        "prefix": "  #Probability of nodes being connected (Erdős–Rényi)\\n\",     \"c = 0.9\\n\",     \"",
+        "suffix": "\\n\",     \"\\n\",     \"#Define the range of noise variance\\n\",     \"qsi = 0.1\\n\",  "
+      }
+    },
+    {
+      "@id": "hp_train_noise_qsi",
+      "@type": "MLS_HyperParameter",
+      "name": "noise scale qsi",
+      "value": 0.1,
+      "hpCategory": "HP_Data",
+      "hpType": "NoiseParameter",
+      "uncertain": false,
+      "description": "Gaussian innovation scale for training time-series simulation.",
+      "appliesTo": {
+        "@id": "algo_tsg"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "src/models_training.ipynb:191",
+      "path": "src/models_training.ipynb",
+      "start_char_doc": 7268,
+      "end_char_doc": 7277,
+      "start_line": 191,
+      "end_line": 191,
+      "context": {
+        "prefix": "    \"rho = 0.75\\n\",     \"\\n\",     \"#Define the range of noise variance\\n\",     \"",
+        "suffix": "\\n\",     \"tsize = 300000    #Number of samples (time series size)\\n\",     \"x0 = "
+      }
+    },
+    {
+      "@id": "hp_train_timeseries_length",
+      "@type": "MLS_HyperParameter",
+      "name": "training time-series length",
+      "value": 300000,
+      "hpCategory": "HP_Data",
+      "hpType": "MaxSequenceLength",
+      "uncertain": false,
+      "description": "Number of simulated time steps for training dataset generation.",
+      "appliesTo": {
+        "@id": "dataset_synthetic_timeseries"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "src/models_training.ipynb:192",
+      "path": "src/models_training.ipynb",
+      "start_char_doc": 7287,
+      "end_char_doc": 7301,
+      "start_line": 192,
+      "end_line": 192,
+      "context": {
+        "prefix": "     \"\\n\",     \"#Define the range of noise variance\\n\",     \"qsi = 0.1\\n\",     \"",
+        "suffix": "    #Number of samples (time series size)\\n\",     \"x0 = 0            #Initial co"
+      }
+    },
+    {
+      "@id": "hp_train_initial_value",
+      "@type": "MLS_HyperParameter",
+      "name": "initial value x0",
+      "value": 0,
+      "hpCategory": "HP_Data",
+      "hpType": "InitializationParameter",
+      "uncertain": true,
+      "description": "Initial state value used in time-series generation.",
+      "appliesTo": {
+        "@id": "algo_tsg"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "src/models_training.ipynb:193",
+      "path": "src/models_training.ipynb",
+      "start_char_doc": 7352,
+      "end_char_doc": 7358,
+      "start_line": 193,
+      "end_line": 193,
+      "context": {
+        "prefix": "= 0.1\\n\",     \"tsize = 300000    #Number of samples (time series size)\\n\",     \"",
+        "suffix": "            #Initial condition\\n\",     \"   \\n\",     \"#True if the graph is undir"
+      }
+    },
+    {
+      "@id": "hp_train_undirected",
+      "@type": "MLS_HyperParameter",
+      "name": "undirected graph flag",
+      "value": true,
+      "hpCategory": "HP_Data",
+      "hpType": "DataSamplingStrategy",
+      "uncertain": false,
+      "description": "Flag that symmetrizes generated graph adjacency matrices.",
+      "appliesTo": {
+        "@id": "algo_get_adjacency"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "src/models_training.ipynb:196",
+      "path": "src/models_training.ipynb",
+      "start_char_doc": 7467,
+      "end_char_doc": 7484,
+      "start_line": 196,
+      "end_line": 196,
+      "context": {
+        "prefix": "n\\n\",     \"   \\n\",     \"#True if the graph is undirected, False if not\\n\",     \"",
+        "suffix": "\\n\",     \"    \\n\",     \"#Generate a dataset\\n\",     \"#Data has a n x m shape, wh"
+      }
+    },
+    {
+      "@id": "hp_feature_window_200",
+      "@type": "MLS_HyperParameter",
+      "name": "cross-correlation feature window",
+      "value": 200,
+      "hpCategory": "HP_Data",
+      "hpType": "MaxSequenceLength",
+      "uncertain": false,
+      "description": "Feature length formed by taking 100 lags on either side of the center.",
+      "appliesTo": {
+        "@id": "process_extract_correlations"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "src/models_training.ipynb:150",
+      "path": "src/models_training.ipynb",
+      "start_char_doc": 5672,
+      "end_char_doc": 5696,
+      "start_line": 150,
+      "end_line": 150,
+      "context": {
+        "prefix": "the first negative and positive lags\\n\",     \"                data[:,counter] = ",
+        "suffix": "\\n\",     \"                #Saves the data\\n\",     \"                target[0,coun"
+      }
+    },
+    {
+      "@id": "hp_train_test_split_02",
+      "@type": "MLS_HyperParameter",
+      "name": "test split fraction",
+      "value": 0.2,
+      "hpCategory": "HP_Data",
+      "hpType": "TrainValTestSplit",
+      "uncertain": false,
+      "description": "Held-out test split fraction for train/test split.",
+      "appliesTo": {
+        "@id": "algo_train_test_split"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "src/models_training.ipynb:307",
+      "path": "src/models_training.ipynb",
+      "start_char_doc": 12540,
+      "end_char_doc": 12553,
+      "start_line": 307,
+      "end_line": 307,
+      "context": {
+        "prefix": "n\",     \"X_train, X_test, y_train, y_test = train_test_split(data_scaled.T,y.T, ",
+        "suffix": ", random_state=42)\\n\",     \"\\n\",     \"#Reshapes the data into three dimensions\\n"
+      }
+    },
+    {
+      "@id": "hp_random_state_42",
+      "@type": "MLS_HyperParameter",
+      "name": "random state",
+      "value": 42,
+      "hpCategory": "HP_Training",
+      "hpType": "RandomSeed",
+      "uncertain": false,
+      "description": "Seed passed to train_test_split.",
+      "appliesTo": {
+        "@id": "algo_train_test_split"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "src/models_training.ipynb:307",
+      "path": "src/models_training.ipynb",
+      "start_char_doc": 12555,
+      "end_char_doc": 12570,
+      "start_line": 307,
+      "end_line": 307,
+      "context": {
+        "prefix": "n, X_test, y_train, y_test = train_test_split(data_scaled.T,y.T, test_size=0.2, ",
+        "suffix": ")\\n\",     \"\\n\",     \"#Reshapes the data into three dimensions\\n\",     \"X_train ="
+      }
+    },
+    {
+      "@id": "hp_cnn_epochs_1000",
+      "@type": "MLS_HyperParameter",
+      "name": "CNN epochs",
+      "value": 1000,
+      "hpCategory": "HP_Training",
+      "hpType": "NumEpochs",
+      "uncertain": false,
+      "description": "Maximum number of Keras training epochs.",
+      "appliesTo": {
+        "@id": "training_cnn_synthetic"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "src/models_training.ipynb:298",
+      "path": "src/models_training.ipynb",
+      "start_char_doc": 12186,
+      "end_char_doc": 12197,
+      "start_line": 298,
+      "end_line": 298,
+      "context": {
+        "prefix": "rse_categorical_crossentropy\\n\",     \"    history = model.fit(X_train, y_train, ",
+        "suffix": ", validation_split=0.2, verbose=1,callbacks=[cb])\\n\",     \"    return model\\n\", "
+      }
+    },
+    {
+      "@id": "hp_cnn_validation_split_02",
+      "@type": "MLS_HyperParameter",
+      "name": "CNN validation split",
+      "value": 0.2,
+      "hpCategory": "HP_Training",
+      "hpType": "TrainValTestSplit",
+      "uncertain": false,
+      "description": "Validation split for CNN training.",
+      "appliesTo": {
+        "@id": "training_cnn_synthetic"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "src/models_training.ipynb:298",
+      "path": "src/models_training.ipynb",
+      "start_char_doc": 12199,
+      "end_char_doc": 12219,
+      "start_line": 298,
+      "end_line": 298,
+      "context": {
+        "prefix": "al_crossentropy\\n\",     \"    history = model.fit(X_train, y_train, epochs=1000, ",
+        "suffix": ", verbose=1,callbacks=[cb])\\n\",     \"    return model\\n\",     \" \\n\",     \"\\n\",  "
+      }
+    },
+    {
+      "@id": "hp_early_stopping_patience_7",
+      "@type": "MLS_HyperParameter",
+      "name": "early stopping patience",
+      "value": 7,
+      "hpCategory": "HP_Training",
+      "hpType": "EarlyStoppingPatience",
+      "uncertain": false,
+      "description": "Patience for validation-loss early stopping.",
+      "appliesTo": {
+        "@id": "algo_early_stopping"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "src/models_training.ipynb:278",
+      "path": "src/models_training.ipynb",
+      "start_char_doc": 11078,
+      "end_char_doc": 11088,
+      "start_line": 278,
+      "end_line": 278,
+      "context": {
+        "prefix": "y_train,y_test):\\n\",     \"    cb = EarlyStopping(monitor='val_loss', mode='min',",
+        "suffix": ")\\n\",     \"\\n\",     \"    #CNN architecture\\n\",     \"    model = Sequential()\\n\","
+      }
+    },
+    {
+      "@id": "hp_cnn_optimizer_adam",
+      "@type": "MLS_HyperParameter",
+      "name": "CNN optimizer",
+      "value": "adam",
+      "hpCategory": "HP_Optimization",
+      "hpType": "OptimizerName",
+      "uncertain": false,
+      "description": "Keras optimizer used for CNN training.",
+      "appliesTo": {
+        "@id": "training_cnn_synthetic"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "src/models_training.ipynb:295",
+      "path": "src/models_training.ipynb",
+      "start_char_doc": 12032,
+      "end_char_doc": 12048,
+      "start_line": 295,
+      "end_line": 295,
+      "context": {
+        "prefix": "n\",     \"    model.add(Dense(1,activation='linear'))\\n\",     \"    model.compile(",
+        "suffix": ", loss='mse')\\n\",     \"    \\n\",     \"    #Save the rmsesparse_categorical_crosse"
+      }
+    },
+    {
+      "@id": "hp_cnn_loss_mse",
+      "@type": "MLS_HyperParameter",
+      "name": "CNN loss",
+      "value": "mse",
+      "hpCategory": "HP_Optimization",
+      "hpType": "LossFunction",
+      "uncertain": false,
+      "description": "Mean squared error training loss.",
+      "appliesTo": {
+        "@id": "training_cnn_synthetic"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "src/models_training.ipynb:295",
+      "path": "src/models_training.ipynb",
+      "start_char_doc": 12050,
+      "end_char_doc": 12060,
+      "start_line": 295,
+      "end_line": 295,
+      "context": {
+        "prefix": ".add(Dense(1,activation='linear'))\\n\",     \"    model.compile(optimizer='adam', ",
+        "suffix": ")\\n\",     \"    \\n\",     \"    #Save the rmsesparse_categorical_crossentropy\\n\",  "
+      }
+    },
+    {
+      "@id": "hp_cnn_dropout_01",
+      "@type": "MLS_HyperParameter",
+      "name": "CNN dropout rate",
+      "value": 0.1,
+      "hpCategory": "HP_Architecture",
+      "hpType": "DropoutRate",
+      "uncertain": false,
+      "description": "Dropout rate before dense layers.",
+      "appliesTo": {
+        "@id": "model_cnn_architecture"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "src/models_training.ipynb:291",
+      "path": "src/models_training.ipynb",
+      "start_char_doc": 11830,
+      "end_char_doc": 11842,
+      "start_line": 291,
+      "end_line": 291,
+      "context": {
+        "prefix": "on='relu'))\\n\",     \"    model.add(GlobalMaxPooling1D())\\n\",     \"    model.add(",
+        "suffix": ")\\n\",     \"    model.add(Dense(200, activation='tanh'))\\n\",     \"    model.add(D"
+      }
+    },
+    {
+      "@id": "hp_svm_kernel_linear",
+      "@type": "MLS_HyperParameter",
+      "name": "SVM kernel",
+      "value": "linear",
+      "hpCategory": "HP_Architecture",
+      "hpType": "KernelType",
+      "uncertain": false,
+      "description": "Linear kernel for the support vector classifier.",
+      "appliesTo": {
+        "@id": "model_linear_svm"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "src/models_training.ipynb:412",
+      "path": "src/models_training.ipynb",
+      "start_char_doc": 26405,
+      "end_char_doc": 26422,
+      "start_line": 412,
+      "end_line": 412,
+      "context": {
+        "prefix": "\\n\",     \"from sklearn import svm\\n\",     \"import pickle\\n\",     \"clf = svm.SVC(",
+        "suffix": ")\\n\",     \"clf.fit(data_scaled[:,:].T, y.flatten())\\n\",     \"pred = clf.predict("
+      }
+    },
+    {
+      "@id": "hp_cnn_selection_runs_5",
+      "@type": "MLS_HyperParameter",
+      "name": "CNN model-selection runs",
+      "value": 5,
+      "hpCategory": "HP_Training",
+      "hpType": "NumRuns",
+      "uncertain": false,
+      "description": "Number of repeated CNN training runs used for model selection.",
+      "appliesTo": {
+        "@id": "training_cnn_model_selection"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "src/models_training.ipynb:722",
+      "path": "src/models_training.ipynb",
+      "start_char_doc": 43936,
+      "end_char_doc": 43943,
+      "start_line": 722,
+      "end_line": 722,
+      "context": {
+        "prefix": "=====================] - 0s 10ms/step\\n\"      ]     }    ],    \"source\": [     \"",
+        "suffix": "\\n\",     \"models_list = []\\n\",     \"performance_list = []\\n\",     \"\\n\",     \"#Tr"
+      }
+    },
+    {
+      "@id": "hp_cnn_conv1_filters",
+      "@type": "MLS_HyperParameter",
+      "name": "CNN conv1 filters",
+      "value": 64,
+      "hpCategory": "HP_Architecture",
+      "hpType": "NumFilters",
+      "uncertain": false,
+      "description": "Number of filters in Conv1D layer 1.",
+      "appliesTo": {
+        "@id": "model_cnn_architecture"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "src/models_training.ipynb:282",
+      "path": "src/models_training.ipynb",
+      "start_char_doc": 11195,
+      "end_char_doc": 11220,
+      "start_line": 282,
+      "end_line": 282,
+      "context": {
+        "prefix": "NN architecture\\n\",     \"    model = Sequential()\\n\",     \"    model.add(Conv1D(",
+        "suffix": ", strides=2,activation='relu', input_shape=(200,1)))\\n\",     \"    model.add(Conv"
+      }
+    },
+    {
+      "@id": "hp_cnn_conv1_kernel",
+      "@type": "MLS_HyperParameter",
+      "name": "CNN conv1 kernel size",
+      "value": 2,
+      "hpCategory": "HP_Architecture",
+      "hpType": "KernelSize",
+      "uncertain": false,
+      "description": "Kernel size in Conv1D layer 1.",
+      "appliesTo": {
+        "@id": "model_cnn_architecture"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "src/models_training.ipynb:282",
+      "path": "src/models_training.ipynb",
+      "start_char_doc": 11195,
+      "end_char_doc": 11220,
+      "start_line": 282,
+      "end_line": 282,
+      "context": {
+        "prefix": "NN architecture\\n\",     \"    model = Sequential()\\n\",     \"    model.add(Conv1D(",
+        "suffix": ", strides=2,activation='relu', input_shape=(200,1)))\\n\",     \"    model.add(Conv"
+      }
+    },
+    {
+      "@id": "hp_cnn_conv2_filters",
+      "@type": "MLS_HyperParameter",
+      "name": "CNN conv2 filters",
+      "value": 128,
+      "hpCategory": "HP_Architecture",
+      "hpType": "NumFilters",
+      "uncertain": false,
+      "description": "Number of filters in Conv1D layer 2.",
+      "appliesTo": {
+        "@id": "model_cnn_architecture"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "src/models_training.ipynb:283",
+      "path": "src/models_training.ipynb",
+      "start_char_doc": 11303,
+      "end_char_doc": 11329,
+      "start_line": 283,
+      "end_line": 283,
+      "context": {
+        "prefix": "trides=2,activation='relu', input_shape=(200,1)))\\n\",     \"    model.add(Conv1D(",
+        "suffix": ", activation='relu'))\\n\",     \"    model.add(Conv1D(filters=256, kernel_size=3, "
+      }
+    },
+    {
+      "@id": "hp_cnn_conv2_kernel",
+      "@type": "MLS_HyperParameter",
+      "name": "CNN conv2 kernel size",
+      "value": 3,
+      "hpCategory": "HP_Architecture",
+      "hpType": "KernelSize",
+      "uncertain": false,
+      "description": "Kernel size in Conv1D layer 2.",
+      "appliesTo": {
+        "@id": "model_cnn_architecture"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "src/models_training.ipynb:283",
+      "path": "src/models_training.ipynb",
+      "start_char_doc": 11303,
+      "end_char_doc": 11329,
+      "start_line": 283,
+      "end_line": 283,
+      "context": {
+        "prefix": "trides=2,activation='relu', input_shape=(200,1)))\\n\",     \"    model.add(Conv1D(",
+        "suffix": ", activation='relu'))\\n\",     \"    model.add(Conv1D(filters=256, kernel_size=3, "
+      }
+    },
+    {
+      "@id": "hp_cnn_conv3_filters",
+      "@type": "MLS_HyperParameter",
+      "name": "CNN conv3 filters",
+      "value": 256,
+      "hpCategory": "HP_Architecture",
+      "hpType": "NumFilters",
+      "uncertain": false,
+      "description": "Number of filters in Conv1D layer 3.",
+      "appliesTo": {
+        "@id": "model_cnn_architecture"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "src/models_training.ipynb:284",
+      "path": "src/models_training.ipynb",
+      "start_char_doc": 11381,
+      "end_char_doc": 11407,
+      "start_line": 284,
+      "end_line": 284,
+      "context": {
+        "prefix": "D(filters=128, kernel_size=3, activation='relu'))\\n\",     \"    model.add(Conv1D(",
+        "suffix": ", activation='relu'))\\n\",     \"    model.add(MaxPooling1D(pool_size=2))\\n\",     "
+      }
+    },
+    {
+      "@id": "hp_cnn_conv3_kernel",
+      "@type": "MLS_HyperParameter",
+      "name": "CNN conv3 kernel size",
+      "value": 3,
+      "hpCategory": "HP_Architecture",
+      "hpType": "KernelSize",
+      "uncertain": false,
+      "description": "Kernel size in Conv1D layer 3.",
+      "appliesTo": {
+        "@id": "model_cnn_architecture"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "src/models_training.ipynb:284",
+      "path": "src/models_training.ipynb",
+      "start_char_doc": 11381,
+      "end_char_doc": 11407,
+      "start_line": 284,
+      "end_line": 284,
+      "context": {
+        "prefix": "D(filters=128, kernel_size=3, activation='relu'))\\n\",     \"    model.add(Conv1D(",
+        "suffix": ", activation='relu'))\\n\",     \"    model.add(MaxPooling1D(pool_size=2))\\n\",     "
+      }
+    },
+    {
+      "@id": "hp_cnn_conv4_filters",
+      "@type": "MLS_HyperParameter",
+      "name": "CNN conv4 filters",
+      "value": 128,
+      "hpCategory": "HP_Architecture",
+      "hpType": "NumFilters",
+      "uncertain": false,
+      "description": "Number of filters in Conv1D layer 4.",
+      "appliesTo": {
+        "@id": "model_cnn_architecture"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "src/models_training.ipynb:283",
+      "path": "src/models_training.ipynb",
+      "start_char_doc": 11303,
+      "end_char_doc": 11329,
+      "start_line": 283,
+      "end_line": 283,
+      "context": {
+        "prefix": "trides=2,activation='relu', input_shape=(200,1)))\\n\",     \"    model.add(Conv1D(",
+        "suffix": ", activation='relu'))\\n\",     \"    model.add(Conv1D(filters=256, kernel_size=3, "
+      }
+    },
+    {
+      "@id": "hp_cnn_conv4_kernel",
+      "@type": "MLS_HyperParameter",
+      "name": "CNN conv4 kernel size",
+      "value": 3,
+      "hpCategory": "HP_Architecture",
+      "hpType": "KernelSize",
+      "uncertain": false,
+      "description": "Kernel size in Conv1D layer 4.",
+      "appliesTo": {
+        "@id": "model_cnn_architecture"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "src/models_training.ipynb:283",
+      "path": "src/models_training.ipynb",
+      "start_char_doc": 11303,
+      "end_char_doc": 11329,
+      "start_line": 283,
+      "end_line": 283,
+      "context": {
+        "prefix": "trides=2,activation='relu', input_shape=(200,1)))\\n\",     \"    model.add(Conv1D(",
+        "suffix": ", activation='relu'))\\n\",     \"    model.add(Conv1D(filters=256, kernel_size=3, "
+      }
+    },
+    {
+      "@id": "hp_cnn_conv5_filters",
+      "@type": "MLS_HyperParameter",
+      "name": "CNN conv5 filters",
+      "value": 128,
+      "hpCategory": "HP_Architecture",
+      "hpType": "NumFilters",
+      "uncertain": false,
+      "description": "Number of filters in Conv1D layer 5.",
+      "appliesTo": {
+        "@id": "model_cnn_architecture"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "src/models_training.ipynb:287",
+      "path": "src/models_training.ipynb",
+      "start_char_doc": 11587,
+      "end_char_doc": 11613,
+      "start_line": 287,
+      "end_line": 287,
+      "context": {
+        "prefix": "D(filters=128, kernel_size=3, activation='relu'))\\n\",     \"    model.add(Conv1D(",
+        "suffix": ", activation='relu'))\\n\",     \"    model.add(MaxPooling1D(pool_size=2))\\n\",     "
+      }
+    },
+    {
+      "@id": "hp_cnn_conv5_kernel",
+      "@type": "MLS_HyperParameter",
+      "name": "CNN conv5 kernel size",
+      "value": 2,
+      "hpCategory": "HP_Architecture",
+      "hpType": "KernelSize",
+      "uncertain": false,
+      "description": "Kernel size in Conv1D layer 5.",
+      "appliesTo": {
+        "@id": "model_cnn_architecture"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "src/models_training.ipynb:287",
+      "path": "src/models_training.ipynb",
+      "start_char_doc": 11587,
+      "end_char_doc": 11613,
+      "start_line": 287,
+      "end_line": 287,
+      "context": {
+        "prefix": "D(filters=128, kernel_size=3, activation='relu'))\\n\",     \"    model.add(Conv1D(",
+        "suffix": ", activation='relu'))\\n\",     \"    model.add(MaxPooling1D(pool_size=2))\\n\",     "
+      }
+    },
+    {
+      "@id": "hp_cnn_conv6_filters",
+      "@type": "MLS_HyperParameter",
+      "name": "CNN conv6 filters",
+      "value": 64,
+      "hpCategory": "HP_Architecture",
+      "hpType": "NumFilters",
+      "uncertain": false,
+      "description": "Number of filters in Conv1D layer 6.",
+      "appliesTo": {
+        "@id": "model_cnn_architecture"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "src/models_training.ipynb:289",
+      "path": "src/models_training.ipynb",
+      "start_char_doc": 11715,
+      "end_char_doc": 11740,
+      "start_line": 289,
+      "end_line": 289,
+      "context": {
+        "prefix": "n\",     \"    model.add(MaxPooling1D(pool_size=2))\\n\",     \"    model.add(Conv1D(",
+        "suffix": ", activation='relu'))\\n\",     \"    model.add(GlobalMaxPooling1D())\\n\",     \"    "
+      }
+    },
+    {
+      "@id": "hp_cnn_conv6_kernel",
+      "@type": "MLS_HyperParameter",
+      "name": "CNN conv6 kernel size",
+      "value": 1,
+      "hpCategory": "HP_Architecture",
+      "hpType": "KernelSize",
+      "uncertain": false,
+      "description": "Kernel size in Conv1D layer 6.",
+      "appliesTo": {
+        "@id": "model_cnn_architecture"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "src/models_training.ipynb:289",
+      "path": "src/models_training.ipynb",
+      "start_char_doc": 11715,
+      "end_char_doc": 11740,
+      "start_line": 289,
+      "end_line": 289,
+      "context": {
+        "prefix": "n\",     \"    model.add(MaxPooling1D(pool_size=2))\\n\",     \"    model.add(Conv1D(",
+        "suffix": ", activation='relu'))\\n\",     \"    model.add(GlobalMaxPooling1D())\\n\",     \"    "
+      }
+    },
+    {
+      "@id": "hp_cnn_conv1_stride",
+      "@type": "MLS_HyperParameter",
+      "name": "CNN first convolution stride",
+      "value": 2,
+      "hpCategory": "HP_Architecture",
+      "hpType": "Stride",
+      "uncertain": false,
+      "description": "Stride used by the first Conv1D layer.",
+      "appliesTo": {
+        "@id": "model_cnn_architecture"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "src/models_training.ipynb:282",
+      "path": "src/models_training.ipynb",
+      "start_char_doc": 11222,
+      "end_char_doc": 11231,
+      "start_line": 282,
+      "end_line": 282,
+      "context": {
+        "prefix": "  model = Sequential()\\n\",     \"    model.add(Conv1D(filters=64, kernel_size=2, ",
+        "suffix": ",activation='relu', input_shape=(200,1)))\\n\",     \"    model.add(Conv1D(filters="
+      }
+    },
+    {
+      "@id": "hp_cnn_pool1_size",
+      "@type": "MLS_HyperParameter",
+      "name": "CNN max-pool1 size",
+      "value": 2,
+      "hpCategory": "HP_Architecture",
+      "hpType": "PoolingSize",
+      "uncertain": false,
+      "description": "Max pooling window size.",
+      "appliesTo": {
+        "@id": "model_cnn_architecture"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "src/models_training.ipynb:285",
+      "path": "src/models_training.ipynb",
+      "start_char_doc": 11452,
+      "end_char_doc": 11477,
+      "start_line": 285,
+      "end_line": 285,
+      "context": {
+        "prefix": "d(Conv1D(filters=256, kernel_size=3, activation='relu'))\\n\",     \"    model.add(",
+        "suffix": ")\\n\",     \"    model.add(Conv1D(filters=128, kernel_size=3, activation='relu'))\\"
+      }
+    },
+    {
+      "@id": "hp_cnn_pool2_size",
+      "@type": "MLS_HyperParameter",
+      "name": "CNN max-pool2 size",
+      "value": 2,
+      "hpCategory": "HP_Architecture",
+      "hpType": "PoolingSize",
+      "uncertain": false,
+      "description": "Max pooling window size.",
+      "appliesTo": {
+        "@id": "model_cnn_architecture"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "src/models_training.ipynb:285",
+      "path": "src/models_training.ipynb",
+      "start_char_doc": 11452,
+      "end_char_doc": 11477,
+      "start_line": 285,
+      "end_line": 285,
+      "context": {
+        "prefix": "d(Conv1D(filters=256, kernel_size=3, activation='relu'))\\n\",     \"    model.add(",
+        "suffix": ")\\n\",     \"    model.add(Conv1D(filters=128, kernel_size=3, activation='relu'))\\"
+      }
+    },
+    {
+      "@id": "hp_cnn_dense1_units",
+      "@type": "MLS_HyperParameter",
+      "name": "CNN dense1 units",
+      "value": 200,
+      "hpCategory": "HP_Architecture",
+      "hpType": "HiddenSize",
+      "uncertain": false,
+      "description": "Number of units in dense layer 1.",
+      "appliesTo": {
+        "@id": "model_cnn_architecture"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "src/models_training.ipynb:292",
+      "path": "src/models_training.ipynb",
+      "start_char_doc": 11867,
+      "end_char_doc": 11896,
+      "start_line": 292,
+      "end_line": 292,
+      "context": {
+        "prefix": "obalMaxPooling1D())\\n\",     \"    model.add(Dropout(0.1))\\n\",     \"    model.add(",
+        "suffix": ")\\n\",     \"    model.add(Dense(100, activation='tanh'))\\n\",     \"    model.add(D"
+      }
+    },
+    {
+      "@id": "hp_cnn_dense2_units",
+      "@type": "MLS_HyperParameter",
+      "name": "CNN dense2 units",
+      "value": 100,
+      "hpCategory": "HP_Architecture",
+      "hpType": "HiddenSize",
+      "uncertain": false,
+      "description": "Number of units in dense layer 2.",
+      "appliesTo": {
+        "@id": "model_cnn_architecture"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "src/models_training.ipynb:293",
+      "path": "src/models_training.ipynb",
+      "start_char_doc": 11921,
+      "end_char_doc": 11950,
+      "start_line": 293,
+      "end_line": 293,
+      "context": {
+        "prefix": "))\\n\",     \"    model.add(Dense(200, activation='tanh'))\\n\",     \"    model.add(",
+        "suffix": ")\\n\",     \"    model.add(Dense(1,activation='linear'))\\n\",     \"    model.compil"
+      }
+    },
+    {
+      "@id": "hp_cnn_dense3_units",
+      "@type": "MLS_HyperParameter",
+      "name": "CNN dense3 units",
+      "value": 1,
+      "hpCategory": "HP_Architecture",
+      "hpType": "HiddenSize",
+      "uncertain": false,
+      "description": "Number of units in dense layer 3.",
+      "appliesTo": {
+        "@id": "model_cnn_architecture"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "src/models_training.ipynb:7",
+      "path": "src/models_training.ipynb",
+      "start_char_doc": 85,
+      "end_char_doc": 105,
+      "start_line": 7,
+      "end_line": 7,
+      "context": {
+        "prefix": "ells\": [   {    \"cell_type\": \"markdown\",    \"metadata\": {},    \"source\": [     \"",
+        "suffix": "\\n\"    ]   },   {    \"cell_type\": \"code\",    \"execution_count\": 2,    \"metadata\""
+      }
+    },
+    {
+      "@id": "hp_synth_nodes_50",
+      "@type": "MLS_HyperParameter",
+      "name": "synthetic evaluation node count",
+      "value": 50,
+      "hpCategory": "HP_Data",
+      "hpType": "DatasetSize",
+      "uncertain": false,
+      "description": "Node count for synthetic evaluation graphs.",
+      "appliesTo": {
+        "@id": "eval_synthetic_erdos_renyi"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "src/estimators_comparison.ipynb:559",
+      "path": "src/estimators_comparison.ipynb",
+      "start_char_doc": 19504,
+      "end_char_doc": 19516,
+      "start_line": 559,
+      "end_line": 559,
+      "context": {
+        "prefix": ",    \"metadata\": {},    \"outputs\": [],    \"source\": [     \"#Parameters\\n\",     \"",
+        "suffix": "\\n\",     \"p = 0.4\\n\",     \"c = 0.9\\n\",     \"rho = 0.75\\n\",     \"undirected = Tru"
+      }
+    },
+    {
+      "@id": "hp_synth_edge_probability_04",
+      "@type": "MLS_HyperParameter",
+      "name": "synthetic evaluation p",
+      "value": 0.4,
+      "hpCategory": "HP_Data",
+      "hpType": "SamplingProbability",
+      "uncertain": false,
+      "description": "Edge probability for synthetic evaluation graphs.",
+      "appliesTo": {
+        "@id": "eval_synthetic_erdos_renyi"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "src/estimators_comparison.ipynb:560",
+      "path": "src/estimators_comparison.ipynb",
+      "start_char_doc": 19526,
+      "end_char_doc": 19533,
+      "start_line": 560,
+      "end_line": 560,
+      "context": {
+        "prefix": "  \"outputs\": [],    \"source\": [     \"#Parameters\\n\",     \"sz_main = 50\\n\",     \"",
+        "suffix": "\\n\",     \"c = 0.9\\n\",     \"rho = 0.75\\n\",     \"undirected = True\\n\",     \"    \\n"
+      }
+    },
+    {
+      "@id": "hp_synth_noise_qsi_05",
+      "@type": "MLS_HyperParameter",
+      "name": "synthetic evaluation noise qsi",
+      "value": 0.5,
+      "hpCategory": "HP_Data",
+      "hpType": "NoiseParameter",
+      "uncertain": false,
+      "description": "Noise scale used in synthetic comparison notebook.",
+      "appliesTo": {
+        "@id": "eval_synthetic_erdos_renyi"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "src/estimators_comparison.ipynb:566",
+      "path": "src/estimators_comparison.ipynb",
+      "start_char_doc": 19666,
+      "end_char_doc": 19675,
+      "start_line": 566,
+      "end_line": 566,
+      "context": {
+        "prefix": "cted = True\\n\",     \"    \\n\",     \"#Define the range of noise variance\\n\",     \"",
+        "suffix": "\\n\",     \"x0 = 0\"    ]   },   {    \"cell_type\": \"markdown\",    \"metadata\": {},  "
+      }
+    },
+    {
+      "@id": "hp_synth_runs_500",
+      "@type": "MLS_HyperParameter",
+      "name": "synthetic Monte Carlo runs",
+      "value": 500,
+      "hpCategory": "HP_Training",
+      "hpType": "NumRuns",
+      "uncertain": false,
+      "description": "Number of Monte Carlo runs for synthetic comparison.",
+      "appliesTo": {
+        "@id": "eval_synthetic_erdos_renyi"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "src/estimators_comparison.ipynb:584",
+      "path": "src/estimators_comparison.ipynb",
+      "start_char_doc": 19957,
+      "end_char_doc": 19966,
+      "start_line": 584,
+      "end_line": 584,
+      "context": {
+        "prefix": "ata\": {},    \"outputs\": [],    \"source\": [     \"#Simulation parameters\\n\",     \"",
+        "suffix": " #Number of runs\\n\",     \"min_samples = 5000\\n\",     \"tsize = 70000\\n\",     \"max"
+      }
+    },
+    {
+      "@id": "hp_synth_min_samples_5000",
+      "@type": "MLS_HyperParameter",
+      "name": "synthetic min samples",
+      "value": 5000,
+      "hpCategory": "HP_Data",
+      "hpType": "DatasetSize",
+      "uncertain": false,
+      "description": "Minimum sample count evaluated in synthetic comparison.",
+      "appliesTo": {
+        "@id": "eval_synthetic_erdos_renyi"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "src/estimators_comparison.ipynb:585",
+      "path": "src/estimators_comparison.ipynb",
+      "start_char_doc": 19992,
+      "end_char_doc": 20010,
+      "start_line": 585,
+      "end_line": 585,
+      "context": {
+        "prefix": "rce\": [     \"#Simulation parameters\\n\",     \"nruns=500 #Number of runs\\n\",     \"",
+        "suffix": "\\n\",     \"tsize = 70000\\n\",     \"max_samples=tsize\\n\",     \"step = 5\\n\",     \"ts"
+      }
+    },
+    {
+      "@id": "hp_synth_tsize_70000",
+      "@type": "MLS_HyperParameter",
+      "name": "synthetic max time steps",
+      "value": 70000,
+      "hpCategory": "HP_Data",
+      "hpType": "MaxSequenceLength",
+      "uncertain": false,
+      "description": "Maximum time-series length for synthetic comparison.",
+      "appliesTo": {
+        "@id": "eval_synthetic_erdos_renyi"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "src/estimators_comparison.ipynb:586",
+      "path": "src/estimators_comparison.ipynb",
+      "start_char_doc": 20020,
+      "end_char_doc": 20033,
+      "start_line": 586,
+      "end_line": 586,
+      "context": {
+        "prefix": "ameters\\n\",     \"nruns=500 #Number of runs\\n\",     \"min_samples = 5000\\n\",     \"",
+        "suffix": "\\n\",     \"max_samples=tsize\\n\",     \"step = 5\\n\",     \"tssize = np.arange(round("
+      }
+    },
+    {
+      "@id": "hp_synth_step_5",
+      "@type": "MLS_HyperParameter",
+      "name": "synthetic sample step",
+      "value": 5,
+      "hpCategory": "HP_Data",
+      "hpType": "EvaluationInterval",
+      "uncertain": true,
+      "description": "Step in thousands of samples for evaluation grid.",
+      "appliesTo": {
+        "@id": "eval_synthetic_erdos_renyi"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "src/estimators_comparison.ipynb:7",
+      "path": "src/estimators_comparison.ipynb",
+      "start_char_doc": 85,
+      "end_char_doc": 105,
+      "start_line": 7,
+      "end_line": 7,
+      "context": {
+        "prefix": "ells\": [   {    \"cell_type\": \"markdown\",    \"metadata\": {},    \"source\": [     \"",
+        "suffix": "\\n\"    ]   },   {    \"cell_type\": \"code\",    \"execution_count\": 26,    \"metadata"
+      }
+    },
+    {
+      "@id": "hp_synth_nestimators_5",
+      "@type": "MLS_HyperParameter",
+      "name": "synthetic estimator count",
+      "value": 5,
+      "hpCategory": "HP_Training",
+      "hpType": "NumEvaluatedModels",
+      "uncertain": false,
+      "description": "Number of estimator columns in synthetic comparison.",
+      "appliesTo": {
+        "@id": "eval_synthetic_erdos_renyi"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "src/estimators_comparison.ipynb:590",
+      "path": "src/estimators_comparison.ipynb",
+      "start_char_doc": 20228,
+      "end_char_doc": 20243,
+      "start_line": 590,
+      "end_line": 590,
+      "context": {
+        "prefix": "/1000),step=step)  #Number of samples (time series size) for each test\\n\",     \"",
+        "suffix": " #Number of estimators\"    ]   },   {    \"cell_type\": \"code\",    \"execution_coun"
+      }
+    },
+    {
+      "@id": "hp_observed_start_0",
+      "@type": "MLS_HyperParameter",
+      "name": "observed node start",
+      "value": 0,
+      "hpCategory": "HP_Data",
+      "hpType": "SliceStart",
+      "uncertain": false,
+      "description": "Start index of observed node subset.",
+      "appliesTo": {
+        "@id": "task_partial_observability"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "src/estimators_comparison.ipynb:7",
+      "path": "src/estimators_comparison.ipynb",
+      "start_char_doc": 85,
+      "end_char_doc": 105,
+      "start_line": 7,
+      "end_line": 7,
+      "context": {
+        "prefix": "ells\": [   {    \"cell_type\": \"markdown\",    \"metadata\": {},    \"source\": [     \"",
+        "suffix": "\\n\"    ]   },   {    \"cell_type\": \"code\",    \"execution_count\": 26,    \"metadata"
+      }
+    },
+    {
+      "@id": "hp_observed_end_20",
+      "@type": "MLS_HyperParameter",
+      "name": "observed node end",
+      "value": 20,
+      "hpCategory": "HP_Data",
+      "hpType": "SliceEnd",
+      "uncertain": false,
+      "description": "End index of observed node subset.",
+      "appliesTo": {
+        "@id": "task_partial_observability"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "src/estimators_comparison.ipynb:7",
+      "path": "src/estimators_comparison.ipynb",
+      "start_char_doc": 85,
+      "end_char_doc": 105,
+      "start_line": 7,
+      "end_line": 7,
+      "context": {
+        "prefix": "ells\": [   {    \"cell_type\": \"markdown\",    \"metadata\": {},    \"source\": [     \"",
+        "suffix": "\\n\"    ]   },   {    \"cell_type\": \"code\",    \"execution_count\": 26,    \"metadata"
+      }
+    },
+    {
+      "@id": "hp_enzyme_nodes_121",
+      "@type": "MLS_HyperParameter",
+      "name": "ENZYMES node count",
+      "value": 121,
+      "hpCategory": "HP_Data",
+      "hpType": "DatasetSize",
+      "uncertain": false,
+      "description": "Adjacency size used for ENZYMES graph loading.",
+      "appliesTo": {
+        "@id": "dataset_enzyme_graph"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "src/estimators_comparison_real_net_enzyme.ipynb:553",
+      "path": "src/estimators_comparison_real_net_enzyme.ipynb",
+      "start_char_doc": 19573,
+      "end_char_doc": 19584,
+      "start_line": 553,
+      "end_line": 553,
+      "context": {
+        "prefix": "   return adj\\n\",     \"  \\n\",     \"enzyme_net = \\\"ENZYMES_g297.edges\\\"\\n\",     \"",
+        "suffix": "\\n\",     \"adj = load_from_edges(\\\"../data/\\\"+enzyme_net,sz_main)\"    ]   },   { "
+      }
+    },
+    {
+      "@id": "hp_enzyme_runs_1000",
+      "@type": "MLS_HyperParameter",
+      "name": "ENZYMES Monte Carlo runs",
+      "value": 1000,
+      "hpCategory": "HP_Training",
+      "hpType": "NumRuns",
+      "uncertain": false,
+      "description": "Number of Monte Carlo runs for ENZYMES comparison.",
+      "appliesTo": {
+        "@id": "eval_real_enzyme"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "src/estimators_comparison_real_net_enzyme.ipynb:633",
+      "path": "src/estimators_comparison_real_net_enzyme.ipynb",
+      "start_char_doc": 75919,
+      "end_char_doc": 75929,
+      "start_line": 633,
+      "end_line": 633,
+      "context": {
+        "prefix": "ata\": {},    \"outputs\": [],    \"source\": [     \"#Simulation parameters\\n\",     \"",
+        "suffix": " #Number of runs\\n\",     \"min_samples = 200\\n\",     \"tsize = 5000\\n\",     \"max_s"
+      }
+    },
+    {
+      "@id": "hp_enzyme_min_samples_200",
+      "@type": "MLS_HyperParameter",
+      "name": "ENZYMES min samples",
+      "value": 200,
+      "hpCategory": "HP_Data",
+      "hpType": "DatasetSize",
+      "uncertain": false,
+      "description": "Minimum sample count for ENZYMES comparison.",
+      "appliesTo": {
+        "@id": "eval_real_enzyme"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "src/estimators_comparison_real_net_enzyme.ipynb:634",
+      "path": "src/estimators_comparison_real_net_enzyme.ipynb",
+      "start_char_doc": 75955,
+      "end_char_doc": 75972,
+      "start_line": 634,
+      "end_line": 634,
+      "context": {
+        "prefix": "ce\": [     \"#Simulation parameters\\n\",     \"nruns=1000 #Number of runs\\n\",     \"",
+        "suffix": "\\n\",     \"tsize = 5000\\n\",     \"max_samples=tsize\\n\",     \"step=2\\n\",     \"tssiz"
+      }
+    },
+    {
+      "@id": "hp_enzyme_tsize_5000",
+      "@type": "MLS_HyperParameter",
+      "name": "ENZYMES time steps",
+      "value": 5000,
+      "hpCategory": "HP_Data",
+      "hpType": "MaxSequenceLength",
+      "uncertain": false,
+      "description": "Time-series length for ENZYMES comparison.",
+      "appliesTo": {
+        "@id": "eval_real_enzyme"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "src/estimators_comparison_real_net_enzyme.ipynb:635",
+      "path": "src/estimators_comparison_real_net_enzyme.ipynb",
+      "start_char_doc": 75982,
+      "end_char_doc": 75994,
+      "start_line": 635,
+      "end_line": 635,
+      "context": {
+        "prefix": "ameters\\n\",     \"nruns=1000 #Number of runs\\n\",     \"min_samples = 200\\n\",     \"",
+        "suffix": "\\n\",     \"max_samples=tsize\\n\",     \"step=2\\n\",     \"tssize = np.arange(round(mi"
+      }
+    },
+    {
+      "@id": "hp_enzyme_step_2",
+      "@type": "MLS_HyperParameter",
+      "name": "ENZYMES sample step",
+      "value": 2,
+      "hpCategory": "HP_Data",
+      "hpType": "EvaluationInterval",
+      "uncertain": true,
+      "description": "Step size for ENZYMES sample grid.",
+      "appliesTo": {
+        "@id": "eval_real_enzyme"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "src/estimators_comparison_real_net_enzyme.ipynb:637",
+      "path": "src/estimators_comparison_real_net_enzyme.ipynb",
+      "start_char_doc": 76031,
+      "end_char_doc": 76037,
+      "start_line": 637,
+      "end_line": 637,
+      "context": {
+        "prefix": "   \"min_samples = 200\\n\",     \"tsize = 5000\\n\",     \"max_samples=tsize\\n\",     \"",
+        "suffix": "\\n\",     \"tssize = np.arange(round(min_samples/100),round(max_samples/100),step="
+      }
+    },
+    {
+      "@id": "hp_enzyme_nestimators_6",
+      "@type": "MLS_HyperParameter",
+      "name": "ENZYMES estimator count",
+      "value": 6,
+      "hpCategory": "HP_Training",
+      "hpType": "NumEvaluatedModels",
+      "uncertain": false,
+      "description": "Number of estimator columns configured for ENZYMES comparison.",
+      "appliesTo": {
+        "@id": "eval_real_enzyme"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "src/estimators_comparison_real_net_enzyme.ipynb:639",
+      "path": "src/estimators_comparison_real_net_enzyme.ipynb",
+      "start_char_doc": 76185,
+      "end_char_doc": 76200,
+      "start_line": 639,
+      "end_line": 639,
+      "context": {
+        "prefix": "s/100),step=step)  #Number of samples (time series size) for each test\\n\",     \"",
+        "suffix": " #Number of estimators\"    ]   },   {    \"cell_type\": \"code\",    \"execution_coun"
+      }
+    },
+    {
+      "@id": "hp_macaque_nodes_93",
+      "@type": "MLS_HyperParameter",
+      "name": "macaque node count",
+      "value": 93,
+      "hpCategory": "HP_Data",
+      "hpType": "DatasetSize",
+      "uncertain": false,
+      "description": "Adjacency size used for macaque network loading.",
+      "appliesTo": {
+        "@id": "dataset_macaque_graph"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "src/estimators_comparison_real_net_macaque.ipynb:554",
+      "path": "src/estimators_comparison_real_net_macaque.ipynb",
+      "start_char_doc": 19611,
+      "end_char_doc": 19621,
+      "start_line": 554,
+      "end_line": 554,
+      "context": {
+        "prefix": "e_net = \\\"macaque-rhesus_interareal-cortical-network.edges\\\"\\n\",     \"\\n\",     \"",
+        "suffix": "\\n\",     \"adj = load_from_edges(\\\"../data/\\\"+macaque_net,sz_main)\"    ]   },   {"
+      }
+    },
+    {
+      "@id": "hp_macaque_runs_1000",
+      "@type": "MLS_HyperParameter",
+      "name": "macaque Monte Carlo runs",
+      "value": 1000,
+      "hpCategory": "HP_Training",
+      "hpType": "NumRuns",
+      "uncertain": false,
+      "description": "Number of Monte Carlo runs for macaque comparison.",
+      "appliesTo": {
+        "@id": "eval_real_macaque"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "src/estimators_comparison_real_net_macaque.ipynb:634",
+      "path": "src/estimators_comparison_real_net_macaque.ipynb",
+      "start_char_doc": 132850,
+      "end_char_doc": 132860,
+      "start_line": 634,
+      "end_line": 634,
+      "context": {
+        "prefix": "ata\": {},    \"outputs\": [],    \"source\": [     \"#Simulation parameters\\n\",     \"",
+        "suffix": " #Number of runs\\n\",     \"min_samples = 5000\\n\",     \"tsize = 36000\\n\",     \"max"
+      }
+    },
+    {
+      "@id": "hp_macaque_min_samples_5000",
+      "@type": "MLS_HyperParameter",
+      "name": "macaque min samples",
+      "value": 5000,
+      "hpCategory": "HP_Data",
+      "hpType": "DatasetSize",
+      "uncertain": false,
+      "description": "Minimum sample count for macaque comparison.",
+      "appliesTo": {
+        "@id": "eval_real_macaque"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "src/estimators_comparison_real_net_macaque.ipynb:635",
+      "path": "src/estimators_comparison_real_net_macaque.ipynb",
+      "start_char_doc": 132886,
+      "end_char_doc": 132904,
+      "start_line": 635,
+      "end_line": 635,
+      "context": {
+        "prefix": "ce\": [     \"#Simulation parameters\\n\",     \"nruns=1000 #Number of runs\\n\",     \"",
+        "suffix": "\\n\",     \"tsize = 36000\\n\",     \"max_samples=tsize\\n\",     \"step=2\\n\",     \"tssi"
+      }
+    },
+    {
+      "@id": "hp_macaque_tsize_36000",
+      "@type": "MLS_HyperParameter",
+      "name": "macaque time steps",
+      "value": 36000,
+      "hpCategory": "HP_Data",
+      "hpType": "MaxSequenceLength",
+      "uncertain": false,
+      "description": "Time-series length for macaque comparison.",
+      "appliesTo": {
+        "@id": "eval_real_macaque"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "src/estimators_comparison_real_net_macaque.ipynb:636",
+      "path": "src/estimators_comparison_real_net_macaque.ipynb",
+      "start_char_doc": 132914,
+      "end_char_doc": 132927,
+      "start_line": 636,
+      "end_line": 636,
+      "context": {
+        "prefix": "meters\\n\",     \"nruns=1000 #Number of runs\\n\",     \"min_samples = 5000\\n\",     \"",
+        "suffix": "\\n\",     \"max_samples=tsize\\n\",     \"step=2\\n\",     \"tssize = np.arange(round(mi"
+      }
+    },
+    {
+      "@id": "hp_macaque_step_2",
+      "@type": "MLS_HyperParameter",
+      "name": "macaque sample step",
+      "value": 2,
+      "hpCategory": "HP_Data",
+      "hpType": "EvaluationInterval",
+      "uncertain": true,
+      "description": "Step size for macaque sample grid.",
+      "appliesTo": {
+        "@id": "eval_real_macaque"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "src/estimators_comparison_real_net_macaque.ipynb:638",
+      "path": "src/estimators_comparison_real_net_macaque.ipynb",
+      "start_char_doc": 132964,
+      "end_char_doc": 132970,
+      "start_line": 638,
+      "end_line": 638,
+      "context": {
+        "prefix": " \"min_samples = 5000\\n\",     \"tsize = 36000\\n\",     \"max_samples=tsize\\n\",     \"",
+        "suffix": "\\n\",     \"tssize = np.arange(round(min_samples/1000),round(max_samples/1000),ste"
+      }
+    },
+    {
+      "@id": "hp_macaque_nestimators_6",
+      "@type": "MLS_HyperParameter",
+      "name": "macaque estimator count",
+      "value": 6,
+      "hpCategory": "HP_Training",
+      "hpType": "NumEvaluatedModels",
+      "uncertain": false,
+      "description": "Number of estimator columns configured for macaque comparison.",
+      "appliesTo": {
+        "@id": "eval_real_macaque"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "src/estimators_comparison_real_net_macaque.ipynb:640",
+      "path": "src/estimators_comparison_real_net_macaque.ipynb",
+      "start_char_doc": 133120,
+      "end_char_doc": 133135,
+      "start_line": 640,
+      "end_line": 640,
+      "context": {
+        "prefix": "/1000),step=step)  #Number of samples (time series size) for each test\\n\",     \"",
+        "suffix": " #Number of estimators\"    ]   },   {    \"cell_type\": \"code\",    \"execution_coun"
+      }
+    },
+    {
+      "@id": "hp_noise_nodes_50",
+      "@type": "MLS_HyperParameter",
+      "name": "noise comparison node count",
+      "value": 50,
+      "hpCategory": "HP_Data",
+      "hpType": "DatasetSize",
+      "uncertain": false,
+      "description": "Node count noted in the noise-variance comparison plot.",
+      "appliesTo": {
+        "@id": "eval_noise_variance"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "src/different_noise_variance.ipynb:43",
+      "path": "src/different_noise_variance.ipynb",
+      "start_char_doc": 41155,
+      "end_char_doc": 41159,
+      "start_line": 43,
+      "end_line": 43,
+      "context": {
+        "prefix": "ed by making 1000 Monte Carlo runs using the same Erdős–Rényi Model parameters (",
+        "suffix": ", p=0.6) \\n\",     \"but different noise variance values\\n\",     \"'''     \\n\",    "
+      }
+    },
+    {
+      "@id": "hp_noise_edge_probability_06",
+      "@type": "MLS_HyperParameter",
+      "name": "noise comparison edge probability",
+      "value": 0.6,
+      "hpCategory": "HP_Data",
+      "hpType": "SamplingProbability",
+      "uncertain": false,
+      "description": "Edge probability noted in the noise-variance comparison plot.",
+      "appliesTo": {
+        "@id": "eval_noise_variance"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "src/different_noise_variance.ipynb:43",
+      "path": "src/different_noise_variance.ipynb",
+      "start_char_doc": 41161,
+      "end_char_doc": 41166,
+      "start_line": 43,
+      "end_line": 43,
+      "context": {
+        "prefix": "making 1000 Monte Carlo runs using the same Erdős–Rényi Model parameters (N=50, ",
+        "suffix": ") \\n\",     \"but different noise variance values\\n\",     \"'''     \\n\",     \"data1"
+      }
+    },
+    {
+      "@id": "hp_noise_variance_1",
+      "@type": "MLS_HyperParameter",
+      "name": "noise variance 1",
+      "value": 1,
+      "hpCategory": "HP_Data",
+      "hpType": "NoiseParameter",
+      "uncertain": false,
+      "description": "First noise variance setting in saved traces.",
+      "appliesTo": {
+        "@id": "eval_noise_variance"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "src/different_noise_variance.ipynb:87",
+      "path": "src/different_noise_variance.ipynb",
+      "start_char_doc": 43127,
+      "end_char_doc": 43134,
+      "start_line": 87,
+      "end_line": 87,
+      "context": {
+        "prefix": "on (n)\\\")\\n\",     \"plt.xlabel(\\\"Number of samples (n)\\\")\\n\",     \"plt.legend([\\\"",
+        "suffix": "\\\",\\\"1 (CNN)\\\",\\\"10 (SVM)\\\",\\\"10 (CNN)\\\", \\\"100 (SVM)\\\",\\\"100 (CNN)\\\",\\\"1000 (SV"
+      }
+    },
+    {
+      "@id": "hp_noise_variance_10",
+      "@type": "MLS_HyperParameter",
+      "name": "noise variance 10",
+      "value": 10,
+      "hpCategory": "HP_Data",
+      "hpType": "NoiseParameter",
+      "uncertain": false,
+      "description": "Second noise variance setting in saved traces.",
+      "appliesTo": {
+        "@id": "eval_noise_variance"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "src/different_noise_variance.ipynb:87",
+      "path": "src/different_noise_variance.ipynb",
+      "start_char_doc": 43151,
+      "end_char_doc": 43159,
+      "start_line": 87,
+      "end_line": 87,
+      "context": {
+        "prefix": "label(\\\"Number of samples (n)\\\")\\n\",     \"plt.legend([\\\"1 (SVM)\\\",\\\"1 (CNN)\\\",\\\"",
+        "suffix": "\\\",\\\"10 (CNN)\\\", \\\"100 (SVM)\\\",\\\"100 (CNN)\\\",\\\"1000 (SVM)\\\",\\\"1000 (CNN)\\\"], tit"
+      }
+    },
+    {
+      "@id": "hp_noise_variance_100",
+      "@type": "MLS_HyperParameter",
+      "name": "noise variance 100",
+      "value": 100,
+      "hpCategory": "HP_Data",
+      "hpType": "NoiseParameter",
+      "uncertain": false,
+      "description": "Third noise variance setting in saved traces.",
+      "appliesTo": {
+        "@id": "eval_noise_variance"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "src/different_noise_variance.ipynb:87",
+      "path": "src/different_noise_variance.ipynb",
+      "start_char_doc": 43178,
+      "end_char_doc": 43187,
+      "start_line": 87,
+      "end_line": 87,
+      "context": {
+        "prefix": "n)\\\")\\n\",     \"plt.legend([\\\"1 (SVM)\\\",\\\"1 (CNN)\\\",\\\"10 (SVM)\\\",\\\"10 (CNN)\\\", \\\"",
+        "suffix": "\\\",\\\"100 (CNN)\\\",\\\"1000 (SVM)\\\",\\\"1000 (CNN)\\\"], title=r'$\\\\sigma$',loc='best')\\"
+      }
+    },
+    {
+      "@id": "hp_noise_variance_1000",
+      "@type": "MLS_HyperParameter",
+      "name": "noise variance 1000",
+      "value": 1000,
+      "hpCategory": "HP_Data",
+      "hpType": "NoiseParameter",
+      "uncertain": false,
+      "description": "Fourth noise variance setting in saved traces.",
+      "appliesTo": {
+        "@id": "eval_noise_variance"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "src/different_noise_variance.ipynb:87",
+      "path": "src/different_noise_variance.ipynb",
+      "start_char_doc": 43206,
+      "end_char_doc": 43216,
+      "start_line": 87,
+      "end_line": 87,
+      "context": {
+        "prefix": "\"1 (SVM)\\\",\\\"1 (CNN)\\\",\\\"10 (SVM)\\\",\\\"10 (CNN)\\\", \\\"100 (SVM)\\\",\\\"100 (CNN)\\\",\\\"",
+        "suffix": "\\\",\\\"1000 (CNN)\\\"], title=r'$\\\\sigma$',loc='best')\\n\",     \"fig.savefig(\\\"cnn+sv"
+      }
+    },
+    {
+      "@id": "hp_enzyme_coupling_c",
+      "@type": "MLS_HyperParameter",
+      "name": "enzyme coupling c",
+      "value": 0.9,
+      "hpCategory": "HP_Data",
+      "hpType": "FeatureExtractionParameter",
+      "uncertain": true,
+      "description": "Coupling value used in real-network dynamics generation.",
+      "appliesTo": {
+        "@id": "eval_real_enzyme"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "src/estimators_comparison_real_net_enzyme.ipynb:610",
+      "path": "src/estimators_comparison_real_net_enzyme.ipynb",
+      "start_char_doc": 75506,
+      "end_char_doc": 75513,
+      "start_line": 610,
+      "end_line": 610,
+      "context": {
+        "prefix": ",    \"metadata\": {},    \"outputs\": [],    \"source\": [     \"#Parameters\\n\",     \"",
+        "suffix": "\\n\",     \"rho = 0.75\\n\",     \"undirected = True\\n\",     \"    \\n\",     \"#Define t"
+      }
+    },
+    {
+      "@id": "hp_enzyme_rho",
+      "@type": "MLS_HyperParameter",
+      "name": "enzyme rho",
+      "value": 0.75,
+      "hpCategory": "HP_Data",
+      "hpType": "FeatureExtractionParameter",
+      "uncertain": true,
+      "description": "Spectral-radius scaling in real-network dynamics generation.",
+      "appliesTo": {
+        "@id": "eval_real_enzyme"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "src/estimators_comparison_real_net_enzyme.ipynb:611",
+      "path": "src/estimators_comparison_real_net_enzyme.ipynb",
+      "start_char_doc": 75523,
+      "end_char_doc": 75533,
+      "start_line": 611,
+      "end_line": 611,
+      "context": {
+        "prefix": "{},    \"outputs\": [],    \"source\": [     \"#Parameters\\n\",     \"c = 0.9\\n\",     \"",
+        "suffix": "\\n\",     \"undirected = True\\n\",     \"    \\n\",     \"#Define the range of noise va"
+      }
+    },
+    {
+      "@id": "hp_enzyme_noise_qsi",
+      "@type": "MLS_HyperParameter",
+      "name": "enzyme noise qsi",
+      "value": 0.5,
+      "hpCategory": "HP_Data",
+      "hpType": "NoiseParameter",
+      "uncertain": false,
+      "description": "Noise scale used in real-network simulation.",
+      "appliesTo": {
+        "@id": "eval_real_enzyme"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "src/estimators_comparison_real_net_enzyme.ipynb:615",
+      "path": "src/estimators_comparison_real_net_enzyme.ipynb",
+      "start_char_doc": 75629,
+      "end_char_doc": 75638,
+      "start_line": 615,
+      "end_line": 615,
+      "context": {
+        "prefix": "cted = True\\n\",     \"    \\n\",     \"#Define the range of noise variance\\n\",     \"",
+        "suffix": "\\n\",     \"x0 = 0\"    ]   },   {    \"cell_type\": \"markdown\",    \"metadata\": {},  "
+      }
+    },
+    {
+      "@id": "hp_enzyme_undirected",
+      "@type": "MLS_HyperParameter",
+      "name": "enzyme undirected flag",
+      "value": true,
+      "hpCategory": "HP_Data",
+      "hpType": "DataSamplingStrategy",
+      "uncertain": false,
+      "description": "Flag indicating undirected graph handling.",
+      "appliesTo": {
+        "@id": "eval_real_enzyme"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "src/estimators_comparison_real_net_enzyme.ipynb:612",
+      "path": "src/estimators_comparison_real_net_enzyme.ipynb",
+      "start_char_doc": 75543,
+      "end_char_doc": 75560,
+      "start_line": 612,
+      "end_line": 612,
+      "context": {
+        "prefix": ",    \"source\": [     \"#Parameters\\n\",     \"c = 0.9\\n\",     \"rho = 0.75\\n\",     \"",
+        "suffix": "\\n\",     \"    \\n\",     \"#Define the range of noise variance\\n\",     \"qsi = 0.5\\n"
+      }
+    },
+    {
+      "@id": "hp_macaque_coupling_c",
+      "@type": "MLS_HyperParameter",
+      "name": "macaque coupling c",
+      "value": 0.9,
+      "hpCategory": "HP_Data",
+      "hpType": "FeatureExtractionParameter",
+      "uncertain": true,
+      "description": "Coupling value used in real-network dynamics generation.",
+      "appliesTo": {
+        "@id": "eval_real_macaque"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "src/estimators_comparison_real_net_macaque.ipynb:611",
+      "path": "src/estimators_comparison_real_net_macaque.ipynb",
+      "start_char_doc": 132436,
+      "end_char_doc": 132443,
+      "start_line": 611,
+      "end_line": 611,
+      "context": {
+        "prefix": ",    \"metadata\": {},    \"outputs\": [],    \"source\": [     \"#Parameters\\n\",     \"",
+        "suffix": "\\n\",     \"rho = 0.75\\n\",     \"undirected = True\\n\",     \"    \\n\",     \"#Define t"
+      }
+    },
+    {
+      "@id": "hp_macaque_rho",
+      "@type": "MLS_HyperParameter",
+      "name": "macaque rho",
+      "value": 0.75,
+      "hpCategory": "HP_Data",
+      "hpType": "FeatureExtractionParameter",
+      "uncertain": true,
+      "description": "Spectral-radius scaling in real-network dynamics generation.",
+      "appliesTo": {
+        "@id": "eval_real_macaque"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "src/estimators_comparison_real_net_macaque.ipynb:612",
+      "path": "src/estimators_comparison_real_net_macaque.ipynb",
+      "start_char_doc": 132453,
+      "end_char_doc": 132463,
+      "start_line": 612,
+      "end_line": 612,
+      "context": {
+        "prefix": "{},    \"outputs\": [],    \"source\": [     \"#Parameters\\n\",     \"c = 0.9\\n\",     \"",
+        "suffix": "\\n\",     \"undirected = True\\n\",     \"    \\n\",     \"#Define the range of noise va"
+      }
+    },
+    {
+      "@id": "hp_macaque_noise_qsi",
+      "@type": "MLS_HyperParameter",
+      "name": "macaque noise qsi",
+      "value": 0.5,
+      "hpCategory": "HP_Data",
+      "hpType": "NoiseParameter",
+      "uncertain": false,
+      "description": "Noise scale used in real-network simulation.",
+      "appliesTo": {
+        "@id": "eval_real_macaque"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "src/estimators_comparison_real_net_macaque.ipynb:616",
+      "path": "src/estimators_comparison_real_net_macaque.ipynb",
+      "start_char_doc": 132559,
+      "end_char_doc": 132568,
+      "start_line": 616,
+      "end_line": 616,
+      "context": {
+        "prefix": "cted = True\\n\",     \"    \\n\",     \"#Define the range of noise variance\\n\",     \"",
+        "suffix": "\\n\",     \"x0 = 0\"    ]   },   {    \"cell_type\": \"markdown\",    \"metadata\": {},  "
+      }
+    },
+    {
+      "@id": "hp_macaque_undirected",
+      "@type": "MLS_HyperParameter",
+      "name": "macaque undirected flag",
+      "value": true,
+      "hpCategory": "HP_Data",
+      "hpType": "DataSamplingStrategy",
+      "uncertain": false,
+      "description": "Flag indicating undirected graph handling.",
+      "appliesTo": {
+        "@id": "eval_real_macaque"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "src/estimators_comparison_real_net_macaque.ipynb:613",
+      "path": "src/estimators_comparison_real_net_macaque.ipynb",
+      "start_char_doc": 132473,
+      "end_char_doc": 132490,
+      "start_line": 613,
+      "end_line": 613,
+      "context": {
+        "prefix": ",    \"source\": [     \"#Parameters\\n\",     \"c = 0.9\\n\",     \"rho = 0.75\\n\",     \"",
+        "suffix": "\\n\",     \"    \\n\",     \"#Define the range of noise variance\\n\",     \"qsi = 0.5\\n"
+      }
+    },
+    {
+      "@id": "datasource_saved_cnn_dir",
+      "@type": "DataSource",
+      "name": "models/cnn SavedModel directory",
+      "pathInRepository": "models/cnn",
+      "format": "TensorFlow SavedModel",
+      "wasDerivedFrom": "code",
+      "codeReference": "models/cnn/keras_metadata.pb:2",
+      "path": "models/cnn/keras_metadata.pb",
+      "start_char_doc": 471,
+      "end_char_doc": 477,
+      "start_line": 2,
+      "end_line": 2,
+      "context": {
+        "prefix": "2\", \"sparse\": false, \"ragged\": false, \"name\": \"conv1d_input\"}}, {\"class_name\": \"",
+        "suffix": "\", \"config\": {\"name\": \"conv1d\", \"trainable\": true, \"batch_input_shape\": {\"class_"
+      }
+    },
+    {
+      "@id": "datasource_saved_svm_file",
+      "@type": "DataSource",
+      "name": "models/svm.sav",
+      "pathInRepository": "models/svm.sav",
+      "format": "pickle",
+      "wasDerivedFrom": "code",
+      "codeReference": "src/estimators_comparison.ipynb:542",
+      "path": "src/estimators_comparison.ipynb",
+      "start_char_doc": 19237,
+      "end_char_doc": 19254,
+      "start_line": 542,
+      "end_line": 542,
+      "context": {
+        "prefix": "l(\\\"../models/cnn\\\")\\n\",     \"svm_model =     loaded_model = pickle.load(open(\\\"",
+        "suffix": "\\\", 'rb'))\"    ]   },   {    \"cell_type\": \"markdown\",    \"metadata\": {},    \"sou"
+      }
+    }
+  ]
+}

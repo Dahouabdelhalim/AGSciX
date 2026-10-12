@@ -1,0 +1,3713 @@
+{
+  "@context": {
+    "mls": "http://example.org/ontology/mls#",
+    "schema": "http://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "Study": "mls:Study",
+    "Experiment": "mls:Experiment",
+    "Person": "schema:Person",
+    "Organization": "schema:Organization",
+    "MLS_Task": "mls:MLS_Task",
+    "MLS_Dataset": "mls:MLS_Dataset",
+    "DataSource": "mls:DataSource",
+    "Method": "mls:Method",
+    "MLS_Model": "mls:MLS_Model",
+    "MLS_Algorithm": "mls:MLS_Algorithm",
+    "MLS_Eval": "mls:MLS_Eval",
+    "SoftwareRepository": "mls:SoftwareRepository",
+    "MLS_Implementation": "mls:MLS_Implementation",
+    "MLS_HyperParameter": "mls:MLS_HyperParameter",
+    "Dependency": "mls:Dependency",
+    "Environment": "mls:Environment",
+    "DataProcessingStep": "mls:DataProcessingStep",
+    "TrainingRun": "mls:TrainingRun",
+    "EvaluationRun": "mls:EvaluationRun",
+    "PredictionSet": "mls:PredictionSet",
+    "name": "schema:name",
+    "description": "schema:description",
+    "url": "schema:url",
+    "identifier": "schema:identifier",
+    "contains": {
+      "@id": "mls:contains",
+      "@type": "@id"
+    },
+    "supports": {
+      "@id": "mls:supports",
+      "@type": "@id"
+    },
+    "requires": {
+      "@id": "mls:requires",
+      "@type": "@id"
+    },
+    "runsIn": {
+      "@id": "mls:runsIn",
+      "@type": "@id"
+    },
+    "hasAuthor": {
+      "@id": "schema:author",
+      "@type": "@id"
+    },
+    "implements": {
+      "@id": "mls:implements",
+      "@type": "@id"
+    },
+    "realizes": {
+      "@id": "mls:realizes",
+      "@type": "@id"
+    },
+    "usesData": {
+      "@id": "mls:usesData",
+      "@type": "@id"
+    },
+    "produces": {
+      "@id": "mls:produces",
+      "@type": "@id"
+    },
+    "executes": {
+      "@id": "mls:executes",
+      "@type": "@id"
+    },
+    "usesParameters": {
+      "@id": "mls:usesParameters",
+      "@type": "@id"
+    },
+    "trainedOn": {
+      "@id": "mls:trainedOn",
+      "@type": "@id"
+    },
+    "evaluatedOn": {
+      "@id": "mls:evaluatedOn",
+      "@type": "@id"
+    },
+    "subMethod": {
+      "@id": "mls:subMethod",
+      "@type": "@id"
+    },
+    "prov-affiliatedWith": {
+      "@id": "prov:wasAssociatedWith",
+      "@type": "@id"
+    },
+    "prov-derivedFrom": {
+      "@id": "prov:wasDerivedFrom",
+      "@type": "@id"
+    },
+    "prov-producedBy": {
+      "@id": "prov:wasGeneratedBy",
+      "@type": "@id"
+    },
+    "prov-executedBy": {
+      "@id": "mls:prov-executedBy",
+      "@type": "@id"
+    },
+    "prov-generated": {
+      "@id": "mls:prov-generated",
+      "@type": "@id"
+    },
+    "used": {
+      "@id": "prov:used",
+      "@type": "@id"
+    },
+    "trains": {
+      "@id": "mls:trains",
+      "@type": "@id"
+    },
+    "evaluates": {
+      "@id": "mls:evaluates",
+      "@type": "@id"
+    },
+    "wasGeneratedBy": {
+      "@id": "prov:wasGeneratedBy",
+      "@type": "@id"
+    },
+    "producedBy": {
+      "@id": "mls:producedBy",
+      "@type": "@id"
+    },
+    "wasAssociatedWith": {
+      "@id": "prov:wasAssociatedWith",
+      "@type": "@id"
+    },
+    "wasDerivedFrom": {
+      "@id": "prov:wasDerivedFrom",
+      "@type": "@id"
+    }
+  },
+  "@graph": [
+    {
+      "@id": "repo_xiangli1999_prefixtuning",
+      "@type": "SoftwareRepository",
+      "name": "PrefixTuning",
+      "url": "https://github.com/XiangLi1999/PrefixTuning",
+      "owner": "XiangLi1999",
+      "platform": "GitHub",
+      "programmingLanguage": "Python",
+      "version": "6519d30e69b15a180f23e2cd41b766d3f62b8e82",
+      "branch": "cleaned",
+      "license": "Apache-2.0 for vendored transformers; project license not explicit in README",
+      "documentationUrl": "README.md",
+      "contains": [
+        {
+          "@id": "impl_gpt2_train_e2e"
+        },
+        {
+          "@id": "impl_gpt2_run_language_modeling"
+        },
+        {
+          "@id": "impl_gpt2_prefix_tuning"
+        },
+        {
+          "@id": "impl_gpt2_generation"
+        },
+        {
+          "@id": "impl_seq2seq_train_bart"
+        },
+        {
+          "@id": "impl_seq2seq_finetune"
+        },
+        {
+          "@id": "impl_seq2seq_prefix_tuning"
+        },
+        {
+          "@id": "impl_vendored_transformers"
+        }
+      ],
+      "supports": [
+        {
+          "@id": "env_prefixtuning_pytorch"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:1",
+      "path": "README.md",
+      "start_char_doc": 0,
+      "end_char_doc": 15,
+      "start_line": 1,
+      "end_line": 1,
+      "context": {
+        "prefix": "",
+        "suffix": " ## Files:     .     ├── gpt2                          # Code for GPT2 style autoregressiv"
+      }
+    },
+    {
+      "@id": "study_acl_2021_long_353",
+      "@type": "Study",
+      "title": "Prefix-Tuning: Optimizing Continuous Prompts for Generation",
+      "identifier": "2021.acl-long.353",
+      "url": "https://aclanthology.org/2021.acl-long.353/",
+      "citation": "Xiang Lisa Li and Percy Liang. Prefix-Tuning: Optimizing Continuous Prompts for Generation. ACL 2021.",
+      "publicationVenue": "ACL 2021",
+      "implements": {
+        "@id": "repo_xiangli1999_prefixtuning"
+      },
+      "hasAuthor": [
+        {
+          "@id": "person_xiang_lisa_li"
+        },
+        {
+          "@id": "person_percy_liang"
+        }
+      ],
+      "contains": [
+        {
+          "@id": "exp_gpt2_table_to_text"
+        },
+        {
+          "@id": "exp_bart_summarization"
+        },
+        {
+          "@id": "exp_baseline_finetune_adapter"
+        },
+        {
+          "@id": "exp_gpt2_decode"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:87",
+      "path": "README.md",
+      "start_char_doc": 2957,
+      "end_char_doc": 3016,
+      "start_line": 87,
+      "end_line": 87,
+      "context": {
+        "prefix": "nd results, please refer to our paper.   ```bibtex @misc{li2021prefixtuning,       title={",
+        "suffix": "},        author={Xiang Lisa Li and Percy Liang},       year={2021},       eprint={2101.00"
+      }
+    },
+    {
+      "@id": "person_xiang_lisa_li",
+      "@type": "Person",
+      "name": "Xiang Lisa Li",
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:88",
+      "path": "README.md",
+      "start_char_doc": 3034,
+      "end_char_doc": 3047,
+      "start_line": 88,
+      "end_line": 88,
+      "context": {
+        "prefix": "      title={Prefix-Tuning: Optimizing Continuous Prompts for Generation},        author={",
+        "suffix": " and Percy Liang},       year={2021},       eprint={2101.00190},       archivePrefix={arXi"
+      }
+    },
+    {
+      "@id": "person_percy_liang",
+      "@type": "Person",
+      "name": "Percy Liang",
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:88",
+      "path": "README.md",
+      "start_char_doc": 3052,
+      "end_char_doc": 3063,
+      "start_line": 88,
+      "end_line": 88,
+      "context": {
+        "prefix": "x-Tuning: Optimizing Continuous Prompts for Generation},        author={Xiang Lisa Li and ",
+        "suffix": "},       year={2021},       eprint={2101.00190},       archivePrefix={arXiv},       primar"
+      }
+    },
+    {
+      "@id": "impl_gpt2_train_e2e",
+      "@type": "MLS_Implementation",
+      "name": "GPT-2 high-level training wrapper",
+      "identifier": "GPT-2 high-level training wrapper",
+      "description": "Builds command lines for GPT-2 style table-to-text prefix-tuning, finetuning, adapters, and low-data variants.",
+      "framework": "PyTorch; Hugging Face Transformers; PyTorch Lightning",
+      "entryPoint": "gpt2/train_e2e.py",
+      "entryPointCommand": "python train_e2e.py --optim_prefix yes --preseqlen 5 --epoch 5",
+      "codeRepository": "https://github.com/XiangLi1999/PrefixTuning",
+      "branch": "cleaned",
+      "commitHash": "6519d30e69b15a180f23e2cd41b766d3f62b8e82",
+      "runsIn": {
+        "@id": "env_prefixtuning_pytorch"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/train_e2e.py:13",
+      "path": "gpt2/train_e2e.py",
+      "start_char_doc": 305,
+      "end_char_doc": 324,
+      "start_line": 13,
+      "end_line": 13,
+      "context": {
+        "prefix": "_':      parser = argparse.ArgumentParser(description='data2text E2E training args.')     ",
+        "suffix": "('--mode', type=str, default='data2text', help='')     parser.add_argument('--tuning_mode'"
+      }
+    },
+    {
+      "@id": "impl_gpt2_run_language_modeling",
+      "@type": "MLS_Implementation",
+      "name": "GPT-2 language-modeling trainer",
+      "identifier": "GPT-2 language-modeling trainer",
+      "description": "Loads data collators/datasets, GPT-2, prefix models, TrainingArguments, and Trainer_Prefix.",
+      "framework": "PyTorch; Hugging Face Transformers; PyTorch Lightning",
+      "entryPoint": "gpt2/run_language_modeling.py",
+      "entryPointCommand": "python run_language_modeling.py",
+      "codeRepository": "https://github.com/XiangLi1999/PrefixTuning",
+      "branch": "cleaned",
+      "commitHash": "6519d30e69b15a180f23e2cd41b766d3f62b8e82",
+      "runsIn": {
+        "@id": "env_prefixtuning_pytorch"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/run_language_modeling.py:493",
+      "path": "gpt2/run_language_modeling.py",
+      "start_char_doc": 18810,
+      "end_char_doc": 18820,
+      "start_line": 493,
+      "end_line": 493,
+      "context": {
+        "prefix": "       overwrite_cache=args.overwrite_cache,             cache_dir=cache_dir,         )   ",
+        "suffix": ":     # See all possible arguments in src/transformers/training_args.py     # or by passin"
+      }
+    },
+    {
+      "@id": "impl_gpt2_prefix_tuning",
+      "@type": "MLS_Implementation",
+      "name": "GPT-2 PrefixTuning implementation",
+      "identifier": "GPT-2 PrefixTuning implementation",
+      "description": "Implements prefix parameters and prompt generation for autoregressive GPT-2 models.",
+      "framework": "PyTorch; Hugging Face Transformers; PyTorch Lightning",
+      "entryPoint": "gpt2/train_control.py",
+      "entryPointCommand": "import PrefixTuning",
+      "codeRepository": "https://github.com/XiangLi1999/PrefixTuning",
+      "branch": "cleaned",
+      "commitHash": "6519d30e69b15a180f23e2cd41b766d3f62b8e82",
+      "runsIn": {
+        "@id": "env_prefixtuning_pytorch"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/train_control.py:7",
+      "path": "gpt2/train_control.py",
+      "start_char_doc": 149,
+      "end_char_doc": 167,
+      "start_line": 7,
+      "end_line": 7,
+      "context": {
+        "prefix": "ormers import PreTrainedModel, GPT2PreTrainedModel, GPT2Tokenizer from torch import  nn   ",
+        "suffix": "(GPT2PreTrainedModel):     \"\"\"Classification Head for  transformer encoders\"\"\"     def __i"
+      }
+    },
+    {
+      "@id": "impl_gpt2_generation",
+      "@type": "MLS_Implementation",
+      "name": "GPT-2 generation/evaluation script",
+      "identifier": "GPT-2 generation/evaluation script",
+      "description": "Loads trained/prefix models and generates data-to-text outputs.",
+      "framework": "PyTorch; Hugging Face Transformers; PyTorch Lightning",
+      "entryPoint": "gpt2/run_generation.py",
+      "entryPointCommand": "python run_generation.py",
+      "codeRepository": "https://github.com/XiangLi1999/PrefixTuning",
+      "branch": "cleaned",
+      "commitHash": "6519d30e69b15a180f23e2cd41b766d3f62b8e82",
+      "runsIn": {
+        "@id": "env_prefixtuning_pytorch"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/run_generation.py:17",
+      "path": "gpt2/run_generation.py",
+      "start_char_doc": 763,
+      "end_char_doc": 790,
+      "start_line": 17,
+      "end_line": 17,
+      "context": {
+        "prefix": " for the specific language governing permissions and # limitations under the License. \"\"\" ",
+        "suffix": " with the auto-regressive models of the library (GPT/GPT-2/CTRL/Transformer-XL/XLNet) \"\"\" "
+      }
+    },
+    {
+      "@id": "impl_gpt2_gen_wrapper",
+      "@type": "MLS_Implementation",
+      "name": "GPT-2 generation wrapper",
+      "identifier": "GPT-2 generation wrapper",
+      "description": "Builds generation command lines from model path and task mode.",
+      "framework": "PyTorch; Hugging Face Transformers; PyTorch Lightning",
+      "entryPoint": "gpt2/gen.py",
+      "entryPointCommand": "python gen.py",
+      "codeRepository": "https://github.com/XiangLi1999/PrefixTuning",
+      "branch": "cleaned",
+      "commitHash": "6519d30e69b15a180f23e2cd41b766d3f62b8e82",
+      "runsIn": {
+        "@id": "env_prefixtuning_pytorch"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/gen.py:264",
+      "path": "gpt2/gen.py",
+      "start_char_doc": 9081,
+      "end_char_doc": 9105,
+      "start_line": 264,
+      "end_line": 264,
+      "context": {
+        "prefix": "_name:             tuning_mode = 'adaptertune'             app = ''        COMMANDLINE = \"",
+        "suffix": " \\         --model_type=gpt2 \\         --length 100 \\         --model_name_or_path={} \\   "
+      }
+    },
+    {
+      "@id": "impl_seq2seq_train_bart",
+      "@type": "MLS_Implementation",
+      "name": "BART training wrapper",
+      "identifier": "BART training wrapper",
+      "description": "Builds command lines for BART prefix-tuning or finetuning on summarization datasets.",
+      "framework": "PyTorch; Hugging Face Transformers; PyTorch Lightning",
+      "entryPoint": "seq2seq/train_bart.py",
+      "entryPointCommand": "python train_bart.py",
+      "codeRepository": "https://github.com/XiangLi1999/PrefixTuning",
+      "branch": "cleaned",
+      "commitHash": "6519d30e69b15a180f23e2cd41b766d3f62b8e82",
+      "runsIn": {
+        "@id": "env_prefixtuning_pytorch"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "seq2seq/train_bart.py:12",
+      "path": "seq2seq/train_bart.py",
+      "start_char_doc": 280,
+      "end_char_doc": 299,
+      "start_line": 12,
+      "end_line": 12,
+      "context": {
+        "prefix": "_':      parser = argparse.ArgumentParser(description='data2text E2E training args.')     ",
+        "suffix": "('--mode', type=str, default='data2text', help='')     parser.add_argument('--tuning_mode'"
+      }
+    },
+    {
+      "@id": "impl_seq2seq_finetune",
+      "@type": "MLS_Implementation",
+      "name": "Seq2Seq Lightning finetuning module",
+      "identifier": "Seq2Seq Lightning finetuning module",
+      "description": "PyTorch Lightning module for BART/T5 style summarization prefix tuning and evaluation.",
+      "framework": "PyTorch; Hugging Face Transformers; PyTorch Lightning",
+      "entryPoint": "seq2seq/finetune.py",
+      "entryPointCommand": "python finetune.py",
+      "codeRepository": "https://github.com/XiangLi1999/PrefixTuning",
+      "branch": "cleaned",
+      "commitHash": "6519d30e69b15a180f23e2cd41b766d3f62b8e82",
+      "runsIn": {
+        "@id": "env_prefixtuning_pytorch"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "seq2seq/finetune.py:48",
+      "path": "seq2seq/finetune.py",
+      "start_char_doc": 1087,
+      "end_char_doc": 1118,
+      "start_line": 48,
+      "end_line": 48,
+      "context": {
+        "prefix": "c_args, generic_train, PrefixTransformer  # noqa   logger = logging.getLogger(__name__)   ",
+        "suffix": "(PrefixTransformer):     mode = \"summarization\"     loss_names = [\"loss\"]     metric_names"
+      }
+    },
+    {
+      "@id": "impl_seq2seq_prefix_tuning",
+      "@type": "MLS_Implementation",
+      "name": "BART PrefixTuning implementation",
+      "identifier": "BART PrefixTuning implementation",
+      "description": "Implements prefix parameters for encoder, decoder, and cross-attention in encoder-decoder models.",
+      "framework": "PyTorch; Hugging Face Transformers; PyTorch Lightning",
+      "entryPoint": "seq2seq/prefixTuning.py",
+      "entryPointCommand": "import PrefixTuning",
+      "codeRepository": "https://github.com/XiangLi1999/PrefixTuning",
+      "branch": "cleaned",
+      "commitHash": "6519d30e69b15a180f23e2cd41b766d3f62b8e82",
+      "runsIn": {
+        "@id": "env_prefixtuning_pytorch"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "seq2seq/prefixTuning.py:7",
+      "path": "seq2seq/prefixTuning.py",
+      "start_char_doc": 170,
+      "end_char_doc": 188,
+      "start_line": 7,
+      "end_line": 7,
+      "context": {
+        "prefix": "nedModel, GPT2PreTrainedModel, GPT2Tokenizer, PretrainedBartModel from torch import  nn   ",
+        "suffix": "(PretrainedBartModel):     \"\"\"Classification Head for  transformer encoders\"\"\"     def __i"
+      }
+    },
+    {
+      "@id": "impl_vendored_transformers",
+      "@type": "MLS_Implementation",
+      "name": "Vendored Hugging Face Transformers fork",
+      "identifier": "Vendored Hugging Face Transformers fork",
+      "description": "Local Transformers fork modified with prefix trainers, data collators, and GPT-2 adapter support.",
+      "framework": "PyTorch; Hugging Face Transformers; PyTorch Lightning",
+      "entryPoint": "transformers/setup.py",
+      "entryPointCommand": "pip install -e transformers",
+      "codeRepository": "https://github.com/XiangLi1999/PrefixTuning",
+      "branch": "cleaned",
+      "commitHash": "6519d30e69b15a180f23e2cd41b766d3f62b8e82",
+      "runsIn": {
+        "@id": "env_prefixtuning_pytorch"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "transformers/setup.py:100",
+      "path": "transformers/setup.py",
+      "start_char_doc": 4266,
+      "end_char_doc": 4285,
+      "start_line": 100,
+      "end_line": 100,
+      "context": {
+        "prefix": " + extras[\"quality\"] + extras[\"ja\"] + [\"scikit-learn\", \"tensorflow\", \"torch\"]  setup(     ",
+        "suffix": ",     version=\"3.2.0\",     author=\"Thomas Wolf, Lysandre Debut, Victor Sanh, Julien Chaumo"
+      }
+    },
+    {
+      "@id": "env_prefixtuning_pytorch",
+      "@type": "Environment",
+      "name": "PrefixTuning Python environment",
+      "description": "Local editable installation of the vendored Transformers package with PyTorch and PyTorch Lightning-based training scripts.",
+      "requirementsFile": "transformers/setup.py",
+      "isDockerized": false,
+      "pythonVersion": null,
+      "framework": "PyTorch / Transformers / PyTorch Lightning",
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:32",
+      "path": "README.md",
+      "start_char_doc": 1702,
+      "end_char_doc": 1716,
+      "start_line": 32,
+      "end_line": 32,
+      "context": {
+        "prefix": "r :)   ----------------------------------------------------- ## Setup:  ``cd transformer; ",
+        "suffix": " .``  ----------------------------------------------------- ## Train via prefix-tuning:  `"
+      }
+    },
+    {
+      "@id": "dep_torch",
+      "@type": "Dependency",
+      "packageName": "torch",
+      "name": "torch",
+      "version": null,
+      "dependencyType": "runtime",
+      "isOptional": false,
+      "wasDerivedFrom": "code",
+      "codeReference": "seq2seq/prefixTuning.py:2",
+      "path": "seq2seq/prefixTuning.py",
+      "start_char_doc": 35,
+      "end_char_doc": 47,
+      "start_line": 2,
+      "end_line": 2,
+      "context": {
+        "prefix": "# from transformers import Trainer ",
+        "suffix": " from transformers import PreTrainedModel, GPT2PreTrainedModel, GPT2Tokenizer, PretrainedB"
+      }
+    },
+    {
+      "@id": "dep_transformers",
+      "@type": "Dependency",
+      "packageName": "transformers",
+      "name": "transformers",
+      "version": null,
+      "dependencyType": "vendored/runtime",
+      "isOptional": false,
+      "wasDerivedFrom": "code",
+      "codeReference": "transformers/setup.py:100",
+      "path": "transformers/setup.py",
+      "start_char_doc": 4266,
+      "end_char_doc": 4285,
+      "start_line": 100,
+      "end_line": 100,
+      "context": {
+        "prefix": " + extras[\"quality\"] + extras[\"ja\"] + [\"scikit-learn\", \"tensorflow\", \"torch\"]  setup(     ",
+        "suffix": ",     version=\"3.2.0\",     author=\"Thomas Wolf, Lysandre Debut, Victor Sanh, Julien Chaumo"
+      }
+    },
+    {
+      "@id": "dep_pytorch_lightning",
+      "@type": "Dependency",
+      "packageName": "pytorch_lightning",
+      "name": "pytorch_lightning",
+      "version": null,
+      "dependencyType": "runtime",
+      "isOptional": false,
+      "wasDerivedFrom": "code",
+      "codeReference": "seq2seq/finetune.py:14",
+      "path": "seq2seq/finetune.py",
+      "start_char_doc": 217,
+      "end_char_doc": 247,
+      "start_line": 14,
+      "end_line": 14,
+      "context": {
+        "prefix": "ultdict from pathlib import Path from typing import Dict, List, Tuple  import numpy as np ",
+        "suffix": " import torch from torch.utils.data import DataLoader  from callbacks import Seq2SeqLoggin"
+      }
+    },
+    {
+      "@id": "dep_numpy",
+      "@type": "Dependency",
+      "packageName": "numpy",
+      "name": "numpy",
+      "version": null,
+      "dependencyType": "runtime",
+      "isOptional": false,
+      "wasDerivedFrom": "code",
+      "codeReference": "seq2seq/finetune.py:13",
+      "path": "seq2seq/finetune.py",
+      "start_char_doc": 198,
+      "end_char_doc": 216,
+      "start_line": 13,
+      "end_line": 13,
+      "context": {
+        "prefix": "ections import defaultdict from pathlib import Path from typing import Dict, List, Tuple  ",
+        "suffix": " import pytorch_lightning as pl import torch from torch.utils.data import DataLoader  from"
+      }
+    },
+    {
+      "@id": "dep_tensorboard",
+      "@type": "Dependency",
+      "packageName": "tensorboard",
+      "name": "tensorboard",
+      "version": null,
+      "dependencyType": "runtime",
+      "isOptional": false,
+      "wasDerivedFrom": "code",
+      "codeReference": "transformers/setup.py:1",
+      "path": "transformers/setup.py",
+      "start_char_doc": 0,
+      "end_char_doc": 80,
+      "start_line": 1,
+      "end_line": 2,
+      "context": {
+        "prefix": "",
+        "suffix": "ob/master/setup.py  To create the package for pypi.  1. Change the version in __init__.py,"
+      }
+    },
+    {
+      "@id": "dep_sacrebleu",
+      "@type": "Dependency",
+      "packageName": "sacrebleu",
+      "name": "sacrebleu",
+      "version": null,
+      "dependencyType": "inferred",
+      "isOptional": false,
+      "wasDerivedFrom": "code",
+      "codeReference": "seq2seq/utils.py:17",
+      "path": "seq2seq/utils.py",
+      "start_char_doc": 336,
+      "end_char_doc": 345,
+      "start_line": 17,
+      "end_line": 17,
+      "context": {
+        "prefix": "torch import torch.distributed as dist from rouge_score import rouge_scorer, scoring from ",
+        "suffix": " import corpus_bleu from torch import nn from torch.utils.data import Dataset, Sampler  fr"
+      }
+    },
+    {
+      "@id": "dep_rouge_score",
+      "@type": "Dependency",
+      "packageName": "rouge-score",
+      "name": "rouge-score",
+      "version": null,
+      "dependencyType": "inferred",
+      "isOptional": false,
+      "wasDerivedFrom": "code",
+      "codeReference": "seq2seq/utils.py:16",
+      "path": "seq2seq/utils.py",
+      "start_char_doc": 290,
+      "end_char_doc": 295,
+      "start_line": 16,
+      "end_line": 16,
+      "context": {
+        "prefix": ", Union  import git import numpy as np import torch import torch.distributed as dist from ",
+        "suffix": "_score import rouge_scorer, scoring from sacrebleu import corpus_bleu from torch import nn"
+      }
+    },
+    {
+      "@id": "dep_sentencepiece",
+      "@type": "Dependency",
+      "packageName": "sentencepiece",
+      "name": "sentencepiece",
+      "version": null,
+      "dependencyType": "optional",
+      "isOptional": true,
+      "wasDerivedFrom": "code",
+      "codeReference": "transformers/setup.py:128",
+      "path": "transformers/setup.py",
+      "start_char_doc": 5613,
+      "end_char_doc": 5626,
+      "start_line": 128,
+      "end_line": 128,
+      "context": {
+        "prefix": "27\",         # for OpenAI GPT         \"regex != 2019.12.17\",         # for XLNet         \"",
+        "suffix": " != 0.1.92\",         # for XLM         \"sacremoses\",     ],     extras_require=extras,    "
+      }
+    },
+    {
+      "@id": "datasource_e2e",
+      "@type": "DataSource",
+      "name": "E2E NLG data files",
+      "type": "text-file",
+      "wasDerivedFrom": "code",
+      "codeReference": "data/e2e_data/src1_train.txt:1",
+      "path": "data/e2e_data/src1_train.txt",
+      "start_char_doc": 0,
+      "end_char_doc": 17,
+      "start_line": 1,
+      "end_line": 1,
+      "context": {
+        "prefix": "",
+        "suffix": " | Type : pub | price : more than £ 30 | customer rating : 5 out of 5 | near : Café Adriat"
+      }
+    },
+    {
+      "@id": "datasource_webnlg",
+      "@type": "DataSource",
+      "name": "WebNLG Challenge 2017 JSON/XML files",
+      "type": "json/xml",
+      "wasDerivedFrom": "code",
+      "codeReference": "data/webnlg_challenge_2017/train.json:2",
+      "path": "data/webnlg_challenge_2017/train.json",
+      "start_char_doc": 6,
+      "end_char_doc": 15,
+      "start_line": 2,
+      "end_line": 2,
+      "context": {
+        "prefix": "{     ",
+        "suffix": ": [         {             \"1\": {                 \"category\": \"Airport\",                 \"d"
+      }
+    },
+    {
+      "@id": "datasource_dart",
+      "@type": "DataSource",
+      "name": "DART v1.1.1 JSON/XML files",
+      "type": "json/xml",
+      "wasDerivedFrom": "code",
+      "codeReference": "data/dart/dart-v1.1.1-full-train.json:3",
+      "path": "data/dart/dart-v1.1.1-full-train.json",
+      "start_char_doc": 10,
+      "end_char_doc": 21,
+      "start_line": 3,
+      "end_line": 3,
+      "context": {
+        "prefix": "[   {     ",
+        "suffix": ": [       [         \"First Clearing\",         \"LOCATION\",         \"On NYS 52 1 Mi. Youngsv"
+      }
+    },
+    {
+      "@id": "datasource_xsum",
+      "@type": "DataSource",
+      "name": "XSum external data path",
+      "type": "external-dataset",
+      "wasDerivedFrom": "code",
+      "codeReference": "seq2seq/train_bart.py:117",
+      "path": "seq2seq/train_bart.py",
+      "start_char_doc": 5033,
+      "end_char_doc": 5050,
+      "start_line": 117,
+      "end_line": 117,
+      "context": {
+        "prefix": "l O1 '          assert args.optim_prefix == 'yes'       elif args.mode == 'xsum':         ",
+        "suffix": "         folder_name = \"xsum_models/\"         max_source_length = 1024         max_target_"
+      }
+    },
+    {
+      "@id": "datasource_cnndm",
+      "@type": "DataSource",
+      "name": "CNN/DailyMail external data path",
+      "type": "external-dataset",
+      "wasDerivedFrom": "code",
+      "codeReference": "seq2seq/train_bart.py:99",
+      "path": "seq2seq/train_bart.py",
+      "start_char_doc": 4368,
+      "end_char_doc": 4387,
+      "start_line": 99,
+      "end_line": 99,
+      "context": {
+        "prefix": "id_small.txt\"         folder_name = \"wp_models/\"      elif args.mode == 'cnn_dm':         ",
+        "suffix": "         folder_name = \"cnndm_models/\"         max_source_length = 512         max_target_"
+      }
+    },
+    {
+      "@id": "datasource_gpt2_medium",
+      "@type": "DataSource",
+      "name": "gpt2-medium pretrained model/cache",
+      "type": "pretrained-model",
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/train_e2e.py:286",
+      "path": "gpt2/train_e2e.py",
+      "start_char_doc": 12933,
+      "end_char_doc": 12958,
+      "start_line": 286,
+      "end_line": 286,
+      "context": {
+        "prefix": "is not None and 'large' in args.notes:         OLD_MODEL = \"gpt2-large\"     else:         ",
+        "suffix": "      app = \"--optim_prefix {} --preseqlen {} --prefix_mode {} --format_mode {} \" \\       "
+      }
+    },
+    {
+      "@id": "datasource_bart_large",
+      "@type": "DataSource",
+      "name": "facebook/bart-large pretrained model",
+      "type": "pretrained-model",
+      "wasDerivedFrom": "code",
+      "codeReference": "seq2seq/train_bart.py:215",
+      "path": "seq2seq/train_bart.py",
+      "start_char_doc": 9308,
+      "end_char_doc": 9341,
+      "start_line": 215,
+      "end_line": 215,
+      "context": {
+        "prefix": "FILE)     Model_FILE = '{}{}'.format(folder_name, Model_FILE)     print(Model_FILE)       ",
+        "suffix": "      app = \"--optim_prefix {} --preseqlen {} --prefix_mode {} --format_mode {} \" \\       "
+      }
+    },
+    {
+      "@id": "dataset_e2e_train",
+      "@type": "MLS_Dataset",
+      "name": "E2E train split",
+      "description": "E2E table-to-text training source-target file.",
+      "numInstances": 42061,
+      "modality": "text/table/graph-to-text",
+      "language": "English",
+      "source": {
+        "@id": "datasource_e2e"
+      },
+      "processedThrough": [
+        {
+          "@id": "process_tokenization"
+        },
+        {
+          "@id": "process_line_by_line_dataset"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "data/e2e_data/src1_train.txt:1",
+      "path": "data/e2e_data/src1_train.txt",
+      "start_char_doc": 0,
+      "end_char_doc": 17,
+      "start_line": 1,
+      "end_line": 1,
+      "context": {
+        "prefix": "",
+        "suffix": " | Type : pub | price : more than £ 30 | customer rating : 5 out of 5 | near : Café Adriat"
+      }
+    },
+    {
+      "@id": "dataset_e2e_valid",
+      "@type": "MLS_Dataset",
+      "name": "E2E validation split",
+      "description": "E2E table-to-text validation source-target file.",
+      "numInstances": 4672,
+      "modality": "text/table/graph-to-text",
+      "language": "English",
+      "source": {
+        "@id": "datasource_e2e"
+      },
+      "processedThrough": [
+        {
+          "@id": "process_tokenization"
+        },
+        {
+          "@id": "process_line_by_line_dataset"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "data/e2e_data/src1_valid.txt:1",
+      "path": "data/e2e_data/src1_valid.txt",
+      "start_char_doc": 0,
+      "end_char_doc": 16,
+      "start_line": 1,
+      "end_line": 1,
+      "context": {
+        "prefix": "",
+        "suffix": " | area : city centre | family friendly : no||There is a place in the city centre , Alimen"
+      }
+    },
+    {
+      "@id": "dataset_e2e_test",
+      "@type": "MLS_Dataset",
+      "name": "E2E test split",
+      "description": "E2E table-to-text test source-target file.",
+      "numInstances": 4693,
+      "modality": "text/table/graph-to-text",
+      "language": "English",
+      "source": {
+        "@id": "datasource_e2e"
+      },
+      "processedThrough": [
+        {
+          "@id": "process_tokenization"
+        },
+        {
+          "@id": "process_line_by_line_dataset"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "data/e2e_data/src1_test.txt:1",
+      "path": "data/e2e_data/src1_test.txt",
+      "start_char_doc": 0,
+      "end_char_doc": 17,
+      "start_line": 1,
+      "end_line": 1,
+      "context": {
+        "prefix": "",
+        "suffix": " | Type : coffee shop | area : city centre||A coffee shop in the city centre area called B"
+      }
+    },
+    {
+      "@id": "dataset_webnlg_train",
+      "@type": "MLS_Dataset",
+      "name": "WebNLG 2017 train split",
+      "description": "WebNLG challenge training JSON entries for graph-to-text generation.",
+      "numInstances": 499716,
+      "modality": "text/table/graph-to-text",
+      "language": "English",
+      "source": {
+        "@id": "datasource_webnlg"
+      },
+      "processedThrough": [
+        {
+          "@id": "process_tokenization"
+        },
+        {
+          "@id": "process_line_by_line_dataset"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "data/webnlg_challenge_2017/train.json:2",
+      "path": "data/webnlg_challenge_2017/train.json",
+      "start_char_doc": 6,
+      "end_char_doc": 15,
+      "start_line": 2,
+      "end_line": 2,
+      "context": {
+        "prefix": "{     ",
+        "suffix": ": [         {             \"1\": {                 \"category\": \"Airport\",                 \"d"
+      }
+    },
+    {
+      "@id": "dataset_webnlg_dev",
+      "@type": "MLS_Dataset",
+      "name": "WebNLG 2017 dev split",
+      "description": "WebNLG challenge dev JSON entries.",
+      "numInstances": 62320,
+      "modality": "text/table/graph-to-text",
+      "language": "English",
+      "source": {
+        "@id": "datasource_webnlg"
+      },
+      "processedThrough": [
+        {
+          "@id": "process_tokenization"
+        },
+        {
+          "@id": "process_line_by_line_dataset"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "data/webnlg_challenge_2017/dev.json:2",
+      "path": "data/webnlg_challenge_2017/dev.json",
+      "start_char_doc": 6,
+      "end_char_doc": 15,
+      "start_line": 2,
+      "end_line": 2,
+      "context": {
+        "prefix": "{     ",
+        "suffix": ": [         {             \"1\": {                 \"category\": \"Airport\",                 \"d"
+      }
+    },
+    {
+      "@id": "dataset_webnlg_test",
+      "@type": "MLS_Dataset",
+      "name": "WebNLG 2017 test split",
+      "description": "WebNLG challenge test JSON entries.",
+      "numInstances": 135057,
+      "modality": "text/table/graph-to-text",
+      "language": "English",
+      "source": {
+        "@id": "datasource_webnlg"
+      },
+      "processedThrough": [
+        {
+          "@id": "process_tokenization"
+        },
+        {
+          "@id": "process_line_by_line_dataset"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "data/webnlg_challenge_2017/test.json:2",
+      "path": "data/webnlg_challenge_2017/test.json",
+      "start_char_doc": 6,
+      "end_char_doc": 15,
+      "start_line": 2,
+      "end_line": 2,
+      "context": {
+        "prefix": "{     ",
+        "suffix": ": [         {             \"1\": {                 \"category\": \"Airport\",                 \"d"
+      }
+    },
+    {
+      "@id": "dataset_dart_train",
+      "@type": "MLS_Dataset",
+      "name": "DART train split",
+      "description": "DART v1.1.1 table/triple-to-text train JSON.",
+      "numInstances": 968030,
+      "modality": "text/table/graph-to-text",
+      "language": "English",
+      "source": {
+        "@id": "datasource_dart"
+      },
+      "processedThrough": [
+        {
+          "@id": "process_tokenization"
+        },
+        {
+          "@id": "process_line_by_line_dataset"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "data/dart/dart-v1.1.1-full-train.json:3",
+      "path": "data/dart/dart-v1.1.1-full-train.json",
+      "start_char_doc": 10,
+      "end_char_doc": 21,
+      "start_line": 3,
+      "end_line": 3,
+      "context": {
+        "prefix": "[   {     ",
+        "suffix": ": [       [         \"First Clearing\",         \"LOCATION\",         \"On NYS 52 1 Mi. Youngsv"
+      }
+    },
+    {
+      "@id": "dataset_dart_dev",
+      "@type": "MLS_Dataset",
+      "name": "DART dev split",
+      "description": "DART v1.1.1 dev JSON.",
+      "numInstances": 98153,
+      "modality": "text/table/graph-to-text",
+      "language": "English",
+      "source": {
+        "@id": "datasource_dart"
+      },
+      "processedThrough": [
+        {
+          "@id": "process_tokenization"
+        },
+        {
+          "@id": "process_line_by_line_dataset"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "data/dart/dart-v1.1.1-full-dev.json:3",
+      "path": "data/dart/dart-v1.1.1-full-dev.json",
+      "start_char_doc": 10,
+      "end_char_doc": 21,
+      "start_line": 3,
+      "end_line": 3,
+      "context": {
+        "prefix": "[   {     ",
+        "suffix": ": [       [         \"Mars Hill College\",         \"JOINED\",         \"1973\"       ],       ["
+      }
+    },
+    {
+      "@id": "dataset_dart_test",
+      "@type": "MLS_Dataset",
+      "name": "DART test split",
+      "description": "DART v1.1.1 test JSON.",
+      "numInstances": 214472,
+      "modality": "text/table/graph-to-text",
+      "language": "English",
+      "source": {
+        "@id": "datasource_dart"
+      },
+      "processedThrough": [
+        {
+          "@id": "process_tokenization"
+        },
+        {
+          "@id": "process_line_by_line_dataset"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "data/dart/dart-v1.1.1-full-test.json:3",
+      "path": "data/dart/dart-v1.1.1-full-test.json",
+      "start_char_doc": 10,
+      "end_char_doc": 21,
+      "start_line": 3,
+      "end_line": 3,
+      "context": {
+        "prefix": "[   {     ",
+        "suffix": ": [       [         \"Hawaii Five-O\",         \"NOTES\",         \"Episode: The Flight of the "
+      }
+    },
+    {
+      "@id": "dataset_xsum",
+      "@type": "MLS_Dataset",
+      "name": "XSum summarization dataset",
+      "description": "External XSum source/target data used by BART summarization experiments.",
+      "numInstances": null,
+      "modality": "text summarization",
+      "language": "English",
+      "source": {
+        "@id": "datasource_xsum"
+      },
+      "processedThrough": [
+        {
+          "@id": "process_tokenization"
+        },
+        {
+          "@id": "process_line_by_line_dataset"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "seq2seq/train_bart.py:117",
+      "path": "seq2seq/train_bart.py",
+      "start_char_doc": 5033,
+      "end_char_doc": 5050,
+      "start_line": 117,
+      "end_line": 117,
+      "context": {
+        "prefix": "l O1 '          assert args.optim_prefix == 'yes'       elif args.mode == 'xsum':         ",
+        "suffix": "         folder_name = \"xsum_models/\"         max_source_length = 1024         max_target_"
+      }
+    },
+    {
+      "@id": "dataset_cnndm",
+      "@type": "MLS_Dataset",
+      "name": "CNN/DailyMail summarization dataset",
+      "description": "External CNN/DailyMail source/target data used by BART summarization experiments.",
+      "numInstances": null,
+      "modality": "text summarization",
+      "language": "English",
+      "source": {
+        "@id": "datasource_cnndm"
+      },
+      "processedThrough": [
+        {
+          "@id": "process_tokenization"
+        },
+        {
+          "@id": "process_line_by_line_dataset"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "seq2seq/train_bart.py:99",
+      "path": "seq2seq/train_bart.py",
+      "start_char_doc": 4368,
+      "end_char_doc": 4387,
+      "start_line": 99,
+      "end_line": 99,
+      "context": {
+        "prefix": "id_small.txt\"         folder_name = \"wp_models/\"      elif args.mode == 'cnn_dm':         ",
+        "suffix": "         folder_name = \"cnndm_models/\"         max_source_length = 512         max_target_"
+      }
+    },
+    {
+      "@id": "task_prefix_tuning",
+      "@type": "MLS_Task",
+      "name": "Prefix-tuning",
+      "description": "Optimize continuous prompts/prefixes while freezing pretrained language-model weights.",
+      "category": "parameter-efficient tuning",
+      "metrics": "ROUGE/BLEU/loss",
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:87",
+      "path": "README.md",
+      "start_char_doc": 2972,
+      "end_char_doc": 3001,
+      "start_line": 87,
+      "end_line": 87,
+      "context": {
+        "prefix": "ase refer to our paper.   ```bibtex @misc{li2021prefixtuning,       title={Prefix-Tuning: ",
+        "suffix": " for Generation},        author={Xiang Lisa Li and Percy Liang},       year={2021},       "
+      }
+    },
+    {
+      "@id": "task_table_to_text",
+      "@type": "MLS_Task",
+      "name": "Table-to-text generation",
+      "description": "Generate text from E2E/WebNLG/DART structured inputs.",
+      "category": "conditional generation",
+      "metrics": "ROUGE/BLEU/loss",
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:22",
+      "path": "README.md",
+      "start_char_doc": 1185,
+      "end_char_doc": 1210,
+      "start_line": 22,
+      "end_line": 22,
+      "context": {
+        "prefix": " code for GPT2 style autoregressive LM, the code is in ``gpt2/``. This corresponds to the ",
+        "suffix": " in the paper.   To run the code for encoder-decoder architecture like BART,  the code is "
+      }
+    },
+    {
+      "@id": "task_summarization",
+      "@type": "MLS_Task",
+      "name": "Summarization",
+      "description": "Generate summaries with encoder-decoder BART-style models.",
+      "category": "summarization",
+      "metrics": "ROUGE/BLEU/loss",
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:24",
+      "path": "README.md",
+      "start_char_doc": 1340,
+      "end_char_doc": 1365,
+      "start_line": 24,
+      "end_line": 24,
+      "context": {
+        "prefix": "oder-decoder architecture like BART,  the code is in ``seq2seq``. This corresponds to the ",
+        "suffix": " in the paper.   The two primary scripts I used to run my codes are `` gpt2/train_e2e.py``"
+      }
+    },
+    {
+      "@id": "task_conditional_generation",
+      "@type": "MLS_Task",
+      "name": "Conditional text generation",
+      "description": "Decode conditional outputs from trained/prefix-tuned GPT-2 models.",
+      "category": "generation",
+      "metrics": "ROUGE/BLEU/loss",
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/run_generation.py:17",
+      "path": "gpt2/run_generation.py",
+      "start_char_doc": 763,
+      "end_char_doc": 790,
+      "start_line": 17,
+      "end_line": 17,
+      "context": {
+        "prefix": " for the specific language governing permissions and # limitations under the License. \"\"\" ",
+        "suffix": " with the auto-regressive models of the library (GPT/GPT-2/CTRL/Transformer-XL/XLNet) \"\"\" "
+      }
+    },
+    {
+      "@id": "task_low_data_generation",
+      "@type": "MLS_Task",
+      "name": "Low-data generation",
+      "description": "Prefix initialization and tuning in low-data settings.",
+      "category": "low-resource generation",
+      "metrics": "ROUGE/BLEU/loss",
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/train_e2e.py:22",
+      "path": "gpt2/train_e2e.py",
+      "start_char_doc": 927,
+      "end_char_doc": 934,
+      "start_line": 22,
+      "end_line": 22,
+      "context": {
+        "prefix": "arser.add_argument('--notes', type=str, default=None, help='')     parser.add_argument('--",
+        "suffix": "_token', type=str, default='summarize', help='')     parser.add_argument('--use_lowdata_to"
+      }
+    },
+    {
+      "@id": "exp_gpt2_table_to_text",
+      "@type": "Experiment",
+      "name": "GPT-2 table-to-text prefix-tuning",
+      "description": "GPT-2 table-to-text prefix-tuning",
+      "objective": "Evaluate prefix-tuning and related baselines for natural language generation.",
+      "methodology": "Run project wrapper scripts that call modified Transformers training, prefix modules, and generation/evaluation code.",
+      "realizes": {
+        "@id": "task_table_to_text"
+      },
+      "usesData": [
+        {
+          "@id": "dataset_e2e_train"
+        },
+        {
+          "@id": "dataset_webnlg_train"
+        },
+        {
+          "@id": "dataset_dart_train"
+        }
+      ],
+      "executes": {
+        "@id": "impl_gpt2_train_e2e"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/train_e2e.py:85",
+      "path": "gpt2/train_e2e.py",
+      "start_char_doc": 4047,
+      "end_char_doc": 4067,
+      "start_line": 85,
+      "end_line": 85,
+      "context": {
+        "prefix": "   load_prefix_model = True     else:         load_prefix_model = False      assert  args.",
+        "suffix": ", 'triples', 'webnlg', 'writingPrompts', 'cnndm', 'xsum', 'sentiment', 'topic',           "
+      }
+    },
+    {
+      "@id": "exp_bart_summarization",
+      "@type": "Experiment",
+      "name": "BART summarization prefix-tuning",
+      "description": "BART summarization prefix-tuning",
+      "objective": "Evaluate prefix-tuning and related baselines for natural language generation.",
+      "methodology": "Run project wrapper scripts that call modified Transformers training, prefix modules, and generation/evaluation code.",
+      "realizes": {
+        "@id": "task_summarization"
+      },
+      "usesData": [
+        {
+          "@id": "dataset_xsum"
+        },
+        {
+          "@id": "dataset_cnndm"
+        }
+      ],
+      "executes": {
+        "@id": "impl_seq2seq_train_bart"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "seq2seq/train_bart.py:1",
+      "path": "seq2seq/train_bart.py",
+      "start_char_doc": 0,
+      "end_char_doc": 80,
+      "start_line": 1,
+      "end_line": 4,
+      "context": {
+        "prefix": "",
+        "suffix": "ord _ if not sys.warnoptions:     import warnings     warnings.simplefilter(\"ignore\")  if "
+      }
+    },
+    {
+      "@id": "exp_baseline_finetune_adapter",
+      "@type": "Experiment",
+      "name": "Finetune and adapter baselines",
+      "description": "Finetune and adapter baselines",
+      "objective": "Evaluate prefix-tuning and related baselines for natural language generation.",
+      "methodology": "Run project wrapper scripts that call modified Transformers training, prefix modules, and generation/evaluation code.",
+      "realizes": {
+        "@id": "task_prefix_tuning"
+      },
+      "usesData": [
+        {
+          "@id": "dataset_e2e_train"
+        },
+        {
+          "@id": "dataset_xsum"
+        }
+      ],
+      "executes": {
+        "@id": "impl_gpt2_train_e2e"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:51",
+      "path": "README.md",
+      "start_char_doc": 2148,
+      "end_char_doc": 2173,
+      "start_line": 51,
+      "end_line": 51,
+      "context": {
+        "prefix": "  --epoch 30  --gradient_accumulation_step 3 --learning_rate 0.00005  --mid_dim 800 ```   ",
+        "suffix": "   ``` cd gpt2;  python train_e2e.py --tuning_mode {finetune/adaptertune} --epoch 5 --lear"
+      }
+    },
+    {
+      "@id": "exp_gpt2_decode",
+      "@type": "Experiment",
+      "name": "GPT-2 decoding/evaluation",
+      "description": "GPT-2 decoding/evaluation",
+      "objective": "Evaluate prefix-tuning and related baselines for natural language generation.",
+      "methodology": "Run project wrapper scripts that call modified Transformers training, prefix modules, and generation/evaluation code.",
+      "realizes": {
+        "@id": "task_conditional_generation"
+      },
+      "usesData": [
+        {
+          "@id": "dataset_e2e_test"
+        },
+        {
+          "@id": "dataset_webnlg_test"
+        },
+        {
+          "@id": "dataset_dart_test"
+        }
+      ],
+      "executes": {
+        "@id": "impl_gpt2_generation"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/gen.py:264",
+      "path": "gpt2/gen.py",
+      "start_char_doc": 9081,
+      "end_char_doc": 9105,
+      "start_line": 264,
+      "end_line": 264,
+      "context": {
+        "prefix": "_name:             tuning_mode = 'adaptertune'             app = ''        COMMANDLINE = \"",
+        "suffix": " \\         --model_type=gpt2 \\         --length 100 \\         --model_name_or_path={} \\   "
+      }
+    },
+    {
+      "@id": "method_prefix_tuning",
+      "@type": "Method",
+      "name": "Prefix-tuning",
+      "description": "Continuous prefix/prompt vectors are optimized while base language model parameters are frozen.",
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:87",
+      "path": "README.md",
+      "start_char_doc": 2957,
+      "end_char_doc": 3001,
+      "start_line": 87,
+      "end_line": 87,
+      "context": {
+        "prefix": "nd results, please refer to our paper.   ```bibtex @misc{li2021prefixtuning,       title={",
+        "suffix": " for Generation},        author={Xiang Lisa Li and Percy Liang},       year={2021},       "
+      }
+    },
+    {
+      "@id": "method_direct_prefix_optimization",
+      "@type": "Method",
+      "name": "Direct prefix optimization",
+      "description": "Optimizes prefix past-key-value parameters directly or through MLP reparameterization.",
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/train_control.py:98",
+      "path": "gpt2/train_control.py",
+      "start_char_doc": 3088,
+      "end_char_doc": 3118,
+      "start_line": 98,
+      "end_line": 98,
+      "context": {
+        "prefix": " self.mode_para = 0             print('PrefixTuning')             print('preseqlen is {}, ",
+        "suffix": "'.format(self.preseqlen))             if self.lowdata and self.lowdata_token is not None: "
+      }
+    },
+    {
+      "@id": "method_mlp_reparameterization",
+      "@type": "Method",
+      "name": "MLP prefix reparameterization",
+      "description": "Maps learned prefix embeddings through Linear-Tanh-Linear networks to layer-wise key/value prefixes.",
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/train_control.py:108",
+      "path": "gpt2/train_control.py",
+      "start_char_doc": 3734,
+      "end_char_doc": 3768,
+      "start_line": 108,
+      "end_line": 108,
+      "context": {
+        "prefix": "()                 self.wte = nn.Embedding(self.preseqlen, config.n_embd)                 ",
+        "suffix": "(                     nn.Linear(config.n_embd, self.mid_dim),                     nn.Tanh("
+      }
+    },
+    {
+      "@id": "method_infix_prefix",
+      "@type": "Method",
+      "name": "Infix prefix formatting",
+      "description": "Adds prefix representations in infix formatting modes.",
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/train_control.py:127",
+      "path": "gpt2/train_control.py",
+      "start_char_doc": 4710,
+      "end_char_doc": 4729,
+      "start_line": 127,
+      "end_line": 127,
+      "context": {
+        "prefix": " = nn.Embedding(self.preseqlen, config.n_embd)                     self.get_prompt = self.",
+        "suffix": "                 else:                     self.get_prompt = self.get_prompt_p5           "
+      }
+    },
+    {
+      "@id": "method_adapter_tuning",
+      "@type": "Method",
+      "name": "Adapter tuning baseline",
+      "description": "Adapter baseline mode with adapter design and bottleneck parameters.",
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/train_e2e.py:79",
+      "path": "gpt2/train_e2e.py",
+      "start_char_doc": 3895,
+      "end_char_doc": 3906,
+      "start_line": 79,
+      "end_line": 79,
+      "context": {
+        "prefix": "']     assert args.tuning_mode in ['prefixtune', 'finetune', 'finetune-top', 'bothtune', '",
+        "suffix": "']     if args.prefix_model_path is not None:         load_prefix_model = True     else:  "
+      }
+    },
+    {
+      "@id": "method_finetuning",
+      "@type": "Method",
+      "name": "Full or top-layer finetuning baseline",
+      "description": "Baseline modes for finetuning all or selected top layers.",
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/train_e2e.py:79",
+      "path": "gpt2/train_e2e.py",
+      "start_char_doc": 3867,
+      "end_char_doc": 3879,
+      "start_line": 79,
+      "end_line": 79,
+      "context": {
+        "prefix": "t', 'infix', 'peek', 'nopeek']     assert args.tuning_mode in ['prefixtune', 'finetune', '",
+        "suffix": "', 'bothtune', 'adaptertune']     if args.prefix_model_path is not None:         load_pref"
+      }
+    },
+    {
+      "@id": "method_beam_decoding",
+      "@type": "Method",
+      "name": "Beam decoding",
+      "description": "Uses beam search in generation/evaluation for seq2seq and GPT-style decoding.",
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/run_generation.py:1191",
+      "path": "gpt2/run_generation.py",
+      "start_char_doc": 50124,
+      "end_char_doc": 50135,
+      "start_line": 1191,
+      "end_line": 1191,
+      "context": {
+        "prefix": "alty, ##args.repetition_penalty,                     do_sample=False,                     ",
+        "suffix": ",                     bad_words_ids=[[628], [198]] if True else None,                     "
+      }
+    },
+    {
+      "@id": "method_rouge_evaluation",
+      "@type": "Method",
+      "name": "ROUGE evaluation",
+      "description": "Computes ROUGE metrics for summarization generation outputs.",
+      "wasDerivedFrom": "code",
+      "codeReference": "seq2seq/finetune.py:27",
+      "path": "seq2seq/finetune.py",
+      "start_char_doc": 656,
+      "end_char_doc": 671,
+      "start_line": 27,
+      "end_line": 27,
+      "context": {
+        "prefix": " LegacySeq2SeqDataset,     Seq2SeqDataset,     assert_all_frozen,     calculate_bleu,     ",
+        "suffix": ",     flatten_list,     freeze_params,     get_git_info,     label_smoothed_nll_loss,     "
+      }
+    },
+    {
+      "@id": "method_bleu_evaluation",
+      "@type": "Method",
+      "name": "BLEU evaluation",
+      "description": "Computes BLEU metrics for translation/generation evaluation helper paths.",
+      "wasDerivedFrom": "code",
+      "codeReference": "seq2seq/finetune.py:26",
+      "path": "seq2seq/finetune.py",
+      "start_char_doc": 636,
+      "end_char_doc": 650,
+      "start_line": 26,
+      "end_line": 26,
+      "context": {
+        "prefix": "     ROUGE_KEYS,     LegacySeq2SeqDataset,     Seq2SeqDataset,     assert_all_frozen,     ",
+        "suffix": ",     calculate_rouge,     flatten_list,     freeze_params,     get_git_info,     label_sm"
+      }
+    },
+    {
+      "@id": "model_gpt2_prefix_tuning",
+      "@type": "MLS_Model",
+      "name": "GPT-2 PrefixTuning",
+      "architecture": "GPT2PreTrainedModel + prefix MLP/past-key-values",
+      "description": "Prefix-tuning model for autoregressive GPT-2.",
+      "subMethodOf": {
+        "@id": "method_prefix_tuning"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/train_control.py:7",
+      "path": "gpt2/train_control.py",
+      "start_char_doc": 149,
+      "end_char_doc": 167,
+      "start_line": 7,
+      "end_line": 7,
+      "context": {
+        "prefix": "ormers import PreTrainedModel, GPT2PreTrainedModel, GPT2Tokenizer from torch import  nn   ",
+        "suffix": "(GPT2PreTrainedModel):     \"\"\"Classification Head for  transformer encoders\"\"\"     def __i"
+      }
+    },
+    {
+      "@id": "model_gpt2_prefix_emb_tuning",
+      "@type": "MLS_Model",
+      "name": "GPT-2 PrefixEmbTuning",
+      "architecture": "GPT2 prefix embedding tuning",
+      "description": "Embedding-mode prefix tuning model for GPT-2.",
+      "subMethodOf": {
+        "@id": "method_prefix_tuning"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/train_control.py:399",
+      "path": "gpt2/train_control.py",
+      "start_char_doc": 16403,
+      "end_char_doc": 16424,
+      "start_line": 399,
+      "end_line": 399,
+      "context": {
+        "prefix": ",                            return_dict=return_dict, **kwargs)          return output    ",
+        "suffix": "(GPT2PreTrainedModel):     \"\"\"Classification Head for  transformer encoders\"\"\"     def __i"
+      }
+    },
+    {
+      "@id": "model_bart_prefix_tuning",
+      "@type": "MLS_Model",
+      "name": "BART PrefixTuning",
+      "architecture": "PretrainedBartModel + encoder/decoder/cross prefixes",
+      "description": "Prefix-tuning model for BART-style encoder-decoder generation.",
+      "subMethodOf": {
+        "@id": "method_prefix_tuning"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "seq2seq/prefixTuning.py:7",
+      "path": "seq2seq/prefixTuning.py",
+      "start_char_doc": 170,
+      "end_char_doc": 188,
+      "start_line": 7,
+      "end_line": 7,
+      "context": {
+        "prefix": "nedModel, GPT2PreTrainedModel, GPT2Tokenizer, PretrainedBartModel from torch import  nn   ",
+        "suffix": "(PretrainedBartModel):     \"\"\"Classification Head for  transformer encoders\"\"\"     def __i"
+      }
+    },
+    {
+      "@id": "model_gpt2_medium",
+      "@type": "MLS_Model",
+      "name": "gpt2-medium",
+      "architecture": "GPT-2 medium pretrained LM",
+      "description": "Base pretrained model for GPT-2 table-to-text experiments.",
+      "subMethodOf": {
+        "@id": "method_prefix_tuning"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/train_e2e.py:286",
+      "path": "gpt2/train_e2e.py",
+      "start_char_doc": 12933,
+      "end_char_doc": 12958,
+      "start_line": 286,
+      "end_line": 286,
+      "context": {
+        "prefix": "is not None and 'large' in args.notes:         OLD_MODEL = \"gpt2-large\"     else:         ",
+        "suffix": "      app = \"--optim_prefix {} --preseqlen {} --prefix_mode {} --format_mode {} \" \\       "
+      }
+    },
+    {
+      "@id": "model_bart_large",
+      "@type": "MLS_Model",
+      "name": "facebook/bart-large",
+      "architecture": "BART-large pretrained encoder-decoder",
+      "description": "Base pretrained BART model for summarization prefix-tuning.",
+      "subMethodOf": {
+        "@id": "method_prefix_tuning"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "seq2seq/train_bart.py:215",
+      "path": "seq2seq/train_bart.py",
+      "start_char_doc": 9321,
+      "end_char_doc": 9340,
+      "start_line": 215,
+      "end_line": 215,
+      "context": {
+        "prefix": "el_FILE = '{}{}'.format(folder_name, Model_FILE)     print(Model_FILE)       OLD_MODEL = '",
+        "suffix": "'      app = \"--optim_prefix {} --preseqlen {} --prefix_mode {} --format_mode {} \" \\      "
+      }
+    },
+    {
+      "@id": "model_gpt2_adapter",
+      "@type": "MLS_Model",
+      "name": "GPT2LMHeadModelAdapter",
+      "architecture": "GPT-2 adapter baseline",
+      "description": "Adapter baseline model imported from the modified Transformers fork.",
+      "subMethodOf": {
+        "@id": "method_prefix_tuning"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/run_language_modeling.py:81",
+      "path": "gpt2/run_language_modeling.py",
+      "start_char_doc": 3091,
+      "end_char_doc": 3113,
+      "start_line": 81,
+      "end_line": 81,
+      "context": {
+        "prefix": "dModel,     BertTokenizerFast,     BertModel,     AutoModelForSequenceClassification,     ",
+        "suffix": ", )  from trainer_prefix import Trainer_Prefix    logger = logging.getLogger(__name__)   M"
+      }
+    },
+    {
+      "@id": "algo_gpt2_get_prompt_p5",
+      "@type": "MLS_Algorithm",
+      "name": "GPT2 PrefixTuning.get_prompt_p5",
+      "description": "Builds prefix past-key-values from learned prefix tokens and MLP.",
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/train_control.py:230",
+      "path": "gpt2/train_control.py",
+      "start_char_doc": 9082,
+      "end_char_doc": 9099,
+      "start_line": 230,
+      "end_line": 230,
+      "context": {
+        "prefix": "xpand(-1, bsz, -1, -1, -1)         # print(temp.shape)         return temp.split(2)       ",
+        "suffix": "(self, control_code=None, gpt2=None, bsz=None):         input_tokens = self.input_tokens.u"
+      }
+    },
+    {
+      "@id": "algo_gpt2_get_prompt_p5_infix",
+      "@type": "MLS_Algorithm",
+      "name": "GPT2 PrefixTuning.get_prompt_p5_infix",
+      "description": "Builds infix prefix prompts using source embeddings and cached states.",
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/train_control.py:241",
+      "path": "gpt2/train_control.py",
+      "start_char_doc": 9746,
+      "end_char_doc": 9769,
+      "start_line": 241,
+      "end_line": 241,
+      "context": {
+        "prefix": "s = past_key_values.permute([2, 0, 3, 1, 4]).split(2)         return past_key_values      ",
+        "suffix": "(self, src, control_code=None, gpt2=None, bsz=None, attn_mask=None):         # VERSION1. i"
+      }
+    },
+    {
+      "@id": "algo_gpt2_get_prompt_p2",
+      "@type": "MLS_Algorithm",
+      "name": "GPT2 shallow prompt generation",
+      "description": "Reshapes direct prefix parameters into past-key-values.",
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/train_control.py:215",
+      "path": "gpt2/train_control.py",
+      "start_char_doc": 8394,
+      "end_char_doc": 8411,
+      "start_line": 215,
+      "end_line": 215,
+      "context": {
+        "prefix": "     optimizer_temp.step()             self.control_trans.zero_grad()         return      ",
+        "suffix": "(self, control_code=None, gpt2=None, bsz=None):         assert bsz is not None         tem"
+      }
+    },
+    {
+      "@id": "algo_lowdata_init_train3",
+      "@type": "MLS_Algorithm",
+      "name": "lowdata_init_train3",
+      "description": "Initializes/train prefix parameters from low-data token past-key-values.",
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/train_control.py:193",
+      "path": "gpt2/train_control.py",
+      "start_char_doc": 7526,
+      "end_char_doc": 7549,
+      "start_line": 193,
+      "end_line": 193,
+      "context": {
+        "prefix": "output[0].shape)             output = torch.cat(output, dim=0)         return output      ",
+        "suffix": "(self, gpt2, sample_input, epochs=500): # prev=500         self = self.cuda()         gpt2"
+      }
+    },
+    {
+      "@id": "algo_bart_get_prompt",
+      "@type": "MLS_Algorithm",
+      "name": "BART prefix prompt generation",
+      "description": "Builds encoder/decoder/cross-attention prefix states for BART.",
+      "wasDerivedFrom": "code",
+      "codeReference": "seq2seq/prefixTuning.py:309",
+      "path": "seq2seq/prefixTuning.py",
+      "start_char_doc": 13621,
+      "end_char_doc": 13635,
+      "start_line": 309,
+      "end_line": 309,
+      "context": {
+        "prefix": "output = torch.cat(output, dim=0).detach()         return torch.nn.Parameter(output)      ",
+        "suffix": "_p22(self, control_code=None, gpt2=None, bsz=None):         assert bsz is not None        "
+      }
+    },
+    {
+      "@id": "algo_read_e2e_files",
+      "@type": "MLS_Algorithm",
+      "name": "read_e2e_files",
+      "description": "Reads E2E src||target files for generation evaluation.",
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/run_generation.py:150",
+      "path": "gpt2/run_generation.py",
+      "start_char_doc": 5409,
+      "end_char_doc": 5427,
+      "start_line": 150,
+      "end_line": 150,
+      "context": {
+        "prefix": "lm_input,     \"xlnet\": prepare_xlnet_input,     \"transfo-xl\": prepare_transfoxl_input, }  ",
+        "suffix": "(path, tokenizer, lowdata_token=None):     file_dict = {}     with open(path, 'r') as f:  "
+      }
+    },
+    {
+      "@id": "algo_read_webnlg_files",
+      "@type": "MLS_Algorithm",
+      "name": "read_webnlg_files",
+      "description": "Reads WebNLG JSON entries into source-triple prompts and references.",
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/run_generation.py:236",
+      "path": "gpt2/run_generation.py",
+      "start_char_doc": 8369,
+      "end_char_doc": 8390,
+      "start_line": 236,
+      "end_line": 236,
+      "context": {
+        "prefix": "nt('should not happen')             file_dict[src_full].append(tgt)     return file_dict  ",
+        "suffix": "(path, tokenizer):     file_dict = {}      with open(path) as f:         lines_dict = json"
+      }
+    },
+    {
+      "@id": "algo_read_triples_files",
+      "@type": "MLS_Algorithm",
+      "name": "read_triples_files",
+      "description": "Reads DART tripleset JSON into prompts and references.",
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/run_generation.py:278",
+      "path": "gpt2/run_generation.py",
+      "start_char_doc": 9749,
+      "end_char_doc": 9771,
+      "start_line": 278,
+      "end_line": 278,
+      "context": {
+        "prefix": "len(full_src_lst)     assert len(full_rela_lst) == len(file_dict)      return file_dict   ",
+        "suffix": "2(path, tokenizer):     file_src = []     file_tgt = []      with open(path) as f:        "
+      }
+    },
+    {
+      "@id": "algo_get_dataset_gpt2",
+      "@type": "MLS_Algorithm",
+      "name": "get_dataset",
+      "description": "Builds task-specific GPT-2 LineByLine datasets.",
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/run_language_modeling.py:383",
+      "path": "gpt2/run_language_modeling.py",
+      "start_char_doc": 11956,
+      "end_char_doc": 11971,
+      "start_line": 383,
+      "end_line": 383,
+      "context": {
+        "prefix": "ult=False, metadata={\"help\": \"Overwrite the cached training and evaluation sets\"}     )   ",
+        "suffix": "(     args: DataTrainingArguments,     tokenizer: PreTrainedTokenizer,     evaluate: bool "
+      }
+    },
+    {
+      "@id": "algo_seq2seq_generative_step",
+      "@type": "MLS_Algorithm",
+      "name": "PrefixSummarizationModule._generative_step",
+      "description": "Generates seq2seq outputs with prefix prompts and computes ROUGE.",
+      "wasDerivedFrom": "code",
+      "codeReference": "seq2seq/finetune.py:241",
+      "path": "seq2seq/finetune.py",
+      "start_char_doc": 10342,
+      "end_char_doc": 10362,
+      "start_line": 241,
+      "end_line": 241,
+      "context": {
+        "prefix": "return calculate_rouge(preds, target)         # return calculate_bleu(preds, target)      ",
+        "suffix": "(self, batch: dict) -> dict:         t0 = time.time()         # TODO(LISA)         # write"
+      }
+    },
+    {
+      "@id": "algo_train_bart_command_builder",
+      "@type": "MLS_Algorithm",
+      "name": "train_bart command builder",
+      "description": "Builds finetune.py command lines for BART prefix-tuning and decoding.",
+      "wasDerivedFrom": "code",
+      "codeReference": "seq2seq/train_bart.py:250",
+      "path": "seq2seq/train_bart.py",
+      "start_char_doc": 10583,
+      "end_char_doc": 10616,
+      "start_line": 250,
+      "end_line": 250,
+      "context": {
+        "prefix": "' if args.tuning_mode == 'prefixtune' else 'no')       if args.do_train == 'yes':         ",
+        "suffix": " ' \\                       '--model_name_or_path {} ' \\                       '--output_di"
+      }
+    },
+    {
+      "@id": "algo_gen_command_builder",
+      "@type": "MLS_Algorithm",
+      "name": "gen.py command builder",
+      "description": "Builds run_generation.py command lines from checkpoint names and task modes.",
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/gen.py:264",
+      "path": "gpt2/gen.py",
+      "start_char_doc": 9066,
+      "end_char_doc": 9105,
+      "start_line": 264,
+      "end_line": 264,
+      "context": {
+        "prefix": "e' in sub_model_name:             tuning_mode = 'adaptertune'             app = ''        ",
+        "suffix": " \\         --model_type=gpt2 \\         --length 100 \\         --model_name_or_path={} \\   "
+      }
+    },
+    {
+      "@id": "process_tokenization",
+      "@type": "DataProcessingStep",
+      "name": "Tokenization with AutoTokenizer/GPT2Tokenizer/BART tokenizer",
+      "description": "Loads tokenizer and encodes structured inputs and targets.",
+      "transformationType": "tokenization",
+      "prov_executedBy": {
+        "@id": "impl_gpt2_run_language_modeling"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/run_language_modeling.py:552",
+      "path": "gpt2/run_language_modeling.py",
+      "start_char_doc": 21166,
+      "end_char_doc": 21195,
+      "start_line": 552,
+      "end_line": 552,
+      "context": {
+        "prefix": "ew config instance from scratch.\")      if model_args.tokenizer_name:         tokenizer = ",
+        "suffix": "(model_args.tokenizer_name, cache_dir=model_args.cache_dir)     elif model_args.model_name"
+      }
+    },
+    {
+      "@id": "process_line_by_line_dataset",
+      "@type": "DataProcessingStep",
+      "name": "Line-by-line task dataset construction",
+      "description": "Creates task-specific LineByLine datasets for GPT-2 training/evaluation.",
+      "transformationType": "dataset_loading",
+      "prov_executedBy": {
+        "@id": "impl_gpt2_run_language_modeling"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/run_language_modeling.py:62",
+      "path": "gpt2/run_language_modeling.py",
+      "start_char_doc": 2427,
+      "end_char_doc": 2457,
+      "start_line": 62,
+      "end_line": 62,
+      "context": {
+        "prefix": " LineByLineKeywordTextDataset, # modified     LineByLineLengthTextDataset, # modified     ",
+        "suffix": ", # modified     LineByLineLemma2TextTextDataset, # modified     LineByLineText2DataTextDa"
+      }
+    },
+    {
+      "@id": "process_webnlg_json_reading",
+      "@type": "DataProcessingStep",
+      "name": "WebNLG JSON parsing",
+      "description": "Parses WebNLG entries, lexicalisations, and modified triple sets.",
+      "transformationType": "parsing",
+      "prov_executedBy": {
+        "@id": "impl_gpt2_run_language_modeling"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/run_generation.py:248",
+      "path": "gpt2/run_generation.py",
+      "start_char_doc": 8729,
+      "end_char_doc": 8746,
+      "start_line": 248,
+      "end_line": 248,
+      "context": {
+        "prefix": "    sents = example[str(i + 1)]['lexicalisations']         triples = example[str(i + 1)]['",
+        "suffix": "']          rela_lst = []         temp_triples = ''         for j, tripleset in enumerate("
+      }
+    },
+    {
+      "@id": "process_dart_json_reading",
+      "@type": "DataProcessingStep",
+      "name": "DART tripleset parsing",
+      "description": "Parses DART triplesets and annotations for generation.",
+      "transformationType": "parsing",
+      "prov_executedBy": {
+        "@id": "impl_gpt2_run_language_modeling"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/run_generation.py:291",
+      "path": "gpt2/run_generation.py",
+      "start_char_doc": 10078,
+      "end_char_doc": 10098,
+      "start_line": 291,
+      "end_line": 291,
+      "context": {
+        "prefix": "ct:         rela_lst = []         temp_triples = ''         for i, tripleset in enumerate(",
+        "suffix": "):             subj, rela, obj = tripleset             rela = rela.lower()             rel"
+      }
+    },
+    {
+      "@id": "process_e2e_split_reading",
+      "@type": "DataProcessingStep",
+      "name": "E2E src-target reading",
+      "description": "Splits E2E data lines on src||target separator.",
+      "transformationType": "parsing",
+      "prov_executedBy": {
+        "@id": "impl_gpt2_run_language_modeling"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/run_generation.py:154",
+      "path": "gpt2/run_generation.py",
+      "start_char_doc": 5551,
+      "end_char_doc": 5586,
+      "start_line": 154,
+      "end_line": 154,
+      "context": {
+        "prefix": "ne):     file_dict = {}     with open(path, 'r') as f:         for line in f:             ",
+        "suffix": "             # URGENT CHANGE             # src =  src + ' {}'.format(' summarize :')      "
+      }
+    },
+    {
+      "@id": "process_add_pad_token",
+      "@type": "DataProcessingStep",
+      "name": "Add PAD token",
+      "description": "Adds [PAD] to tokenizer and resizes GPT-2 embeddings.",
+      "transformationType": "tokenization",
+      "prov_executedBy": {
+        "@id": "impl_gpt2_run_language_modeling"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/run_language_modeling.py:630",
+      "path": "gpt2/run_language_modeling.py",
+      "start_char_doc": 24716,
+      "end_char_doc": 24734,
+      "start_line": 630,
+      "end_line": 630,
+      "context": {
+        "prefix": "  #     print('len(tokenizer) = ', len(tokenizer))     #     num_added_tokens = tokenizer.",
+        "suffix": "({'pad_token': '[PAD]', 'bos_token':'[BOS]', 'eos_token':'[EOS]'})     #     embedding_lay"
+      }
+    },
+    {
+      "@id": "process_freeze_base_model",
+      "@type": "DataProcessingStep",
+      "name": "Freeze base LM parameters",
+      "description": "Freezes pretrained GPT-2 or seq2seq model parameters during prefix tuning.",
+      "transformationType": "parameter_freezing",
+      "prov_executedBy": {
+        "@id": "impl_gpt2_run_language_modeling"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/run_language_modeling.py:664",
+      "path": "gpt2/run_language_modeling.py",
+      "start_char_doc": 26366,
+      "end_char_doc": 26393,
+      "start_line": 664,
+      "end_line": 664,
+      "context": {
+        "prefix": "prefixtune': # prefixtune         for param in model.base_model.parameters():             ",
+        "suffix": "         gpt2 = model           if data_args.distill == 'yes':              # load the tea"
+      }
+    },
+    {
+      "@id": "process_seq2seq_dataset",
+      "@type": "DataProcessingStep",
+      "name": "Seq2SeqDataset construction",
+      "description": "Creates summarization datasets with source and target max lengths.",
+      "transformationType": "dataset_loading",
+      "prov_executedBy": {
+        "@id": "impl_seq2seq_finetune"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "seq2seq/finetune.py:23",
+      "path": "seq2seq/finetune.py",
+      "start_char_doc": 573,
+      "end_char_doc": 587,
+      "start_line": 23,
+      "end_line": 23,
+      "context": {
+        "prefix": "ers.modeling_bart import shift_tokens_right from utils import (     ROUGE_KEYS,     Legacy",
+        "suffix": ",     Seq2SeqDataset,     assert_all_frozen,     calculate_bleu,     calculate_rouge,     "
+      }
+    },
+    {
+      "@id": "training_gpt2_e2e_prefix",
+      "@type": "TrainingRun",
+      "runId": "training_gpt2_e2e_prefix",
+      "name": "GPT-2 E2E/WebNLG/DART prefix training",
+      "description": "GPT-2 E2E/WebNLG/DART prefix training",
+      "prov_executedBy": {
+        "@id": "impl_gpt2_train_e2e"
+      },
+      "used": [
+        {
+          "@id": "dataset_e2e_train"
+        },
+        {
+          "@id": "dataset_webnlg_train"
+        },
+        {
+          "@id": "dataset_dart_train"
+        }
+      ],
+      "trains": {
+        "@id": "model_gpt2_prefix_tuning"
+      },
+      "artifactsLocation": "configured output_dir/model folder",
+      "logFile": "logging_dir/runs",
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/train_e2e.py:1",
+      "path": "gpt2/train_e2e.py",
+      "start_char_doc": 0,
+      "end_char_doc": 80,
+      "start_line": 1,
+      "end_line": 5,
+      "context": {
+        "prefix": "",
+        "suffix": "_run.py keyword temp_keyword _ if not sys.warnoptions:     import warnings     warnings.si"
+      }
+    },
+    {
+      "@id": "training_seq2seq_bart_prefix",
+      "@type": "TrainingRun",
+      "runId": "training_seq2seq_bart_prefix",
+      "name": "BART XSum/CNN-DM prefix training",
+      "description": "BART XSum/CNN-DM prefix training",
+      "prov_executedBy": {
+        "@id": "impl_seq2seq_train_bart"
+      },
+      "used": [
+        {
+          "@id": "dataset_xsum"
+        },
+        {
+          "@id": "dataset_cnndm"
+        }
+      ],
+      "trains": {
+        "@id": "model_bart_prefix_tuning"
+      },
+      "artifactsLocation": "configured output_dir/model folder",
+      "logFile": "logging_dir/runs",
+      "wasDerivedFrom": "code",
+      "codeReference": "seq2seq/train_bart.py:1",
+      "path": "seq2seq/train_bart.py",
+      "start_char_doc": 0,
+      "end_char_doc": 80,
+      "start_line": 1,
+      "end_line": 4,
+      "context": {
+        "prefix": "",
+        "suffix": "ord _ if not sys.warnoptions:     import warnings     warnings.simplefilter(\"ignore\")  if "
+      }
+    },
+    {
+      "@id": "training_gpt2_run_language_modeling",
+      "@type": "TrainingRun",
+      "runId": "training_gpt2_run_language_modeling",
+      "name": "GPT-2 modified Trainer_Prefix execution",
+      "description": "GPT-2 modified Trainer_Prefix execution",
+      "prov_executedBy": {
+        "@id": "impl_gpt2_run_language_modeling"
+      },
+      "used": [
+        {
+          "@id": "dataset_e2e_train"
+        },
+        {
+          "@id": "dataset_webnlg_train"
+        },
+        {
+          "@id": "dataset_dart_train"
+        }
+      ],
+      "trains": {
+        "@id": "model_gpt2_prefix_tuning"
+      },
+      "artifactsLocation": "configured output_dir/model folder",
+      "logFile": "logging_dir/runs",
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/run_language_modeling.py:84",
+      "path": "gpt2/run_language_modeling.py",
+      "start_char_doc": 3145,
+      "end_char_doc": 3159,
+      "start_line": 84,
+      "end_line": 84,
+      "context": {
+        "prefix": "ModelForSequenceClassification,     GPT2LMHeadModelAdapter, )  from trainer_prefix import ",
+        "suffix": "    logger = logging.getLogger(__name__)   MODEL_CONFIG_CLASSES = list(MODEL_WITH_LM_HEAD_"
+      }
+    },
+    {
+      "@id": "eval_gpt2_generation",
+      "@type": "EvaluationRun",
+      "runId": "eval_gpt2_generation",
+      "name": "GPT-2 generation evaluation",
+      "description": "GPT-2 generation evaluation",
+      "split": "validation/test",
+      "evaluationScript": "gpt2/run_generation.py",
+      "prov_executedBy": {
+        "@id": "impl_gpt2_generation"
+      },
+      "evaluates": {
+        "@id": "model_gpt2_prefix_tuning"
+      },
+      "prov_generated": [
+        {
+          "@id": "pred_gpt2_generated_text"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/run_generation.py:1217",
+      "path": "gpt2/run_generation.py",
+      "start_char_doc": 51164,
+      "end_char_doc": 51178,
+      "start_line": 1217,
+      "end_line": 1217,
+      "context": {
+        "prefix": "(decode_mode)             if decode_mode == 'nucleus':                 output_sequences = ",
+        "suffix": "(                     input_ids=input_ids,                     emb_match=None,            "
+      }
+    },
+    {
+      "@id": "eval_seq2seq_rouge",
+      "@type": "EvaluationRun",
+      "runId": "eval_seq2seq_rouge",
+      "name": "Seq2Seq ROUGE validation/test evaluation",
+      "description": "Seq2Seq ROUGE validation/test evaluation",
+      "split": "validation/test",
+      "evaluationScript": "seq2seq/finetune.py",
+      "prov_executedBy": {
+        "@id": "impl_seq2seq_finetune"
+      },
+      "evaluates": {
+        "@id": "model_bart_prefix_tuning"
+      },
+      "prov_generated": [
+        {
+          "@id": "pred_seq2seq_summaries"
+        },
+        {
+          "@id": "pred_seq2seq_metrics_json"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "seq2seq/finetune.py:212",
+      "path": "seq2seq/finetune.py",
+      "start_char_doc": 8985,
+      "end_char_doc": 9005,
+      "start_line": 212,
+      "end_line": 212,
+      "context": {
+        "prefix": "tep(self, batch, batch_idx) -> Dict:         return self._generative_step(batch)      def ",
+        "suffix": "(self, outputs, prefix=\"val\") -> Dict:         self.step_count += 1         losses = {k: t"
+      }
+    },
+    {
+      "@id": "eval_baseline_finetune_adapter",
+      "@type": "EvaluationRun",
+      "runId": "eval_baseline_finetune_adapter",
+      "name": "Baseline finetune/adapter evaluation",
+      "description": "Baseline finetune/adapter evaluation",
+      "split": "validation/test",
+      "evaluationScript": "README.md",
+      "prov_executedBy": {
+        "@id": "impl_gpt2_train_e2e"
+      },
+      "evaluates": {
+        "@id": "model_gpt2_adapter"
+      },
+      "prov_generated": [
+        {
+          "@id": "pred_gpt2_generated_text"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:51",
+      "path": "README.md",
+      "start_char_doc": 2148,
+      "end_char_doc": 2173,
+      "start_line": 51,
+      "end_line": 51,
+      "context": {
+        "prefix": "  --epoch 30  --gradient_accumulation_step 3 --learning_rate 0.00005  --mid_dim 800 ```   ",
+        "suffix": "   ``` cd gpt2;  python train_e2e.py --tuning_mode {finetune/adaptertune} --epoch 5 --lear"
+      }
+    },
+    {
+      "@id": "pred_gpt2_generated_text",
+      "@type": "PredictionSet",
+      "identifier": "GPT-2 generated text outputs",
+      "name": "GPT-2 generated text outputs",
+      "description": "Generated text outputs for data-to-text tasks.",
+      "predictionFormat": "text",
+      "storageLocation": "gen_dir results folders",
+      "onDatasetSplit": "validation/test",
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/run_generation.py:447",
+      "path": "gpt2/run_generation.py",
+      "start_char_doc": 15194,
+      "end_char_doc": 15201,
+      "start_line": 447,
+      "end_line": 447,
+      "context": {
+        "prefix": "on\")     parser.add_argument(\"--length\", type=int, default=20)     parser.add_argument(\"--",
+        "suffix": "\", type=str, default=\"e2e_results_conv\")     parser.add_argument(\"--stop_token\", type=str,"
+      }
+    },
+    {
+      "@id": "pred_seq2seq_summaries",
+      "@type": "PredictionSet",
+      "identifier": "Seq2Seq generated summaries",
+      "name": "Seq2Seq generated summaries",
+      "description": "Generated summaries from BART prefix model.",
+      "predictionFormat": "text",
+      "storageLocation": "output_dir/test_generations",
+      "onDatasetSplit": "validation/test",
+      "wasDerivedFrom": "code",
+      "codeReference": "seq2seq/finetune.py:229",
+      "path": "seq2seq/finetune.py",
+      "start_char_doc": 9948,
+      "end_char_doc": 9968,
+      "start_line": 229,
+      "end_line": 229,
+      "context": {
+        "prefix": "ics[prefix].append(all_metrics)  # callback writes this to self.metrics_save_path         ",
+        "suffix": "([x[\"preds\"] for x in outputs])         return {             \"log\": all_metrics,          "
+      }
+    },
+    {
+      "@id": "pred_seq2seq_metrics_json",
+      "@type": "PredictionSet",
+      "identifier": "Seq2Seq metrics.json",
+      "name": "Seq2Seq metrics.json",
+      "description": "Validation/test metrics persisted by callbacks.",
+      "predictionFormat": "json",
+      "storageLocation": "output_dir/metrics.json",
+      "onDatasetSplit": "validation/test",
+      "wasDerivedFrom": "code",
+      "codeReference": "seq2seq/finetune.py:65",
+      "path": "seq2seq/finetune.py",
+      "start_char_doc": 1990,
+      "end_char_doc": 2002,
+      "start_line": 65,
+      "end_line": 65,
+      "context": {
+        "prefix": "t_info(self.hparams.output_dir)         self.metrics_save_path = Path(self.output_dir) / \"",
+        "suffix": "\"         self.hparams_save_path = Path(self.output_dir) / \"hparams.pkl\"         pickle_sa"
+      }
+    },
+    {
+      "@id": "pred_checkpoint_artifacts",
+      "@type": "PredictionSet",
+      "identifier": "Model checkpoint artifacts",
+      "name": "Model checkpoint artifacts",
+      "description": "Saved prefix/finetune checkpoint artifacts.",
+      "predictionFormat": "checkpoint",
+      "storageLocation": "output_dir/checkpoints",
+      "onDatasetSplit": "validation/test",
+      "wasDerivedFrom": "code",
+      "codeReference": "seq2seq/finetune.py:18",
+      "path": "seq2seq/finetune.py",
+      "start_char_doc": 348,
+      "end_char_doc": 371,
+      "start_line": 18,
+      "end_line": 18,
+      "context": {
+        "prefix": "ch from torch.utils.data import DataLoader  from callbacks import Seq2SeqLoggingCallback, ",
+        "suffix": ", get_early_stopping_callback from transformers import MBartTokenizer, T5ForConditionalGen"
+      }
+    },
+    {
+      "@id": "pred_command_shell_scripts",
+      "@type": "PredictionSet",
+      "identifier": "Generated shell command files",
+      "name": "Generated shell command files",
+      "description": "Wrapper scripts write generated command lines to shell files.",
+      "predictionFormat": "sh",
+      "storageLocation": "model_file.sh",
+      "onDatasetSplit": "validation/test",
+      "wasDerivedFrom": "code",
+      "codeReference": "seq2seq/train_bart.py:336",
+      "path": "seq2seq/train_bart.py",
+      "start_char_doc": 14937,
+      "end_char_doc": 14955,
+      "start_line": 336,
+      "end_line": 336,
+      "context": {
+        "prefix": "                  args.tuning_mode, logging_dir)      COMMANDLINE += app        with open(",
+        "suffix": ", 'w') as f:         print(COMMANDLINE, file=f)       print(COMMANDLINE)     if args.submi"
+      }
+    },
+    {
+      "@id": "metric_loss",
+      "@type": "MLS_Eval",
+      "name": "loss",
+      "measure": "cross entropy / language modeling loss",
+      "description": "loss metric.",
+      "wasDerivedFrom": "code",
+      "codeReference": "seq2seq/finetune.py:50",
+      "path": "seq2seq/finetune.py",
+      "start_char_doc": 1170,
+      "end_char_doc": 1191,
+      "start_line": 50,
+      "end_line": 50,
+      "context": {
+        "prefix": "e__)   class PrefixSummarizationModule(PrefixTransformer):     mode = \"summarization\"     ",
+        "suffix": "     metric_names = ROUGE_KEYS     default_val_metric = \"rouge2\"      def __init__(self, h"
+      }
+    },
+    {
+      "@id": "metric_rouge",
+      "@type": "MLS_Eval",
+      "name": "ROUGE",
+      "measure": "rouge1/rouge2/rougeL/rougeLsum",
+      "description": "ROUGE metric.",
+      "wasDerivedFrom": "code",
+      "codeReference": "seq2seq/finetune.py:22",
+      "path": "seq2seq/finetune.py",
+      "start_char_doc": 551,
+      "end_char_doc": 561,
+      "start_line": 22,
+      "end_line": 22,
+      "context": {
+        "prefix": "eration from transformers.modeling_bart import shift_tokens_right from utils import (     ",
+        "suffix": ",     LegacySeq2SeqDataset,     Seq2SeqDataset,     assert_all_frozen,     calculate_bleu,"
+      }
+    },
+    {
+      "@id": "metric_bleu",
+      "@type": "MLS_Eval",
+      "name": "BLEU",
+      "measure": "bleu",
+      "description": "BLEU metric.",
+      "wasDerivedFrom": "code",
+      "codeReference": "seq2seq/finetune.py:26",
+      "path": "seq2seq/finetune.py",
+      "start_char_doc": 636,
+      "end_char_doc": 650,
+      "start_line": 26,
+      "end_line": 26,
+      "context": {
+        "prefix": "     ROUGE_KEYS,     LegacySeq2SeqDataset,     Seq2SeqDataset,     assert_all_frozen,     ",
+        "suffix": ",     calculate_rouge,     flatten_list,     freeze_params,     get_git_info,     label_sm"
+      }
+    },
+    {
+      "@id": "metric_gen_len",
+      "@type": "MLS_Eval",
+      "name": "generation length",
+      "measure": "gen_len",
+      "description": "generation length metric.",
+      "wasDerivedFrom": "code",
+      "codeReference": "seq2seq/finetune.py:113",
+      "path": "seq2seq/finetune.py",
+      "start_char_doc": 4463,
+      "end_char_doc": 4470,
+      "start_line": 113,
+      "end_line": 113,
+      "context": {
+        "prefix": " self.eval_beams={self.eval_beams}. Need an integer > 1\"         if self.hparams.eval_max_",
+        "suffix": "gth is not None:             self.eval_max_length = self.hparams.eval_max_gen_length      "
+      }
+    },
+    {
+      "@id": "metric_perplexity",
+      "@type": "MLS_Eval",
+      "name": "perplexity",
+      "measure": "perplexity",
+      "description": "perplexity metric.",
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/run_language_modeling.py:294",
+      "path": "gpt2/run_language_modeling.py",
+      "start_char_doc": 8748,
+      "end_char_doc": 8758,
+      "start_line": 294,
+      "end_line": 294,
+      "context": {
+        "prefix": "t=None,         metadata={\"help\": \"An optional input evaluation data file to evaluate the ",
+        "suffix": " on (a text file).\"},     )     line_by_line: bool = field(         default=False,        "
+      }
+    },
+    {
+      "@id": "hp_readme_gpt2_preseqlen",
+      "@type": "MLS_HyperParameter",
+      "name": "README GPT2 preseqlen",
+      "hasValue": "5",
+      "value": 5,
+      "hpCategory": "HP_Architecture",
+      "hpType": "MaxSequenceLength",
+      "uncertain": false,
+      "description": "README GPT-2 prefix length.",
+      "appliesTo": {
+        "@id": "training_gpt2_e2e_prefix"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:40",
+      "path": "README.md",
+      "start_char_doc": 1864,
+      "end_char_doc": 1877,
+      "start_line": 40,
+      "end_line": 40,
+      "context": {
+        "prefix": "- ## Train via prefix-tuning:  ```python cd gpt2;  python train_e2e.py --optim_prefix yes ",
+        "suffix": " --epoch 5 --learning_rate 0.00005 --mode webnlg --bsz 5 --seed 101 ```   ```python cd seq"
+      }
+    },
+    {
+      "@id": "hp_readme_gpt2_epoch",
+      "@type": "MLS_HyperParameter",
+      "name": "README GPT2 epoch",
+      "hasValue": "5",
+      "value": 5,
+      "hpCategory": "HP_Training",
+      "hpType": "NumEpochs",
+      "uncertain": false,
+      "description": "README GPT-2 epochs.",
+      "appliesTo": {
+        "@id": "training_gpt2_e2e_prefix"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:40",
+      "path": "README.md",
+      "start_char_doc": 1878,
+      "end_char_doc": 1887,
+      "start_line": 40,
+      "end_line": 40,
+      "context": {
+        "prefix": " prefix-tuning:  ```python cd gpt2;  python train_e2e.py --optim_prefix yes --preseqlen 5 ",
+        "suffix": " --learning_rate 0.00005 --mode webnlg --bsz 5 --seed 101 ```   ```python cd seq2seq;   py"
+      }
+    },
+    {
+      "@id": "hp_readme_gpt2_lr",
+      "@type": "MLS_HyperParameter",
+      "name": "README GPT2 learning_rate",
+      "hasValue": "0.00005",
+      "value": "0.00005",
+      "hpCategory": "HP_Optimization",
+      "hpType": "LearningRate",
+      "uncertain": false,
+      "description": "README GPT-2 learning rate.",
+      "appliesTo": {
+        "@id": "training_gpt2_e2e_prefix"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:40",
+      "path": "README.md",
+      "start_char_doc": 1888,
+      "end_char_doc": 1911,
+      "start_line": 40,
+      "end_line": 40,
+      "context": {
+        "prefix": "ning:  ```python cd gpt2;  python train_e2e.py --optim_prefix yes --preseqlen 5 --epoch 5 ",
+        "suffix": " --mode webnlg --bsz 5 --seed 101 ```   ```python cd seq2seq;   python train_bart.py --mod"
+      }
+    },
+    {
+      "@id": "hp_readme_gpt2_bsz",
+      "@type": "MLS_HyperParameter",
+      "name": "README GPT2 bsz",
+      "hasValue": "5",
+      "value": 5,
+      "hpCategory": "HP_Training",
+      "hpType": "BatchSize",
+      "uncertain": false,
+      "description": "README GPT-2 batch size.",
+      "appliesTo": {
+        "@id": "training_gpt2_e2e_prefix"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:40",
+      "path": "README.md",
+      "start_char_doc": 1926,
+      "end_char_doc": 1933,
+      "start_line": 40,
+      "end_line": 40,
+      "context": {
+        "prefix": "n_e2e.py --optim_prefix yes --preseqlen 5 --epoch 5 --learning_rate 0.00005 --mode webnlg ",
+        "suffix": " --seed 101 ```   ```python cd seq2seq;   python train_bart.py --mode xsum --preseqlen 200"
+      }
+    },
+    {
+      "@id": "hp_readme_gpt2_seed",
+      "@type": "MLS_HyperParameter",
+      "name": "README GPT2 seed",
+      "hasValue": "101",
+      "value": 101,
+      "hpCategory": "HP_Training",
+      "hpType": "RandomSeed",
+      "uncertain": false,
+      "description": "README GPT-2 seed.",
+      "appliesTo": {
+        "@id": "training_gpt2_e2e_prefix"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:40",
+      "path": "README.md",
+      "start_char_doc": 1934,
+      "end_char_doc": 1944,
+      "start_line": 40,
+      "end_line": 40,
+      "context": {
+        "prefix": " --optim_prefix yes --preseqlen 5 --epoch 5 --learning_rate 0.00005 --mode webnlg --bsz 5 ",
+        "suffix": " ```   ```python cd seq2seq;   python train_bart.py --mode xsum --preseqlen 200 --do_train"
+      }
+    },
+    {
+      "@id": "hp_readme_bart_preseqlen",
+      "@type": "MLS_HyperParameter",
+      "name": "README BART preseqlen",
+      "hasValue": "200",
+      "value": 200,
+      "hpCategory": "HP_Architecture",
+      "hpType": "MaxSequenceLength",
+      "uncertain": false,
+      "description": "README BART prefix length.",
+      "appliesTo": {
+        "@id": "training_seq2seq_bart_prefix"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:47",
+      "path": "README.md",
+      "start_char_doc": 2008,
+      "end_char_doc": 2023,
+      "start_line": 47,
+      "end_line": 47,
+      "context": {
+        "prefix": " webnlg --bsz 5 --seed 101 ```   ```python cd seq2seq;   python train_bart.py --mode xsum ",
+        "suffix": " --do_train yes --fp16 yes --bsz 16  --epoch 30  --gradient_accumulation_step 3 --learning"
+      }
+    },
+    {
+      "@id": "hp_readme_bart_bsz",
+      "@type": "MLS_HyperParameter",
+      "name": "README BART bsz",
+      "hasValue": "16",
+      "value": 16,
+      "hpCategory": "HP_Training",
+      "hpType": "BatchSize",
+      "uncertain": false,
+      "description": "README BART batch size.",
+      "appliesTo": {
+        "@id": "training_seq2seq_bart_prefix"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:47",
+      "path": "README.md",
+      "start_char_doc": 2050,
+      "end_char_doc": 2058,
+      "start_line": 47,
+      "end_line": 47,
+      "context": {
+        "prefix": " cd seq2seq;   python train_bart.py --mode xsum --preseqlen 200 --do_train yes --fp16 yes ",
+        "suffix": "  --epoch 30  --gradient_accumulation_step 3 --learning_rate 0.00005  --mid_dim 800 ```   "
+      }
+    },
+    {
+      "@id": "hp_readme_bart_epoch",
+      "@type": "MLS_HyperParameter",
+      "name": "README BART epoch",
+      "hasValue": "30",
+      "value": 30,
+      "hpCategory": "HP_Training",
+      "hpType": "NumEpochs",
+      "uncertain": false,
+      "description": "README BART epochs.",
+      "appliesTo": {
+        "@id": "training_seq2seq_bart_prefix"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:47",
+      "path": "README.md",
+      "start_char_doc": 2060,
+      "end_char_doc": 2070,
+      "start_line": 47,
+      "end_line": 47,
+      "context": {
+        "prefix": "q;   python train_bart.py --mode xsum --preseqlen 200 --do_train yes --fp16 yes --bsz 16  ",
+        "suffix": "  --gradient_accumulation_step 3 --learning_rate 0.00005  --mid_dim 800 ```   Other baseli"
+      }
+    },
+    {
+      "@id": "hp_readme_bart_gradaccum",
+      "@type": "MLS_HyperParameter",
+      "name": "README BART gradient_accumulation_step",
+      "hasValue": "3",
+      "value": 3,
+      "hpCategory": "HP_Training",
+      "hpType": "GradientAccumulationSteps",
+      "uncertain": false,
+      "description": "README BART gradient accumulation.",
+      "appliesTo": {
+        "@id": "training_seq2seq_bart_prefix"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:47",
+      "path": "README.md",
+      "start_char_doc": 2072,
+      "end_char_doc": 2102,
+      "start_line": 47,
+      "end_line": 47,
+      "context": {
+        "prefix": "train_bart.py --mode xsum --preseqlen 200 --do_train yes --fp16 yes --bsz 16  --epoch 30  ",
+        "suffix": " --learning_rate 0.00005  --mid_dim 800 ```   Other baseline approaches   ``` cd gpt2;  py"
+      }
+    },
+    {
+      "@id": "hp_readme_bart_lr",
+      "@type": "MLS_HyperParameter",
+      "name": "README BART learning_rate",
+      "hasValue": "0.00005",
+      "value": "0.00005",
+      "hpCategory": "HP_Optimization",
+      "hpType": "LearningRate",
+      "uncertain": false,
+      "description": "README BART learning rate.",
+      "appliesTo": {
+        "@id": "training_seq2seq_bart_prefix"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:40",
+      "path": "README.md",
+      "start_char_doc": 1888,
+      "end_char_doc": 1911,
+      "start_line": 40,
+      "end_line": 40,
+      "context": {
+        "prefix": "ning:  ```python cd gpt2;  python train_e2e.py --optim_prefix yes --preseqlen 5 --epoch 5 ",
+        "suffix": " --mode webnlg --bsz 5 --seed 101 ```   ```python cd seq2seq;   python train_bart.py --mod"
+      }
+    },
+    {
+      "@id": "hp_readme_bart_mid_dim",
+      "@type": "MLS_HyperParameter",
+      "name": "README BART mid_dim",
+      "hasValue": "800",
+      "value": 800,
+      "hpCategory": "HP_Architecture",
+      "hpType": "HiddenSize",
+      "uncertain": false,
+      "description": "README BART prefix MLP hidden size.",
+      "appliesTo": {
+        "@id": "model_bart_prefix_tuning"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:47",
+      "path": "README.md",
+      "start_char_doc": 2128,
+      "end_char_doc": 2141,
+      "start_line": 47,
+      "end_line": 47,
+      "context": {
+        "prefix": " --fp16 yes --bsz 16  --epoch 30  --gradient_accumulation_step 3 --learning_rate 0.00005  ",
+        "suffix": " ```   Other baseline approaches   ``` cd gpt2;  python train_e2e.py --tuning_mode {finetu"
+      }
+    },
+    {
+      "@id": "hp_gpt2_default_preseqlen",
+      "@type": "MLS_HyperParameter",
+      "name": "train_e2e preseqlen default",
+      "hasValue": "10",
+      "value": 10,
+      "hpCategory": "HP_Architecture",
+      "hpType": "MaxSequenceLength",
+      "uncertain": false,
+      "description": "GPT-2 train wrapper prefix length default.",
+      "appliesTo": {
+        "@id": "model_gpt2_prefix_tuning"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/train_e2e.py:16",
+      "path": "gpt2/train_e2e.py",
+      "start_char_doc": 558,
+      "end_char_doc": 592,
+      "start_line": 16,
+      "end_line": 16,
+      "context": {
+        "prefix": "add_argument('--optim_prefix', type=str, default='yes', help='')     parser.add_argument('",
+        "suffix": ", help='')     parser.add_argument('--prefix_mode', type=str, default='activation', help='"
+      }
+    },
+    {
+      "@id": "hp_gpt2_default_seed",
+      "@type": "MLS_HyperParameter",
+      "name": "train_e2e seed default",
+      "hasValue": "101",
+      "value": 101,
+      "hpCategory": "HP_Training",
+      "hpType": "RandomSeed",
+      "uncertain": false,
+      "description": "GPT-2 wrapper seed.",
+      "appliesTo": {
+        "@id": "training_gpt2_e2e_prefix"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/train_e2e.py:41",
+      "path": "gpt2/train_e2e.py",
+      "start_char_doc": 1737,
+      "end_char_doc": 1767,
+      "start_line": 41,
+      "end_line": 41,
+      "context": {
+        "prefix": "r.add_argument('--use_dropout', type=str, default='no', help='')     parser.add_argument('",
+        "suffix": ", help='') # old is 42     parser.add_argument('--bsz', type=int, default=10, help='')    "
+      }
+    },
+    {
+      "@id": "hp_gpt2_default_bsz",
+      "@type": "MLS_HyperParameter",
+      "name": "train_e2e bsz default",
+      "hasValue": "10",
+      "value": 10,
+      "hpCategory": "HP_Training",
+      "hpType": "BatchSize",
+      "uncertain": false,
+      "description": "GPT-2 wrapper batch size.",
+      "appliesTo": {
+        "@id": "training_gpt2_e2e_prefix"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/train_e2e.py:42",
+      "path": "gpt2/train_e2e.py",
+      "start_char_doc": 1815,
+      "end_char_doc": 1843,
+      "start_line": 42,
+      "end_line": 42,
+      "context": {
+        "prefix": "d_argument('--seed', type=int, default=101, help='') # old is 42     parser.add_argument('",
+        "suffix": ", help='')     parser.add_argument('--use_big', type=str, default='no', help='')     parse"
+      }
+    },
+    {
+      "@id": "hp_gpt2_default_epoch",
+      "@type": "MLS_HyperParameter",
+      "name": "train_e2e epoch default",
+      "hasValue": "5",
+      "value": 5,
+      "hpCategory": "HP_Training",
+      "hpType": "NumEpochs",
+      "uncertain": false,
+      "description": "GPT-2 wrapper epochs.",
+      "appliesTo": {
+        "@id": "training_gpt2_e2e_prefix"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/train_e2e.py:44",
+      "path": "gpt2/train_e2e.py",
+      "start_char_doc": 1949,
+      "end_char_doc": 1978,
+      "start_line": 44,
+      "end_line": 44,
+      "context": {
+        "prefix": "arser.add_argument('--use_big', type=str, default='no', help='')     parser.add_argument('",
+        "suffix": ", help='')     parser.add_argument('--max_steps', type=int, default=400, help='')     pars"
+      }
+    },
+    {
+      "@id": "hp_gpt2_default_max_steps",
+      "@type": "MLS_HyperParameter",
+      "name": "train_e2e max_steps default",
+      "hasValue": "400",
+      "value": 400,
+      "hpCategory": "HP_Training",
+      "hpType": "MaxSteps",
+      "uncertain": false,
+      "description": "GPT-2 max steps.",
+      "appliesTo": {
+        "@id": "training_gpt2_e2e_prefix"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/train_e2e.py:45",
+      "path": "gpt2/train_e2e.py",
+      "start_char_doc": 2014,
+      "end_char_doc": 2049,
+      "start_line": 45,
+      "end_line": 45,
+      "context": {
+        "prefix": "    parser.add_argument('--epoch', type=int, default=5, help='')     parser.add_argument('",
+        "suffix": ", help='')     parser.add_argument('--eval_steps', type=int, default=50, help='')     pars"
+      }
+    },
+    {
+      "@id": "hp_gpt2_default_eval_steps",
+      "@type": "MLS_HyperParameter",
+      "name": "train_e2e eval_steps default",
+      "hasValue": "50",
+      "value": 50,
+      "hpCategory": "HP_Training",
+      "hpType": "MaxSteps",
+      "uncertain": true,
+      "description": "GPT-2 eval interval.",
+      "appliesTo": {
+        "@id": "training_gpt2_e2e_prefix"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/train_e2e.py:46",
+      "path": "gpt2/train_e2e.py",
+      "start_char_doc": 2085,
+      "end_char_doc": 2120,
+      "start_line": 46,
+      "end_line": 46,
+      "context": {
+        "prefix": "rser.add_argument('--max_steps', type=int, default=400, help='')     parser.add_argument('",
+        "suffix": ", help='')     parser.add_argument('--warmup_steps', type=int, default=100, help='')     p"
+      }
+    },
+    {
+      "@id": "hp_gpt2_default_warmup",
+      "@type": "MLS_HyperParameter",
+      "name": "train_e2e warmup_steps default",
+      "hasValue": "100",
+      "value": 100,
+      "hpCategory": "HP_Optimization",
+      "hpType": "WarmupSteps",
+      "uncertain": false,
+      "description": "GPT-2 warmup steps.",
+      "appliesTo": {
+        "@id": "training_gpt2_e2e_prefix"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/train_e2e.py:47",
+      "path": "gpt2/train_e2e.py",
+      "start_char_doc": 2156,
+      "end_char_doc": 2194,
+      "start_line": 47,
+      "end_line": 47,
+      "context": {
+        "prefix": "rser.add_argument('--eval_steps', type=int, default=50, help='')     parser.add_argument('",
+        "suffix": ", help='')     parser.add_argument('--gradient_accumulation_steps', type=int, default=1, h"
+      }
+    },
+    {
+      "@id": "hp_gpt2_default_grad_accum",
+      "@type": "MLS_HyperParameter",
+      "name": "train_e2e gradient_accumulation_steps default",
+      "hasValue": "1",
+      "value": 1,
+      "hpCategory": "HP_Training",
+      "hpType": "GradientAccumulationSteps",
+      "uncertain": false,
+      "description": "GPT-2 gradient accumulation.",
+      "appliesTo": {
+        "@id": "training_gpt2_e2e_prefix"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/train_e2e.py:48",
+      "path": "gpt2/train_e2e.py",
+      "start_char_doc": 2230,
+      "end_char_doc": 2281,
+      "start_line": 48,
+      "end_line": 48,
+      "context": {
+        "prefix": "r.add_argument('--warmup_steps', type=int, default=100, help='')     parser.add_argument('",
+        "suffix": ", help='')     parser.add_argument('--learning_rate', type=float, default=5e-05, help='') "
+      }
+    },
+    {
+      "@id": "hp_gpt2_default_lr",
+      "@type": "MLS_HyperParameter",
+      "name": "train_e2e learning_rate default",
+      "hasValue": "5e-05",
+      "value": "5e-05",
+      "hpCategory": "HP_Optimization",
+      "hpType": "LearningRate",
+      "uncertain": false,
+      "description": "GPT-2 learning rate default.",
+      "appliesTo": {
+        "@id": "training_gpt2_e2e_prefix"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/train_e2e.py:49",
+      "path": "gpt2/train_e2e.py",
+      "start_char_doc": 2317,
+      "end_char_doc": 2360,
+      "start_line": 49,
+      "end_line": 49,
+      "context": {
+        "prefix": "t('--gradient_accumulation_steps', type=int, default=1, help='')     parser.add_argument('",
+        "suffix": ", help='')     parser.add_argument('--weight_decay', type=float, default=0.0, help='')    "
+      }
+    },
+    {
+      "@id": "hp_gpt2_default_weight_decay",
+      "@type": "MLS_HyperParameter",
+      "name": "train_e2e weight_decay default",
+      "hasValue": "0.0",
+      "value": 0.0,
+      "hpCategory": "HP_Optimization",
+      "hpType": "WeightDecay",
+      "uncertain": false,
+      "description": "GPT-2 weight decay default.",
+      "appliesTo": {
+        "@id": "training_gpt2_e2e_prefix"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/train_e2e.py:50",
+      "path": "gpt2/train_e2e.py",
+      "start_char_doc": 2396,
+      "end_char_doc": 2436,
+      "start_line": 50,
+      "end_line": 50,
+      "context": {
+        "prefix": "_argument('--learning_rate', type=float, default=5e-05, help='')     parser.add_argument('",
+        "suffix": ", help='')     parser.add_argument('--dropout', type=float, default=0.0, help='')     pars"
+      }
+    },
+    {
+      "@id": "hp_gpt2_default_dropout",
+      "@type": "MLS_HyperParameter",
+      "name": "train_e2e dropout default",
+      "hasValue": "0.0",
+      "value": 0.0,
+      "hpCategory": "HP_Architecture",
+      "hpType": "Dropout",
+      "uncertain": false,
+      "description": "GPT-2 prefix dropout default.",
+      "appliesTo": {
+        "@id": "model_gpt2_prefix_tuning"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/train_e2e.py:51",
+      "path": "gpt2/train_e2e.py",
+      "start_char_doc": 2472,
+      "end_char_doc": 2507,
+      "start_line": 51,
+      "end_line": 51,
+      "context": {
+        "prefix": "add_argument('--weight_decay', type=float, default=0.0, help='')     parser.add_argument('",
+        "suffix": ", help='')     parser.add_argument('--mid_dim', type=int, default=512, help='')     parser"
+      }
+    },
+    {
+      "@id": "hp_gpt2_default_mid_dim",
+      "@type": "MLS_HyperParameter",
+      "name": "train_e2e mid_dim default",
+      "hasValue": "512",
+      "value": 512,
+      "hpCategory": "HP_Architecture",
+      "hpType": "HiddenSize",
+      "uncertain": false,
+      "description": "GPT-2 prefix MLP hidden dimension.",
+      "appliesTo": {
+        "@id": "model_gpt2_prefix_tuning"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/train_e2e.py:52",
+      "path": "gpt2/train_e2e.py",
+      "start_char_doc": 2543,
+      "end_char_doc": 2576,
+      "start_line": 52,
+      "end_line": 52,
+      "context": {
+        "prefix": "rser.add_argument('--dropout', type=float, default=0.0, help='')     parser.add_argument('",
+        "suffix": ", help='')     parser.add_argument('--init_random', type=str, default='no', help='')      "
+      }
+    },
+    {
+      "@id": "hp_gpt2_adapter_bottleneck",
+      "@type": "MLS_HyperParameter",
+      "name": "adapter_bottleneck default",
+      "hasValue": "100",
+      "value": 100,
+      "hpCategory": "HP_Architecture",
+      "hpType": "HiddenSize",
+      "uncertain": false,
+      "description": "Adapter bottleneck dimension.",
+      "appliesTo": {
+        "@id": "model_gpt2_adapter"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/train_e2e.py:28",
+      "path": "gpt2/train_e2e.py",
+      "start_char_doc": 1244,
+      "end_char_doc": 1288,
+      "start_line": 28,
+      "end_line": 28,
+      "context": {
+        "prefix": "r.add_argument('--adapter_design', type=int, default=1, help='')     parser.add_argument('",
+        "suffix": ", help='')      parser.add_argument('--top_layers', type=int, default=1, help='')      par"
+      }
+    },
+    {
+      "@id": "hp_bart_default_preseqlen",
+      "@type": "MLS_HyperParameter",
+      "name": "train_bart preseqlen default",
+      "hasValue": "5",
+      "value": 5,
+      "hpCategory": "HP_Architecture",
+      "hpType": "MaxSequenceLength",
+      "uncertain": false,
+      "description": "BART wrapper prefix length default.",
+      "appliesTo": {
+        "@id": "model_bart_prefix_tuning"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "seq2seq/train_bart.py:15",
+      "path": "seq2seq/train_bart.py",
+      "start_char_doc": 533,
+      "end_char_doc": 566,
+      "start_line": 15,
+      "end_line": 15,
+      "context": {
+        "prefix": "add_argument('--optim_prefix', type=str, default='yes', help='')     parser.add_argument('",
+        "suffix": ", help='')     parser.add_argument('--prefix_mode', type=str, default='activation', help='"
+      }
+    },
+    {
+      "@id": "hp_bart_default_bsz",
+      "@type": "MLS_HyperParameter",
+      "name": "train_bart bsz default",
+      "hasValue": "10",
+      "value": 10,
+      "hpCategory": "HP_Training",
+      "hpType": "BatchSize",
+      "uncertain": false,
+      "description": "BART wrapper batch size.",
+      "appliesTo": {
+        "@id": "training_seq2seq_bart_prefix"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "seq2seq/train_bart.py:37",
+      "path": "seq2seq/train_bart.py",
+      "start_char_doc": 1610,
+      "end_char_doc": 1638,
+      "start_line": 37,
+      "end_line": 37,
+      "context": {
+        "prefix": "d_argument('--seed', type=int, default=101, help='') # old is 42     parser.add_argument('",
+        "suffix": ", help='')     parser.add_argument('--use_big', type=str, default='no', help='')     parse"
+      }
+    },
+    {
+      "@id": "hp_bart_default_epoch",
+      "@type": "MLS_HyperParameter",
+      "name": "train_bart epoch default",
+      "hasValue": "5",
+      "value": 5,
+      "hpCategory": "HP_Training",
+      "hpType": "NumEpochs",
+      "uncertain": false,
+      "description": "BART wrapper epochs.",
+      "appliesTo": {
+        "@id": "training_seq2seq_bart_prefix"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "seq2seq/train_bart.py:39",
+      "path": "seq2seq/train_bart.py",
+      "start_char_doc": 1744,
+      "end_char_doc": 1773,
+      "start_line": 39,
+      "end_line": 39,
+      "context": {
+        "prefix": "arser.add_argument('--use_big', type=str, default='no', help='')     parser.add_argument('",
+        "suffix": ", help='')     parser.add_argument('--max_steps', type=int, default=400, help='')     pars"
+      }
+    },
+    {
+      "@id": "hp_bart_default_lr",
+      "@type": "MLS_HyperParameter",
+      "name": "train_bart learning_rate default",
+      "hasValue": "5e-05",
+      "value": "5e-05",
+      "hpCategory": "HP_Optimization",
+      "hpType": "LearningRate",
+      "uncertain": false,
+      "description": "BART wrapper learning rate.",
+      "appliesTo": {
+        "@id": "training_seq2seq_bart_prefix"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "seq2seq/train_bart.py:44",
+      "path": "seq2seq/train_bart.py",
+      "start_char_doc": 2112,
+      "end_char_doc": 2155,
+      "start_line": 44,
+      "end_line": 44,
+      "context": {
+        "prefix": "t('--gradient_accumulation_steps', type=int, default=1, help='')     parser.add_argument('",
+        "suffix": ", help='')     parser.add_argument('--weight_decay', type=float, default=0.0, help='')    "
+      }
+    },
+    {
+      "@id": "hp_bart_default_label_smoothing",
+      "@type": "MLS_HyperParameter",
+      "name": "train_bart label_smoothing default",
+      "hasValue": "0.0",
+      "value": 0.0,
+      "hpCategory": "HP_Training",
+      "hpType": "HP_Training",
+      "uncertain": true,
+      "description": "BART label smoothing.",
+      "appliesTo": {
+        "@id": "training_seq2seq_bart_prefix"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "seq2seq/train_bart.py:49",
+      "path": "seq2seq/train_bart.py",
+      "start_char_doc": 2340,
+      "end_char_doc": 2383,
+      "start_line": 49,
+      "end_line": 49,
+      "context": {
+        "prefix": "er.add_argument('--dropout', type=float, default=0.0, help='')       parser.add_argument('",
+        "suffix": ", help='')     parser.add_argument('--length_pen', type=float, default=1.0, help='')     p"
+      }
+    },
+    {
+      "@id": "hp_bart_default_length_pen",
+      "@type": "MLS_HyperParameter",
+      "name": "train_bart length_pen default",
+      "hasValue": "1.0",
+      "value": 1.0,
+      "hpCategory": "HP_Data",
+      "hpType": "MaxSequenceLength",
+      "uncertain": true,
+      "description": "BART decoding length penalty.",
+      "appliesTo": {
+        "@id": "eval_seq2seq_rouge"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "seq2seq/train_bart.py:50",
+      "path": "seq2seq/train_bart.py",
+      "start_char_doc": 2419,
+      "end_char_doc": 2457,
+      "start_line": 50,
+      "end_line": 50,
+      "context": {
+        "prefix": "_argument('--label_smoothing', type=float, default=0.0, help='')     parser.add_argument('",
+        "suffix": ", help='')     parser.add_argument('--mid_dim', type=int, default=512, help='')     parser"
+      }
+    },
+    {
+      "@id": "hp_bart_default_mid_dim",
+      "@type": "MLS_HyperParameter",
+      "name": "train_bart mid_dim default",
+      "hasValue": "512",
+      "value": 512,
+      "hpCategory": "HP_Architecture",
+      "hpType": "HiddenSize",
+      "uncertain": false,
+      "description": "BART prefix MLP hidden dimension.",
+      "appliesTo": {
+        "@id": "model_bart_prefix_tuning"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "seq2seq/train_bart.py:51",
+      "path": "seq2seq/train_bart.py",
+      "start_char_doc": 2493,
+      "end_char_doc": 2526,
+      "start_line": 51,
+      "end_line": 51,
+      "context": {
+        "prefix": "r.add_argument('--length_pen', type=float, default=1.0, help='')     parser.add_argument('",
+        "suffix": ", help='')     parser.add_argument('--use_deep', type=str, default='no', help='')      par"
+      }
+    },
+    {
+      "@id": "hp_gpt2_model_preseqlen_ctor",
+      "@type": "MLS_HyperParameter",
+      "name": "GPT2 PrefixTuning ctor preseqlen",
+      "hasValue": "5",
+      "value": 5,
+      "hpCategory": "HP_Architecture",
+      "hpType": "MaxSequenceLength",
+      "uncertain": false,
+      "description": "Constructor prefix length fallback.",
+      "appliesTo": {
+        "@id": "model_gpt2_prefix_tuning"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/train_control.py:9",
+      "path": "gpt2/train_control.py",
+      "start_char_doc": 309,
+      "end_char_doc": 320,
+      "start_line": 9,
+      "end_line": 9,
+      "context": {
+        "prefix": "r  transformer encoders\"\"\"     def __init__(self, config, model_gpt2, optim_prefix=False, ",
+        "suffix": ", use_infix=False, deep_param=False):         super().__init__(config)         print('unde"
+      }
+    },
+    {
+      "@id": "hp_gpt2_model_prefix_dropout_fallback",
+      "@type": "MLS_HyperParameter",
+      "name": "GPT2 prefix_dropout fallback",
+      "hasValue": "0.0",
+      "value": 0.0,
+      "hpCategory": "HP_Architecture",
+      "hpType": "Dropout",
+      "uncertain": false,
+      "description": "GPT-2 prefix dropout fallback.",
+      "appliesTo": {
+        "@id": "model_gpt2_prefix_tuning"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/train_control.py:58",
+      "path": "gpt2/train_control.py",
+      "start_char_doc": 1934,
+      "end_char_doc": 1959,
+      "start_line": 58,
+      "end_line": 58,
+      "context": {
+        "prefix": "pout'):             self.prefix_dropout = config.prefix_dropout         else:             ",
+        "suffix": "          # config_prefix.init_random = model_args.init_random         # config_prefix.mid"
+      }
+    },
+    {
+      "@id": "hp_gpt2_lowdata_init_epochs",
+      "@type": "MLS_HyperParameter",
+      "name": "lowdata_init_train3 epochs",
+      "hasValue": "500",
+      "value": 500,
+      "hpCategory": "HP_Training",
+      "hpType": "NumEpochs",
+      "uncertain": false,
+      "description": "Low-data initialization epochs.",
+      "appliesTo": {
+        "@id": "algo_lowdata_init_train3"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/train_control.py:193",
+      "path": "gpt2/train_control.py",
+      "start_char_doc": 7576,
+      "end_char_doc": 7586,
+      "start_line": 193,
+      "end_line": 193,
+      "context": {
+        "prefix": "tput, dim=0)         return output      def lowdata_init_train3(self, gpt2, sample_input, ",
+        "suffix": "): # prev=500         self = self.cuda()         gpt2 = gpt2.cuda()         with torch.no_"
+      }
+    },
+    {
+      "@id": "hp_gpt2_lowdata_init_lr",
+      "@type": "MLS_HyperParameter",
+      "name": "lowdata_init_train3 lr",
+      "hasValue": "0.0001",
+      "value": 0.0001,
+      "hpCategory": "HP_Optimization",
+      "hpType": "LearningRate",
+      "uncertain": false,
+      "description": "Low-data initialization Adam learning rate.",
+      "appliesTo": {
+        "@id": "algo_lowdata_init_train3"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/train_control.py:202",
+      "path": "gpt2/train_control.py",
+      "start_char_doc": 7988,
+      "end_char_doc": 7997,
+      "start_line": 202,
+      "end_line": 202,
+      "context": {
+        "prefix": "utput, dim=0)          optimizer_temp = torch.optim.Adam(self.control_trans.parameters(), ",
+        "suffix": ")          for e in range(epochs):             our_prompt = self.get_prompt_p5(bsz=1)     "
+      }
+    },
+    {
+      "@id": "hp_bart_model_preseqlen_ctor",
+      "@type": "MLS_HyperParameter",
+      "name": "BART PrefixTuning ctor preseqlen",
+      "hasValue": "5",
+      "value": 5,
+      "hpCategory": "HP_Architecture",
+      "hpType": "MaxSequenceLength",
+      "uncertain": false,
+      "description": "BART PrefixTuning constructor fallback prefix length.",
+      "appliesTo": {
+        "@id": "model_bart_prefix_tuning"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "seq2seq/prefixTuning.py:9",
+      "path": "seq2seq/prefixTuning.py",
+      "start_char_doc": 330,
+      "end_char_doc": 341,
+      "start_line": 9,
+      "end_line": 9,
+      "context": {
+        "prefix": "r  transformer encoders\"\"\"     def __init__(self, config, model_gpt2, optim_prefix=False, ",
+        "suffix": ", use_infix=False, deep_param=False):         super().__init__(config)         print('unde"
+      }
+    },
+    {
+      "@id": "hp_bart_model_mid_dim_fallback",
+      "@type": "MLS_HyperParameter",
+      "name": "BART PrefixTuning mid_dim fallback",
+      "hasValue": "512",
+      "value": 512,
+      "hpCategory": "HP_Architecture",
+      "hpType": "HiddenSize",
+      "uncertain": false,
+      "description": "BART prefix MLP hidden dimension fallback.",
+      "appliesTo": {
+        "@id": "model_bart_prefix_tuning"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "seq2seq/prefixTuning.py:80",
+      "path": "seq2seq/prefixTuning.py",
+      "start_char_doc": 2577,
+      "end_char_doc": 2595,
+      "start_line": 80,
+      "end_line": 80,
+      "context": {
+        "prefix": "r(config, 'mid_dim'):             self.mid_dim = config.mid_dim         else:             ",
+        "suffix": "          if hasattr(config, 'lowdata'):             self.lowdata = config.lowdata        "
+      }
+    },
+    {
+      "@id": "hp_seq_eval_max_length",
+      "@type": "MLS_HyperParameter",
+      "name": "seq2seq hard eval_max_length",
+      "hasValue": "62",
+      "value": 62,
+      "hpCategory": "HP_Data",
+      "hpType": "MaxSequenceLength",
+      "uncertain": false,
+      "description": "Hard-coded prefix summarization max generation length.",
+      "appliesTo": {
+        "@id": "eval_seq2seq_rouge"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "seq2seq/finetune.py:121",
+      "path": "seq2seq/finetune.py",
+      "start_char_doc": 4817,
+      "end_char_doc": 4842,
+      "start_line": 121,
+      "end_line": 121,
+      "context": {
+        "prefix": ".hparams.val_metric          self.training_acc_across_batches_at_curr_epoch = []          ",
+        "suffix": "         self.eval_min_length = 11         self.eval_beams =6         print('for deocding,"
+      }
+    },
+    {
+      "@id": "hp_seq_eval_min_length",
+      "@type": "MLS_HyperParameter",
+      "name": "seq2seq hard eval_min_length",
+      "hasValue": "11",
+      "value": 11,
+      "hpCategory": "HP_Data",
+      "hpType": "MaxSequenceLength",
+      "uncertain": false,
+      "description": "Hard-coded prefix summarization min generation length.",
+      "appliesTo": {
+        "@id": "eval_seq2seq_rouge"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "seq2seq/finetune.py:122",
+      "path": "seq2seq/finetune.py",
+      "start_char_doc": 4851,
+      "end_char_doc": 4876,
+      "start_line": 122,
+      "end_line": 122,
+      "context": {
+        "prefix": "training_acc_across_batches_at_curr_epoch = []          self.eval_max_length = 62         ",
+        "suffix": "         self.eval_beams =6         print('for deocding, eval_max_length={}, '            "
+      }
+    },
+    {
+      "@id": "hp_seq_eval_beams",
+      "@type": "MLS_HyperParameter",
+      "name": "seq2seq hard eval_beams",
+      "hasValue": "6",
+      "value": 6,
+      "hpCategory": "HP_Data",
+      "hpType": "HP_Data",
+      "uncertain": true,
+      "description": "Hard-coded prefix summarization beam count.",
+      "appliesTo": {
+        "@id": "eval_seq2seq_rouge"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "seq2seq/finetune.py:123",
+      "path": "seq2seq/finetune.py",
+      "start_char_doc": 4885,
+      "end_char_doc": 4903,
+      "start_line": 123,
+      "end_line": 123,
+      "context": {
+        "prefix": "r_epoch = []          self.eval_max_length = 62         self.eval_min_length = 11         ",
+        "suffix": "         print('for deocding, eval_max_length={}, '               'eval_min_length={}, eva"
+      }
+    },
+    {
+      "@id": "hp_finetune_max_source_length",
+      "@type": "MLS_HyperParameter",
+      "name": "finetune max_source_length",
+      "hasValue": "512",
+      "value": 512,
+      "hpCategory": "HP_Data",
+      "hpType": "MaxSequenceLength",
+      "uncertain": false,
+      "description": "Prefix summarization default max source length.",
+      "appliesTo": {
+        "@id": "process_seq2seq_dataset"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "seq2seq/finetune.py:344",
+      "path": "seq2seq/finetune.py",
+      "start_char_doc": 14625,
+      "end_char_doc": 14643,
+      "start_line": 344,
+      "end_line": 344,
+      "context": {
+        "prefix": "er, root_dir)         parser.add_argument(             \"--max_source_length\",             ",
+        "suffix": "             type=int,             help=\"The maximum total input sequence length after tok"
+      }
+    },
+    {
+      "@id": "hp_finetune_max_target_length",
+      "@type": "MLS_HyperParameter",
+      "name": "finetune max_target_length",
+      "hasValue": "56",
+      "value": 56,
+      "hpCategory": "HP_Data",
+      "hpType": "MaxSequenceLength",
+      "uncertain": false,
+      "description": "Prefix summarization default max target length.",
+      "appliesTo": {
+        "@id": "process_seq2seq_dataset"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "seq2seq/finetune.py:351",
+      "path": "seq2seq/finetune.py",
+      "start_char_doc": 14927,
+      "end_char_doc": 14942,
+      "start_line": 351,
+      "end_line": 351,
+      "context": {
+        "prefix": ".\",         )         parser.add_argument(             \"--max_target_length\",             ",
+        "suffix": "             type=int,             help=\"The maximum total input sequence length after tok"
+      }
+    },
+    {
+      "@id": "hp_finetune_val_max_target_length",
+      "@type": "MLS_HyperParameter",
+      "name": "finetune val_max_target_length",
+      "hasValue": "142",
+      "value": 142,
+      "hpCategory": "HP_Data",
+      "hpType": "MaxSequenceLength",
+      "uncertain": false,
+      "description": "Prefix summarization validation target length.",
+      "appliesTo": {
+        "@id": "process_seq2seq_dataset"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "seq2seq/finetune.py:358",
+      "path": "seq2seq/finetune.py",
+      "start_char_doc": 15230,
+      "end_char_doc": 15241,
+      "start_line": 358,
+      "end_line": 358,
+      "context": {
+        "prefix": "        )         parser.add_argument(             \"--val_max_target_length\",             ",
+        "suffix": ",  #142 # these defaults are optimized for CNNDM. For xsum, see README.md.             typ"
+      }
+    },
+    {
+      "@id": "hp_finetune_n_val",
+      "@type": "MLS_HyperParameter",
+      "name": "finetune n_val",
+      "hasValue": "500",
+      "value": 500,
+      "hpCategory": "HP_Data",
+      "hpType": "TrainValTestSplit",
+      "uncertain": false,
+      "description": "Validation observation cap default.",
+      "appliesTo": {
+        "@id": "process_seq2seq_dataset"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "seq2seq/finetune.py:376",
+      "path": "seq2seq/finetune.py",
+      "start_char_doc": 16395,
+      "end_char_doc": 16426,
+      "start_line": 376,
+      "end_line": 376,
+      "context": {
+        "prefix": "lt=-1, required=False, help=\"# examples. -1 means use all.\")         parser.add_argument(\"",
+        "suffix": ", required=False, help=\"# examples. -1 means use all.\")         parser.add_argument(\"--n_t"
+      }
+    },
+    {
+      "@id": "hp_generation_length_default",
+      "@type": "MLS_HyperParameter",
+      "name": "run_generation length default",
+      "hasValue": "20",
+      "value": 20,
+      "hpCategory": "HP_Data",
+      "hpType": "MaxSequenceLength",
+      "uncertain": false,
+      "description": "Generation default length.",
+      "appliesTo": {
+        "@id": "eval_gpt2_generation"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/run_generation.py:446",
+      "path": "gpt2/run_generation.py",
+      "start_char_doc": 15134,
+      "end_char_doc": 15165,
+      "start_line": 446,
+      "end_line": 446,
+      "context": {
+        "prefix": "er.add_argument(\"--prefix_mode\", type=str, default=\"activation\")     parser.add_argument(\"",
+        "suffix": ")     parser.add_argument(\"--gen_dir\", type=str, default=\"e2e_results_conv\")     parser.ad"
+      }
+    },
+    {
+      "@id": "hp_generation_temperature",
+      "@type": "MLS_HyperParameter",
+      "name": "run_generation temperature",
+      "hasValue": "1.0",
+      "value": 1.0,
+      "hpCategory": "HP_Optimization",
+      "hpType": "HP_Optimization",
+      "uncertain": true,
+      "description": "Sampling temperature.",
+      "appliesTo": {
+        "@id": "eval_gpt2_generation"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/run_generation.py:453",
+      "path": "gpt2/run_generation.py",
+      "start_char_doc": 15435,
+      "end_char_doc": 15446,
+      "start_line": 453,
+      "end_line": 453,
+      "context": {
+        "prefix": " stopped\")      parser.add_argument(         \"--temperature\",         type=float,         ",
+        "suffix": ",         help=\"temperature of 1.0 has no effect, lower tend toward greedy sampling\",     "
+      }
+    },
+    {
+      "@id": "hp_generation_top_p",
+      "@type": "MLS_HyperParameter",
+      "name": "run_generation top_p default",
+      "hasValue": "0.9",
+      "value": 0.9,
+      "hpCategory": "HP_Optimization",
+      "hpType": "HP_Optimization",
+      "uncertain": true,
+      "description": "Nucleus sampling top-p default.",
+      "appliesTo": {
+        "@id": "eval_gpt2_generation"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/run_generation.py:460",
+      "path": "gpt2/run_generation.py",
+      "start_char_doc": 15765,
+      "end_char_doc": 15794,
+      "start_line": 460,
+      "end_line": 460,
+      "context": {
+        "prefix": "e 1.2\"     )     parser.add_argument(\"--k\", type=int, default=0)     parser.add_argument(\"",
+        "suffix": ")      parser.add_argument(\"--tuning_mode\", type=str, default=\"finetune\", help=\"prefixtune"
+      }
+    },
+    {
+      "@id": "hp_generation_top_k",
+      "@type": "MLS_HyperParameter",
+      "name": "run_generation top_k default",
+      "hasValue": "0",
+      "value": 0,
+      "hpCategory": "HP_Optimization",
+      "hpType": "HP_Optimization",
+      "uncertain": true,
+      "description": "Top-k sampling default.",
+      "appliesTo": {
+        "@id": "eval_gpt2_generation"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/run_generation.py:459",
+      "path": "gpt2/run_generation.py",
+      "start_char_doc": 15713,
+      "end_char_doc": 15738,
+      "start_line": 459,
+      "end_line": 459,
+      "context": {
+        "prefix": "p=\"primarily useful for CTRL model; in that case, use 1.2\"     )     parser.add_argument(\"",
+        "suffix": ")     parser.add_argument(\"--p\", type=float, default=0.9)      parser.add_argument(\"--tuni"
+      }
+    },
+    {
+      "@id": "hp_generation_seed",
+      "@type": "MLS_HyperParameter",
+      "name": "run_generation seed default",
+      "hasValue": "42",
+      "value": 42,
+      "hpCategory": "HP_Training",
+      "hpType": "RandomSeed",
+      "uncertain": false,
+      "description": "Generation seed default.",
+      "appliesTo": {
+        "@id": "eval_gpt2_generation"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/run_generation.py:474",
+      "path": "gpt2/run_generation.py",
+      "start_char_doc": 16779,
+      "end_char_doc": 16808,
+      "start_line": 474,
+      "end_line": 474,
+      "context": {
+        "prefix": "ult=\"\", help=\"Optional language when used with the XLM model.\")      parser.add_argument(\"",
+        "suffix": ", help=\"random seed for initialization\")     parser.add_argument(\"--no_cuda\", action=\"stor"
+      }
+    },
+    {
+      "@id": "hp_generation_num_return_sequences",
+      "@type": "MLS_HyperParameter",
+      "name": "run_generation num_return_sequences default",
+      "hasValue": "1",
+      "value": 1,
+      "hpCategory": "HP_Data",
+      "hpType": "HP_Data",
+      "uncertain": true,
+      "description": "Default number of generated samples.",
+      "appliesTo": {
+        "@id": "eval_gpt2_generation"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/run_generation.py:476",
+      "path": "gpt2/run_generation.py",
+      "start_char_doc": 16972,
+      "end_char_doc": 17016,
+      "start_line": 476,
+      "end_line": 476,
+      "context": {
+        "prefix": "a\", action=\"store_true\", help=\"Avoid using CUDA when available\")     parser.add_argument(\"",
+        "suffix": ", help=\"The number of samples to generate.\")     parser.add_argument(         \"--fp16\",   "
+      }
+    },
+    {
+      "@id": "hp_generation_beams",
+      "@type": "MLS_HyperParameter",
+      "name": "run_generation num_beams",
+      "hasValue": "5",
+      "value": 5,
+      "hpCategory": "HP_Data",
+      "hpType": "HP_Data",
+      "uncertain": true,
+      "description": "Beam count in generation branches.",
+      "appliesTo": {
+        "@id": "eval_gpt2_generation"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "gpt2/run_generation.py:1191",
+      "path": "gpt2/run_generation.py",
+      "start_char_doc": 50124,
+      "end_char_doc": 50135,
+      "start_line": 1191,
+      "end_line": 1191,
+      "context": {
+        "prefix": "alty, ##args.repetition_penalty,                     do_sample=False,                     ",
+        "suffix": ",                     bad_words_ids=[[628], [198]] if True else None,                     "
+      }
+    }
+  ]
+}

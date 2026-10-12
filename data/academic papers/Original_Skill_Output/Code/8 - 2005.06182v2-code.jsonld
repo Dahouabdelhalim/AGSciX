@@ -1,0 +1,2657 @@
+{
+  "@context": {
+    "mls": "http://example.org/ontology/mls#",
+    "schema": "http://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "Study": "mls:Study",
+    "Experiment": "mls:Experiment",
+    "Person": "schema:Person",
+    "Organization": "schema:Organization",
+    "MLS_Task": "mls:MLS_Task",
+    "MLS_Dataset": "mls:MLS_Dataset",
+    "DataSource": "mls:DataSource",
+    "Method": "mls:Method",
+    "MLS_Model": "mls:MLS_Model",
+    "MLS_Algorithm": "mls:MLS_Algorithm",
+    "MLS_Eval": "mls:MLS_Eval",
+    "SoftwareRepository": "mls:SoftwareRepository",
+    "MLS_Implementation": "mls:MLS_Implementation",
+    "MLS_HyperParameter": "mls:MLS_HyperParameter",
+    "Dependency": "mls:Dependency",
+    "Environment": "mls:Environment",
+    "DataProcessingStep": "mls:DataProcessingStep",
+    "TrainingRun": "mls:TrainingRun",
+    "EvaluationRun": "mls:EvaluationRun",
+    "PredictionSet": "mls:PredictionSet",
+    "name": "schema:name",
+    "description": "schema:description",
+    "url": "schema:url",
+    "identifier": "schema:identifier",
+    "contains": {
+      "@id": "mls:contains",
+      "@type": "@id"
+    },
+    "supports": {
+      "@id": "mls:supports",
+      "@type": "@id"
+    },
+    "requires": {
+      "@id": "mls:requires",
+      "@type": "@id"
+    },
+    "runsIn": {
+      "@id": "mls:runsIn",
+      "@type": "@id"
+    },
+    "hasAuthor": {
+      "@id": "schema:author",
+      "@type": "@id"
+    },
+    "implements": {
+      "@id": "mls:implements",
+      "@type": "@id"
+    },
+    "realizes": {
+      "@id": "mls:realizes",
+      "@type": "@id"
+    },
+    "usesData": {
+      "@id": "mls:usesData",
+      "@type": "@id"
+    },
+    "produces": {
+      "@id": "mls:produces",
+      "@type": "@id"
+    },
+    "executes": {
+      "@id": "mls:executes",
+      "@type": "@id"
+    },
+    "usesParameters": {
+      "@id": "mls:usesParameters",
+      "@type": "@id"
+    },
+    "trainedOn": {
+      "@id": "mls:trainedOn",
+      "@type": "@id"
+    },
+    "evaluatedOn": {
+      "@id": "mls:evaluatedOn",
+      "@type": "@id"
+    },
+    "subMethod": {
+      "@id": "mls:subMethod",
+      "@type": "@id"
+    },
+    "prov-affiliatedWith": {
+      "@id": "prov:wasAssociatedWith",
+      "@type": "@id"
+    },
+    "prov-derivedFrom": {
+      "@id": "prov:wasDerivedFrom",
+      "@type": "@id"
+    },
+    "prov-producedBy": {
+      "@id": "prov:wasGeneratedBy",
+      "@type": "@id"
+    },
+    "prov-executedBy": {
+      "@id": "mls:prov-executedBy",
+      "@type": "@id"
+    },
+    "prov-generated": {
+      "@id": "mls:prov-generated",
+      "@type": "@id"
+    },
+    "used": {
+      "@id": "prov:used",
+      "@type": "@id"
+    },
+    "trains": {
+      "@id": "mls:trains",
+      "@type": "@id"
+    },
+    "evaluates": {
+      "@id": "mls:evaluates",
+      "@type": "@id"
+    },
+    "wasGeneratedBy": {
+      "@id": "prov:wasGeneratedBy",
+      "@type": "@id"
+    },
+    "producedBy": {
+      "@id": "mls:producedBy",
+      "@type": "@id"
+    },
+    "wasAssociatedWith": {
+      "@id": "prov:wasAssociatedWith",
+      "@type": "@id"
+    },
+    "wasDerivedFrom": {
+      "@id": "prov:wasDerivedFrom",
+      "@type": "@id"
+    }
+  },
+  "@graph": [
+    {
+      "@id": "repo_ht0620_mlsolva",
+      "@type": "SoftwareRepository",
+      "name": "MLSolvA",
+      "url": "https://github.com/ht0620/mlsolva",
+      "owner": "ht0620",
+      "platform": "GitHub",
+      "programmingLanguage": "Python",
+      "version": "aed2bc5a515cc78b89c2224c1727c0319563b32c",
+      "branch": "master",
+      "license": "MIT",
+      "documentationUrl": "README.md",
+      "contains": [
+        {
+          "@id": "impl_data_processor"
+        },
+        {
+          "@id": "impl_regressor"
+        },
+        {
+          "@id": "impl_example_gcn"
+        },
+        {
+          "@id": "impl_example_rnn"
+        }
+      ],
+      "supports": [
+        {
+          "@id": "env_tensorflow_spektral_rdkit"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:1",
+      "path": "README.md",
+      "start_char_doc": 0,
+      "end_char_doc": 9,
+      "start_line": 1,
+      "end_line": 1,
+      "context": {
+        "prefix": "",
+        "suffix": " \"MLSolvA: solvation free energy prediction from pairwise atomistic interactions by machin"
+      }
+    },
+    {
+      "@id": "study_2005_06182v2",
+      "@type": "Study",
+      "title": "MLSolvA: solvation free energy prediction from pairwise atomistic interactions by machine learning",
+      "identifier": "2005.06182v2",
+      "doi": "10.1186/s13321-021-00533-z",
+      "publicationVenue": "Journal of Cheminformatics",
+      "url": "https://doi.org/10.1186/s13321-021-00533-z",
+      "citation": "Hyuntae Lim and YounJoon Jung, Journal of Cheminformatics 13, 56 (2021).",
+      "implements": {
+        "@id": "repo_ht0620_mlsolva"
+      },
+      "hasAuthor": [
+        {
+          "@id": "person_hyuntae_lim"
+        },
+        {
+          "@id": "person_younjoon_jung"
+        }
+      ],
+      "contains": [
+        {
+          "@id": "exp_gcn_solvation"
+        },
+        {
+          "@id": "exp_rnn_solvation"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:2",
+      "path": "README.md",
+      "start_char_doc": 11,
+      "end_char_doc": 109,
+      "start_line": 2,
+      "end_line": 2,
+      "context": {
+        "prefix": "# MLSolvA \"",
+        "suffix": "\"  Hyuntae Lim and YounJoon Jung, *Journal of Cheminformatics* **13**, 56 (2021).  https:/"
+      }
+    },
+    {
+      "@id": "person_hyuntae_lim",
+      "@type": "Person",
+      "name": "Hyuntae Lim",
+      "affiliation": null,
+      "email": null,
+      "orcid": null,
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:4",
+      "path": "README.md",
+      "start_char_doc": 112,
+      "end_char_doc": 123,
+      "start_line": 4,
+      "end_line": 4,
+      "context": {
+        "prefix": "lvation free energy prediction from pairwise atomistic interactions by machine learning\"  ",
+        "suffix": " and YounJoon Jung, *Journal of Cheminformatics* **13**, 56 (2021).  https://doi.org/10.11"
+      }
+    },
+    {
+      "@id": "person_younjoon_jung",
+      "@type": "Person",
+      "name": "YounJoon Jung",
+      "affiliation": null,
+      "email": null,
+      "orcid": null,
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:4",
+      "path": "README.md",
+      "start_char_doc": 128,
+      "end_char_doc": 141,
+      "start_line": 4,
+      "end_line": 4,
+      "context": {
+        "prefix": "rgy prediction from pairwise atomistic interactions by machine learning\"  Hyuntae Lim and ",
+        "suffix": ", *Journal of Cheminformatics* **13**, 56 (2021).  https://doi.org/10.1186/s13321-021-0053"
+      }
+    },
+    {
+      "@id": "impl_data_processor",
+      "@type": "MLS_Implementation",
+      "name": "InputPreparation data processor",
+      "identifier": "mlsolv.DataProcessor.InputPreparation",
+      "framework": "TensorFlow/Keras + Spektral + RDKit",
+      "entryPoint": "mlsolv/DataProcessor.py",
+      "codeRepository": "https://github.com/ht0620/mlsolva",
+      "branch": "master",
+      "commitHash": "aed2bc5a515cc78b89c2224c1727c0319563b32c",
+      "runsIn": {
+        "@id": "env_tensorflow_spektral_rdkit"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "mlsolv/DataProcessor.py:11",
+      "path": "mlsolv/DataProcessor.py",
+      "start_char_doc": 270,
+      "end_char_doc": 292,
+      "start_line": 11,
+      "end_line": 11,
+      "context": {
+        "prefix": "dkit.Chem import AllChem from rdkit import Chem import pandas import pickle import numpy  ",
+        "suffix": "():     def __init__(self, db):         self.db = db         for col in [\"solvent\", \"solut"
+      }
+    },
+    {
+      "@id": "impl_regressor",
+      "@type": "MLS_Implementation",
+      "name": "MLSolvA regressor implementation",
+      "identifier": "mlsolv.Regressor.Regressor",
+      "framework": "TensorFlow/Keras + Spektral",
+      "entryPoint": "mlsolv/Regressor.py",
+      "codeRepository": "https://github.com/ht0620/mlsolva",
+      "branch": "master",
+      "commitHash": "aed2bc5a515cc78b89c2224c1727c0319563b32c",
+      "runsIn": {
+        "@id": "env_tensorflow_spektral_rdkit"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "mlsolv/Regressor.py:18",
+      "path": "mlsolv/Regressor.py",
+      "start_char_doc": 681,
+      "end_char_doc": 696,
+      "start_line": 18,
+      "end_line": 18,
+      "context": {
+        "prefix": "bda x: backend.sum(x, axis = -1, keepdims = True), name = \"solute_sum\")(atn) \treturn atn  ",
+        "suffix": "(): \tdef __init__(self, lookup, mask): \t\tassert lookup.shape == mask.shape  \t\tself.lookup "
+      }
+    },
+    {
+      "@id": "impl_example_gcn",
+      "@type": "MLS_Implementation",
+      "name": "GCN example training script",
+      "identifier": "example/gcn.py",
+      "framework": "TensorFlow/Keras",
+      "entryPoint": "example/gcn.py",
+      "entryPointCommand": "python example/gcn.py",
+      "codeRepository": "https://github.com/ht0620/mlsolva",
+      "branch": "master",
+      "commitHash": "aed2bc5a515cc78b89c2224c1727c0319563b32c",
+      "runsIn": {
+        "@id": "env_tensorflow_spektral_rdkit"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "example/gcn.py:26",
+      "path": "example/gcn.py",
+      "start_char_doc": 602,
+      "end_char_doc": 622,
+      "start_line": 26,
+      "end_line": 26,
+      "context": {
+        "prefix": " y = pre.importdata()  # BiLM Regression optim = optimizers.RMSprop(lr = 1e-3, rho = 0.9) ",
+        "suffix": "(tbl).buildnn(depth = 3) model.compile(loss = \"mse\", optimizer = optim)  model.fit((x_solv"
+      }
+    },
+    {
+      "@id": "impl_example_rnn",
+      "@type": "MLS_Implementation",
+      "name": "RNN example training script",
+      "identifier": "example/rnn.py",
+      "framework": "TensorFlow/Keras",
+      "entryPoint": "example/rnn.py",
+      "entryPointCommand": "python example/rnn.py",
+      "codeRepository": "https://github.com/ht0620/mlsolva",
+      "branch": "master",
+      "commitHash": "aed2bc5a515cc78b89c2224c1727c0319563b32c",
+      "runsIn": {
+        "@id": "env_tensorflow_spektral_rdkit"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "example/rnn.py:26",
+      "path": "example/rnn.py",
+      "start_char_doc": 602,
+      "end_char_doc": 622,
+      "start_line": 26,
+      "end_line": 26,
+      "context": {
+        "prefix": " y = pre.importdata()  # BiLM Regression optim = optimizers.RMSprop(lr = 1e-3, rho = 0.9) ",
+        "suffix": "(tbl).buildnn(depth = 3) model.compile(loss = \"mse\", optimizer = optim)  model.fit((x_solv"
+      }
+    },
+    {
+      "@id": "env_tensorflow_spektral_rdkit",
+      "@type": "Environment",
+      "name": "MLSolvA Python environment",
+      "description": "Environment requiring TensorFlow >=2.0, Spektral >=1.0, RDKit, and Mol2vec; scikit-learn and hyperopt are optional.",
+      "framework": "TensorFlow >=2.0; Spektral >=1.0",
+      "pythonVersion": null,
+      "requirementsFile": null,
+      "isDockerized": false,
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:9",
+      "path": "README.md",
+      "start_char_doc": 253,
+      "end_char_doc": 263,
+      "start_line": 9,
+      "end_line": 9,
+      "context": {
+        "prefix": "rmatics* **13**, 56 (2021).  https://doi.org/10.1186/s13321-021-00533-z  ## Requirements [",
+        "suffix": "](https://www.tensorflow.org) (>=2.0)  [Spektral](https://graphneural.network/) (>=1.0)  ["
+      }
+    },
+    {
+      "@id": "dep_tensorflow",
+      "@type": "Dependency",
+      "packageName": "Tensorflow",
+      "name": "Tensorflow",
+      "version": ">=2.0",
+      "dependencyType": "runtime",
+      "isOptional": false,
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:9",
+      "path": "README.md",
+      "start_char_doc": 253,
+      "end_char_doc": 263,
+      "start_line": 9,
+      "end_line": 9,
+      "context": {
+        "prefix": "rmatics* **13**, 56 (2021).  https://doi.org/10.1186/s13321-021-00533-z  ## Requirements [",
+        "suffix": "](https://www.tensorflow.org) (>=2.0)  [Spektral](https://graphneural.network/) (>=1.0)  ["
+      }
+    },
+    {
+      "@id": "dep_spektral",
+      "@type": "Dependency",
+      "packageName": "Spektral",
+      "name": "Spektral",
+      "version": ">=1.0",
+      "dependencyType": "runtime",
+      "isOptional": false,
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:11",
+      "path": "README.md",
+      "start_char_doc": 303,
+      "end_char_doc": 311,
+      "start_line": 11,
+      "end_line": 11,
+      "context": {
+        "prefix": "86/s13321-021-00533-z  ## Requirements [Tensorflow](https://www.tensorflow.org) (>=2.0)  [",
+        "suffix": "](https://graphneural.network/) (>=1.0)  [RDkit](https://www.rdkit.org/)  [Mol2vec](https:"
+      }
+    },
+    {
+      "@id": "dep_rdkit",
+      "@type": "Dependency",
+      "packageName": "RDkit",
+      "name": "RDkit",
+      "version": null,
+      "dependencyType": "runtime",
+      "isOptional": false,
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:13",
+      "path": "README.md",
+      "start_char_doc": 353,
+      "end_char_doc": 358,
+      "start_line": 13,
+      "end_line": 13,
+      "context": {
+        "prefix": "](https://www.tensorflow.org) (>=2.0)  [Spektral](https://graphneural.network/) (>=1.0)  [",
+        "suffix": "](https://www.rdkit.org/)  [Mol2vec](https://github.com/samoturk/mol2vec)  ## Optional  [S"
+      }
+    },
+    {
+      "@id": "dep_mol2vec",
+      "@type": "Dependency",
+      "packageName": "Mol2vec",
+      "name": "Mol2vec",
+      "version": null,
+      "dependencyType": "runtime",
+      "isOptional": false,
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:15",
+      "path": "README.md",
+      "start_char_doc": 386,
+      "end_char_doc": 393,
+      "start_line": 15,
+      "end_line": 15,
+      "context": {
+        "prefix": "2.0)  [Spektral](https://graphneural.network/) (>=1.0)  [RDkit](https://www.rdkit.org/)  [",
+        "suffix": "](https://github.com/samoturk/mol2vec)  ## Optional  [Scikit-learn](https://scikit-learn.o"
+      }
+    },
+    {
+      "@id": "dep_scikit_learn",
+      "@type": "Dependency",
+      "packageName": "Scikit-learn",
+      "name": "Scikit-learn",
+      "version": null,
+      "dependencyType": "optional",
+      "isOptional": true,
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:19",
+      "path": "README.md",
+      "start_char_doc": 447,
+      "end_char_doc": 459,
+      "start_line": 19,
+      "end_line": 19,
+      "context": {
+        "prefix": "t](https://www.rdkit.org/)  [Mol2vec](https://github.com/samoturk/mol2vec)  ## Optional  [",
+        "suffix": "](https://scikit-learn.org/)  [Hyperopt](https://github.com/hyperopt/hyperopt) "
+      }
+    },
+    {
+      "@id": "dep_hyperopt",
+      "@type": "Dependency",
+      "packageName": "Hyperopt",
+      "name": "Hyperopt",
+      "version": null,
+      "dependencyType": "optional",
+      "isOptional": true,
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:21",
+      "path": "README.md",
+      "start_char_doc": 490,
+      "end_char_doc": 498,
+      "start_line": 21,
+      "end_line": 21,
+      "context": {
+        "prefix": "://github.com/samoturk/mol2vec)  ## Optional  [Scikit-learn](https://scikit-learn.org/)  [",
+        "suffix": "](https://github.com/hyperopt/hyperopt) "
+      }
+    },
+    {
+      "@id": "dep_pandas",
+      "@type": "Dependency",
+      "packageName": "pandas",
+      "name": "pandas",
+      "version": null,
+      "dependencyType": "inferred",
+      "isOptional": false,
+      "wasDerivedFrom": "code",
+      "codeReference": "mlsolv/DataProcessor.py:7",
+      "path": "mlsolv/DataProcessor.py",
+      "start_char_doc": 228,
+      "end_char_doc": 241,
+      "start_line": 7,
+      "end_line": 7,
+      "context": {
+        "prefix": " from rdkit.Chem import PandasTools from rdkit.Chem import AllChem from rdkit import Chem ",
+        "suffix": " import pickle import numpy  class InputPreparation():     def __init__(self, db):        "
+      }
+    },
+    {
+      "@id": "dep_numpy",
+      "@type": "Dependency",
+      "packageName": "numpy",
+      "name": "numpy",
+      "version": null,
+      "dependencyType": "inferred",
+      "isOptional": false,
+      "wasDerivedFrom": "code",
+      "codeReference": "mlsolv/DataProcessor.py:9",
+      "path": "mlsolv/DataProcessor.py",
+      "start_char_doc": 256,
+      "end_char_doc": 268,
+      "start_line": 9,
+      "end_line": 9,
+      "context": {
+        "prefix": "asTools from rdkit.Chem import AllChem from rdkit import Chem import pandas import pickle ",
+        "suffix": "  class InputPreparation():     def __init__(self, db):         self.db = db         for c"
+      }
+    },
+    {
+      "@id": "datasource_freesolv",
+      "@type": "DataSource",
+      "name": "Mobleylab/Freesolv Version 0.52",
+      "type": "public-database",
+      "url": "https://doi.org/10.5281/ZENODO.1161245",
+      "license": null,
+      "wasDerivedFrom": "code",
+      "codeReference": "example/db/README.md:2",
+      "path": "example/db/README.md",
+      "start_char_doc": 84,
+      "end_char_doc": 102,
+      "start_line": 2,
+      "end_line": 2,
+      "context": {
+        "prefix": "# Database List Mobley DL, Shirts M, Lim N, Chodera J, Beauchamp K, Lee-Ping (2018) ",
+        "suffix": ": Version 0.52. Zenodo.   https://doi.org/10.5281/ZENODO.1161245  Hille C, Ringe S, Deimel"
+      }
+    },
+    {
+      "@id": "datasource_solvatum",
+      "@type": "DataSource",
+      "name": "Solv@TUM v 1.0",
+      "type": "public-database",
+      "url": "https://doi.org/10.14459/2018MP1452571",
+      "license": null,
+      "wasDerivedFrom": "code",
+      "codeReference": "example/db/README.md:6",
+      "path": "example/db/README.md",
+      "start_char_doc": 245,
+      "end_char_doc": 259,
+      "start_line": 6,
+      "end_line": 6,
+      "context": {
+        "prefix": "ODO.1161245  Hille C, Ringe S, Deimel M, Kunkel C, Acree WE, Reuter K, Oberhofer H (2018) ",
+        "suffix": ".  https://doi.org/10.14459/2018MP1452571.  https://mediatum.ub.tum.de/1452571 "
+      }
+    },
+    {
+      "@id": "datasource_merged_csv",
+      "@type": "DataSource",
+      "name": "example/db/merged_db.csv",
+      "type": "csv",
+      "url": null,
+      "license": null,
+      "wasDerivedFrom": "code",
+      "codeReference": "example/db/merged_db.csv:1",
+      "path": "example/db/merged_db.csv",
+      "start_char_doc": 0,
+      "end_char_doc": 21,
+      "start_line": 1,
+      "end_line": 1,
+      "context": {
+        "prefix": "",
+        "suffix": " -11.01,CN(C)C(=O)c1ccc(cc1)OC,O -4.87,CS(=O)(=O)Cl,O 1.83,CC(C)C=C,O -5.45,CCc1cnccn1,O -"
+      }
+    },
+    {
+      "@id": "datasource_sampl_csv",
+      "@type": "DataSource",
+      "name": "example/db/sampl.csv",
+      "type": "csv",
+      "url": null,
+      "license": null,
+      "wasDerivedFrom": "code",
+      "codeReference": "example/db/sampl.csv:1",
+      "path": "example/db/sampl.csv",
+      "start_char_doc": 0,
+      "end_char_doc": 21,
+      "start_line": 1,
+      "end_line": 1,
+      "context": {
+        "prefix": "",
+        "suffix": " CN(C)C(=O)c1ccc(cc1)OC,O,-11.01 CS(=O)(=O)Cl,O,-4.87 CC(C)C=C,O,1.83 CCc1cnccn1,O,-5.45 C"
+      }
+    },
+    {
+      "@id": "datasource_solvatum_csv",
+      "@type": "DataSource",
+      "name": "example/db/solvatum.csv",
+      "type": "csv",
+      "url": null,
+      "license": null,
+      "wasDerivedFrom": "code",
+      "codeReference": "example/db/solvatum.csv:1",
+      "path": "example/db/solvatum.csv",
+      "start_char_doc": 0,
+      "end_char_doc": 26,
+      "start_line": 1,
+      "end_line": 1,
+      "context": {
+        "prefix": "",
+        "suffix": " CCC(C)O,[He],0.09229,-1.56 CCC(C)O,[Ne],0.08341,-1.41 CCC(C)O,[Ar],0.03609,-0.61 CCC(C)O,"
+      }
+    },
+    {
+      "@id": "datasource_embedding_matrix",
+      "@type": "DataSource",
+      "name": "example/emb/emat.npy",
+      "type": "numpy-embedding-matrix",
+      "url": null,
+      "license": null,
+      "wasDerivedFrom": "code",
+      "codeReference": "example/gcn.py:14",
+      "path": "example/gcn.py",
+      "start_char_doc": 358,
+      "end_char_doc": 370,
+      "start_line": 14,
+      "end_line": 14,
+      "context": {
+        "prefix": " edim = 128  # Pretrained Data db = pandas.read_csv(\"db/merged_db.csv\") tbl = numpy.load(\"",
+        "suffix": "\") tkn = \"emb/token.pkl\"  # Input Preparation pre = preprocessor(db) pre.tokenize(tkn) pre"
+      }
+    },
+    {
+      "@id": "datasource_mask_matrix",
+      "@type": "DataSource",
+      "name": "example/emb/mmat.npy",
+      "type": "numpy-mask-matrix",
+      "url": null,
+      "license": null,
+      "wasDerivedFrom": "code",
+      "codeReference": "mlsolv/Regressor.py:23",
+      "path": "mlsolv/Regressor.py",
+      "start_char_doc": 797,
+      "end_char_doc": 813,
+      "start_line": 23,
+      "end_line": 23,
+      "context": {
+        "prefix": "init__(self, lookup, mask): \t\tassert lookup.shape == mask.shape  \t\tself.lookup = lookup \t\t",
+        "suffix": "  \t\tself.voc_num = lookup.shape[0] \t\tself.emb_dim = lookup.shape[1]  \tdef Embedder(self, e"
+      },
+      "description": "Bundled mask matrix artifact used through the Regressor mask input."
+    },
+    {
+      "@id": "datasource_tokenizer",
+      "@type": "DataSource",
+      "name": "example/emb/token.pkl",
+      "type": "pickle-tokenizer",
+      "url": null,
+      "license": null,
+      "wasDerivedFrom": "code",
+      "codeReference": "example/gcn.py:15",
+      "path": "example/gcn.py",
+      "start_char_doc": 380,
+      "end_char_doc": 393,
+      "start_line": 15,
+      "end_line": 15,
+      "context": {
+        "prefix": "ned Data db = pandas.read_csv(\"db/merged_db.csv\") tbl = numpy.load(\"emb/emat.npy\") tkn = \"",
+        "suffix": "\"  # Input Preparation pre = preprocessor(db) pre.tokenize(tkn) pre.getadjacency()  x_solv"
+      }
+    },
+    {
+      "@id": "dataset_merged_solvation",
+      "@type": "MLS_Dataset",
+      "name": "merged_db.csv",
+      "description": "Merged solvation free-energy dataset with deltaG, solute SMILES, and solvent SMILES columns.",
+      "numInstances": 6594,
+      "modality": "molecular SMILES/tabular",
+      "source": [
+        {
+          "@id": "datasource_freesolv"
+        },
+        {
+          "@id": "datasource_solvatum"
+        },
+        {
+          "@id": "datasource_merged_csv"
+        }
+      ],
+      "processedThrough": [
+        {
+          "@id": "process_read_csv"
+        },
+        {
+          "@id": "process_smiles_to_rdkit"
+        },
+        {
+          "@id": "process_morgan_tokenization"
+        },
+        {
+          "@id": "process_adjacency_generation"
+        },
+        {
+          "@id": "process_padding"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "example/db/merged_db.csv:1",
+      "path": "example/db/merged_db.csv",
+      "start_char_doc": 0,
+      "end_char_doc": 21,
+      "start_line": 1,
+      "end_line": 1,
+      "context": {
+        "prefix": "",
+        "suffix": " -11.01,CN(C)C(=O)c1ccc(cc1)OC,O -4.87,CS(=O)(=O)Cl,O 1.83,CC(C)C=C,O -5.45,CCc1cnccn1,O -"
+      }
+    },
+    {
+      "@id": "dataset_sampl",
+      "@type": "MLS_Dataset",
+      "name": "sampl.csv",
+      "description": "SAMPL/FreeSolv-style solvation free-energy records bundled as an example source table.",
+      "numInstances": 642,
+      "modality": "molecular SMILES/tabular",
+      "source": {
+        "@id": "datasource_sampl_csv"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "example/db/sampl.csv:1",
+      "path": "example/db/sampl.csv",
+      "start_char_doc": 0,
+      "end_char_doc": 21,
+      "start_line": 1,
+      "end_line": 1,
+      "context": {
+        "prefix": "",
+        "suffix": " CN(C)C(=O)c1ccc(cc1)OC,O,-11.01 CS(=O)(=O)Cl,O,-4.87 CC(C)C=C,O,1.83 CCc1cnccn1,O,-5.45 C"
+      }
+    },
+    {
+      "@id": "dataset_solvatum",
+      "@type": "MLS_Dataset",
+      "name": "solvatum.csv",
+      "description": "Solv@TUM example source table with solvent, solute, deltaG, and logK columns.",
+      "numInstances": 5952,
+      "modality": "molecular SMILES/tabular",
+      "source": {
+        "@id": "datasource_solvatum_csv"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "example/db/solvatum.csv:1",
+      "path": "example/db/solvatum.csv",
+      "start_char_doc": 0,
+      "end_char_doc": 26,
+      "start_line": 1,
+      "end_line": 1,
+      "context": {
+        "prefix": "",
+        "suffix": " CCC(C)O,[He],0.09229,-1.56 CCC(C)O,[Ne],0.08341,-1.41 CCC(C)O,[Ar],0.03609,-0.61 CCC(C)O,"
+      }
+    },
+    {
+      "@id": "dataset_embedding_lookup",
+      "@type": "MLS_Dataset",
+      "name": "emat.npy atomistic embedding matrix",
+      "description": "Pretrained embedding lookup matrix for molecular tokens.",
+      "numInstances": 74,
+      "modality": "embedding-matrix",
+      "source": {
+        "@id": "datasource_embedding_matrix"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "example/gcn.py:14",
+      "path": "example/gcn.py",
+      "start_char_doc": 346,
+      "end_char_doc": 372,
+      "start_line": 14,
+      "end_line": 14,
+      "context": {
+        "prefix": "mport numpy  edim = 128  # Pretrained Data db = pandas.read_csv(\"db/merged_db.csv\") tbl = ",
+        "suffix": " tkn = \"emb/token.pkl\"  # Input Preparation pre = preprocessor(db) pre.tokenize(tkn) pre.g"
+      }
+    },
+    {
+      "@id": "dataset_mask_lookup",
+      "@type": "MLS_Dataset",
+      "name": "mmat.npy mask matrix",
+      "description": "Embedding mask matrix used for GCN token masking.",
+      "numInstances": 74,
+      "modality": "mask-matrix",
+      "source": {
+        "@id": "datasource_mask_matrix"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "mlsolv/Regressor.py:33",
+      "path": "mlsolv/Regressor.py",
+      "start_char_doc": 1343,
+      "end_char_doc": 1364,
+      "start_line": 33,
+      "end_line": 33,
+      "context": {
+        "prefix": ")  \t\tif encoder == \"gcn\": \t\t\tself.msk_solv = layers.Embedding(self.voc_num, self.emb_dim, ",
+        "suffix": ", trainable = False)(seq_solv) \t\t\tself.msk_solu = layers.Embedding(self.voc_num, self.emb_"
+      }
+    },
+    {
+      "@id": "dataset_model_inputs_gcn",
+      "@type": "MLS_Dataset",
+      "name": "GCN padded sequence and adjacency inputs",
+      "description": "Tuple of solvent token sequence, solvent adjacency, solute token sequence, solute adjacency, and deltaG targets.",
+      "modality": "token sequences and graph adjacency",
+      "source": {
+        "@id": "dataset_merged_solvation"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "mlsolv/DataProcessor.py:55",
+      "path": "mlsolv/DataProcessor.py",
+      "start_char_doc": 2233,
+      "end_char_doc": 2288,
+      "start_line": 55,
+      "end_line": 55,
+      "context": {
+        "prefix": "olu)          target = self.db[\"deltaG\"].values          if encoder == \"gcn\":             ",
+        "suffix": "          elif encoder == \"rnn\":             return (seq_solv, seq_solu), target          "
+      }
+    },
+    {
+      "@id": "dataset_model_inputs_rnn",
+      "@type": "MLS_Dataset",
+      "name": "RNN padded sequence inputs",
+      "description": "Tuple of solvent and solute token sequences with deltaG targets for recurrent model.",
+      "modality": "token sequences",
+      "source": {
+        "@id": "dataset_merged_solvation"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "mlsolv/DataProcessor.py:58",
+      "path": "mlsolv/DataProcessor.py",
+      "start_char_doc": 2333,
+      "end_char_doc": 2368,
+      "start_line": 58,
+      "end_line": 58,
+      "context": {
+        "prefix": "q_solv, adj_solv, seq_solu, adj_solu), target          elif encoder == \"rnn\":             ",
+        "suffix": "          else:             print(\"Invalid Network Type\")   def ZeroPadding2D(adj, dim):  "
+      }
+    },
+    {
+      "@id": "task_solvation_free_energy_prediction",
+      "@type": "MLS_Task",
+      "name": "Solvation free energy prediction",
+      "description": "Predict solvation free energy deltaG from solute/solvent molecular representations.",
+      "category": "regression",
+      "metrics": "mse",
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:2",
+      "path": "README.md",
+      "start_char_doc": 20,
+      "end_char_doc": 52,
+      "start_line": 2,
+      "end_line": 2,
+      "context": {
+        "prefix": "# MLSolvA \"MLSolvA: ",
+        "suffix": " from pairwise atomistic interactions by machine learning\"  Hyuntae Lim and YounJoon Jung,"
+      }
+    },
+    {
+      "@id": "task_pairwise_atomistic_interaction_learning",
+      "@type": "MLS_Task",
+      "name": "Pairwise atomistic interaction learning",
+      "description": "Learn solvent-solute pairwise atomistic interaction maps for regression.",
+      "category": "regression",
+      "metrics": "mse",
+      "wasDerivedFrom": "code",
+      "codeReference": "mlsolv/Regressor.py:13",
+      "path": "mlsolv/Regressor.py",
+      "start_char_doc": 446,
+      "end_char_doc": 461,
+      "start_line": 13,
+      "end_line": 13,
+      "context": {
+        "prefix": "olu): \tatn = layers.dot([vec_solv, vec_solu], axes = [-1, -1], normalize = False, name = \"",
+        "suffix": "\") \tatn = layers.Lambda(lambda x: backend.sum(x, axis = -2, keepdims = False), name = \"sol"
+      }
+    },
+    {
+      "@id": "task_molecular_graph_regression",
+      "@type": "MLS_Task",
+      "name": "Molecular graph regression",
+      "description": "Use graph convolution over molecular adjacency structures to predict scalar free energy.",
+      "category": "regression",
+      "metrics": "mse",
+      "wasDerivedFrom": "code",
+      "codeReference": "mlsolv/Regressor.py:41",
+      "path": "mlsolv/Regressor.py",
+      "start_char_doc": 1750,
+      "end_char_doc": 1757,
+      "start_line": 41,
+      "end_line": 41,
+      "context": {
+        "prefix": "GCNBlock(self, gph_solv, adj_solv, gph_solu, adj_solu, reg): \t\tgcn_solv = spektral.layers.",
+        "suffix": "(self.emb_dim, use_bias = True, activation = \"tanh\", kernel_regularizer = reg, bias_regula"
+      }
+    },
+    {
+      "@id": "task_sequence_regression",
+      "@type": "MLS_Task",
+      "name": "Molecular sequence regression",
+      "description": "Use recurrent networks over molecular token sequences to predict scalar free energy.",
+      "category": "regression",
+      "metrics": "mse",
+      "wasDerivedFrom": "code",
+      "codeReference": "mlsolv/Regressor.py:48",
+      "path": "mlsolv/Regressor.py",
+      "start_char_doc": 2260,
+      "end_char_doc": 2264,
+      "start_line": 48,
+      "end_line": 48,
+      "context": {
+        "prefix": "lv, gcn_solu  \tdef RNNBlock(self, seq_solv, seq_solu, reg, backward): \t\trnn_solv = layers.",
+        "suffix": "(self.emb_dim, return_sequences = True, kernel_regularizer = reg, recurrent_regularizer = "
+      }
+    },
+    {
+      "@id": "exp_gcn_solvation",
+      "@type": "Experiment",
+      "name": "GCN MLSolvA solvation regression example",
+      "description": "Example experiment training a graph convolutional regressor on merged solvation data.",
+      "objective": "Train a GCN-style MLSolvA model for deltaG prediction.",
+      "methodology": "Read merged CSV, tokenize molecules, build adjacency matrices, compile MSE regression model, and fit for 100 epochs.",
+      "realizes": [
+        {
+          "@id": "task_solvation_free_energy_prediction"
+        },
+        {
+          "@id": "task_molecular_graph_regression"
+        }
+      ],
+      "usesData": [
+        {
+          "@id": "dataset_model_inputs_gcn"
+        },
+        {
+          "@id": "dataset_embedding_lookup"
+        }
+      ],
+      "executes": {
+        "@id": "impl_example_gcn"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "example/gcn.py:26",
+      "path": "example/gcn.py",
+      "start_char_doc": 602,
+      "end_char_doc": 622,
+      "start_line": 26,
+      "end_line": 26,
+      "context": {
+        "prefix": " y = pre.importdata()  # BiLM Regression optim = optimizers.RMSprop(lr = 1e-3, rho = 0.9) ",
+        "suffix": "(tbl).buildnn(depth = 3) model.compile(loss = \"mse\", optimizer = optim)  model.fit((x_solv"
+      }
+    },
+    {
+      "@id": "exp_rnn_solvation",
+      "@type": "Experiment",
+      "name": "RNN MLSolvA solvation regression example",
+      "description": "Example experiment training a recurrent regressor on merged solvation data.",
+      "objective": "Train an RNN/BiLSTM-style MLSolvA model for deltaG prediction.",
+      "methodology": "Read merged CSV, tokenize molecules, compile MSE regression model, and fit for 100 epochs.",
+      "realizes": [
+        {
+          "@id": "task_solvation_free_energy_prediction"
+        },
+        {
+          "@id": "task_sequence_regression"
+        }
+      ],
+      "usesData": [
+        {
+          "@id": "dataset_model_inputs_rnn"
+        },
+        {
+          "@id": "dataset_embedding_lookup"
+        }
+      ],
+      "executes": {
+        "@id": "impl_example_rnn"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "example/rnn.py:26",
+      "path": "example/rnn.py",
+      "start_char_doc": 602,
+      "end_char_doc": 622,
+      "start_line": 26,
+      "end_line": 26,
+      "context": {
+        "prefix": " y = pre.importdata()  # BiLM Regression optim = optimizers.RMSprop(lr = 1e-3, rho = 0.9) ",
+        "suffix": "(tbl).buildnn(depth = 3) model.compile(loss = \"mse\", optimizer = optim)  model.fit((x_solv"
+      }
+    },
+    {
+      "@id": "method_mlsolva",
+      "@type": "Method",
+      "name": "MLSolvA",
+      "description": "Solvation free-energy prediction from pairwise atomistic interactions by machine learning.",
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:2",
+      "path": "README.md",
+      "start_char_doc": 11,
+      "end_char_doc": 52,
+      "start_line": 2,
+      "end_line": 2,
+      "context": {
+        "prefix": "# MLSolvA \"",
+        "suffix": " from pairwise atomistic interactions by machine learning\"  Hyuntae Lim and YounJoon Jung,"
+      }
+    },
+    {
+      "@id": "method_morgan_sentence",
+      "@type": "Method",
+      "name": "Mol2vec Morgan identifier sentence",
+      "description": "Converts RDKit molecules to sequences of Morgan fingerprint identifiers.",
+      "wasDerivedFrom": "code",
+      "codeReference": "mlsolv/DataProcessor.py:21",
+      "path": "mlsolv/DataProcessor.py",
+      "start_char_doc": 715,
+      "end_char_doc": 728,
+      "start_line": 21,
+      "end_line": 21,
+      "context": {
+        "prefix": "             # Morgan IDs             self.db[\"%s_morgan\" %col] = self.db.apply(lambda x: ",
+        "suffix": "(x[\"%s_rdmol\" %col]), axis = 1)             # Tokenize             self.db[\"%s_token\" %col"
+      }
+    },
+    {
+      "@id": "method_graph_convolutional_regression",
+      "@type": "Method",
+      "name": "Graph convolutional regression",
+      "description": "Uses Spektral GCSConv layers over molecular token embeddings and normalized adjacency matrices.",
+      "wasDerivedFrom": "code",
+      "codeReference": "mlsolv/Regressor.py:41",
+      "path": "mlsolv/Regressor.py",
+      "start_char_doc": 1750,
+      "end_char_doc": 1757,
+      "start_line": 41,
+      "end_line": 41,
+      "context": {
+        "prefix": "GCNBlock(self, gph_solv, adj_solv, gph_solu, adj_solu, reg): \t\tgcn_solv = spektral.layers.",
+        "suffix": "(self.emb_dim, use_bias = True, activation = \"tanh\", kernel_regularizer = reg, bias_regula"
+      }
+    },
+    {
+      "@id": "method_recurrent_regression",
+      "@type": "Method",
+      "name": "Bidirectional recurrent regression",
+      "description": "Uses forward and backward LSTM stacks over token embeddings.",
+      "wasDerivedFrom": "code",
+      "codeReference": "mlsolv/Regressor.py:47",
+      "path": "mlsolv/Regressor.py",
+      "start_char_doc": 2189,
+      "end_char_doc": 2197,
+      "start_line": 47,
+      "end_line": 47,
+      "context": {
+        "prefix": "\t\tgcn_solu = layers.multiply([gcn_solu, self.msk_solu]) \t\treturn gcn_solv, gcn_solu  \tdef ",
+        "suffix": "(self, seq_solv, seq_solu, reg, backward): \t\trnn_solv = layers.LSTM(self.emb_dim, return_s"
+      }
+    },
+    {
+      "@id": "method_pairwise_interaction_map",
+      "@type": "Method",
+      "name": "Pairwise interaction map",
+      "description": "Computes dot-product interaction map and sums over solvent/solute axes to produce target.",
+      "wasDerivedFrom": "code",
+      "codeReference": "mlsolv/Regressor.py:13",
+      "path": "mlsolv/Regressor.py",
+      "start_char_doc": 438,
+      "end_char_doc": 462,
+      "start_line": 13,
+      "end_line": 13,
+      "context": {
+        "prefix": "v, vec_solu): \tatn = layers.dot([vec_solv, vec_solu], axes = [-1, -1], normalize = False, ",
+        "suffix": ") \tatn = layers.Lambda(lambda x: backend.sum(x, axis = -2, keepdims = False), name = \"solv"
+      }
+    },
+    {
+      "@id": "method_trainable_layer_weighting",
+      "@type": "Method",
+      "name": "Trainable layer weighting",
+      "description": "Applies scalar trainable weights before summing representations across depth.",
+      "wasDerivedFrom": "code",
+      "codeReference": "mlsolv/Regressor.py:108",
+      "path": "mlsolv/Regressor.py",
+      "start_char_doc": 4968,
+      "end_char_doc": 4989,
+      "start_line": 108,
+      "end_line": 108,
+      "context": {
+        "prefix": "j_solu], target) \t\t \t\tif encoder == \"rnn\": \t\t\treturn Model([seq_solv, seq_solu], target)  ",
+        "suffix": "(layers.Layer): \tdef __init__(self, **kwargs): \t\tsuper().__init__(**kwargs)  \tdef build(se"
+      }
+    },
+    {
+      "@id": "method_l2_regularization",
+      "@type": "Method",
+      "name": "L2 regularization",
+      "description": "Applies Keras l2 regularization to embeddings, graph/recurrent layers, and biases.",
+      "wasDerivedFrom": "code",
+      "codeReference": "mlsolv/Regressor.py:58",
+      "path": "mlsolv/Regressor.py",
+      "start_char_doc": 2985,
+      "end_char_doc": 3000,
+      "start_line": 58,
+      "end_line": 58,
+      "context": {
+        "prefix": "rn rnn_solv, rnn_solu  \tdef BuildNN(self, encoder = \"gcn\", depth = 3, l2 = 1e-6): \t\treg = ",
+        "suffix": "(l2)  \t\t# Input \t\tseq_solv, seq_solu = layers.Input((None,)), layers.Input((None, ))  \t\tif"
+      }
+    },
+    {
+      "@id": "model_mlsolva_regressor",
+      "@type": "MLS_Model",
+      "name": "MLSolvA Regressor",
+      "description": "Configurable Keras model builder for GCN or RNN encoders with interaction-map output.",
+      "architecture": "Regressor.BuildNN",
+      "trainedOn": {
+        "@id": "dataset_merged_solvation"
+      },
+      "evaluatedOn": {
+        "@id": "dataset_merged_solvation"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "mlsolv/Regressor.py:57",
+      "path": "mlsolv/Regressor.py",
+      "start_char_doc": 2919,
+      "end_char_doc": 2930,
+      "start_line": 57,
+      "end_line": 57,
+      "context": {
+        "prefix": "v) \t\t\trnn_solu = layers.Masking(mask_value = 0.0)(rnn_solu) \t\treturn rnn_solv, rnn_solu  \t",
+        "suffix": "(self, encoder = \"gcn\", depth = 3, l2 = 1e-6): \t\treg = regularizers.l2(l2)  \t\t# Input \t\tse"
+      }
+    },
+    {
+      "@id": "model_gcn_regressor",
+      "@type": "MLS_Model",
+      "name": "GCN MLSolvA regressor",
+      "description": "Graph-convolutional MLSolvA regressor using GCSConv encoder blocks.",
+      "architecture": "Embedding + GCSConv stack + interaction map",
+      "trainedOn": {
+        "@id": "dataset_merged_solvation"
+      },
+      "evaluatedOn": {
+        "@id": "dataset_merged_solvation"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "mlsolv/Regressor.py:32",
+      "path": "mlsolv/Regressor.py",
+      "start_char_doc": 1258,
+      "end_char_doc": 1277,
+      "start_line": 32,
+      "end_line": 32,
+      "context": {
+        "prefix": "f.lookup], trainable = True, mask_zero = True, embeddings_regularizer = reg)(seq_solu)  \t\t",
+        "suffix": ": \t\t\tself.msk_solv = layers.Embedding(self.voc_num, self.emb_dim, weights = [self.mask], t"
+      }
+    },
+    {
+      "@id": "model_rnn_regressor",
+      "@type": "MLS_Model",
+      "name": "RNN MLSolvA regressor",
+      "description": "Bidirectional LSTM MLSolvA regressor over molecular token sequences.",
+      "architecture": "Embedding + forward/backward LSTM stack + interaction map",
+      "trainedOn": {
+        "@id": "dataset_merged_solvation"
+      },
+      "evaluatedOn": {
+        "@id": "dataset_merged_solvation"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "mlsolv/Regressor.py:77",
+      "path": "mlsolv/Regressor.py",
+      "start_char_doc": 3606,
+      "end_char_doc": 3625,
+      "start_line": 77,
+      "end_line": 77,
+      "context": {
+        "prefix": "self.GCNBlock(enc_solv[i - 1], adj_solv, enc_solu[i - 1], adj_solu, reg)  \t\t# RNN stack \t\t",
+        "suffix": ": \t\t\tfwd_solv, fwd_solu = [None] * depth, [None] * depth \t\t\tbwd_solv, bwd_solu = [None] * "
+      }
+    },
+    {
+      "@id": "model_embedding_layer",
+      "@type": "MLS_Model",
+      "name": "Trainable molecular embedding layer",
+      "description": "Keras embedding layer initialized from pretrained lookup matrix.",
+      "architecture": "Embedding",
+      "trainedOn": {
+        "@id": "dataset_merged_solvation"
+      },
+      "evaluatedOn": {
+        "@id": "dataset_merged_solvation"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "mlsolv/Regressor.py:29",
+      "path": "mlsolv/Regressor.py",
+      "start_char_doc": 950,
+      "end_char_doc": 966,
+      "start_line": 29,
+      "end_line": 29,
+      "context": {
+        "prefix": "im = lookup.shape[1]  \tdef Embedder(self, encoder, seq_solv, seq_solu, reg): \t\temb_solv = ",
+        "suffix": "(self.voc_num, self.emb_dim, weights = [self.lookup], trainable = True, mask_zero = True, "
+      }
+    },
+    {
+      "@id": "model_trainable_weight",
+      "@type": "MLS_Model",
+      "name": "TrainableWeight layer",
+      "description": "Custom scalar weighting layer for encoded depth outputs.",
+      "architecture": "custom Keras Layer",
+      "trainedOn": {
+        "@id": "dataset_merged_solvation"
+      },
+      "evaluatedOn": {
+        "@id": "dataset_merged_solvation"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "mlsolv/Regressor.py:108",
+      "path": "mlsolv/Regressor.py",
+      "start_char_doc": 4968,
+      "end_char_doc": 4989,
+      "start_line": 108,
+      "end_line": 108,
+      "context": {
+        "prefix": "j_solu], target) \t\t \t\tif encoder == \"rnn\": \t\t\treturn Model([seq_solv, seq_solu], target)  ",
+        "suffix": "(layers.Layer): \tdef __init__(self, **kwargs): \t\tsuper().__init__(**kwargs)  \tdef build(se"
+      }
+    },
+    {
+      "@id": "algo_input_preparation_init",
+      "@type": "MLS_Algorithm",
+      "name": "InputPreparation.__init__",
+      "description": "Creates RDKit molecule objects from solvent and solute SMILES columns.",
+      "wasDerivedFrom": "code",
+      "codeReference": "mlsolv/DataProcessor.py:12",
+      "path": "mlsolv/DataProcessor.py",
+      "start_char_doc": 300,
+      "end_char_doc": 312,
+      "start_line": 12,
+      "end_line": 12,
+      "context": {
+        "prefix": "rdkit import Chem import pandas import pickle import numpy  class InputPreparation():     ",
+        "suffix": "(self, db):         self.db = db         for col in [\"solvent\", \"solute\"]:             sel"
+      }
+    },
+    {
+      "@id": "algo_gen_sequence",
+      "@type": "MLS_Algorithm",
+      "name": "InputPreparation.GenSequence",
+      "description": "Loads tokenizer and converts Morgan sentences to token sequences.",
+      "wasDerivedFrom": "code",
+      "codeReference": "mlsolv/DataProcessor.py:17",
+      "path": "mlsolv/DataProcessor.py",
+      "start_char_doc": 493,
+      "end_char_doc": 508,
+      "start_line": 17,
+      "end_line": 17,
+      "context": {
+        "prefix": ".db[\"%s_rdmol\" %col] = self.db.apply(lambda x: Chem.MolFromSmiles(x[col]), axis = 1)      ",
+        "suffix": "(self, token_path):         tokenizer = pickle.load(open(token_path, \"rb\"))         for co"
+      }
+    },
+    {
+      "@id": "algo_get_adjacency",
+      "@type": "MLS_Algorithm",
+      "name": "InputPreparation.GetAdjacency",
+      "description": "Builds adjacency, normalized adjacency, and GCN filter matrices.",
+      "wasDerivedFrom": "code",
+      "codeReference": "mlsolv/DataProcessor.py:25",
+      "path": "mlsolv/DataProcessor.py",
+      "start_char_doc": 887,
+      "end_char_doc": 903,
+      "start_line": 25,
+      "end_line": 25,
+      "context": {
+        "prefix": "lf.db[\"%s_token\" %col] = tokenizer.texts_to_sequences(self.db[\"%s_morgan\" %col])          ",
+        "suffix": "(self):         for col in [\"solvent\", \"solute\"]:             # Adjacency matrix (default)"
+      }
+    },
+    {
+      "@id": "algo_import_data",
+      "@type": "MLS_Algorithm",
+      "name": "InputPreparation.ImportData",
+      "description": "Pads token sequences, zero-pads adjacency matrices, and returns model inputs plus deltaG targets.",
+      "wasDerivedFrom": "code",
+      "codeReference": "mlsolv/DataProcessor.py:34",
+      "path": "mlsolv/DataProcessor.py",
+      "start_char_doc": 1439,
+      "end_char_doc": 1453,
+      "start_line": 34,
+      "end_line": 34,
+      "context": {
+        "prefix": " %col] = self.db.apply(lambda x: convolution.gcn_filter(x[\"%s_adj\" %col]), axis = 1)      ",
+        "suffix": "(self, encoder = \"gcn\"):         seq_solv = sequence.pad_sequences(self.db[\"solvent_token\""
+      }
+    },
+    {
+      "@id": "algo_zero_padding_2d",
+      "@type": "MLS_Algorithm",
+      "name": "ZeroPadding2D",
+      "description": "Pads adjacency matrices to common solvent/solute sequence dimensions.",
+      "wasDerivedFrom": "code",
+      "codeReference": "mlsolv/DataProcessor.py:64",
+      "path": "mlsolv/DataProcessor.py",
+      "start_char_doc": 2428,
+      "end_char_doc": 2445,
+      "start_line": 64,
+      "end_line": 64,
+      "context": {
+        "prefix": "n (seq_solv, seq_solu), target          else:             print(\"Invalid Network Type\")   ",
+        "suffix": "(adj, dim):     padder = ((0, dim - adj.shape[0]), (0, dim - adj.shape[0]))     return num"
+      }
+    },
+    {
+      "@id": "algo_mol_to_sentence",
+      "@type": "MLS_Algorithm",
+      "name": "MolToSentence",
+      "description": "Extracts Morgan fingerprint identifiers by atom and radius and returns identifier sentences.",
+      "wasDerivedFrom": "code",
+      "codeReference": "mlsolv/DataProcessor.py:69",
+      "path": "mlsolv/DataProcessor.py",
+      "start_char_doc": 2672,
+      "end_char_doc": 2689,
+      "start_line": 69,
+      "end_line": 69,
+      "context": {
+        "prefix": "_values = 0)  ## This function is taken from mol2vec, https://github.com/samoturk/mol2vec ",
+        "suffix": "(mol, radius = 0):     radii = list(range(int(radius) + 1))     info = {}     _ = AllChem."
+      }
+    },
+    {
+      "@id": "algo_apply_weight",
+      "@type": "MLS_Algorithm",
+      "name": "ApplyWeight",
+      "description": "Applies trainable scalar weights to solvent and solute encoded tensors.",
+      "wasDerivedFrom": "code",
+      "codeReference": "mlsolv/Regressor.py:9",
+      "path": "mlsolv/Regressor.py",
+      "start_char_doc": 222,
+      "end_char_doc": 237,
+      "start_line": 9,
+      "end_line": 9,
+      "context": {
+        "prefix": "flow.keras import layers from tensorflow.keras import Model import spektral import numpy  ",
+        "suffix": "(seq_solv, seq_solu): \treturn TrainableWeight()(seq_solv), TrainableWeight()(seq_solu)  de"
+      }
+    },
+    {
+      "@id": "algo_interaction",
+      "@type": "MLS_Algorithm",
+      "name": "Interaction",
+      "description": "Computes dot-product interaction map and solvent/solute summed regression output.",
+      "wasDerivedFrom": "code",
+      "codeReference": "mlsolv/Regressor.py:12",
+      "path": "mlsolv/Regressor.py",
+      "start_char_doc": 325,
+      "end_char_doc": 340,
+      "start_line": 12,
+      "end_line": 12,
+      "context": {
+        "prefix": "ht(seq_solv, seq_solu): \treturn TrainableWeight()(seq_solv), TrainableWeight()(seq_solu)  ",
+        "suffix": "(vec_solv, vec_solu): \tatn = layers.dot([vec_solv, vec_solu], axes = [-1, -1], normalize ="
+      }
+    },
+    {
+      "@id": "algo_embedder",
+      "@type": "MLS_Algorithm",
+      "name": "Regressor.Embedder",
+      "description": "Creates trainable embedding tensors and optional GCN masks.",
+      "wasDerivedFrom": "code",
+      "codeReference": "mlsolv/Regressor.py:28",
+      "path": "mlsolv/Regressor.py",
+      "start_char_doc": 883,
+      "end_char_doc": 895,
+      "start_line": 28,
+      "end_line": 28,
+      "context": {
+        "prefix": "p \t\tself.mask = mask  \t\tself.voc_num = lookup.shape[0] \t\tself.emb_dim = lookup.shape[1]  \t",
+        "suffix": "(self, encoder, seq_solv, seq_solu, reg): \t\temb_solv = layers.Embedding(self.voc_num, self"
+      }
+    },
+    {
+      "@id": "algo_gcn_block",
+      "@type": "MLS_Algorithm",
+      "name": "Regressor.GCNBlock",
+      "description": "Applies GCSConv blocks to solvent and solute graph tensors.",
+      "wasDerivedFrom": "code",
+      "codeReference": "mlsolv/Regressor.py:40",
+      "path": "mlsolv/Regressor.py",
+      "start_char_doc": 1656,
+      "end_char_doc": 1668,
+      "start_line": 40,
+      "end_line": 40,
+      "context": {
+        "prefix": ") \t\t\temb_solu = layers.multiply([emb_solu, self.msk_solu])  \t\treturn emb_solv, emb_solu  \t",
+        "suffix": "(self, gph_solv, adj_solv, gph_solu, adj_solu, reg): \t\tgcn_solv = spektral.layers.GCSConv("
+      }
+    },
+    {
+      "@id": "algo_rnn_block",
+      "@type": "MLS_Algorithm",
+      "name": "Regressor.RNNBlock",
+      "description": "Applies forward or backward LSTM blocks and reverse/masking for backward pass.",
+      "wasDerivedFrom": "code",
+      "codeReference": "mlsolv/Regressor.py:47",
+      "path": "mlsolv/Regressor.py",
+      "start_char_doc": 2185,
+      "end_char_doc": 2197,
+      "start_line": 47,
+      "end_line": 47,
+      "context": {
+        "prefix": "v]) \t\tgcn_solu = layers.multiply([gcn_solu, self.msk_solu]) \t\treturn gcn_solv, gcn_solu  \t",
+        "suffix": "(self, seq_solv, seq_solu, reg, backward): \t\trnn_solv = layers.LSTM(self.emb_dim, return_s"
+      }
+    },
+    {
+      "@id": "algo_build_nn",
+      "@type": "MLS_Algorithm",
+      "name": "Regressor.BuildNN",
+      "description": "Builds the complete GCN or RNN Keras Model.",
+      "wasDerivedFrom": "code",
+      "codeReference": "mlsolv/Regressor.py:57",
+      "path": "mlsolv/Regressor.py",
+      "start_char_doc": 2919,
+      "end_char_doc": 2930,
+      "start_line": 57,
+      "end_line": 57,
+      "context": {
+        "prefix": "v) \t\t\trnn_solu = layers.Masking(mask_value = 0.0)(rnn_solu) \t\treturn rnn_solv, rnn_solu  \t",
+        "suffix": "(self, encoder = \"gcn\", depth = 3, l2 = 1e-6): \t\treg = regularizers.l2(l2)  \t\t# Input \t\tse"
+      }
+    },
+    {
+      "@id": "algo_trainable_weight_build",
+      "@type": "MLS_Algorithm",
+      "name": "TrainableWeight.build",
+      "description": "Adds scalar trainable weight initialized to 1e-2.",
+      "wasDerivedFrom": "code",
+      "codeReference": "mlsolv/Regressor.py:112",
+      "path": "mlsolv/Regressor.py",
+      "start_char_doc": 5067,
+      "end_char_doc": 5076,
+      "start_line": 112,
+      "end_line": 112,
+      "context": {
+        "prefix": "inableWeight(layers.Layer): \tdef __init__(self, **kwargs): \t\tsuper().__init__(**kwargs)  \t",
+        "suffix": "(self, inshape): \t\tself.w = self.add_weight(name = \"w\", shape = None, initializer = initia"
+      }
+    },
+    {
+      "@id": "algo_trainable_weight_call",
+      "@type": "MLS_Algorithm",
+      "name": "TrainableWeight.call",
+      "description": "Multiplies encoded tensor by learned scalar weight.",
+      "wasDerivedFrom": "code",
+      "codeReference": "mlsolv/Regressor.py:116",
+      "path": "mlsolv/Regressor.py",
+      "start_char_doc": 5216,
+      "end_char_doc": 5224,
+      "start_line": 116,
+      "end_line": 116,
+      "context": {
+        "prefix": " \"w\", shape = None, initializer = initializers.Constant(1e-2)) \t\tsuper().build(inshape)  \t",
+        "suffix": "(self, x): \t\treturn x * self.w  \tdef compute_output_shape(self, inshape): \t\treturn inshape"
+      }
+    },
+    {
+      "@id": "process_read_csv",
+      "@type": "DataProcessingStep",
+      "name": "Read merged database CSV",
+      "description": "Reads merged solvation records from example/db/merged_db.csv.",
+      "transformationType": "loading",
+      "prov_executedBy": {
+        "@id": "impl_data_processor"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "example/gcn.py:13",
+      "path": "example/gcn.py",
+      "start_char_doc": 304,
+      "end_char_doc": 319,
+      "start_line": 13,
+      "end_line": 13,
+      "context": {
+        "prefix": "dictor import rnnregressor import pandas import numpy  edim = 128  # Pretrained Data db = ",
+        "suffix": "(\"db/merged_db.csv\") tbl = numpy.load(\"emb/emat.npy\") tkn = \"emb/token.pkl\"  # Input Prepa"
+      }
+    },
+    {
+      "@id": "process_smiles_to_rdkit",
+      "@type": "DataProcessingStep",
+      "name": "SMILES to RDKit molecules",
+      "description": "Converts solvent and solute SMILES strings to RDKit Mol objects.",
+      "transformationType": "parsing",
+      "prov_executedBy": {
+        "@id": "impl_data_processor"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "mlsolv/DataProcessor.py:15",
+      "path": "mlsolv/DataProcessor.py",
+      "start_char_doc": 450,
+      "end_char_doc": 468,
+      "start_line": 15,
+      "end_line": 15,
+      "context": {
+        "prefix": " in [\"solvent\", \"solute\"]:             self.db[\"%s_rdmol\" %col] = self.db.apply(lambda x: ",
+        "suffix": "(x[col]), axis = 1)      def GenSequence(self, token_path):         tokenizer = pickle.loa"
+      }
+    },
+    {
+      "@id": "process_morgan_tokenization",
+      "@type": "DataProcessingStep",
+      "name": "Morgan identifier tokenization",
+      "description": "Converts RDKit molecules to Morgan identifier sentences and tokenizer sequences.",
+      "transformationType": "tokenization",
+      "prov_executedBy": {
+        "@id": "impl_data_processor"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "mlsolv/DataProcessor.py:23",
+      "path": "mlsolv/DataProcessor.py",
+      "start_char_doc": 832,
+      "end_char_doc": 850,
+      "start_line": 23,
+      "end_line": 23,
+      "context": {
+        "prefix": "%col]), axis = 1)             # Tokenize             self.db[\"%s_token\" %col] = tokenizer.",
+        "suffix": "(self.db[\"%s_morgan\" %col])          def GetAdjacency(self):         for col in [\"solvent\""
+      }
+    },
+    {
+      "@id": "process_adjacency_generation",
+      "@type": "DataProcessingStep",
+      "name": "Adjacency and graph filter generation",
+      "description": "Computes adjacency matrix, normalized adjacency, and GCN filter for each molecule.",
+      "transformationType": "feature_extraction",
+      "prov_executedBy": {
+        "@id": "impl_data_processor"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "mlsolv/DataProcessor.py:32",
+      "path": "mlsolv/DataProcessor.py",
+      "start_char_doc": 1382,
+      "end_char_doc": 1404,
+      "start_line": 32,
+      "end_line": 32,
+      "context": {
+        "prefix": "  # GCN filter (for GCNconv)             self.db[\"%s_gcn\" %col] = self.db.apply(lambda x: ",
+        "suffix": "(x[\"%s_adj\" %col]), axis = 1)      def ImportData(self, encoder = \"gcn\"):         seq_solv"
+      }
+    },
+    {
+      "@id": "process_sequence_padding",
+      "@type": "DataProcessingStep",
+      "name": "Sequence padding",
+      "description": "Pads solvent and solute token sequences using Keras pad_sequences.",
+      "transformationType": "padding",
+      "prov_executedBy": {
+        "@id": "impl_data_processor"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "mlsolv/DataProcessor.py:35",
+      "path": "mlsolv/DataProcessor.py",
+      "start_char_doc": 1497,
+      "end_char_doc": 1519,
+      "start_line": 35,
+      "end_line": 35,
+      "context": {
+        "prefix": "\"%s_adj\" %col]), axis = 1)      def ImportData(self, encoder = \"gcn\"):         seq_solv = ",
+        "suffix": "(self.db[\"solvent_token\"], padding = \"post\")         seq_solu = sequence.pad_sequences(sel"
+      }
+    },
+    {
+      "@id": "process_adjacency_padding",
+      "@type": "DataProcessingStep",
+      "name": "Adjacency zero padding",
+      "description": "Zero pads solvent and solute adjacency matrices to padded sequence dimensions.",
+      "transformationType": "padding",
+      "prov_executedBy": {
+        "@id": "impl_data_processor"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "mlsolv/DataProcessor.py:49",
+      "path": "mlsolv/DataProcessor.py",
+      "start_char_doc": 2008,
+      "end_char_doc": 2021,
+      "start_line": 49,
+      "end_line": 49,
+      "context": {
+        "prefix": "data, dim_solu, dim_solu))          for idx in self.db.index:             adj_solv[idx] = ",
+        "suffix": "(self.db.at[idx, \"solvent_gcs\"], dim_solv)             adj_solu[idx] = ZeroPadding2D(self."
+      }
+    },
+    {
+      "@id": "process_target_extraction",
+      "@type": "DataProcessingStep",
+      "name": "deltaG target extraction",
+      "description": "Extracts the deltaG column as regression target values.",
+      "transformationType": "target_extraction",
+      "prov_executedBy": {
+        "@id": "impl_data_processor"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "mlsolv/DataProcessor.py:52",
+      "path": "mlsolv/DataProcessor.py",
+      "start_char_doc": 2157,
+      "end_char_doc": 2190,
+      "start_line": 52,
+      "end_line": 52,
+      "context": {
+        "prefix": "         adj_solu[idx] = ZeroPadding2D(self.db.at[idx, \"solute_gcs\" ], dim_solu)          ",
+        "suffix": "          if encoder == \"gcn\":             return (seq_solv, adj_solv, seq_solu, adj_solu)"
+      }
+    },
+    {
+      "@id": "process_embedding_load",
+      "@type": "DataProcessingStep",
+      "name": "Embedding matrix loading",
+      "description": "Loads pretrained embedding lookup matrix from emb/emat.npy.",
+      "transformationType": "loading",
+      "prov_executedBy": {
+        "@id": "impl_data_processor"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "example/gcn.py:14",
+      "path": "example/gcn.py",
+      "start_char_doc": 346,
+      "end_char_doc": 372,
+      "start_line": 14,
+      "end_line": 14,
+      "context": {
+        "prefix": "mport numpy  edim = 128  # Pretrained Data db = pandas.read_csv(\"db/merged_db.csv\") tbl = ",
+        "suffix": " tkn = \"emb/token.pkl\"  # Input Preparation pre = preprocessor(db) pre.tokenize(tkn) pre.g"
+      }
+    },
+    {
+      "@id": "process_padding",
+      "@type": "DataProcessingStep",
+      "name": "Input padding pipeline",
+      "description": "Pads token sequences and molecular adjacency matrices for neural models.",
+      "transformationType": "padding",
+      "prov_executedBy": {
+        "@id": "impl_data_processor"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "mlsolv/DataProcessor.py:49",
+      "path": "mlsolv/DataProcessor.py",
+      "start_char_doc": 2008,
+      "end_char_doc": 2021,
+      "start_line": 49,
+      "end_line": 49,
+      "context": {
+        "prefix": "data, dim_solu, dim_solu))          for idx in self.db.index:             adj_solv[idx] = ",
+        "suffix": "(self.db.at[idx, \"solvent_gcs\"], dim_solv)             adj_solu[idx] = ZeroPadding2D(self."
+      }
+    },
+    {
+      "@id": "training_gcn_example",
+      "@type": "TrainingRun",
+      "runId": "gcn_example_training",
+      "name": "GCN example training run",
+      "description": "Fits the GCN MLSolvA regressor on prepared solvent/solute graph inputs.",
+      "prov_executedBy": {
+        "@id": "impl_example_gcn"
+      },
+      "used": [
+        {
+          "@id": "dataset_model_inputs_gcn"
+        },
+        {
+          "@id": "dataset_embedding_lookup"
+        }
+      ],
+      "trains": {
+        "@id": "model_gcn_regressor"
+      },
+      "artifactsLocation": null,
+      "logFile": null,
+      "wasDerivedFrom": "code",
+      "codeReference": "example/gcn.py:29",
+      "path": "example/gcn.py",
+      "start_char_doc": 695,
+      "end_char_doc": 744,
+      "start_line": 29,
+      "end_line": 29,
+      "context": {
+        "prefix": "el = gcnregressor(tbl).buildnn(depth = 3) model.compile(loss = \"mse\", optimizer = optim)  ",
+        "suffix": ", batch_size = 32, epochs = 100, shuffle = True) "
+      }
+    },
+    {
+      "@id": "training_rnn_example",
+      "@type": "TrainingRun",
+      "runId": "rnn_example_training",
+      "name": "RNN example training run",
+      "description": "Fits the RNN MLSolvA regressor on prepared solvent/solute token sequence inputs.",
+      "prov_executedBy": {
+        "@id": "impl_example_rnn"
+      },
+      "used": [
+        {
+          "@id": "dataset_model_inputs_rnn"
+        },
+        {
+          "@id": "dataset_embedding_lookup"
+        }
+      ],
+      "trains": {
+        "@id": "model_rnn_regressor"
+      },
+      "artifactsLocation": null,
+      "logFile": null,
+      "wasDerivedFrom": "code",
+      "codeReference": "example/rnn.py:29",
+      "path": "example/rnn.py",
+      "start_char_doc": 695,
+      "end_char_doc": 724,
+      "start_line": 29,
+      "end_line": 29,
+      "context": {
+        "prefix": "el = rnnregressor(tbl).buildnn(depth = 3) model.compile(loss = \"mse\", optimizer = optim)  ",
+        "suffix": ", batch_size = 32, epochs = 100, shuffle = True) "
+      }
+    },
+    {
+      "@id": "evaluation_gcn_loss",
+      "@type": "EvaluationRun",
+      "runId": "gcn_mse_training_evaluation",
+      "name": "GCN MSE objective evaluation",
+      "description": "Configures mean-squared-error loss for GCN regression training/evaluation.",
+      "split": null,
+      "evaluationScript": "example/gcn.py",
+      "prov_executedBy": {
+        "@id": "impl_example_gcn"
+      },
+      "evaluates": {
+        "@id": "model_gcn_regressor"
+      },
+      "prov_generated": {
+        "@id": "prediction_gcn_deltaG"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "example/gcn.py:27",
+      "path": "example/gcn.py",
+      "start_char_doc": 647,
+      "end_char_doc": 693,
+      "start_line": 27,
+      "end_line": 27,
+      "context": {
+        "prefix": "m = optimizers.RMSprop(lr = 1e-3, rho = 0.9) model = gcnregressor(tbl).buildnn(depth = 3) ",
+        "suffix": "  model.fit((x_solv, adj_solv, x_solu, adj_solu), y, batch_size = 32, epochs = 100, shuffl"
+      }
+    },
+    {
+      "@id": "evaluation_rnn_loss",
+      "@type": "EvaluationRun",
+      "runId": "rnn_mse_training_evaluation",
+      "name": "RNN MSE objective evaluation",
+      "description": "Configures mean-squared-error loss for RNN regression training/evaluation.",
+      "split": null,
+      "evaluationScript": "example/rnn.py",
+      "prov_executedBy": {
+        "@id": "impl_example_rnn"
+      },
+      "evaluates": {
+        "@id": "model_rnn_regressor"
+      },
+      "prov_generated": {
+        "@id": "prediction_rnn_deltaG"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "example/rnn.py:27",
+      "path": "example/rnn.py",
+      "start_char_doc": 647,
+      "end_char_doc": 693,
+      "start_line": 27,
+      "end_line": 27,
+      "context": {
+        "prefix": "m = optimizers.RMSprop(lr = 1e-3, rho = 0.9) model = rnnregressor(tbl).buildnn(depth = 3) ",
+        "suffix": "  model.fit((x_solv, x_solu), y, batch_size = 32, epochs = 100, shuffle = True) "
+      }
+    },
+    {
+      "@id": "prediction_gcn_deltaG",
+      "@type": "PredictionSet",
+      "identifier": "GCN deltaG predictions",
+      "name": "GCN deltaG predictions",
+      "description": "Scalar solvation free-energy predictions produced by the GCN Keras model target tensor.",
+      "predictionFormat": "tensor",
+      "storageLocation": null,
+      "onDatasetSplit": "training/example",
+      "appliedTo": {
+        "@id": "dataset_model_inputs_gcn"
+      },
+      "producedBy": {
+        "@id": "impl_regressor"
+      },
+      "wasGeneratedBy": {
+        "@id": "evaluation_gcn_loss"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "mlsolv/Regressor.py:103",
+      "path": "mlsolv/Regressor.py",
+      "start_char_doc": 4832,
+      "end_char_doc": 4894,
+      "start_line": 103,
+      "end_line": 103,
+      "context": {
+        "prefix": "rmalize = False)  \t\ttarget = Interaction(vec_solv, vec_solu) \t\t \t\tif encoder == \"gcn\": \t\t\t",
+        "suffix": " \t\t \t\tif encoder == \"rnn\": \t\t\treturn Model([seq_solv, seq_solu], target)  class TrainableW"
+      }
+    },
+    {
+      "@id": "prediction_rnn_deltaG",
+      "@type": "PredictionSet",
+      "identifier": "RNN deltaG predictions",
+      "name": "RNN deltaG predictions",
+      "description": "Scalar solvation free-energy predictions produced by the RNN Keras model target tensor.",
+      "predictionFormat": "tensor",
+      "storageLocation": null,
+      "onDatasetSplit": "training/example",
+      "appliedTo": {
+        "@id": "dataset_model_inputs_rnn"
+      },
+      "producedBy": {
+        "@id": "impl_regressor"
+      },
+      "wasGeneratedBy": {
+        "@id": "evaluation_rnn_loss"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "mlsolv/Regressor.py:106",
+      "path": "mlsolv/Regressor.py",
+      "start_char_doc": 4924,
+      "end_char_doc": 4966,
+      "start_line": 106,
+      "end_line": 106,
+      "context": {
+        "prefix": "turn Model([seq_solv, adj_solv, seq_solu, adj_solu], target) \t\t \t\tif encoder == \"rnn\": \t\t\t",
+        "suffix": "  class TrainableWeight(layers.Layer): \tdef __init__(self, **kwargs): \t\tsuper().__init__(*"
+      }
+    },
+    {
+      "@id": "prediction_interaction_map",
+      "@type": "PredictionSet",
+      "identifier": "interaction_map",
+      "name": "interaction_map",
+      "description": "Pairwise solvent-solute atomistic interaction map tensor generated inside the regression model.",
+      "predictionFormat": "tensor",
+      "storageLocation": null,
+      "appliedTo": {
+        "@id": "dataset_merged_solvation"
+      },
+      "producedBy": {
+        "@id": "impl_regressor"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "mlsolv/Regressor.py:13",
+      "path": "mlsolv/Regressor.py",
+      "start_char_doc": 438,
+      "end_char_doc": 462,
+      "start_line": 13,
+      "end_line": 13,
+      "context": {
+        "prefix": "v, vec_solu): \tatn = layers.dot([vec_solv, vec_solu], axes = [-1, -1], normalize = False, ",
+        "suffix": ") \tatn = layers.Lambda(lambda x: backend.sum(x, axis = -2, keepdims = False), name = \"solv"
+      }
+    },
+    {
+      "@id": "metric_mse",
+      "@type": "MLS_Eval",
+      "name": "mse",
+      "measure": "mse",
+      "description": "Mean squared error loss used to compile the Keras regression models.",
+      "wasDerivedFrom": "code",
+      "codeReference": "example/gcn.py:27",
+      "path": "example/gcn.py",
+      "start_char_doc": 661,
+      "end_char_doc": 673,
+      "start_line": 27,
+      "end_line": 27,
+      "context": {
+        "prefix": ".RMSprop(lr = 1e-3, rho = 0.9) model = gcnregressor(tbl).buildnn(depth = 3) model.compile(",
+        "suffix": ", optimizer = optim)  model.fit((x_solv, adj_solv, x_solu, adj_solu), y, batch_size = 32, "
+      }
+    },
+    {
+      "@id": "metric_deltaG",
+      "@type": "MLS_Eval",
+      "name": "deltaG",
+      "measure": "deltaG",
+      "description": "Regression target column for solvation free energy.",
+      "wasDerivedFrom": "code",
+      "codeReference": "mlsolv/DataProcessor.py:52",
+      "path": "mlsolv/DataProcessor.py",
+      "start_char_doc": 2175,
+      "end_char_doc": 2181,
+      "start_line": 52,
+      "end_line": 52,
+      "context": {
+        "prefix": "idx] = ZeroPadding2D(self.db.at[idx, \"solute_gcs\" ], dim_solu)          target = self.db[\"",
+        "suffix": "\"].values          if encoder == \"gcn\":             return (seq_solv, adj_solv, seq_solu, "
+      }
+    },
+    {
+      "@id": "metric_interaction_map",
+      "@type": "MLS_Eval",
+      "name": "interaction_map",
+      "measure": "interaction_map",
+      "description": "Intermediate pairwise atomistic interaction map.",
+      "wasDerivedFrom": "code",
+      "codeReference": "mlsolv/Regressor.py:13",
+      "path": "mlsolv/Regressor.py",
+      "start_char_doc": 446,
+      "end_char_doc": 461,
+      "start_line": 13,
+      "end_line": 13,
+      "context": {
+        "prefix": "olu): \tatn = layers.dot([vec_solv, vec_solu], axes = [-1, -1], normalize = False, name = \"",
+        "suffix": "\") \tatn = layers.Lambda(lambda x: backend.sum(x, axis = -2, keepdims = False), name = \"sol"
+      }
+    },
+    {
+      "@id": "hp_gcn_learning_rate",
+      "@type": "MLS_HyperParameter",
+      "name": "RMSprop lr (GCN)",
+      "hasValue": "1e-3",
+      "value": "1e-3",
+      "hpCategory": "HP_Optimization",
+      "hpType": "LearningRate",
+      "uncertain": false,
+      "description": "RMSprop learning rate in GCN example.",
+      "appliesTo": {
+        "@id": "training_gcn_example"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "example/gcn.py:25",
+      "path": "example/gcn.py",
+      "start_char_doc": 580,
+      "end_char_doc": 589,
+      "start_line": 25,
+      "end_line": 25,
+      "context": {
+        "prefix": "olv, x_solu, adj_solu, y = pre.importdata()  # BiLM Regression optim = optimizers.RMSprop(",
+        "suffix": ", rho = 0.9) model = gcnregressor(tbl).buildnn(depth = 3) model.compile(loss = \"mse\", opti"
+      }
+    },
+    {
+      "@id": "hp_gcn_rho",
+      "@type": "MLS_HyperParameter",
+      "name": "RMSprop rho (GCN)",
+      "hasValue": "0.9",
+      "value": 0.9,
+      "hpCategory": "HP_Optimization",
+      "hpType": "Momentum",
+      "uncertain": true,
+      "description": "RMSprop rho parameter in GCN example.",
+      "appliesTo": {
+        "@id": "training_gcn_example"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "example/gcn.py:25",
+      "path": "example/gcn.py",
+      "start_char_doc": 591,
+      "end_char_doc": 600,
+      "start_line": 25,
+      "end_line": 25,
+      "context": {
+        "prefix": ", adj_solu, y = pre.importdata()  # BiLM Regression optim = optimizers.RMSprop(lr = 1e-3, ",
+        "suffix": ") model = gcnregressor(tbl).buildnn(depth = 3) model.compile(loss = \"mse\", optimizer = opt"
+      }
+    },
+    {
+      "@id": "hp_gcn_depth",
+      "@type": "MLS_HyperParameter",
+      "name": "buildnn depth (GCN)",
+      "hasValue": "3",
+      "value": 3,
+      "hpCategory": "HP_Architecture",
+      "hpType": "NumLayers",
+      "uncertain": false,
+      "description": "Depth passed to GCN regressor builder.",
+      "appliesTo": {
+        "@id": "model_gcn_regressor"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "example/gcn.py:26",
+      "path": "example/gcn.py",
+      "start_char_doc": 636,
+      "end_char_doc": 645,
+      "start_line": 26,
+      "end_line": 26,
+      "context": {
+        "prefix": "ession optim = optimizers.RMSprop(lr = 1e-3, rho = 0.9) model = gcnregressor(tbl).buildnn(",
+        "suffix": ") model.compile(loss = \"mse\", optimizer = optim)  model.fit((x_solv, adj_solv, x_solu, adj"
+      }
+    },
+    {
+      "@id": "hp_gcn_batch_size",
+      "@type": "MLS_HyperParameter",
+      "name": "batch_size (GCN)",
+      "hasValue": "32",
+      "value": 32,
+      "hpCategory": "HP_Training",
+      "hpType": "BatchSize",
+      "uncertain": false,
+      "description": "Training batch size in GCN example.",
+      "appliesTo": {
+        "@id": "training_gcn_example"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "example/gcn.py:29",
+      "path": "example/gcn.py",
+      "start_char_doc": 746,
+      "end_char_doc": 761,
+      "start_line": 29,
+      "end_line": 29,
+      "context": {
+        "prefix": "pile(loss = \"mse\", optimizer = optim)  model.fit((x_solv, adj_solv, x_solu, adj_solu), y, ",
+        "suffix": ", epochs = 100, shuffle = True) "
+      }
+    },
+    {
+      "@id": "hp_gcn_epochs",
+      "@type": "MLS_HyperParameter",
+      "name": "epochs (GCN)",
+      "hasValue": "100",
+      "value": 100,
+      "hpCategory": "HP_Training",
+      "hpType": "NumEpochs",
+      "uncertain": false,
+      "description": "Training epochs in GCN example.",
+      "appliesTo": {
+        "@id": "training_gcn_example"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "example/gcn.py:29",
+      "path": "example/gcn.py",
+      "start_char_doc": 763,
+      "end_char_doc": 775,
+      "start_line": 29,
+      "end_line": 29,
+      "context": {
+        "prefix": ", optimizer = optim)  model.fit((x_solv, adj_solv, x_solu, adj_solu), y, batch_size = 32, ",
+        "suffix": ", shuffle = True) "
+      }
+    },
+    {
+      "@id": "hp_gcn_shuffle",
+      "@type": "MLS_HyperParameter",
+      "name": "shuffle (GCN)",
+      "hasValue": "True",
+      "value": true,
+      "hpCategory": "HP_Data",
+      "hpType": "TrainValTestSplit",
+      "uncertain": true,
+      "description": "Keras fit shuffling flag in GCN example.",
+      "appliesTo": {
+        "@id": "training_gcn_example"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "example/gcn.py:29",
+      "path": "example/gcn.py",
+      "start_char_doc": 777,
+      "end_char_doc": 791,
+      "start_line": 29,
+      "end_line": 29,
+      "context": {
+        "prefix": "optim)  model.fit((x_solv, adj_solv, x_solu, adj_solu), y, batch_size = 32, epochs = 100, ",
+        "suffix": ") "
+      }
+    },
+    {
+      "@id": "hp_rnn_learning_rate",
+      "@type": "MLS_HyperParameter",
+      "name": "RMSprop lr (RNN)",
+      "hasValue": "1e-3",
+      "value": "1e-3",
+      "hpCategory": "HP_Optimization",
+      "hpType": "LearningRate",
+      "uncertain": false,
+      "description": "RMSprop learning rate in RNN example.",
+      "appliesTo": {
+        "@id": "training_rnn_example"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "example/rnn.py:25",
+      "path": "example/rnn.py",
+      "start_char_doc": 580,
+      "end_char_doc": 589,
+      "start_line": 25,
+      "end_line": 25,
+      "context": {
+        "prefix": "olv, x_solu, adj_solu, y = pre.importdata()  # BiLM Regression optim = optimizers.RMSprop(",
+        "suffix": ", rho = 0.9) model = rnnregressor(tbl).buildnn(depth = 3) model.compile(loss = \"mse\", opti"
+      }
+    },
+    {
+      "@id": "hp_rnn_rho",
+      "@type": "MLS_HyperParameter",
+      "name": "RMSprop rho (RNN)",
+      "hasValue": "0.9",
+      "value": 0.9,
+      "hpCategory": "HP_Optimization",
+      "hpType": "Momentum",
+      "uncertain": true,
+      "description": "RMSprop rho parameter in RNN example.",
+      "appliesTo": {
+        "@id": "training_rnn_example"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "example/rnn.py:25",
+      "path": "example/rnn.py",
+      "start_char_doc": 591,
+      "end_char_doc": 600,
+      "start_line": 25,
+      "end_line": 25,
+      "context": {
+        "prefix": ", adj_solu, y = pre.importdata()  # BiLM Regression optim = optimizers.RMSprop(lr = 1e-3, ",
+        "suffix": ") model = rnnregressor(tbl).buildnn(depth = 3) model.compile(loss = \"mse\", optimizer = opt"
+      }
+    },
+    {
+      "@id": "hp_rnn_depth",
+      "@type": "MLS_HyperParameter",
+      "name": "buildnn depth (RNN)",
+      "hasValue": "3",
+      "value": 3,
+      "hpCategory": "HP_Architecture",
+      "hpType": "NumLayers",
+      "uncertain": false,
+      "description": "Depth passed to RNN regressor builder.",
+      "appliesTo": {
+        "@id": "model_rnn_regressor"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "example/rnn.py:26",
+      "path": "example/rnn.py",
+      "start_char_doc": 636,
+      "end_char_doc": 645,
+      "start_line": 26,
+      "end_line": 26,
+      "context": {
+        "prefix": "ession optim = optimizers.RMSprop(lr = 1e-3, rho = 0.9) model = rnnregressor(tbl).buildnn(",
+        "suffix": ") model.compile(loss = \"mse\", optimizer = optim)  model.fit((x_solv, x_solu), y, batch_siz"
+      }
+    },
+    {
+      "@id": "hp_rnn_batch_size",
+      "@type": "MLS_HyperParameter",
+      "name": "batch_size (RNN)",
+      "hasValue": "32",
+      "value": 32,
+      "hpCategory": "HP_Training",
+      "hpType": "BatchSize",
+      "uncertain": false,
+      "description": "Training batch size in RNN example.",
+      "appliesTo": {
+        "@id": "training_rnn_example"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "example/rnn.py:29",
+      "path": "example/rnn.py",
+      "start_char_doc": 726,
+      "end_char_doc": 741,
+      "start_line": 29,
+      "end_line": 29,
+      "context": {
+        "prefix": "depth = 3) model.compile(loss = \"mse\", optimizer = optim)  model.fit((x_solv, x_solu), y, ",
+        "suffix": ", epochs = 100, shuffle = True) "
+      }
+    },
+    {
+      "@id": "hp_rnn_epochs",
+      "@type": "MLS_HyperParameter",
+      "name": "epochs (RNN)",
+      "hasValue": "100",
+      "value": 100,
+      "hpCategory": "HP_Training",
+      "hpType": "NumEpochs",
+      "uncertain": false,
+      "description": "Training epochs in RNN example.",
+      "appliesTo": {
+        "@id": "training_rnn_example"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "example/rnn.py:29",
+      "path": "example/rnn.py",
+      "start_char_doc": 743,
+      "end_char_doc": 755,
+      "start_line": 29,
+      "end_line": 29,
+      "context": {
+        "prefix": "compile(loss = \"mse\", optimizer = optim)  model.fit((x_solv, x_solu), y, batch_size = 32, ",
+        "suffix": ", shuffle = True) "
+      }
+    },
+    {
+      "@id": "hp_rnn_shuffle",
+      "@type": "MLS_HyperParameter",
+      "name": "shuffle (RNN)",
+      "hasValue": "True",
+      "value": true,
+      "hpCategory": "HP_Data",
+      "hpType": "TrainValTestSplit",
+      "uncertain": true,
+      "description": "Keras fit shuffling flag in RNN example.",
+      "appliesTo": {
+        "@id": "training_rnn_example"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "example/rnn.py:29",
+      "path": "example/rnn.py",
+      "start_char_doc": 757,
+      "end_char_doc": 771,
+      "start_line": 29,
+      "end_line": 29,
+      "context": {
+        "prefix": " \"mse\", optimizer = optim)  model.fit((x_solv, x_solu), y, batch_size = 32, epochs = 100, ",
+        "suffix": ") "
+      }
+    },
+    {
+      "@id": "hp_embedding_dim_example",
+      "@type": "MLS_HyperParameter",
+      "name": "edim",
+      "hasValue": "128",
+      "value": 128,
+      "hpCategory": "HP_Architecture",
+      "hpType": "EmbeddingDim",
+      "uncertain": false,
+      "description": "Example embedding dimension variable.",
+      "appliesTo": {
+        "@id": "dataset_embedding_lookup"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "example/gcn.py:10",
+      "path": "example/gcn.py",
+      "start_char_doc": 269,
+      "end_char_doc": 279,
+      "start_line": 10,
+      "end_line": 10,
+      "context": {
+        "prefix": "import gcnregressor from mlsolv.predictor import rnnregressor import pandas import numpy  ",
+        "suffix": "  # Pretrained Data db = pandas.read_csv(\"db/merged_db.csv\") tbl = numpy.load(\"emb/emat.np"
+      }
+    },
+    {
+      "@id": "hp_embedding_vocab_size",
+      "@type": "MLS_HyperParameter",
+      "name": "embedding vocabulary rows",
+      "hasValue": "74",
+      "value": 74,
+      "hpCategory": "HP_Architecture",
+      "hpType": "EmbeddingDim",
+      "uncertain": true,
+      "description": "Number of rows in bundled embedding matrix.",
+      "appliesTo": {
+        "@id": "dataset_embedding_lookup"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "example/gcn.py:14",
+      "path": "example/gcn.py",
+      "start_char_doc": 358,
+      "end_char_doc": 370,
+      "start_line": 14,
+      "end_line": 14,
+      "context": {
+        "prefix": " edim = 128  # Pretrained Data db = pandas.read_csv(\"db/merged_db.csv\") tbl = numpy.load(\"",
+        "suffix": "\") tkn = \"emb/token.pkl\"  # Input Preparation pre = preprocessor(db) pre.tokenize(tkn) pre"
+      }
+    },
+    {
+      "@id": "hp_embedding_dim_matrix",
+      "@type": "MLS_HyperParameter",
+      "name": "embedding matrix dimension",
+      "hasValue": "128",
+      "value": 128,
+      "hpCategory": "HP_Architecture",
+      "hpType": "EmbeddingDim",
+      "uncertain": false,
+      "description": "Number of columns in bundled embedding matrix.",
+      "appliesTo": {
+        "@id": "dataset_embedding_lookup"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "example/gcn.py:14",
+      "path": "example/gcn.py",
+      "start_char_doc": 358,
+      "end_char_doc": 370,
+      "start_line": 14,
+      "end_line": 14,
+      "context": {
+        "prefix": " edim = 128  # Pretrained Data db = pandas.read_csv(\"db/merged_db.csv\") tbl = numpy.load(\"",
+        "suffix": "\") tkn = \"emb/token.pkl\"  # Input Preparation pre = preprocessor(db) pre.tokenize(tkn) pre"
+      }
+    },
+    {
+      "@id": "hp_buildnn_default_encoder",
+      "@type": "MLS_HyperParameter",
+      "name": "BuildNN encoder default",
+      "hasValue": "gcn",
+      "value": "gcn",
+      "hpCategory": "HP_Architecture",
+      "hpType": "UnknownArchitectureHP",
+      "uncertain": true,
+      "description": "Default encoder type for BuildNN.",
+      "appliesTo": {
+        "@id": "model_mlsolva_regressor"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "mlsolv/Regressor.py:57",
+      "path": "mlsolv/Regressor.py",
+      "start_char_doc": 2937,
+      "end_char_doc": 2952,
+      "start_line": 57,
+      "end_line": 57,
+      "context": {
+        "prefix": "ayers.Masking(mask_value = 0.0)(rnn_solu) \t\treturn rnn_solv, rnn_solu  \tdef BuildNN(self, ",
+        "suffix": ", depth = 3, l2 = 1e-6): \t\treg = regularizers.l2(l2)  \t\t# Input \t\tseq_solv, seq_solu = lay"
+      }
+    },
+    {
+      "@id": "hp_buildnn_default_depth",
+      "@type": "MLS_HyperParameter",
+      "name": "BuildNN default depth",
+      "hasValue": "3",
+      "value": 3,
+      "hpCategory": "HP_Architecture",
+      "hpType": "NumLayers",
+      "uncertain": false,
+      "description": "Default number of stacked encoder layers.",
+      "appliesTo": {
+        "@id": "model_mlsolva_regressor"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "mlsolv/Regressor.py:57",
+      "path": "mlsolv/Regressor.py",
+      "start_char_doc": 2954,
+      "end_char_doc": 2963,
+      "start_line": 57,
+      "end_line": 57,
+      "context": {
+        "prefix": "k_value = 0.0)(rnn_solu) \t\treturn rnn_solv, rnn_solu  \tdef BuildNN(self, encoder = \"gcn\", ",
+        "suffix": ", l2 = 1e-6): \t\treg = regularizers.l2(l2)  \t\t# Input \t\tseq_solv, seq_solu = layers.Input(("
+      }
+    },
+    {
+      "@id": "hp_buildnn_l2",
+      "@type": "MLS_HyperParameter",
+      "name": "BuildNN l2",
+      "hasValue": "1e-6",
+      "value": "1e-6",
+      "hpCategory": "HP_Optimization",
+      "hpType": "WeightDecay",
+      "uncertain": false,
+      "description": "Default L2 regularization strength.",
+      "appliesTo": {
+        "@id": "model_mlsolva_regressor"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "mlsolv/Regressor.py:57",
+      "path": "mlsolv/Regressor.py",
+      "start_char_doc": 2965,
+      "end_char_doc": 2974,
+      "start_line": 57,
+      "end_line": 57,
+      "context": {
+        "prefix": ".0)(rnn_solu) \t\treturn rnn_solv, rnn_solu  \tdef BuildNN(self, encoder = \"gcn\", depth = 3, ",
+        "suffix": "): \t\treg = regularizers.l2(l2)  \t\t# Input \t\tseq_solv, seq_solu = layers.Input((None,)), la"
+      }
+    },
+    {
+      "@id": "hp_moltosentence_radius",
+      "@type": "MLS_HyperParameter",
+      "name": "MolToSentence radius",
+      "hasValue": "0",
+      "value": 0,
+      "hpCategory": "HP_Data",
+      "hpType": "HP_Data",
+      "uncertain": true,
+      "description": "Morgan fingerprint radius default in MolToSentence.",
+      "appliesTo": {
+        "@id": "algo_mol_to_sentence"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "mlsolv/DataProcessor.py:69",
+      "path": "mlsolv/DataProcessor.py",
+      "start_char_doc": 2695,
+      "end_char_doc": 2705,
+      "start_line": 69,
+      "end_line": 69,
+      "context": {
+        "prefix": "unction is taken from mol2vec, https://github.com/samoturk/mol2vec def MolToSentence(mol, ",
+        "suffix": "):     radii = list(range(int(radius) + 1))     info = {}     _ = AllChem.GetMorganFingerp"
+      }
+    },
+    {
+      "@id": "hp_pad_sequences_padding",
+      "@type": "MLS_HyperParameter",
+      "name": "pad_sequences padding",
+      "hasValue": "post",
+      "value": "post",
+      "hpCategory": "HP_Data",
+      "hpType": "MaxSequenceLength",
+      "uncertain": true,
+      "description": "Sequence padding direction.",
+      "appliesTo": {
+        "@id": "process_sequence_padding"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "mlsolv/DataProcessor.py:35",
+      "path": "mlsolv/DataProcessor.py",
+      "start_char_doc": 1546,
+      "end_char_doc": 1562,
+      "start_line": 35,
+      "end_line": 35,
+      "context": {
+        "prefix": "lf, encoder = \"gcn\"):         seq_solv = sequence.pad_sequences(self.db[\"solvent_token\"], ",
+        "suffix": ")         seq_solu = sequence.pad_sequences(self.db[\"solute_token\" ], padding = \"post\")   "
+      }
+    },
+    {
+      "@id": "hp_embedding_trainable",
+      "@type": "MLS_HyperParameter",
+      "name": "embedding trainable",
+      "hasValue": "True",
+      "value": true,
+      "hpCategory": "HP_Training",
+      "hpType": "HP_Training",
+      "uncertain": true,
+      "description": "Embedding trainability flag.",
+      "appliesTo": {
+        "@id": "model_embedding_layer"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "mlsolv/Regressor.py:29",
+      "path": "mlsolv/Regressor.py",
+      "start_char_doc": 1020,
+      "end_char_doc": 1036,
+      "start_line": 29,
+      "end_line": 29,
+      "context": {
+        "prefix": " reg): \t\temb_solv = layers.Embedding(self.voc_num, self.emb_dim, weights = [self.lookup], ",
+        "suffix": ", mask_zero = True, embeddings_regularizer = reg)(seq_solv) \t\temb_solu = layers.Embedding("
+      }
+    },
+    {
+      "@id": "hp_embedding_mask_zero",
+      "@type": "MLS_HyperParameter",
+      "name": "embedding mask_zero",
+      "hasValue": "True",
+      "value": true,
+      "hpCategory": "HP_Data",
+      "hpType": "HP_Data",
+      "uncertain": true,
+      "description": "Keras Embedding mask_zero flag.",
+      "appliesTo": {
+        "@id": "model_embedding_layer"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "mlsolv/Regressor.py:29",
+      "path": "mlsolv/Regressor.py",
+      "start_char_doc": 1038,
+      "end_char_doc": 1054,
+      "start_line": 29,
+      "end_line": 29,
+      "context": {
+        "prefix": "= layers.Embedding(self.voc_num, self.emb_dim, weights = [self.lookup], trainable = True, ",
+        "suffix": ", embeddings_regularizer = reg)(seq_solv) \t\temb_solu = layers.Embedding(self.voc_num, self"
+      }
+    },
+    {
+      "@id": "hp_gcsconv_use_bias",
+      "@type": "MLS_HyperParameter",
+      "name": "GCSConv use_bias",
+      "hasValue": "True",
+      "value": true,
+      "hpCategory": "HP_Architecture",
+      "hpType": "UnknownArchitectureHP",
+      "uncertain": true,
+      "description": "Bias flag in GCSConv layers.",
+      "appliesTo": {
+        "@id": "model_gcn_regressor"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "mlsolv/Regressor.py:41",
+      "path": "mlsolv/Regressor.py",
+      "start_char_doc": 1772,
+      "end_char_doc": 1787,
+      "start_line": 41,
+      "end_line": 41,
+      "context": {
+        "prefix": "v, adj_solv, gph_solu, adj_solu, reg): \t\tgcn_solv = spektral.layers.GCSConv(self.emb_dim, ",
+        "suffix": ", activation = \"tanh\", kernel_regularizer = reg, bias_regularizer = reg)([gph_solv, adj_so"
+      }
+    },
+    {
+      "@id": "hp_gcsconv_activation",
+      "@type": "MLS_HyperParameter",
+      "name": "GCSConv activation",
+      "hasValue": "tanh",
+      "value": "tanh",
+      "hpCategory": "HP_Architecture",
+      "hpType": "UnknownArchitectureHP",
+      "uncertain": true,
+      "description": "Activation in GCSConv layers.",
+      "appliesTo": {
+        "@id": "model_gcn_regressor"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "mlsolv/Regressor.py:41",
+      "path": "mlsolv/Regressor.py",
+      "start_char_doc": 1789,
+      "end_char_doc": 1808,
+      "start_line": 41,
+      "end_line": 41,
+      "context": {
+        "prefix": "solu, adj_solu, reg): \t\tgcn_solv = spektral.layers.GCSConv(self.emb_dim, use_bias = True, ",
+        "suffix": ", kernel_regularizer = reg, bias_regularizer = reg)([gph_solv, adj_solv]) \t\tgcn_solu = spe"
+      }
+    },
+    {
+      "@id": "hp_lstm_return_sequences",
+      "@type": "MLS_HyperParameter",
+      "name": "LSTM return_sequences",
+      "hasValue": "True",
+      "value": true,
+      "hpCategory": "HP_Architecture",
+      "hpType": "UnknownArchitectureHP",
+      "uncertain": true,
+      "description": "LSTM returns sequences for downstream interaction map.",
+      "appliesTo": {
+        "@id": "model_rnn_regressor"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "mlsolv/Regressor.py:48",
+      "path": "mlsolv/Regressor.py",
+      "start_char_doc": 2279,
+      "end_char_doc": 2302,
+      "start_line": 48,
+      "end_line": 48,
+      "context": {
+        "prefix": "RNNBlock(self, seq_solv, seq_solu, reg, backward): \t\trnn_solv = layers.LSTM(self.emb_dim, ",
+        "suffix": ", kernel_regularizer = reg, recurrent_regularizer = reg, bias_regularizer = reg, go_backwa"
+      }
+    },
+    {
+      "@id": "hp_lstm_backward_true",
+      "@type": "MLS_HyperParameter",
+      "name": "LSTM backward flag",
+      "hasValue": "True",
+      "value": true,
+      "hpCategory": "HP_Architecture",
+      "hpType": "UnknownArchitectureHP",
+      "uncertain": true,
+      "description": "Backward LSTM pass flag.",
+      "appliesTo": {
+        "@id": "model_rnn_regressor"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "mlsolv/Regressor.py:81",
+      "path": "mlsolv/Regressor.py",
+      "start_char_doc": 3893,
+      "end_char_doc": 3908,
+      "start_line": 81,
+      "end_line": 81,
+      "context": {
+        "prefix": "g, backward = False) \t\t\tbwd_solv[0], bwd_solu[0] = self.RNNBlock(emb_solv, emb_solu, reg, ",
+        "suffix": ") \t\t\tfor i in range(1, depth): \t\t\t\tfwd_solv[i], fwd_solu[i] = self.RNNBlock(fwd_solv[i - 1"
+      }
+    },
+    {
+      "@id": "hp_trainable_weight_init",
+      "@type": "MLS_HyperParameter",
+      "name": "TrainableWeight initializer",
+      "hasValue": "1e-2",
+      "value": "1e-2",
+      "hpCategory": "HP_Architecture",
+      "hpType": "UnknownArchitectureHP",
+      "uncertain": true,
+      "description": "Scalar trainable weight initialization.",
+      "appliesTo": {
+        "@id": "model_trainable_weight"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "mlsolv/Regressor.py:113",
+      "path": "mlsolv/Regressor.py",
+      "start_char_doc": 5160,
+      "end_char_doc": 5187,
+      "start_line": 113,
+      "end_line": 113,
+      "context": {
+        "prefix": " build(self, inshape): \t\tself.w = self.add_weight(name = \"w\", shape = None, initializer = ",
+        "suffix": ") \t\tsuper().build(inshape)  \tdef call(self, x): \t\treturn x * self.w  \tdef compute_output_s"
+      }
+    },
+    {
+      "@id": "hp_embedding_dim_rnn_example",
+      "@type": "MLS_HyperParameter",
+      "name": "edim (RNN example)",
+      "hasValue": "128",
+      "value": 128,
+      "hpCategory": "HP_Architecture",
+      "hpType": "EmbeddingDim",
+      "uncertain": false,
+      "description": "RNN example embedding dimension variable.",
+      "appliesTo": {
+        "@id": "training_rnn_example"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "example/rnn.py:10",
+      "path": "example/rnn.py",
+      "start_char_doc": 269,
+      "end_char_doc": 279,
+      "start_line": 10,
+      "end_line": 10,
+      "context": {
+        "prefix": "import gcnregressor from mlsolv.predictor import rnnregressor import pandas import numpy  ",
+        "suffix": "  # Pretrained Data db = pandas.read_csv(\"db/merged_db.csv\") tbl = numpy.load(\"emb/emat.np"
+      }
+    }
+  ]
+}

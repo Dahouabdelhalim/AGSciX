@@ -1,0 +1,4660 @@
+{
+  "@context": {
+    "mls": "http://example.org/ontology/mls#",
+    "schema": "http://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "Study": "mls:Study",
+    "Experiment": "mls:Experiment",
+    "Person": "schema:Person",
+    "Organization": "schema:Organization",
+    "MLS_Task": "mls:MLS_Task",
+    "MLS_Dataset": "mls:MLS_Dataset",
+    "DataSource": "mls:DataSource",
+    "Method": "mls:Method",
+    "MLS_Model": "mls:MLS_Model",
+    "MLS_Algorithm": "mls:MLS_Algorithm",
+    "MLS_Eval": "mls:MLS_Eval",
+    "SoftwareRepository": "mls:SoftwareRepository",
+    "MLS_Implementation": "mls:MLS_Implementation",
+    "MLS_HyperParameter": "mls:MLS_HyperParameter",
+    "Dependency": "mls:Dependency",
+    "Environment": "mls:Environment",
+    "DataProcessingStep": "mls:DataProcessingStep",
+    "TrainingRun": "mls:TrainingRun",
+    "EvaluationRun": "mls:EvaluationRun",
+    "PredictionSet": "mls:PredictionSet",
+    "name": "schema:name",
+    "description": "schema:description",
+    "url": "schema:url",
+    "identifier": "schema:identifier",
+    "contains": {
+      "@id": "mls:contains",
+      "@type": "@id"
+    },
+    "supports": {
+      "@id": "mls:supports",
+      "@type": "@id"
+    },
+    "requires": {
+      "@id": "mls:requires",
+      "@type": "@id"
+    },
+    "runsIn": {
+      "@id": "mls:runsIn",
+      "@type": "@id"
+    },
+    "hasAuthor": {
+      "@id": "schema:author",
+      "@type": "@id"
+    },
+    "implements": {
+      "@id": "mls:implements",
+      "@type": "@id"
+    },
+    "realizes": {
+      "@id": "mls:realizes",
+      "@type": "@id"
+    },
+    "usesData": {
+      "@id": "mls:usesData",
+      "@type": "@id"
+    },
+    "produces": {
+      "@id": "mls:produces",
+      "@type": "@id"
+    },
+    "executes": {
+      "@id": "mls:executes",
+      "@type": "@id"
+    },
+    "usesParameters": {
+      "@id": "mls:usesParameters",
+      "@type": "@id"
+    },
+    "trainedOn": {
+      "@id": "mls:trainedOn",
+      "@type": "@id"
+    },
+    "evaluatedOn": {
+      "@id": "mls:evaluatedOn",
+      "@type": "@id"
+    },
+    "subMethod": {
+      "@id": "mls:subMethod",
+      "@type": "@id"
+    },
+    "prov-affiliatedWith": {
+      "@id": "prov:wasAssociatedWith",
+      "@type": "@id"
+    },
+    "prov-derivedFrom": {
+      "@id": "prov:wasDerivedFrom",
+      "@type": "@id"
+    },
+    "prov-producedBy": {
+      "@id": "prov:wasGeneratedBy",
+      "@type": "@id"
+    },
+    "prov-executedBy": {
+      "@id": "mls:prov-executedBy",
+      "@type": "@id"
+    },
+    "prov-generated": {
+      "@id": "mls:prov-generated",
+      "@type": "@id"
+    },
+    "used": {
+      "@id": "prov:used",
+      "@type": "@id"
+    },
+    "trains": {
+      "@id": "mls:trains",
+      "@type": "@id"
+    },
+    "evaluates": {
+      "@id": "mls:evaluates",
+      "@type": "@id"
+    },
+    "wasGeneratedBy": {
+      "@id": "prov:wasGeneratedBy",
+      "@type": "@id"
+    },
+    "producedBy": {
+      "@id": "mls:producedBy",
+      "@type": "@id"
+    },
+    "wasAssociatedWith": {
+      "@id": "prov:wasAssociatedWith",
+      "@type": "@id"
+    },
+    "wasDerivedFrom": {
+      "@id": "prov:wasDerivedFrom",
+      "@type": "@id"
+    }
+  },
+  "@graph": [
+    {
+      "@id": "repo_goodfeli_adversarial",
+      "@type": "SoftwareRepository",
+      "name": "adversarial",
+      "url": "https://github.com/goodfeli/adversarial",
+      "owner": "goodfeli",
+      "platform": "GitHub",
+      "programmingLanguage": "Python",
+      "version": "1720041f51efcb92df61d1638f1a74aea2ae74c2",
+      "license": "3-clause BSD",
+      "dateModified": null,
+      "documentationUrl": "README.md",
+      "contains": [
+        {
+          "@id": "impl_adversarial_core"
+        },
+        {
+          "@id": "impl_sgd_separate_steps"
+        },
+        {
+          "@id": "impl_sgd_alternating_epochs"
+        },
+        {
+          "@id": "impl_deconv"
+        },
+        {
+          "@id": "impl_parzen_ll"
+        },
+        {
+          "@id": "impl_sample_viewers"
+        },
+        {
+          "@id": "impl_yaml_experiments"
+        }
+      ],
+      "supports": [
+        {
+          "@id": "env_theano_pylearn2"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:1",
+      "path": "README.md",
+      "start_char_doc": 0,
+      "end_char_doc": 31,
+      "context": {
+        "prefix": "",
+        "suffix": "=============================== This repository contains the"
+      }
+    },
+    {
+      "@id": "study_generative_adversarial_networks",
+      "@type": "Study",
+      "title": "Generative Adversarial Networks",
+      "abstract": null,
+      "issued": "2014",
+      "url": "https://arxiv.org/abs/1406.2661",
+      "doi": null,
+      "citation": "Generative Adversarial Networks. Ian J. Goodfellow, Jean Pouget-Abadie, Mehdi Mirza, Bing Xu, David Warde-Farley, Sherjil Ozair, Aaron Courville, Yoshua Bengio. ArXiv 2014.",
+      "publicationVenue": "ArXiv 2014",
+      "timestamp": null,
+      "hasAuthor": [
+        {
+          "@id": "person_ian_goodfellow"
+        },
+        {
+          "@id": "person_jean_pouget_abadie"
+        },
+        {
+          "@id": "person_mehdi_mirza"
+        },
+        {
+          "@id": "person_bing_xu"
+        },
+        {
+          "@id": "person_david_warde_farley"
+        },
+        {
+          "@id": "person_sherjil_ozair"
+        },
+        {
+          "@id": "person_aaron_courville"
+        },
+        {
+          "@id": "person_yoshua_bengio"
+        }
+      ],
+      "implements": {
+        "@id": "repo_goodfeli_adversarial"
+      },
+      "contains": [
+        {
+          "@id": "exp_mnist_gan"
+        },
+        {
+          "@id": "exp_cifar10_fully_connected_gan"
+        },
+        {
+          "@id": "exp_cifar10_convolutional_gan"
+        },
+        {
+          "@id": "exp_tfd_pretrain"
+        },
+        {
+          "@id": "exp_tfd_train"
+        },
+        {
+          "@id": "exp_parzen_likelihood"
+        },
+        {
+          "@id": "exp_sample_visualization"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:1",
+      "path": "README.md",
+      "start_char_doc": 0,
+      "end_char_doc": 31,
+      "context": {
+        "prefix": "",
+        "suffix": "=============================== This repository contains the"
+      }
+    },
+    {
+      "@id": "person_ian_goodfellow",
+      "@type": "Person",
+      "name": "Ian J. Goodfellow",
+      "affiliation": "academic lab",
+      "email": null,
+      "orcid": null,
+      "prov-affiliatedWith": [
+        {
+          "@id": "org_academic_lab"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:6",
+      "path": "README.md",
+      "start_char_doc": 170,
+      "end_char_doc": 187,
+      "context": {
+        "prefix": "the paper: \"Generative Adversarial Networks.\"",
+        "suffix": ", Jean Pouget-Abadie, Mehdi Mirza,"
+      }
+    },
+    {
+      "@id": "person_jean_pouget_abadie",
+      "@type": "Person",
+      "name": "Jean Pouget-Abadie",
+      "affiliation": "academic lab",
+      "email": null,
+      "orcid": null,
+      "prov-affiliatedWith": [
+        {
+          "@id": "org_academic_lab"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:6",
+      "path": "README.md",
+      "start_char_doc": 189,
+      "end_char_doc": 207,
+      "context": {
+        "prefix": "Adversarial Networks.\" Ian J. Goodfellow,",
+        "suffix": ", Mehdi Mirza, Bing Xu,"
+      }
+    },
+    {
+      "@id": "person_mehdi_mirza",
+      "@type": "Person",
+      "name": "Mehdi Mirza",
+      "affiliation": "academic lab",
+      "email": null,
+      "orcid": null,
+      "prov-affiliatedWith": [
+        {
+          "@id": "org_academic_lab"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:7",
+      "path": "README.md",
+      "start_char_doc": 209,
+      "end_char_doc": 220,
+      "context": {
+        "prefix": "Ian J. Goodfellow, Jean Pouget-Abadie,",
+        "suffix": ", Bing Xu, David Warde-Farley,"
+      }
+    },
+    {
+      "@id": "person_bing_xu",
+      "@type": "Person",
+      "name": "Bing Xu",
+      "affiliation": "academic lab",
+      "email": null,
+      "orcid": null,
+      "prov-affiliatedWith": [
+        {
+          "@id": "org_academic_lab"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:7",
+      "path": "README.md",
+      "start_char_doc": 222,
+      "end_char_doc": 229,
+      "context": {
+        "prefix": "Goodfellow, Jean Pouget-Abadie, Mehdi Mirza,",
+        "suffix": ", David Warde-Farley, Sherjil Ozair,"
+      }
+    },
+    {
+      "@id": "person_david_warde_farley",
+      "@type": "Person",
+      "name": "David Warde-Farley",
+      "affiliation": "academic lab",
+      "email": null,
+      "orcid": null,
+      "prov-affiliatedWith": [
+        {
+          "@id": "org_academic_lab"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:7",
+      "path": "README.md",
+      "start_char_doc": 231,
+      "end_char_doc": 249,
+      "context": {
+        "prefix": "Pouget-Abadie, Mehdi Mirza, Bing Xu,",
+        "suffix": ", Sherjil Ozair, Aaron Courville,"
+      }
+    },
+    {
+      "@id": "person_sherjil_ozair",
+      "@type": "Person",
+      "name": "Sherjil Ozair",
+      "affiliation": "academic lab",
+      "email": null,
+      "orcid": null,
+      "prov-affiliatedWith": [
+        {
+          "@id": "org_academic_lab"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:7",
+      "path": "README.md",
+      "start_char_doc": 251,
+      "end_char_doc": 264,
+      "context": {
+        "prefix": "Mirza, Bing Xu, David Warde-Farley,",
+        "suffix": ", Aaron Courville, Yoshua Bengio."
+      }
+    },
+    {
+      "@id": "person_aaron_courville",
+      "@type": "Person",
+      "name": "Aaron Courville",
+      "affiliation": "academic lab",
+      "email": null,
+      "orcid": null,
+      "prov-affiliatedWith": [
+        {
+          "@id": "org_academic_lab"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:7",
+      "path": "README.md",
+      "start_char_doc": 266,
+      "end_char_doc": 281,
+      "context": {
+        "prefix": "Xu, David Warde-Farley, Sherjil Ozair,",
+        "suffix": ", Yoshua Bengio. ArXiv 2014."
+      }
+    },
+    {
+      "@id": "person_yoshua_bengio",
+      "@type": "Person",
+      "name": "Yoshua Bengio",
+      "affiliation": "academic lab",
+      "email": null,
+      "orcid": null,
+      "prov-affiliatedWith": [
+        {
+          "@id": "org_academic_lab"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:8",
+      "path": "README.md",
+      "start_char_doc": 283,
+      "end_char_doc": 296,
+      "context": {
+        "prefix": "Warde-Farley, Sherjil Ozair, Aaron Courville,",
+        "suffix": ". ArXiv 2014. Please cite"
+      }
+    },
+    {
+      "@id": "org_academic_lab",
+      "@type": "Organization",
+      "name": "academic lab",
+      "url": null,
+      "type": "research lab",
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:13",
+      "path": "README.md",
+      "start_char_doc": 425,
+      "end_char_doc": 437,
+      "context": {
+        "prefix": "research project. We are an",
+        "suffix": ", not a software company,"
+      }
+    },
+    {
+      "@id": "org_universite_de_montreal",
+      "@type": "Organization",
+      "name": "Universite de Montreal",
+      "url": null,
+      "type": "university",
+      "wasDerivedFrom": "code",
+      "codeReference": "sgd.py:10",
+      "path": "sgd.py",
+      "start_char_doc": 342,
+      "end_char_doc": 364,
+      "context": {
+        "prefix": "Goodfellow\" __copyright__ = \"Copyright 2010-2012,",
+        "suffix": "\" __credits__ = [\"Ian Goodfellow,"
+      }
+    },
+    {
+      "@id": "env_theano_pylearn2",
+      "@type": "Environment",
+      "name": "Theano/Pylearn2 GAN environment",
+      "description": "Development branches of Pylearn2 and Theano around June 9, 2014; NVIDIA Ge-Force GTX-580 graphics cards used by authors.",
+      "framework": "Pylearn2 and Theano",
+      "hardwareSpecs": "NVIDA Ge-Force GTX-580 graphics cards",
+      "os": null,
+      "pythonVersion": "Python 2 syntax",
+      "requirementsFile": null,
+      "isDockerized": false,
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:19",
+      "path": "README.md",
+      "start_char_doc": 810,
+      "end_char_doc": 832,
+      "context": {
+        "prefix": "(GPU model, etc). We used",
+        "suffix": "graphics cards; other hardware will"
+      }
+    },
+    {
+      "@id": "dep_pylearn2",
+      "@type": "Dependency",
+      "packageName": "Pylearn2",
+      "version": null,
+      "dependencyType": "runtime",
+      "isOptional": false,
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:26",
+      "path": "README.md",
+      "start_char_doc": 1154,
+      "end_char_doc": 1162,
+      "context": {
+        "prefix": "this code into Theano or",
+        "suffix": "so subsequent changes to those"
+      }
+    },
+    {
+      "@id": "dep_theano",
+      "@type": "Dependency",
+      "packageName": "Theano",
+      "version": null,
+      "dependencyType": "runtime",
+      "isOptional": false,
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:25",
+      "path": "README.md",
+      "start_char_doc": 1144,
+      "end_char_doc": 1150,
+      "context": {
+        "prefix": "tests for this code into",
+        "suffix": "or Pylearn2 so subsequent changes"
+      }
+    },
+    {
+      "@id": "dep_numpy",
+      "@type": "Dependency",
+      "packageName": "numpy",
+      "version": null,
+      "dependencyType": "runtime",
+      "isOptional": false,
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:34",
+      "path": "README.md",
+      "start_char_doc": 1716,
+      "end_char_doc": 1721,
+      "context": {
+        "prefix": "Pylearn2 and Pylearn2's dependencies (Theano,",
+        "suffix": ", etc.) parzen_ll.py is the"
+      }
+    },
+    {
+      "@id": "dep_ipdb",
+      "@type": "Dependency",
+      "packageName": "ipdb",
+      "version": null,
+      "dependencyType": "optional debug",
+      "isOptional": true,
+      "wasDerivedFrom": "code",
+      "codeReference": "show_samples_inpaint.py:8",
+      "path": "show_samples_inpaint.py",
+      "start_char_doc": 206,
+      "end_char_doc": 217,
+      "context": {
+        "prefix": "yaml_parse import numpy as np",
+        "suffix": "# TODO, only works for"
+      }
+    },
+    {
+      "@id": "impl_adversarial_core",
+      "@type": "MLS_Implementation",
+      "identifier": "Core adversarial model/cost implementation",
+      "codeRepository": "https://github.com/goodfeli/adversarial",
+      "framework": "Theano/Pylearn2",
+      "entryPoint": "__init__.py",
+      "entryPointCommand": null,
+      "executionCommand": null,
+      "commitHash": "1720041f51efcb92df61d1638f1a74aea2ae74c2",
+      "branch": "master",
+      "dependenciesHash": null,
+      "runsIn": {
+        "@id": "env_theano_pylearn2"
+      },
+      "requires": [
+        {
+          "@id": "dep_pylearn2"
+        },
+        {
+          "@id": "dep_theano"
+        },
+        {
+          "@id": "dep_numpy"
+        },
+        {
+          "@id": "dep_ipdb"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "__init__.py:30",
+      "path": "__init__.py",
+      "start_char_doc": 856,
+      "end_char_doc": 875,
+      "context": {
+        "prefix": "serial from pylearn2.utils import sharedX",
+        "suffix": "(Model): def __init__(self, generator, discriminator,"
+      }
+    },
+    {
+      "@id": "impl_sgd_separate_steps",
+      "@type": "MLS_Implementation",
+      "identifier": "SGD with separate discriminator and generator steps",
+      "codeRepository": "https://github.com/goodfeli/adversarial",
+      "framework": "Theano/Pylearn2",
+      "entryPoint": "sgd.py",
+      "entryPointCommand": null,
+      "executionCommand": null,
+      "commitHash": "1720041f51efcb92df61d1638f1a74aea2ae74c2",
+      "branch": "master",
+      "dependenciesHash": null,
+      "runsIn": {
+        "@id": "env_theano_pylearn2"
+      },
+      "requires": [
+        {
+          "@id": "dep_pylearn2"
+        },
+        {
+          "@id": "dep_theano"
+        },
+        {
+          "@id": "dep_numpy"
+        },
+        {
+          "@id": "dep_ipdb"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "sgd.py:2",
+      "path": "sgd.py",
+      "start_char_doc": 31,
+      "end_char_doc": 63,
+      "context": {
+        "prefix": "\"\"\" Copy of pylearn2's sgd.py,",
+        "suffix": "discriminator separately from the generator."
+      }
+    },
+    {
+      "@id": "impl_sgd_alternating_epochs",
+      "@type": "MLS_Implementation",
+      "identifier": "SGD alternating discriminator-only and joint epochs",
+      "codeRepository": "https://github.com/goodfeli/adversarial",
+      "framework": "Theano/Pylearn2",
+      "entryPoint": "sgd_alt.py",
+      "entryPointCommand": null,
+      "executionCommand": null,
+      "commitHash": "1720041f51efcb92df61d1638f1a74aea2ae74c2",
+      "branch": "master",
+      "dependenciesHash": null,
+      "runsIn": {
+        "@id": "env_theano_pylearn2"
+      },
+      "requires": [
+        {
+          "@id": "dep_pylearn2"
+        },
+        {
+          "@id": "dep_theano"
+        },
+        {
+          "@id": "dep_numpy"
+        },
+        {
+          "@id": "dep_ipdb"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "sgd_alt.py:2",
+      "path": "sgd_alt.py",
+      "start_char_doc": 31,
+      "end_char_doc": 68,
+      "context": {
+        "prefix": "\"\"\" Copy of pylearn2's sgd.py,",
+        "suffix": "epochs of updating only the"
+      }
+    },
+    {
+      "@id": "impl_deconv",
+      "@type": "MLS_Implementation",
+      "identifier": "Deconvolutional layer implementation",
+      "codeRepository": "https://github.com/goodfeli/adversarial",
+      "framework": "Theano/Pylearn2 cuda-convnet",
+      "entryPoint": "deconv.py",
+      "entryPointCommand": null,
+      "executionCommand": null,
+      "commitHash": "1720041f51efcb92df61d1638f1a74aea2ae74c2",
+      "branch": "master",
+      "dependenciesHash": null,
+      "runsIn": {
+        "@id": "env_theano_pylearn2"
+      },
+      "requires": [
+        {
+          "@id": "dep_pylearn2"
+        },
+        {
+          "@id": "dep_theano"
+        },
+        {
+          "@id": "dep_numpy"
+        },
+        {
+          "@id": "dep_ipdb"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "deconv.py:18",
+      "path": "deconv.py",
+      "start_char_doc": 529,
+      "end_char_doc": 541,
+      "context": {
+        "prefix": "import sharedX logger = logging.getLogger(__name__)",
+        "suffix": "(Layer): def __init__(self, num_channels, kernel_shape,"
+      }
+    },
+    {
+      "@id": "impl_parzen_ll",
+      "@type": "MLS_Implementation",
+      "identifier": "Parzen likelihood estimator",
+      "codeRepository": "https://github.com/goodfeli/adversarial",
+      "framework": "Theano/Pylearn2",
+      "entryPoint": "parzen_ll.py",
+      "entryPointCommand": "python parzen_ll.py -p MODEL -d mnist",
+      "executionCommand": "python parzen_ll.py -p MODEL -d mnist",
+      "commitHash": "1720041f51efcb92df61d1638f1a74aea2ae74c2",
+      "branch": "master",
+      "dependenciesHash": null,
+      "runsIn": {
+        "@id": "env_theano_pylearn2"
+      },
+      "requires": [
+        {
+          "@id": "dep_pylearn2"
+        },
+        {
+          "@id": "dep_theano"
+        },
+        {
+          "@id": "dep_numpy"
+        },
+        {
+          "@id": "dep_ipdb"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "parzen_ll.py:97",
+      "path": "parzen_ll.py",
+      "start_char_doc": 2248,
+      "end_char_doc": 2287,
+      "context": {
+        "prefix": "parser = argparse.ArgumentParser(description = '",
+        "suffix": "') parser.add_argument('-p', '--path', help='model path')"
+      }
+    },
+    {
+      "@id": "impl_sample_viewers",
+      "@type": "MLS_Implementation",
+      "identifier": "Sample and weight visualization scripts",
+      "codeRepository": "https://github.com/goodfeli/adversarial",
+      "framework": "Pylearn2 GUI",
+      "entryPoint": "show_samples.py",
+      "entryPointCommand": "python show_samples.py MODEL",
+      "executionCommand": "python show_samples.py MODEL",
+      "commitHash": "1720041f51efcb92df61d1638f1a74aea2ae74c2",
+      "branch": "master",
+      "dependenciesHash": null,
+      "runsIn": {
+        "@id": "env_theano_pylearn2"
+      },
+      "requires": [
+        {
+          "@id": "dep_pylearn2"
+        },
+        {
+          "@id": "dep_theano"
+        },
+        {
+          "@id": "dep_numpy"
+        },
+        {
+          "@id": "dep_ipdb"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "show_samples.py:19",
+      "path": "show_samples.py",
+      "start_char_doc": 521,
+      "end_char_doc": 548,
+      "context": {
+        "prefix": "not working right samples =",
+        "suffix": ".eval() if match_train: grid_shape ="
+      }
+    },
+    {
+      "@id": "impl_yaml_experiments",
+      "@type": "MLS_Implementation",
+      "identifier": "Pylearn2 YAML experiment configurations",
+      "codeRepository": "https://github.com/goodfeli/adversarial",
+      "framework": "Pylearn2 YAML",
+      "entryPoint": "*.yaml",
+      "entryPointCommand": "pylearn2/scripts/train.py CONFIG.yaml",
+      "executionCommand": "pylearn2/scripts/train.py CONFIG.yaml",
+      "commitHash": "1720041f51efcb92df61d1638f1a74aea2ae74c2",
+      "branch": "master",
+      "dependenciesHash": null,
+      "runsIn": {
+        "@id": "env_theano_pylearn2"
+      },
+      "requires": [
+        {
+          "@id": "dep_pylearn2"
+        },
+        {
+          "@id": "dep_theano"
+        },
+        {
+          "@id": "dep_numpy"
+        },
+        {
+          "@id": "dep_ipdb"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:40",
+      "path": "README.md",
+      "start_char_doc": 1843,
+      "end_char_doc": 1899,
+      "context": {
+        "prefix": "using the Parzen density technique.",
+        "suffix": "in this repository to train"
+      }
+    },
+    {
+      "@id": "task_generative_modeling",
+      "@type": "MLS_Task",
+      "name": "generative modeling",
+      "description": "Train neural generative models that synthesize image samples.",
+      "category": "generative modeling",
+      "metrics": null,
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:1",
+      "path": "README.md",
+      "start_char_doc": 0,
+      "end_char_doc": 31,
+      "context": {
+        "prefix": "",
+        "suffix": "=============================== This repository contains the"
+      }
+    },
+    {
+      "@id": "task_adversarial_training",
+      "@type": "MLS_Task",
+      "name": "adversarial training",
+      "description": "Train a generator and discriminator in an adversarial game.",
+      "category": "training",
+      "metrics": null,
+      "wasDerivedFrom": "code",
+      "codeReference": "__init__.py:30",
+      "path": "__init__.py",
+      "start_char_doc": 862,
+      "end_char_doc": 875,
+      "context": {
+        "prefix": "from pylearn2.utils import sharedX class",
+        "suffix": "(Model): def __init__(self, generator, discriminator,"
+      }
+    },
+    {
+      "@id": "task_density_estimation",
+      "@type": "MLS_Task",
+      "name": "log likelihood estimation",
+      "description": "Estimate model log likelihood using Parzen density.",
+      "category": "evaluation",
+      "metrics": "Log-Likelihood",
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:37",
+      "path": "README.md",
+      "start_char_doc": 1778,
+      "end_char_doc": 1792,
+      "context": {
+        "prefix": "script used to estimate the",
+        "suffix": "of the model using the"
+      }
+    },
+    {
+      "@id": "task_sample_generation",
+      "@type": "MLS_Task",
+      "name": "sample generation",
+      "description": "Generate samples from trained GAN generators for visualization.",
+      "category": "generation",
+      "metrics": null,
+      "wasDerivedFrom": "code",
+      "codeReference": "show_samples.py:19",
+      "path": "show_samples.py",
+      "start_char_doc": 521,
+      "end_char_doc": 548,
+      "context": {
+        "prefix": "not working right samples =",
+        "suffix": ".eval() if match_train: grid_shape ="
+      }
+    },
+    {
+      "@id": "task_image_inpainting",
+      "@type": "MLS_Task",
+      "name": "image inpainting",
+      "description": "Generate right-half image completions for CIFAR-10-like data.",
+      "category": "inpainting",
+      "metrics": null,
+      "wasDerivedFrom": "code",
+      "codeReference": "__init__.py:162",
+      "path": "__init__.py",
+      "start_char_doc": 6125,
+      "end_char_doc": 6158,
+      "context": {
+        "prefix": "# Very hacky! Specifically for",
+        "suffix": "given left half # assumes"
+      }
+    },
+    {
+      "@id": "source_pylearn2_datasets",
+      "@type": "DataSource",
+      "name": "Pylearn2 datasets",
+      "url": "pylearn2.datasets",
+      "type": "library dataset loader",
+      "license": null,
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:26",
+      "path": "README.md",
+      "start_char_doc": 1154,
+      "end_char_doc": 1162,
+      "context": {
+        "prefix": "this code into Theano or",
+        "suffix": "so subsequent changes to those"
+      }
+    },
+    {
+      "@id": "source_mnist_pylearn2",
+      "@type": "DataSource",
+      "name": "pylearn2.datasets.mnist.MNIST",
+      "url": "pylearn2.datasets.mnist.MNIST",
+      "type": "Pylearn2 dataset",
+      "license": null,
+      "wasDerivedFrom": "code",
+      "codeReference": "mnist.yaml:2",
+      "path": "mnist.yaml",
+      "start_char_doc": 53,
+      "end_char_doc": 82,
+      "context": {
+        "prefix": "!obj:pylearn2.train.Train { dataset: &train !obj:",
+        "suffix": "{ which_set: 'train', start: 0,"
+      }
+    },
+    {
+      "@id": "source_cifar10_pylearn2",
+      "@type": "DataSource",
+      "name": "pylearn2.datasets.cifar10.CIFAR10",
+      "url": "pylearn2.datasets.cifar10.CIFAR10",
+      "type": "Pylearn2 dataset",
+      "license": null,
+      "wasDerivedFrom": "code",
+      "codeReference": "cifar10_fully_connected.yaml:2",
+      "path": "cifar10_fully_connected.yaml",
+      "start_char_doc": 53,
+      "end_char_doc": 86,
+      "context": {
+        "prefix": "!obj:pylearn2.train.Train { dataset: &train !obj:",
+        "suffix": "{ gcn: 55., which_set: 'train',"
+      }
+    },
+    {
+      "@id": "source_tfd_pylearn2",
+      "@type": "DataSource",
+      "name": "pylearn2.datasets.tfd.TFD",
+      "url": "pylearn2.datasets.tfd.TFD",
+      "type": "Pylearn2 dataset",
+      "license": null,
+      "wasDerivedFrom": "code",
+      "codeReference": "tfd_pretrain/pretrain.yaml:2",
+      "path": "tfd_pretrain/pretrain.yaml",
+      "start_char_doc": 53,
+      "end_char_doc": 78,
+      "context": {
+        "prefix": "!obj:pylearn2.train.Train { dataset: &train !obj:",
+        "suffix": "{ which_set: 'unlabeled', scale: True,"
+      }
+    },
+    {
+      "@id": "dataset_mnist_train",
+      "@type": "MLS_Dataset",
+      "name": "MNIST train 0:50000",
+      "description": "MNIST training split used for GAN training.",
+      "numInstances": 50000,
+      "language": null,
+      "license": null,
+      "modality": "image",
+      "numClasses": 10,
+      "prov-derivedFrom": [
+        {
+          "@id": "source_mnist_pylearn2"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "mnist.yaml:2",
+      "path": "mnist.yaml",
+      "start_char_doc": 53,
+      "end_char_doc": 82,
+      "context": {
+        "prefix": "!obj:pylearn2.train.Train { dataset: &train !obj:",
+        "suffix": "{ which_set: 'train', start: 0,"
+      }
+    },
+    {
+      "@id": "dataset_mnist_valid",
+      "@type": "MLS_Dataset",
+      "name": "MNIST train 50000:60000",
+      "description": "MNIST validation split used for monitoring/Parzen validation.",
+      "numInstances": 10000,
+      "language": null,
+      "license": null,
+      "modality": "image",
+      "numClasses": 10,
+      "prov-derivedFrom": [
+        {
+          "@id": "source_mnist_pylearn2"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "mnist.yaml:66",
+      "path": "mnist.yaml",
+      "start_char_doc": 2407,
+      "end_char_doc": 2419,
+      "context": {
+        "prefix": ": !obj:pylearn2.datasets.mnist.MNIST { which_set: 'train',",
+        "suffix": ", stop: 60000 }, },"
+      }
+    },
+    {
+      "@id": "dataset_cifar10_train",
+      "@type": "MLS_Dataset",
+      "name": "CIFAR10 train 0:40000",
+      "description": "CIFAR-10 training split with GCN 55.",
+      "numInstances": 40000,
+      "language": null,
+      "license": null,
+      "modality": "image",
+      "numClasses": 10,
+      "prov-derivedFrom": [
+        {
+          "@id": "source_cifar10_pylearn2"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "cifar10_fully_connected.yaml:2",
+      "path": "cifar10_fully_connected.yaml",
+      "start_char_doc": 53,
+      "end_char_doc": 86,
+      "context": {
+        "prefix": "!obj:pylearn2.train.Train { dataset: &train !obj:",
+        "suffix": "{ gcn: 55., which_set: 'train',"
+      }
+    },
+    {
+      "@id": "dataset_cifar10_valid",
+      "@type": "MLS_Dataset",
+      "name": "CIFAR10 train 40000:50000",
+      "description": "CIFAR-10 validation split with GCN 55.",
+      "numInstances": 10000,
+      "language": null,
+      "license": null,
+      "modality": "image",
+      "numClasses": 10,
+      "prov-derivedFrom": [
+        {
+          "@id": "source_cifar10_pylearn2"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "cifar10_fully_connected.yaml:67",
+      "path": "cifar10_fully_connected.yaml",
+      "start_char_doc": 2452,
+      "end_char_doc": 2464,
+      "context": {
+        "prefix": "{ gcn: 55., which_set: 'train',",
+        "suffix": ", stop: 50000 }, #'test'"
+      }
+    },
+    {
+      "@id": "dataset_tfd_unlabeled",
+      "@type": "MLS_Dataset",
+      "name": "TFD unlabeled",
+      "description": "Toronto Face Database unlabeled split scaled by Pylearn2.",
+      "numInstances": null,
+      "language": null,
+      "license": null,
+      "modality": "image",
+      "numClasses": null,
+      "prov-derivedFrom": [
+        {
+          "@id": "source_tfd_pylearn2"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "tfd_pretrain/pretrain.yaml:3",
+      "path": "tfd_pretrain/pretrain.yaml",
+      "start_char_doc": 89,
+      "end_char_doc": 111,
+      "context": {
+        "prefix": "{ dataset: &train !obj:pylearn2.datasets.tfd.TFD {",
+        "suffix": ", scale: True, }, model:"
+      }
+    },
+    {
+      "@id": "dataset_tfd_valid",
+      "@type": "MLS_Dataset",
+      "name": "TFD valid",
+      "description": "Toronto Face Database validation split scaled by Pylearn2.",
+      "numInstances": null,
+      "language": null,
+      "license": null,
+      "modality": "image",
+      "numClasses": null,
+      "prov-derivedFrom": [
+        {
+          "@id": "source_tfd_pylearn2"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "tfd_pretrain/pretrain.yaml:77",
+      "path": "tfd_pretrain/pretrain.yaml",
+      "start_char_doc": 2910,
+      "end_char_doc": 2928,
+      "context": {
+        "prefix": "*train, 'valid' : !obj:pylearn2.datasets.tfd.TFD {",
+        "suffix": ", scale: True, }, #"
+      }
+    },
+    {
+      "@id": "method_gan",
+      "@type": "Method",
+      "name": "Generative Adversarial Networks",
+      "description": "Adversarial generator/discriminator framework from the paper.",
+      "version": null,
+      "trainedOn": [
+        {
+          "@id": "dataset_mnist_train"
+        },
+        {
+          "@id": "dataset_cifar10_train"
+        },
+        {
+          "@id": "dataset_tfd_unlabeled"
+        }
+      ],
+      "evaluatedOn": [
+        {
+          "@id": "dataset_mnist_valid"
+        },
+        {
+          "@id": "dataset_cifar10_valid"
+        },
+        {
+          "@id": "dataset_tfd_valid"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:1",
+      "path": "README.md",
+      "start_char_doc": 0,
+      "end_char_doc": 31,
+      "context": {
+        "prefix": "",
+        "suffix": "=============================== This repository contains the"
+      }
+    },
+    {
+      "@id": "method_adversary_pair",
+      "@type": "Method",
+      "name": "AdversaryPair",
+      "description": "Pylearn2 model pairing generator, discriminator, optional inferer.",
+      "version": null,
+      "trainedOn": [
+        {
+          "@id": "dataset_mnist_train"
+        },
+        {
+          "@id": "dataset_cifar10_train"
+        },
+        {
+          "@id": "dataset_tfd_unlabeled"
+        }
+      ],
+      "evaluatedOn": [
+        {
+          "@id": "dataset_mnist_valid"
+        },
+        {
+          "@id": "dataset_cifar10_valid"
+        },
+        {
+          "@id": "dataset_tfd_valid"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "__init__.py:30",
+      "path": "__init__.py",
+      "start_char_doc": 856,
+      "end_char_doc": 875,
+      "context": {
+        "prefix": "serial from pylearn2.utils import sharedX",
+        "suffix": "(Model): def __init__(self, generator, discriminator,"
+      }
+    },
+    {
+      "@id": "method_generator",
+      "@type": "Method",
+      "name": "Generator",
+      "description": "Generator model sampling noise through an MLP.",
+      "version": null,
+      "trainedOn": [
+        {
+          "@id": "dataset_mnist_train"
+        },
+        {
+          "@id": "dataset_cifar10_train"
+        },
+        {
+          "@id": "dataset_tfd_unlabeled"
+        }
+      ],
+      "evaluatedOn": [
+        {
+          "@id": "dataset_mnist_valid"
+        },
+        {
+          "@id": "dataset_cifar10_valid"
+        },
+        {
+          "@id": "dataset_tfd_valid"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "__init__.py:134",
+      "path": "__init__.py",
+      "start_char_doc": 4584,
+      "end_char_doc": 4599,
+      "context": {
+        "prefix": "== mlp.layers[-1].get_output_space() mlp.layers.extend(pretrained_layers[start_layer:]) return mlp",
+        "suffix": "(Model): def __init__(self, mlp, noise"
+      }
+    },
+    {
+      "@id": "method_adversary_cost2",
+      "@type": "Method",
+      "name": "AdversaryCost2",
+      "description": "Adversarial objective combining discriminator, generator, and optional inference objectives.",
+      "version": null,
+      "trainedOn": [
+        {
+          "@id": "dataset_mnist_train"
+        },
+        {
+          "@id": "dataset_cifar10_train"
+        },
+        {
+          "@id": "dataset_tfd_unlabeled"
+        }
+      ],
+      "evaluatedOn": [
+        {
+          "@id": "dataset_mnist_valid"
+        },
+        {
+          "@id": "dataset_cifar10_valid"
+        },
+        {
+          "@id": "dataset_tfd_valid"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "__init__.py:272",
+      "path": "__init__.py",
+      "start_char_doc": 10774,
+      "end_char_doc": 10794,
+      "context": {
+        "prefix": "default_input_scale=default_input_scale, input_include_probs=input_include_probs, input_scales=input_scales), formatted_noise, None",
+        "suffix": "(DefaultDataSpecsMixin, Cost): \"\"\" \"\"\" #"
+      }
+    },
+    {
+      "@id": "method_inpainting_adversary_cost",
+      "@type": "Method",
+      "name": "InpaintingAdversaryCost",
+      "description": "Adversarial objective for CIFAR-10 half-image inpainting.",
+      "version": null,
+      "trainedOn": [
+        {
+          "@id": "dataset_mnist_train"
+        },
+        {
+          "@id": "dataset_cifar10_train"
+        },
+        {
+          "@id": "dataset_tfd_unlabeled"
+        }
+      ],
+      "evaluatedOn": [
+        {
+          "@id": "dataset_mnist_valid"
+        },
+        {
+          "@id": "dataset_cifar10_valid"
+        },
+        {
+          "@id": "dataset_tfd_valid"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "__init__.py:575",
+      "path": "__init__.py",
+      "start_char_doc": 22573,
+      "end_char_doc": 22602,
+      "context": {
+        "prefix": "algorithm.cost.now_train_generator.set_value(np.array(self.value, dtype='float32')) self.cur_epoch += 1",
+        "suffix": "(DefaultDataSpecsMixin, Cost): \"\"\" \"\"\" #"
+      }
+    },
+    {
+      "@id": "method_parzen_density",
+      "@type": "Method",
+      "name": "Parzen density technique",
+      "description": "Estimate log likelihood using Parzen density.",
+      "version": null,
+      "trainedOn": [
+        {
+          "@id": "dataset_mnist_train"
+        },
+        {
+          "@id": "dataset_cifar10_train"
+        },
+        {
+          "@id": "dataset_tfd_unlabeled"
+        }
+      ],
+      "evaluatedOn": [
+        {
+          "@id": "dataset_mnist_valid"
+        },
+        {
+          "@id": "dataset_cifar10_valid"
+        },
+        {
+          "@id": "dataset_tfd_valid"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "README.md:38",
+      "path": "README.md",
+      "start_char_doc": 1816,
+      "end_char_doc": 1840,
+      "context": {
+        "prefix": "of the model using the",
+        "suffix": ". Call pylearn2/scripts/train.py on the"
+      }
+    },
+    {
+      "@id": "algo_sgd",
+      "@type": "MLS_Algorithm",
+      "name": "SGD",
+      "description": "Minibatch stochastic gradient descent for Pylearn2 training.",
+      "complexity": null,
+      "pseudoCode": null,
+      "wasDerivedFrom": "code",
+      "codeReference": "sgd.py:45",
+      "path": "sgd.py",
+      "start_char_doc": 1532,
+      "end_char_doc": 1541,
+      "context": {
+        "prefix": "import make_np_rng log = logging.getLogger(__name__)",
+        "suffix": "(TrainingAlgorithm): \"\"\" SGD = (Minibatch)"
+      }
+    },
+    {
+      "@id": "algo_sgd_separate_steps",
+      "@type": "MLS_Algorithm",
+      "name": "separate discriminator/generator SGD steps",
+      "description": "Training algorithm updates discriminator separately from generator.",
+      "complexity": null,
+      "pseudoCode": null,
+      "wasDerivedFrom": "code",
+      "codeReference": "sgd.py:3",
+      "path": "sgd.py",
+      "start_char_doc": 64,
+      "end_char_doc": 107,
+      "context": {
+        "prefix": "to support doing steps on",
+        "suffix": ". Ideally this would be"
+      }
+    },
+    {
+      "@id": "algo_sgd_alternating_epochs",
+      "@type": "MLS_Algorithm",
+      "name": "alternating discriminator/generator epochs",
+      "description": "Training algorithm alternates discriminator-only epochs and epochs updating both components.",
+      "complexity": null,
+      "pseudoCode": null,
+      "wasDerivedFrom": "code",
+      "codeReference": "sgd_alt.py:2",
+      "path": "sgd_alt.py",
+      "start_char_doc": 49,
+      "end_char_doc": 68,
+      "context": {
+        "prefix": "pylearn2's sgd.py, hacked to support",
+        "suffix": "epochs of updating only the"
+      }
+    },
+    {
+      "@id": "algo_momentum",
+      "@type": "MLS_Algorithm",
+      "name": "Momentum",
+      "description": "Pylearn2 Momentum learning rule used by YAML configs.",
+      "complexity": null,
+      "pseudoCode": null,
+      "wasDerivedFrom": "code",
+      "codeReference": "mnist.yaml:60",
+      "path": "mnist.yaml",
+      "start_char_doc": 2192,
+      "end_char_doc": 2209,
+      "context": {
+        "prefix": "learning_rate: .1, learning_rule: !obj:pylearn2.training_algorithms.learning_rule.Momentum {",
+        "suffix": ", }, monitoring_dataset: { 'valid'"
+      }
+    },
+    {
+      "@id": "algo_exponential_decay",
+      "@type": "MLS_Algorithm",
+      "name": "ExponentialDecay",
+      "description": "Learning-rate decay callback used in YAML configs.",
+      "complexity": null,
+      "pseudoCode": null,
+      "wasDerivedFrom": "code",
+      "codeReference": "mnist.yaml:91",
+      "path": "mnist.yaml",
+      "start_char_doc": 3323,
+      "end_char_doc": 3339,
+      "context": {
+        "prefix": "N: 100 #}, update_callbacks: !obj:pylearn2.training_algorithms.sgd.",
+        "suffix": "{ decay_factor: 1.000004, min_lr: .000001"
+      }
+    },
+    {
+      "@id": "algo_momentum_adjustor",
+      "@type": "MLS_Algorithm",
+      "name": "MomentumAdjustor",
+      "description": "Callback changing momentum from initial to final value.",
+      "complexity": null,
+      "pseudoCode": null,
+      "wasDerivedFrom": "code",
+      "codeReference": "mnist.yaml:101",
+      "path": "mnist.yaml",
+      "start_char_doc": 3701,
+      "end_char_doc": 3717,
+      "context": {
+        "prefix": "# save_path: \"${PYLEARN2_TRAIN_FILE_FULL_STEM}_best.pkl\" #}, !obj:pylearn2.training_algorithms.learning_rule.",
+        "suffix": "{ start: 1, saturate: 250,"
+      }
+    },
+    {
+      "@id": "algo_deconv",
+      "@type": "MLS_Algorithm",
+      "name": "Deconv",
+      "description": "Custom deconvolutional layer using transposed convolution.",
+      "complexity": null,
+      "pseudoCode": null,
+      "wasDerivedFrom": "code",
+      "codeReference": "deconv.py:18",
+      "path": "deconv.py",
+      "start_char_doc": 529,
+      "end_char_doc": 541,
+      "context": {
+        "prefix": "import sharedX logger = logging.getLogger(__name__)",
+        "suffix": "(Layer): def __init__(self, num_channels, kernel_shape,"
+      }
+    },
+    {
+      "@id": "algo_theano_parzen",
+      "@type": "MLS_Algorithm",
+      "name": "theano_parzen",
+      "description": "Theano implementation of Parzen log-density estimator.",
+      "complexity": null,
+      "pseudoCode": null,
+      "wasDerivedFrom": "code",
+      "codeReference": "parzen_ll.py:47",
+      "path": "parzen_ll.py",
+      "start_char_doc": 910,
+      "end_char_doc": 927,
+      "context": {
+        "prefix": "+ T.log(T.exp(a - max_.dimshuffle(0, 'x')).mean(1))",
+        "suffix": "(mu, sigma): \"\"\" Credit: Yann"
+      }
+    },
+    {
+      "@id": "algo_cross_validate_sigma",
+      "@type": "MLS_Algorithm",
+      "name": "cross_validate_sigma",
+      "description": "Select sigma with validation log likelihood over log-spaced values.",
+      "complexity": null,
+      "pseudoCode": null,
+      "wasDerivedFrom": "code",
+      "codeReference": "parzen_ll.py:61",
+      "path": "parzen_ll.py",
+      "start_char_doc": 1247,
+      "end_char_doc": 1271,
+      "context": {
+        "prefix": "return theano.function([x], E - Z)",
+        "suffix": "(samples, data, sigmas, batch_size): lls"
+      }
+    },
+    {
+      "@id": "model_adversary_pair",
+      "@type": "MLS_Model",
+      "name": "AdversaryPair",
+      "description": "Composite GAN model with generator and discriminator.",
+      "architecture": "Composite GAN model with generator and discriminator.",
+      "parameters": "model",
+      "trainedOn": [
+        {
+          "@id": "dataset_mnist_train"
+        },
+        {
+          "@id": "dataset_cifar10_train"
+        },
+        {
+          "@id": "dataset_tfd_unlabeled"
+        }
+      ],
+      "evaluatedOn": [
+        {
+          "@id": "dataset_mnist_valid"
+        },
+        {
+          "@id": "dataset_cifar10_valid"
+        },
+        {
+          "@id": "dataset_tfd_valid"
+        }
+      ],
+      "subMethod": [
+        {
+          "@id": "method_gan"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "__init__.py:30",
+      "path": "__init__.py",
+      "start_char_doc": 856,
+      "end_char_doc": 875,
+      "context": {
+        "prefix": "serial from pylearn2.utils import sharedX",
+        "suffix": "(Model): def __init__(self, generator, discriminator,"
+      }
+    },
+    {
+      "@id": "model_generator",
+      "@type": "MLS_Model",
+      "name": "Generator",
+      "description": "Noise-driven generator MLP supporting gaussian/uniform/spherical noise and sampling.",
+      "architecture": "Noise-driven generator MLP supporting gaussian/uniform/spherical noise and sampling.",
+      "parameters": "model",
+      "trainedOn": [
+        {
+          "@id": "dataset_mnist_train"
+        },
+        {
+          "@id": "dataset_cifar10_train"
+        },
+        {
+          "@id": "dataset_tfd_unlabeled"
+        }
+      ],
+      "evaluatedOn": [
+        {
+          "@id": "dataset_mnist_valid"
+        },
+        {
+          "@id": "dataset_cifar10_valid"
+        },
+        {
+          "@id": "dataset_tfd_valid"
+        }
+      ],
+      "subMethod": [
+        {
+          "@id": "method_gan"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "__init__.py:134",
+      "path": "__init__.py",
+      "start_char_doc": 4584,
+      "end_char_doc": 4599,
+      "context": {
+        "prefix": "== mlp.layers[-1].get_output_space() mlp.layers.extend(pretrained_layers[start_layer:]) return mlp",
+        "suffix": "(Model): def __init__(self, mlp, noise"
+      }
+    },
+    {
+      "@id": "model_mnist_gan",
+      "@type": "MLS_Model",
+      "name": "MNIST GAN",
+      "description": "Generator 100->1200->1200->784 and discriminator 784->240 maxout->240 maxout->1.",
+      "architecture": "Generator 100->1200->1200->784 and discriminator 784->240 maxout->240 maxout->1.",
+      "parameters": "architecture",
+      "trainedOn": [
+        {
+          "@id": "dataset_mnist_train"
+        },
+        {
+          "@id": "dataset_cifar10_train"
+        },
+        {
+          "@id": "dataset_tfd_unlabeled"
+        }
+      ],
+      "evaluatedOn": [
+        {
+          "@id": "dataset_mnist_valid"
+        },
+        {
+          "@id": "dataset_cifar10_valid"
+        },
+        {
+          "@id": "dataset_tfd_valid"
+        }
+      ],
+      "subMethod": [
+        {
+          "@id": "method_gan"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "mnist.yaml:2",
+      "path": "mnist.yaml",
+      "start_char_doc": 71,
+      "end_char_doc": 82,
+      "context": {
+        "prefix": "!obj:pylearn2.train.Train { dataset: &train !obj:pylearn2.datasets.",
+        "suffix": "{ which_set: 'train', start: 0,"
+      }
+    },
+    {
+      "@id": "model_cifar10_fc_gan",
+      "@type": "MLS_Model",
+      "name": "CIFAR10 fully connected GAN",
+      "description": "Generator 100->8000->8000->3072 and discriminator 3072->1600 maxout->1600 maxout->1.",
+      "architecture": "Generator 100->8000->8000->3072 and discriminator 3072->1600 maxout->1600 maxout->1.",
+      "parameters": "architecture",
+      "trainedOn": [
+        {
+          "@id": "dataset_mnist_train"
+        },
+        {
+          "@id": "dataset_cifar10_train"
+        },
+        {
+          "@id": "dataset_tfd_unlabeled"
+        }
+      ],
+      "evaluatedOn": [
+        {
+          "@id": "dataset_mnist_valid"
+        },
+        {
+          "@id": "dataset_cifar10_valid"
+        },
+        {
+          "@id": "dataset_tfd_valid"
+        }
+      ],
+      "subMethod": [
+        {
+          "@id": "method_gan"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "cifar10_fully_connected.yaml:2",
+      "path": "cifar10_fully_connected.yaml",
+      "start_char_doc": 71,
+      "end_char_doc": 86,
+      "context": {
+        "prefix": "!obj:pylearn2.train.Train { dataset: &train !obj:pylearn2.datasets.",
+        "suffix": "{ gcn: 55., which_set: 'train',"
+      }
+    },
+    {
+      "@id": "model_cifar10_conv_gan",
+      "@type": "MLS_Model",
+      "name": "CIFAR10 convolutional/deconv GAN",
+      "description": "Generator with SpaceConverter and Deconv; discriminator with MaxoutConvC01B and Maxout layers.",
+      "architecture": "Generator with SpaceConverter and Deconv; discriminator with MaxoutConvC01B and Maxout layers.",
+      "parameters": "architecture",
+      "trainedOn": [
+        {
+          "@id": "dataset_mnist_train"
+        },
+        {
+          "@id": "dataset_cifar10_train"
+        },
+        {
+          "@id": "dataset_tfd_unlabeled"
+        }
+      ],
+      "evaluatedOn": [
+        {
+          "@id": "dataset_mnist_valid"
+        },
+        {
+          "@id": "dataset_cifar10_valid"
+        },
+        {
+          "@id": "dataset_tfd_valid"
+        }
+      ],
+      "subMethod": [
+        {
+          "@id": "method_gan"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "cifar10_convolutional.yaml:32",
+      "path": "cifar10_convolutional.yaml",
+      "start_char_doc": 1240,
+      "end_char_doc": 1265,
+      "context": {
+        "prefix": "0, 1, 'b'], }}, !obj:",
+        "suffix": "{ #W_lr_scale: .05, #b_lr_scale: .05,"
+      }
+    },
+    {
+      "@id": "model_tfd_pretrain_gan",
+      "@type": "MLS_Model",
+      "name": "TFD pretrain GAN",
+      "description": "Generator 100->8000->8000->2304 and discriminator 2304->1200 maxout->1200 maxout->1.",
+      "architecture": "Generator 100->8000->8000->2304 and discriminator 2304->1200 maxout->1200 maxout->1.",
+      "parameters": "architecture",
+      "trainedOn": [
+        {
+          "@id": "dataset_mnist_train"
+        },
+        {
+          "@id": "dataset_cifar10_train"
+        },
+        {
+          "@id": "dataset_tfd_unlabeled"
+        }
+      ],
+      "evaluatedOn": [
+        {
+          "@id": "dataset_mnist_valid"
+        },
+        {
+          "@id": "dataset_cifar10_valid"
+        },
+        {
+          "@id": "dataset_tfd_valid"
+        }
+      ],
+      "subMethod": [
+        {
+          "@id": "method_gan"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "tfd_pretrain/pretrain.yaml:2",
+      "path": "tfd_pretrain/pretrain.yaml",
+      "start_char_doc": 53,
+      "end_char_doc": 78,
+      "context": {
+        "prefix": "!obj:pylearn2.train.Train { dataset: &train !obj:",
+        "suffix": "{ which_set: 'unlabeled', scale: True,"
+      }
+    },
+    {
+      "@id": "model_tfd_train_gan",
+      "@type": "MLS_Model",
+      "name": "TFD train GAN with add_layers",
+      "description": "Generator starts with 100->8000->100 then adds pretrained layers from pretrain.pkl.",
+      "architecture": "Generator starts with 100->8000->100 then adds pretrained layers from pretrain.pkl.",
+      "parameters": "architecture",
+      "trainedOn": [
+        {
+          "@id": "dataset_mnist_train"
+        },
+        {
+          "@id": "dataset_cifar10_train"
+        },
+        {
+          "@id": "dataset_tfd_unlabeled"
+        }
+      ],
+      "evaluatedOn": [
+        {
+          "@id": "dataset_mnist_valid"
+        },
+        {
+          "@id": "dataset_cifar10_valid"
+        },
+        {
+          "@id": "dataset_tfd_valid"
+        }
+      ],
+      "subMethod": [
+        {
+          "@id": "method_gan"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "tfd_pretrain/train.yaml:9",
+      "path": "tfd_pretrain/train.yaml",
+      "start_char_doc": 282,
+      "end_char_doc": 304,
+      "context": {
+        "prefix": "{ monitor_ll: 1, mlp: !obj:",
+        "suffix": "{ mlp: !obj:pylearn2.models.mlp.MLP { layers:"
+      }
+    },
+    {
+      "@id": "process_cifar_gcn",
+      "@type": "DataProcessingStep",
+      "identifier": "process_cifar_gcn",
+      "description": "CIFAR-10 global contrast normalization with gcn 55.",
+      "transformationType": "normalization",
+      "parameters": null,
+      "startedAtTime": null,
+      "endedAtTime": null,
+      "inputDataset": [
+        {
+          "@id": "dataset_cifar10_train"
+        }
+      ],
+      "outputDataset": null,
+      "prov-executedBy": {
+        "@id": "impl_yaml_experiments"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "cifar10_fully_connected.yaml:3",
+      "path": "cifar10_fully_connected.yaml",
+      "start_char_doc": 97,
+      "end_char_doc": 105,
+      "context": {
+        "prefix": "{ dataset: &train !obj:pylearn2.datasets.cifar10.CIFAR10 {",
+        "suffix": ", which_set: 'train', start: 0,"
+      }
+    },
+    {
+      "@id": "process_tfd_scale",
+      "@type": "DataProcessingStep",
+      "identifier": "process_tfd_scale",
+      "description": "Scale TFD examples with scale True.",
+      "transformationType": "normalization",
+      "parameters": null,
+      "startedAtTime": null,
+      "endedAtTime": null,
+      "inputDataset": [
+        {
+          "@id": "dataset_tfd_unlabeled"
+        }
+      ],
+      "outputDataset": null,
+      "prov-executedBy": {
+        "@id": "impl_yaml_experiments"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "tfd_pretrain/pretrain.yaml:4",
+      "path": "tfd_pretrain/pretrain.yaml",
+      "start_char_doc": 121,
+      "end_char_doc": 132,
+      "context": {
+        "prefix": "&train !obj:pylearn2.datasets.tfd.TFD { which_set: 'unlabeled',",
+        "suffix": ", }, model: !obj:adversarial.AdversaryPair {"
+      }
+    },
+    {
+      "@id": "process_sample_topological_view",
+      "@type": "DataProcessingStep",
+      "identifier": "process_sample_topological_view",
+      "description": "Convert generated samples to topological image view.",
+      "transformationType": "feature_extraction",
+      "parameters": null,
+      "startedAtTime": null,
+      "endedAtTime": null,
+      "inputDataset": null,
+      "outputDataset": null,
+      "prov-executedBy": {
+        "@id": "impl_adversarial_core"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "show_samples_mnist_paper.py:20",
+      "path": "show_samples_mnist_paper.py",
+      "start_char_doc": 549,
+      "end_char_doc": 569,
+      "context": {
+        "prefix": "* sample_cols).eval() topo_samples = dataset.",
+        "suffix": "(samples) pv = PatchViewer(grid_shape=(rows, sample_cols"
+      }
+    },
+    {
+      "@id": "process_inpainting_half_image",
+      "@type": "DataProcessingStep",
+      "identifier": "process_inpainting_half_image",
+      "description": "Replace right half with generated inpainting samples.",
+      "transformationType": "augmentation",
+      "parameters": null,
+      "startedAtTime": null,
+      "endedAtTime": null,
+      "inputDataset": [
+        {
+          "@id": "dataset_cifar10_train"
+        }
+      ],
+      "outputDataset": null,
+      "prov-executedBy": {
+        "@id": "impl_adversarial_core"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "__init__.py:162",
+      "path": "__init__.py",
+      "start_char_doc": 6125,
+      "end_char_doc": 6158,
+      "context": {
+        "prefix": "# Very hacky! Specifically for",
+        "suffix": "given left half # assumes"
+      }
+    },
+    {
+      "@id": "process_parzen_sigma_cv",
+      "@type": "DataProcessingStep",
+      "identifier": "process_parzen_sigma_cv",
+      "description": "Cross-validate Parzen sigma over log-spaced range.",
+      "transformationType": "feature_extraction",
+      "parameters": null,
+      "startedAtTime": null,
+      "endedAtTime": null,
+      "inputDataset": null,
+      "outputDataset": null,
+      "prov-executedBy": {
+        "@id": "impl_parzen_ll"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "parzen_ll.py:61",
+      "path": "parzen_ll.py",
+      "start_char_doc": 1251,
+      "end_char_doc": 1271,
+      "context": {
+        "prefix": "theano.function([x], E - Z) def",
+        "suffix": "(samples, data, sigmas, batch_size): lls"
+      }
+    },
+    {
+      "@id": "training_mnist",
+      "@type": "TrainingRun",
+      "runId": "mnist_yaml_training",
+      "description": "Train MNIST GAN using Pylearn2 YAML.",
+      "logFile": null,
+      "artifactsLocation": "${PYLEARN2_TRAIN_FILE_FULL_STEM}.pkl",
+      "startedAtTime": null,
+      "endedAtTime": null,
+      "prov-executedBy": {
+        "@id": "impl_yaml_experiments"
+      },
+      "used": [
+        {
+          "@id": "dataset_mnist_train"
+        }
+      ],
+      "trains": {
+        "@id": "model_mnist_gan"
+      },
+      "wasAssociatedWith": [
+        {
+          "@id": "dep_pylearn2"
+        },
+        {
+          "@id": "dep_theano"
+        },
+        {
+          "@id": "dep_numpy"
+        },
+        {
+          "@id": "dep_ipdb"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "mnist.yaml:57",
+      "path": "mnist.yaml",
+      "start_char_doc": 2054,
+      "end_char_doc": 2069,
+      "context": {
+        "prefix": "}, }, algorithm: !obj:pylearn2.training_algorithms.sgd.SGD {",
+        "suffix": ", learning_rate: .1, learning_rule: !obj:pylearn2.training_algorithms.learning_rule.Momentum"
+      }
+    },
+    {
+      "@id": "training_cifar10_fc",
+      "@type": "TrainingRun",
+      "runId": "cifar10_fully_connected_training",
+      "description": "Train fully connected CIFAR-10 GAN.",
+      "logFile": null,
+      "artifactsLocation": "${PYLEARN2_TRAIN_FILE_FULL_STEM}.pkl",
+      "startedAtTime": null,
+      "endedAtTime": null,
+      "prov-executedBy": {
+        "@id": "impl_yaml_experiments"
+      },
+      "used": [
+        {
+          "@id": "dataset_cifar10_train"
+        }
+      ],
+      "trains": {
+        "@id": "model_cifar10_fc_gan"
+      },
+      "wasAssociatedWith": [
+        {
+          "@id": "dep_pylearn2"
+        },
+        {
+          "@id": "dep_theano"
+        },
+        {
+          "@id": "dep_numpy"
+        },
+        {
+          "@id": "dep_ipdb"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "cifar10_fully_connected.yaml:57",
+      "path": "cifar10_fully_connected.yaml",
+      "start_char_doc": 2042,
+      "end_char_doc": 2061,
+      "context": {
+        "prefix": "algorithm: !obj:pylearn2.training_algorithms.sgd.SGD { batch_size: 100,",
+        "suffix": ", learning_rule: !obj:pylearn2.training_algorithms.learning_rule.Momentum { init_momentum:"
+      }
+    },
+    {
+      "@id": "training_cifar10_conv",
+      "@type": "TrainingRun",
+      "runId": "cifar10_convolutional_training",
+      "description": "Train convolutional/deconvolutional CIFAR-10 GAN.",
+      "logFile": null,
+      "artifactsLocation": "${PYLEARN2_TRAIN_FILE_FULL_STEM}.pkl",
+      "startedAtTime": null,
+      "endedAtTime": null,
+      "prov-executedBy": {
+        "@id": "impl_yaml_experiments"
+      },
+      "used": [
+        {
+          "@id": "dataset_cifar10_train"
+        }
+      ],
+      "trains": {
+        "@id": "model_cifar10_conv_gan"
+      },
+      "wasAssociatedWith": [
+        {
+          "@id": "dep_pylearn2"
+        },
+        {
+          "@id": "dep_theano"
+        },
+        {
+          "@id": "dep_numpy"
+        },
+        {
+          "@id": "dep_ipdb"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "cifar10_convolutional.yaml:120",
+      "path": "cifar10_convolutional.yaml",
+      "start_char_doc": 4576,
+      "end_char_doc": 4595,
+      "context": {
+        "prefix": "algorithm: !obj:pylearn2.training_algorithms.sgd.SGD { batch_size: 128,",
+        "suffix": ", learning_rule: !obj:pylearn2.training_algorithms.learning_rule.Momentum { init_momentum:"
+      }
+    },
+    {
+      "@id": "training_tfd_pretrain",
+      "@type": "TrainingRun",
+      "runId": "tfd_pretrain_training",
+      "description": "Pretrain TFD GAN and save pretrain.pkl.",
+      "logFile": null,
+      "artifactsLocation": "${PYLEARN2_TRAIN_FILE_FULL_STEM}.pkl",
+      "startedAtTime": null,
+      "endedAtTime": null,
+      "prov-executedBy": {
+        "@id": "impl_yaml_experiments"
+      },
+      "used": [
+        {
+          "@id": "dataset_tfd_unlabeled"
+        }
+      ],
+      "trains": {
+        "@id": "model_tfd_pretrain_gan"
+      },
+      "wasAssociatedWith": [
+        {
+          "@id": "dep_pylearn2"
+        },
+        {
+          "@id": "dep_theano"
+        },
+        {
+          "@id": "dep_numpy"
+        },
+        {
+          "@id": "dep_ipdb"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "tfd_pretrain/pretrain.yaml:102",
+      "path": "tfd_pretrain/pretrain.yaml",
+      "start_char_doc": 3841,
+      "end_char_doc": 3855,
+      "context": {
+        "prefix": "} #}, termination_criterion: !obj:pylearn2.termination_criteria.EpochCounter {",
+        "suffix": "}, update_callbacks: !obj:pylearn2.training_algorithms.sgd.ExponentialDecay { decay_factor:"
+      }
+    },
+    {
+      "@id": "training_tfd_train",
+      "@type": "TrainingRun",
+      "runId": "tfd_train_training",
+      "description": "Train TFD GAN using pretrained generator layers.",
+      "logFile": null,
+      "artifactsLocation": "${PYLEARN2_TRAIN_FILE_FULL_STEM}.pkl",
+      "startedAtTime": null,
+      "endedAtTime": null,
+      "prov-executedBy": {
+        "@id": "impl_yaml_experiments"
+      },
+      "used": [
+        {
+          "@id": "dataset_tfd_unlabeled"
+        }
+      ],
+      "trains": {
+        "@id": "model_tfd_train_gan"
+      },
+      "wasAssociatedWith": [
+        {
+          "@id": "dep_pylearn2"
+        },
+        {
+          "@id": "dep_theano"
+        },
+        {
+          "@id": "dep_numpy"
+        },
+        {
+          "@id": "dep_ipdb"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "tfd_pretrain/train.yaml:28",
+      "path": "tfd_pretrain/train.yaml",
+      "start_char_doc": 1011,
+      "end_char_doc": 1039,
+      "context": {
+        "prefix": "}, ], nvis: 100, },",
+        "suffix": ", } }, discriminator: !obj:pylearn2.models.mlp.MLP"
+      }
+    },
+    {
+      "@id": "eval_parzen_ll",
+      "@type": "EvaluationRun",
+      "runId": "parzen_log_likelihood",
+      "description": "Evaluate generated samples with Parzen log-likelihood estimator.",
+      "split": "test",
+      "evaluationScript": "parzen_ll.py",
+      "metricsFile": null,
+      "startedAtTime": null,
+      "endedAtTime": null,
+      "prov-executedBy": {
+        "@id": "impl_parzen_ll"
+      },
+      "evaluates": {
+        "@id": "method_gan"
+      },
+      "prov-generated": [
+        {
+          "@id": "pred_parzen_log_likelihood"
+        }
+      ],
+      "wasAssociatedWith": [
+        {
+          "@id": "dep_pylearn2"
+        },
+        {
+          "@id": "dep_theano"
+        },
+        {
+          "@id": "dep_numpy"
+        },
+        {
+          "@id": "dep_ipdb"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "parzen_ll.py:147",
+      "path": "parzen_ll.py",
+      "start_char_doc": 4366,
+      "end_char_doc": 4392,
+      "context": {
+        "prefix": "ll.std() / numpy.sqrt(test.X.shape[0]) print \"",
+        "suffix": "= {}, se: {}\".format(ll.mean(), se)"
+      }
+    },
+    {
+      "@id": "eval_monitoring_channels",
+      "@type": "EvaluationRun",
+      "runId": "gan_monitoring_channels",
+      "description": "Monitor false negatives, false positives, sample gradient norm, objectives.",
+      "split": "valid",
+      "evaluationScript": "__init__.py",
+      "metricsFile": null,
+      "startedAtTime": null,
+      "endedAtTime": null,
+      "prov-executedBy": {
+        "@id": "impl_adversarial_core"
+      },
+      "evaluates": {
+        "@id": "method_gan"
+      },
+      "prov-generated": [],
+      "wasAssociatedWith": [
+        {
+          "@id": "dep_pylearn2"
+        },
+        {
+          "@id": "dep_theano"
+        },
+        {
+          "@id": "dep_numpy"
+        },
+        {
+          "@id": "dep_ipdb"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "__init__.py:441",
+      "path": "__init__.py",
+      "start_char_doc": 17901,
+      "end_char_doc": 17916,
+      "context": {
+        "prefix": "model.discriminator y_hat = d.fprop(data) rval['",
+        "suffix": "'] = T.cast((y_hat < 0.5).mean(),"
+      }
+    },
+    {
+      "@id": "eval_sample_visualization",
+      "@type": "EvaluationRun",
+      "runId": "sample_visualization",
+      "description": "Generate and visualize samples and nearest training examples.",
+      "split": "samples",
+      "evaluationScript": "show_samples.py",
+      "metricsFile": null,
+      "startedAtTime": null,
+      "endedAtTime": null,
+      "prov-executedBy": {
+        "@id": "impl_sample_viewers"
+      },
+      "evaluates": {
+        "@id": "method_gan"
+      },
+      "prov-generated": [
+        {
+          "@id": "pred_sample_viewer"
+        }
+      ],
+      "wasAssociatedWith": [
+        {
+          "@id": "dep_pylearn2"
+        },
+        {
+          "@id": "dep_theano"
+        },
+        {
+          "@id": "dep_numpy"
+        },
+        {
+          "@id": "dep_ipdb"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "show_samples.py:50",
+      "path": "show_samples.py",
+      "start_char_doc": 1774,
+      "end_char_doc": 1787,
+      "context": {
+        "prefix": "viewer = make_viewer(samples, grid_shape=grid_shape, is_color=is_color)",
+        "suffix": ""
+      }
+    },
+    {
+      "@id": "pred_parzen_log_likelihood",
+      "@type": "PredictionSet",
+      "identifier": "Log-Likelihood printout",
+      "description": "Mean and standard error printed by parzen_ll.py.",
+      "predictionFormat": "stdout",
+      "format": "stdout",
+      "storageLocation": null,
+      "numInstances": null,
+      "onDatasetSplit": "test",
+      "appliedTo": null,
+      "wasGeneratedBy": {
+        "@id": "eval_parzen_ll"
+      },
+      "producedBy": {
+        "@id": "impl_parzen_ll"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "parzen_ll.py:147",
+      "path": "parzen_ll.py",
+      "start_char_doc": 4366,
+      "end_char_doc": 4392,
+      "context": {
+        "prefix": "ll.std() / numpy.sqrt(test.X.shape[0]) print \"",
+        "suffix": "= {}, se: {}\".format(ll.mean(), se)"
+      }
+    },
+    {
+      "@id": "pred_sample_viewer",
+      "@type": "PredictionSet",
+      "identifier": "PatchViewer samples",
+      "description": "Interactive sample grid shown by PatchViewer/make_viewer.",
+      "predictionFormat": "viewer",
+      "format": "viewer",
+      "storageLocation": null,
+      "numInstances": null,
+      "onDatasetSplit": "samples",
+      "appliedTo": null,
+      "wasGeneratedBy": {
+        "@id": "eval_sample_visualization"
+      },
+      "producedBy": {
+        "@id": "impl_sample_viewers"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "show_samples.py:50",
+      "path": "show_samples.py",
+      "start_char_doc": 1774,
+      "end_char_doc": 1787,
+      "context": {
+        "prefix": "viewer = make_viewer(samples, grid_shape=grid_shape, is_color=is_color)",
+        "suffix": ""
+      }
+    },
+    {
+      "@id": "pred_pylearn2_pickle",
+      "@type": "PredictionSet",
+      "identifier": "Pylearn2 pickle checkpoints",
+      "description": "Training output pickle model saved from YAML train object.",
+      "predictionFormat": "pkl",
+      "format": "pkl",
+      "storageLocation": null,
+      "numInstances": null,
+      "onDatasetSplit": "train",
+      "appliedTo": null,
+      "wasGeneratedBy": {
+        "@id": "training_mnist"
+      },
+      "producedBy": {
+        "@id": "impl_yaml_experiments"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "mnist.yaml:107",
+      "path": "mnist.yaml",
+      "start_char_doc": 3821,
+      "end_char_doc": 3870,
+      "context": {
+        "prefix": "250, final_momentum: .7 } ],",
+        "suffix": ", save_freq: 1 }"
+      }
+    },
+    {
+      "@id": "exp_mnist_gan",
+      "@type": "Experiment",
+      "description": "MNIST Pylearn2 GAN experiment with fully connected generator/discriminator.",
+      "objective": "Train GAN on MNIST",
+      "hypothesis": null,
+      "methodology": "MNIST Pylearn2 GAN experiment with fully connected generator/discriminator.",
+      "realizes": [
+        {
+          "@id": "task_generative_modeling"
+        },
+        {
+          "@id": "task_adversarial_training"
+        }
+      ],
+      "usesData": [
+        {
+          "@id": "dataset_mnist_train"
+        },
+        {
+          "@id": "dataset_mnist_valid"
+        }
+      ],
+      "produces": [
+        {
+          "@id": "method_gan"
+        },
+        {
+          "@id": "method_adversary_cost2"
+        }
+      ],
+      "executes": [
+        {
+          "@id": "impl_yaml_experiments"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "mnist.yaml:2",
+      "path": "mnist.yaml",
+      "start_char_doc": 53,
+      "end_char_doc": 82,
+      "context": {
+        "prefix": "!obj:pylearn2.train.Train { dataset: &train !obj:",
+        "suffix": "{ which_set: 'train', start: 0,"
+      },
+      "usesParameters": [
+        {
+          "@id": "hp_mnist_learning_rate"
+        },
+        {
+          "@id": "hp_mnist_batch_size"
+        },
+        {
+          "@id": "hp_mnist_init_momentum"
+        },
+        {
+          "@id": "hp_mnist_decay_factor"
+        },
+        {
+          "@id": "hp_mnist_min_lr"
+        },
+        {
+          "@id": "hp_mnist_final_momentum"
+        },
+        {
+          "@id": "hp_mnist_save_freq"
+        },
+        {
+          "@id": "hp_mnist_train_split"
+        },
+        {
+          "@id": "hp_mnist_valid_split"
+        },
+        {
+          "@id": "hp_mnist_generator_nvis"
+        },
+        {
+          "@id": "hp_mnist_generator_hidden_dim"
+        },
+        {
+          "@id": "hp_mnist_output_dim"
+        },
+        {
+          "@id": "hp_mnist_discriminator_units"
+        },
+        {
+          "@id": "hp_mnist_num_pieces"
+        },
+        {
+          "@id": "hp_mnist_disc_default_include_prob"
+        },
+        {
+          "@id": "hp_mnist_disc_input_include_prob"
+        },
+        {
+          "@id": "hp_mnist_disc_default_input_scale"
+        }
+      ]
+    },
+    {
+      "@id": "exp_cifar10_fully_connected_gan",
+      "@type": "Experiment",
+      "description": "CIFAR-10 fully connected GAN experiment using GCN 55 and validation split.",
+      "objective": "Train fully connected GAN on CIFAR-10",
+      "hypothesis": null,
+      "methodology": "CIFAR-10 fully connected GAN experiment using GCN 55 and validation split.",
+      "realizes": [
+        {
+          "@id": "task_generative_modeling"
+        }
+      ],
+      "usesData": [
+        {
+          "@id": "dataset_cifar10_train"
+        },
+        {
+          "@id": "dataset_cifar10_valid"
+        }
+      ],
+      "produces": [
+        {
+          "@id": "method_gan"
+        }
+      ],
+      "executes": [
+        {
+          "@id": "impl_yaml_experiments"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "cifar10_fully_connected.yaml:2",
+      "path": "cifar10_fully_connected.yaml",
+      "start_char_doc": 53,
+      "end_char_doc": 86,
+      "context": {
+        "prefix": "!obj:pylearn2.train.Train { dataset: &train !obj:",
+        "suffix": "{ gcn: 55., which_set: 'train',"
+      },
+      "usesParameters": [
+        {
+          "@id": "hp_cifar10_fc_learning_rate"
+        },
+        {
+          "@id": "hp_cifar10_fc_batch_size"
+        },
+        {
+          "@id": "hp_cifar10_fc_init_momentum"
+        },
+        {
+          "@id": "hp_cifar10_fc_decay_factor"
+        },
+        {
+          "@id": "hp_cifar10_fc_min_lr"
+        },
+        {
+          "@id": "hp_cifar10_fc_final_momentum"
+        },
+        {
+          "@id": "hp_cifar10_fc_save_freq"
+        },
+        {
+          "@id": "hp_cifar_train_split"
+        },
+        {
+          "@id": "hp_cifar_valid_split"
+        },
+        {
+          "@id": "hp_cifar_gcn"
+        },
+        {
+          "@id": "hp_cifar_fc_generator_dim"
+        },
+        {
+          "@id": "hp_cifar_fc_output_dim"
+        },
+        {
+          "@id": "hp_cifar_fc_discriminator_units"
+        },
+        {
+          "@id": "hp_cifar_conv_batch_num_channels"
+        },
+        {
+          "@id": "hp_cifar_conv_kernel_shape"
+        },
+        {
+          "@id": "hp_cifar_deconv_output_stride"
+        },
+        {
+          "@id": "hp_cifar10_fc_disc_default_include_prob"
+        },
+        {
+          "@id": "hp_cifar10_fc_disc_input_include_prob"
+        },
+        {
+          "@id": "hp_cifar10_fc_disc_default_input_scale"
+        }
+      ]
+    },
+    {
+      "@id": "exp_cifar10_convolutional_gan",
+      "@type": "Experiment",
+      "description": "CIFAR-10 convolutional discriminator and deconvolutional generator experiment.",
+      "objective": "Train convolutional/deconv GAN on CIFAR-10",
+      "hypothesis": null,
+      "methodology": "CIFAR-10 convolutional discriminator and deconvolutional generator experiment.",
+      "realizes": [
+        {
+          "@id": "task_generative_modeling"
+        }
+      ],
+      "usesData": [
+        {
+          "@id": "dataset_cifar10_train"
+        },
+        {
+          "@id": "dataset_cifar10_valid"
+        }
+      ],
+      "produces": [
+        {
+          "@id": "method_gan"
+        }
+      ],
+      "executes": [
+        {
+          "@id": "impl_yaml_experiments"
+        },
+        {
+          "@id": "impl_deconv"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "cifar10_convolutional.yaml:32",
+      "path": "cifar10_convolutional.yaml",
+      "start_char_doc": 1240,
+      "end_char_doc": 1265,
+      "context": {
+        "prefix": "0, 1, 'b'], }}, !obj:",
+        "suffix": "{ #W_lr_scale: .05, #b_lr_scale: .05,"
+      },
+      "usesParameters": [
+        {
+          "@id": "hp_cifar10_conv_learning_rate"
+        },
+        {
+          "@id": "hp_cifar10_conv_batch_size"
+        },
+        {
+          "@id": "hp_cifar10_conv_init_momentum"
+        },
+        {
+          "@id": "hp_cifar10_conv_decay_factor"
+        },
+        {
+          "@id": "hp_cifar10_conv_min_lr"
+        },
+        {
+          "@id": "hp_cifar10_conv_final_momentum"
+        },
+        {
+          "@id": "hp_cifar10_conv_save_freq"
+        },
+        {
+          "@id": "hp_cifar_conv_batch_num_channels"
+        },
+        {
+          "@id": "hp_cifar_conv_kernel_shape"
+        },
+        {
+          "@id": "hp_cifar_deconv_output_stride"
+        },
+        {
+          "@id": "hp_cifar10_conv_disc_default_include_prob"
+        },
+        {
+          "@id": "hp_cifar10_conv_disc_input_include_prob"
+        },
+        {
+          "@id": "hp_cifar10_conv_disc_default_input_scale"
+        }
+      ]
+    },
+    {
+      "@id": "exp_tfd_pretrain",
+      "@type": "Experiment",
+      "description": "TFD GAN pretraining with 50 epochs.",
+      "objective": "Pretrain TFD GAN",
+      "hypothesis": null,
+      "methodology": "TFD GAN pretraining with 50 epochs.",
+      "realizes": [
+        {
+          "@id": "task_generative_modeling"
+        }
+      ],
+      "usesData": [
+        {
+          "@id": "dataset_tfd_unlabeled"
+        },
+        {
+          "@id": "dataset_tfd_valid"
+        }
+      ],
+      "produces": [
+        {
+          "@id": "method_gan"
+        }
+      ],
+      "executes": [
+        {
+          "@id": "impl_yaml_experiments"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "tfd_pretrain/pretrain.yaml:102",
+      "path": "tfd_pretrain/pretrain.yaml",
+      "start_char_doc": 3841,
+      "end_char_doc": 3855,
+      "context": {
+        "prefix": "} #}, termination_criterion: !obj:pylearn2.termination_criteria.EpochCounter {",
+        "suffix": "}, update_callbacks: !obj:pylearn2.training_algorithms.sgd.ExponentialDecay { decay_factor:"
+      },
+      "usesParameters": [
+        {
+          "@id": "hp_tfd_pretrain_learning_rate"
+        },
+        {
+          "@id": "hp_tfd_pretrain_batch_size"
+        },
+        {
+          "@id": "hp_tfd_pretrain_init_momentum"
+        },
+        {
+          "@id": "hp_tfd_pretrain_decay_factor"
+        },
+        {
+          "@id": "hp_tfd_pretrain_min_lr"
+        },
+        {
+          "@id": "hp_tfd_pretrain_final_momentum"
+        },
+        {
+          "@id": "hp_tfd_pretrain_save_freq"
+        },
+        {
+          "@id": "hp_tfd_generator_hidden_dim"
+        },
+        {
+          "@id": "hp_tfd_output_dim"
+        },
+        {
+          "@id": "hp_tfd_max_epochs_pretrain"
+        },
+        {
+          "@id": "hp_tfd_pretrain_disc_default_include_prob"
+        },
+        {
+          "@id": "hp_tfd_pretrain_disc_input_include_prob"
+        },
+        {
+          "@id": "hp_tfd_pretrain_disc_default_input_scale"
+        }
+      ]
+    },
+    {
+      "@id": "exp_tfd_train",
+      "@type": "Experiment",
+      "description": "TFD training configuration using add_layers and ./pretrain.pkl.",
+      "objective": "Train TFD GAN with pretrained layers",
+      "hypothesis": null,
+      "methodology": "TFD training configuration using add_layers and ./pretrain.pkl.",
+      "realizes": [
+        {
+          "@id": "task_generative_modeling"
+        }
+      ],
+      "usesData": [
+        {
+          "@id": "dataset_tfd_unlabeled"
+        },
+        {
+          "@id": "dataset_tfd_valid"
+        }
+      ],
+      "produces": [
+        {
+          "@id": "method_gan"
+        }
+      ],
+      "executes": [
+        {
+          "@id": "impl_yaml_experiments"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "tfd_pretrain/train.yaml:28",
+      "path": "tfd_pretrain/train.yaml",
+      "start_char_doc": 1011,
+      "end_char_doc": 1039,
+      "context": {
+        "prefix": "}, ], nvis: 100, },",
+        "suffix": ", } }, discriminator: !obj:pylearn2.models.mlp.MLP"
+      },
+      "usesParameters": [
+        {
+          "@id": "hp_tfd_train_learning_rate"
+        },
+        {
+          "@id": "hp_tfd_train_batch_size"
+        },
+        {
+          "@id": "hp_tfd_train_init_momentum"
+        },
+        {
+          "@id": "hp_tfd_train_decay_factor"
+        },
+        {
+          "@id": "hp_tfd_train_min_lr"
+        },
+        {
+          "@id": "hp_tfd_train_final_momentum"
+        },
+        {
+          "@id": "hp_tfd_train_save_freq"
+        },
+        {
+          "@id": "hp_tfd_max_epochs_train"
+        },
+        {
+          "@id": "hp_tfd_train_disc_default_include_prob"
+        },
+        {
+          "@id": "hp_tfd_train_disc_input_include_prob"
+        },
+        {
+          "@id": "hp_tfd_train_disc_default_input_scale"
+        }
+      ]
+    },
+    {
+      "@id": "exp_parzen_likelihood",
+      "@type": "Experiment",
+      "description": "Parzen window likelihood estimation with validation sigma selection.",
+      "objective": "Estimate GAN log likelihood",
+      "hypothesis": null,
+      "methodology": "Parzen window likelihood estimation with validation sigma selection.",
+      "realizes": [
+        {
+          "@id": "task_density_estimation"
+        }
+      ],
+      "usesData": [
+        {
+          "@id": "dataset_mnist_valid"
+        },
+        {
+          "@id": "dataset_tfd_valid"
+        }
+      ],
+      "produces": [
+        {
+          "@id": "method_parzen_density"
+        }
+      ],
+      "executes": [
+        {
+          "@id": "impl_parzen_ll"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "parzen_ll.py:97",
+      "path": "parzen_ll.py",
+      "start_char_doc": 2248,
+      "end_char_doc": 2287,
+      "context": {
+        "prefix": "parser = argparse.ArgumentParser(description = '",
+        "suffix": "') parser.add_argument('-p', '--path', help='model path')"
+      },
+      "usesParameters": [
+        {
+          "@id": "hp_parzen_num_samples"
+        },
+        {
+          "@id": "hp_parzen_limit_size"
+        },
+        {
+          "@id": "hp_parzen_batch_size"
+        },
+        {
+          "@id": "hp_parzen_cross_val"
+        },
+        {
+          "@id": "hp_parzen_sigma_start"
+        },
+        {
+          "@id": "hp_parzen_sigma_end"
+        }
+      ]
+    },
+    {
+      "@id": "exp_sample_visualization",
+      "@type": "Experiment",
+      "description": "Generate paper-style sample grids and nearest neighbors.",
+      "objective": "Visualize generator samples",
+      "hypothesis": null,
+      "methodology": "Generate paper-style sample grids and nearest neighbors.",
+      "realizes": [
+        {
+          "@id": "task_sample_generation"
+        }
+      ],
+      "usesData": [
+        {
+          "@id": "dataset_mnist_train"
+        },
+        {
+          "@id": "dataset_cifar10_train"
+        },
+        {
+          "@id": "dataset_tfd_unlabeled"
+        }
+      ],
+      "produces": [
+        {
+          "@id": "method_generator"
+        }
+      ],
+      "executes": [
+        {
+          "@id": "impl_sample_viewers"
+        }
+      ],
+      "wasDerivedFrom": "code",
+      "codeReference": "show_samples_mnist_paper.py:16",
+      "path": "show_samples_mnist_paper.py",
+      "start_char_doc": 383,
+      "end_char_doc": 398,
+      "context": {
+        "prefix": "= None rows = 4",
+        "suffix": "# For some reason format_as"
+      },
+      "usesParameters": [
+        {
+          "@id": "hp_show_samples_count"
+        },
+        {
+          "@id": "hp_show_paper_rows"
+        },
+        {
+          "@id": "hp_show_paper_sample_cols"
+        }
+      ]
+    },
+    {
+      "@id": "metric_log_likelihood",
+      "@type": "MLS_Eval",
+      "measure": "Log-Likelihood",
+      "hasValue": null,
+      "stdDev": null,
+      "confidenceInterval": null,
+      "prov-producedBy": {
+        "@id": "eval_parzen_ll"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "parzen_ll.py:147",
+      "path": "parzen_ll.py",
+      "start_char_doc": 4366,
+      "end_char_doc": 4392,
+      "context": {
+        "prefix": "ll.std() / numpy.sqrt(test.X.shape[0]) print \"",
+        "suffix": "= {}, se: {}\".format(ll.mean(), se)"
+      }
+    },
+    {
+      "@id": "metric_standard_error",
+      "@type": "MLS_Eval",
+      "measure": "standard error",
+      "hasValue": null,
+      "stdDev": null,
+      "confidenceInterval": null,
+      "prov-producedBy": {
+        "@id": "eval_parzen_ll"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "parzen_ll.py:83",
+      "path": "parzen_ll.py",
+      "start_char_doc": 1876,
+      "end_char_doc": 1879,
+      "context": {
+        "prefix": "fold, scale=True) return data.X el",
+        "suffix": "raise ValueError(\"Unknow dataset: {}\".format(args.dataet)) def"
+      }
+    },
+    {
+      "@id": "metric_false_negatives",
+      "@type": "MLS_Eval",
+      "measure": "false_negatives",
+      "hasValue": null,
+      "stdDev": null,
+      "confidenceInterval": null,
+      "prov-producedBy": {
+        "@id": "eval_monitoring_channels"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "__init__.py:441",
+      "path": "__init__.py",
+      "start_char_doc": 17901,
+      "end_char_doc": 17916,
+      "context": {
+        "prefix": "model.discriminator y_hat = d.fprop(data) rval['",
+        "suffix": "'] = T.cast((y_hat < 0.5).mean(),"
+      }
+    },
+    {
+      "@id": "metric_false_positives",
+      "@type": "MLS_Eval",
+      "measure": "false_positives",
+      "hasValue": null,
+      "stdDev": null,
+      "confidenceInterval": null,
+      "prov-producedBy": {
+        "@id": "eval_monitoring_channels"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "__init__.py:445",
+      "path": "__init__.py",
+      "start_char_doc": 18039,
+      "end_char_doc": 18054,
+      "context": {
+        "prefix": "g.sample(m) y_hat = d.fprop(samples) rval['",
+        "suffix": "'] = T.cast((y_hat > 0.5).mean(),"
+      }
+    },
+    {
+      "@id": "metric_sample_grad_norm",
+      "@type": "MLS_Eval",
+      "measure": "sample_grad_norm",
+      "hasValue": null,
+      "stdDev": null,
+      "confidenceInterval": null,
+      "prov-producedBy": {
+        "@id": "eval_monitoring_channels"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "__init__.py:449",
+      "path": "__init__.py",
+      "start_char_doc": 18237,
+      "end_char_doc": 18253,
+      "context": {
+        "prefix": "sample_grad = T.grad(-cost, samples) rval['",
+        "suffix": "'] = T.sqrt(T.sqr(sample_grad).sum()) _S, d_obj,"
+      }
+    },
+    {
+      "@id": "metric_objective_d",
+      "@type": "MLS_Eval",
+      "measure": "objective_d",
+      "hasValue": null,
+      "stdDev": null,
+      "confidenceInterval": null,
+      "prov-producedBy": {
+        "@id": "eval_monitoring_channels"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "__init__.py:454",
+      "path": "__init__.py",
+      "start_char_doc": 18519,
+      "end_char_doc": 18530,
+      "context": {
+        "prefix": "= i_obj if model.monitor_discriminator: rval['",
+        "suffix": "'] = d_obj if model.monitor_generator:"
+      }
+    },
+    {
+      "@id": "metric_objective_g",
+      "@type": "MLS_Eval",
+      "measure": "objective_g",
+      "hasValue": null,
+      "stdDev": null,
+      "confidenceInterval": null,
+      "prov-producedBy": {
+        "@id": "eval_monitoring_channels"
+      },
+      "wasDerivedFrom": "code",
+      "codeReference": "__init__.py:456",
+      "path": "__init__.py",
+      "start_char_doc": 18595,
+      "end_char_doc": 18606,
+      "context": {
+        "prefix": "= d_obj if model.monitor_generator: rval['",
+        "suffix": "'] = g_obj rval['now_train_generator'] ="
+      }
+    },
+    {
+      "@id": "hp_mnist_learning_rate",
+      "@type": "MLS_HyperParameter",
+      "name": "learning_rate (MNIST)",
+      "hasValue": ".1",
+      "hpCategory": "HP_Optimization",
+      "hpType": "LearningRate",
+      "uncertain": false,
+      "sourceFile": "mnist.yaml",
+      "sourceLine": 58,
+      "wasDerivedFrom": "code",
+      "codeReference": "mnist.yaml:58",
+      "path": "mnist.yaml",
+      "start_char_doc": 2079,
+      "end_char_doc": 2096,
+      "context": {
+        "prefix": "algorithm: !obj:pylearn2.training_algorithms.sgd.SGD { batch_size: 100,",
+        "suffix": ", learning_rule: !obj:pylearn2.training_algorithms.learning_rule.Momentum { init_momentum:"
+      }
+    },
+    {
+      "@id": "hp_mnist_batch_size",
+      "@type": "MLS_HyperParameter",
+      "name": "batch_size (MNIST)",
+      "hasValue": "100",
+      "hpCategory": "HP_Training",
+      "hpType": "BatchSize",
+      "uncertain": false,
+      "sourceFile": "mnist.yaml",
+      "sourceLine": 57,
+      "wasDerivedFrom": "code",
+      "codeReference": "mnist.yaml:57",
+      "path": "mnist.yaml",
+      "start_char_doc": 2054,
+      "end_char_doc": 2069,
+      "context": {
+        "prefix": "}, }, algorithm: !obj:pylearn2.training_algorithms.sgd.SGD {",
+        "suffix": ", learning_rate: .1, learning_rule: !obj:pylearn2.training_algorithms.learning_rule.Momentum"
+      }
+    },
+    {
+      "@id": "hp_mnist_init_momentum",
+      "@type": "MLS_HyperParameter",
+      "name": "init_momentum (MNIST)",
+      "hasValue": ".5",
+      "hpCategory": "HP_Optimization",
+      "hpType": "Momentum",
+      "uncertain": false,
+      "sourceFile": "mnist.yaml",
+      "sourceLine": 60,
+      "wasDerivedFrom": "code",
+      "codeReference": "mnist.yaml:60",
+      "path": "mnist.yaml",
+      "start_char_doc": 2192,
+      "end_char_doc": 2209,
+      "context": {
+        "prefix": "learning_rate: .1, learning_rule: !obj:pylearn2.training_algorithms.learning_rule.Momentum {",
+        "suffix": ", }, monitoring_dataset: { 'valid'"
+      }
+    },
+    {
+      "@id": "hp_mnist_decay_factor",
+      "@type": "MLS_HyperParameter",
+      "name": "decay_factor (MNIST)",
+      "hasValue": "1.000004",
+      "hpCategory": "HP_Optimization",
+      "hpType": "DecayRate",
+      "uncertain": false,
+      "sourceFile": "mnist.yaml",
+      "sourceLine": 92,
+      "wasDerivedFrom": "code",
+      "codeReference": "mnist.yaml:92",
+      "path": "mnist.yaml",
+      "start_char_doc": 3354,
+      "end_char_doc": 3376,
+      "context": {
+        "prefix": "100 #}, update_callbacks: !obj:pylearn2.training_algorithms.sgd.ExponentialDecay {",
+        "suffix": ", min_lr: .000001 } },"
+      }
+    },
+    {
+      "@id": "hp_mnist_min_lr",
+      "@type": "MLS_HyperParameter",
+      "name": "min_lr (MNIST)",
+      "hasValue": ".000001",
+      "hpCategory": "HP_Optimization",
+      "hpType": "LearningRate",
+      "uncertain": false,
+      "sourceFile": "mnist.yaml",
+      "sourceLine": 93,
+      "wasDerivedFrom": "code",
+      "codeReference": "mnist.yaml:93",
+      "path": "mnist.yaml",
+      "start_char_doc": 3390,
+      "end_char_doc": 3405,
+      "context": {
+        "prefix": "update_callbacks: !obj:pylearn2.training_algorithms.sgd.ExponentialDecay { decay_factor: 1.000004,",
+        "suffix": "} }, extensions: [ #!obj:pylearn2.train_extensions.best_params.MonitorBasedSaveBest"
+      }
+    },
+    {
+      "@id": "hp_mnist_final_momentum",
+      "@type": "MLS_HyperParameter",
+      "name": "final_momentum (MNIST)",
+      "hasValue": ".7",
+      "hpCategory": "HP_Optimization",
+      "hpType": "Momentum",
+      "uncertain": false,
+      "sourceFile": "mnist.yaml",
+      "sourceLine": 104,
+      "wasDerivedFrom": "code",
+      "codeReference": "mnist.yaml:104",
+      "path": "mnist.yaml",
+      "start_char_doc": 3781,
+      "end_char_doc": 3799,
+      "context": {
+        "prefix": "{ start: 1, saturate: 250,",
+        "suffix": "} ], save_path: \"${PYLEARN2_TRAIN_FILE_FULL_STEM}.pkl\", save_freq:"
+      }
+    },
+    {
+      "@id": "hp_mnist_save_freq",
+      "@type": "MLS_HyperParameter",
+      "name": "save_freq (MNIST)",
+      "hasValue": "1",
+      "hpCategory": "HP_Training",
+      "hpType": "MaxSteps",
+      "uncertain": true,
+      "sourceFile": "mnist.yaml",
+      "sourceLine": 108,
+      "wasDerivedFrom": "code",
+      "codeReference": "mnist.yaml:108",
+      "path": "mnist.yaml",
+      "start_char_doc": 3876,
+      "end_char_doc": 3888,
+      "context": {
+        "prefix": ".7 } ], save_path: \"${PYLEARN2_TRAIN_FILE_FULL_STEM}.pkl\",",
+        "suffix": "}"
+      }
+    },
+    {
+      "@id": "hp_cifar10_fc_learning_rate",
+      "@type": "MLS_HyperParameter",
+      "name": "learning_rate (CIFAR10 fully connected)",
+      "hasValue": ".025",
+      "hpCategory": "HP_Optimization",
+      "hpType": "LearningRate",
+      "uncertain": false,
+      "sourceFile": "cifar10_fully_connected.yaml",
+      "sourceLine": 57,
+      "wasDerivedFrom": "code",
+      "codeReference": "cifar10_fully_connected.yaml:57",
+      "path": "cifar10_fully_connected.yaml",
+      "start_char_doc": 2042,
+      "end_char_doc": 2061,
+      "context": {
+        "prefix": "algorithm: !obj:pylearn2.training_algorithms.sgd.SGD { batch_size: 100,",
+        "suffix": ", learning_rule: !obj:pylearn2.training_algorithms.learning_rule.Momentum { init_momentum:"
+      }
+    },
+    {
+      "@id": "hp_cifar10_fc_batch_size",
+      "@type": "MLS_HyperParameter",
+      "name": "batch_size (CIFAR10 fully connected)",
+      "hasValue": "100",
+      "hpCategory": "HP_Training",
+      "hpType": "BatchSize",
+      "uncertain": false,
+      "sourceFile": "cifar10_fully_connected.yaml",
+      "sourceLine": 56,
+      "wasDerivedFrom": "code",
+      "codeReference": "cifar10_fully_connected.yaml:56",
+      "path": "cifar10_fully_connected.yaml",
+      "start_char_doc": 2017,
+      "end_char_doc": 2032,
+      "context": {
+        "prefix": "}, }, algorithm: !obj:pylearn2.training_algorithms.sgd.SGD {",
+        "suffix": ", learning_rate: .025, learning_rule: !obj:pylearn2.training_algorithms.learning_rule.Momentum"
+      }
+    },
+    {
+      "@id": "hp_cifar10_fc_init_momentum",
+      "@type": "MLS_HyperParameter",
+      "name": "init_momentum (CIFAR10 fully connected)",
+      "hasValue": ".5",
+      "hpCategory": "HP_Optimization",
+      "hpType": "Momentum",
+      "uncertain": false,
+      "sourceFile": "cifar10_fully_connected.yaml",
+      "sourceLine": 59,
+      "wasDerivedFrom": "code",
+      "codeReference": "cifar10_fully_connected.yaml:59",
+      "path": "cifar10_fully_connected.yaml",
+      "start_char_doc": 2157,
+      "end_char_doc": 2174,
+      "context": {
+        "prefix": "learning_rate: .025, learning_rule: !obj:pylearn2.training_algorithms.learning_rule.Momentum {",
+        "suffix": ", }, monitoring_dataset: { #'train'"
+      }
+    },
+    {
+      "@id": "hp_cifar10_fc_decay_factor",
+      "@type": "MLS_HyperParameter",
+      "name": "decay_factor (CIFAR10 fully connected)",
+      "hasValue": "1.000004",
+      "hpCategory": "HP_Optimization",
+      "hpType": "DecayRate",
+      "uncertain": false,
+      "sourceFile": "cifar10_fully_connected.yaml",
+      "sourceLine": 97,
+      "wasDerivedFrom": "code",
+      "codeReference": "cifar10_fully_connected.yaml:97",
+      "path": "cifar10_fully_connected.yaml",
+      "start_char_doc": 3589,
+      "end_char_doc": 3611,
+      "context": {
+        "prefix": "100 #}, update_callbacks: !obj:pylearn2.training_algorithms.sgd.ExponentialDecay {",
+        "suffix": ", min_lr: .000001 } },"
+      }
+    },
+    {
+      "@id": "hp_cifar10_fc_min_lr",
+      "@type": "MLS_HyperParameter",
+      "name": "min_lr (CIFAR10 fully connected)",
+      "hasValue": ".000001",
+      "hpCategory": "HP_Optimization",
+      "hpType": "LearningRate",
+      "uncertain": false,
+      "sourceFile": "cifar10_fully_connected.yaml",
+      "sourceLine": 98,
+      "wasDerivedFrom": "code",
+      "codeReference": "cifar10_fully_connected.yaml:98",
+      "path": "cifar10_fully_connected.yaml",
+      "start_char_doc": 3625,
+      "end_char_doc": 3640,
+      "context": {
+        "prefix": "update_callbacks: !obj:pylearn2.training_algorithms.sgd.ExponentialDecay { decay_factor: 1.000004,",
+        "suffix": "} }, extensions: [ #!obj:pylearn2.train_extensions.best_params.MonitorBasedSaveBest"
+      }
+    },
+    {
+      "@id": "hp_cifar10_fc_final_momentum",
+      "@type": "MLS_HyperParameter",
+      "name": "final_momentum (CIFAR10 fully connected)",
+      "hasValue": ".7",
+      "hpCategory": "HP_Optimization",
+      "hpType": "Momentum",
+      "uncertain": false,
+      "sourceFile": "cifar10_fully_connected.yaml",
+      "sourceLine": 109,
+      "wasDerivedFrom": "code",
+      "codeReference": "cifar10_fully_connected.yaml:109",
+      "path": "cifar10_fully_connected.yaml",
+      "start_char_doc": 4016,
+      "end_char_doc": 4034,
+      "context": {
+        "prefix": "{ start: 1, saturate: 250,",
+        "suffix": "} ], save_path: \"${PYLEARN2_TRAIN_FILE_FULL_STEM}.pkl\", save_freq:"
+      }
+    },
+    {
+      "@id": "hp_cifar10_fc_save_freq",
+      "@type": "MLS_HyperParameter",
+      "name": "save_freq (CIFAR10 fully connected)",
+      "hasValue": "1",
+      "hpCategory": "HP_Training",
+      "hpType": "MaxSteps",
+      "uncertain": true,
+      "sourceFile": "cifar10_fully_connected.yaml",
+      "sourceLine": 113,
+      "wasDerivedFrom": "code",
+      "codeReference": "cifar10_fully_connected.yaml:113",
+      "path": "cifar10_fully_connected.yaml",
+      "start_char_doc": 4111,
+      "end_char_doc": 4123,
+      "context": {
+        "prefix": ".7 } ], save_path: \"${PYLEARN2_TRAIN_FILE_FULL_STEM}.pkl\",",
+        "suffix": "}"
+      }
+    },
+    {
+      "@id": "hp_cifar10_conv_learning_rate",
+      "@type": "MLS_HyperParameter",
+      "name": "learning_rate (CIFAR10 convolutional)",
+      "hasValue": ".004",
+      "hpCategory": "HP_Optimization",
+      "hpType": "LearningRate",
+      "uncertain": false,
+      "sourceFile": "cifar10_convolutional.yaml",
+      "sourceLine": 120,
+      "wasDerivedFrom": "code",
+      "codeReference": "cifar10_convolutional.yaml:120",
+      "path": "cifar10_convolutional.yaml",
+      "start_char_doc": 4576,
+      "end_char_doc": 4595,
+      "context": {
+        "prefix": "algorithm: !obj:pylearn2.training_algorithms.sgd.SGD { batch_size: 128,",
+        "suffix": ", learning_rule: !obj:pylearn2.training_algorithms.learning_rule.Momentum { init_momentum:"
+      }
+    },
+    {
+      "@id": "hp_cifar10_conv_batch_size",
+      "@type": "MLS_HyperParameter",
+      "name": "batch_size (CIFAR10 convolutional)",
+      "hasValue": "128",
+      "hpCategory": "HP_Training",
+      "hpType": "BatchSize",
+      "uncertain": false,
+      "sourceFile": "cifar10_convolutional.yaml",
+      "sourceLine": 119,
+      "wasDerivedFrom": "code",
+      "codeReference": "cifar10_convolutional.yaml:119",
+      "path": "cifar10_convolutional.yaml",
+      "start_char_doc": 4551,
+      "end_char_doc": 4566,
+      "context": {
+        "prefix": "}, }, algorithm: !obj:pylearn2.training_algorithms.sgd.SGD {",
+        "suffix": ", learning_rate: .004, learning_rule: !obj:pylearn2.training_algorithms.learning_rule.Momentum"
+      }
+    },
+    {
+      "@id": "hp_cifar10_conv_init_momentum",
+      "@type": "MLS_HyperParameter",
+      "name": "init_momentum (CIFAR10 convolutional)",
+      "hasValue": ".5",
+      "hpCategory": "HP_Optimization",
+      "hpType": "Momentum",
+      "uncertain": false,
+      "sourceFile": "cifar10_convolutional.yaml",
+      "sourceLine": 122,
+      "wasDerivedFrom": "code",
+      "codeReference": "cifar10_convolutional.yaml:122",
+      "path": "cifar10_convolutional.yaml",
+      "start_char_doc": 4691,
+      "end_char_doc": 4708,
+      "context": {
+        "prefix": "learning_rate: .004, learning_rule: !obj:pylearn2.training_algorithms.learning_rule.Momentum {",
+        "suffix": ", }, monitoring_dataset: { #'train'"
+      }
+    },
+    {
+      "@id": "hp_cifar10_conv_decay_factor",
+      "@type": "MLS_HyperParameter",
+      "name": "decay_factor (CIFAR10 convolutional)",
+      "hasValue": "1.000004",
+      "hpCategory": "HP_Optimization",
+      "hpType": "DecayRate",
+      "uncertain": false,
+      "sourceFile": "cifar10_convolutional.yaml",
+      "sourceLine": 157,
+      "wasDerivedFrom": "code",
+      "codeReference": "cifar10_convolutional.yaml:157",
+      "path": "cifar10_convolutional.yaml",
+      "start_char_doc": 6023,
+      "end_char_doc": 6045,
+      "context": {
+        "prefix": "100 #}, update_callbacks: !obj:pylearn2.training_algorithms.sgd.ExponentialDecay {",
+        "suffix": ", min_lr: .000001 } },"
+      }
+    },
+    {
+      "@id": "hp_cifar10_conv_min_lr",
+      "@type": "MLS_HyperParameter",
+      "name": "min_lr (CIFAR10 convolutional)",
+      "hasValue": ".000001",
+      "hpCategory": "HP_Optimization",
+      "hpType": "LearningRate",
+      "uncertain": false,
+      "sourceFile": "cifar10_convolutional.yaml",
+      "sourceLine": 158,
+      "wasDerivedFrom": "code",
+      "codeReference": "cifar10_convolutional.yaml:158",
+      "path": "cifar10_convolutional.yaml",
+      "start_char_doc": 6059,
+      "end_char_doc": 6074,
+      "context": {
+        "prefix": "update_callbacks: !obj:pylearn2.training_algorithms.sgd.ExponentialDecay { decay_factor: 1.000004,",
+        "suffix": "} }, extensions: [ #!obj:pylearn2.train_extensions.best_params.MonitorBasedSaveBest"
+      }
+    },
+    {
+      "@id": "hp_cifar10_conv_final_momentum",
+      "@type": "MLS_HyperParameter",
+      "name": "final_momentum (CIFAR10 convolutional)",
+      "hasValue": ".7",
+      "hpCategory": "HP_Optimization",
+      "hpType": "Momentum",
+      "uncertain": false,
+      "sourceFile": "cifar10_convolutional.yaml",
+      "sourceLine": 169,
+      "wasDerivedFrom": "code",
+      "codeReference": "cifar10_convolutional.yaml:169",
+      "path": "cifar10_convolutional.yaml",
+      "start_char_doc": 6450,
+      "end_char_doc": 6468,
+      "context": {
+        "prefix": "{ start: 1, saturate: 250,",
+        "suffix": "} ], save_path: \"${PYLEARN2_TRAIN_FILE_FULL_STEM}.pkl\", save_freq:"
+      }
+    },
+    {
+      "@id": "hp_cifar10_conv_save_freq",
+      "@type": "MLS_HyperParameter",
+      "name": "save_freq (CIFAR10 convolutional)",
+      "hasValue": "1",
+      "hpCategory": "HP_Training",
+      "hpType": "MaxSteps",
+      "uncertain": true,
+      "sourceFile": "cifar10_convolutional.yaml",
+      "sourceLine": 173,
+      "wasDerivedFrom": "code",
+      "codeReference": "cifar10_convolutional.yaml:173",
+      "path": "cifar10_convolutional.yaml",
+      "start_char_doc": 6545,
+      "end_char_doc": 6557,
+      "context": {
+        "prefix": ".7 } ], save_path: \"${PYLEARN2_TRAIN_FILE_FULL_STEM}.pkl\",",
+        "suffix": "}"
+      }
+    },
+    {
+      "@id": "hp_tfd_pretrain_learning_rate",
+      "@type": "MLS_HyperParameter",
+      "name": "learning_rate (TFD pretrain)",
+      "hasValue": ".05",
+      "hpCategory": "HP_Optimization",
+      "hpType": "LearningRate",
+      "uncertain": false,
+      "sourceFile": "tfd_pretrain/pretrain.yaml",
+      "sourceLine": 69,
+      "wasDerivedFrom": "code",
+      "codeReference": "tfd_pretrain/pretrain.yaml:69",
+      "path": "tfd_pretrain/pretrain.yaml",
+      "start_char_doc": 2608,
+      "end_char_doc": 2626,
+      "context": {
+        "prefix": "algorithm: !obj:pylearn2.training_algorithms.sgd.SGD { batch_size: 100,",
+        "suffix": ", learning_rule: !obj:pylearn2.training_algorithms.learning_rule.Momentum { init_momentum:"
+      }
+    },
+    {
+      "@id": "hp_tfd_pretrain_batch_size",
+      "@type": "MLS_HyperParameter",
+      "name": "batch_size (TFD pretrain)",
+      "hasValue": "100",
+      "hpCategory": "HP_Training",
+      "hpType": "BatchSize",
+      "uncertain": false,
+      "sourceFile": "tfd_pretrain/pretrain.yaml",
+      "sourceLine": 68,
+      "wasDerivedFrom": "code",
+      "codeReference": "tfd_pretrain/pretrain.yaml:68",
+      "path": "tfd_pretrain/pretrain.yaml",
+      "start_char_doc": 2583,
+      "end_char_doc": 2598,
+      "context": {
+        "prefix": "}, }, algorithm: !obj:pylearn2.training_algorithms.sgd.SGD {",
+        "suffix": ", learning_rate: .05, learning_rule: !obj:pylearn2.training_algorithms.learning_rule.Momentum"
+      }
+    },
+    {
+      "@id": "hp_tfd_pretrain_init_momentum",
+      "@type": "MLS_HyperParameter",
+      "name": "init_momentum (TFD pretrain)",
+      "hasValue": ".5",
+      "hpCategory": "HP_Optimization",
+      "hpType": "Momentum",
+      "uncertain": false,
+      "sourceFile": "tfd_pretrain/pretrain.yaml",
+      "sourceLine": 71,
+      "wasDerivedFrom": "code",
+      "codeReference": "tfd_pretrain/pretrain.yaml:71",
+      "path": "tfd_pretrain/pretrain.yaml",
+      "start_char_doc": 2722,
+      "end_char_doc": 2739,
+      "context": {
+        "prefix": "learning_rate: .05, learning_rule: !obj:pylearn2.training_algorithms.learning_rule.Momentum {",
+        "suffix": ", }, monitoring_dataset: { #"
+      }
+    },
+    {
+      "@id": "hp_tfd_pretrain_decay_factor",
+      "@type": "MLS_HyperParameter",
+      "name": "decay_factor (TFD pretrain)",
+      "hasValue": "1.000004",
+      "hpCategory": "HP_Optimization",
+      "hpType": "DecayRate",
+      "uncertain": false,
+      "sourceFile": "tfd_pretrain/pretrain.yaml",
+      "sourceLine": 105,
+      "wasDerivedFrom": "code",
+      "codeReference": "tfd_pretrain/pretrain.yaml:105",
+      "path": "tfd_pretrain/pretrain.yaml",
+      "start_char_doc": 3962,
+      "end_char_doc": 3984,
+      "context": {
+        "prefix": "50 }, update_callbacks: !obj:pylearn2.training_algorithms.sgd.ExponentialDecay {",
+        "suffix": ", min_lr: .000001 } },"
+      }
+    },
+    {
+      "@id": "hp_tfd_pretrain_min_lr",
+      "@type": "MLS_HyperParameter",
+      "name": "min_lr (TFD pretrain)",
+      "hasValue": ".000001",
+      "hpCategory": "HP_Optimization",
+      "hpType": "LearningRate",
+      "uncertain": false,
+      "sourceFile": "tfd_pretrain/pretrain.yaml",
+      "sourceLine": 106,
+      "wasDerivedFrom": "code",
+      "codeReference": "tfd_pretrain/pretrain.yaml:106",
+      "path": "tfd_pretrain/pretrain.yaml",
+      "start_char_doc": 3998,
+      "end_char_doc": 4013,
+      "context": {
+        "prefix": "update_callbacks: !obj:pylearn2.training_algorithms.sgd.ExponentialDecay { decay_factor: 1.000004,",
+        "suffix": "} }, extensions: [ !obj:pylearn2.training_algorithms.learning_rule.MomentumAdjustor"
+      }
+    },
+    {
+      "@id": "hp_tfd_pretrain_final_momentum",
+      "@type": "MLS_HyperParameter",
+      "name": "final_momentum (TFD pretrain)",
+      "hasValue": ".7",
+      "hpCategory": "HP_Optimization",
+      "hpType": "Momentum",
+      "uncertain": false,
+      "sourceFile": "tfd_pretrain/pretrain.yaml",
+      "sourceLine": 113,
+      "wasDerivedFrom": "code",
+      "codeReference": "tfd_pretrain/pretrain.yaml:113",
+      "path": "tfd_pretrain/pretrain.yaml",
+      "start_char_doc": 4185,
+      "end_char_doc": 4203,
+      "context": {
+        "prefix": "{ start: 1, saturate: 250,",
+        "suffix": "}, #!obj:pylearn2.train_extensions.best_params.MonitorBasedSaveBest { # channel_name:"
+      }
+    },
+    {
+      "@id": "hp_tfd_pretrain_save_freq",
+      "@type": "MLS_HyperParameter",
+      "name": "save_freq (TFD pretrain)",
+      "hasValue": "1",
+      "hpCategory": "HP_Training",
+      "hpType": "MaxSteps",
+      "uncertain": true,
+      "sourceFile": "tfd_pretrain/pretrain.yaml",
+      "sourceLine": 122,
+      "wasDerivedFrom": "code",
+      "codeReference": "tfd_pretrain/pretrain.yaml:122",
+      "path": "tfd_pretrain/pretrain.yaml",
+      "start_char_doc": 4487,
+      "end_char_doc": 4499,
+      "context": {
+        "prefix": "True #} ], save_path: \"${PYLEARN2_TRAIN_FILE_FULL_STEM}.pkl\",",
+        "suffix": "}"
+      }
+    },
+    {
+      "@id": "hp_tfd_train_learning_rate",
+      "@type": "MLS_HyperParameter",
+      "name": "learning_rate (TFD train)",
+      "hasValue": ".05",
+      "hpCategory": "HP_Optimization",
+      "hpType": "LearningRate",
+      "uncertain": false,
+      "sourceFile": "tfd_pretrain/train.yaml",
+      "sourceLine": 66,
+      "wasDerivedFrom": "code",
+      "codeReference": "tfd_pretrain/train.yaml:66",
+      "path": "tfd_pretrain/train.yaml",
+      "start_char_doc": 2388,
+      "end_char_doc": 2406,
+      "context": {
+        "prefix": "algorithm: !obj:pylearn2.training_algorithms.sgd.SGD { batch_size: 100,",
+        "suffix": ", learning_rule: !obj:pylearn2.training_algorithms.learning_rule.Momentum { init_momentum:"
+      }
+    },
+    {
+      "@id": "hp_tfd_train_batch_size",
+      "@type": "MLS_HyperParameter",
+      "name": "batch_size (TFD train)",
+      "hasValue": "100",
+      "hpCategory": "HP_Training",
+      "hpType": "BatchSize",
+      "uncertain": false,
+      "sourceFile": "tfd_pretrain/train.yaml",
+      "sourceLine": 65,
+      "wasDerivedFrom": "code",
+      "codeReference": "tfd_pretrain/train.yaml:65",
+      "path": "tfd_pretrain/train.yaml",
+      "start_char_doc": 2363,
+      "end_char_doc": 2378,
+      "context": {
+        "prefix": "}, }, algorithm: !obj:pylearn2.training_algorithms.sgd.SGD {",
+        "suffix": ", learning_rate: .05, learning_rule: !obj:pylearn2.training_algorithms.learning_rule.Momentum"
+      }
+    },
+    {
+      "@id": "hp_tfd_train_init_momentum",
+      "@type": "MLS_HyperParameter",
+      "name": "init_momentum (TFD train)",
+      "hasValue": ".5",
+      "hpCategory": "HP_Optimization",
+      "hpType": "Momentum",
+      "uncertain": false,
+      "sourceFile": "tfd_pretrain/train.yaml",
+      "sourceLine": 68,
+      "wasDerivedFrom": "code",
+      "codeReference": "tfd_pretrain/train.yaml:68",
+      "path": "tfd_pretrain/train.yaml",
+      "start_char_doc": 2502,
+      "end_char_doc": 2519,
+      "context": {
+        "prefix": "learning_rate: .05, learning_rule: !obj:pylearn2.training_algorithms.learning_rule.Momentum {",
+        "suffix": ", }, monitoring_dataset: { #"
+      }
+    },
+    {
+      "@id": "hp_tfd_train_decay_factor",
+      "@type": "MLS_HyperParameter",
+      "name": "decay_factor (TFD train)",
+      "hasValue": "1.000004",
+      "hpCategory": "HP_Optimization",
+      "hpType": "DecayRate",
+      "uncertain": false,
+      "sourceFile": "tfd_pretrain/train.yaml",
+      "sourceLine": 102,
+      "wasDerivedFrom": "code",
+      "codeReference": "tfd_pretrain/train.yaml:102",
+      "path": "tfd_pretrain/train.yaml",
+      "start_char_doc": 3742,
+      "end_char_doc": 3764,
+      "context": {
+        "prefix": "22 }, update_callbacks: !obj:pylearn2.training_algorithms.sgd.ExponentialDecay {",
+        "suffix": ", min_lr: .000001 } },"
+      }
+    },
+    {
+      "@id": "hp_tfd_train_min_lr",
+      "@type": "MLS_HyperParameter",
+      "name": "min_lr (TFD train)",
+      "hasValue": ".000001",
+      "hpCategory": "HP_Optimization",
+      "hpType": "LearningRate",
+      "uncertain": false,
+      "sourceFile": "tfd_pretrain/train.yaml",
+      "sourceLine": 103,
+      "wasDerivedFrom": "code",
+      "codeReference": "tfd_pretrain/train.yaml:103",
+      "path": "tfd_pretrain/train.yaml",
+      "start_char_doc": 3778,
+      "end_char_doc": 3793,
+      "context": {
+        "prefix": "update_callbacks: !obj:pylearn2.training_algorithms.sgd.ExponentialDecay { decay_factor: 1.000004,",
+        "suffix": "} }, extensions: [ !obj:pylearn2.training_algorithms.learning_rule.MomentumAdjustor"
+      }
+    },
+    {
+      "@id": "hp_tfd_train_final_momentum",
+      "@type": "MLS_HyperParameter",
+      "name": "final_momentum (TFD train)",
+      "hasValue": ".7",
+      "hpCategory": "HP_Optimization",
+      "hpType": "Momentum",
+      "uncertain": false,
+      "sourceFile": "tfd_pretrain/train.yaml",
+      "sourceLine": 110,
+      "wasDerivedFrom": "code",
+      "codeReference": "tfd_pretrain/train.yaml:110",
+      "path": "tfd_pretrain/train.yaml",
+      "start_char_doc": 3965,
+      "end_char_doc": 3983,
+      "context": {
+        "prefix": "{ start: 1, saturate: 250,",
+        "suffix": "}, #!obj:pylearn2.train_extensions.best_params.MonitorBasedSaveBest { # channel_name:"
+      }
+    },
+    {
+      "@id": "hp_tfd_train_save_freq",
+      "@type": "MLS_HyperParameter",
+      "name": "save_freq (TFD train)",
+      "hasValue": "1",
+      "hpCategory": "HP_Training",
+      "hpType": "MaxSteps",
+      "uncertain": true,
+      "sourceFile": "tfd_pretrain/train.yaml",
+      "sourceLine": 120,
+      "wasDerivedFrom": "code",
+      "codeReference": "tfd_pretrain/train.yaml:120",
+      "path": "tfd_pretrain/train.yaml",
+      "start_char_doc": 4265,
+      "end_char_doc": 4277,
+      "context": {
+        "prefix": "True #} ], save_path: \"${PYLEARN2_TRAIN_FILE_FULL_STEM}.pkl\",",
+        "suffix": "}"
+      }
+    },
+    {
+      "@id": "hp_mnist_train_split",
+      "@type": "MLS_HyperParameter",
+      "name": "train split (MNIST)",
+      "hasValue": "0:50000",
+      "hpCategory": "HP_Data",
+      "hpType": "TrainValTestSplit",
+      "uncertain": false,
+      "sourceFile": "mnist.yaml",
+      "sourceLine": 5,
+      "wasDerivedFrom": "code",
+      "codeReference": "mnist.yaml:5",
+      "path": "mnist.yaml",
+      "start_char_doc": 139,
+      "end_char_doc": 150,
+      "context": {
+        "prefix": "{ which_set: 'train', start: 0,",
+        "suffix": "}, model: !obj:adversarial.AdversaryPair { generator:"
+      }
+    },
+    {
+      "@id": "hp_mnist_valid_split",
+      "@type": "MLS_HyperParameter",
+      "name": "validation split (MNIST)",
+      "hasValue": "50000:60000",
+      "hpCategory": "HP_Data",
+      "hpType": "TrainValTestSplit",
+      "uncertain": false,
+      "sourceFile": "mnist.yaml",
+      "sourceLine": 66,
+      "wasDerivedFrom": "code",
+      "codeReference": "mnist.yaml:66",
+      "path": "mnist.yaml",
+      "start_char_doc": 2407,
+      "end_char_doc": 2419,
+      "context": {
+        "prefix": ": !obj:pylearn2.datasets.mnist.MNIST { which_set: 'train',",
+        "suffix": ", stop: 60000 }, },"
+      }
+    },
+    {
+      "@id": "hp_cifar_train_split",
+      "@type": "MLS_HyperParameter",
+      "name": "train split (CIFAR10)",
+      "hasValue": "0:40000",
+      "hpCategory": "HP_Data",
+      "hpType": "TrainValTestSplit",
+      "uncertain": false,
+      "sourceFile": "cifar10_fully_connected.yaml",
+      "sourceLine": 6,
+      "wasDerivedFrom": "code",
+      "codeReference": "cifar10_fully_connected.yaml:6",
+      "path": "cifar10_fully_connected.yaml",
+      "start_char_doc": 161,
+      "end_char_doc": 172,
+      "context": {
+        "prefix": "55., which_set: 'train', start: 0,",
+        "suffix": "}, model: !obj:adversarial.AdversaryPair { generator:"
+      }
+    },
+    {
+      "@id": "hp_cifar_valid_split",
+      "@type": "MLS_HyperParameter",
+      "name": "validation split (CIFAR10)",
+      "hasValue": "40000:50000",
+      "hpCategory": "HP_Data",
+      "hpType": "TrainValTestSplit",
+      "uncertain": false,
+      "sourceFile": "cifar10_fully_connected.yaml",
+      "sourceLine": 67,
+      "wasDerivedFrom": "code",
+      "codeReference": "cifar10_fully_connected.yaml:67",
+      "path": "cifar10_fully_connected.yaml",
+      "start_char_doc": 2452,
+      "end_char_doc": 2464,
+      "context": {
+        "prefix": "{ gcn: 55., which_set: 'train',",
+        "suffix": ", stop: 50000 }, #'test'"
+      }
+    },
+    {
+      "@id": "hp_cifar_gcn",
+      "@type": "MLS_HyperParameter",
+      "name": "gcn",
+      "hasValue": "55.",
+      "hpCategory": "HP_Data",
+      "hpType": "HP_Data",
+      "uncertain": true,
+      "sourceFile": "cifar10_fully_connected.yaml",
+      "sourceLine": 3,
+      "wasDerivedFrom": "code",
+      "codeReference": "cifar10_fully_connected.yaml:3",
+      "path": "cifar10_fully_connected.yaml",
+      "start_char_doc": 97,
+      "end_char_doc": 105,
+      "context": {
+        "prefix": "{ dataset: &train !obj:pylearn2.datasets.cifar10.CIFAR10 {",
+        "suffix": ", which_set: 'train', start: 0,"
+      }
+    },
+    {
+      "@id": "hp_mnist_generator_nvis",
+      "@type": "MLS_HyperParameter",
+      "name": "nvis (MNIST generator)",
+      "hasValue": "100",
+      "hpCategory": "HP_Architecture",
+      "hpType": "EmbeddingDim",
+      "uncertain": false,
+      "sourceFile": "mnist.yaml",
+      "sourceLine": 30,
+      "wasDerivedFrom": "code",
+      "codeReference": "mnist.yaml:30",
+      "path": "mnist.yaml",
+      "start_char_doc": 1129,
+      "end_char_doc": 1138,
+      "context": {
+        "prefix": ".05, dim: 784 } ],",
+        "suffix": ", }}, discriminator: !obj:pylearn2.models.mlp.MLP {"
+      }
+    },
+    {
+      "@id": "hp_mnist_generator_hidden_dim",
+      "@type": "MLS_HyperParameter",
+      "name": "generator hidden dim (MNIST)",
+      "hasValue": "1200",
+      "hpCategory": "HP_Architecture",
+      "hpType": "HiddenSize",
+      "uncertain": false,
+      "sourceFile": "mnist.yaml",
+      "sourceLine": 15,
+      "wasDerivedFrom": "code",
+      "codeReference": "mnist.yaml:15",
+      "path": "mnist.yaml",
+      "start_char_doc": 509,
+      "end_char_doc": 518,
+      "context": {
+        "prefix": "[ !obj:pylearn2.models.mlp.RectifiedLinear { layer_name: 'h0',",
+        "suffix": ", irange: .05, }, !obj:pylearn2.models.mlp.RectifiedLinear"
+      }
+    },
+    {
+      "@id": "hp_mnist_output_dim",
+      "@type": "MLS_HyperParameter",
+      "name": "generator output dim (MNIST)",
+      "hasValue": "784",
+      "hpCategory": "HP_Architecture",
+      "hpType": "HiddenSize",
+      "uncertain": false,
+      "sourceFile": "mnist.yaml",
+      "sourceLine": 27,
+      "wasDerivedFrom": "code",
+      "codeReference": "mnist.yaml:27",
+      "path": "mnist.yaml",
+      "start_char_doc": 1062,
+      "end_char_doc": 1070,
+      "context": {
+        "prefix": "*train}, layer_name: 'y', irange: .05,",
+        "suffix": "} ], nvis: 100, }},"
+      }
+    },
+    {
+      "@id": "hp_mnist_discriminator_units",
+      "@type": "MLS_HyperParameter",
+      "name": "discriminator num_units (MNIST)",
+      "hasValue": "240",
+      "hpCategory": "HP_Architecture",
+      "hpType": "HiddenSize",
+      "uncertain": false,
+      "sourceFile": "mnist.yaml",
+      "sourceLine": 37,
+      "wasDerivedFrom": "code",
+      "codeReference": "mnist.yaml:37",
+      "path": "mnist.yaml",
+      "start_char_doc": 1367,
+      "end_char_doc": 1381,
+      "context": {
+        "prefix": "[ !obj:pylearn2.models.maxout.Maxout { layer_name: 'h0',",
+        "suffix": ", num_pieces: 5, irange: .005,"
+      }
+    },
+    {
+      "@id": "hp_mnist_num_pieces",
+      "@type": "MLS_HyperParameter",
+      "name": "Maxout num_pieces (MNIST)",
+      "hasValue": "5",
+      "hpCategory": "HP_Architecture",
+      "hpType": "UnknownArchitectureHP",
+      "uncertain": true,
+      "sourceFile": "mnist.yaml",
+      "sourceLine": 38,
+      "wasDerivedFrom": "code",
+      "codeReference": "mnist.yaml:38",
+      "path": "mnist.yaml",
+      "start_char_doc": 1408,
+      "end_char_doc": 1421,
+      "context": {
+        "prefix": "{ layer_name: 'h0', num_units: 240,",
+        "suffix": ", irange: .005, }, !obj:pylearn2.models.maxout.Maxout"
+      }
+    },
+    {
+      "@id": "hp_cifar_fc_generator_dim",
+      "@type": "MLS_HyperParameter",
+      "name": "generator hidden dim (CIFAR10 FC)",
+      "hasValue": "8000",
+      "hpCategory": "HP_Architecture",
+      "hpType": "HiddenSize",
+      "uncertain": false,
+      "sourceFile": "cifar10_fully_connected.yaml",
+      "sourceLine": 14,
+      "wasDerivedFrom": "code",
+      "codeReference": "cifar10_fully_connected.yaml:14",
+      "path": "cifar10_fully_connected.yaml",
+      "start_char_doc": 475,
+      "end_char_doc": 484,
+      "context": {
+        "prefix": "[ !obj:pylearn2.models.mlp.RectifiedLinear { layer_name: 'gh0',",
+        "suffix": ", irange: .05, }, !obj:pylearn2.models.mlp.Sigmoid"
+      }
+    },
+    {
+      "@id": "hp_cifar_fc_output_dim",
+      "@type": "MLS_HyperParameter",
+      "name": "generator output dim (CIFAR10 FC)",
+      "hasValue": "3072",
+      "hpCategory": "HP_Architecture",
+      "hpType": "HiddenSize",
+      "uncertain": false,
+      "sourceFile": "cifar10_fully_connected.yaml",
+      "sourceLine": 26,
+      "wasDerivedFrom": "code",
+      "codeReference": "cifar10_fully_connected.yaml:26",
+      "path": "cifar10_fully_connected.yaml",
+      "start_char_doc": 1020,
+      "end_char_doc": 1029,
+      "context": {
+        "prefix": "*train}, layer_name: 'y', irange: .5,",
+        "suffix": "} ], nvis: 100, }},"
+      }
+    },
+    {
+      "@id": "hp_cifar_fc_discriminator_units",
+      "@type": "MLS_HyperParameter",
+      "name": "discriminator num_units (CIFAR10 FC)",
+      "hasValue": "1600",
+      "hpCategory": "HP_Architecture",
+      "hpType": "HiddenSize",
+      "uncertain": false,
+      "sourceFile": "cifar10_fully_connected.yaml",
+      "sourceLine": 36,
+      "wasDerivedFrom": "code",
+      "codeReference": "cifar10_fully_connected.yaml:36",
+      "path": "cifar10_fully_connected.yaml",
+      "start_char_doc": 1327,
+      "end_char_doc": 1342,
+      "context": {
+        "prefix": "[ !obj:pylearn2.models.maxout.Maxout { layer_name: 'dh0',",
+        "suffix": ", num_pieces: 5, irange: .005,"
+      }
+    },
+    {
+      "@id": "hp_cifar_conv_batch_num_channels",
+      "@type": "MLS_HyperParameter",
+      "name": "discriminator num_channels (CIFAR10 conv)",
+      "hasValue": "32",
+      "hpCategory": "HP_Architecture",
+      "hpType": "UnknownArchitectureHP",
+      "uncertain": true,
+      "sourceFile": "cifar10_convolutional.yaml",
+      "sourceLine": 57,
+      "wasDerivedFrom": "code",
+      "codeReference": "cifar10_convolutional.yaml:57",
+      "path": "cifar10_convolutional.yaml",
+      "start_char_doc": 2235,
+      "end_char_doc": 2251,
+      "context": {
+        "prefix": "1, #W_lr_scale: .05, #b_lr_scale: .05,",
+        "suffix": ", num_pieces: 2, kernel_shape: [8,"
+      }
+    },
+    {
+      "@id": "hp_cifar_conv_kernel_shape",
+      "@type": "MLS_HyperParameter",
+      "name": "kernel_shape (CIFAR10 conv)",
+      "hasValue": "[8, 8]",
+      "hpCategory": "HP_Architecture",
+      "hpType": "UnknownArchitectureHP",
+      "uncertain": true,
+      "sourceFile": "cifar10_convolutional.yaml",
+      "sourceLine": 59,
+      "wasDerivedFrom": "code",
+      "codeReference": "cifar10_convolutional.yaml:59",
+      "path": "cifar10_convolutional.yaml",
+      "start_char_doc": 2310,
+      "end_char_doc": 2330,
+      "context": {
+        "prefix": ".05, num_channels: 32, num_pieces: 2,",
+        "suffix": ", pool_shape: [4, 4], pool_stride:"
+      }
+    },
+    {
+      "@id": "hp_cifar_deconv_output_stride",
+      "@type": "MLS_HyperParameter",
+      "name": "output_stride (CIFAR10 deconv)",
+      "hasValue": "[3, 3]",
+      "hpCategory": "HP_Architecture",
+      "hpType": "UnknownArchitectureHP",
+      "uncertain": true,
+      "sourceFile": "cifar10_convolutional.yaml",
+      "sourceLine": 36,
+      "wasDerivedFrom": "code",
+      "codeReference": "cifar10_convolutional.yaml:36",
+      "path": "cifar10_convolutional.yaml",
+      "start_char_doc": 1413,
+      "end_char_doc": 1434,
+      "context": {
+        "prefix": ".05, #b_lr_scale: .05, num_channels: 3,",
+        "suffix": ", kernel_shape: [5, 5], pad_out:"
+      }
+    },
+    {
+      "@id": "hp_tfd_generator_hidden_dim",
+      "@type": "MLS_HyperParameter",
+      "name": "generator hidden dim (TFD)",
+      "hasValue": "8000",
+      "hpCategory": "HP_Architecture",
+      "hpType": "HiddenSize",
+      "uncertain": false,
+      "sourceFile": "tfd_pretrain/pretrain.yaml",
+      "sourceLine": 13,
+      "wasDerivedFrom": "code",
+      "codeReference": "tfd_pretrain/pretrain.yaml:13",
+      "path": "tfd_pretrain/pretrain.yaml",
+      "start_char_doc": 462,
+      "end_char_doc": 471,
+      "context": {
+        "prefix": "[ !obj:pylearn2.models.mlp.RectifiedLinear { layer_name: 'h0',",
+        "suffix": ", irange: .05, max_col_norm: 1.9365,"
+      }
+    },
+    {
+      "@id": "hp_tfd_output_dim",
+      "@type": "MLS_HyperParameter",
+      "name": "generator output dim (TFD)",
+      "hasValue": "2304",
+      "hpCategory": "HP_Architecture",
+      "hpType": "HiddenSize",
+      "uncertain": false,
+      "sourceFile": "tfd_pretrain/pretrain.yaml",
+      "sourceLine": 29,
+      "wasDerivedFrom": "code",
+      "codeReference": "tfd_pretrain/pretrain.yaml:29",
+      "path": "tfd_pretrain/pretrain.yaml",
+      "start_char_doc": 1195,
+      "end_char_doc": 1204,
+      "context": {
+        "prefix": "*train}, layer_name: 'y', sparse_init: 100,",
+        "suffix": "} ], nvis: 100, }},"
+      }
+    },
+    {
+      "@id": "hp_tfd_max_epochs_pretrain",
+      "@type": "MLS_HyperParameter",
+      "name": "max_epochs (TFD pretrain)",
+      "hasValue": "50",
+      "hpCategory": "HP_Training",
+      "hpType": "NumEpochs",
+      "uncertain": false,
+      "sourceFile": "tfd_pretrain/pretrain.yaml",
+      "sourceLine": 102,
+      "wasDerivedFrom": "code",
+      "codeReference": "tfd_pretrain/pretrain.yaml:102",
+      "path": "tfd_pretrain/pretrain.yaml",
+      "start_char_doc": 3841,
+      "end_char_doc": 3855,
+      "context": {
+        "prefix": "} #}, termination_criterion: !obj:pylearn2.termination_criteria.EpochCounter {",
+        "suffix": "}, update_callbacks: !obj:pylearn2.training_algorithms.sgd.ExponentialDecay { decay_factor:"
+      }
+    },
+    {
+      "@id": "hp_tfd_max_epochs_train",
+      "@type": "MLS_HyperParameter",
+      "name": "max_epochs (TFD train)",
+      "hasValue": "22",
+      "hpCategory": "HP_Training",
+      "hpType": "NumEpochs",
+      "uncertain": false,
+      "sourceFile": "tfd_pretrain/train.yaml",
+      "sourceLine": 99,
+      "wasDerivedFrom": "code",
+      "codeReference": "tfd_pretrain/train.yaml:99",
+      "path": "tfd_pretrain/train.yaml",
+      "start_char_doc": 3621,
+      "end_char_doc": 3635,
+      "context": {
+        "prefix": "} #}, termination_criterion: !obj:pylearn2.termination_criteria.EpochCounter {",
+        "suffix": "}, update_callbacks: !obj:pylearn2.training_algorithms.sgd.ExponentialDecay { decay_factor:"
+      }
+    },
+    {
+      "@id": "hp_mnist_disc_default_include_prob",
+      "@type": "MLS_HyperParameter",
+      "name": "discriminator_default_input_include_prob",
+      "hasValue": ".5",
+      "hpCategory": "HP_Architecture",
+      "hpType": "Dropout",
+      "uncertain": false,
+      "sourceFile": "mnist.yaml",
+      "sourceLine": 73,
+      "wasDerivedFrom": "code",
+      "codeReference": "mnist.yaml:73",
+      "path": "mnist.yaml",
+      "start_char_doc": 2627,
+      "end_char_doc": 2671,
+      "context": {
+        "prefix": "{ scale_grads: 0, #target_scale: 1.,",
+        "suffix": ", discriminator_input_include_probs: { 'h0': .8"
+      }
+    },
+    {
+      "@id": "hp_mnist_disc_input_include_prob",
+      "@type": "MLS_HyperParameter",
+      "name": "discriminator_input_include_probs",
+      "hasValue": "0.8",
+      "hpCategory": "HP_Architecture",
+      "hpType": "Dropout",
+      "uncertain": false,
+      "sourceFile": "mnist.yaml",
+      "sourceLine": 75,
+      "wasDerivedFrom": "code",
+      "codeReference": "mnist.yaml:75",
+      "path": "mnist.yaml",
+      "start_char_doc": 2744,
+      "end_char_doc": 2746,
+      "context": {
+        "prefix": "discriminator_default_input_include_prob: .5, discriminator_input_include_probs: { 'h0':",
+        "suffix": "}, discriminator_default_input_scale: 2., discriminator_input_scales: {"
+      }
+    },
+    {
+      "@id": "hp_mnist_disc_default_input_scale",
+      "@type": "MLS_HyperParameter",
+      "name": "discriminator_default_input_scale",
+      "hasValue": "2.",
+      "hpCategory": "HP_Architecture",
+      "hpType": "Dropout",
+      "uncertain": true,
+      "sourceFile": "mnist.yaml",
+      "sourceLine": 77,
+      "wasDerivedFrom": "code",
+      "codeReference": "mnist.yaml:77",
+      "path": "mnist.yaml",
+      "start_char_doc": 2774,
+      "end_char_doc": 2811,
+      "context": {
+        "prefix": "discriminator_input_include_probs: { 'h0': .8 },",
+        "suffix": ", discriminator_input_scales: { 'h0': 1.25"
+      }
+    },
+    {
+      "@id": "hp_cifar10_fc_disc_default_include_prob",
+      "@type": "MLS_HyperParameter",
+      "name": "discriminator_default_input_include_prob",
+      "hasValue": ".5",
+      "hpCategory": "HP_Architecture",
+      "hpType": "Dropout",
+      "uncertain": false,
+      "sourceFile": "cifar10_fully_connected.yaml",
+      "sourceLine": 78,
+      "wasDerivedFrom": "code",
+      "codeReference": "cifar10_fully_connected.yaml:78",
+      "path": "cifar10_fully_connected.yaml",
+      "start_char_doc": 2860,
+      "end_char_doc": 2904,
+      "context": {
+        "prefix": "{ scale_grads: 0, #target_scale: .1,",
+        "suffix": ", discriminator_input_include_probs: { 'dh0': .8"
+      }
+    },
+    {
+      "@id": "hp_cifar10_fc_disc_input_include_prob",
+      "@type": "MLS_HyperParameter",
+      "name": "discriminator_input_include_probs",
+      "hasValue": "0.8",
+      "hpCategory": "HP_Architecture",
+      "hpType": "Dropout",
+      "uncertain": false,
+      "sourceFile": "cifar10_fully_connected.yaml",
+      "sourceLine": 80,
+      "wasDerivedFrom": "code",
+      "codeReference": "cifar10_fully_connected.yaml:80",
+      "path": "cifar10_fully_connected.yaml",
+      "start_char_doc": 2978,
+      "end_char_doc": 2980,
+      "context": {
+        "prefix": "discriminator_default_input_include_prob: .5, discriminator_input_include_probs: { 'dh0':",
+        "suffix": "}, discriminator_default_input_scale: 2., discriminator_input_scales: {"
+      }
+    },
+    {
+      "@id": "hp_cifar10_fc_disc_default_input_scale",
+      "@type": "MLS_HyperParameter",
+      "name": "discriminator_default_input_scale",
+      "hasValue": "2.",
+      "hpCategory": "HP_Architecture",
+      "hpType": "Dropout",
+      "uncertain": true,
+      "sourceFile": "cifar10_fully_connected.yaml",
+      "sourceLine": 82,
+      "wasDerivedFrom": "code",
+      "codeReference": "cifar10_fully_connected.yaml:82",
+      "path": "cifar10_fully_connected.yaml",
+      "start_char_doc": 3008,
+      "end_char_doc": 3045,
+      "context": {
+        "prefix": "discriminator_input_include_probs: { 'dh0': .8 },",
+        "suffix": ", discriminator_input_scales: { 'dh0': 1.25"
+      }
+    },
+    {
+      "@id": "hp_cifar10_conv_disc_default_include_prob",
+      "@type": "MLS_HyperParameter",
+      "name": "discriminator_default_input_include_prob",
+      "hasValue": ".5",
+      "hpCategory": "HP_Architecture",
+      "hpType": "Dropout",
+      "uncertain": false,
+      "sourceFile": "cifar10_convolutional.yaml",
+      "sourceLine": 142,
+      "wasDerivedFrom": "code",
+      "codeReference": "cifar10_convolutional.yaml:142",
+      "path": "cifar10_convolutional.yaml",
+      "start_char_doc": 5446,
+      "end_char_doc": 5490,
+      "context": {
+        "prefix": "{ scale_grads: 0, #target_scale: .1,",
+        "suffix": ", discriminator_input_include_probs: { 'dh0': .8"
+      }
+    },
+    {
+      "@id": "hp_cifar10_conv_disc_input_include_prob",
+      "@type": "MLS_HyperParameter",
+      "name": "discriminator_input_include_probs",
+      "hasValue": "0.8",
+      "hpCategory": "HP_Architecture",
+      "hpType": "Dropout",
+      "uncertain": false,
+      "sourceFile": "cifar10_convolutional.yaml",
+      "sourceLine": 144,
+      "wasDerivedFrom": "code",
+      "codeReference": "cifar10_convolutional.yaml:144",
+      "path": "cifar10_convolutional.yaml",
+      "start_char_doc": 5564,
+      "end_char_doc": 5566,
+      "context": {
+        "prefix": "discriminator_default_input_include_prob: .5, discriminator_input_include_probs: { 'dh0':",
+        "suffix": "}, discriminator_default_input_scale: 2., discriminator_input_scales: {"
+      }
+    },
+    {
+      "@id": "hp_cifar10_conv_disc_default_input_scale",
+      "@type": "MLS_HyperParameter",
+      "name": "discriminator_default_input_scale",
+      "hasValue": "2.",
+      "hpCategory": "HP_Architecture",
+      "hpType": "Dropout",
+      "uncertain": true,
+      "sourceFile": "cifar10_convolutional.yaml",
+      "sourceLine": 146,
+      "wasDerivedFrom": "code",
+      "codeReference": "cifar10_convolutional.yaml:146",
+      "path": "cifar10_convolutional.yaml",
+      "start_char_doc": 5594,
+      "end_char_doc": 5631,
+      "context": {
+        "prefix": "discriminator_input_include_probs: { 'dh0': .8 },",
+        "suffix": ", discriminator_input_scales: { 'dh0': 1.25"
+      }
+    },
+    {
+      "@id": "hp_tfd_pretrain_disc_default_include_prob",
+      "@type": "MLS_HyperParameter",
+      "name": "discriminator_default_input_include_prob",
+      "hasValue": ".5",
+      "hpCategory": "HP_Architecture",
+      "hpType": "Dropout",
+      "uncertain": false,
+      "sourceFile": "tfd_pretrain/pretrain.yaml",
+      "sourceLine": 88,
+      "wasDerivedFrom": "code",
+      "codeReference": "tfd_pretrain/pretrain.yaml:88",
+      "path": "tfd_pretrain/pretrain.yaml",
+      "start_char_doc": 3312,
+      "end_char_doc": 3356,
+      "context": {
+        "prefix": "{ scale_grads: 0, #target_scale: 1.,",
+        "suffix": ", discriminator_input_include_probs: { 'h0': .8"
+      }
+    },
+    {
+      "@id": "hp_tfd_pretrain_disc_input_include_prob",
+      "@type": "MLS_HyperParameter",
+      "name": "discriminator_input_include_probs",
+      "hasValue": "0.8",
+      "hpCategory": "HP_Architecture",
+      "hpType": "Dropout",
+      "uncertain": false,
+      "sourceFile": "tfd_pretrain/pretrain.yaml",
+      "sourceLine": 90,
+      "wasDerivedFrom": "code",
+      "codeReference": "tfd_pretrain/pretrain.yaml:90",
+      "path": "tfd_pretrain/pretrain.yaml",
+      "start_char_doc": 3429,
+      "end_char_doc": 3431,
+      "context": {
+        "prefix": "discriminator_default_input_include_prob: .5, discriminator_input_include_probs: { 'h0':",
+        "suffix": "}, discriminator_default_input_scale: 2., discriminator_input_scales: {"
+      }
+    },
+    {
+      "@id": "hp_tfd_pretrain_disc_default_input_scale",
+      "@type": "MLS_HyperParameter",
+      "name": "discriminator_default_input_scale",
+      "hasValue": "2.",
+      "hpCategory": "HP_Architecture",
+      "hpType": "Dropout",
+      "uncertain": true,
+      "sourceFile": "tfd_pretrain/pretrain.yaml",
+      "sourceLine": 92,
+      "wasDerivedFrom": "code",
+      "codeReference": "tfd_pretrain/pretrain.yaml:92",
+      "path": "tfd_pretrain/pretrain.yaml",
+      "start_char_doc": 3459,
+      "end_char_doc": 3496,
+      "context": {
+        "prefix": "discriminator_input_include_probs: { 'h0': .8 },",
+        "suffix": ", discriminator_input_scales: { 'h0': 1.25"
+      }
+    },
+    {
+      "@id": "hp_tfd_train_disc_default_include_prob",
+      "@type": "MLS_HyperParameter",
+      "name": "discriminator_default_input_include_prob",
+      "hasValue": ".5",
+      "hpCategory": "HP_Architecture",
+      "hpType": "Dropout",
+      "uncertain": false,
+      "sourceFile": "tfd_pretrain/train.yaml",
+      "sourceLine": 85,
+      "wasDerivedFrom": "code",
+      "codeReference": "tfd_pretrain/train.yaml:85",
+      "path": "tfd_pretrain/train.yaml",
+      "start_char_doc": 3092,
+      "end_char_doc": 3136,
+      "context": {
+        "prefix": "{ scale_grads: 0, #target_scale: 1.,",
+        "suffix": ", discriminator_input_include_probs: { 'h0': .8"
+      }
+    },
+    {
+      "@id": "hp_tfd_train_disc_input_include_prob",
+      "@type": "MLS_HyperParameter",
+      "name": "discriminator_input_include_probs",
+      "hasValue": "0.8",
+      "hpCategory": "HP_Architecture",
+      "hpType": "Dropout",
+      "uncertain": false,
+      "sourceFile": "tfd_pretrain/train.yaml",
+      "sourceLine": 87,
+      "wasDerivedFrom": "code",
+      "codeReference": "tfd_pretrain/train.yaml:87",
+      "path": "tfd_pretrain/train.yaml",
+      "start_char_doc": 3209,
+      "end_char_doc": 3211,
+      "context": {
+        "prefix": "discriminator_default_input_include_prob: .5, discriminator_input_include_probs: { 'h0':",
+        "suffix": "}, discriminator_default_input_scale: 2., discriminator_input_scales: {"
+      }
+    },
+    {
+      "@id": "hp_tfd_train_disc_default_input_scale",
+      "@type": "MLS_HyperParameter",
+      "name": "discriminator_default_input_scale",
+      "hasValue": "2.",
+      "hpCategory": "HP_Architecture",
+      "hpType": "Dropout",
+      "uncertain": true,
+      "sourceFile": "tfd_pretrain/train.yaml",
+      "sourceLine": 89,
+      "wasDerivedFrom": "code",
+      "codeReference": "tfd_pretrain/train.yaml:89",
+      "path": "tfd_pretrain/train.yaml",
+      "start_char_doc": 3239,
+      "end_char_doc": 3276,
+      "context": {
+        "prefix": "discriminator_input_include_probs: { 'h0': .8 },",
+        "suffix": ", discriminator_input_scales: { 'h0': 1.25"
+      }
+    },
+    {
+      "@id": "hp_parzen_num_samples",
+      "@type": "MLS_HyperParameter",
+      "name": "num_samples",
+      "hasValue": "10000",
+      "hpCategory": "HP_Training",
+      "hpType": "BatchSize",
+      "uncertain": true,
+      "sourceFile": "parzen_ll.py",
+      "sourceLine": 103,
+      "wasDerivedFrom": "code",
+      "codeReference": "parzen_ll.py:103",
+      "path": "parzen_ll.py",
+      "start_char_doc": 2650,
+      "end_char_doc": 2677,
+      "context": {
+        "prefix": "= False, action='store_true') parser.add_argument('-n', '--",
+        "suffix": ", type=int) parser.add_argument('-l', '--limit_size', default=1000,"
+      }
+    },
+    {
+      "@id": "hp_parzen_limit_size",
+      "@type": "MLS_HyperParameter",
+      "name": "limit_size",
+      "hasValue": "1000",
+      "hpCategory": "HP_Data",
+      "hpType": "TrainValTestSplit",
+      "uncertain": true,
+      "sourceFile": "parzen_ll.py",
+      "sourceLine": 104,
+      "wasDerivedFrom": "code",
+      "codeReference": "parzen_ll.py:104",
+      "path": "parzen_ll.py",
+      "start_char_doc": 2722,
+      "end_char_doc": 2747,
+      "context": {
+        "prefix": "'--num_samples', default=10000, type=int) parser.add_argument('-l', '--",
+        "suffix": ", type=int) parser.add_argument('-b', '--batch_size', default=100,"
+      }
+    },
+    {
+      "@id": "hp_parzen_batch_size",
+      "@type": "MLS_HyperParameter",
+      "name": "batch_size",
+      "hasValue": "100",
+      "hpCategory": "HP_Training",
+      "hpType": "BatchSize",
+      "uncertain": false,
+      "sourceFile": "parzen_ll.py",
+      "sourceLine": 105,
+      "wasDerivedFrom": "code",
+      "codeReference": "parzen_ll.py:105",
+      "path": "parzen_ll.py",
+      "start_char_doc": 2792,
+      "end_char_doc": 2816,
+      "context": {
+        "prefix": "'--limit_size', default=1000, type=int) parser.add_argument('-b', '--",
+        "suffix": ", type=int) parser.add_argument('-c', '--cross_val', default=10,"
+      }
+    },
+    {
+      "@id": "hp_parzen_cross_val",
+      "@type": "MLS_HyperParameter",
+      "name": "cross_val",
+      "hasValue": "10",
+      "hpCategory": "HP_Training",
+      "hpType": "HP_Training",
+      "uncertain": true,
+      "sourceFile": "parzen_ll.py",
+      "sourceLine": 106,
+      "wasDerivedFrom": "code",
+      "codeReference": "parzen_ll.py:106",
+      "path": "parzen_ll.py",
+      "start_char_doc": 2861,
+      "end_char_doc": 2883,
+      "context": {
+        "prefix": "'--batch_size', default=100, type=int) parser.add_argument('-c', '--",
+        "suffix": ", type=int, help=\"Number of cross"
+      }
+    },
+    {
+      "@id": "hp_parzen_sigma_start",
+      "@type": "MLS_HyperParameter",
+      "name": "sigma_start",
+      "hasValue": "-1",
+      "hpCategory": "HP_Optimization",
+      "hpType": "HP_Optimization",
+      "uncertain": true,
+      "sourceFile": "parzen_ll.py",
+      "sourceLine": 108,
+      "wasDerivedFrom": "code",
+      "codeReference": "parzen_ll.py:108",
+      "path": "parzen_ll.py",
+      "start_char_doc": 2990,
+      "end_char_doc": 3014,
+      "context": {
+        "prefix": "of cross valiation folds\") parser.add_argument('--",
+        "suffix": ", type=float) parser.add_argument('--sigma_end', default=0., type=float)"
+      }
+    },
+    {
+      "@id": "hp_parzen_sigma_end",
+      "@type": "MLS_HyperParameter",
+      "name": "sigma_end",
+      "hasValue": "0.0",
+      "hpCategory": "HP_Optimization",
+      "hpType": "HP_Optimization",
+      "uncertain": true,
+      "sourceFile": "parzen_ll.py",
+      "sourceLine": 109,
+      "wasDerivedFrom": "code",
+      "codeReference": "parzen_ll.py:109",
+      "path": "parzen_ll.py",
+      "start_char_doc": 3055,
+      "end_char_doc": 3077,
+      "context": {
+        "prefix": "folds\") parser.add_argument('--sigma_start', default=-1, type=float) parser.add_argument('--",
+        "suffix": ", type=float) args = parser.parse_args()"
+      }
+    },
+    {
+      "@id": "hp_show_samples_count",
+      "@type": "MLS_HyperParameter",
+      "name": "sample count",
+      "hasValue": "100",
+      "hpCategory": "HP_Training",
+      "hpType": "BatchSize",
+      "uncertain": true,
+      "sourceFile": "show_samples.py",
+      "sourceLine": 19,
+      "wasDerivedFrom": "code",
+      "codeReference": "show_samples.py:19",
+      "path": "show_samples.py",
+      "start_char_doc": 537,
+      "end_char_doc": 548,
+      "context": {
+        "prefix": "working right samples = model.generator.",
+        "suffix": ".eval() if match_train: grid_shape ="
+      }
+    },
+    {
+      "@id": "hp_show_paper_rows",
+      "@type": "MLS_HyperParameter",
+      "name": "rows",
+      "hasValue": "4",
+      "hpCategory": "HP_Data",
+      "hpType": "HP_Data",
+      "uncertain": true,
+      "sourceFile": "show_samples_mnist_paper.py",
+      "sourceLine": 15,
+      "wasDerivedFrom": "code",
+      "codeReference": "show_samples_mnist_paper.py:15",
+      "path": "show_samples_mnist_paper.py",
+      "start_char_doc": 374,
+      "end_char_doc": 382,
+      "context": {
+        "prefix": "= yaml_parse.load(model.dataset_yaml_src) grid_shape = None",
+        "suffix": "sample_cols = 5 # For"
+      }
+    },
+    {
+      "@id": "hp_show_paper_sample_cols",
+      "@type": "MLS_HyperParameter",
+      "name": "sample_cols",
+      "hasValue": "5",
+      "hpCategory": "HP_Data",
+      "hpType": "HP_Data",
+      "uncertain": true,
+      "sourceFile": "show_samples_mnist_paper.py",
+      "sourceLine": 16,
+      "wasDerivedFrom": "code",
+      "codeReference": "show_samples_mnist_paper.py:16",
+      "path": "show_samples_mnist_paper.py",
+      "start_char_doc": 383,
+      "end_char_doc": 398,
+      "context": {
+        "prefix": "= None rows = 4",
+        "suffix": "# For some reason format_as"
+      }
+    }
+  ]
+}
